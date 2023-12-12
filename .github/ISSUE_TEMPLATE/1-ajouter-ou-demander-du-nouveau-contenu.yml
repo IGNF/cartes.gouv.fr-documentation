@@ -1,0 +1,17 @@
+name: 📚 Ajouter ou demander l'ajout de documentation
+description: Posez une question sur une étape à éclaircir, suggérez des modifications de la documentation
+labels: [documentation]
+body:
+    - type: textarea
+      id: description
+      attributes:
+          label: Description
+          description: |
+            Posez une question ou proposez des modifications de la documentation.
+            Détaillez votre besoin ou votre idée au maximum, notamment où vous verriez ces changements dans l'arborescence de la documentation.
+
+            Les ajouts ou modifications peuvent être :
+            * des compléments sur des pages de documentation existante
+            * des nouveaux contenus
+      validations:
+          required: true

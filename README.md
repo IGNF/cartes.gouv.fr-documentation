@@ -1,13 +1,11 @@
-![build](https://img.shields.io/github/actions/workflow/status/codegouvfr/eleventy-dsfr/11ty-gh-pages.yml?label=deployed%20to%20gh-pages)
-
-# eleventy-dsfr
+# cartes.gouv.fr-documentation
 
 Un dépôt pour démarrer un site statique au [DSFR](https://www.systeme-de-design.gouv.fr/) avec le
 générateur [Eleventy](https://www.11ty.dev/).
 
 ![Screenshot of the website front page.](eleventy-dsfr.png)
 
-## Fonctionnalités
+## Fonctionnalités héritées de eleventy-dsfr
 
 - **Style** :
     - DSFR :
@@ -37,13 +35,13 @@ générateur [Eleventy](https://www.11ty.dev/).
 **Cloner le dépôt** :
 
 ```bash
-git clone https://github.com/codegouvfr/eleventy-dsfr.git my-site-name
+git clone https://github.com/IGNF/cartes.gouv.fr-documentation
 ```
 
 **Naviguer dans le dossier** :
 
 ```bash
-cd my-site-name
+cd cartes.gouv.fr-documentation
 ```
 
 **Installer les dépendances** :
@@ -106,18 +104,7 @@ Essayer [cette configuration](https://stackoverflow.com/a/73967433).
 - _[OPTIONNEL]_ [Configurer la redirection](https://www.11ty.dev/docs/i18n/#distinct-urls-using-implied-default-language)
   de toutes les URLs des pages dont la langue est celle par défaut.
 
-## Documentation
-
-La suite de la documentation (composants, fonctionnalités) est disponible dans [`content/fr/blog/posts`](content/fr/blog/posts) ou directement sur le [site de démonstration](https://codegouvfr.github.io/eleventy-dsfr/fr/blog).
-
-## Démonstration et réutilisations
-
-- Pour une démonstration, voir la [GitHub Pages](https://codegouvfr.github.io/eleventy-dsfr/fr/) correspondante.
-- `eleventy-dsfr` est utilisé pour le site [code.gouv.fr](https://code.gouv.fr).
-
 ## Licence
 
 Le dépôt est publié sous licence MIT pour le code et sous licence
 Etalab 2.0 pour les autres contenus.
-
-Il est maintenu par la [mission logiciels libres](https://code.gouv.fr/) de la DINUM.

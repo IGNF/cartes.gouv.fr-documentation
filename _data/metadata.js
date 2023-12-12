@@ -1,6 +1,6 @@
 module.exports = {
-    title: "Nom du site / service",
-    url: "https://url_du_site.gouv.fr/",
+    title: "cartes.gouv.fr",
+    url: "https://cartes.gouv.fr/documentation",
     newsletter: [
         {
             url: "",
@@ -17,13 +17,13 @@ module.exports = {
     peertube_url: "",
     github_url: "",
     sourcehut_url: "",
-    repository_url: "https://github.com/codegouvfr/eleventy-dsfr",
+    repository_url: "https://github.com/IGNF/cartes.gouv.fr-documentation",
     language: "fr",
-    description: "baseline - précisions sur l‘organisation",
+    description: "Documentation",
     author: {
-        name: "Nom du service",
-        email: "contact@nom.du.service.gouv.fr",
+        name: "IGN",
+        email: "geoplateforme@ign.fr",
         url: "https://url_du_service.gouv.fr/"
     },
-    service: "Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+    service: "Institut National de l'Information Géographique et Forestière (IGN)"
 }
