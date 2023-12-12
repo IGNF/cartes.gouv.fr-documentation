@@ -1,38 +1,34 @@
 ---
-title: Exemple de mentions légales
+title: MMentions légales
 layout: layouts/page.njk
-description: Mentions légales à compléter
+description: Mentions légales
 slugOverride: mentions legales
 showBreadcrumb: true
 ---
 # Mentions légales
 
-## Identification de l'éditeur
+## Éditeur
 
-[ A COMPLETER ]
+Le site cartes.gouv.fr/documentation est édité par l’Institut national de l’information géographique et forestière (IGN), 73 avenue de Paris, 94165 SAINT-MANDE CEDEX, France.
 
-## Directeur de la publication
+Tél. : 01 43 98 80 00
 
-[ A COMPLETER ]
+Directeur de la publication : Sébastien Soriano, Directeur général de l'IGN.
 
-## Prestataire d'hébergement
+## Hébergeur
 
-[ A COMPLETER ]
-
-## Crédits
-
-- [1F3DB.svg](https://openmoji.org/data/color/svg/1F3DB.svg) par [Martin Wehl](https://openmoji.org/library/#author=Martin%20Wehl) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0>).
-
-[ A COMPLETER ]
-
-## Code source du site
-
-[ A COMPLETER ]
-
-## Accessibilité
-
-[Voir la déclaration d'accessibilité](/fr/accessibilite/).
+Le site cartes.gouv.fr/documentation est hébergé par OVH SAS, 2 rue Kellermann, 59100 Roubaix, Fance.
 
 ## Traitement des données à caractère personnel
 
-[Voir les informations concernant les cookies utilisées sur ce site](/fr/donnees-personnelles/).
+Le site documentation.cartes.gouv.fr ne collecte pas de données à caractère personnel. [En savoir plus](/fr/donnees-personnelles)
+
+## Droit de propriété intellectuelle
+
+Les illustrations, le contenu éditorial, les divers éléments de la charte graphique ainsi que les données cartographiques issues de la consultation en ligne figurant sur le site cartes.gouv.fr/documentation sont des éléments dont l’IGN détient la propriété ou le droit d’exploitation.
+
+L’utilisation des documents ou éléments du site est soumise à l’accord préalable de notre établissement.
+
+## Liens hypertextes proposés sur cartes.gouv.fr/documentation
+
+Les liens insérés dans les pages du site cartes.gouv.fr/documentation vers des sites tiers sont proposés à titre d’information ; le contenu des sites vers lesquels ces liens conduisent n’engage pas la responsabilité de l’éditeur.
