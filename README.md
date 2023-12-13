@@ -1,9 +1,6 @@
 # cartes.gouv.fr-documentation
 
-Un dépôt pour démarrer un site statique au [DSFR](https://www.systeme-de-design.gouv.fr/) avec le
-générateur [Eleventy](https://www.11ty.dev/).
-
-![Screenshot of the website front page.](eleventy-dsfr.png)
+Site de documentation statique associé à cartes.gouv.fr
 
 ## Fonctionnalités héritées de eleventy-dsfr
 
@@ -30,6 +27,7 @@ générateur [Eleventy](https://www.11ty.dev/).
     - Les pages obligatoires liées aux obligations légales : “accessibilité : non/partiellement/totalement conforme”, mentions légales, données personnelles et gestion des cookies.
     
 ## Prise en main
+
 ### Installation
 
 **Cloner le dépôt** :
