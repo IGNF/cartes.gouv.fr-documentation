@@ -4,6 +4,7 @@
   "description": "Site statique de documentation pour cartes.gouv.fr",
   "scripts": {
     "build": "npx @11ty/eleventy",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/cartes.gouv.fr-documentation/",
     "postbuild": "npx pagefind --site _site/ --output-subdir \"_pagefind\"",
     "start": "npx @11ty/eleventy --serve --quiet",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
