@@ -39,5 +39,8 @@
     "markdown-it-container": "^4.0.0",
     "pagefind": "^1.0.2",
     "ics": "^3.2.0"
+  },
+  "dependencies": {
+    "@kevingimbel/eleventy-plugin-mermaid": "^2.1.0"
   }
 }

@@ -12,6 +12,8 @@ const {EleventyI18nPlugin} = require("@11ty/eleventy");
 
 const customMarkdownContainers = require("./markdown-custom-containers");
 
+const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+
 module.exports = function (eleventyConfig) {
     // Copy the contents of the `public` folder to the output folder
     // For example, `./public/css/` ends up in `_site/css/`
@@ -59,6 +61,9 @@ module.exports = function (eleventyConfig) {
             return a.inputPath.localeCompare(b.inputPath);
         });
     });
+
+     // Mermaid plugin : https://github.com/KevinGimbel/eleventy-plugin-mermaid
+     eleventyConfig.addPlugin(pluginMermaid);
 
     // Filters
     eleventyConfig.addFilter("jsDateObject", function jsDateObject(dateStr, format, zone) {
