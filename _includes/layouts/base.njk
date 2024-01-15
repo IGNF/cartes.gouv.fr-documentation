@@ -26,6 +26,13 @@
 
   <meta name="generator" content="{{ eleventy.generator }}">
 
+  {% if mermaid %}
+    <script src="/js/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true});
+    </script>
+  {% endif %}
+
   <title>{{ title or metadata.title }}</title>
 </head>
 <body id="top">
@@ -69,6 +76,6 @@
 <script type="text/javascript" nomodule src="/js/dsfr.nomodule.min.js"></script>
 <!-- Script Matomo pour le suivi des visites -->
 <!-- <script type="text/javascript" src="/js/matomo.js"></script> -->
-{% mermaid_js %}
+
 </body>
 </html>

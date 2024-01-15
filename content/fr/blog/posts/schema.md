@@ -2,6 +2,7 @@
 title: Schéma
 description: Comment intégrer un schéma simple dans une page du site ?
 date: git Last Modified
+mermaid: true
 tags:
   - composant
 ---
