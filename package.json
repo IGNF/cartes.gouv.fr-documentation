@@ -33,14 +33,12 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@gouvfr/dsfr": "^1.9.3",
     "chalk": "^4.1.2",
+    "ics": "^3.2.0",
     "luxon": "^3.2.1",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-container": "^4.0.0",
-    "pagefind": "^1.0.2",
-    "ics": "^3.2.0"
-  },
-  "dependencies": {
-    "@kevingimbel/eleventy-plugin-mermaid": "^2.1.0"
+    "mermaid": "^10.7.0",
+    "pagefind": "^1.0.2"
   }
 }

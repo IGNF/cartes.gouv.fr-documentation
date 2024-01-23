@@ -12,8 +12,6 @@ const {EleventyI18nPlugin} = require("@11ty/eleventy");
 
 const customMarkdownContainers = require("./markdown-custom-containers");
 
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
-
 module.exports = function (eleventyConfig) {
     // Copy the contents of the `public` folder to the output folder
     // For example, `./public/css/` ends up in `_site/css/`
@@ -26,7 +24,8 @@ module.exports = function (eleventyConfig) {
         "./node_modules/@gouvfr/dsfr/dist/utility/utility.min.css": "/css/utility/utility.min.css",
         "./node_modules/@gouvfr/dsfr/dist/dsfr.module.min.js": "/js/dsfr.module.min.js",
         "./node_modules/@gouvfr/dsfr/dist/dsfr.nomodule.min.js": "/js/dsfr.nomodule.min.js",
-        "./node_modules/@gouvfr/dsfr/dist/artwork": "/artwork"
+        "./node_modules/@gouvfr/dsfr/dist/artwork": "/artwork",
+        "./node_modules/mermaid/dist/mermaid.min.js": "/js/mermaid.min.js",
     });
 
     // Run Eleventy when these files change:
@@ -51,6 +50,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginSyntaxHighlight, {
         preAttributes: {tabindex: 0}
     });
+
+    // Mermaid plugin overrides above syntax highlighter
+    eleventyConfig.addPlugin(require("./eleventy.config.mermaid.js"));
+
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(pluginBundle);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -61,9 +64,6 @@ module.exports = function (eleventyConfig) {
             return a.inputPath.localeCompare(b.inputPath);
         });
     });
-
-     // Mermaid plugin : https://github.com/KevinGimbel/eleventy-plugin-mermaid
-     eleventyConfig.addPlugin(pluginMermaid);
 
     // Filters
     eleventyConfig.addFilter("jsDateObject", function jsDateObject(dateStr, format, zone) {
