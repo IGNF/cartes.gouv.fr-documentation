@@ -21,7 +21,6 @@ C -->|Two| E[Result 2]
 
 ## Rendu
 
-
 ```mermaid
 flowchart LR
 A[Hard] -->|Text| B(Round)

@@ -51,17 +51,8 @@ module.exports = function (eleventyConfig) {
         preAttributes: {tabindex: 0}
     });
 
-    // setup mermaid markdown highlighter
-    const highlighter = eleventyConfig.markdownHighlighter;
-    eleventyConfig.addMarkdownHighlighter((str, language) => {
-        if (language === "mermaid") {
-            return `<pre class="mermaid">${str}</pre>`;
-        }
-        if (highlighter) {
-            return highlighter(str, language);
-        }
-        return `<pre class="${language}">${str}</pre>`;
-    });
+    // Mermaid plugin overrides above syntax highlighter
+    eleventyConfig.addPlugin(require("./eleventy.config.mermaid.js"));
 
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(pluginBundle);
