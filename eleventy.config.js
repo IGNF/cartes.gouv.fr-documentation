@@ -1,4 +1,6 @@
 const {DateTime} = require("luxon");
+const markdownIt = require("markdown-it");
+const markdownItAdmonition = require("markdown-it-admon");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItContainer = require("markdown-it-container");
@@ -9,6 +11,7 @@ const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const {EleventyHtmlBasePlugin} = require("@11ty/eleventy");
 const {EleventyI18nPlugin} = require("@11ty/eleventy");
+
 
 const customMarkdownContainers = require("./markdown-custom-containers");
 
@@ -26,6 +29,7 @@ module.exports = function (eleventyConfig) {
         "./node_modules/@gouvfr/dsfr/dist/dsfr.nomodule.min.js": "/js/dsfr.nomodule.min.js",
         "./node_modules/@gouvfr/dsfr/dist/artwork": "/artwork",
         "./node_modules/mermaid/dist/mermaid.min.js": "/js/mermaid.min.js",
+        "./node_modules/markdown-it-admon/styles/admonition.css": "/css/admonition.css",
     });
 
     // Run Eleventy when these files change:
@@ -131,6 +135,15 @@ module.exports = function (eleventyConfig) {
     });
 
     // Customize Markdown library settings:
+    eleventyConfig.setLibrary("md", markdownIt({
+        html: true,
+        linkify: true
+    }));
+
+    eleventyConfig.amendLibrary("md", mdLib => {
+        mdLib.use(markdownItAdmonition, {});
+    });
+
     eleventyConfig.amendLibrary("md", mdLib => {
         mdLib.use(markdownItAnchor, {
             permalink: markdownItAnchor.permalink.ariaHidden({
