@@ -6,7 +6,8 @@ tags:
   - DSFR
   - composant
 ---
-Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
+
+Ce composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
 
 ## Exemple d'utilisation
 
@@ -21,7 +22,7 @@ Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `
 {% endraw %}
 ```
 
-Référence : https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte
+Référence : [https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte](https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte)
 
 ## Rendu
 
@@ -50,6 +51,8 @@ Référence : https://www.systeme-de-design.gouv.fr/elements-d-interface/composa
     type: "error",
     title: "Titre de l'erreur seul"
 }) }}
+
+----
 
 Alerte sans type précisé (défaut info) :
 
