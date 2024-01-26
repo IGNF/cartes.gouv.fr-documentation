@@ -31,6 +31,7 @@ module.exports = {
     pick_theme: "Pick a Theme.",
     previous_page: "Previous page",
     published_on: "Published on",
+    read_also: "Read Also",
     results: "results",
     see_breadcrumb: "See Breadcrumb",
     see_more: "See More",
