@@ -1,5 +1,6 @@
 module.exports = {
     about: "À propos",
+    access_guides: "Accéder aux guides",
     accessibility: "Accessibilité",
     add_to_calendar: "Ajouter au calendrier",
     back_to_top: "Haut de page",
