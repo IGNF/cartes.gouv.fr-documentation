@@ -6,10 +6,10 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-<div class="banner-primary">
-  <div class="fr-container fr-pt-8w fr-pb-6w fr-mb-6w">
-    <div class="fr-grid-row">
-      <div class="fr-col-12">
+<div class="fr-py-6w fr-background-alt--blue-cumulus">
+  <div class="fr-container">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-10">
         <h1>
           Centraliser, partager et informer <br/>
           toute la documentation de cartes.gouv.fr
@@ -26,10 +26,10 @@ numberOfLatestPostsToShow: 3
     </div>
   </div>
 </div>
-<div class="fr-container">
+<div class="fr-container fr-my-6w">
   {% set postsCount = collections.posts | filterCollectionLang | length %}
   {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-  <h1>{% if latestPostsCount != 1 %}Les {{ latestPostsCount }} derniers articles{% else %}Le dernier article{% endif %}</h1>
+  <h2>{% if latestPostsCount != 1 %}Les {{ latestPostsCount }} derniers articles{% else %}Le dernier article{% endif %}</h2>
 
   {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) %}
   {% set postslistCounter = postsCount %}
@@ -37,7 +37,8 @@ numberOfLatestPostsToShow: 3
 
   {% set morePosts = postsCount - numberOfLatestPostsToShow %}
   {% if morePosts > 0 %}
-    <p>{{ morePosts }} {% if morePosts != 1 %}articles supplémentaires peuvent être consultés{% else %}article supplémentaire peut être consulté{% endif %} dans <a href="{{ "/blog" | locale_url }}">la documentation</a>.</p>
+    <p>{{ morePosts }} {% if morePosts != 1 %}articles supplémentaires peuvent être consultés{% else %}article supplémentaire peut être consulté{% endif %}
+      dans <a href="{{ "/blog" | locale_url }}">la documentation</a>.</p>
   {% endif %}
 
   {# List every content page in the project #}

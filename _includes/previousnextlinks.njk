@@ -1,0 +1,30 @@
+{% from "components/component.njk" import component with context %}
+{% set previousPost = currentPosts | filterCollectionLang | getPreviousCollectionItem %}
+{% set nextPost = currentPosts | filterCollectionLang | getNextCollectionItem %}
+{% if nextPost or previousPost %}
+  <div class="fr-my-6w">
+    <h2>{{ "read_also" | i18n }}</h2>
+    <div class="fr-grid-row fr-grid-row--gutters fr-mb-6w">
+      {% if previousPost %}
+        <div class="fr-col-12 fr-col-md-6">
+          {{ component("card", {
+            url: previousPost.url,
+            title: previousPost.data.title,
+            date: previousPost.date,
+            addClass: "fr-card--horizontal-tier fr-card--grey fr-card--no-border fr-card--sm"
+          }) }}
+        </div>
+      {% endif %}
+      {% if nextPost %}
+        <div class="fr-col-12 fr-col-md-6">
+          {{ component("card", {
+            url: nextPost.url,
+            title: nextPost.data.title,
+            date: nextPost.date,
+            addClass: "fr-card--horizontal-tier fr-card--grey fr-card--no-border fr-card--sm"
+          }) }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
