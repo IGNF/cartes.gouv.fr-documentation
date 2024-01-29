@@ -8,8 +8,6 @@ tags:
 ---
 Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
 
-sqjldqsjdk qslkfjqsldkqsj **qsdsqjldlkqsjdkl** qsdklqsj
-
 ## Exemple d'utilisation
 
 ```njk
