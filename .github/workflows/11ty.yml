@@ -22,8 +22,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
+    name: Generate a static build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -43,8 +43,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
-  # Deployment job
-  deploy:
+  deploy-ghpages:
+    name: Deploy to github pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
