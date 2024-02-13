@@ -1,6 +1,5 @@
 /.vscode
 /.github
-/.docker/Dockerfile
 /node_modules/
 /docs
 /_site
