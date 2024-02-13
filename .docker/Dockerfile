@@ -8,14 +8,15 @@ RUN apk add git
 WORKDIR /app
 COPY . .
 RUN npm ci \
-	&& npx @11ty/eleventy \
+	&& npx @11ty/eleventy --pathprefix=/docs/ \
+	&& npx pagefind --site _site/ --output-subdir \"_pagefind\" \
 	&& rm -rf node_modules .git
 
 #----------------------------------------------------------------------
 # cartesgouvfr-documentation : Config d'un serveur statique avec nginx
 #----------------------------------------------------------------------
 FROM nginx:alpine
-COPY --from=builder /app/_site /usr/share/nginx/html/
+COPY --from=builder /app/_site /usr/share/nginx/html/docs/
 COPY .docker/nginx.conf /etc/nginx/nginx.conf
 
 WORKDIR /app
