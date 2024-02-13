@@ -8,8 +8,9 @@ RUN apk add git
 WORKDIR /app
 COPY . .
 
+# --pathprefix=/docs/
 RUN npm ci \
-	&& npx @11ty/eleventy --pathprefix=/docs/ \
+	&& npx @11ty/eleventy \
 	&& npx pagefind --site _site/ --output-subdir \"_pagefind\" \
 	&& rm -rf node_modules .git
 
