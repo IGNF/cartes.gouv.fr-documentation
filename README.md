@@ -4,7 +4,6 @@ Site de documentation statique associé à [cartes.gouv.fr](https://cartes.gouv.
 
 Il est construit sur la base de [codegouvfr/eleventy-dsfr](https://github.com/codegouvfr/eleventy-dsfr).
 
-
 ## Prise en main
 
 [Documentation développeur](docs/developpeur.md)
@@ -14,6 +13,11 @@ Il est construit sur la base de [codegouvfr/eleventy-dsfr](https://github.com/co
 
 [Documentation rédacteur](docs/redacteur.md)
 
+## Déploiements
+
+La branche `main` est automatiquement déployée sur github pages en quelques minutes.
+
+Il faut ensuite un tag respectant le versioning sémantique (`vX.Y.Z`) pour qu'une image prête pour la production soit générée sur le registre ghcr.io.
 
 ## Licence
 
