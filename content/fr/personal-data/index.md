@@ -1,5 +1,5 @@
 ---
-title: Exemple
+title: Données personnelles
 layout: layouts/page.njk
 description: A compléter
 slugOverride: donnees personnelles

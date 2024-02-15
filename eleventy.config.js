@@ -135,7 +135,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("filterTagList", function filterTagList(tags, addTags = []) {
-        return (tags || []).filter(tag => ["all", "nav", "post", "posts", "event"]
+        return (tags || []).filter(tag => ["all", "nav", "post", "posts", "events"]
             .concat(addTags)
             .indexOf(tag) === -1);
     });
@@ -156,6 +156,12 @@ module.exports = function (eleventyConfig) {
             level: [1, 2, 3, 4],
             slugify: eleventyConfig.getFilter("slugify")
         });
+    });
+
+    eleventyConfig.amendLibrary("md", mdLib => {
+        mdLib.renderer.rules.table_open = function(tokens, idx) {
+            return '<table class="fr-table">';
+        };
     });
 
     eleventyConfig.amendLibrary("md", mdLib => {
