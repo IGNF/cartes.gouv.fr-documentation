@@ -30,7 +30,7 @@ module.exports = {
     personal_data: "Personal Data",
     pick_theme: "Pick a Theme.",
     previous_page: "Previous page",
-    published_on: "Published on",
+    published_on: "Last modified on",
     read_also: "Read Also",
     results: "results",
     see_breadcrumb: "See Breadcrumb",
