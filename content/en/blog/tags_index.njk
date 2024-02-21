@@ -1,7 +1,0 @@
----
-title: Tags
-layout: layouts/page.njk
-permalink: "/{{ lang }}/blog/tags/"
----
-{% set tags = collections.posts | filterCollectionLang | getAllTags %}
-{% include "components/taggroup.njk" %}
