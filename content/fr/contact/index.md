@@ -1,10 +1,9 @@
 ---
-layout: layouts/page.njk
 title: Contact
 eleventyNavigation:
-  key: Contact
+  key: Nous écrire
+  externalUrl: https://cartes.gouv.fr/nous-ecrire
   parent: À propos
-  order: 2
+  order: 3
+permalink: false
 ---
-
-<contact@code.gouv.fr>
