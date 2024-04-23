@@ -29,9 +29,7 @@
 
   {% if mermaid %}
     <script src="/js/mermaid.min.js"></script>
-    <script>
-      mermaid.initialize({ startOnLoad: true});
-    </script>
+    <script src="/js/mermaid.initialize.js"></script>
   {% endif %}
 
   <title>{{ title or metadata.title }}</title>
