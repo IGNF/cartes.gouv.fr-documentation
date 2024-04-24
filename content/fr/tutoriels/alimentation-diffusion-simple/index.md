@@ -54,7 +54,20 @@ stateDiagram
 
 ## Données du tutoriel
 
-Les données de l'exemple sont deux tables, les pays et régions écologiques mondiales, au format Geopackage, téléchargeable [ici](/data/tutoriels/alimentation-diffusion-simple/monde.gpkg).
+Les données de l'exemple sont deux tables, les pays et régions écologiques mondiales, au format Geopackage, téléchargeables ici :
+
+{% from "components/component.njk" import component with context %}
+<div>
+{{ component("download", {
+    type: "tile",
+    title: "monde.gpkg",
+    description: "Pays et régions écologiques mondiales",
+    href: "/data/tutoriels/alimentation-diffusion-simple/monde.gpkg",
+    detail: "Geopackage - 11,4Mo",
+    pictogram: "map/map.svg"
+}) }}
+</div>
+<br>
 
 ![monde.gpkg](/img/tutoriels/alimentation-diffusion-simple/donnees_presentation_vecteur.png)
 
