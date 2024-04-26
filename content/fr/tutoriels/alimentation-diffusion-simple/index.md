@@ -81,7 +81,12 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 **Déclarer la livraison**
 
-??? POST /datastores/{datastore}/uploads
+
+```plain
+POST /datastores/{datastore}/uploads
+```
+
+??? Requête et réponse
 
 Requête : `POST /datastores/{datastore}/uploads`
 
@@ -145,7 +150,11 @@ Les formats de fichier vecteur gérés sont :
   * `ALTER TABLE`
   * `ALTER SEQUENCE` 
 
-??? POST /datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
+```plain
+POST /datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
+```
+
+??? Requête
 
 **Corps de requête Multipart**
 
@@ -159,7 +168,12 @@ Les formats de fichier vecteur gérés sont :
 
 Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
 
-??? GET /datastores/{datastore}/uploads/{upload}/tree
+
+```plain
+GET /datastores/{datastore}/uploads/{upload}/tree
+```
+
+??? Réponse
 
 **Corps de réponse JSON**
 
@@ -198,7 +212,11 @@ POST /datastores/{datastore}/uploads/{upload}/close
 
 Plusieurs vérifications peuvent tourner sur une mếme livraison, celles ci ne faisant que lire les données déposées.
 
-??? GET /datastores/{datastore}/uploads/{upload}/checks
+```plain
+GET /datastores/{datastore}/uploads/{upload}/checks
+```
+
+??? Réponse
 
 **Corps de réponse JSON**
 
@@ -232,7 +250,11 @@ Plusieurs vérifications peuvent tourner sur une mếme livraison, celles ci ne 
 
 Lorsque toutes les vérifications seront passées, la livraison passera en statut CLOSED et la réponse à l'appel précédent sera :
 
-??? GET /datastores/{datastore}/uploads/{upload}/checks
+```plain
+GET /datastores/{datastore}/uploads/{upload}/checks
+```
+
+??? Réponse
 
 **Corps de réponse JSON**
 
@@ -274,7 +296,11 @@ Pour transformer la donnée livrée en donnée stockée, des traitements sont mi
 
 #### Consultation des traitements disponibles
 
-??? GET /datastores/{datastore}/processings
+```plain
+GET /datastores/{datastore}/processings
+```
+
+??? Réponse
 
 **Corps de réponse JSON**
 
@@ -321,7 +347,11 @@ Pour transformer la donnée livrée en donnée stockée, des traitements sont mi
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
 
-??? GET /datastores/{datastore}/processings/0de8c60b-9938-4be9-aa36-9026b77c3c96
+```plain
+GET /datastores/{datastore}/processings/0de8c60b-9938-4be9-aa36-9026b77c3c96
+```
+
+??? Réponse
 
 **Corps de réponse JSON**
 
@@ -371,7 +401,11 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
 
 On distingue le traitement, ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques
 
-??? POST /datastores/{datastore}/processings/executions
+```plain
+POST /datastores/{datastore}/processings/executions
+```
+
+??? Requête et réponse
 
 **Corps de requête JSON**
 
@@ -458,7 +492,11 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 * `PROGRESS` : en cours d'exécution sur le cluster de calcul
 * `SUCCESS` ou `FAILURE` : terminé
 
-??? GET /datastores/{datastore}/processings/executions/{execution}
+```plain
+GET /datastores/{datastore}/processings/executions/{execution}
+```
+
+??? Réponse
 
 **Corps de réponse JSON**
 
@@ -509,7 +547,11 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées, tables et attributs).
 
-??? GET /datastores/{datastore}/stored_data/{stored data}
+```plain
+GET /datastores/{datastore}/stored_data/{stored data}
+```
+
+??? Réponse
 
 **Corps de réponse JSON**
 
@@ -606,6 +648,20 @@ DELETE /datastores/{datastore}/uploads/{upload}
 ```
 
 ### Publication en WFS
+
+#### Configuration de la diffusion
+
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. A ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
+
+* nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WFS de la plateforme)
+* table absente de la donnée stockée
+
+Dans le cas du WFS, une configuration va donner plusieurs couches finales, le `layername` défini va servir de préfixe au nom des tables. On aura dans notre exemple les couches WFS :
+
+* `pays_ecoregions:regions_ecologiques`
+* `pays_ecoregions:pays`
+
+
 
 ### Dépôt de fichiers statiques
 
