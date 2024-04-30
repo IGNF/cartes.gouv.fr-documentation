@@ -144,3 +144,14 @@ div.fr-callout__text p {
 .text-center {
     text-align: center;
 }
+
+/* Copy button on every code blocks */
+pre[class*="language"] {
+    position: relative;
+}
+
+.code-copy-btn {
+    position: absolute;
+    right: .5em;
+    top: .5em;
+}

@@ -88,8 +88,6 @@ POST /datastores/{datastore}/uploads
 
 ??? Requête et réponse
 
-Requête : `POST /datastores/{datastore}/uploads`
-
 **Corps de requête JSON**
 
 ```json
