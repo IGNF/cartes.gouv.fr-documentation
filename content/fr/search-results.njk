@@ -2,22 +2,24 @@
 title: Résultats de la recherche
 layout: layouts/base.njk
 ---
+
 <div class="fr-container fr-my-6w">
-  <div class="fr-grid-row">
-    <div class="fr-col-12">
-      <div class="fr-mb-6w">
-        <h1>{{ title }} “<span id="search-term"></span>”</h1>
-        <p class="fr-text--lg"><span id="result-count">0</span> {{ "results" | i18n }}</p>
-        <div class="fr-grid-row fr-grid-row--gutters" id="search-results">
+    <div class="fr-grid-row">
+        <div class="fr-col-12">
+            <div class="fr-mb-6w">
+                <h1>
+                    {{ title }} “<span id="search-term"></span>”
+                </h1>
+                <p class="fr-text--lg">
+                    <span id="result-count">0</span> {{ "results" | i18n }}
+                </p>
+                <div class="fr-grid-row fr-grid-row--gutters" id="search-results"></div>
+            </div>
+            {% include "components/back_to_top.njk" %}
         </div>
-      </div>
-      {% include "components/back_to_top.njk" %}
     </div>
-  </div>
 </div>
 {% js "body" %}
-  <script>
-      const PAGEFIND_URL = "{{ "/_pagefind/pagefind.js" | htmlBaseUrl }}";
-  </script>
-  <script type="text/javascript" src="/js/search-results.js"></script>
+<script>const PAGEFIND_URL = "{{ "/_pagefind/pagefind.js" | htmlBaseUrl }}";</script>
+<script type="text/javascript" src="/js/search-results.js"></script>
 {% endjs %}

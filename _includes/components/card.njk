@@ -1,65 +1,71 @@
-{% if not card %}{% set card = params %}{% endif %}
+{% if not card %}
+    {% set card = params %}
+{% endif %}
 <div class="fr-card{% if not card.externalUrl %} fr-enlarge-link{% endif %} {{ card.addClass }}">
-  <div class="fr-card__body">
-    <div class="fr-card__content">
-      {% set cardUrl = card.url | locale_url or card.externalUrl %}
-      <h3 class="fr-card__title">
-        {% if not card.externalUrl %}
-          <a href="{{ cardUrl }}">
-            {{ card.title }}
-          </a>
-        {% else %}{{ card.title }}
-        {% endif %}
-      </h3>
-      <p class="fr-card__desc">{{ card.description }}</p>
-      <div class="fr-card__start">
-        {% if card.tags %}
-          {% set tags = card.tags %}
-          {% include "components/taggroup-disabled.njk" %}
-        {% endif %}
-        {% if card.date %}
-          <p class="fr-card__detail fr-icon-time-fill">
-            <time class="postlist-date" datetime="{{ card.date | htmlDateString }}">
-              {{ card.date | readableDate }}
-            </time>
-          </p>
-          {% elif card.detail %}
-          <p class="fr-card__detail">{{ card.detail }}</p>
-        {% endif %}
-      </div>
-      {% if card.detailEnd %}
-        <div class="fr-card__end">
-          <p class="fr-card__detail">{{ card.detailEnd }}</p>
+    <div class="fr-card__body">
+        <div class="fr-card__content">
+            {% set cardUrl = card.url | locale_url or card.externalUrl %}
+            <h3 class="fr-card__title">
+                {% if not card.externalUrl %}
+                    <a href="{{ cardUrl }}">{{ card.title }}</a>
+                {% else %}
+                    {{ card.title }}
+                {% endif %}
+            </h3>
+            <p class="fr-card__desc">{{ card.description }}</p>
+            <div class="fr-card__start">
+                {% if card.tags %}
+                    {% set tags = card.tags %}
+                    {% include "components/taggroup-disabled.njk" %}
+                {% endif %}
+                {% if card.date %}
+                    <p class="fr-card__detail fr-icon-time-fill">
+                        <time class="postlist-date" datetime="{{ card.date | htmlDateString }}">
+                            {{ card.date | readableDate }}
+                        </time>
+                    </p>
+                {% elif card.detail %}
+                    <p class="fr-card__detail">{{ card.detail }}</p>
+                {% endif %}
+            </div>
+            {% if card.detailEnd %}
+                <div class="fr-card__end">
+                    <p class="fr-card__detail">{{ card.detailEnd }}</p>
+                </div>
+            {% endif %}
         </div>
-      {% endif %}
+        <div class="fr-card__footer">
+            {% if card.externalUrl %}
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right"
+                   href="{{ card.externalUrl }}"
+                   title="{{ card.title }} - {{ "new_window" | i18n }}"
+                   target="_blank"
+                   rel="noopener">{{ card.urlDescription or "see_more" | i18n }}</a>
+            {% endif %}
+        </div>
     </div>
-    <div class="fr-card__footer">
-      {% if card.externalUrl %}
-        <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="{{ card.externalUrl }}"
-           title="{{ card.title }} - {{ "new_window" | i18n }}" target="_blank" rel="noopener">
-          {{ card.urlDescription or "see_more" | i18n }}
-        </a>
-      {% endif %}
-    </div>
-  </div>
-  {% if card.badges or card.image %}
-    <div class="fr-card__header">
-      {% if card.badges %}
-        <ul class="fr-badges-group">
-          {% for badge in card.badges %}
-            <li><p class="fr-badge fr-badge--green-emeraude">{{ badge }}</p></li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {% if card.image %}
-        {% if card.image.path %}
-          <div class="fr-card__img">{% imageSync card.image.path, card.image.alt %}</div>
-          {% elif card.image.src %}
-          <div class="fr-card__img">
-            <img class="fr-responsive-img fr-responsive-img--1x1" src="{{ card.image.src }}" alt="{{ card.image.alt }}">
-          </div>
-        {% endif %}
-      {% endif %}
-    </div>
-  {% endif %}
+    {% if card.badges or card.image %}
+        <div class="fr-card__header">
+            {% if card.badges %}
+                <ul class="fr-badges-group">
+                    {% for badge in card.badges %}
+                        <li>
+                            <p class="fr-badge fr-badge--green-emeraude">{{ badge }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if card.image %}
+                {% if card.image.path %}
+                    <div class="fr-card__img">{% imageSync card.image.path, card.image.alt %}</div>
+                {% elif card.image.src %}
+                    <div class="fr-card__img">
+                        <img class="fr-responsive-img fr-responsive-img--1x1"
+                             src="{{ card.image.src }}"
+                             alt="{{ card.image.alt }}">
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    {% endif %}
 </div>

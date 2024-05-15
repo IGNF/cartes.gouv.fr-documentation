@@ -17,10 +17,11 @@
   }
 }
 ---
+
 <h2 class="fr-h4">{{ "filter_by_tag" | i18n }}</h2>
 <div class="fr-mt-6v fr-mb-6w">
-  {% set tags = collections.posts | filterCollectionLang | getAllTags %}
-  {% include "components/taggroup.njk" %}
+    {% set tags = collections.posts | filterCollectionLang | getAllTags %}
+    {% include "components/taggroup.njk" %}
 </div>
 {% set postslist = pagination.items %}
 {% include "postslist.njk" %}
