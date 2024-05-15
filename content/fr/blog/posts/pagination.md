@@ -3,7 +3,7 @@ title: Pagination
 description: Comment utiliser le système de pagination d'eleventy-dsfr ?
 date: git Last Modified
 tags:
-- fonctionnalité
+    - fonctionnalité
 ---
 
 `eleventy-dsfr` utilise le [système de pagination d'Eleventy](https://www.11ty.dev/docs/pagination/), par exemple pour les articles de blog.

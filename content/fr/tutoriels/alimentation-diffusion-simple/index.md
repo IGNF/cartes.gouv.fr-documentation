@@ -57,6 +57,7 @@ stateDiagram
 Les données de l'exemple sont deux tables, les pays et régions écologiques mondiales, au format Geopackage, téléchargeables ici :
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("download", {
     type: "tile",
@@ -80,7 +81,6 @@ La livraison est une entité qui permet de déposer un ensemble de fichiers de d
 La livraison n'a qu'un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
 
 **Déclarer la livraison**
-
 
 ```plain
 POST /datastores/{datastore}/uploads
@@ -123,30 +123,30 @@ POST /datastores/{datastore}/uploads
     "_id": "{upload}"
 }
 ```
+
 ???
 
 <br/>
-
 
 **Téléverser un fichier**
 
 Les formats de fichier vecteur gérés sont :
 
-* Geopackage
-* GeoJSON
-* Shapefile
-* CSV
-  * Si la géométrie est dans une colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
-  * Si la donnée est ponctuelle, les coordonnées peuvent être dans deux colonnes nommées :
-    * `lon`, `x`, `longitude`
-    * `lat`, `y`, `latitude`
-* SQL. Les instructions autorisées sont les suivantes, sans préciser de nom de schéma :
-  * `CREATE TABLE`
-  * `CREATE VIEW`
-  * `CREATE INDEX`
-  * `CREATE SEQUENCE`
-  * `ALTER TABLE`
-  * `ALTER SEQUENCE` 
+-   Geopackage
+-   GeoJSON
+-   Shapefile
+-   CSV
+    -   Si la géométrie est dans une colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
+    -   Si la donnée est ponctuelle, les coordonnées peuvent être dans deux colonnes nommées :
+        -   `lon`, `x`, `longitude`
+        -   `lat`, `y`, `latitude`
+-   SQL. Les instructions autorisées sont les suivantes, sans préciser de nom de schéma :
+    -   `CREATE TABLE`
+    -   `CREATE VIEW`
+    -   `CREATE INDEX`
+    -   `CREATE SEQUENCE`
+    -   `ALTER TABLE`
+    -   `ALTER SEQUENCE`
 
 ```plain
 POST /datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
@@ -156,7 +156,7 @@ POST /datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
 
 **Corps de requête Multipart**
 
-* file = `<monde.gpkg>`
+-   file = `<monde.gpkg>`
 
 ???
 
@@ -165,7 +165,6 @@ POST /datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
 **Contrôler le contenu**
 
 Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
-
 
 ```plain
 GET /datastores/{datastore}/uploads/{upload}/tree
@@ -358,16 +357,12 @@ GET /datastores/{datastore}/processings/0de8c60b-9938-4be9-aa36-9026b77c3c96
     "name": "Intégration de données vecteur livrées en base",
     "description": "Ce traitement permet de stocker dans les bases de données PostgreSQL de la plateforme des données vecteurs livrées. Les formats pris en charge sont le CSV, le Shapefile, le Geopackage et le GeoJSON. Il est également possible de préciser un autre système afin de réaliser une reprojection à l'intégration",
     "input_types": {
-        "upload": [
-            "VECTOR"
-        ],
+        "upload": ["VECTOR"],
         "stored_data": []
     },
     "output_type": {
         "stored_data": "VECTOR-DB",
-        "storage": [
-            "POSTGRESQL"
-        ]
+        "storage": ["POSTGRESQL"]
     },
     "parameters": [
         {
@@ -391,6 +386,7 @@ GET /datastores/{datastore}/processings/0de8c60b-9938-4be9-aa36-9026b77c3c96
     ]
 }
 ```
+
 ???
 
 <br/>
@@ -411,9 +407,7 @@ POST /datastores/{datastore}/processings/executions
 {
     "processing": "0de8c60b-9938-4be9-aa36-9026b77c3c96",
     "inputs": {
-        "upload": [
-            "{upload}"
-        ]
+        "upload": ["{upload}"]
     },
     "output": {
         "stored_data": {
@@ -485,10 +479,10 @@ Les noms des tables et des champs sont "standardisés" lors de l'intégration en
 
 Une exécution va avoir les statuts dans l'ordre suivant :
 
-* `CREATED` : créée mais non lancée
-* `WAITING` : lancée mais pas encore pris en charge par le cluster de calcul
-* `PROGRESS` : en cours d'exécution sur le cluster de calcul
-* `SUCCESS` ou `FAILURE` : terminé
+-   `CREATED` : créée mais non lancée
+-   `WAITING` : lancée mais pas encore pris en charge par le cluster de calcul
+-   `PROGRESS` : en cours d'exécution sur le cluster de calcul
+-   `SUCCESS` ou `FAILURE` : terminé
 
 ```plain
 GET /datastores/{datastore}/processings/executions/{execution}
@@ -562,9 +556,7 @@ GET /datastores/{datastore}/stored_data/{stored data}
     "contact": "email",
     "extent": {
         "type": "Polygon",
-        "coordinates": [
-
-        ]
+        "coordinates": []
     },
     "last_event": {
         "title": "Génération",
@@ -588,45 +580,14 @@ GET /datastores/{datastore}/stored_data/{stored data}
             {
                 "name": "ecoregions",
                 "type": "TABLE",
-                "attributes": [
-                    "ogc_fid",
-                    "id",
-                    "eco_name",
-                    "biome_name",
-                    "realm",
-                    "nnh",
-                    "nnh_name",
-                    "color",
-                    "color_bio",
-                    "color_nnh",
-                    "geom"
-                ],
-                "primary_key": [
-                    "ogc_fid"
-                ]
+                "attributes": ["ogc_fid", "id", "eco_name", "biome_name", "realm", "nnh", "nnh_name", "color", "color_bio", "color_nnh", "geom"],
+                "primary_key": ["ogc_fid"]
             },
             {
                 "name": "pays",
                 "type": "TABLE",
-                "attributes": [
-                    "ogc_fid",
-                    "id",
-                    "fips",
-                    "iso2",
-                    "iso3",
-                    "un",
-                    "name",
-                    "area",
-                    "pop2005",
-                    "region",
-                    "subregion",
-                    "lon",
-                    "lat",
-                    "geom"
-                ],
-                "primary_key": [
-                    "ogc_fid"
-                ]
+                "attributes": ["ogc_fid", "id", "fips", "iso2", "iso3", "un", "name", "area", "pop2005", "region", "subregion", "lon", "lat", "geom"],
+                "primary_key": ["ogc_fid"]
             }
         ]
     }
@@ -651,15 +612,13 @@ DELETE /datastores/{datastore}/uploads/{upload}
 
 La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. A ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
 
-* nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WFS de la plateforme)
-* table absente de la donnée stockée
+-   nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WFS de la plateforme)
+-   table absente de la donnée stockée
 
 Dans le cas du WFS, une configuration va donner plusieurs couches finales, le `layername` défini va servir de préfixe au nom des tables. On aura dans notre exemple les couches WFS :
 
-* `pays_ecoregions:regions_ecologiques`
-* `pays_ecoregions:pays`
-
-
+-   `pays_ecoregions:regions_ecologiques`
+-   `pays_ecoregions:pays`
 
 ### Dépôt de fichiers statiques
 

@@ -1,19 +1,19 @@
 version: "3.8"
 
 services:
-  site:
-    image: ignf/cartes.gouv.fr-documentation
-    build:
-      context: .
-      dockerfile: ".docker/Dockerfile"
-      args:
-        - HTTP_PROXY
-        - HTTPS_PROXY
-    ports:
-      - 8082:8082
-    environment:
-      - HTTP_PROXY=${HTTP_PROXY}
-      - HTTPS_PROXY=${HTTPS_PROXY}
-      - http_proxy=${HTTP_PROXY}
-      - https_proxy=${HTTPS_PROXY}
-    restart: unless-stopped
+    site:
+        image: ignf/cartes.gouv.fr-documentation
+        build:
+            context: .
+            dockerfile: ".docker/Dockerfile"
+            args:
+                - HTTP_PROXY
+                - HTTPS_PROXY
+        ports:
+            - 8082:8082
+        environment:
+            - HTTP_PROXY=${HTTP_PROXY}
+            - HTTPS_PROXY=${HTTPS_PROXY}
+            - http_proxy=${HTTP_PROXY}
+            - https_proxy=${HTTPS_PROXY}
+        restart: unless-stopped

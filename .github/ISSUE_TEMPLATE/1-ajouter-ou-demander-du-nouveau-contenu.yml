@@ -7,11 +7,11 @@ body:
       attributes:
           label: Description
           description: |
-            Posez une question ou proposez des modifications de la documentation.
-            Détaillez votre besoin ou votre idée au maximum, notamment où vous verriez ces changements dans l'arborescence de la documentation.
+              Posez une question ou proposez des modifications de la documentation.
+              Détaillez votre besoin ou votre idée au maximum, notamment où vous verriez ces changements dans l'arborescence de la documentation.
 
-            Les ajouts ou modifications peuvent être :
-            * des compléments sur des pages de documentation existante
-            * des nouveaux contenus
+              Les ajouts ou modifications peuvent être :
+              * des compléments sur des pages de documentation existante
+              * des nouveaux contenus
       validations:
           required: true

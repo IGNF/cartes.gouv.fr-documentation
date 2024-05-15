@@ -8,7 +8,6 @@ Il est construit sur la base de [codegouvfr/eleventy-dsfr](https://github.com/co
 
 [Documentation développeur](docs/developpeur.md)
 
-
 ## Ajout de contenu
 
 [Documentation rédacteur](docs/redacteur.md)

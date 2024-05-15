@@ -3,8 +3,8 @@ title: Gestion des clés
 description: Comment gérer ses clés d'accès aux services de diffusion
 date: git Last Modified
 tags:
-  - Contrôle des accès
-  - Diffusion
+    - Contrôle des accès
+    - Diffusion
 ---
 
 En tant que consommateur de données, c'est également via l'API que l'on va pouvoir configuer ses clés d'accès. Cela n'implique pas d'avoir accès à une entrepôt, ni même d'être le membre d'une communauté.
@@ -21,8 +21,8 @@ L'ensemble des permissions qui m'ont été personnellement donnée ou qui ont é
 
 **Paramètres de requête**
 
-* personal = `true`
-* community = `false`
+-   personal = `true`
+-   community = `false`
 
 **Corps de réponse JSON**
 
@@ -47,6 +47,7 @@ L'ensemble des permissions qui m'ont été personnellement donnée ou qui ont é
     }
 ]
 ```
+
 ???
 <br>
 
@@ -54,13 +55,12 @@ En tant que bénéficiaire de cette permission personnelle, je peux la supprimer
 
 ### Récupérer ses permissions communautaires
 
-
 ??? GET {{ urls.api_entrepot }}/users/me/permissions
 
 **Paramètres de requête**
 
-* personal = `false`
-* community = `true`
+-   personal = `false`
+-   community = `true`
 
 **Corps de réponse JSON**
 
@@ -85,6 +85,7 @@ En tant que bénéficiaire de cette permission personnelle, je peux la supprimer
     }
 ]
 ```
+
 ???
 <br>
 
@@ -119,6 +120,7 @@ Dans la suite, nous allons exploiter la permission personnelle. Il est possible 
     }
 ]
 ```
+
 ???
 <br>
 
@@ -129,9 +131,8 @@ Sans clé d'accès, il n'est pas possible de consulter le service de diffusion, 
 ??? GET {{ urls.private.wfs }}
 
 **Paramètres de requête**
-    * REQUEST = `GetCapabilities`
-    * SERVICE = `WFS`
-    * VERSION = `2.0.0`
+_ REQUEST = `GetCapabilities`
+_ SERVICE = `WFS` \* VERSION = `2.0.0`
 
 **Corps de réponse XML**
 
@@ -143,14 +144,15 @@ Sans clé d'accès, il n'est pas possible de consulter le service de diffusion, 
     </body>
 </html>
 ```
+
 ???
 <br>
 
 La clé d'accès est un moyen de s'identifier lors de l'utilisation des services de diffusion. Il existe trois type d'identification :
 
-* Le hash en paramètre de requête `api_key` ou en header `X-Key`
-* Une authentification `Basic`
-* Une authentification `Bearer` (jeton généré par le gestionnaire d'identité). C'est l'authentification forte, qui peut être nécessaire pour exploiter les permissions dont le champ `only_oauth` est à vrai.
+-   Le hash en paramètre de requête `api_key` ou en header `X-Key`
+-   Une authentification `Basic`
+-   Une authentification `Bearer` (jeton généré par le gestionnaire d'identité). C'est l'authentification forte, qui peut être nécessaire pour exploiter les permissions dont le champ `only_oauth` est à vrai.
 
 ### Créer une clé d'accès simple
 
@@ -184,15 +186,16 @@ Nous allons ici voir un exemple de mise en place d'une clé de type HASH.
     "_id": "{key HASH}"
 }
 ```
+
 ???
 <br>
 
 Quelque soit le type de clé, il est possible de préciser des conditions d'utilisation de la clé :
 
-* Limiter les IP pouvant l'utiliser (whitelist)
-* Bloquer des IP (blacklist)
-* Forcer le referer
-* Forcer le user agent
+-   Limiter les IP pouvant l'utiliser (whitelist)
+-   Bloquer des IP (blacklist)
+-   Forcer le referer
+-   Forcer le user agent
 
 Il est maintenant possible [d'interroger le service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle). Cependant, aucune couche ne semble disponible, car nous n'avons pas encore donné de droit à cette clé.
 
@@ -207,11 +210,10 @@ Les permissions ouvrent des droits a priori sur des offres, mais c'est à la cha
 ```json
 {
     "permission": "{permission utilisateur}",
-    "offerings": [
-        "{offering}"
-    ]
+    "offerings": ["{offering}"]
 }
 ```
+
 ???
 <br>
 
@@ -243,6 +245,7 @@ On peut connaître toutes les offres que la clé peut consommer avec l'appel sui
     }
 ]
 ```
+
 ???
 <br>
 
@@ -252,10 +255,10 @@ On peut maintenant voir les couches correspondantes à l'offre dans les [capacit
 
 **Paramètres de requête**
 
-* REQUEST = `GetCapabilities`
-* SERVICE = `WFS`
-* VERSION = `2.0.0`
-* apikey = `masupercle`
+-   REQUEST = `GetCapabilities`
+-   SERVICE = `WFS`
+-   VERSION = `2.0.0`
+-   apikey = `masupercle`
 
 **Corps de réponse XML**
 
@@ -293,6 +296,7 @@ On peut maintenant voir les couches correspondantes à l'offre dans les [capacit
     </FeatureType>
 </FeatureTypeList>
 ```
+
 ???
 <br>
 
@@ -303,7 +307,6 @@ Il est aussi possible de mettre la clé dans le header `apikey` plutôt qu'en pa
 ### Créer une clé de type BASIC
 
 Nous allons ajouter à cette clé des limites d'utilisation, un user agent particulier qui limite l'usage de la clé au client QGis. À noter que l'ajout d'un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
-
 
 ??? POST {{ urls.api_entrepot }}/users/me/keys
 
@@ -337,6 +340,7 @@ Nous allons ajouter à cette clé des limites d'utilisation, un user agent parti
     "_id": "{key BASIC}"
 }
 ```
+
 ???
 <br>
 
@@ -374,16 +378,15 @@ Cette clé est un moyen de préciser que l'on va consommer les services de diffu
     "_id": "{key OAUTH}"
 }
 ```
+
 ???
 <br>
 
 L'affectation d'accès sur cette clé se fait exactement comme pour la première clé.
 
-
 ![Clé OAUTH2 dans QGis](/img/tutoriels/controle-des-acces/diffusion/qgis_cle_oauth2.png){.fr-responsive-img}
 
-
-* URL de requête : `{{ urls.iam }}/protocol/openid-connect/auth`
-* URL du jeton : `{{ urls.iam }}/protocol/openid-connect/token`
-* Client ID : `qgis`
-* Secret client : `{{ secrets.qgis }}`
+-   URL de requête : `{{ urls.iam }}/protocol/openid-connect/auth`
+-   URL du jeton : `{{ urls.iam }}/protocol/openid-connect/token`
+-   Client ID : `qgis`
+-   Secret client : `{{ secrets.qgis }}`

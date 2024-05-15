@@ -3,9 +3,10 @@ title: Téléchargement de fichier
 description: Comment intégrer un lien de téléchargement de fichier dans une page du site ?
 date: git Last Modified
 tags:
-  - DSFR
-  - composant
+    - DSFR
+    - composant
 ---
+
 Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
 
 ## Exemples d'utilisation
@@ -67,6 +68,7 @@ Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `
 ### Carte
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("download", {
     type: "card",
@@ -82,6 +84,7 @@ Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `
 ### Tuile
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("download", {
     type: "tile",

@@ -1,4 +1,4 @@
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
     const highlighter = eleventyConfig.markdownHighlighter;
     eleventyConfig.addMarkdownHighlighter((str, language) => {
         if (language === "mermaid") {
@@ -11,4 +11,4 @@ module.exports = eleventyConfig => {
     });
 
     return {};
-}
+};

@@ -3,9 +3,10 @@ title: Tableau
 description: Comment intégrer un tableau dans une page du site ?
 date: git Last Modified
 tags:
-  - DSFR
-  - composant
+    - DSFR
+    - composant
 ---
+
 Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
 
 ## Exemple d'utilisation

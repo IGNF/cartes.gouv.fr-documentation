@@ -3,9 +3,10 @@ title: Accordéon
 description: Comment intégrer un accordéon dans une page du site ?
 date: git Last Modified
 tags:
-  - DSFR
-  - composant
+    - DSFR
+    - composant
 ---
+
 Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
 
 ## Utilisation
@@ -62,8 +63,8 @@ Groupe d'accordéons créé en Markdown :
 
 Contenu MD
 
-* one
-* two
+-   one
+-   two
 
 ???
 

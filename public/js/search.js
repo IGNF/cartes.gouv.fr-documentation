@@ -11,7 +11,7 @@ const SEARCH_PARAM = "term";
         const searchResultsUrl = new URL(SEARCH_RESULTS_URL, window.location.origin);
         searchResultsUrl.searchParams.append(SEARCH_PARAM, searchInput.value);
         window.location.href = searchResultsUrl;
-    }
+    };
 
     searchInput.addEventListener("keydown", async (event) => {
         if (event.code === "Enter") {

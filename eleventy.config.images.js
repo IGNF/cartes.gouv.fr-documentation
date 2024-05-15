@@ -3,11 +3,11 @@ const eleventyImage = require("@11ty/eleventy-img");
 
 // Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
 // Warning: Avif can be resource-intensive so take care!
-const getOptions = widths => {
+const getOptions = (widths) => {
     return {
         widths: widths || ["auto"],
         formats: ["avif", "webp", "auto"],
-    }
+    };
 };
 
 const getImageAttributes = (cls, alt, sizes) => {
@@ -24,9 +24,9 @@ const relativeToInputPath = (inputPath, relativeFilePath) => {
     let split = inputPath.split("/");
     split.pop();
     return path.resolve(split.join(path.sep), relativeFilePath);
-}
+};
 
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
     // Eleventy Image shortcodes
     // https://www.11ty.dev/docs/plugins/image/
     eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, widths, sizes, cls = "") {
