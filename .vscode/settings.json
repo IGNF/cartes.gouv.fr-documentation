@@ -1,0 +1,11 @@
+{
+    "emmet.includeLanguages": {
+        "nunjucks": "html"
+    },
+    "files.associations": {
+        "*.njk": "nunjucks"
+    },
+    "[nj][njk][nunjucks]": {
+        "editor.defaultFormatter": "monosans.djlint"
+    }
+}
