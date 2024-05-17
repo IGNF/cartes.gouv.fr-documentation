@@ -12,8 +12,6 @@
         "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
         "format:prettier": "prettier --check .",
         "format:prettier:fix": "prettier --write .",
-        "format:djlint": "djlint --check .",
-        "format:djlint:fix": "djlint --reformat --warn .",
         "prepare": "husky"
     },
     "repository": {
@@ -38,7 +36,6 @@
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
         "@gouvfr/dsfr": "^1.11.0",
         "chalk": "^4.1.2",
-        "djlint": "^1.34.1",
         "husky": "^9.0.11",
         "ics": "^3.2.0",
         "lint-staged": "^15.2.2",
@@ -57,9 +54,6 @@
     "lint-staged": {
         "*.{js,json,md}": [
             "prettier --write"
-        ],
-        "*.njk": [
-            "djlint --reformat --warn"
         ]
     }
 }
