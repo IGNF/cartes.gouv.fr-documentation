@@ -1,3 +1,3 @@
 module.exports = {
-    lang: 'en',
+    lang: "en",
 };

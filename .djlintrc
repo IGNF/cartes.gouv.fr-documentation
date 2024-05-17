@@ -1,0 +1,9 @@
+{
+    "format_css": false,
+    "format_js": false,
+    "max_line_length": "160",
+    "profile": "nunjucks",
+    "ignore": "H031",
+    "exclude": "node_modules,_site,.git",
+    "extension": ".njk"
+}

@@ -1,5 +1,5 @@
 module.exports = {
-    callout: md => {
+    callout: (md) => {
         const re = /^callout(\s+.*)?$/;
         return {
             validate: (params) => {
@@ -18,13 +18,13 @@ module.exports = {
 `;
                 } else {
                     // closing tag
-                    return '</div></div>\n';
+                    return "</div></div>\n";
                 }
-            }
-        }
+            },
+        };
     },
-    quote: md => {
-        const re = /^quote(\s+.*)?$/
+    quote: (md) => {
+        const re = /^quote(\s+.*)?$/;
         let params = undefined;
         return {
             validate: (params) => {
@@ -42,12 +42,15 @@ module.exports = {
 `;
                 } else {
                     // closing tag
-                    const imageBlock = params && params[1] ? `
+                    const imageBlock =
+                        params && params[1]
+                            ? `
     <figcaption>
         <div class="fr-quote__image">
             <img src="${md.utils.escapeHtml(params[1]) || ""}" class="fr-responsive-img" alt="" />
         </div>
-    </figcaption>` : undefined;
+    </figcaption>`
+                            : undefined;
                     return `
     ${imageBlock || ""}
   </blockquote>
@@ -55,10 +58,10 @@ module.exports = {
 <br>
 \n`;
                 }
-            }
-        }
+            },
+        };
     },
-    alert: md => {
+    alert: (md) => {
         const re = /^(info|warning|error|success)(\s+.*)?$/;
         return {
             validate: (params) => {
@@ -68,12 +71,12 @@ module.exports = {
             render: (tokens, idx) => {
                 const params = tokens[idx].info.trim().match(re);
                 const type = params?.[1];
-                const title = md.utils.escapeHtml(params?.[2]) || '';
+                const title = md.utils.escapeHtml(params?.[2]) || "";
 
                 if (tokens[idx].nesting === 1) {
-                    title_elem = '';
-                    small_class = 'fr-alert--sm';
-                    if (title !== '') {
+                    title_elem = "";
+                    small_class = "fr-alert--sm";
+                    if (title !== "") {
                         title_elem = `<h3 class="fr-alert__title">${title}</h3>`;
                         small_class = "";
                     }
@@ -84,12 +87,12 @@ module.exports = {
 `;
                 } else {
                     // closing tag
-                    return '</div>\n';
+                    return "</div>\n";
                 }
-            }
-        }
+            },
+        };
     },
-    accordion: md => {
+    accordion: (md) => {
         const re = /^(accordionsgroup|.*)?$/;
         return {
             validate: (params) => {
@@ -119,13 +122,12 @@ module.exports = {
                     if (params?.[1] === "accordionsgroup") {
                         return `</div>`;
                     } else {
-                        return '</div></section>\n';
+                        return "</div></section>\n";
                     }
                 }
             },
 
-            marker: "?"
-        }
-    }
-
-}
+            marker: "?",
+        };
+    },
+};

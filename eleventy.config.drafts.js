@@ -8,7 +8,7 @@ function eleventyComputedPermalink() {
         }
 
         return data.permalink;
-    }
+    };
 }
 
 function eleventyComputedExcludeFromCollections() {
@@ -21,18 +21,18 @@ function eleventyComputedExcludeFromCollections() {
         }
 
         return data.eleventyExcludeFromCollections;
-    }
+    };
 }
 
 module.exports.eleventyComputedPermalink = eleventyComputedPermalink;
 module.exports.eleventyComputedExcludeFromCollections = eleventyComputedExcludeFromCollections;
 
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
     eleventyConfig.addGlobalData("eleventyComputed.permalink", eleventyComputedPermalink);
     eleventyConfig.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", eleventyComputedExcludeFromCollections);
 
     let logged = false;
-    eleventyConfig.on("eleventy.before", ({runMode}) => {
+    eleventyConfig.on("eleventy.before", ({ runMode }) => {
         let text = "Excluding";
         // Only show drafts in serve/watch modes
         if (runMode === "serve" || runMode === "watch") {
@@ -47,4 +47,4 @@ module.exports = eleventyConfig => {
 
         logged = true;
     });
-}
+};

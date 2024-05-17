@@ -3,7 +3,7 @@ title: Navigation
 description: Comment utiliser le système de navigation d'eleventy-dsfr ?
 date: git Last Modified
 tags:
-- fonctionnalité
+    - fonctionnalité
 ---
 
 `eleventy-dsfr` utilise le [système de navigation d'Eleventy](https://www.11ty.dev/docs/plugins/navigation/).
@@ -16,9 +16,9 @@ Par exemple, dans le fichier [`content/fr/about/index.md`](https://github.com/co
 ```yaml
 ---
 eleventyNavigation:
-  key: Présentation
-  parent: À propos
-  order: 1
+    key: Présentation
+    parent: À propos
+    order: 1
 ---
 ```
 
@@ -27,8 +27,8 @@ Et dans le fichier [`content/fr/about.md`](https://github.com/codegouvfr/elevent
 ```yaml
 ---
 eleventyNavigation:
-  key: À propos
-  order: 3
+    key: À propos
+    order: 3
 permalink: false
 ---
 ```

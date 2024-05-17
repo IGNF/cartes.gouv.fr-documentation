@@ -37,6 +37,7 @@ Référence : https://www.systeme-de-design.gouv.fr/elements-d-interface/composa
     description: "<p>Le contenu de l'alerte</p>"
 }) }}
 ```
+
 Si le type est omis, l'alerte sera de type `info`.
 
 Si le title est absent, il s'agira d'une alerte de petite taille, plus discrète.

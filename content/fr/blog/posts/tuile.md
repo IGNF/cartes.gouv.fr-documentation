@@ -3,9 +3,10 @@ title: Tuile
 description: Comment intégrer une tuile dans une page du site ?
 date: git Last Modified
 tags:
-  - DSFR
-  - composant
+    - DSFR
+    - composant
 ---
+
 Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
 
 ## Exemple d'utilisation
@@ -26,11 +27,11 @@ Le format complet de l'objet en paramètre est le suivant :
 
 ```json
 {
-  "url": "string",
-  "externalUrl": "string",
-  "title": "string",
-  "description": "string",
-  "pictogram": "string"
+    "url": "string",
+    "externalUrl": "string",
+    "title": "string",
+    "description": "string",
+    "pictogram": "string"
 }
 ```
 
@@ -39,6 +40,7 @@ Si `tile.externalUrl` est utilisé, `tile.url` doit être `false`.
 ## Rendu
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("tile", {
     url: "/",

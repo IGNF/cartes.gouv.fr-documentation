@@ -4,6 +4,7 @@ layout: layouts/page.njk
 slugOverride: mentions legales
 showBreadcrumb: true
 ---
+
 # Mentions légales
 
 ## Éditeur

@@ -6,8 +6,8 @@ module.exports = {
         {
             url: "",
             title: "",
-            description: ""
-        }
+            description: "",
+        },
     ],
     facebook_url: "",
     mastodon_url: "",
@@ -24,7 +24,7 @@ module.exports = {
     author: {
         name: "IGN",
         email: "geoplateforme@ign.fr",
-        url: "https://url_du_service.gouv.fr/"
+        url: "https://url_du_service.gouv.fr/",
     },
-    service: "Institut National de l'Information Géographique et Forestière (IGN)"
-}
+    service: "Institut National de l'Information Géographique et Forestière (IGN)",
+};

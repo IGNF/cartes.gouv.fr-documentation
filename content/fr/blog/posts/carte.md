@@ -3,9 +3,10 @@ title: Carte
 description: Comment intégrer une carte dans une page du site ?
 date: git Last Modified
 tags:
-  - DSFR
-  - composant
+    - DSFR
+    - composant
 ---
+
 Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
 
 ## Exemple d'utilisation
@@ -33,20 +34,20 @@ Le format complet de l'objet en paramètre est le suivant :
 
 ```json
 {
-  "url": "string",
-  "externalUrl": "string",
-  "urlDescription": "string",
-  "title": "string",
-  "description": "string",
-  "tags": "string[]",
-  "date | detail": "Date | string",
-  "detailEnd": "string",
-  "badges": "string[]",
-  "image": {
-    "src | path": "string",
-    "alt": "string"
-  },
-  "addClass": "string"
+    "url": "string",
+    "externalUrl": "string",
+    "urlDescription": "string",
+    "title": "string",
+    "description": "string",
+    "tags": "string[]",
+    "date | detail": "Date | string",
+    "detailEnd": "string",
+    "badges": "string[]",
+    "image": {
+        "src | path": "string",
+        "alt": "string"
+    },
+    "addClass": "string"
 }
 ```
 
@@ -61,6 +62,7 @@ Si `card.externalUrl` est utilisé, `card.url` doit être `false`. `card.urlDesc
 ## Rendu
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("card", {
     url: "/",

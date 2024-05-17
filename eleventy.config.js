@@ -1,5 +1,5 @@
-const {DateTime} = require("luxon");
-const {nanoid} = require ("nanoid");
+const { DateTime } = require("luxon");
+const { nanoid } = require("nanoid");
 
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
@@ -9,14 +9,14 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const {EleventyHtmlBasePlugin} = require("@11ty/eleventy");
-const {EleventyI18nPlugin} = require("@11ty/eleventy");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const i18n = require("@codegouvfr/eleventy-plugin-i18n");
 const pluginCalendar = require("@codegouvfr/eleventy-plugin-calendar");
 
 const customMarkdownContainers = require("./markdown-custom-containers");
 
-const {translations} = require("./_data/i18n");
+const { translations } = require("./_data/i18n");
 
 module.exports = function (eleventyConfig) {
     // Copy the contents of the `public` folder to the output folder
@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
     // Official plugins
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-        preAttributes: {tabindex: 0}
+        preAttributes: { tabindex: 0 },
     });
 
     // Mermaid plugin overrides above syntax highlighter
@@ -60,18 +60,18 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(EleventyI18nPlugin, {
         defaultLanguage: "fr",
-        errorMode: "allow-fallback"
+        errorMode: "allow-fallback",
     });
     eleventyConfig.addPlugin(i18n, {
         translations,
         fallbackLocales: {
-            "en": "fr"
-        }
+            en: "fr",
+        },
     });
     eleventyConfig.addPlugin(pluginCalendar);
 
     // Custom collections
-    eleventyConfig.addCollection("allSortedByPathAsc", function(collectionApi) {
+    eleventyConfig.addCollection("allSortedByPathAsc", function (collectionApi) {
         return collectionApi.getAll().sort((a, b) => {
             return a.inputPath.localeCompare(b.inputPath);
         });
@@ -79,35 +79,35 @@ module.exports = function (eleventyConfig) {
 
     // Filters
     eleventyConfig.addFilter("jsDateObject", function jsDateObject(dateStr, format, zone) {
-        return DateTime.fromFormat(dateStr, format || "yyyy-LL-dd", {zone: zone || "utc"}).toJSDate();
+        return DateTime.fromFormat(dateStr, format || "yyyy-LL-dd", { zone: zone || "utc" }).toJSDate();
     });
 
     eleventyConfig.addFilter("readableDate", function readableDate(dateObj, format, zone) {
         // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-        return DateTime.fromJSDate(dateObj, {zone: zone || "utc"})
+        return DateTime.fromJSDate(dateObj, { zone: zone || "utc" })
             .setLocale(this.page.lang)
             .toFormat(format || "dd LLLL yyyy");
     });
 
     eleventyConfig.addFilter("htmlDateString", (dateObj) => {
         // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-        return DateTime.fromJSDate(dateObj, {zone: "utc"}).toFormat("yyyy-LL-dd");
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
     });
 
     eleventyConfig.addFilter("getYear", (dateObj) => {
-        return DateTime.fromJSDate(dateObj, {zone: "utc"}).year;
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).year;
     });
     eleventyConfig.addFilter("getMonth", (dateObj) => {
-        return DateTime.fromJSDate(dateObj, {zone: "utc"}).month;
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).month;
     });
     eleventyConfig.addFilter("getDay", (dateObj) => {
-        return DateTime.fromJSDate(dateObj, {zone: "utc"}).day;
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).day;
     });
     eleventyConfig.addFilter("getHour", (dateObj) => {
-        return DateTime.fromJSDate(dateObj, {zone: "utc"}).hour;
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).hour;
     });
     eleventyConfig.addFilter("getMinute", (dateObj) => {
-        return DateTime.fromJSDate(dateObj, {zone: "utc"}).minute;
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).minute;
     });
 
     // Get the first `n` elements of a collection.
@@ -128,26 +128,24 @@ module.exports = function (eleventyConfig) {
     });
 
     // Return all the tags used in a collection
-    eleventyConfig.addFilter("getAllTags", collection => {
+    eleventyConfig.addFilter("getAllTags", (collection) => {
         let tagSet = new Set();
         for (let item of collection) {
-            (item.data.tags || []).forEach(tag => tagSet.add(tag));
+            (item.data.tags || []).forEach((tag) => tagSet.add(tag));
         }
         return Array.from(tagSet);
     });
 
     eleventyConfig.addFilter("filterTagList", function filterTagList(tags, addTags = []) {
-        return (tags || []).filter(tag => ["all", "nav", "post", "posts", "events"]
-            .concat(addTags)
-            .indexOf(tag) === -1);
+        return (tags || []).filter((tag) => ["all", "nav", "post", "posts", "events"].concat(addTags).indexOf(tag) === -1);
     });
 
     eleventyConfig.addFilter("findBySlug", function find(collection = [], slug = "") {
-        return collection.find(post => post.fileSlug === slug);
+        return collection.find((post) => post.fileSlug === slug);
     });
 
     // Customize Markdown library settings:
-    eleventyConfig.amendLibrary("md", mdLib => {
+    eleventyConfig.amendLibrary("md", (mdLib) => {
         mdLib.use(markdownItAnchor, {
             permalink: markdownItAnchor.permalink.ariaHidden({
                 placement: "after",
@@ -156,34 +154,34 @@ module.exports = function (eleventyConfig) {
                 ariaHidden: false,
             }),
             level: [1, 2, 3, 4],
-            slugify: eleventyConfig.getFilter("slugify")
+            slugify: eleventyConfig.getFilter("slugify"),
         });
     });
 
-    eleventyConfig.amendLibrary("md", mdLib => {
-        mdLib.renderer.rules.table_open = function(tokens, idx) {
+    eleventyConfig.amendLibrary("md", (mdLib) => {
+        mdLib.renderer.rules.table_open = function (tokens, idx) {
             return '<table class="fr-table">';
         };
     });
 
-    eleventyConfig.amendLibrary("md", mdLib => {
+    eleventyConfig.amendLibrary("md", (mdLib) => {
         mdLib.use(markdownItAttrs);
     });
 
-    eleventyConfig.amendLibrary("md", mdLib => {
-        mdLib.use(markdownItContainer, 'callout', customMarkdownContainers.callout(mdLib));
+    eleventyConfig.amendLibrary("md", (mdLib) => {
+        mdLib.use(markdownItContainer, "callout", customMarkdownContainers.callout(mdLib));
     });
 
-    eleventyConfig.amendLibrary("md", mdLib => {
-        mdLib.use(markdownItContainer, 'quote', customMarkdownContainers.quote(mdLib));
+    eleventyConfig.amendLibrary("md", (mdLib) => {
+        mdLib.use(markdownItContainer, "quote", customMarkdownContainers.quote(mdLib));
     });
 
-    eleventyConfig.amendLibrary("md", mdLib => {
-        mdLib.use(markdownItContainer, 'alert', customMarkdownContainers.alert(mdLib));
+    eleventyConfig.amendLibrary("md", (mdLib) => {
+        mdLib.use(markdownItContainer, "alert", customMarkdownContainers.alert(mdLib));
     });
 
-    eleventyConfig.amendLibrary("md", mdLib => {
-        mdLib.use(markdownItContainer, 'accordion', customMarkdownContainers.accordion(mdLib));
+    eleventyConfig.amendLibrary("md", (mdLib) => {
+        mdLib.use(markdownItContainer, "accordion", customMarkdownContainers.accordion(mdLib));
     });
 
     // Automatically strip all leading or trailing whitespace
@@ -208,12 +206,7 @@ module.exports = function (eleventyConfig) {
     return {
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
-        templateFormats: [
-            "md",
-            "njk",
-            "html",
-            "liquid"
-        ],
+        templateFormats: ["md", "njk", "html", "liquid"],
 
         // Pre-process *.md files with: (default: `liquid`)
         markdownTemplateEngine: "njk",
@@ -223,10 +216,10 @@ module.exports = function (eleventyConfig) {
 
         // These are all optional:
         dir: {
-            input: "content",         // default: "."
-            includes: "../_includes",  // default: "_includes"
-            data: "../_data",          // default: "_data"
-            output: "_site"
+            input: "content", // default: "."
+            includes: "../_includes", // default: "_includes"
+            data: "../_data", // default: "_data"
+            output: "_site",
         },
 
         // -----------------------------------------------------------------

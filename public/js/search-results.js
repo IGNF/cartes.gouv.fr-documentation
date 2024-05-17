@@ -19,7 +19,7 @@
         pagefind.init();
         const search = await pagefind.search(searchTerm);
         return search.results;
-    }
+    };
 
     const getCardHtml = (title, excerpt, url) => {
         return `
@@ -33,41 +33,35 @@
         </div>
     </div>
 </div>`;
-    }
+    };
 
     const populateSearchResults = async (paginatedResults) => {
-        paginatedResults.forEach(result => {
+        paginatedResults.forEach((result) => {
             const cardCol = document.createElement("div");
             cardCol.className = FULL_WIDTH_COL_CLASS;
-            cardCol.innerHTML = getCardHtml(result.meta.title, result.excerpt, result.url)
+            cardCol.innerHTML = getCardHtml(result.meta.title, result.excerpt, result.url);
             searchResultList.appendChild(cardCol);
         });
-    }
+    };
 
     const bottomIsReached = () => {
         return window.scrollY + window.innerHeight >= document.documentElement.scrollHeight;
-    }
+    };
 
-    getSearchResults().then(async searchResults => {
+    getSearchResults().then(async (searchResults) => {
         resultCounter.innerText = searchResults.length;
 
         let start = 0;
-        let paginatedResults = await Promise.all(searchResults
-            .slice(start, start + RESULTS_PER_PAGE)
-            .map(r => r.data())
-        );
+        let paginatedResults = await Promise.all(searchResults.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
 
         await populateSearchResults(paginatedResults);
 
-        window.addEventListener('scroll', async () => {
+        window.addEventListener("scroll", async () => {
             if (bottomIsReached()) {
                 start += RESULTS_PER_PAGE;
-                paginatedResults = await Promise.all(searchResults
-                    .slice(start, start + RESULTS_PER_PAGE)
-                    .map(r => r.data())
-                );
+                paginatedResults = await Promise.all(searchResults.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
                 await populateSearchResults(paginatedResults);
             }
-        })
+        });
     });
 })();

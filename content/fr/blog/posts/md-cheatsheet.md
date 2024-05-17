@@ -3,9 +3,10 @@ title: Syntaxe Markdown
 description: Rappel des éléments de syntaxe Markdown principaux et nouveaux éléments.
 date: git Last Modified
 tags:
-  - contenu
-  - Markdown
+    - contenu
+    - Markdown
 ---
+
 La syntaxe utilisée dans les fichiers Markdown `.md` du site suit la spécification [CommonMark](https://commonmark.org/).
 
 [Voir un rappel des principaux éléments](https://commonmark.org/help/){.fr-link .fr-fi-arrow-right-line .fr-link--icon-right}
@@ -25,6 +26,7 @@ Contenu **markdown** _riche_
 
 ????
 ```
+
 [Voir aussi](/fr/blog/accordeon/#exemple-d-utilisation-dans-un-fichier-markdown-md){.fr-link .fr-fi-arrow-right-line .fr-link--icon-right}
 
 ## L'alerte

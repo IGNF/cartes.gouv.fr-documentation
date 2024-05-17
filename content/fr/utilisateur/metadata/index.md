@@ -9,9 +9,9 @@ Ce service permet la recherche et la consultation de métadonnées de la Géopla
 
 Il s’appuie sur la norme [CSW ISO AP 2.0.2](https://www.ogc.org/standard/cat/) et propose 3 méthodes :
 
-- **GetCapabilities** pour découvrir les capacités du service
-- **GetRecords** pour lister les métadonnées
-- **GetRecordByID** pour consulter une métadonnée
+-   **GetCapabilities** pour découvrir les capacités du service
+-   **GetRecords** pour lister les métadonnées
+-   **GetRecordByID** pour consulter une métadonnée
 
 ## GetCapabilities
 
@@ -37,14 +37,14 @@ https://data.geopf.fr/csw?SERVICE=CSW&REQUEST=GetRecords&VERSION=2.0.2&TYPENAMES
 
 Elle utilise les variables suivantes :
 
-* **TYPENAMES** le type de métadonnées recherché avec le choix parmi :
-    * `csw:Record`
-    * `gfc:FC_FeatureCatalogue`
-    * `dcat`
-    * `gmd:MD_Metadata`
-    * `mdb:MD_Metadata`
-* **MAXRECORDS** le nombre maximum de résultats par page
-* **STARTPOSITION** le numéro du premier résultat affiché, cet index débutant à 1
+-   **TYPENAMES** le type de métadonnées recherché avec le choix parmi :
+    -   `csw:Record`
+    -   `gfc:FC_FeatureCatalogue`
+    -   `dcat`
+    -   `gmd:MD_Metadata`
+    -   `mdb:MD_Metadata`
+-   **MAXRECORDS** le nombre maximum de résultats par page
+-   **STARTPOSITION** le numéro du premier résultat affiché, cet index débutant à 1
 
 Par exemple, pour le `TYPENAMES` `gmd:MD_Metadata`, en affichant 50 résultats à partir du 1er résultat, l'URL sera :
 

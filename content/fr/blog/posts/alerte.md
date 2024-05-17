@@ -3,8 +3,8 @@ title: Alerte
 description: Comment intégrer une alerte dans une page du site ?
 date: git Last Modified
 tags:
-  - DSFR
-  - composant
+    - DSFR
+    - composant
 ---
 
 Ce composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.

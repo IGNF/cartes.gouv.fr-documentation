@@ -1,6 +1,7 @@
 /* Defaults */
 :root {
-    --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+    --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
     --syntax-tab-size: 2;
 }
 
@@ -35,7 +36,7 @@ pre[class*="language-"] {
 }
 
 pre:not([class*="language-"]) {
-    margin: .5em 0;
+    margin: 0.5em 0;
     line-height: 1.375; /* 22px /16 */
     -moz-tab-size: var(--syntax-tab-size);
     -o-tab-size: var(--syntax-tab-size);
@@ -60,7 +61,7 @@ code {
     text-decoration: none;
     font-style: normal;
     font-size: 1em;
-    margin-left: .1em;
+    margin-left: 0.1em;
 }
 
 a[href].header-anchor,
@@ -152,6 +153,6 @@ pre[class*="language"] {
 
 .code-copy-btn {
     position: absolute;
-    right: .5em;
-    top: .5em;
+    right: 0.5em;
+    top: 0.5em;
 }

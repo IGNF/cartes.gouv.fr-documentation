@@ -1,38 +1,34 @@
 ---
 layout: layouts/base.njk
 ---
+
 <div class="fr-container fr-py-6w">
-  {% if showBreadcrumb %}
-    {% include "components/breadcrumb.njk" %}
-  {% endif %}
-  <div class="fr-grid-row fr-grid-row--center" data-pagefind-body>
-    <div class="fr-col-12 fr-col-md-8">
-      {% include "components/taggroup.njk" %}
-      <div class="fr-grid-row">
-        <div class="fr-col-12 fr-col-md-9">
-          <hgroup>
-            <h1>{{ title }}</h1>
-            <p class="fr-text--xs">
-              {{ "published_on" | i18n }}
-              <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-            </p>
-          </hgroup>
+    {% if showBreadcrumb %}
+        {% include "components/breadcrumb.njk" %}
+    {% endif %}
+    <div class="fr-grid-row fr-grid-row--center" data-pagefind-body>
+        <div class="fr-col-12 fr-col-md-8">
+            {% include "components/taggroup.njk" %}
+            <div class="fr-grid-row">
+                <div class="fr-col-12 fr-col-md-9">
+                    <hgroup>
+                        <h1>{{ title }}</h1>
+                        <p class="fr-text--xs">
+                            {{ "published_on" | i18n }}
+                            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+                        </p>
+                    </hgroup>
+                </div>
+                <div class="fr-col-12 fr-col-md-3">{% include "templates/share.njk" %}</div>
+            </div>
+            {% if image %}
+                {% imageContent image.path, image.alt %}
+            {% endif %}
+            {{ content | safe }}
         </div>
-        <div class="fr-col-12 fr-col-md-3">
-          {% include "templates/share.njk" %}
-        </div>
-      </div>
-
-      {% if image %}
-        {% imageContent image.path, image.alt %}
-      {% endif %}
-
-      {{ content | safe }}
     </div>
-  </div>
-
-  {% if collections.posts %}
-    {% set currentPosts = collections.posts %}
-    {% include "previousnextlinks.njk" %}
-  {% endif %}
+    {% if collections.posts %}
+        {% set currentPosts = collections.posts %}
+        {% include "previousnextlinks.njk" %}
+    {% endif %}
 </div>
