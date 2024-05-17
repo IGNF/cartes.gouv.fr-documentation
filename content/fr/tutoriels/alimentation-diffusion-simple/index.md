@@ -2,6 +2,7 @@
 title: Alimentation et diffusion simple
 layout: layouts/page.njk
 mermaid: true
+showBreadcrumb: true
 ---
 
 Le but de ce tutoriel va être de diffuser des données vecteur en WFS et WMS. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
@@ -481,6 +482,8 @@ POST /datastores/{datastore}/processings/executions/{execution}/launch
 Les noms des tables et des champs sont "standardisés" lors de l'intégration en base pour éviter tout souci d'utilisation par les applications : pas de majuscules, pas d'accent, pas de tirets.
 :::
 
+<br/>
+
 #### Consultation de l'état de l'exécution
 
 Une exécution va avoir les statuts dans l'ordre suivant :
@@ -659,9 +662,410 @@ Dans le cas du WFS, une configuration va donner plusieurs couches finales, le `l
 * `pays_ecoregions:regions_ecologiques`
 * `pays_ecoregions:pays`
 
+```plain
+POST /datastores/{datastore}/configurations
+```
 
+??? Requête
+
+```json
+{
+    "type": "WFS",
+    "name": "Pays et écorégions",
+    "layer_name": "pays_ecoregions",
+    "type_infos": {
+        "bbox": {
+            "west": -175,
+            "south": -75,
+            "east": 175,
+            "north": 85
+        },
+        "used_data": [
+            {
+                "relations": [
+                    {
+                        "native_name": "ecoregions",
+                        "public_name": "regions_ecologiques",
+                        "title": "Régions écologiques",
+                        "keywords": [
+                            "Tutoriel", "Données mondiales"
+                        ],
+                        "abstract": "Grandes régions naturelles mondiales"
+                    },
+                    {
+                        "native_name": "pays",
+                        "title": "Pays du monde",
+                        "keywords": [
+                            "Tutoriel", "Données mondiales"
+                        ],
+                        "abstract": "Pays du monde"
+                    }
+                ],
+                "stored_data": "{stored data}"
+            }
+        ]
+    }
+}
+```
+
+???
+
+<br/>
+
+Si on ne précise pas de `public_name`, c'est le nom natif de stockage qui est utilisé.
+
+#### Envoi sur les services de diffusion
+
+À ce stade, aucune information n'a été envoyée aux serveurs Geoserver assurant la diffusion. Cette synchronisation de la configuration sur les serveurs de diffusion, représentés par le point d'accès, se fait via la création d'une offre: la publication. Elle matérialise la présence d'une configuration sur un point d'accès.
+
+**Consultation des points de diffusion disponibles**
+
+```plain
+GET /datastores/{datastore}
+```
+
+??? Réponse
+
+**Extrait du corps de réponse (champ `endpoints`)**
+
+```json
+[
+    {
+        "name": "Service de diffusion WFS principal",
+        "technical_name": "gpf-geoserver-wfs",
+        "type": "WFS",
+        "urls": [
+            {
+                "type": "WFS",
+                "url": "https://data.geopf.fr/wfs/geoserver/ows"
+            }
+        ],
+        "_id": "ae012611-13eb-4a18-8d04-9b7604a031cc",
+        "open": true,
+        "metadata_fi": "gpf-geoserver-wfs"
+    },
+    {
+        "name": "Service de diffusion WMTS/TMS principal",
+        "technical_name": "gpf-rok4-server-wmts-tms",
+        "type": "WMTS-TMS",
+        "urls": [
+            {
+                "type": "WMTS",
+                "url": "https://data.geopf.fr/wmts"
+            },
+            {
+                "type": "TMS",
+                "url": "https://data.geopf.fr/tms/"
+            }
+        ],
+        "_id": "ae032611-13eb-4a18-8d04-9b7604a031cc",
+        "open": true,
+        "metadata_fi": "gpf-rok4-server-wmts-tms"
+    },
+    {
+        "name": "Service de diffusion WMS Raster principal",
+        "technical_name": "gpf-rok4-server-wms-r",
+        "type": "WMS-RASTER",
+        "urls": [
+            {
+                "type": "WMS",
+                "url": "https://data.geopf.fr/wms-r/wms"
+            }
+        ],
+        "_id": "ae042611-13eb-4a18-8d04-9b7604a031cc",
+        "open": true,
+        "metadata_fi": "gpf-rok4-server-wms-r"
+    },
+    {
+        "name": "Service de diffusion WMS Vecteur principal",
+        "technical_name": "gpf-geoserver-wms-v",
+        "type": "WMS-VECTOR",
+        "urls": [
+            {
+                "type": "WMS",
+                "url": "https://data.geopf.fr/wms-v/geoserver/ows"
+            }
+        ],
+        "_id": "ae022611-13eb-4a18-8d04-9b7604a031cc",
+        "open": true,
+        "metadata_fi": "gpf-geoserver-wms-v"
+    },
+    {
+        "name": "Service de Téléchargement principal",
+        "technical_name": "gpf-download",
+        "type": "DOWNLOAD",
+        "urls": [
+            {
+                "type": "DOWNLOAD",
+                "url": "https://data.geopf.fr/telechargement/"
+            }
+        ],
+        "_id": "ae052611-13eb-4a18-8d04-9b7604a031cc",
+        "open": true,
+        "metadata_fi": "gpf-download"
+    },
+    {
+        "name": "Service de diffusion CSW",
+        "technical_name": "gpf-geonetwork",
+        "type": "METADATA",
+        "urls": [
+            {
+                "type": "METADATA",
+                "url": "https://data.geopf.fr/csw"
+            }
+        ],
+        "_id": "ae062611-13eb-4a18-8d04-9b7604a031cc",
+        "open": true,
+        "metadata_fi": "gpf-geonetwork"
+    },
+    {
+        "name": "Service de téléchargement private",
+        "technical_name": "gpf-download-private",
+        "type": "DOWNLOAD",
+        "urls": [
+            {
+                "type": "DOWNLOAD",
+                "url": "https://data.geopf.fr/private/telechargement/"
+            }
+        ],
+        "_id": "b5bf7ab2-8998-4829-8c80-cd2ec02e6e58",
+        "open": false,
+        "metadata_fi": "gpf-download-private"
+    },
+    {
+        "name": "Service de diffusion WFS privé",
+        "technical_name": "gpf-geoserver-wfs-private",
+        "type": "WFS",
+        "urls": [
+            {
+                "type": "WFS",
+                "url": "https://data.geopf.fr/private/wfs/"
+            }
+        ],
+        "_id": "d02feec9-1169-403f-bfc3-7ba6d6015ed4",
+        "open": false,
+        "metadata_fi": "gpf-geoserver-wfs-private"
+    },
+    {
+        "name": "Service de diffusion WMS Vecteur privé",
+        "technical_name": "gpf-geoserver-wms-v-private",
+        "type": "WMS-VECTOR",
+        "urls": [
+            {
+                "type": "WMS",
+                "url": "https://data.geopf.fr/private/wms-v/"
+            }
+        ],
+        "_id": "519c8bb1-9b7f-414a-9850-1a73dfd467ed",
+        "open": false,
+        "metadata_fi": "gpf-geoserver-wms-v-private"
+    },
+    {
+        "name": "Service de diffusion WMS Raster privé",
+        "technical_name": "gpf-rok4-server-wms-r-private",
+        "type": "WMS-RASTER",
+        "urls": [
+            {
+                "type": "WMS",
+                "url": "https://data.geopf.fr/private/wms-r/"
+            }
+        ],
+        "_id": "66866100-48eb-4340-bbc9-f5c7d9707928",
+        "open": false,
+        "metadata_fi": "gpf-rok4-server-wms-r-private"
+    },
+    {
+        "name": "Service de diffusion WMTS/TMS privé",
+        "technical_name": "gpf-rok4-server-wmts-tms-private",
+        "type": "WMTS-TMS",
+        "urls": [
+            {
+                "type": "TMS",
+                "url": "https://data.geopf.fr/private/tms/"
+            },
+            {
+                "type": "WMTS",
+                "url": "https://data.geopf.fr/private/wmts/"
+            }
+        ],
+        "_id": "7e0a92d1-8213-4ce0-8903-eb4c305a1849",
+        "open": false,
+        "metadata_fi": "gpf-rok4-server-wmts-tms-private"
+    }
+]
+```
+
+???
+
+<br/>
+
+#### Publication
+
+```plain
+POST /datastores/{datastore}/configurations/{configuration wfs}/offerings
+```
+
+??? Requête
+
+**Corps de la requête JSON**
+
+```json
+{
+    "visibility": "PRIVATE",
+    "endpoint": "ae012611-13eb-4a18-8d04-9b7604a031cc",
+    "open": true
+}
+```
+
+???
+
+<br/>
+
+On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiques` et `pays_ecoregions:pays` dans le *getCapabilities* du service
+
+On peut également récupérer nos données dans un SIG comme QGis. Pour les régions écologiques, le service se limite à 1000 objets, ils ne seront donc pas tous téléchargés en une seule fois.
+
+![Exemple de visulisation des régions écologiques avec QGIS](/img/tutoriels/alimentation-diffusion-simple/donnees_wfs.png)
 
 ### Dépôt de fichiers statiques
+
+#### Gestion des styles
+
+Pour certains types de diffusion, le serveur de diffusion peut avoir besoin de fichiers de configuration. Dans le cas de la diffusion WMS à partir de données vecteur, assurée par Geoserver, ce sont des styles au format SLD et des FTL qui sont utilisés. Afin de les déposer au sein de l'entrepôt, le concept de fichier statique (static) est exploité.
+Génération d'un SLD
+
+Après l'export des styles depuis QGis dans son format, il est nécessaire d'utiliser l'outil **GeoStyler** en ligne de commande pour les convertir :
+
+```sh
+$  geostyler-cli -o ecoregions.sld -t sld -s qgis ecoregions.qml 
+✔ File "ecoregions.qml" translated successfully. Output written to ecoregions.sld
+$  geostyler-cli -o pays.sld -t sld -s qgis pays.qml 
+✔ File "pays.qml" translated successfully. Output written to pays.sld
+```
+
+:::warning Attention
+
+Chaque outil d'export peut entraîner des comportements différents. Au final, le SLD sera interprété par Geoserver sur la Géoplateforme. Le plugin GeoCat Bridge peut également être utilisé.
+
+:::
+
+<br/>
+
+{% from "components/component.njk" import component with context %}
+<div>
+{{ component("download", {
+    title: "ecoregions.sld",
+    href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.sld",
+    detail: "SLD - 11Ko"
+}) }}
+</div>
+
+{% from "components/component.njk" import component with context %}
+<div>
+{{ component("download", {
+    title: "pays.sld",
+    href: "/data/tutoriels/alimentation-diffusion-simple/pays.sld",
+    detail: "SLD - 1Ko"
+}) }}
+</div>
+
+#### Écriture de FTL
+
+Ces fichiers FTL permettent de mettre en forme la réponse HTML lors des appels au `GetFeatureInfo`.
+
+{% from "components/component.njk" import component with context %}
+<div>
+{{ component("download", {
+    title: "ecoregions.ftl",
+    href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.ftl",
+    detail: "FTL - 1Ko"
+}) }}
+</div>
+
+Contenu de ecoregions.ftl
+
+```ftl
+<#list features as feature>
+
+    <h2>${feature.eco_name.value}</h2>
+    <p>${feature.biome_name.value}</p>
+
+</#list>
+```
+
+{% from "components/component.njk" import component with context %}
+<div>
+{{ component("download", {
+    title: "pays.ftl",
+    href: "/data/tutoriels/alimentation-diffusion-simple/pays.ftl",
+    detail: "FTL - 1Ko"
+}) }}
+</div>
+
+Contenu de pays.ftl
+
+```ftl
+<#list features as feature>
+
+    <h1>${feature.name.value}</h1>
+
+</#list>
+```
+
+#### Téléversement dans l'entrepôt
+
+On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
+
+**ecoregions.sld**
+
+```plain
+POST /datastores/{datastore}/statics
+```
+
+??? Requête et réponse
+
+**Corps de la requête Multipart**
+
+ * file = <ecoregions.sld>
+ * type = "GEOSERVER-STYLE"
+ * name = "Style pour les écorégions"
+
+**Corps de réponse JSON**
+
+```json
+{
+    "name": "Style pour les écorégions",
+    "type": "GEOSERVER-STYLE",
+    "_id": "{sld ecoregions}",
+    "type_infos": {
+        "used_attributes": [
+            "biome_name"
+        ]
+    }
+}
+```
+
+???
+
+<br/>
+
+**pays.sld**
+
+```plain
+POST /datastores/{datastore}/statics
+```
+
+**ecoregions.ftl**
+
+```plain
+POST /datastores/{datastore}/statics
+```
+
+**pays.ftl**
+
+```plain
+POST /datastores/{datastore}/statics
+```
 
 ### Publication en WMS
 
