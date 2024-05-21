@@ -32,6 +32,8 @@ module.exports = function (eleventyConfig) {
         "./node_modules/@gouvfr/dsfr/dist/dsfr.nomodule.min.js": "/js/dsfr.nomodule.min.js",
         "./node_modules/@gouvfr/dsfr/dist/artwork": "/artwork",
         "./node_modules/mermaid/dist/mermaid.min.js": "/js/mermaid.min.js",
+        "./node_modules/swagger-ui/dist/swagger-ui.css": "/css/swagger-ui.css",
+        "./node_modules/swagger-ui/dist/swagger-ui-bundle.js": "/js/swagger-ui.js",
     });
 
     // Run Eleventy when these files change:

@@ -43,6 +43,10 @@
     <script src="/js/mermaid.min.js"></script>
     <script src="/js/mermaid.initialize.js"></script>
 {% endif %}
+{% if swaggerui %}
+    <link rel="stylesheet" href="/css/swagger-ui.css">
+    <script src="/js/swagger-ui.js"></script>
+{% endif %}
 <script src="/js/copy.js" defer></script>
 <title>{{ title or metadata.title }}</title>
 </head>

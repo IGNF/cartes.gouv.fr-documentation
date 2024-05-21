@@ -1,0 +1,10 @@
+<div id="{{ params.targetId }}" class="frx-swagger-ui"></div>
+<script>
+window.addEventListener('load', function() {
+    SwaggerUIBundle({
+        url: "{{ params.url }}",
+        dom_id: "{{ '#' ~ params.targetId }}",
+        docExpansion: "{{ (params.docExpansion|default('none')) }}"
+    });
+});
+</script>
