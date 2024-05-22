@@ -1,0 +1,7 @@
+.swagger-ui button,
+.swagger-ui button:focus,
+.swagger-ui button:hover,
+.swagger-ui input {
+    background-color: inherit;
+    color: inherit;
+}
