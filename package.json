@@ -53,7 +53,7 @@
         "swagger-ui": "^5.17.10"
     },
     "lint-staged": {
-        "*.{js,json,md}": [
+        "*.{js,ts,json,md,css,scss,xml,yml,yaml,html}": [
             "prettier --write"
         ]
     }
