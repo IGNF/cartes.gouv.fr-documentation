@@ -1,7 +1,9 @@
 ---
 layout: layouts/base.njk
+sidemenu: false
 ---
 
+{% from "components/component.njk" import component with context %}
 <div class="fr-mb-6w">
     <div class="fr-py-6w fr-background-alt--blue-cumulus">
         <div class="fr-container">
@@ -18,7 +20,15 @@ layout: layouts/base.njk
     </div>
     <div class="fr-container fr-mt-6w" data-pagefind-body>
         <div class="fr-grid-row">
-            <div class="fr-col-12">{{ content | safe }}</div>
+            {% if sidemenu %}
+                {% set sideMenuItems = content | getSideMenuItems %}
+                <div class="fr-col-12 fr-col-md-4">
+                    {{ component("sidemenu", {
+                                        items: sideMenuItems
+                                        }) }}
+                </div>
+            {% endif %}
+            <div class="fr-col-12 {% if sidemenu %}fr-col-md-8 fr-py-12v{% endif %}">{{ content | safe }}</div>
         </div>
     </div>
 </div>

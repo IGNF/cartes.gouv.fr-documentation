@@ -3,6 +3,7 @@ title: Alimentation et diffusion simple
 layout: layouts/page.njk
 mermaid: true
 showBreadcrumb: true
+sidemenu: true
 ---
 
 Le but de ce tutoriel va être de diffuser des données vecteur en WFS et WMS. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
@@ -648,17 +649,13 @@ POST /datastores/{datastore}/configurations
                         "native_name": "ecoregions",
                         "public_name": "regions_ecologiques",
                         "title": "Régions écologiques",
-                        "keywords": [
-                            "Tutoriel", "Données mondiales"
-                        ],
+                        "keywords": ["Tutoriel", "Données mondiales"],
                         "abstract": "Grandes régions naturelles mondiales"
                     },
                     {
                         "native_name": "pays",
                         "title": "Pays du monde",
-                        "keywords": [
-                            "Tutoriel", "Données mondiales"
-                        ],
+                        "keywords": ["Tutoriel", "Données mondiales"],
                         "abstract": "Pays du monde"
                     }
                 ],
@@ -882,7 +879,7 @@ POST /datastores/{datastore}/configurations/{configuration wfs}/offerings
 
 <br/>
 
-On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiques` et `pays_ecoregions:pays` dans le *getCapabilities* du service
+On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiques` et `pays_ecoregions:pays` dans le _getCapabilities_ du service
 
 On peut également récupérer nos données dans un SIG comme QGis. Pour les régions écologiques, le service se limite à 1000 objets, ils ne seront donc pas tous téléchargés en une seule fois.
 
@@ -898,9 +895,9 @@ Génération d'un SLD
 Après l'export des styles depuis QGis dans son format, il est nécessaire d'utiliser l'outil **GeoStyler** en ligne de commande pour les convertir :
 
 ```sh
-$  geostyler-cli -o ecoregions.sld -t sld -s qgis ecoregions.qml 
+$  geostyler-cli -o ecoregions.sld -t sld -s qgis ecoregions.qml
 ✔ File "ecoregions.qml" translated successfully. Output written to ecoregions.sld
-$  geostyler-cli -o pays.sld -t sld -s qgis pays.qml 
+$  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ✔ File "pays.qml" translated successfully. Output written to pays.sld
 ```
 
@@ -913,6 +910,7 @@ Chaque outil d'export peut entraîner des comportements différents. Au final, l
 <br/>
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("download", {
     title: "ecoregions.sld",
@@ -922,6 +920,7 @@ Chaque outil d'export peut entraîner des comportements différents. Au final, l
 </div>
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("download", {
     title: "pays.sld",
@@ -935,6 +934,7 @@ Chaque outil d'export peut entraîner des comportements différents. Au final, l
 Ces fichiers FTL permettent de mettre en forme la réponse HTML lors des appels au `GetFeatureInfo`.
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("download", {
     title: "ecoregions.ftl",
@@ -955,6 +955,7 @@ Contenu de ecoregions.ftl
 ```
 
 {% from "components/component.njk" import component with context %}
+
 <div>
 {{ component("download", {
     title: "pays.ftl",
@@ -987,9 +988,9 @@ POST /datastores/{datastore}/statics
 
 **Corps de la requête Multipart**
 
- * file = <ecoregions.sld>
- * type = "GEOSERVER-STYLE"
- * name = "Style pour les écorégions"
+-   file = <ecoregions.sld>
+-   type = "GEOSERVER-STYLE"
+-   name = "Style pour les écorégions"
 
 **Corps de réponse JSON**
 
@@ -999,9 +1000,7 @@ POST /datastores/{datastore}/statics
     "type": "GEOSERVER-STYLE",
     "_id": "{sld ecoregions}",
     "type_infos": {
-        "used_attributes": [
-            "biome_name"
-        ]
+        "used_attributes": ["biome_name"]
     }
 }
 ```

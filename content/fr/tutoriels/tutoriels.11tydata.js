@@ -1,4 +1,4 @@
 module.exports = {
     tags: ["Géoplateforme", "tutoriel"],
-    layout: "layouts/post.njk",
+    layout: "layouts/page.njk",
 };

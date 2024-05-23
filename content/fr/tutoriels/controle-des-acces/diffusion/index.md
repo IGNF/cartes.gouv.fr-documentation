@@ -5,6 +5,7 @@ date: git Last Modified
 tags:
     - Contrôle des accès
     - Diffusion
+sidemenu: true
 ---
 
 En tant que consommateur de données, c'est également via l'API que l'on va pouvoir configuer ses clés d'accès. Cela n'implique pas d'avoir accès à une entrepôt, ni même d'être le membre d'une communauté.

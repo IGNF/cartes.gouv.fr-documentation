@@ -17,6 +17,7 @@ const pluginCalendar = require("@codegouvfr/eleventy-plugin-calendar");
 const customMarkdownContainers = require("./markdown-custom-containers");
 
 const { translations } = require("./_data/i18n");
+const { getSideMenuItems } = require("./utils.js");
 
 module.exports = function (eleventyConfig) {
     // Copy the contents of the `public` folder to the output folder
@@ -144,6 +145,14 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("findBySlug", function find(collection = [], slug = "") {
         return collection.find((post) => post.fileSlug === slug);
+    });
+
+    eleventyConfig.addFilter("getSideMenuItems", getSideMenuItems);
+
+    eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {
+        console.log(content);
+        console.log(param1);
+        return `<div>Hello ${param1}</div>`;
     });
 
     // Customize Markdown library settings:

@@ -1,0 +1,34 @@
+{% set items = params.items %}
+{% macro sidemenuList(subItems) %}
+    {% for item in subItems %}
+        <li class="fr-sidemenu__item">
+            {% if item.children.length > 0 %}
+                <button class="fr-sidemenu__btn"
+                        aria-expanded="false"
+                        aria-controls="{{ item.id }}">{{ item.name }}</button>
+                <div class="fr-collapse" id="{{ item.id }}">
+                    <ul class="fr-sidemenu__list">
+                        {{ sidemenuList(item.children) }}
+                    </ul>
+                </div>
+            {% else %}
+                <a class="fr-sidemenu__link" href="#{{ item.id }}" target="_self">{{ item.name }}</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+<nav class="fr-sidemenu fr-sidemenu--sticky-full-height"
+     role="navigation"
+     aria-labelledby="fr-sidemenu-title">
+    <div class="fr-sidemenu__inner">
+        <button class="fr-sidemenu__btn"
+                aria-controls="fr-sidemenu-wrapper"
+                aria-expanded="false">Sommaire</button>
+        <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            <div class="fr-sidemenu__title" id="fr-sidemenu-title">Sommaire</div>
+            <ul class="fr-sidemenu__list">
+                {{ sidemenuList(items) }}
+            </ul>
+        </div>
+    </div>
+</nav>
