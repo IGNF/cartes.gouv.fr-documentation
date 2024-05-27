@@ -3,6 +3,7 @@ const RESULTS_PER_PAGE = 10;
 const SEARCH_TERM_SELECTOR = "#search-term";
 const RESULT_COUNT_SELECTOR = "#result-count";
 const SEARCH_RESULTS_SELECTOR = "#search-results";
+const SEARCH_FILTER_TAGS_SELECTOR = "#search-filter-tags";
 
 const FULL_WIDTH_COL_CLASS = "fr-col-12";
 
@@ -13,44 +14,59 @@ class PageFinder {
         this.searchTermText = document.querySelector(SEARCH_TERM_SELECTOR);
         this.resultCounter = document.querySelector(RESULT_COUNT_SELECTOR);
         this.searchResultList = document.querySelector(SEARCH_RESULTS_SELECTOR);
-        this.filterTagsEl = document.getElementById("search-filter-tags");
+        this.filterTagsEl = document.querySelector(SEARCH_FILTER_TAGS_SELECTOR);
+
+        this.searchResults = [];
     }
 
-    async getSearchResults() {
+    /**
+     * Effectue une requête de recherche dans les index (API Pagefind) et affiche les résultats
+     *
+     * @param {Object} hashFilters
+     * @returns
+     */
+    async getSearchResults(hashFilters = {}) {
         const queryParams = new URLSearchParams(window.location.search);
-        console.log(queryParams.get("filters"));
+
         const searchTerm = queryParams.get(SEARCH_PARAM);
         this.searchTermText.textContent = searchTerm;
 
         // https://github.com/CloudCannon/pagefind/blob/production-docs/pagefind_web_js/types/index.d.ts#L72
-        const search = await this.pagefind.search(searchTerm);
+        const search = await this.pagefind.search(searchTerm, {
+            filters: hashFilters,
+        });
+        this.searchResults = search.results;
         this.resultCounter.innerText = search.results.length;
 
         const filters = await this.pagefind.filters();
-        console.log(filters);
-        // , {
-        //     filters: {
-        //         format: "Tutoriel",
-        //     },
-        // }
 
+        // nouveaux résultats donc on les nettoie et on les affiche
         let start = 0;
-        let paginatedResults = await Promise.all(search.results.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
+        let paginatedResults = await Promise.all(this.searchResults.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
 
-        await this.populateSearchResults(paginatedResults);
-        this.showFilters(filters);
+        await this.populateSearchResults(paginatedResults, true);
 
+        // chargement des éléments de plus de RESULTS_PER_PAGE au scroll
         window.addEventListener("scroll", async () => {
             if (this._bottomIsReached()) {
                 start += RESULTS_PER_PAGE;
-                paginatedResults = await Promise.all(search.results.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
-                await populateSearchResults(paginatedResults);
+                paginatedResults = await Promise.all(this.searchResults.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
+                await this.populateSearchResults(paginatedResults);
             }
         });
+
+        return filters;
     }
 
-    async populateSearchResults(paginatedResults) {
-        this.searchResultList.innerHTML = "";
+    /**
+     * Affiche les résultats dans des Cards. Nettoie les anciens résultats si clear à true
+     * @param {PagefindSearchResult[]} paginatedResults
+     * @param {boolean} clear
+     */
+    async populateSearchResults(paginatedResults, clear = false) {
+        if (clear) {
+            this.searchResultList.innerHTML = "";
+        }
 
         paginatedResults.forEach((result) => {
             const cardCol = document.createElement("div");
@@ -60,60 +76,68 @@ class PageFinder {
         });
     }
 
-    showFilters(filters) {
-        const queryParams = new URLSearchParams(window.location.search);
-
-        const searchTerm = queryParams.get(SEARCH_PARAM);
-        let queryFilters = queryParams.get("filters") ? JSON.parse(decodeURIComponent(queryParams.get("filters"))) : {};
-
+    /**
+     * Affiche les filtres possibles à partir des pages résultantes
+     * @param {Object} filters
+     * @param {Object} initHashFilters
+     */
+    populateFilters(filters, initHashFilters) {
         Object.entries(filters).map(([filterType, subFilter]) => {
             let div = document.createElement("div");
-            div.className = "fr-grid-row fr-grid-row--middle";
+            div.className = "fr-grid-row fr-grid-row--middle fr-mb-2v";
 
             let divTitle = document.createElement("div");
             divTitle.className = "fr-col-12 fr-col-sm-2";
-            divTitle.textContent = `${filterType} : `;
+            divTitle.textContent = `${filterType.charAt(0).toUpperCase() + filterType.slice(1)} : `;
 
             let divTags = document.createElement("div");
             divTags.className = "fr-col-12 fr-col-sm-10";
 
-            let ul = document.createElement("ul");
-            ul.className = "fr-tags-group";
-            divTags.appendChild(ul);
-
             div.appendChild(divTitle);
             div.appendChild(divTags);
 
-            Object.entries(subFilter).map(([filter, count]) => {
-                const li = document.createElement("li");
-                li.className = "fr-tag fr-tag--sm";
+            Object.entries(subFilter).map(([filterKeyword, count]) => {
+                const button = document.createElement("button");
+                button.className = "fr-tag fr-mx-2v";
+                button.ariaPressed = initHashFilters[filterType]?.includes(filterKeyword) ? "true" : "false";
+                button.textContent = `${filterKeyword} (${count})`;
 
-                const tmpQueryFilters = { ...queryFilters };
-                tmpQueryFilters[filterType] = Array.from(new Set([...(tmpQueryFilters[filterType] ?? []), filter]));
-                console.log(tmpQueryFilters);
+                button.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const button = e.currentTarget;
 
-                const aTag = document.createElement("a");
-                aTag.href = `${new URL(window.location).pathname}?term=${searchTerm}&filters=${encodeURIComponent(JSON.stringify(tmpQueryFilters))}`;
-                aTag.text = `${filter} (${count})`;
+                    const hashFilters = this.getFiltersFromHash();
 
-                li.appendChild(aTag);
-                ul.appendChild(li);
+                    if (button.ariaPressed === "true") {
+                        // on enlève
+                        hashFilters[filterType] = hashFilters[filterType]?.filter((f) => f !== filterKeyword);
+                        if (hashFilters[filterType].length === 0) {
+                            delete hashFilters[filterType];
+                        }
+                    } else {
+                        // on ajoute
+                        hashFilters[filterType] = Array.from(new Set([...(hashFilters[filterType] ?? []), filterKeyword]));
+                    }
+
+                    window.location.hash = Object.keys(hashFilters).length === 0 ? "" : encodeURIComponent(JSON.stringify(hashFilters));
+                });
+
+                divTags.appendChild(button);
             });
 
             this.filterTagsEl.appendChild(div);
         });
+    }
 
-        // let ul = document.createElement("ul");
-        // ul.className = "fr-tags-group";
-        // filters.espace.forEach((espace) => {
-        //     const li = document.createElement("li");
-        //     li.className = "fr-tag";
-        //     li.textContent = espace;
-        //     ul.appendChild(li);
-        // });
-        // filterTagsEl.appendChild(ul);
-
-        // console.log(filters);
+    getFiltersFromHash() {
+        let hashFilters;
+        try {
+            const hash = window.location.hash.substring(1);
+            hashFilters = hash === "" ? {} : JSON.parse(decodeURIComponent(hash));
+        } catch (error) {
+            hashFilters = {};
+        }
+        return hashFilters;
     }
 
     _getCardHtml(title, excerpt, url) {
@@ -138,6 +162,20 @@ class PageFinder {
 (async () => {
     const pagefind = await import(PAGEFIND_URL);
 
+    // affichage des premiers résultats
     const pageFinder = new PageFinder(pagefind);
-    await pageFinder.getSearchResults();
+
+    // récupération filters au premier chargement de la page
+    const initHashFilters = pageFinder.getFiltersFromHash();
+    const filters = await pageFinder.getSearchResults(initHashFilters);
+
+    pageFinder.populateFilters(filters, initHashFilters);
+
+    // // chargement de résultats en fonction du changement des filtres
+    window.addEventListener("hashchange", async () => {
+        const hashFilters = pageFinder.getFiltersFromHash();
+        console.log(hashFilters);
+
+        await pageFinder.getSearchResults(hashFilters);
+    });
 })();
