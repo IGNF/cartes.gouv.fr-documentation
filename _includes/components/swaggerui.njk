@@ -1,10 +1,18 @@
 <div id="{{ params.targetId }}" class="frx-swagger-ui"></div>
 <script>
 window.addEventListener('load', function() {
-    SwaggerUIBundle({
+    const oauth2RedirectUrl = `${window.location.origin}/oauth2-redirect.html`
+    const ui = SwaggerUIBundle({
         url: "{{ params.url }}",
         dom_id: "{{ '#' ~ params.targetId }}",
-        docExpansion: "{{ (params.docExpansion|default('none')) }}"
-    });
+        docExpansion: "{{ (params.docExpansion|default('none')) }}",
+        oauth2RedirectUrl: oauth2RedirectUrl
+    })
+    {% if params.clientId and params.clientSecret %}
+        ui.initOAuth({
+            clientId: "{{ params.clientId }}",
+            clientSecret: "{{ params.clientSecret }}"
+        })
+    {% endif %}
 });
 </script>
