@@ -19,6 +19,7 @@ sidemenu: false
         </div>
     </div>
     <div class="fr-container fr-mt-6w" data-pagefind-body>
+        {% include "components/pagefind_filters.njk" %}
         <div class="fr-grid-row">
             {% if sidemenu %}
                 {% set sideMenuItems = content | getSideMenuItems %}

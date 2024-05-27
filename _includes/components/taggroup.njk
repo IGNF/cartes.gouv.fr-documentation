@@ -4,7 +4,7 @@
             {{ (tagsUrl or "/blog/tags/") | locale_url }}{{ tag | slugify }}/
         {% endset %}
         <li>
-            <a href="{{ tagUrl }}" class="fr-tag">{{ tag }}</a>
+            <a href="{{ tagUrl }}" class="fr-tag" data-pagefind-filter="tag">{{ tag }}</a>
         </li>
     {% endfor %}
 </ul>
