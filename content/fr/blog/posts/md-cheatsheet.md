@@ -5,6 +5,10 @@ date: git Last Modified
 tags:
     - contenu
     - Markdown
+format:
+    - Initiation
+    - Tutoriel
+    - Référentiel technique
 ---
 
 La syntaxe utilisée dans les fichiers Markdown `.md` du site suit la spécification [CommonMark](https://commonmark.org/).

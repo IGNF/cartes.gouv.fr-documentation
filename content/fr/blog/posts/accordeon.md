@@ -5,6 +5,18 @@ date: git Last Modified
 tags:
     - DSFR
     - composant
+format:
+    - Initiation
+    - Tutoriel
+    - Référentiel technique
+    - Article
+profile:
+    - Utilisateur
+    - Producteur
+    - Développeur
+espace:
+    - Ecosystème Géoplateforme
+    - Organismes producteurs
 ---
 
 Chaque composant peut être inclus dans un fichier Nunjucks `.njk` ou Markdown `.md`.
