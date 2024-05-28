@@ -38,7 +38,7 @@ class PageFinder {
         this.searchResults = search.results;
         this.resultCounter.innerText = search.results.length;
 
-        const filters = await this.pagefind.filters();
+        const filters = this.getFiltersFromResults(await Promise.all(this.searchResults.map((r) => r.data())));
 
         // nouveaux résultats donc on les nettoie et on les affiche
         let start = 0;
@@ -55,7 +55,10 @@ class PageFinder {
             }
         });
 
-        return filters;
+        return {
+            results: search.results,
+            filters,
+        };
     }
 
     /**
@@ -82,6 +85,8 @@ class PageFinder {
      * @param {Object} initHashFilters
      */
     populateFilters(filters, initHashFilters) {
+        this.filterTagsEl.innerHTML = "";
+
         Object.entries(filters).map(([filterType, subFilter]) => {
             let div = document.createElement("div");
             div.className = "fr-grid-row fr-grid-row--middle fr-mb-2v";
@@ -140,6 +145,39 @@ class PageFinder {
         return hashFilters;
     }
 
+    getFiltersFromResults(results) {
+        const getFilterKeys = (results) => {
+            const filters = results.map((r) => {
+                return r.filters ?? {};
+            });
+
+            const filterKeys = filters.map((f) => Object.keys(f) ?? []).flat();
+
+            return Array.from(new Set(filterKeys)).sort();
+        };
+
+        const countOccurrences = (array) => {
+            return array.reduce((acc, curr) => {
+                // initialise à 0 si curr n'existe pas encore
+                acc[curr] ??= 0;
+                acc[curr]++;
+                return acc;
+            }, {});
+        };
+
+        const filterKeys = getFilterKeys(results);
+
+        const filters = {};
+        filterKeys.forEach((filterKey) => {
+            // filters[filterKey] = Array.from(new Set(results.map((r) => r.filters[filterKey] ?? []).flat()));
+            filters[filterKey] = results.map((r) => r.filters[filterKey] ?? []).flat();
+
+            filters[filterKey] = countOccurrences(filters[filterKey]);
+        });
+
+        return filters;
+    }
+
     _getCardHtml(title, excerpt, url) {
         return `
 <div class="fr-card fr-enlarge-link fr-card--horizontal">
@@ -167,15 +205,16 @@ class PageFinder {
 
     // récupération filters au premier chargement de la page
     const initHashFilters = pageFinder.getFiltersFromHash();
-    const filters = await pageFinder.getSearchResults(initHashFilters);
+    const { filters } = await pageFinder.getSearchResults(initHashFilters);
 
     pageFinder.populateFilters(filters, initHashFilters);
 
-    // // chargement de résultats en fonction du changement des filtres
+    // chargement de résultats en fonction du changement des filtres
     window.addEventListener("hashchange", async () => {
         const hashFilters = pageFinder.getFiltersFromHash();
-        console.log(hashFilters);
 
-        await pageFinder.getSearchResults(hashFilters);
+        const { filters } = await pageFinder.getSearchResults(hashFilters);
+
+        pageFinder.populateFilters(filters, hashFilters);
     });
 })();
