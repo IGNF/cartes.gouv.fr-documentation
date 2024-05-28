@@ -17,6 +17,7 @@ class PageFinder {
         this.filterTagsEl = document.querySelector(SEARCH_FILTER_TAGS_SELECTOR);
 
         this.searchResults = [];
+        this.start = 0;
     }
 
     /**
@@ -41,16 +42,16 @@ class PageFinder {
         const filters = this.getFiltersFromResults(await Promise.all(this.searchResults.map((r) => r.data())));
 
         // nouveaux résultats donc on les nettoie et on les affiche
-        let start = 0;
-        let paginatedResults = await Promise.all(this.searchResults.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
+        this.start = 0;
+        let paginatedResults = await Promise.all(this.searchResults.slice(this.start, this.start + RESULTS_PER_PAGE).map((r) => r.data()));
 
         await this.populateSearchResults(paginatedResults, true);
 
         // chargement des éléments de plus de RESULTS_PER_PAGE au scroll
         window.addEventListener("scroll", async () => {
             if (this._bottomIsReached()) {
-                start += RESULTS_PER_PAGE;
-                paginatedResults = await Promise.all(this.searchResults.slice(start, start + RESULTS_PER_PAGE).map((r) => r.data()));
+                this.start += RESULTS_PER_PAGE;
+                paginatedResults = await Promise.all(this.searchResults.slice(this.start, this.start + RESULTS_PER_PAGE).map((r) => r.data()));
                 await this.populateSearchResults(paginatedResults);
             }
         });
