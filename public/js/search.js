@@ -9,12 +9,15 @@ const SEARCH_PARAM = "term";
 
     const search = () => {
         const searchResultsUrl = new URL(SEARCH_RESULTS_URL, window.location.origin);
-        searchResultsUrl.searchParams.append(SEARCH_PARAM, searchInput.value);
-        window.location.href = searchResultsUrl;
+
+        if (searchInput.value?.length > 0) {
+            searchResultsUrl.searchParams.append(SEARCH_PARAM, searchInput.value);
+            window.location.href = searchResultsUrl;
+        }
     };
 
     searchInput.addEventListener("keydown", async (event) => {
-        if (event.code === "Enter") {
+        if (event.code === "Enter" || event.code === "NumpadEnter") {
             await search();
         }
     });
