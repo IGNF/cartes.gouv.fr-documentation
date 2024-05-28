@@ -2,43 +2,15 @@
 
 ## Installation
 
-**Cloner le dépôt** :
+Voir [la documentation d'installation](installation.md).
 
-```bash
-git clone https://github.com/IGNF/cartes.gouv.fr-documentation
-```
+## Soumettre une contribution
 
-**Naviguer dans le dossier** :
-
-```bash
-cd cartes.gouv.fr-documentation
-```
-
-**Installer les dépendances** :
-
-```bash
-npm install
-```
-
-**Exécuter Eleventy** :
-
-Construire un livrable, indexé avec pagefind pour la recherche :
-
-```bash
-npm run build
-```
-
-L'exécuter sur le serveur de développement local :
-
-```bash
-npm start
-```
-
-Ou exécuter un [mode de débogage](https://www.11ty.dev/docs/debugging/).
+Voir [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Développement
 
--   Modifier le fichier [`eleventy.config.js`](eleventy.config.js) pour configurer les paramètres d'Eleventy différemment.
+-   Modifier le fichier [`eleventy.config.js`](eleventy.config.js) pour configurer les paramètres de build d'Eleventy différemment.
 -   Ajouter des composants du DSFR dans le dossier [`_includes/components`](_includes/components) et des [mises en page](https://www.11ty.dev/docs/layouts/) dans le
     dossier [`_includes/layouts`](_includes/layouts).
     -   Ajouter de nouveaux conteneurs markdown dans le fichier [`markdown-custom-containers.js`](markdown-custom-containers.js).

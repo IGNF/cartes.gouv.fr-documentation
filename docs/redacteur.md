@@ -1,5 +1,15 @@
 # Documentation rédacteur
 
+## Installer le projet et le déployer localement
+
+Installer le projet localement pour prévisualiser les modifications que vous effectuez est recommandé.
+
+Voir [la documentation d'installation](installation.md).
+
+## Soumettre une contribution
+
+Voir [CONTRIBUTING.md](../CONTRIBUTING.md).
+
 ## Structure
 
 Tout le contenu du site se trouve dans le répertoire `content`. En tant que rédacteur, aucune modification n'est généralement nécessaire dans d'autres répertoires.
@@ -8,8 +18,6 @@ Le contenu de la barre de navigation principale n'est pas directement détermin�
 Il est toutefois conseillé d'avoir une arborescence qui correspond à cette navigation pour faciliter le repérage.
 
 Documentation : https://codegouvfr.github.io/eleventy-dsfr/fr/blog/navigation/
-
-La mise en page avec un menu de navigation latéral n'est pas encore implémentée.
 
 ## Syntaxe Markdown
 
