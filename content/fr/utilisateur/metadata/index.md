@@ -1,6 +1,10 @@
 ---
 title: Service Géoplateforme de découverte des métadonnées
 layout: layouts/page.njk
+showBreadcrumb: true
+segments:
+    - url: "/utilisateur/"
+      title: "Utilisateur"
 ---
 
 ## Présentation
