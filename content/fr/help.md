@@ -1,6 +1,6 @@
 ---
 eleventyNavigation:
-    key: À propos
-    order: 3
+    key: Assistance
+    order: 2
 permalink: false
 ---

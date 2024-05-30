@@ -1,11 +1,9 @@
 ---
-title: Vous êtes un peu perdu ?
+title: Premiers pas
 layout: layouts/page.njk
 eleventyNavigation:
-    key: Vous êtes un peu perdu ?
-    parent: À propos
-    order: 2
-    slugOverride: aide
+    key: Premiers pas
+slugOverride: premiers-pas
 ---
 
 ## Vous trouverez dans la documentation générale
