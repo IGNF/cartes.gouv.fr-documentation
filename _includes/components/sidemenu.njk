@@ -34,7 +34,32 @@
 </nav>
 <script>
 (() => {
-    console.log("HASH : ", window.location.hash);
-    const links = document.querySelectorAll(".fr-sidemenu__link"));
+    const hash = window.location.hash
+    const link = document.querySelector(`.fr-sidemenu__link[href='${hash}']`);
+
+    if (link) {
+        link.ariaCurrent = "page"
+
+        let el = link.parentElement
+        do {
+            if (el?.classList?.contains("fr-collapse")) {
+                el.previousElementSibling.ariaExpanded = true
+                el.ariaCurrent = "true"
+            }
+
+            el = el.parentElement
+        } while (!el?.classList?.contains("fr-sidemenu__inner")); // on est arrivés an haut du sommaire, on a fini la boucle
+    }
+
+    const allLinks = document.querySelectorAll("a.fr-sidemenu__link")
+
+    const handleClick = (e) => {
+        allLinks.forEach(link => link.ariaCurrent = null)
+        e.currentTarget.ariaCurrent = "page"
+    }
+
+    allLinks.forEach(link => {
+        link.addEventListener("click", handleClick)
+    })
 })();
 </script>
