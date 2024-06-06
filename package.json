@@ -36,7 +36,7 @@
         "@11ty/eleventy-plugin-rss": "^1.2.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
         "@gouvfr/dsfr": "^1.11.0",
-        "chalk": "^4.1.2",
+        "chalk": "^5.0.0",
         "husky": "^9.0.11",
         "ics": "^3.2.0",
         "lint-staged": "^15.2.2",
