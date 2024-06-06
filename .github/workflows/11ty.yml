@@ -31,7 +31,7 @@ jobs:
               with:
                   fetch-depth: 0
             - name: Setup Pages
-              uses: actions/configure-pages@v4
+              uses: actions/configure-pages@v5
             - name: Build with Eleventy
               run: |
                   npm install
