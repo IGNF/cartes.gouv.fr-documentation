@@ -24,3 +24,4 @@ Le site statique est parfois appelé "l'application" ou "le site" dans la suite.
 -   `content` contient presque tout le contenu du site, toutes ses pages, généralement au format markdown (`.md`) et plus exceptionnellement au format nunjucks
 -   `docs` contient la documentation relative au dépôt
 -   `public` contient les fichiers qui doivent être disponibles sur le site, sans êtres modifiés par eleventy (images, feuilles de styles,...). On les appelle aussi parfois `assets`.
+-   les fichiers placés à la racine du dépôt sont des fichiers de configuration propres à eleventy et à npm.
