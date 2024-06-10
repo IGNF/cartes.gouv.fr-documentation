@@ -18,9 +18,9 @@ Git et NodeJS sont indispensables pour aller plus loin dans l'installation.
 
 Sous Windows, après avoir installé _Git for Windows_, vous devriez avoir accès au clic droit dans l'explorateur à un menu contextuel "Git Bash here" qui vous permet de lancer une invite de commande qui est très adaptée à l'utilisation de Git et offre une bonne coloration syntaxique. Il est recommandé de la préférer à l'invite de commande par défaut de Windows.
 
-![alt text](image.png)
+![alt text](img/image.png)
 
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 Les lignes de commandes qui suivent pourront être copiées, puis collées (`maj+Inser`) et executées (`Entrée`) dans l'invite de commande qui a été ouverte.
 
@@ -28,9 +28,9 @@ Les lignes de commandes qui suivent pourront être copiées, puis collées (`maj
 
 Il faut dupliquer le projet sur votre espace GitHub afin de pouvoir faire les changements de votre côté, les prévisualiser, puis les soumettre au dépôt principal.
 
-Dans le coin supérieur droit de la page, cliquez sur `Dupliquer` ou `Fork` puis `Create a new fork`. 
+Dans le coin supérieur droit de la page, cliquez sur `Dupliquer` ou `Fork` puis `Create a new fork`.
 
-![alt text](image-7.png)
+![alt text](img/image-7.png)
 
 Dans le champ `Description`, vous pouvez taper la description de votre duplication. Si vous le souhaitez, sélectionnez Copier la branche PAR DÉFAUT uniquement.
 
@@ -38,8 +38,7 @@ Cliquez sur `Créer une duplication`.
 
 Votre clone du dépôt sera disponible sous l'URL https://github.com/votre_pseudo_github/cartes.gouv.fr-documentation. Vous bénéficiez alors d'un espace de travail qui vous est propre. Vous pourrez choisir de soumettre au dépôt principal seulement les éléments que vous choisissez.
 
-![alt text](image-8.png)
-
+![alt text](img/image-8.png)
 
 ### Cloner le dépôt
 
