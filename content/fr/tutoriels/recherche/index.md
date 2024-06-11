@@ -16,7 +16,9 @@ tags:
     }]
 }) }}
 
-<div>
+<div class="fr-grid-row--gutters fr-mb-1w">
+
+<div class="fr-col fr-col-md-12">
 
 {{ component("card", {
     url: false,
@@ -30,6 +32,10 @@ tags:
     addClass: "fr-card--horizontal-tier"
 }) }}
 
+</div>
+
+<div class="fr-col fr-col-md-12">
+
 {{ component("card", {
     url: false,
     externalUrl: "https://geoplateforme.github.io/tutoriels/production/recherche/custom/creation/",
@@ -41,5 +47,7 @@ tags:
     },
     addClass: "fr-card--horizontal-tier"
 }) }}
+
+</div>
 
 </div>

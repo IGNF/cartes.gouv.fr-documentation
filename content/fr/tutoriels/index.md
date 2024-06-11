@@ -15,7 +15,9 @@ tags:
     }]
 }) }}
 
-<div>
+<div class="fr-grid-row fr-grid-row--gutters fr-mb-1w">
+
+<div class="fr-col fr-col-md-3">
 
 {{ component("card", {
     url: "/tutoriels/vecteur/",
@@ -25,8 +27,12 @@ tags:
         src: "/img/tutoriels/vecteur.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
+<div class="fr-col fr-col-md-3">
+
 {{ component("card", {
     url: "/tutoriels/raster/",
     title: "Gestion des données raster",
@@ -35,8 +41,11 @@ tags:
         src: "/img/tutoriels/raster.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
+<div class="fr-col fr-col-md-3">
 
 {{ component("card", {
     url: "/tutoriels/archive/",
@@ -46,8 +55,11 @@ tags:
         src: "/img/tutoriels/archive.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
+<div class="fr-col fr-col-md-3">
 
 {{ component("card", {
     url: "/tutoriels/complement/",
@@ -57,8 +69,11 @@ tags:
         src: "/img/tutoriels/complement.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
+<div class="fr-col fr-col-md-3">
 
 {{ component("card", {
     url: "/tutoriels/controle-des-acces/",
@@ -68,8 +83,11 @@ tags:
         src: "/img/tutoriels/cda.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
+<div class="fr-col fr-col-md-3">
 
 {{ component("card", {
     url: "/tutoriels/gestion/",
@@ -79,8 +97,11 @@ tags:
         src: "/img/tutoriels/gestion.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
+<div class="fr-col fr-col-md-3">
 
 {{ component("card", {
     url: "/tutoriels/recherche/",
@@ -90,8 +111,11 @@ tags:
         src: "/img/tutoriels/search.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
+<div class="fr-col fr-col-md-3">
 
 {{ component("card", {
     url: "/tutoriels/divers/",
@@ -101,7 +125,9 @@ tags:
         src: "/img/tutoriels/divers.png",
         alt: ""
     },
-    addClass: "fr-card--horizontal-tier"
+    addClass: "fr-card--vertical-tier"
 }) }}
+
+</div>
 
 </div>

@@ -60,9 +60,9 @@
                     <div class="fr-card__img">{% imageSync card.image.path, card.image.alt %}</div>
                 {% elif card.image.src %}
                     <div class="fr-card__img">
-                        <img class="fr-responsive-img fr-responsive-img--1x1"
-                             src="{{ card.image.src }}"
-                             alt="{{ card.image.alt }}">
+                        <img class="fr-responsive-img {% if card.addClass == "fr-card--horizontal-tier" %} fr-responsive-img--16x9{% else %} fr-responsive-img--1x1{% endif %}"
+                            src="{{ card.image.src }}"
+                            alt="{{ card.image.alt }}">
                     </div>
                 {% endif %}
             {% endif %}
