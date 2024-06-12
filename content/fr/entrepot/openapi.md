@@ -7,16 +7,12 @@ swaggerui: true
 tags:
     - Spécifications OpenAPI
     - API Entrepôt
+segments:
+    - url: /developpeur
+      title: Documentation développeur
 ---
 
 {% from "components/component.njk" import component with context %}
-
-{{ component("breadcrumb", {
-    segments: [{
-        url: "/developpeur/",
-        title: "Documentation développeur"
-    }]
-}) }}
 
 {{ component("swaggerui", {
     url: "https://data.geopf.fr/api/v3/api-docs",

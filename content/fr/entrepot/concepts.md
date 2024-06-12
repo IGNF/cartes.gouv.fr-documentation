@@ -6,16 +6,12 @@ tags:
     - Concepts Entrepôt
     - Terminologie
     - Workflow d'alimentation
+segments:
+    - url: /developpeur
+      title: Documentation développeur
 ---
 
 {% from "components/component.njk" import component with context %}
-
-{{ component("breadcrumb", {
-    segments: [{
-        url: "/developpeur/",
-        title: "Documentation développeur"
-    }]
-}) }}
 
 ## Workflow général d'utilisation de l'entrepôt
 
