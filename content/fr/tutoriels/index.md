@@ -4,16 +4,12 @@ description: Accès au différents tutoriels, par type de données et d'usage
 date: git Last Modified
 tags:
     - Index des tutoriels
+segments:
+    - url: /developpeur
+      title: Documentation développeur
 ---
 
 {% from "components/component.njk" import component with context %}
-
-{{ component("breadcrumb", {
-    segments: [{
-        url: "/developpeur/",
-        title: "Documentation développeur"
-    }]
-}) }}
 
 <div class="fr-grid-row fr-grid-row--gutters">
 

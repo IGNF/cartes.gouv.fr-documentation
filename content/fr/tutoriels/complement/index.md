@@ -5,19 +5,14 @@ date: git Last Modified
 tags:
     - Donnée complémentaire
     - Index des tutoriels
+segments:
+    - url: /developpeur
+      title: Documentation développeur
+    - url: /tutoriels
+      title: Tutoriels
 ---
 
 {% from "components/component.njk" import component with context %}
-
-{{ component("breadcrumb", {
-    segments: [{
-        url: "/developpeur/",
-        title: "Documentation développeur"
-    },{
-        url: "/tutoriels/",
-        title: "Tutoriels"
-    }]
-}) }}
 
 <div class="fr-grid-row--gutters fr-mb-1w">
 

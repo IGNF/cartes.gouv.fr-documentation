@@ -11,4 +11,5 @@ module.exports = {
             return `/${data.lang}/${this.slugify(data.slugOverride)}/`;
         }
     },
+    showBreadcrumb: true,
 };
