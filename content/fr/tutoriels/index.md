@@ -15,119 +15,78 @@ tags:
     }]
 }) }}
 
-<div class="fr-grid-row fr-grid-row--gutters fr-mb-1w">
+<div class="fr-grid-row fr-grid-row--gutters">
 
-<div class="fr-col fr-col-md-3">
-
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/vecteur/",
     title: "Gestion des données vecteur",
     description: "Chargement de données vecteur, mise à jour, tuilage, publication en WMS, WFS et TMS",
-    image: {
-        src: "/img/tutoriels/vecteur.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "map/location-france.svg"
 }) }}
-
 </div>
-<div class="fr-col fr-col-md-3">
 
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/raster/",
     title: "Gestion des données raster",
     description: "Chargement d'image géoréférencées, calcul et mise à jour de pyramide, diffusion en WMS, WMTS et TMS, service d'altimétrie",
-    image: {
-        src: "/img/tutoriels/raster.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "map/map.svg"
 }) }}
-
 </div>
-<div class="fr-col fr-col-md-3">
 
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/archive/",
     title: "Gestion des données archives",
     description: "Chargement de fichiers archives, intégration, diffusion en téléchargement",
-    image: {
-        src: "/img/tutoriels/archive.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "document/document-download.svg"
 }) }}
-
 </div>
-<div class="fr-col fr-col-md-3">
 
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/complement/",
     title: "Gestion des données complémentaires",
     description: "Téléversement et diffusion de fichiers annexes et métadonnées",
-    image: {
-        src: "/img/tutoriels/complement.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "document/document-add.svg"
 }) }}
-
 </div>
-<div class="fr-col fr-col-md-3">
 
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/controle-des-acces/",
     title: "Contrôle des accès",
     description: "Authentification et accès à l'entrepôt et aux services de diffusion",
-    image: {
-        src: "/img/tutoriels/cda.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "system/padlock.svg"
 }) }}
-
 </div>
-<div class="fr-col fr-col-md-3">
 
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/gestion/",
     title: "Gestion des espaces de travail",
     description: "Gestion d'une communauté et de ses membres",
-    image: {
-        src: "/img/tutoriels/gestion.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "environment/human-cooperation.svg"
 }) }}
-
 </div>
-<div class="fr-col fr-col-md-3">
 
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/recherche/",
     title: "Gestion des index de recherche",
     description: "Service de recherche des données de la Géoplateforme et gestion des index customs",
-    image: {
-        src: "/img/tutoriels/search.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "digital/search.svg"
 }) }}
-
 </div>
-<div class="fr-col fr-col-md-3">
 
-{{ component("card", {
+<div class="fr-col-md-3">
+{{ component("tile", {
     url: "/tutoriels/divers/",
     title: "Cas d'utilisation divers",
     description: "Mise en place de capacités de service personnalisées",
-    image: {
-        src: "/img/tutoriels/divers.png",
-        alt: ""
-    },
-    addClass: "fr-card--vertical-tier"
+    pictogram: "leisure/paint.svg"
 }) }}
-
 </div>
 
 </div>

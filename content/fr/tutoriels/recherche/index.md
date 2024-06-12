@@ -13,6 +13,9 @@ tags:
     segments: [{
         url: "/developpeur/",
         title: "Documentation développeur"
+    },{
+        url: "/tutoriels/",
+        title: "Tutoriels"
     }]
 }) }}
 

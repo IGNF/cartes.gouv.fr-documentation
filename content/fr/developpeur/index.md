@@ -1,61 +1,59 @@
 ---
-title: Toutes les ressources pour utiliser cartes.gouv.fr
+title: Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme
 layout: layouts/profil.njk
 ---
 
-# Documentation développeur
-
-Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous accompagner dans la prise en main des outils de cartes.gouv.fr.
+Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous accompagner dans la prise en main des outils de la Géoplateforme et cartes.gouv.fr.
 
 ## Entrepôt Géoplateforme
 
 {% from "components/component.njk" import component with context %}
 
-<div>
+<div class="fr-grid-row fr-grid-row--gutters">
 
-{{ component("card", {
-    url: "/entrepot/openapi/",
-    title: "Spécifications OpenAPI de l'API Entrepôt",
-    description: "Détails de toutes les routes assurées par l'API Entrepôt",
-    image: {
-        src: "/img/developpeur/openapi.png",
-        alt: ""
-    },
-    addClass: "fr-card--horizontal-tier"
-}) }}
+<div class="fr-col-md-6">
 
-{{ component("card", {
+{{ component("tile", {
     url: "/entrepot/concepts/",
     title: "Concepts de l'Entrepôt",
     description: "Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation",
-    image: {
-        src: "/img/developpeur/concepts.png",
-        alt: ""
-    },
-    addClass: "fr-card--horizontal-tier"
+    pictogram: "system/system.svg"
 }) }}
 
-{{ component("card", {
+</div>
+
+<div class="fr-col-md-6">
+
+{{ component("tile", {
     url: "/tutoriels/",
     title: "Tutoriels d'utilisation de l'Entrepôt",
     description: "Accès au différents tutoriels, par type de données et d'usage",
-    image: {
-        src: "/img/developpeur/tutoriels.png",
-        alt: ""
-    },
-    addClass: "fr-card--horizontal-tier"
+    pictogram: "leisure/digital-art.svg"
 }) }}
 
-{{ component("card", {
+</div>
+
+<div class="fr-col-md-6">
+
+{{ component("tile", {
+    url: "/entrepot/openapi/",
+    title: "Spécifications OpenAPI de l'API Entrepôt",
+    description: "Détails de toutes les routes assurées par l'API Entrepôt",
+    pictogram: "document/document.svg"
+}) }}
+
+</div>
+
+<div class="fr-col-md-6">
+
+{{ component("tile", {
     url: false,
     externalUrl: "https://geoplateforme.github.io/sdk-entrepot/",
     title: "Documentation du SDK python",
     description: "Pour consommer l'API Entrepôt plus facilement avec des scripts développés en python",
-    image: {
-        src: "/img/developpeur/sdk_python.png",
-        alt: ""
-    },
-    addClass: "fr-card--horizontal-tier"
+    pictogram: "digital/coding.svg"
 }) }}
+
+</div>
 
 </div>
