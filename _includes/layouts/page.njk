@@ -13,6 +13,12 @@ sidemenu: false
                         {% include "components/breadcrumb.njk" %}
                     {% endif %}
                     <h1 class="fr-mt-6v">{{ title }}</h1>
+                    {% include "components/taggroup.njk" %}
+                    <p class="fr-text--xs">
+                        {{ "published_on" | i18n }}
+                        <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+                    </p>
+
                     {% if description %}<p class="fr-text--lead">{{ description }}</p>{% endif %}
                 </div>
             </div>
