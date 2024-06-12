@@ -7,11 +7,18 @@ sidemenu: false
         <div class="fr-grid-row">
             <div class="fr-col-4">
                 <p>Je suis</p>
-                <ul>
-                    <li>Développeur</li>
-                    <li>Producteur</li>
-                    <li>Utilisateur</li>
-                </ul>
+                <div>
+                <input type="radio" id="developpeur" name="profil" value="developpeur" onclick="document.location.href='../developpeur/'" {% if developpeur %}checked{% endif %} />
+                <label for="developpeur">Développ·eur·euse</label>
+                </div>
+                <div>
+                <input type="radio" id="producteur" name="profil" value="producteur" onclick="document.location.href='../producteur/'" {% if producteur %}checked{% endif %} />
+                <label for="producteur">Product·eur·rice</label>
+                </div>
+                <div>
+                <input type="radio" id="utilisateur" name="profil" value="utilisateur" onclick="document.location.href='../utilisateur/'" {% if utilisateur %}checked{% endif %} />
+                <label for="utilisateur">Utilisat·eur·rice</label>
+                </div>
             </div>
             <div class="fr-col-8">
                 <h1>{{ title }}</h1>

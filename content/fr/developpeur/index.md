@@ -1,6 +1,7 @@
 ---
 title: Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme
 layout: layouts/profil.njk
+developpeur: true
 ---
 
 Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous accompagner dans la prise en main des outils de la Géoplateforme et cartes.gouv.fr.
