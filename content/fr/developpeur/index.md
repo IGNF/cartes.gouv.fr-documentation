@@ -40,7 +40,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
     url: "/entrepot/openapi/",
     title: "Spécifications OpenAPI de l'API Entrepôt",
     description: "Détails de toutes les routes assurées par l'API Entrepôt",
-    pictogram: "document/document.svg"
+    pictogram: "custom/swagger.svg"
 }) }}
 
 </div>

@@ -13,34 +13,34 @@ segments:
 
 <div class="fr-grid-row fr-grid-row--gutters">
 
-<div class="fr-col-md-3">
+<div class="fr-col-md-4">
 {{ component("tile", {
     url: "/tutoriels/vecteur/",
     title: "Gestion des données vecteur",
     description: "Chargement de données vecteur, mise à jour, tuilage, publication en WMS, WFS et TMS",
-    pictogram: "map/location-france.svg"
-}) }}
-</div>
-
-<div class="fr-col-md-3">
-{{ component("tile", {
-    url: "/tutoriels/raster/",
-    title: "Gestion des données raster",
-    description: "Chargement d'image géoréférencées, calcul et mise à jour de pyramide, diffusion en WMS, WMTS et TMS, service d'altimétrie",
     pictogram: "map/map.svg"
 }) }}
 </div>
 
-<div class="fr-col-md-3">
+<div class="fr-col-md-4">
+{{ component("tile", {
+    url: "/tutoriels/raster/",
+    title: "Gestion des données raster",
+    description: "Chargement d'image géoréférencées, calcul et mise à jour de pyramide, diffusion en WMS, WMTS et TMS, service d'altimétrie",
+    pictogram: "custom/raster.svg"
+}) }}
+</div>
+
+<div class="fr-col-md-4">
 {{ component("tile", {
     url: "/tutoriels/archive/",
     title: "Gestion des données archives",
     description: "Chargement de fichiers archives, intégration, diffusion en téléchargement",
-    pictogram: "document/document-download.svg"
+    pictogram: "custom/archive.svg"
 }) }}
 </div>
 
-<div class="fr-col-md-3">
+<div class="fr-col-md-4">
 {{ component("tile", {
     url: "/tutoriels/complement/",
     title: "Gestion des données complémentaires",
@@ -49,7 +49,7 @@ segments:
 }) }}
 </div>
 
-<div class="fr-col-md-3">
+<div class="fr-col-md-4">
 {{ component("tile", {
     url: "/tutoriels/controle-des-acces/",
     title: "Contrôle des accès",
@@ -58,7 +58,7 @@ segments:
 }) }}
 </div>
 
-<div class="fr-col-md-3">
+<div class="fr-col-md-4">
 {{ component("tile", {
     url: "/tutoriels/gestion/",
     title: "Gestion des espaces de travail",
@@ -67,7 +67,7 @@ segments:
 }) }}
 </div>
 
-<div class="fr-col-md-3">
+<div class="fr-col-md-4">
 {{ component("tile", {
     url: "/tutoriels/recherche/",
     title: "Gestion des index de recherche",
@@ -76,7 +76,16 @@ segments:
 }) }}
 </div>
 
-<div class="fr-col-md-3">
+<div class="fr-col-md-4">
+{{ component("tile", {
+    url: "/tutoriels/espace-personnel/",
+    title: "Gestion de l'espace personnel",
+    description: "Hébergemenet de documents personnels (croquis) et partage",
+    pictogram: "document/document.svg"
+}) }}
+</div>
+
+<div class="fr-col-md-4">
 {{ component("tile", {
     url: "/tutoriels/divers/",
     title: "Cas d'utilisation divers",
