@@ -1,6 +1,6 @@
 name: 🚀 Demander une évolution
 description: Vous souhaiteriez intégrer un nouveau type de contenu que les templates ne permettent pas encore d'intégrer
-labels: [enhancement]
+labels: [évolution]
 body:
     - type: textarea
       id: need-description
