@@ -34,12 +34,18 @@
 </nav>
 <script>
 (() => {
+    // trouver le tag "a" correspondant au hash
     const hash = window.location.hash
     const link = document.querySelector(`.fr-sidemenu__link[href='${hash}']`);
 
     if (link) {
         link.ariaCurrent = "page"
 
+        /**
+         * Parcourir les liens du sidemenu, (boucle jusqu'à trouver fr-sidemenu__inner)
+         * - si l'élément à la classe fr-collapse (c'est la div qui enrobe la sous-liste actuelle), ajouter sur sur son element précédent (le button) el.previousElementSibling.ariaExpanded = true pour ouvrir le collapse.
+         * - Et lui ajouter l'attribut aria-current="true"
+         */
         let el = link.parentElement
         do {
             if (el?.classList?.contains("fr-collapse")) {
