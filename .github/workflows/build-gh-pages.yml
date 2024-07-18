@@ -4,6 +4,9 @@ name: Build & Deploy Eleventy with GitHub Pages dependencies preinstalled
 on:
     # Runs on pushes targeting the default branch
     push:
+        branches-ignore:
+            - "dependabot/**"
+            - "renovate/**"
     pull_request:
 
     # Allows you to run this workflow manually from the Actions tab
@@ -14,7 +17,7 @@ permissions:
     contents: read
     pages: write
     id-token: write
-    
+
 jobs:
     build:
         name: Generate a static build
@@ -47,9 +50,9 @@ jobs:
         needs: build
         # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
         # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-        concurrency: 
+        concurrency:
             group: "pages"
-            cancel-in-progress: false            
+            cancel-in-progress: false
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
