@@ -75,7 +75,7 @@ class PageFinder {
         paginatedResults.forEach((result) => {
             const cardCol = document.createElement("div");
             cardCol.className = FULL_WIDTH_COL_CLASS;
-            cardCol.innerHTML = this._getCardHtml(result.meta.title, result.excerpt, result.url);
+            cardCol.innerHTML = this._getCardHtml(result.meta.title, result.excerpt, result.url, Object.values(result.filters).flat());
             this.searchResultList.appendChild(cardCol);
         });
     }
@@ -90,7 +90,7 @@ class PageFinder {
 
         Object.entries(filters).map(([filterType, subFilter]) => {
             let div = document.createElement("div");
-            div.className = "fr-grid-row fr-grid-row--middle fr-mb-2v";
+            div.className = "fr-grid-row fr-grid-row--middle fr-my-2v";
 
             let divTitle = document.createElement("div");
             divTitle.className = "fr-col-12 fr-col-sm-2";
@@ -99,12 +99,16 @@ class PageFinder {
             let divTags = document.createElement("div");
             divTags.className = "fr-col-12 fr-col-sm-10";
 
+            let ulTags = document.createElement("ul");
+            ulTags.className = "fr-tags-group";
+            divTags.appendChild(ulTags);
+
             div.appendChild(divTitle);
             div.appendChild(divTags);
 
             Object.entries(subFilter).map(([filterKeyword, count]) => {
                 const button = document.createElement("button");
-                button.className = "fr-tag fr-mx-2v";
+                button.className = "fr-tag";
                 button.ariaPressed = initHashFilters[filterType]?.includes(filterKeyword) ? "true" : "false";
                 button.textContent = `${filterKeyword} (${count})`;
 
@@ -117,7 +121,7 @@ class PageFinder {
                     if (button.ariaPressed === "true") {
                         // on enlève
                         hashFilters[filterType] = hashFilters[filterType]?.filter((f) => f !== filterKeyword);
-                        if (hashFilters[filterType].length === 0) {
+                        if (hashFilters[filterType]?.length === 0) {
                             delete hashFilters[filterType];
                         }
                     } else {
@@ -128,7 +132,7 @@ class PageFinder {
                     window.location.hash = Object.keys(hashFilters).length === 0 ? "" : encodeURIComponent(JSON.stringify(hashFilters));
                 });
 
-                divTags.appendChild(button);
+                ulTags.appendChild(button);
             });
 
             this.filterTagsEl.appendChild(div);
@@ -179,7 +183,7 @@ class PageFinder {
         return filters;
     }
 
-    _getCardHtml(title, excerpt, url) {
+    _getCardHtml(title, excerpt, url, filters = []) {
         return `
 <div class="fr-card fr-enlarge-link fr-card--horizontal">
     <div class="fr-card__body">
@@ -188,6 +192,19 @@ class PageFinder {
                 <a href="${url}">${title}</a>
             </h3>
             <p class="fr-card__desc">${excerpt}</p>
+            <div class="fr-card__start">
+                <ul class="fr-tags-group">
+                    ${filters
+                        ?.map(
+                            (filter) => `
+                        <li>
+                            <p class="fr-tag">${filter}</p>
+                        </li>
+                    `
+                        )
+                        .join("")}
+                </ul>
+            </div>
         </div>
     </div>
 </div>`;
