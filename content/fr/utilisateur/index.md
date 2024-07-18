@@ -3,6 +3,7 @@ title: Utilisateur
 utilisateur: true
 layout: "layouts/profil.njk"
 tags: ["profils"]
+date: 2002-01-01
 ---
 
 # Toutes les ressources pour utiliser cartes.gouv.fr

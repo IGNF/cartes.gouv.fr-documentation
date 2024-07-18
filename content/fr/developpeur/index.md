@@ -4,6 +4,7 @@ developpeur: true
 layout: "layouts/profil.njk"
 tags: ["profils"]
 slugOverride: developpeur
+date: 2000-01-01
 ---
 
 # Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme
