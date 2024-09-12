@@ -28,6 +28,8 @@ Ci-dessous, un guide pas à pas décrit le processus de contribution via un fork
 git clone git@github.com:your_GH_account/cartes.gouv.fr-documentation.git
 ```
 
+(en cas de problème, vérifiez votre configuration réseau. Si vous travaillez derrière un proxy, vérifiez par exemple vos variables d'environnement HTTP_PROXY et HTTPS_PROXY)
+
 -   Placez vous dans le nouveau dossier créé :
 
 ```bash
@@ -145,7 +147,7 @@ git push origin nouvelle-doc
 
 ### Créer une pull-request
 
-AU moement de votre push, GitHub va vous répondre directement en vous donnant l'URL à laquelle vous pouvez créer votre pull request. Vous pouvez suivre cette URL ou vous rendre à tout moment sur votre fork sur Github, afficher la branche "nouvelle-doc" et Github vous montrera un bandeau avec un bouton pour créer une nouvelle pull request.
+Au moment de votre push, GitHub va vous répondre directement en vous donnant l'URL à laquelle vous pouvez créer votre pull request. Vous pouvez suivre cette URL ou vous rendre à tout moment sur votre fork sur Github, afficher la branche "nouvelle-doc" et Github vous montrera un bandeau avec un bouton pour créer une nouvelle pull request.
 
 ### Après avoir créé une pull request
 
