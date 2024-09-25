@@ -38,7 +38,9 @@ segments:
         ["Point d'accès", "Entité représentant un ensemble de serveurs de diffusion géographique, accessible via une URL", "endpoint"],
         ["Permission", "Possibilité d'accès à une offre donnée à un utilisateur ou une communauté", "permission"],
         ["Accès", "Autorisation d'une clé à consommer une offre", "access"],
-        ["TMS", "Un Tile Matrix Set, statique pour la plateforme, utilisé par les données stockées de type pyramide ROK4", "tms"]
+        ["TMS", "Un Tile Matrix Set, statique pour la plateforme, utilisé par les données stockées de type pyramide ROK4", "tms"],
+        ["Clé", "Information d'identification à ajouter aux requêtes de consultation des services de diffusion à accès restreint", "key"],
+        ["Document", "Document indépendant, attaché au compte utilisateur et partageable", "document"]
     ]
 }) }}
 
