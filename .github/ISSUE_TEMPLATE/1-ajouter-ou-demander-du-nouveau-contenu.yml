@@ -1,6 +1,6 @@
 name: 📚 Ajouter ou demander l'ajout de documentation
 description: Posez une question sur une étape à éclaircir, suggérez des modifications de la documentation
-labels: [documentation]
+labels: [contenu]
 body:
     - type: textarea
       id: description

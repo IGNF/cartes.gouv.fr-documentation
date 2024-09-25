@@ -50,6 +50,8 @@ Clonez le dépôt (ou votre fork du dépôt, ce qui est préférable) sur votre 
 git clone https://github.com/IGNF/cartes.gouv.fr-documentation
 ```
 
+(en cas de problème, vérifiez votre configuration réseau. Si vous travaillez derrière un proxy, vérifiez par exemple vos variables d'environnement HTTP_PROXY et HTTPS_PROXY)
+
 Rendez vous dans le dossier pour exécuter les commandes suivantes :
 
 ```bash
@@ -80,9 +82,11 @@ A l'issu de cette commande, le dossier `_site` est rempli ou modifié avec un co
 npm start
 ```
 
-Cette commande rend le site disponible à l'adresse `https://localhost:8080/fr/` et reste active, à l'écoute des changements que vous effectuez dans le projet.
+Cette commande rend le site disponible à l'adresse `http://localhost:8080/fr/` et reste active, à l'écoute des changements que vous effectuez dans le projet.
 
 **:sparkles: Vous avez maintenant réussi à déployer le site en local :sparkles:**
+
+:warning: Il est normal que la page d'accueil soit une erreur 404. La page d'accueil réelle et correctement fléchée lors des déploiements en production est `/fr`.
 
 Le site est ainsi maintenu à jour en même temps que vous modifiez des fichiers. Mais les contenus modifiés ne sont pas indexés pour la recherche et il peut arriver que certaines modifications ne soient pas immédiatement prises en compte. Dans ce cas, arrêtez le site (`Ctrl+C`) et relancez les 2 commandes précédentes : `npm run build` puis `npm start`.
 

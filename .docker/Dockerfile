@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------
 # cartesgouvfr-documentation : Génération d'un build statique
 #----------------------------------------------------------------------
-FROM node:18-alpine as builder
+FROM node:20-alpine AS builder
 
 RUN apk add git
 
@@ -10,14 +10,14 @@ COPY . .
 
 # --pathprefix=/docs/
 RUN npm ci \
-	&& npx @11ty/eleventy \
+	&& npx @11ty/eleventy --pathprefix=/documentation \
 	&& npx pagefind --site _site/ --output-subdir \"_pagefind\" \
 	&& rm -rf node_modules .git
 
 #----------------------------------------------------------------------
 # cartesgouvfr-documentation : Config d'un serveur statique avec nginx
 #----------------------------------------------------------------------
-FROM nginxinc/nginx-unprivileged:alpine
+FROM nginxinc/nginx-unprivileged:alpine-slim
 COPY --from=builder /app/_site /usr/share/nginx/html/
 COPY --from=builder /app/_site/fr/index.html /usr/share/nginx/html/
 COPY .docker/nginx.conf /etc/nginx/nginx.conf

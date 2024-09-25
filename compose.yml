@@ -1,4 +1,6 @@
-version: "3.8"
+networks:
+    web_dev:
+        external: true
 
 services:
     site:
@@ -9,11 +11,18 @@ services:
             args:
                 - HTTP_PROXY
                 - HTTPS_PROXY
-        ports:
-            - 8082:8082
+        # ports:
+        #     - 8082:8082
         environment:
             - HTTP_PROXY=${HTTP_PROXY}
             - HTTPS_PROXY=${HTTPS_PROXY}
             - http_proxy=${HTTP_PROXY}
             - https_proxy=${HTTPS_PROXY}
         restart: unless-stopped
+        networks:
+            - web_dev
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.cartesgouvfr-documentation.rule=Host(`cartesgouvfr-documentation.docker.localhost`) && PathPrefix(`/documentation`)"
+            - "traefik.http.routers.cartesgouvfr-documentation.entrypoints=websecure"
+            - "traefik.http.services.cartesgouvfr-documentation.loadbalancer.server.port=8082"
