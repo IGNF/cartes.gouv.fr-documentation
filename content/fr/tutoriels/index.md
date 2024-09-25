@@ -81,7 +81,7 @@ segments:
     url: "/tutoriels/espace-personnel/",
     title: "Gestion de l'espace personnel",
     description: "Hébergemenet de documents personnels (croquis) et partage",
-    pictogram: "document/document.svg"
+    pictogram: "document/national-identity-card.svg"
 }) }}
 </div>
 

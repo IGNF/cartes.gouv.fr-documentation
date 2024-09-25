@@ -19,7 +19,8 @@ segments:
 <div class="fr-col fr-col-md-12">
 
 {{ component("card", {
-    url: "/tutoriels/espace-personnel/gestion/",
+    url: false,
+    externalUrl: "https://geoplateforme.github.io/tutoriels/production/complement/documents/televersement/",
     title: "Gestion des documents personnels",
     description: "Téléversement, modification et suppression des documents",
     image: {
@@ -34,7 +35,8 @@ segments:
 <div class="fr-col fr-col-md-12">
 
 {{ component("card", {
-    url: "/tutoriels/espace-personnel/partage/",
+    url: false,
+    externalUrl: "https://geoplateforme.github.io/tutoriels/production/complement/documents/partage/",
     title: "Partage des documents personnels",
     description: "Partage individualisé et authentifié ou partage public des documents personnels",
     image: {
