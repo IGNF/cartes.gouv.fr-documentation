@@ -44,7 +44,11 @@ const getSideMenuItems = (content = "") => {
     const { document } = new JSDOM(content).window;
 
     const headings = Array.from(document.querySelectorAll("h2, h3, h4")).filter(
-        (h) => !h.classList.contains("fr-tile__title") && !h.classList.contains("fr-alert__title") && !h.classList.contains("fr-accordion__title")
+        (h) =>
+            !h.classList.contains("fr-tile__title") &&
+            !h.classList.contains("fr-alert__title") &&
+            !h.classList.contains("fr-accordion__title") &&
+            !h.classList.contains("fr-callout__title")
     );
 
     const root = new Node("root", "root", "root");
