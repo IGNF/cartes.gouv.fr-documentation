@@ -162,3 +162,7 @@ pre[class*="language"] {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
 }
+
+.frx-border-img {
+    border: 0.15rem solid var(--border-default-blue-france);
+}
