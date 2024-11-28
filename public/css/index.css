@@ -164,5 +164,11 @@ pre[class*="language"] {
 }
 
 .frx-border-img {
-    border: 0.15rem solid var(--border-default-blue-france);
+    border: 1px solid grey;
+    padding: 1.5rem;
+}
+
+.fr-alert {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
