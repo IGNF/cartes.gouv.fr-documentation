@@ -162,3 +162,13 @@ pre[class*="language"] {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
 }
+
+.frx-border-img {
+    border: 1px solid grey;
+    padding: 0.5rem;
+}
+
+.fr-alert {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
