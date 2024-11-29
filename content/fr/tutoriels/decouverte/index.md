@@ -366,7 +366,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
       </div>
     </div>
 
-    **Étape 3/5 :** On choisit les niveaux de la pyramide à générer c'est-à-dire quelles données doivent apparaitre à quels niveaux de la pyramide.
+    \*_Étape 3/5 :_ On choisit les niveaux de la pyramide à générer c'est-à-dire quelles données doivent apparaitre à quels niveaux de la pyramide.
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
