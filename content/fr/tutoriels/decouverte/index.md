@@ -21,11 +21,10 @@ Ce tutoriel détaille les étapes de mise en œuvre au travers du parcours « ba
 :::
 :::callout Offre découverte
 Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer de leur bonne adéquation à vos besoins.
-
 -   100 Go hébergés sur un entrepôt mutualisé avec suppression trimestrielle
 -   20 couches de donnée
 -   Support par email [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)
-    :::
+:::
 
 ## Ouvrir cartes.gouv.fr
 
@@ -33,7 +32,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Page d'accueil cartes.gouv.fr](/img/tutoriels/decouverte/1_accueil.png){.fr-responsive-img .frx-border-img}
+      ![Page d'accueil cartes.gouv.fr](/img/tutoriels/decouverte/1_accueil.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -41,11 +40,11 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--center">
 
-    ![Se connecter par FranceConnect ou AgentConnect](/img/tutoriels/decouverte/1_franceconnect.png){.fr-responsive-img .frx-border-img}
+      ![Se connecter par FranceConnect ou AgentConnect](/img/tutoriels/decouverte/1_franceconnect.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Se connecter par le biais du site](/img/tutoriels/decouverte/1_identifiant.png){.fr-responsive-img .frx-border-img}
+      ![Se connecter par le biais du site](/img/tutoriels/decouverte/1_identifiant.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -56,18 +55,15 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
 <div class="fr-container">
   <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-![Renseigner nom d'utilisateur et mot de passe](/img/tutoriels/decouverte/2_profil.png){.fr-responsive-img .frx-border-img}
-
+  ![Renseigner nom d'utilisateur et mot de passe](/img/tutoriels/decouverte/2_profil.png){.fr-responsive-img .frx-border-img}
   </div>
   <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-![Confirmation du mot de passe et courriel](/img/tutoriels/decouverte/2_profil2.png){.fr-responsive-img .frx-border-img}
-
+  ![Confirmation du mot de passe et courriel](/img/tutoriels/decouverte/2_profil2.png){.fr-responsive-img .frx-border-img}
   </div>
 </div>
 
 **Étape 2-3/5 :** Cliquer sur **_Étape suivante_** pour chacune de ces 2 étapes :
-
 -   2/5 : **Renseigner une identité**
 -   3/5 : **Renseigner une adresse**<br><br>
 
@@ -78,13 +74,11 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
 <div class="fr-container">
   <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-![Renseigner le captcha](/img/tutoriels/decouverte/2_captcha.png){.fr-responsive-img .frx-border-img}
-
+  ![Renseigner le captcha](/img/tutoriels/decouverte/2_captcha.png){.fr-responsive-img .frx-border-img}
   </div>
   <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-![Vérification du courriel](/img/tutoriels/decouverte/2_verification.png){.fr-responsive-img .frx-border-img}
-
+  ![Vérification du courriel](/img/tutoriels/decouverte/2_verification.png){.fr-responsive-img .frx-border-img}
   </div>
 </div>
 
@@ -97,11 +91,11 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Page d'accueil espace Découverte](/img/tutoriels/decouverte/3_decouverte.png){.fr-responsive-img .frx-border-img}
+      ![Page d'accueil espace Découverte](/img/tutoriels/decouverte/3_decouverte.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Données Découverte](/img/tutoriels/decouverte/3_donnees.png){.fr-responsive-img .frx-border-img}
+      ![Données Découverte](/img/tutoriels/decouverte/3_donnees.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -117,24 +111,23 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Création d'une fiche de données](/img/tutoriels/decouverte/3_creer-fiche.png){.fr-responsive-img .frx-border-img}
+      ![Création d'une fiche de données](/img/tutoriels/decouverte/3_creer-fiche.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
     Avant de cliquer sur **_Déposer votre fichier_**, vous pouvez, si besoin, modifier deux champs identifiés dans votre donnée : le **Nom technique de votre donnée** et la **Projection de vos données en entrée**.
 
     Le processus **Vos données vecteur sont en cours de dépôt** se met en route. Voici en quatre étapes sont fonctionnement côté API :
-
     - Chargement du fichier
     - Vérifications standard
     - Vérification vecteur
     - Intégration en base de données
-        <div class="fr-container">
-          <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
+    <div class="fr-container">
+      <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-        ![Données vecteurs en cours de dépôt](/img/tutoriels/decouverte/3_depot.png){.fr-responsive-img .frx-border-img .fr-mt-6v}
-          </div>
-        </div>
+      ![Données vecteurs en cours de dépôt](/img/tutoriels/decouverte/3_depot.png){.fr-responsive-img .frx-border-img .fr-mt-6v}
+      </div>
+    </div>
 
     :::info
     Ce processus peut prendre quelques minutes. Des travaux d'amélioration des performances sont en cours.
@@ -143,7 +136,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Fiche de données](/img/tutoriels/decouverte/3_fiche-donnees.png){.fr-responsive-img .frx-border-img}
+      ![Fiche de données](/img/tutoriels/decouverte/3_fiche-donnees.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -164,7 +157,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Choisir le service à configurer](/img/tutoriels/decouverte/3_creer-service.png){.fr-responsive-img .frx-border-img}
+      ![Choisir le service à configurer](/img/tutoriels/decouverte/3_creer-service.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -174,7 +167,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Jeux de données](/img/tutoriels/decouverte/4_jeux-donnees.png){.fr-responsive-img .frx-border-img}
+      ![Jeux de données](/img/tutoriels/decouverte/4_jeux-donnees.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
       
@@ -188,7 +181,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Créer et publier un service WFS](/img/tutoriels/decouverte/4_creer-wfs.png){.fr-responsive-img .frx-border-img}
+      ![Créer et publier un service WFS](/img/tutoriels/decouverte/4_creer-wfs.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
       
@@ -200,7 +193,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Source des metadonnées](/img/tutoriels/decouverte/4_source-metadonnees.png){.fr-responsive-img .frx-border-img}
+      ![Source des metadonnées](/img/tutoriels/decouverte/4_source-metadonnees.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -208,11 +201,11 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Description](/img/tutoriels/decouverte/4_description.png){.fr-responsive-img .frx-border-img}
+      ![Description](/img/tutoriels/decouverte/4_description.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Référence temporelle et responsable de la ressource](/img/tutoriels/decouverte/4_ref-temporelle.png){.fr-responsive-img .frx-border-img}
+      ![Référence temporelle et responsable de la ressource](/img/tutoriels/decouverte/4_ref-temporelle.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -220,7 +213,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Attribution, informations sur les métadonnées et type de représentation spatiale](/img/tutoriels/decouverte/4_info-supp.png){.fr-responsive-img .frx-border-img}
+      ![Attribution, informations sur les métadonnées et type de représentation spatiale](/img/tutoriels/decouverte/4_info-supp.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -230,15 +223,15 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Création du service WFS en cours](/img/tutoriels/decouverte/4_creation-en-cours.png){.fr-responsive-img .frx-border-img}
+      ![Création du service WFS en cours](/img/tutoriels/decouverte/4_creation-en-cours.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Référence temporelle et responsable de la ressource](/img/tutoriels/decouverte/4_restrictions.png){.fr-responsive-img .frx-border-img}
+      ![Référence temporelle et responsable de la ressource](/img/tutoriels/decouverte/4_restrictions.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Service publié](/img/tutoriels/decouverte/4_service-publie.png){.fr-responsive-img .frx-border-img}
+      ![Service publié](/img/tutoriels/decouverte/4_service-publie.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -249,7 +242,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Visualisation d'un service WFS](/img/tutoriels/decouverte/4_visualisation.png){.fr-responsive-img .frx-border-img}
+      ![Visualisation d'un service WFS](/img/tutoriels/decouverte/4_visualisation.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -263,7 +256,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Ajouter un style](/img/tutoriels/decouverte/4_ajout-style.png){.fr-responsive-img .frx-border-img}
+      ![Ajouter un style](/img/tutoriels/decouverte/4_ajout-style.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
       
@@ -277,7 +270,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Sélectionner Service d'images (Web Map Service - WMS)](/img/tutoriels/decouverte/5_service-wms.png){.fr-responsive-img .frx-border-img}
+      ![Sélectionner Service d'images (Web Map Service - WMS)](/img/tutoriels/decouverte/5_service-wms.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -287,7 +280,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Sélectionner les tables nécessaires au service](/img/tutoriels/decouverte/5_selection-tables.png){.fr-responsive-img .frx-border-img}
+      ![Sélectionner les tables nécessaires au service](/img/tutoriels/decouverte/5_selection-tables.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -295,7 +288,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Choix de fichier de style SLD](/img/tutoriels/decouverte/5_fichier-style.png){.fr-responsive-img .frx-border-img}
+      ![Choix de fichier de style SLD](/img/tutoriels/decouverte/5_fichier-style.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -308,7 +301,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Description de la ressource](/img/tutoriels/decouverte/5_description.png){.fr-responsive-img .frx-border-img}
+      ![Description de la ressource](/img/tutoriels/decouverte/5_description.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -316,11 +309,11 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Attribution, informations sur les metadonnées et type de représentation spatiale](/img/tutoriels/decouverte/5_info-metadonnees.png){.fr-responsive-img .frx-border-img}
+      ![Attribution, informations sur les metadonnées et type de représentation spatiale](/img/tutoriels/decouverte/5_info-metadonnees.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Restrictions d'accès](/img/tutoriels/decouverte/5_restrictions.png){.fr-responsive-img .frx-border-img}
+      ![Restrictions d'accès](/img/tutoriels/decouverte/5_restrictions.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -328,11 +321,11 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Services publiés](/img/tutoriels/decouverte/5_service-publie.png){.fr-responsive-img .frx-border-img}
+      ![Services publiés](/img/tutoriels/decouverte/5_service-publie.png){.fr-responsive-img .frx-border-img}
       </div>
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Visualisation d'un service WMS](/img/tutoriels/decouverte/5_visualisation.png){.fr-responsive-img .frx-border-img}
+      ![Visualisation d'un service WMS](/img/tutoriels/decouverte/5_visualisation.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -344,7 +337,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Sélectionner Service de tuiles vectorielles (Tile Map Service - TMS)](/img/tutoriels/decouverte/6_service-tms.png){.fr-responsive-img .frx-border-img}
+      ![Sélectionner Service de tuiles vectorielles (Tile Map Service - TMS)](/img/tutoriels/decouverte/6_service-tms.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -354,7 +347,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Sélectionner les tables nécessaires au service](/img/tutoriels/decouverte/6_selection-tables.png){.fr-responsive-img .frx-border-img}
+      ![Sélectionner les tables nécessaires au service](/img/tutoriels/decouverte/6_selection-tables.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -362,15 +355,15 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Choisir les attributs des tables sélectionnées](/img/tutoriels/decouverte/6_attributs.png){.fr-responsive-img .frx-border-img}
+      ![Choisir les attributs des tables sélectionnées](/img/tutoriels/decouverte/6_attributs.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
-    \*_Étape 3/5 :_ On choisit les niveaux de la pyramide à générer c'est-à-dire quelles données doivent apparaitre à quels niveaux de la pyramide.
+    **Étape 3/5 :** On choisit les niveaux de la pyramide à générer c'est-à-dire quelles données doivent apparaitre à quels niveaux de la pyramide.
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Choisir les niveaux de zoom](/img/tutoriels/decouverte/6_zoom.png){.fr-responsive-img .frx-border-img}
+      ![Choisir les niveaux de zoom](/img/tutoriels/decouverte/6_zoom.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -380,7 +373,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Option de généralisation](/img/tutoriels/decouverte/6_generalisation.png){.fr-responsive-img .frx-border-img}
+      ![Option de généralisation](/img/tutoriels/decouverte/6_generalisation.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -388,7 +381,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Définition d'un échantillon](/img/tutoriels/decouverte/6_echantillon.png){.fr-responsive-img .frx-border-img}
+      ![Définition d'un échantillon](/img/tutoriels/decouverte/6_echantillon.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
@@ -396,7 +389,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s'assurer d
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
-    ![Définition d'un échantillon, visualisation](/img/tutoriels/decouverte/6_echantillon2.png){.fr-responsive-img .frx-border-img}
+      ![Définition d'un échantillon, visualisation](/img/tutoriels/decouverte/6_echantillon2.png){.fr-responsive-img .frx-border-img}
       </div>
     </div>
 
