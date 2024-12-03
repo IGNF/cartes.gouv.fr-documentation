@@ -15,41 +15,9 @@ numberOfLatestPostsToShow: 3
                 </h1>
                 <p class="fr-text--lead">Accédez à toutes les informations utiles concernant cartes.gouv.fr et les services de la géoplateforme</p>
                 <p>
-                    <a class="fr-btn fr-btn--primary" href="#">{{ "access_guides" | i18n }}</a>
+                    <a class="fr-btn fr-btn--primary" href="./developpeur/">{{ "access_guides" | i18n }}</a>
                 </p>
             </div>
         </div>
     </div>
-</div>
-<div class="fr-container fr-my-6w">
-    {% set postsCount = collections.posts | filterCollectionLang | length %}
-    {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-    <h2>
-        {% if latestPostsCount != 1 %}
-            Les {{ latestPostsCount }} derniers articles
-        {% else %}
-            Le dernier article
-        {% endif %}
-    </h2>
-    {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) %}
-    {% set postslistCounter = postsCount %}
-    {% include "postslist.njk" %}
-    {% set morePosts = postsCount - numberOfLatestPostsToShow %}
-    {% if morePosts > 0 %}
-        <p>
-            {{ morePosts }}
-            {% if morePosts != 1 %}
-                articles supplémentaires peuvent être consultés
-            {% else %}
-                article supplémentaire peut être consulté
-            {% endif %}
-            dans <a href="{{ "/blog" | locale_url }}">la documentation</a>.
-        </p>
-    {% endif %}
-    {# List every content page in the project #}
-    {#
-  <ul>
-    {%- for entry in collections.all %}<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>{%- endfor %}
-  </ul>
-  #}
 </div>
