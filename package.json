@@ -41,7 +41,7 @@
         "ics": "^3.8.1",
         "lint-staged": "^15.2.2",
         "luxon": "^3.5.0",
-        "markdown-it-anchor": "^8.6.7",
+        "markdown-it-anchor": "^9.0.0",
         "markdown-it-attrs": "^4.2.0",
         "markdown-it-container": "^4.0.0",
         "mermaid": "^10.7.0",
