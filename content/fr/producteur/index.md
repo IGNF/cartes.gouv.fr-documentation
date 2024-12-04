@@ -1,5 +1,5 @@
 ---
-title: Producteur
+title: Documentation producteur
 producteur: true
 layout: "layouts/profil.njk"
 tags: ["profils"]
@@ -10,11 +10,9 @@ date: 2001-01-01
 
 Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous accompagner dans la prise en main des outils de cartes.gouv.fr.
 
-Documentation producteur...
-
 {% from "components/component.njk" import component with context %}
 
-<div class="fr-grid-row fr-grid-row--gutters">
+<div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
 <div class="fr-col-md-6">
 

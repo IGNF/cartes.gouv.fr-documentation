@@ -1,5 +1,5 @@
 ---
-title: Utilisateur
+title: Documentation utilisateur
 utilisateur: true
 layout: "layouts/profil.njk"
 tags: ["profils"]
