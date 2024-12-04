@@ -73,7 +73,7 @@ Veiller à espacer les différents composants afin d'avoir un rendu facilement l
 
 Faire attention au formatage des images, une image `.PNG` ne sera pas reconnu contrairement à une image `.png`.
 
-Stocker les images dans un dossier propre au tutoriel dans le dossier `public/img/tutoriels/`.
+Stocker les images avec des noms explicites dans un dossier propre au tutoriel dans le dossier `public/img/tutoriels/`.
 
 ### Prettier
 
