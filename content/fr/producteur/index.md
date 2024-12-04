@@ -1,5 +1,5 @@
 ---
-title: Documentation producteur
+title: Producteur
 producteur: true
 layout: "layouts/profil.njk"
 tags: ["profils"]

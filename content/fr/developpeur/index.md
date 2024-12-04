@@ -1,5 +1,5 @@
 ---
-title: Documentation développeur
+title: Développeur
 developpeur: true
 layout: "layouts/profil.njk"
 tags: ["profils"]
