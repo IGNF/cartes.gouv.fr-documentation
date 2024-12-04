@@ -49,3 +49,28 @@ Bases d'écriture : https://commonmark.org/help/
 De nombreux composants qui n'existent pas dans la syntaxe markdown standard sont disponibles pour enrichir le contenu des pages.
 
 Consultez [composants.md](composants.md).
+
+## Rédiger un tutoriel
+
+### Respect du système de design de l'État
+
+Se référer au système de design de l'État (DSFR) afin de le respecter. Notamment à propos des couleurs permises et des différents composants disponibles à utiliser.
+
+Système de design de l'État : https://www.systeme-de-design.gouv.fr/
+
+### Gestion des espacements
+
+Veiller à espacer les différents composants afin d'avoir un rendu facilement lisible. Le DSFR est restrctif sur les espacements, il propose des classes pour les effectuer :
+- `.fr-mt-1w` margin top de 1w
+- `.fr-mb-1w` margin bottom de 1w
+- `.fr-my-1w` margin top et bottom de 1w
+
+### Gestion des images
+
+Faire attention au formatage des images, une image `.PNG` ne sera pas reconnu contrairement à une image `.png`.
+
+Stocker les images dans un dossier propre au tutoriel dans le dossier `public/img/tutoriels/`.
+
+### Prettier
+
+Désactier Prettier car il peut causer des mauvaises modifications en Markdown.
