@@ -52,6 +52,10 @@ Consultez [composants.md](composants.md).
 
 ## Rédiger un tutoriel
 
+### Création d'un tutoriel
+
+Créer un fichier `index.md` dans un dossier propre au tutoriel dans le dossier `content/fr/tutoriels/`
+
 ### Respect du système de design de l'État
 
 Se référer au système de design de l'État (DSFR) afin de le respecter. Notamment à propos des couleurs permises et des différents composants disponibles à utiliser.
