@@ -29,26 +29,30 @@ Pour soumettre une demande ou un problème concernant le site de la documentatio
 
 ## Structure
 
-Tout le contenu du site se trouve dans le répertoire `content`. En tant que rédacteur, aucune modification n'est généralement nécessaire dans d'autres répertoires.
+### Arborescence des dossiers
 
-A date, le site de la documentation n'est pas traduit en anglais et seule la partie en français `content/fr/` est enrichie.
+Tout le contenu du site se trouve dans le dossier `content`, sous forme de fichiers au format markdown (.md). Les fichiers de ce dossier sont ensuite transformés en pages HTML dans le dossier `_site` qui est absent du dépôt car généré seulement pour le déploiement.
+
+Les fichiers qui ne nécessitent pas de transformation pour être affichés dans un navigateur web se trouvent dans le répertoire `public`. C'est ici notamment que se trouvent les images qui illustrent la documentation.
+
+En tant que rédacteur, vous n'aurez généralement pas de modification à effectuer hors de ces 2 dossiers :
+
+- `content` et même uniquement `content/fr/` pour le contenu en français
+- `public`
 
 Le contenu de la barre de navigation principale n'est pas directement déterminée par l'arborescence des dossiers et fichiers mais par le contenu des cartouches de chaque fichier.
 Il est toutefois conseillé d'avoir une arborescence qui correspond à cette navigation pour faciliter le repérage.
 
 Documentation : https://codegouvfr.github.io/eleventy-dsfr/fr/blog/navigation/
 
-## Syntaxe Markdown
+### Structure d'un fichier Markdown
 
-Référence : https://codegouvfr.github.io/eleventy-dsfr/fr/blog/md-cheatsheet/
+Les fichiers markdown sont des fichiers au format texte, modifiables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
 
-Bases d'écriture : https://commonmark.org/help/
+Le texte est découpé en 2 parties :
 
-## Composants
-
-De nombreux composants qui n'existent pas dans la syntaxe markdown standard sont disponibles pour enrichir le contenu des pages.
-
-Consultez [composants.md](composants.md).
+- [Une _en-tête_ ou _cartouche_](markdown/cartouche.md) qui contient les métadonnées de la page du site correspondant à ce texte
+- [Le corps du texte](markdown/syntaxe.md)
 
 ## Rédiger un tutoriel
 
@@ -64,7 +68,8 @@ Système de design de l'État : https://www.systeme-de-design.gouv.fr/
 
 ### Gestion des espacements
 
-Veiller à espacer les différents composants afin d'avoir un rendu facilement lisible. Le DSFR est restrctif sur les espacements, il propose des classes pour les effectuer :
+Veiller à espacer les différents composants afin d'avoir un rendu facilement lisible. Le DSFR est restrictif sur les espacements, il propose des classes pour les effectuer :
+
 - `.fr-mt-1w` margin top de 1w
 - `.fr-mb-1w` margin bottom de 1w
 - `.fr-my-1w` margin top et bottom de 1w
@@ -77,4 +82,4 @@ Stocker les images avec des noms explicites dans un dossier propre au tutoriel d
 
 ### Prettier
 
-Désactier Prettier car il peut causer des mauvaises modifications en Markdown.
+Désactiver Prettier car il peut causer des mauvaises modifications en Markdown.
