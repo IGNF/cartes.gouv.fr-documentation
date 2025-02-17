@@ -1,10 +1,10 @@
 ---
-title: Développeur
-developpeur: true
-layout: "layouts/profil.njk"
-tags: ["profils"]
-slugOverride: developpeur
-date: 2000-01-01
+title: Documentation utilisateur
+layout: layouts/profil_docs.njk
+eleventyNavigation:
+    key: Développeur
+    order: 1
+    nav: docs
 ---
 
 # Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme

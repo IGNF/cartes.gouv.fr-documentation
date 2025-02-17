@@ -3,6 +3,7 @@ title: Premiers pas
 layout: layouts/page.njk
 eleventyNavigation:
     key: Premiers pas
+    nav: main
 slugOverride: premiers-pas
 ---
 

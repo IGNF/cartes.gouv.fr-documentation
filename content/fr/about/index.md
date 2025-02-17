@@ -4,6 +4,7 @@ layout: layouts/page.njk
 eleventyNavigation:
     key: À propos
     order: 3
+    nav: main
 slugOverride: a-propos
 ---
 

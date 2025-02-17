@@ -1,9 +1,10 @@
 ---
-title: Utilisateur
-utilisateur: true
-layout: "layouts/profil.njk"
-tags: ["profils"]
-date: 2002-01-01
+title: Documentation utilisateur
+layout: layouts/profil_docs.njk
+eleventyNavigation:
+    key: Utilisateur
+    order: 3
+    nav: docs
 ---
 
 # Toutes les ressources pour utiliser cartes.gouv.fr

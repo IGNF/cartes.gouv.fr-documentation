@@ -3,12 +3,15 @@ layout: layouts/base.njk
 ---
 
 {% from "components/component.njk" import component with context %}
-<div class="fr-mb-6w">
-    <div class="fr-py-3w">
-        <div class="fr-container">
-            <div class="fr-grid-row">
-                <div class="fr-col-10">
-                    {% if showBreadcrumb %}
+<div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      {% include "templates/sidemenu_prod.njk" %}
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row">
+        <div class="fr-col-12 fr-col-md-9">
+          {% if showBreadcrumb %}
                         {% include "components/breadcrumb.njk" %}
                     {% endif %}
                     <h1>{{ title }}</h1>
@@ -19,11 +22,9 @@ layout: layouts/base.njk
                     </p>
 
                     {% if description %}<p class="fr-text--lead">{{ description }}</p>{% endif %}
-                </div>
-            </div>
-        </div>
+        </div> 
+      </div>
+      {{ content | safe }}
     </div>
-    <div class="fr-container" data-pagefind-body>
-        {% include "components/pagefind_filters.njk" %}
-    </div>
+  </div>
 </div>

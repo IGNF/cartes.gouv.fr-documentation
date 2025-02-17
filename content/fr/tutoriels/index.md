@@ -7,6 +7,11 @@ tags:
 segments:
     - url: /developpeur
       title: Documentation développeur
+layout: layouts/profil_dev.njk
+eleventyNavigation:
+    key: Tutoriels d'utilisation de l'Entrepôt
+    order: 2
+    nav: dev
 ---
 
 {% from "components/component.njk" import component with context %}

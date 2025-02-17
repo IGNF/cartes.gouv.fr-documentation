@@ -2,7 +2,7 @@
      id="navigation-494"
      role="navigation"
      aria-label="{{ "main_menu" | i18n }}">
-    {% set navigationLinks = collections.all | filterCollectionLang | eleventyNavigation %}
+    {% set navigationLinks = collections.mainNavigation | filterCollectionLang | eleventyNavigation %}
     <ul class="fr-nav__list">
         {% for link in navigationLinks %}
             {% set linkUrl = link.url | locale_url(lang) %}

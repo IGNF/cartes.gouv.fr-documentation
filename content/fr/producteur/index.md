@@ -1,9 +1,10 @@
 ---
-title: Producteur
-producteur: true
-layout: "layouts/profil.njk"
-tags: ["profils"]
-date: 2001-01-01
+title: Documentation producteur
+layout: layouts/profil_docs.njk
+eleventyNavigation:
+    key: Producteur
+    order: 2
+    nav: docs
 ---
 
 # Toutes les ressources pour utiliser cartes.gouv.fr
@@ -17,7 +18,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/tutoriels/decouverte/",
+    url: "/tutoriels/decouverte",
     title: "Publier ses propres données depuis cartes.gouv.fr",
     description: "Fonctionnalité alimentation / diffusion",
     pictogram: "digital/internet.svg"

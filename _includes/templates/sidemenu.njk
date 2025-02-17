@@ -1,0 +1,79 @@
+<nav class="fr-sidemenu fr-sidemenu--sticky-full-height fr-mb-0-5v" role="navigation" aria-labelledby="fr-sidemenu-title">
+    <div class="fr-sidemenu__inner fr-pt-12v">
+        <div class="fr-mb-5v"> Je suis </div>
+        <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            {% set navLinks = collections.docsNavigation | filterCollectionLang | eleventyNavigation %}
+            <ul class="fr-sidemenu__list">
+                {% for link in navLinks %}
+                {% set linkUrl = link.url | locale_url(lang) %}
+                <li class="fr-sidemenu__item">
+                    {% if not link.children | length %}
+                    <a class="fr-sidemenu__link" href="{{ linkUrl }}"{% if linkUrl == page.url %} aria-current="page"{% endif %}>
+                        {{ link.title }}
+                    </a>
+                    {% else %}
+                        <button class="fr-sidemenu__btn" aria-expanded="false" aria-controls="sidemenu-{{ loop.index }}">
+                            {{ link.title }}
+                        </button>
+                        <div class="fr-collapse" id="sidemenu-{{ loop.index }}">
+                            <ul class="fr-sidemenu__list">
+                            {% for sublink in link.children %}
+                                <li class="fr-sidemenu__item">
+                                {% set sublinkUrl = sublink.url | locale_url(lang) or sublink.externalUrl %}
+                                <a class="fr-sidemenu__link"
+                                    href="{{ sublinkUrl }}" {% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}{% if sublinkUrl == page.url %} aria-current="page"{% endif %}>
+                                    {{ sublink.title }}
+                                </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+  </div>
+</nav>
+
+<script>
+    (() => {
+        // Récupérer l'URL complète de la page
+        const currentUrl = window.location.href;
+        console.log("Current URL:", currentUrl); // Affiche l'URL actuelle dans la console
+
+        // Sélectionner le lien correspondant à l'URL actuelle
+        const link = Array.from(document.querySelectorAll('.fr-sidemenu__link')).find(link => link.href === currentUrl);
+        console.log("Link:", link); // Affiche le lien trouvé
+
+        if (link) {
+            link.ariaCurrent = "page"
+
+            /**
+            * Parcourir les liens du sidemenu, (boucle jusqu'à trouver fr-sidemenu__inner)
+            * - si l'élément à la classe fr-collapse (c'est la div qui enrobe la sous-liste actuelle), ajouter sur sur son element précédent (le button) el.previousElementSibling.ariaExpanded = true pour ouvrir le collapse.
+            * - Et lui ajouter l'attribut aria-current="true"
+            */
+            let el = link.parentElement
+            do {
+                if (el?.classList?.contains("fr-collapse")) {
+                    el.previousElementSibling.ariaExpanded = true
+                    el.ariaCurrent = "true"
+                }
+
+                el = el.parentElement
+            } while (!el?.classList?.contains("fr-sidemenu__inner")); // on est arrivés an haut du sommaire, on a fini la boucle
+        }
+
+        const allLinks = document.querySelectorAll("a.fr-sidemenu__link")
+
+        const handleClick = (e) => {
+            allLinks.forEach(link => link.ariaCurrent = null)
+            e.currentTarget.ariaCurrent = "page"
+        }
+
+        allLinks.forEach(link => {
+            link.addEventListener("click", handleClick)
+        })
+    })();
+</script>

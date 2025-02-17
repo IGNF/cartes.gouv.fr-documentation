@@ -2,7 +2,6 @@
 title: Spécifications OpenAPI de l'API Entrepôt
 description: Détails de toutes les routes assurées par l'API Entrepôt
 date: git Last Modified
-showBreadcrumb: true
 swaggerui: true
 tags:
     - Spécifications OpenAPI
@@ -10,6 +9,11 @@ tags:
 segments:
     - url: /developpeur
       title: Documentation développeur
+layout: layouts/profil_dev.njk
+eleventyNavigation:
+    key: Spécifications OpenAPI de l'API Entrepôt
+    order: 3
+    nav: dev
 ---
 
 {% from "components/component.njk" import component with context %}

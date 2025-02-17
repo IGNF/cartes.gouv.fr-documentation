@@ -1,0 +1,94 @@
+<nav class="fr-sidemenu fr-sidemenu--sticky-full-height fr-mb-0-5v" role="navigation" aria-labelledby="fr-sidemenu-title">
+    <div class="fr-sidemenu__inner fr-pt-12v">
+        <button
+            class="fr-mb-5v fr-btn--tertiary-no-outline"
+            aria-hidden="true"
+        >
+            <a href="/fr/producteur/" class="fr-icon-arrow-left-s-line fr-mb-5v"> 
+            </a>
+        </button>
+        Documentation producteur
+        <div class="fr-collapse" id="fr-sidemenu-wrapper">
+            {% set navLinks = collections.prodNavigation | filterCollectionLang | eleventyNavigation %}
+            <ul class="fr-sidemenu__list">
+                {% for link in navLinks %}
+                {% set linkUrl = link.url | locale_url(lang) %}
+                <li class="fr-sidemenu__item">
+                    {% if not link.children | length %}
+                    <a class="fr-sidemenu__link" href="{{ linkUrl }}"{% if linkUrl == page.url %} aria-current="page"{% endif %}>
+                        {{ link.title }}
+                    </a>
+                    {% else %}
+                        <button class="fr-sidemenu__btn" aria-expanded="false" aria-controls="sidemenu-{{ loop.index }}">
+                            {{ link.title }}
+                        </button>
+                        <div class="fr-collapse" id="sidemenu-{{ loop.index }}">
+                            <ul class="fr-sidemenu__list">
+                            {% for sublink in link.children %}
+                                <li class="fr-sidemenu__item">
+                                {% set sublinkUrl = sublink.url | locale_url(lang) or sublink.externalUrl %}
+                                <a class="fr-sidemenu__link"
+                                    href="{{ sublinkUrl }}" {% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}{% if sublinkUrl == page.url %} aria-current="page"{% endif %}>
+                                    {{ sublink.title }}
+                                </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+  </div>
+</nav>
+
+<script>
+    
+    (() => {
+    const currentUrl = window.location.href;
+
+    // Trouver le lien actif ou la page parent correspondante
+    const activeLink = Array.from(document.querySelectorAll('.fr-sidemenu__link'))
+        .find(link => link.href === currentUrl);
+
+    if (activeLink) {
+        activeLink.ariaCurrent = "page";
+
+        // Remonter et trouver le parent
+        let el = activeLink.closest("li");
+
+        while (el) {
+            let parentCollapse = el.closest(".fr-collapse");
+            if (parentCollapse) {
+                let parentButton = parentCollapse.previousElementSibling;
+                if (parentButton && parentButton.classList.contains("fr-sidemenu__btn")) {
+                    parentButton.setAttribute("aria-expanded", "true");
+                    parentCollapse.classList.add("fr-collapse--expanded"); // Ouvre le menu
+                }
+            }
+            el = el.parentElement.closest("li");
+        }
+    } else {
+        // Vérifier si la page actuelle est une page parent (sans enfant actif)
+        document.querySelectorAll(".fr-sidemenu__btn").forEach(button => {
+            let submenu = button.nextElementSibling;
+            if (submenu && submenu.querySelector(`a[href="${currentUrl}"]`)) {
+                button.setAttribute("aria-expanded", "true");
+                submenu.classList.add("fr-collapse--expanded"); // Ouvre le menu
+            }
+        });
+    }
+
+    // Gestion de l'ouverture dynamique au clic
+    document.querySelectorAll(".fr-sidemenu__btn").forEach(button => {
+        button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+        });
+    });
+
+})();
+
+
+</script>

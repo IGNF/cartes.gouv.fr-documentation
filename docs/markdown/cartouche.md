@@ -70,7 +70,7 @@ segments:
 Dans le cas d'une page longue, il est possible d'ajouter un sommaire sous forme de menu latéral.
 
 ```yml
-sidemenu: true
+
 ```
 
 Le sommaire sera construit automatiquement à partir de la hiérarchie des titres de la page.
@@ -90,7 +90,7 @@ segments:
     - url: /developpeur
       title: Documentation développeur
     - url: /tutoriels
-      title: Tutoriels
+      title: Tutoriels d'utilisation de l'Entrepôt
 ---
 
 Contenu de la page...

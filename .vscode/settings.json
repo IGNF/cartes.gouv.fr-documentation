@@ -7,5 +7,8 @@
     },
     "[nj][njk][nunjucks]": {
         "editor.defaultFormatter": "monosans.djlint"
+    },
+    "[nunjucks]": {
+        "editor.defaultFormatter": "guapibai.nunjucks-prettier"
     }
 }

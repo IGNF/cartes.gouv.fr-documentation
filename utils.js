@@ -39,30 +39,3 @@ function insertNode(parent, node, level) {
         }
     }
 }
-
-const getSideMenuItems = (content = "") => {
-    const { document } = new JSDOM(content).window;
-
-    const headings = Array.from(document.querySelectorAll("h2, h3, h4")).filter(
-        (h) =>
-            !h.classList.contains("fr-tile__title") &&
-            !h.classList.contains("fr-alert__title") &&
-            !h.classList.contains("fr-accordion__title") &&
-            !h.classList.contains("fr-callout__title")
-    );
-
-    const root = new Node("root", "root", "root");
-
-    headings.forEach((heading) => {
-        const level = parseInt(heading.tagName.slice(1));
-        const node = new Node(heading.id, heading.textContent.replace(" #", ""), heading.tagName);
-
-        insertNode(root, node, level);
-    });
-
-    return root.children;
-};
-
-module.exports = {
-    getSideMenuItems,
-};

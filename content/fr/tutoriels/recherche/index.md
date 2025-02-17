@@ -9,7 +9,13 @@ segments:
     - url: /developpeur
       title: Documentation développeur
     - url: /tutoriels
-      title: Tutoriels
+      title: Tutoriels d'utilisation de l'Entrepôt
+layout: layouts/profil_dev.njk
+eleventyNavigation:
+    key: Gestion des index de recherche
+    parent: Tutoriels d'utilisation de l'Entrepôt
+    order: 7
+    nav: dev
 ---
 
 {% from "components/component.njk" import component with context %}

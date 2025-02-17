@@ -1,21 +1,20 @@
 ---
-title: Concepts de l'Entrepôt
-description: Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation
+title: Détail des différentes entités manipulées
 date: git Last Modified
-tags:
-    - Concepts Entrepôt
-    - Terminologie
-    - Workflow d'alimentation
 segments:
     - url: /developpeur
       title: Documentation développeur
+    - url: /entrepot/concepts/
+      title: Concepts de l'Entrepôt
+layout: layouts/profil_dev_tuto.njk
+eleventyNavigation:
+    key: Détail des différentes entités manipulées
+    parent: Concepts de l'Entrepôt
+    order: 2
+    nav: dev
 ---
 
 {% from "components/component.njk" import component with context %}
-
-## Workflow général d'utilisation de l'entrepôt
-
-![workflow-simple](/img/entrepot/workflow-simple.png){.fr-responsive-img}
 
 ## Détail des différentes entités manipulées
 

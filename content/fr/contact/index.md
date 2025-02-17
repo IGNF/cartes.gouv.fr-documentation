@@ -5,5 +5,6 @@ eleventyNavigation:
     externalUrl: https://cartes.gouv.fr/nous-ecrire
     parent: Assistance
     order: 2
+    nav: main
 permalink: false
 ---
