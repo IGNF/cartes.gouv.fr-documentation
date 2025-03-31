@@ -3,8 +3,8 @@ title: Workflow général d'utilisation de l'entrepôt
 date: git Last Modified
 layout: layouts/profil_dev_tuto.njk
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
     - url: /entrepot/concepts/
       title: Concepts de l'Entrepôt
 eleventyNavigation:

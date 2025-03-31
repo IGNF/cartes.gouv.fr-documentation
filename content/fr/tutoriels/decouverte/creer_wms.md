@@ -2,15 +2,15 @@
 title: Créer et publier un service WMS
 date: git Last Modified
 segments:
-    - url: /producteur
-      title: Documentation producteur
+    - url: /guides/producteur
+      title: Guides producteur
     - url: /tutoriels/decouverte/
       title: Publier ses propres données depuis cartes.gouv.fr
 layout: layouts/profil_prod_tuto.njk
 eleventyNavigation:
     key: Créer et publier un service WMS
-    parent: Publier ses propres données depuis cartes.gouv.fr
-    order: 5
+    parent: Créer et publier un service WFS
+    order: 1
     nav: prod
 ---
 

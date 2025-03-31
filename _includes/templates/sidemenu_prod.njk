@@ -4,12 +4,12 @@
             class="fr-mb-5v fr-btn--tertiary-no-outline"
             aria-hidden="true"
         >
-            <a href="/fr/producteur/" class="fr-icon-arrow-left-s-line fr-mb-5v"> 
+            <a href="/fr/guides/producteur/" class="fr-icon-arrow-left-s-line fr-mb-5v"> 
             </a>
         </button>
         Documentation producteur
         <div class="fr-collapse" id="fr-sidemenu-wrapper">
-            {% set navLinks = collections.prodNavigation | filterCollectionLang | eleventyNavigation %}
+            {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
             <ul class="fr-sidemenu__list">
                 {% for link in navLinks %}
                 {% set linkUrl = link.url | locale_url(lang) %}

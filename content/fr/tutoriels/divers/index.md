@@ -6,8 +6,8 @@ tags:
     - Divers
     - Index des tutoriels
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
     - url: /tutoriels
       title: Tutoriels d'utilisation de l'Entrepôt
 layout: layouts/profil_dev.njk

@@ -7,8 +7,8 @@ tags:
     - Spécifications OpenAPI
     - API Entrepôt
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
 layout: layouts/profil_dev.njk
 eleventyNavigation:
     key: Spécifications OpenAPI de l'API Entrepôt

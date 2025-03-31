@@ -1,10 +1,11 @@
 ---
-title: Documentation producteur
-layout: layouts/profil_docs.njk
+title: Guides producteur
+layout: layouts/profil_prod.njk
 eleventyNavigation:
-    key: Producteur
-    order: 2
-    nav: docs
+    key: Guides producteur
+    parent: Guides
+    order: 3
+    nav: main
 ---
 
 # Toutes les ressources pour utiliser cartes.gouv.fr

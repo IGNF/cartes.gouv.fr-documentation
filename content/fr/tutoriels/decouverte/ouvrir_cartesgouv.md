@@ -2,8 +2,8 @@
 title: Ouvrir cartes.gouv.fr
 date: git Last Modified
 segments:
-    - url: /producteur
-      title: Documentation producteur
+    - url: /guides/producteur
+      title: Guides producteur
     - url: /tutoriels/decouverte/
       title: Publier ses propres données depuis cartes.gouv.fr
 layout: layouts/profil_prod_tuto.njk

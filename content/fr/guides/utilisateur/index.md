@@ -1,10 +1,10 @@
 ---
-title: Documentation utilisateur
-layout: layouts/profil_docs.njk
+title: Guides utilisateur
 eleventyNavigation:
-    key: Utilisateur
-    order: 3
-    nav: docs
+    key: Guides utilisateur
+    parent: Guides
+    order: 1
+    nav: main
 ---
 
 # Toutes les ressources pour utiliser cartes.gouv.fr

@@ -1,10 +1,11 @@
 ---
-title: Documentation utilisateur
-layout: layouts/profil_docs.njk
+title: Guides développeur
+layout: layouts/profil_dev.njk
 eleventyNavigation:
-    key: Développeur
-    order: 1
-    nav: docs
+    key: Guides développeur
+    parent: Guides
+    order: 2
+    nav: main
 ---
 
 # Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme

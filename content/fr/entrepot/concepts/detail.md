@@ -2,8 +2,8 @@
 title: Détail des différentes entités manipulées
 date: git Last Modified
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
     - url: /entrepot/concepts/
       title: Concepts de l'Entrepôt
 layout: layouts/profil_dev_tuto.njk

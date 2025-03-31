@@ -7,8 +7,8 @@ tags:
     - Terminologie
     - Workflow d'alimentation
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
 layout: layouts/profil_dev.njk
 eleventyNavigation:
     key: Concepts de l'Entrepôt

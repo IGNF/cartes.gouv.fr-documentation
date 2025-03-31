@@ -2,8 +2,8 @@
 title: Créer et publier un service WFS
 date: git Last Modified
 segments:
-    - url: /producteur
-      title: Documentation producteur
+    - url: /guides/producteur
+      title: Guides producteur
     - url: /tutoriels/decouverte/
       title: Publier ses propres données depuis cartes.gouv.fr
 layout: layouts/profil_prod_tuto.njk
@@ -96,12 +96,12 @@ eleventyNavigation:
 
 3. Visualiser un service WFS&nbsp;: visualiser cartographiquement les données.
    Cliquer sur **visualiser** (image ci-dessus) afin d’accéder à l’écran suivant.
-      <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
+       <div class="fr-container">
+         <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
     ![Visualisation d’un service WFS](/img/tutoriels/decouverte/4_visualisation.png){.fr-responsive-img .frx-border-img}
-    </div>
-      </div>
+     </div>
+       </div>
 
     :::info
     Bonne pratique&nbsp;: choisir un niveau de zoom approprié au volume de vos données au risque de voir les performances d’affichage dégradées.
@@ -114,13 +114,13 @@ eleventyNavigation:
    :::info
    La création d’un fichier SLD fait l’objet d’un autre tutoriel.
    :::
-      <div class="fr-container">  
-        <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
-        
-        ![Gérer les styles](/img/tutoriels/decouverte/4_gerer-style.png){.fr-responsive-img .frx-border-img}
-        </div>
-        <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
+       <div class="fr-container">  
+         <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
+         
+         ![Gérer les styles](/img/tutoriels/decouverte/4_gerer-style.png){.fr-responsive-img .frx-border-img}
+         </div>
+         <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
     ![Ajouter un style](/img/tutoriels/decouverte/4_ajout-style.png){.fr-responsive-img .frx-border-img}
-    </div>
-      </div>
+     </div>
+       </div>

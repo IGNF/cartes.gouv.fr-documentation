@@ -5,8 +5,8 @@ date: git Last Modified
 tags:
     - Index des tutoriels
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
 layout: layouts/profil_dev.njk
 eleventyNavigation:
     key: Tutoriels d'utilisation de l'Entrepôt

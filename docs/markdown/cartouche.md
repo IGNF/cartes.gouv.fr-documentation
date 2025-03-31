@@ -61,8 +61,8 @@ Pour un fil d'ariane de cette forme : `Accueil > Documentation producteur > Page
 
 ```yml
 segments:
-    - url: /producteur
-      title: Documentation producteur
+    - url: /guides/producteur
+      title: Guides producteur
 ```
 
 ## Menu latéral
@@ -87,8 +87,8 @@ tags:
     - Contrôle des accès
     - Index des tutoriels
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
     - url: /tutoriels
       title: Tutoriels d'utilisation de l'Entrepôt
 ---

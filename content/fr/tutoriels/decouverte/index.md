@@ -5,8 +5,8 @@ date: git Last Modified
 tags:
     - Découverte
 segments:
-    - url: /producteur
-      title: Documentation producteur
+    - url: /guides/producteur
+      title: Guides producteur
 layout: layouts/profil_prod.njk
 eleventyNavigation:
     key: Publier ses propres données depuis cartes.gouv.fr

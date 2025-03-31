@@ -91,15 +91,27 @@ module.exports = function (eleventyConfig) {
         });
     });
 
-    eleventyConfig.addCollection("devNavigation", function (collectionApi) {
+    eleventyConfig.addCollection("utilisateurNavigation", function (collectionApi) {
         return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "dev";
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "utilisateur";
         });
     });
 
-    eleventyConfig.addCollection("prodNavigation", function (collectionApi) {
+    eleventyConfig.addCollection("developpeurNavigation", function (collectionApi) {
         return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "prod";
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "developpeur";
+        });
+    });
+
+    eleventyConfig.addCollection("producteurNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "producteur";
+        });
+    });
+
+    eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
         });
     });
 
