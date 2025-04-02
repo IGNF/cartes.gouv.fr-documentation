@@ -1,6 +1,5 @@
 ---
 title: Institut national de l’information géographique et forestière
-layout: layouts/page.njk
 segments:
     - url: /partenaires
       title: Documentations partenaires

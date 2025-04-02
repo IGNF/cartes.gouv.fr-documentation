@@ -9,7 +9,7 @@ tags:
 segments:
     - url: /guides/developpeur
       title: Guides développeur
-layout: layouts/profil_dev.njk
+layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Concepts de l'Entrepôt
     order: 1

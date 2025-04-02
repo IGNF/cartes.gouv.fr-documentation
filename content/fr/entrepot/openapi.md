@@ -9,7 +9,7 @@ tags:
 segments:
     - url: /guides/developpeur
       title: Guides développeur
-layout: layouts/profil_dev.njk
+layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Spécifications OpenAPI de l'API Entrepôt
     order: 3

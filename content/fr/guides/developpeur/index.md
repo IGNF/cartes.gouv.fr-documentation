@@ -1,6 +1,6 @@
 ---
 title: Guides développeur
-layout: layouts/profil_dev.njk
+layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Guides développeur
     parent: Guides
@@ -32,7 +32,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/tutoriels/",
+    url: "/guides/developpeur/tutoriels/",
     title: "Tutoriels d'utilisation de l'Entrepôt",
     description: "Accès au différents tutoriels, par type de données et d'usage",
     pictogram: "leisure/digital-art.svg"

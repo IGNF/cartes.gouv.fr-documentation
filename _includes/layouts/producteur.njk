@@ -6,6 +6,7 @@ layout: layouts/base.njk
 <div class="fr-container">
   <div class="fr-grid-row">
     <div class="fr-col-12 fr-col-md-4">
+      {% set sidemenu_title = "Guides producteur" %}
       {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
       {% include "templates/sidemenu.njk" %}
     </div>
@@ -13,9 +14,19 @@ layout: layouts/base.njk
       <div class="fr-grid-row">
         <div class="fr-col-12 fr-col-md-9">
           {% if showBreadcrumb %}
-                        {% include "components/breadcrumb.njk" %}
-                    {% endif %}
-        </div> 
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          <h1>{{ title }}</h1>
+          {% include "components/taggroup-disabled.njk" %}
+          <p class="fr-text--xs fr-mt-6v">
+            {{ "published_on" | i18n }}
+            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+          </p>
+
+          {% if description %}
+            <p class="fr-text--lead">{{ description }}</p>
+          {% endif %}
+        </div>
       </div>
       {{ content | safe }}
     </div>
