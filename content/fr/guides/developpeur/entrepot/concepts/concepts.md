@@ -13,7 +13,7 @@ layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Concepts de l'Entrepôt
     order: 1
-    nav: dev
+    nav: developpeur
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -22,7 +22,7 @@ eleventyNavigation:
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/entrepot/concepts/workflow/",
+    url: "/guides/developpeur/entrepot/concepts/workflow/",
     title: "Workflow général d'utilisation de l'entrepôt",
     pictogram: "system/system.svg"
 }) }}
@@ -30,7 +30,7 @@ eleventyNavigation:
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/entrepot/concepts/detail/",
+    url: "/guides/developpeur/entrepot/concepts/detail/",
     title: "Détail des différentes entités manipulées",
     pictogram: "digital/data-visualization.svg"
 }) }}

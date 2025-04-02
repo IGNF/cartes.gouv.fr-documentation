@@ -5,7 +5,6 @@ date: git Last Modified
 swaggerui: true
 tags:
     - Spécifications OpenAPI
-    - API Entrepôt
 segments:
     - url: /guides/developpeur
       title: Guides développeur
@@ -13,7 +12,7 @@ layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Spécifications OpenAPI de l'API Entrepôt
     order: 3
-    nav: dev
+    nav: developpeur
 ---
 
 {% from "components/component.njk" import component with context %}

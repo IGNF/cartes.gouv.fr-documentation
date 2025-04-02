@@ -21,7 +21,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/entrepot/concepts/",
+    url: "/guides/developpeur/entrepot/concepts/",
     title: "Concepts de l'Entrepôt",
     description: "Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation",
     pictogram: "system/system.svg"
@@ -43,7 +43,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/entrepot/openapi/",
+    url: "/guides/developpeur/entrepot/openapi/",
     title: "Spécifications OpenAPI de l'API Entrepôt",
     description: "Détails de toutes les routes assurées par l'API Entrepôt",
     pictogram: "custom/swagger.svg"

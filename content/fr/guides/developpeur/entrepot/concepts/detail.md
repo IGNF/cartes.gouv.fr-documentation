@@ -4,14 +4,14 @@ date: git Last Modified
 segments:
     - url: /guides/developpeur
       title: Guides développeur
-    - url: /entrepot/concepts/
+    - url: /guides/developpeur/entrepot/concepts/
       title: Concepts de l'Entrepôt
 layout: layouts/profil_dev_tuto.njk
 eleventyNavigation:
     key: Détail des différentes entités manipulées
     parent: Concepts de l'Entrepôt
     order: 2
-    nav: dev
+    nav: developpeur
 ---
 
 {% from "components/component.njk" import component with context %}
