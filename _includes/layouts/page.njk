@@ -1,6 +1,5 @@
 ---
 layout: layouts/base.njk
-sidemenu: false
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -27,15 +26,7 @@ sidemenu: false
     <div class="fr-container" data-pagefind-body>
         {% include "components/pagefind_filters.njk" %}
         <div class="fr-grid-row">
-            {% if sidemenu %}
-                {% set sideMenuItems = content | getSideMenuItems %}
-                <div class="fr-col-12 fr-col-md-4">
-                    {{ component("sidemenu", {
-                                        items: sideMenuItems
-                                        }) }}
-                </div>
-            {% endif %}
-            <div class="fr-col-12 {% if sidemenu %}fr-col-md-8 fr-py-12v{% endif %}">{{ content | safe }}</div>
+            <div class="fr-col-12">{{ content | safe }}</div>
         </div>
     </div>
 </div>

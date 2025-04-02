@@ -1,7 +1,7 @@
 ---
 eleventyNavigation:
-    key: Assistance
-    order: 3
+    key: Guides
+    order: 1
     nav: main
 permalink: false
 ---

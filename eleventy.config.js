@@ -17,7 +17,6 @@ const pluginCalendar = require("@codegouvfr/eleventy-plugin-calendar");
 const customMarkdownContainers = require("./markdown-custom-containers");
 
 const { translations } = require("./_data/i18n");
-const { getSideMenuItems } = require("./utils.js");
 
 module.exports = function (eleventyConfig) {
     // Copy the contents of the `public` folder to the output folder
@@ -77,6 +76,42 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("allSortedByPathAsc", function (collectionApi) {
         return collectionApi.getAll().sort((a, b) => {
             return a.inputPath.localeCompare(b.inputPath);
+        });
+    });
+
+    eleventyConfig.addCollection("mainNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "main";
+        });
+    });
+
+    eleventyConfig.addCollection("docsNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "docs";
+        });
+    });
+
+    eleventyConfig.addCollection("utilisateurNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "utilisateur";
+        });
+    });
+
+    eleventyConfig.addCollection("developpeurNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "developpeur";
+        });
+    });
+
+    eleventyConfig.addCollection("producteurNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "producteur";
+        });
+    });
+
+    eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
         });
     });
 
@@ -146,8 +181,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("findBySlug", function find(collection = [], slug = "") {
         return collection.find((post) => post.fileSlug === slug);
     });
-
-    eleventyConfig.addFilter("getSideMenuItems", getSideMenuItems);
 
     eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {
         console.log(content);

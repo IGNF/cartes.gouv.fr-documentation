@@ -61,8 +61,8 @@ Pour un fil d'ariane de cette forme : `Accueil > Documentation producteur > Page
 
 ```yml
 segments:
-    - url: /producteur
-      title: Documentation producteur
+    - url: /guides/producteur
+      title: Guides producteur
 ```
 
 ## Menu latéral
@@ -70,7 +70,7 @@ segments:
 Dans le cas d'une page longue, il est possible d'ajouter un sommaire sous forme de menu latéral.
 
 ```yml
-sidemenu: true
+
 ```
 
 Le sommaire sera construit automatiquement à partir de la hiérarchie des titres de la page.
@@ -87,10 +87,10 @@ tags:
     - Contrôle des accès
     - Index des tutoriels
 segments:
-    - url: /developpeur
-      title: Documentation développeur
+    - url: /guides/developpeur
+      title: Guides développeur
     - url: /tutoriels
-      title: Tutoriels
+      title: Tutoriels d'utilisation de l'Entrepôt
 ---
 
 Contenu de la page...
