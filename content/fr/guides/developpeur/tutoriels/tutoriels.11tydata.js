@@ -1,3 +1,3 @@
 module.exports = {
-    tags: ["Géoplateforme", "Tutoriel"],
+    tags: ["Géoplateforme", "Tutoriel", "Index des tutoriels"],
 };

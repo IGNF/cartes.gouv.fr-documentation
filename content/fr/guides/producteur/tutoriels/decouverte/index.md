@@ -1,15 +1,13 @@
 ---
-title: Publier ses propres données depuis cartes.gouv.fr
+title: Publier des géodonnées via cartes.gouv.fr
 description: Fonctionnalité alimentation / diffusion
 date: git Last Modified
-tags:
-    - Découverte
 segments:
     - url: /guides/producteur
       title: Guides producteur
 eleventyNavigation:
-    key: Publier ses propres données depuis cartes.gouv.fr
-    order: 1
+    key: Publier des géodonnées via cartes.gouv.fr
+    order: 2
     nav: producteur
 ---
 

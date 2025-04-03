@@ -6,22 +6,22 @@ layout: layouts/base.njk
 <div class="fr-container">
   <div class="fr-grid-row">
     <div class="fr-col-12 fr-col-md-4">
-      {% set sidemenu_title = "Guides développeur" %}
       {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
+      {% set sidemenuTitle = "Guides développeur" %}
+      {% set sidemenuLink = "/fr/guides/developpeur/" %}
       {% include "templates/sidemenu.njk" %}
     </div>
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
       <div class="fr-grid-row">
         <div class="fr-col-12 fr-col-md-9">
-          {% if showBreadcrumb %} {% include "components/breadcrumb.njk" %} {%
-          endif %}
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
           <h1>{{ title }}</h1>
           {% include "components/taggroup-disabled.njk" %}
           <p class="fr-text--xs fr-mt-6v">
             {{ "published_on" | i18n }}
-            <time datetime="{{ page.date | htmlDateString }}"
-              >{{ page.date | readableDate }}</time
-            >
+            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
           </p>
 
           {% if description %}

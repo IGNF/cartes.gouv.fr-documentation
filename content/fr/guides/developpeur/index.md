@@ -1,6 +1,5 @@
 ---
 title: Guides développeur
-layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Guides développeur
     parent: Guides
@@ -8,11 +7,11 @@ eleventyNavigation:
     nav: main
 ---
 
-# Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme
+## Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme
 
 Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous accompagner dans la prise en main des outils de la Géoplateforme et cartes.gouv.fr.
 
-## Entrepôt Géoplateforme
+### Entrepôt Géoplateforme
 
 {% from "components/component.njk" import component with context %}
 
@@ -21,7 +20,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/guides/developpeur/entrepot/concepts/",
+    url: "/guides/developpeur/entrepot/",
     title: "Concepts de l'Entrepôt",
     description: "Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation",
     pictogram: "system/system.svg"
@@ -43,7 +42,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/guides/developpeur/entrepot/openapi/",
+    url: "/guides/developpeur/openapi/",
     title: "Spécifications OpenAPI de l'API Entrepôt",
     description: "Détails de toutes les routes assurées par l'API Entrepôt",
     pictogram: "custom/swagger.svg"
