@@ -6,8 +6,9 @@ layout: layouts/base.njk
 <div class="fr-container">
   <div class="fr-grid-row">
     <div class="fr-col-12 fr-col-md-4">
-      {% set sidemenu_title = "Guides producteur" %}
       {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
+      {% set sidemenuTitle = "Guides producteur" %}
+      {% set sidemenuLink = "/fr/guides/producteur/" %}
       {% include "templates/sidemenu.njk" %}
     </div>
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">

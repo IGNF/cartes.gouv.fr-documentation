@@ -2,15 +2,12 @@
 title: Tutoriels d'utilisation de l'Entrepôt
 description: Accès au différents tutoriels, par type de données et d'usage
 date: git Last Modified
-tags:
-    - Index des tutoriels
 segments:
     - url: /guides/developpeur
       title: Guides développeur
-layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Tutoriels d'utilisation de l'Entrepôt
-    order: 2
+    order: 6
     nav: developpeur
 ---
 
@@ -65,7 +62,7 @@ eleventyNavigation:
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/developpeur/tutoriels/gestion/",
+    url: "/guides/developpeur/tutoriels/espace-travail/",
     title: "Gestion des espaces de travail",
     description: "Gestion d'une communauté et de ses membres",
     pictogram: "environment/human-cooperation.svg"

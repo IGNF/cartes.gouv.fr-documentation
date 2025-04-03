@@ -5,11 +5,11 @@ segments:
     - url: /guides/producteur
       title: Guides producteur
     - url: /guides/producteur/tutoriels/decouverte
-      title: Publier ses propres données depuis cartes.gouv.fr
+      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Créer et publier un service WMS
-    parent: Créer et publier un service WFS
-    order: 1
+    parent: Publier des géodonnées via cartes.gouv.fr
+    order: 5
     nav: producteur
 ---
 
