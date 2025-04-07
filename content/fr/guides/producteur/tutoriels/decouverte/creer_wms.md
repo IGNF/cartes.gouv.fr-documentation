@@ -13,8 +13,6 @@ eleventyNavigation:
     nav: producteur
 ---
 
-## Créer et publier un service WMS
-
 1. Dans la fiche de votre donnée, cliquez sur **_Créer un service_** afin d’ouvrir la fenêtre permettant de **Choisir le service à configurer**&nbsp;: sélectionnez **Service d’images (Web Map Service - WMS)**.
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">

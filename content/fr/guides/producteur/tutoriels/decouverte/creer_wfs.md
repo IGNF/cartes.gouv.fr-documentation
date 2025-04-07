@@ -13,8 +13,6 @@ eleventyNavigation:
     nav: producteur
 ---
 
-## Créer et publier un service WFS
-
 1.  Dans la fiche de votre donnée, cliquez sur **_Créer un service_** afin d’ouvrir une fenêtre permettant de **Choisir le service à configurer**&nbsp;: sélectionnez **_Service de sélection WFS_**.
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">

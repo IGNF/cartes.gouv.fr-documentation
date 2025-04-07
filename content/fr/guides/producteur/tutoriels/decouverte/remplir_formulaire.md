@@ -13,8 +13,6 @@ eleventyNavigation:
     nav: producteur
 ---
 
-## Remplir le formulaire d’inscription
-
 Afin de renseigner votre profil, vous pouvez le faire par **FranceConnect** ou **AgentConnect**, en cliquant sur leurs boutons respectifs. Vous pouvez aussi le faire par le biais du site cartes.gouv.fr. Pour cette seconde option, veuillez remplir les champs-ci-dessous. Tous les champs sont obligatoires.
 
 <div class="fr-container">
