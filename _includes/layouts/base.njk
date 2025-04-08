@@ -54,7 +54,8 @@
 <body id="top">
     {% getBundle "js", "top" %}
     {% include "templates/header.njk" %}
-    <main id="content">
+    {% include "components/pagefind_filters.njk" %}
+    <main id="content" data-pagefind-body>
         {{ content | safe }}
     </main>
     <!-- {% include "templates/newsletter_and_follow_us.njk" %} -->

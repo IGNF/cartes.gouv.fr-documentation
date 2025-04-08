@@ -13,8 +13,6 @@ eleventyNavigation:
     nav: producteur
 ---
 
-## Ouvrir cartes.gouv.fr
-
 1. Ouvrir le site dans un navigateur web&nbsp;: <a href="https://cartes.gouv.fr" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr - ouvre une nouvelle fenêtre">cartes.gouv.fr</a>.
     <div class="fr-container">
       <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
