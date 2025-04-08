@@ -13,10 +13,7 @@ layout: layouts/base.njk
                 <div class="fr-col-12 fr-col-md-9">
                     <hgroup>
                         <h1>{{ title }}</h1>
-                        <p class="fr-text--xs" data-pagefind-ignore>
-                            {{ "published_on" | i18n }}
-                            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-                        </p>
+                        {% include "components/published_on.njk" %}
                     </hgroup>
                 </div>
                 <div class="fr-col-12 fr-col-md-3">{% include "templates/share.njk" %}</div>

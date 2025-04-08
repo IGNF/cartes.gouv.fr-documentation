@@ -47,7 +47,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 <div class="fr-col-md-4">
 {{ component("tile", {
     url: "/guides/producteur/tutoriels/decouverte/espace_decouverte/",
-    title: "Accéder à l’espace de travail « Découverte »",
+    title: "Accéder à l’espace de travail « Découverte »",
     pictogram: "leisure/book.svg"
 }) }}
 </div>

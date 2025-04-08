@@ -19,11 +19,7 @@ layout: layouts/base.njk
           {% endif %}
           <h1>{{ title }}</h1>
           {% include "components/taggroup-disabled.njk" %}
-          <p class="fr-text--xs fr-mt-6v" data-pagefind-ignore>
-            {{ "published_on" | i18n }}
-            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-          </p>
-
+          {% include "components/published_on.njk" %}
           {% if description %}
           <p class="fr-text--lead">{{ description }}</p>
           {% endif %}
