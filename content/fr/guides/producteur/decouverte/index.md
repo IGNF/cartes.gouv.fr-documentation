@@ -30,7 +30,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/tutoriels/decouverte/ouvrir_cartesgouv/",
+    url: "/guides/producteur/decouverte/ouvrir_cartesgouv/",
     title: "Ouvrir cartes.gouv.fr",
     pictogram: "digital/internet.svg"
 }) }}
@@ -38,7 +38,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/tutoriels/decouverte/remplir_formulaire/",
+    url: "/guides/producteur/decouverte/remplir_formulaire/",
     title: "Remplir le formulaire d’inscription",
     pictogram: "leisure/digital-art.svg"
 }) }}
@@ -46,7 +46,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/tutoriels/decouverte/espace_decouverte/",
+    url: "/guides/producteur/decouverte/espace_decouverte/",
     title: "Accéder à l’espace de travail « Découverte »",
     pictogram: "leisure/book.svg"
 }) }}
@@ -54,7 +54,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/tutoriels/decouverte/creer_wfs/",
+    url: "/guides/producteur/decouverte/creer_wfs/",
     title: "Créer et publier un service WFS",
     pictogram: "map/map.svg"
 }) }}
@@ -62,7 +62,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/tutoriels/decouverte/creer_wms/",
+    url: "/guides/producteur/decouverte/creer_wms/",
     title: "Créer et publier un service WMS",
     pictogram: "map/map.svg"
 }) }}
@@ -70,7 +70,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/tutoriels/decouverte/creer_tms/",
+    url: "/guides/producteur/decouverte/creer_tms/",
     title: "Créer et publier un service TMS",
     pictogram: "map/map.svg"
 }) }}

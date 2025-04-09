@@ -21,11 +21,12 @@ layout: layouts/base.njk
           {% include "components/taggroup-disabled.njk" %}
           {% include "components/published_on.njk" %}
           {% if description %}
-          <p class="fr-text--lead">{{ description }}</p>
+            <p class="fr-text--lead">{{ description }}</p>
           {% endif %}
         </div>
       </div>
       {{ content | safe }}
+      {% include "components/page-switcher.njk" %}
     </div>
   </div>
 </div>
