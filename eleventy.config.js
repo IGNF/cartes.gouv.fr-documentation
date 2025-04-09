@@ -18,19 +18,6 @@ const customMarkdownContainers = require("./markdown-custom-containers");
 
 const { translations } = require("./_data/i18n");
 
-function flattenNav(items) {
-    let result = [];
-
-    for (let item of items) {
-        result.push(item);
-        if (item.children) {
-            result = result.concat(flattenNav(item.children));
-        }
-    }
-
-    return result;
-}
-
 module.exports = function (eleventyConfig) {
     // Copy the contents of the `public` folder to the output folder
     // For example, `./public/css/` ends up in `_site/css/`
