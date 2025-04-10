@@ -19,18 +19,18 @@
   {% set nextPage = null %}
 {% endif %}
 
-{% if (previousPage or nextPage) and eleventyNavigation.nav != "main" %}
-  <div class="page-switcher fr-pt-6w fr-mt-14v"
-       style="display: flex; justify-content: {% if previousPage %}space-between{% else %}flex-end{% endif %};">
+{% if (previousPage or nextPage) 
+  and eleventyNavigation.nav != "main" %}
+  <div class="page-switcher fr-pt-6w fr-mt-14v">
     {% if previousPage %}
-      <p class="fr-mb-0">
+      <p class="fr-mb-0 previous-page">
         <a class="fr-link fr-icon-arrow-left-line fr-link--icon-left" href="{{ previousPage.url }}">
           {{ previousPage.title }}
         </a>
       </p>
     {% endif %}
     {% if nextPage %}
-      <p class="fr-mb-0">
+      <p class="fr-mb-0 next-page">
         <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="{{ nextPage.url }}">
           {{ nextPage.title }}
         </a>
