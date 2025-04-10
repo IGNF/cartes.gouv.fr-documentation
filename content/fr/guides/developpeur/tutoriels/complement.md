@@ -1,7 +1,6 @@
 ---
 title: Données complémentaires
 description: Téléversement et diffusion de fichiers annexes et métadonnées
-date: git Last Modified
 tags:
     - Donnée complémentaire
 segments:
@@ -14,6 +13,7 @@ eleventyNavigation:
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 4
     nav: developpeur
+pictogram: document/document-add.svg
 ---
 
 {% from "components/component.njk" import component with context %}

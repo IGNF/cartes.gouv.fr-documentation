@@ -1,6 +1,5 @@
 ---
 title: Spécifications OpenAPI de l'API Entrepôt
-date: git Last Modified
 description: Détails de toutes les routes assurées par l'API Entrepôt
 swaggerui: true
 tags:
@@ -12,6 +11,7 @@ eleventyNavigation:
     key: Spécifications OpenAPI de l'API Entrepôt
     order: 7
     nav: developpeur
+pictogram: custom/swagger.svg
 ---
 
 {% from "components/component.njk" import component with context %}

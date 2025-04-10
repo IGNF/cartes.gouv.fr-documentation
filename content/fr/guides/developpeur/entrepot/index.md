@@ -1,7 +1,7 @@
 ---
 title: Concepts de l'Entrepôt
+layout: layouts/developpeur-parent.njk
 description: Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation
-date: git Last Modified
 tags:
     - Concepts Entrepôt
     - Terminologie
@@ -9,31 +9,9 @@ tags:
 segments:
     - url: /guides/developpeur
       title: Guides développeur
-layout: layouts/developpeur.njk
 eleventyNavigation:
     key: Concepts de l'Entrepôt
     order: 5
     nav: developpeur
+pictogram: system/system.svg
 ---
-
-{% from "components/component.njk" import component with context %}
-
-<div class="fr-grid-row fr-grid-row--gutters">
-
-<div class="fr-col-md-4">
-{{ component("tile", {
-    url: "/guides/developpeur/entrepot/workflow/",
-    title: "Workflow général d'utilisation de l'entrepôt",
-    pictogram: "system/system.svg"
-}) }}
-</div>
-
-<div class="fr-col-md-4">
-{{ component("tile", {
-    url: "/guides/developpeur/entrepot/detail/",
-    title: "Détail des différentes entités manipulées",
-    pictogram: "digital/data-visualization.svg"
-}) }}
-</div>
-
-</div>

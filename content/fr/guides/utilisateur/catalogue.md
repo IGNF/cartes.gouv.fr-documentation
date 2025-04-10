@@ -2,7 +2,7 @@
 title: Catalogue
 segments:
     - url: "/guides/utilisateur/"
-      title: "Guides Utilisateur"
+      title: "Guides utilisateur"
 eleventyNavigation:
     key: Catalogue
     order: 3

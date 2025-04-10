@@ -1,6 +1,5 @@
 ---
 title: Workflow général d'utilisation de l'entrepôt
-date: git Last Modified
 segments:
     - url: /guides/developpeur
       title: Guides développeur
@@ -11,6 +10,7 @@ eleventyNavigation:
     parent: Concepts de l'Entrepôt
     order: 1
     nav: developpeur
+pictogram: system/system.svg
 ---
 
 ![workflow-simple](/img/entrepot/workflow-simple.png){.fr-responsive-img}

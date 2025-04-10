@@ -1,5 +1,6 @@
 ---
 title: Guides développeur
+layout: layouts/developpeur-accueil.njk
 eleventyNavigation:
     key: Guides développeur
     parent: Guides
@@ -15,40 +16,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 
 {% from "components/component.njk" import component with context %}
 
-<div class="fr-grid-row fr-grid-row--gutters">
-
-<div class="fr-col-md-6">
-
-{{ component("tile", {
-    url: "/guides/developpeur/entrepot/",
-    title: "Concepts de l'Entrepôt",
-    description: "Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation",
-    pictogram: "system/system.svg"
-}) }}
-
-</div>
-
-<div class="fr-col-md-6">
-
-{{ component("tile", {
-    url: "/guides/developpeur/tutoriels/",
-    title: "Tutoriels d'utilisation de l'Entrepôt",
-    description: "Accès au différents tutoriels, par type de données et d'usage",
-    pictogram: "leisure/digital-art.svg"
-}) }}
-
-</div>
-
-<div class="fr-col-md-6">
-
-{{ component("tile", {
-    url: "/guides/developpeur/openapi/",
-    title: "Spécifications OpenAPI de l'API Entrepôt",
-    description: "Détails de toutes les routes assurées par l'API Entrepôt",
-    pictogram: "custom/swagger.svg"
-}) }}
-
-</div>
+<div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
 
 <div class="fr-col-md-6">
 

@@ -1,10 +1,11 @@
 ---
 title: API de diffusion
+layout: layouts/utilisateur-parent.njk
 tags:
     - Accéder aux géodonnées
 segments:
     - url: /guides/utilisateur/
-      title: Guides Utilisateur
+      title: Guides utilisateur
     - url: /guides/utilisateur/acceder-aux-geodonnees/
       title: Accéder aux géodonnées
 eleventyNavigation:
@@ -13,5 +14,3 @@ eleventyNavigation:
     order: 1
     nav: utilisateur
 ---
-
-API de diffusion

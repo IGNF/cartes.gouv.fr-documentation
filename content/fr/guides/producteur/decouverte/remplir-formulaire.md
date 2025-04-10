@@ -1,6 +1,5 @@
 ---
 title: Remplir le formulaire d’inscription
-date: git Last Modified
 segments:
     - url: /guides/producteur
       title: Guides producteur
@@ -9,8 +8,9 @@ segments:
 eleventyNavigation:
     key: Remplir le formulaire d’inscription
     parent: Publier des géodonnées via cartes.gouv.fr
-    order: 2
+    order: 3
     nav: producteur
+pictogram: leisure/digital-art.svg
 ---
 
 Afin de renseigner votre profil, vous pouvez le faire par **FranceConnect** ou **AgentConnect**, en cliquant sur leurs boutons respectifs. Vous pouvez aussi le faire par le biais du site cartes.gouv.fr. Pour cette seconde option, veuillez remplir les champs-ci-dessous. Tous les champs sont obligatoires.

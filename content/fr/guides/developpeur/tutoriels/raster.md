@@ -1,7 +1,6 @@
 ---
 title: Données raster
 description: Chargement d'image géoréférencées, calcul et mise à jour de pyramide, diffusion en WMS, WMTS et TMS, service d'altimétrie
-date: git Last Modified
 tags:
     - Donnée raster
 segments:
@@ -14,6 +13,7 @@ eleventyNavigation:
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 2
     nav: developpeur
+pictogram: custom/raster.svg
 ---
 
 {% from "components/component.njk" import component with context %}

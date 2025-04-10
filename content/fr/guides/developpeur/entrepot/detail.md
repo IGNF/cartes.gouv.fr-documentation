@@ -1,6 +1,5 @@
 ---
 title: Détail des différentes entités manipulées
-date: git Last Modified
 segments:
     - url: /guides/developpeur
       title: Guides développeur
@@ -11,6 +10,7 @@ eleventyNavigation:
     parent: Concepts de l'Entrepôt
     order: 2
     nav: developpeur
+pictogram: digital/data-visualization.svg
 ---
 
 {% from "components/component.njk" import component with context %}
