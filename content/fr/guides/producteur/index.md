@@ -18,7 +18,7 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/guides/producteur/tutoriels/decouverte",
+    url: "/guides/producteur/decouverte",
     title: "Publier ses propres données depuis cartes.gouv.fr",
     description: "Fonctionnalité alimentation / diffusion",
     pictogram: "digital/internet.svg"

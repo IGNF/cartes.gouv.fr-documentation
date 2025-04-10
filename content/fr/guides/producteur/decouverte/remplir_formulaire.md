@@ -4,7 +4,7 @@ date: git Last Modified
 segments:
     - url: /guides/producteur
       title: Guides producteur
-    - url: /guides/producteur/tutoriels/decouverte
+    - url: /guides/producteur/decouverte
       title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Remplir le formulaire d’inscription

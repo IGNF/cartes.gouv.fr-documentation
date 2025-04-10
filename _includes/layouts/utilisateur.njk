@@ -14,18 +14,19 @@ layout: layouts/base.njk
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
       <div class="fr-grid-row">
         <div class="fr-col-12 fr-col-md-9">
-          {% if showBreadcrumb %} {% include "components/breadcrumb.njk" %} {%
-          endif %}
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
           <h1>{{ title }}</h1>
           {% include "components/taggroup-disabled.njk" %}
           {% include "components/published_on.njk" %}
-
           {% if description %}
-          <p class="fr-text--lead">{{ description }}</p>
+            <p class="fr-text--lead">{{ description }}</p>
           {% endif %}
         </div>
       </div>
       {{ content | safe }}
+      {% include "components/page-switcher.njk" %}
     </div>
   </div>
 </div>

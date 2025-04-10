@@ -47,6 +47,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(require("./eleventy.config.i18n.js"));
     eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
     eleventyConfig.addPlugin(require("./eleventy.config.pagination.js"));
+    eleventyConfig.addPlugin(require("./eleventy.config.flatnav.js"));
 
     // Official plugins
     eleventyConfig.addPlugin(pluginRss);
