@@ -8,9 +8,9 @@ Pour les rédacteurs, cette documentation est technique mais vous permet de visu
 
 Pour disposer d'un environnement de travail confortable, il est recommandé de disposer des logiciels suivants :
 
--   **Visual Studio Code** (https://code.visualstudio.com/download) comme éditeur pour tous les langages utilisés par le site, notamment le markdown (mais vous pouvez utiliser un autre éditeur si vous préférez)
--   **NodeJS** (https://nodejs.org/en/download/prebuilt-installer) pour pouvoir construire le site localement sur votre poste de travail et le prévisualiser.
--   **Git** (https://gitforwindows.org/, lien pour Windows) pour interagir avec le dépôt de code et github.com.
+- **Visual Studio Code** (https://code.visualstudio.com/download) comme éditeur pour tous les langages utilisés par le site, notamment le markdown (mais vous pouvez utiliser un autre éditeur si vous préférez)
+- **NodeJS** (https://nodejs.org/en/download/prebuilt-installer) pour pouvoir construire le site localement sur votre poste de travail et le prévisualiser.
+- **Git** (https://gitforwindows.org/, lien pour Windows) pour interagir avec le dépôt de code et github.com.
 
 Git et NodeJS sont indispensables pour aller plus loin dans l'installation.
 
@@ -24,7 +24,7 @@ Sous Windows, après avoir installé _Git for Windows_, vous devriez avoir accè
 
 Les lignes de commandes qui suivent pourront être copiées, puis collées (`maj+Inser`) et executées (`Entrée`) dans l'invite de commande qui a été ouverte.
 
-### Dupliquer le dépôt
+### Dupliquer le dépôt (fork)
 
 Il faut dupliquer le projet sur votre espace GitHub afin de pouvoir faire les changements de votre côté, les prévisualiser, puis les soumettre au dépôt principal.
 
@@ -36,23 +36,23 @@ Dans le champ `Description`, vous pouvez taper la description de votre duplicati
 
 Cliquez sur `Créer une duplication`.
 
-Votre clone du dépôt sera disponible sous l'URL https://github.com/votre_pseudo_github/cartes.gouv.fr-documentation. Vous bénéficiez alors d'un espace de travail qui vous est propre. Vous pourrez choisir de soumettre au dépôt principal seulement les éléments que vous choisissez.
+Votre clone du dépôt sera disponible sous l'URL https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation. Vous bénéficiez alors d'un espace de travail qui vous est propre. Vous pourrez choisir de soumettre au dépôt principal seulement les éléments que vous choisissez.
 
 ![alt text](img/image-8.png)
 
-### Cloner le dépôt
+### Cloner le dépôt sur votre ordinateur
 
 Page d'explications : https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 
 Clonez le dépôt (ou votre fork du dépôt, ce qui est préférable) sur votre poste de travail dans un nouveau dossier nommé `cartes.gouv.fr-documentation` :
 
 ```bash
-git clone https://github.com/IGNF/cartes.gouv.fr-documentation
+git clone https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation
 ```
 
-(en cas de problème, vérifiez votre configuration réseau. Si vous travaillez derrière un proxy, vérifiez par exemple vos variables d'environnement HTTP_PROXY et HTTPS_PROXY)
+(en cas de problème, vérifiez votre configuration réseau. Si vous travaillez derrière un proxy, vérifiez par exemple vos variables d'environnement utilisateur HTTP_PROXY et HTTPS_PROXY. Demandez à votre DSI si vous ne les connaissez pas)
 
-Rendez vous dans le dossier pour exécuter les commandes suivantes :
+Déplacez vous dans le dossier que vous venez de créer :
 
 ```bash
 cd cartes.gouv.fr-documentation
@@ -91,3 +91,30 @@ Cette commande rend le site disponible à l'adresse `http://localhost:8080/fr/` 
 Le site est ainsi maintenu à jour en même temps que vous modifiez des fichiers. Mais les contenus modifiés ne sont pas indexés pour la recherche et il peut arriver que certaines modifications ne soient pas immédiatement prises en compte. Dans ce cas, arrêtez le site (`Ctrl+C`) et relancez les 2 commandes précédentes : `npm run build` puis `npm start`.
 
 Les développeurs peuvent exécuter un [mode de débogage](https://www.11ty.dev/docs/debugging/).
+
+## Récupération des mises à jour
+
+Si vous n'avez pas effectué de modification sur votre fork ou sa copie locale depuis un moment, le dépôt principal a peut-être changé. Dans ce cas il vous faut mettre à jour les 2.
+
+### Mettre à jour votre fork
+
+Rendez vous sur la page de votre fork. Github affiche au dessus de la liste des dossiers et fichiers l'état de synchronisation de votre fork.
+
+Si votre fork a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton "Sync fork" directement.
+
+### Mettre à jour votre copie locale
+
+Placez vous avec Git Bash dans le dossier de votre copie et exécutez
+
+```sh
+git pull
+```
+
+Si vous avez des modifications locale non enregistrées et que la commande `git pull` vous en informe, il faut mettre de côté les modifications locales avec la commande `git stash`, puis exécuter le `git pull` et enfin réappliquer les modifications locales avec `git stash apply`.
+
+---
+
+Votre dépôt local est installé et à jour, vous pouvez maintenant :
+
+- [Rédiger du contenu](redacteur.md)
+- [Soumettre vos modifications](commit.md)
