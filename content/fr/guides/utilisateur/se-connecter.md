@@ -5,7 +5,7 @@ tags:
     - Inscription
 segments:
     - url: "/guides/utilisateur/"
-      title: "Guides Utilisateur"
+      title: "Guides utilisateur"
 eleventyNavigation:
     key: Se connecter
     order: 1

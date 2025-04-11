@@ -1,6 +1,5 @@
 ---
 title: SDK web Géoplateforme
-date: git Last Modified
 segments:
     - url: /guides/developpeur
       title: Guides développeur

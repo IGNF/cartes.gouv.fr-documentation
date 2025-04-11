@@ -1,7 +1,6 @@
 ---
 title: Cas d'utilisation divers
 description: Mise en place de capacités de service personnalisées
-date: git Last Modified
 tags:
     - Divers
 segments:
@@ -14,6 +13,7 @@ eleventyNavigation:
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 9
     nav: developpeur
+pictogram: leisure/paint.svg
 ---
 
 {% from "components/component.njk" import component with context %}

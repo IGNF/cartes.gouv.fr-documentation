@@ -1,5 +1,6 @@
 ---
 title: Guides utilisateur
+layout: layouts/utilisateur-accueil.njk
 eleventyNavigation:
     key: Guides utilisateur
     parent: Guides

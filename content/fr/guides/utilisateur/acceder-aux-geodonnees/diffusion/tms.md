@@ -4,7 +4,7 @@ tags:
     - TMS
 segments:
     - url: "/guides/utilisateur/"
-      title: "Guides Utilisateur"
+      title: "Guides utilisateur"
     - url: /guides/utilisateur/acceder-aux-geodonnees/
       title: Accéder aux géodonnées
     - url: /guides/utilisateur/acceder-aux-geodonnees/diffusion/

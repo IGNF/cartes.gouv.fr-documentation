@@ -1,6 +1,5 @@
 ---
 title: Extension Géoplateforme pour Leaflet
-date: git Last Modified
 segments:
     - url: /guides/developpeur
       title: Guides développeur

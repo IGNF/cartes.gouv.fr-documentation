@@ -2,7 +2,7 @@
 title: Visualiseur cartographique
 segments:
     - url: "/guides/utilisateur/"
-      title: "Guides Utilisateur"
+      title: "Guides utilisateur"
 eleventyNavigation:
     key: Visualiseur cartographique
     order: 2
