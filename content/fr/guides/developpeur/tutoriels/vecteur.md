@@ -1,19 +1,14 @@
 ---
 title: Données vecteur
 description: Chargement de données vecteur, mise à jour, tuilage, publication en WMS, WFS et TMS
-date: git Last Modified
 tags:
     - Donnée vecteur
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Données vecteur
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 1
     nav: developpeur
+pictogram: map/map.svg
 ---
 
 {% from "components/component.njk" import component with context %}

@@ -2,13 +2,6 @@
 title: Images WMS-Raster
 tags:
     - WMS-Raster
-segments:
-    - url: "/guides/utilisateur/"
-      title: "Guides Utilisateur"
-    - url: /guides/utilisateur/acceder-aux-geodonnees/
-      title: Accéder aux géodonnées
-    - url: /guides/utilisateur/acceder-aux-geodonnees/diffusion/
-      title: API de diffusion
 eleventyNavigation:
     key: Images WMS-Raster
     parent: API de diffusion

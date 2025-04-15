@@ -1,19 +1,14 @@
 ---
 title: Index de recherche
 description: Service de recherche des données de la Géoplateforme et gestion des index customs
-date: git Last Modified
 tags:
     - Donnée indexée
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Index de recherche
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 7
     nav: developpeur
+pictogram: digital/search.svg
 ---
 
 {% from "components/component.njk" import component with context %}

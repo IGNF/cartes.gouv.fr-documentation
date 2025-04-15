@@ -1,0 +1,16 @@
+{% if items and items.length %}
+    <div class="fr-grid-row fr-grid-row--gutters fr-mt-6w">
+        {% for item in items %}
+            <div class="fr-col-12 fr-col-md-6 fr-col-lg-{{ columns or 4 }}">
+                {% set tile = {
+                    title: item.data.title,
+                    url: item.url,
+                    description: item.data.description,
+                    pictogram: item.data.pictogram,
+                    externalUrl: item.data.externalUrl
+                } %}
+                {% include "components/tile.njk" %}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

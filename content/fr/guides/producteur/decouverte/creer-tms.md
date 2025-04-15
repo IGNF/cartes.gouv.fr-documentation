@@ -1,16 +1,11 @@
 ---
 title: Créer et publier un service TMS
-date: git Last Modified
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/decouverte
-      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Créer et publier un service TMS
     parent: Publier des géodonnées via cartes.gouv.fr
-    order: 6
+    order: 7
     nav: producteur
+pictogram: map/map.svg
 ---
 
 1. Dans la fiche de votre donnée, cliquez sur **_Créer un service_** afin d’ouvrir une fenêtre permettant de **Choisir le service à configurer**&nbsp;: sélectionnez **Service de tuiles vectorielles (Tile Map Service - TMS)**.

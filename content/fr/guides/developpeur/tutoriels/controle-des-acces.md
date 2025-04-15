@@ -1,19 +1,14 @@
 ---
 title: Contrôle des accès
 description: Authentification et accès à l'entrepôt et aux services de diffusion
-date: git Last Modified
 tags:
     - Contrôle des accès
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Contrôle des accès
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 5
     nav: developpeur
+pictogram: system/padlock.svg
 ---
 
 {% from "components/component.njk" import component with context %}

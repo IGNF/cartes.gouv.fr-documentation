@@ -1,19 +1,14 @@
 ---
 title: Espace personnel
 description: Hébergemenet de documents personnels (croquis) et partage
-date: git Last Modified
 tags:
     - Espace personnel
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Espace personnel
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 8
     nav: developpeur
+pictogram: document/national-identity-card.svg
 ---
 
 {% from "components/component.njk" import component with context %}

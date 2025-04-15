@@ -1,10 +1,12 @@
 ---
 title: Guides utilisateur
+layout: layouts/accueil.njk
 eleventyNavigation:
     key: Guides utilisateur
     parent: Guides
     order: 1
     nav: main
+sidemenuNav: utilisateur
 ---
 
 ## Toutes les ressources pour utiliser cartes.gouv.fr

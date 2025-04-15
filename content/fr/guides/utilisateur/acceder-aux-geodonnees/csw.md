@@ -3,11 +3,6 @@ title: Découverte des métadonnées CSW
 tags:
     - Métadonnées
     - CSW
-segments:
-    - url: /guides/utilisateur/
-      title: Guides Utilisateur
-    - url: /guides/utilisateur/acceder-aux-geodonnees/
-      title: Accéder aux géodonnées
 eleventyNavigation:
     key: Découverte des métadonnées CSW
     parent: Accéder aux géodonnées
