@@ -1,11 +1,12 @@
 ---
 title: Guides producteur
-layout: layouts/producteur-accueil.njk
+layout: layouts/accueil.njk
 eleventyNavigation:
     key: Guides producteur
     parent: Guides
     order: 3
     nav: main
+sidemenuNav: producteur
 ---
 
 ## Toutes les ressources pour utiliser cartes.gouv.fr

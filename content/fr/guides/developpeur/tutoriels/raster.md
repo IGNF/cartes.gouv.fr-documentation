@@ -3,11 +3,6 @@ title: Données raster
 description: Chargement d'image géoréférencées, calcul et mise à jour de pyramide, diffusion en WMS, WMTS et TMS, service d'altimétrie
 tags:
     - Donnée raster
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Données raster
     parent: Tutoriels d'utilisation de l'Entrepôt

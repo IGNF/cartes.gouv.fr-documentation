@@ -1,10 +1,5 @@
 ---
 title: Créer et publier un service WFS
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/decouverte
-      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Créer et publier un service WFS
     parent: Publier des géodonnées via cartes.gouv.fr

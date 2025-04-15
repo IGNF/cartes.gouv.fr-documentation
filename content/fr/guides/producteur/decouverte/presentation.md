@@ -1,10 +1,5 @@
 ---
 title: Présentation
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/decouverte
-      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Présentation
     parent: Publier des géodonnées via cartes.gouv.fr

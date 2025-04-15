@@ -1,10 +1,5 @@
 ---
 title: Remplir le formulaire d’inscription
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/decouverte
-      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Remplir le formulaire d’inscription
     parent: Publier des géodonnées via cartes.gouv.fr

@@ -3,11 +3,6 @@ title: Contrôle des accès
 description: Authentification et accès à l'entrepôt et aux services de diffusion
 tags:
     - Contrôle des accès
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Contrôle des accès
     parent: Tutoriels d'utilisation de l'Entrepôt

@@ -3,11 +3,6 @@ title: Calcul d’isochrone/isodistance
 tags:
     - Isochrone
     - Isodistance
-segments:
-    - url: /guides/utilisateur/
-      title: Guides utilisateur
-    - url: /guides/utilisateur/acceder-aux-geodonnees/
-      title: Accéder aux géodonnées
 eleventyNavigation:
     key: Calcul d’isochrone/isodistance
     parent: Accéder aux géodonnées

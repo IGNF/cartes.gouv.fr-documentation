@@ -1,10 +1,5 @@
 ---
 title: Détail des différentes entités manipulées
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/entrepot/
-      title: Concepts de l'Entrepôt
 eleventyNavigation:
     key: Détail des différentes entités manipulées
     parent: Concepts de l'Entrepôt

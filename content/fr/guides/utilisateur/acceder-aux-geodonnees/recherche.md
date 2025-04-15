@@ -2,11 +2,6 @@
 title: Service Géoplateforme de recherche
 tags:
     - Recherche
-segments:
-    - url: /guides/utilisateur/
-      title: Guides utilisateur
-    - url: /guides/utilisateur/acceder-aux-geodonnees/
-      title: Accéder aux géodonnées
 eleventyNavigation:
     key: Service Géoplateforme de recherche
     parent: Accéder aux géodonnées

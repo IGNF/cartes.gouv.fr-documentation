@@ -3,11 +3,6 @@ title: Index de recherche
 description: Service de recherche des données de la Géoplateforme et gestion des index customs
 tags:
     - Donnée indexée
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Index de recherche
     parent: Tutoriels d'utilisation de l'Entrepôt

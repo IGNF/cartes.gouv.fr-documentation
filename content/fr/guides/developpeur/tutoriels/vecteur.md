@@ -3,11 +3,6 @@ title: Données vecteur
 description: Chargement de données vecteur, mise à jour, tuilage, publication en WMS, WFS et TMS
 tags:
     - Donnée vecteur
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Données vecteur
     parent: Tutoriels d'utilisation de l'Entrepôt

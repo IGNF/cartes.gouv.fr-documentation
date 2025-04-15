@@ -1,10 +1,5 @@
 ---
 title: Ouvrir cartes.gouv.fr
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/decouverte
-      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Ouvrir cartes.gouv.fr
     parent: Publier des géodonnées via cartes.gouv.fr

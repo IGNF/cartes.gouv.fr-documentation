@@ -3,11 +3,6 @@ title: Cas d'utilisation divers
 description: Mise en place de capacités de service personnalisées
 tags:
     - Divers
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Cas d'utilisation divers
     parent: Tutoriels d'utilisation de l'Entrepôt

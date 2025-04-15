@@ -2,11 +2,6 @@
 title: Calcul d'itinéraire
 tags:
     - Itinéraire
-segments:
-    - url: /guides/utilisateur/
-      title: Guides utilisateur
-    - url: /guides/utilisateur/acceder-aux-geodonnees/
-      title: Accéder aux géodonnées
 eleventyNavigation:
     key: Calcul d'itinéraire
     parent: Accéder aux géodonnées

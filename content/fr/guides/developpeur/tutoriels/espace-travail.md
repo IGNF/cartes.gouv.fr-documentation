@@ -3,11 +3,6 @@ title: Espaces de travail
 description: Gestion d'une communauté et de ses membres
 tags:
     - Gestion
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Espaces de travail
     parent: Tutoriels d'utilisation de l'Entrepôt

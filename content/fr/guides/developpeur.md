@@ -1,11 +1,12 @@
 ---
 title: Guides développeur
-layout: layouts/developpeur-accueil.njk
+layout: layouts/accueil.njk
 eleventyNavigation:
     key: Guides développeur
     parent: Guides
     order: 2
     nav: main
+sidemenuNav: developpeur
 ---
 
 ## Toutes les ressources techniques pour utiliser cartes.gouv.fr et les briques de la Géoplateforme

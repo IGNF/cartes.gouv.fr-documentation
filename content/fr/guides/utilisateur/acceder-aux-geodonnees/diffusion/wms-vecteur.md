@@ -2,13 +2,6 @@
 title: Images WMS-Vecteur
 tags:
     - WMS-Vecteur
-segments:
-    - url: "/guides/utilisateur/"
-      title: "Guides utilisateur"
-    - url: /guides/utilisateur/acceder-aux-geodonnees/
-      title: Accéder aux géodonnées
-    - url: /guides/utilisateur/acceder-aux-geodonnees/diffusion/
-      title: API de diffusion
 eleventyNavigation:
     key: Images WMS-Vecteur
     parent: API de diffusion

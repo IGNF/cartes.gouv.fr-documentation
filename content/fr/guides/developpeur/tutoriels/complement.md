@@ -3,11 +3,6 @@ title: Données complémentaires
 description: Téléversement et diffusion de fichiers annexes et métadonnées
 tags:
     - Donnée complémentaire
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Données complémentaires
     parent: Tutoriels d'utilisation de l'Entrepôt
