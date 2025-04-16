@@ -26,4 +26,15 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 
 </div>
 
+<div class="fr-col-md-6">
+
+{{ component("tile", {
+    url: "/guides/producteur/creer-des-pages-de-documentation",
+    title: "Créer des pages de documentation",
+    description: "Création/modification/publication",
+    pictogram: "digital/coding.svg"
+}) }}
+
+</div>
+
 </div>
