@@ -14,25 +14,21 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-L’article suivant présente la fonctionnalité de chargement et diffusion de géo-données de cartes.gouv.fr. Elle permet aux utilisateurs de déposer de la donnée, la stocker, paramétrer des flux de diffusion et visualiser sur une carte.
+L’article suivant présente la fonctionnalité de création, modification et publication de documentation partenaire sur le site de documentation de Cartes.gouv.fr.
 
 :::info
-Ce tutoriel détaille les étapes de mise en œuvre au travers du parcours « bac à sable », correspondant à l’offre « découverte ».
+texte dans une bulle info.
 :::
-:::callout Offre découverte
-Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer de leur bonne adéquation à vos besoins.
-
-- 100 Go hébergés sur un entrepôt mutualisé avec suppression trimestrielle
-- 20 couches de donnée
-- Support par email [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)
-  :::
+:::callout TitreDuBlocGris
+TExte dans un bloc gris
+:::
 
 <div class="fr-grid-row fr-grid-row--gutters">
 
 <div class="fr-col-md-4">
 {{ component("tile", {
     url: "/guides/producteur/decouverte/ouvrir_cartesgouv/",
-    title: "Ouvrir cartes.gouv.fr",
+    title: "titre de la card",
     pictogram: "digital/internet.svg"
 }) }}
 </div>
