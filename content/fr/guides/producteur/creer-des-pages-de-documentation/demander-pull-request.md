@@ -95,4 +95,12 @@ Rendez-vous sur la page github de votre fork. Github affiche au dessus de la lis
 
 Cliquez sur **Contribute** puis sur **Open pull request**
 
+Ajoutez un titre et une description concise puis cliquez sur **Create pull request**.
+
+    <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+            ![Image décrivant la demande de pull request](/img/tutoriels/demander-pull-request/image_03.png){.fr-responsive-img .frx-border-img}
+        </div>
+    </div>
+
 Un autre membre du projet devra alors vérifier la demande et l'accepter.
