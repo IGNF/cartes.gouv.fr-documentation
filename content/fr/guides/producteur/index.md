@@ -18,10 +18,21 @@ Consultez nos guides, FAQ, tutoriels et documentations techniques pour vous acco
 <div class="fr-col-md-6">
 
 {{ component("tile", {
-    url: "/guides/producteur/decouverte",
+    url: "/guides/producteur/publier-des-geodonnees-via-cartes-gouv",
     title: "Publier ses propres données depuis cartes.gouv.fr",
     description: "Fonctionnalité alimentation / diffusion",
     pictogram: "digital/internet.svg"
+}) }}
+
+</div>
+
+<div class="fr-col-md-6">
+
+{{ component("tile", {
+    url: "/guides/producteur/creer-des-pages-de-documentation",
+    title: "Créer des pages de documentation",
+    description: "Création/modification/publication",
+    pictogram: "digital/coding.svg"
 }) }}
 
 </div>
