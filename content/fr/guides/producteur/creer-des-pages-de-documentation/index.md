@@ -2,13 +2,14 @@
 title: Créer des pages de documentation
 tags:
     - Documentation
+    - Partenaire
 segments:
     - url: /guides/producteur
       title: Guides producteur
 date: git Last Modified
 eleventyNavigation:
     key: Créer des pages de documentation
-    order: 3
+    order: 2
     nav: producteur
 ---
 
@@ -27,49 +28,33 @@ TExte dans un bloc gris
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/decouverte/ouvrir_cartesgouv/",
-    title: "titre de la card",
+    url: "/guides/producteur/creer-des-pages-de-documentation/installation-documentation/",
+    title: "Installation de la documentation",
     pictogram: "digital/internet.svg"
 }) }}
 </div>
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/decouverte/remplir_formulaire/",
-    title: "Remplir le formulaire d’inscription",
+    url: "/guides/producteur/creer-des-pages-de-documentation/previsualiser-le-site-en-local/",
+    title: "prévisualiser le site en local",
+    pictogram: "digital/internet.svg"
+}) }}
+</div>
+
+<div class="fr-col-md-4">
+{{ component("tile", {
+    url: "/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/",
+    title: "Rédiger sa documentation",
     pictogram: "leisure/digital-art.svg"
 }) }}
 </div>
 
 <div class="fr-col-md-4">
 {{ component("tile", {
-    url: "/guides/producteur/decouverte/espace_decouverte/",
-    title: "Accéder à l’espace de travail « Découverte »",
+    url: "/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/",
+    title: "Demander la fusion au dépôt principal",
     pictogram: "leisure/book.svg"
-}) }}
-</div>
-
-<div class="fr-col-md-4">
-{{ component("tile", {
-    url: "/guides/producteur/decouverte/creer_wfs/",
-    title: "Créer et publier un service WFS",
-    pictogram: "map/map.svg"
-}) }}
-</div>
-
-<div class="fr-col-md-4">
-{{ component("tile", {
-    url: "/guides/producteur/decouverte/creer_wms/",
-    title: "Créer et publier un service WMS",
-    pictogram: "map/map.svg"
-}) }}
-</div>
-
-<div class="fr-col-md-4">
-{{ component("tile", {
-    url: "/guides/producteur/decouverte/creer_tms/",
-    title: "Créer et publier un service TMS",
-    pictogram: "map/map.svg"
 }) }}
 </div>
 

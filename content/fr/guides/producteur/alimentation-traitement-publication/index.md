@@ -9,7 +9,7 @@ segments:
       title: Guides producteur
 eleventyNavigation:
     key: Alimentation, traitement et publication
-    order: 1
+    order: 3
     nav: producteur
 ---
 
