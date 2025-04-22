@@ -2,11 +2,6 @@
 title: Autocomplétion
 tags:
     - Autocomplétion
-segments:
-    - url: /guides/utilisateur/
-      title: Guides Utilisateur
-    - url: /guides/utilisateur/acceder-aux-geodonnees/
-      title: Accéder aux géodonnées
 eleventyNavigation:
     key: Autocomplétion
     parent: Accéder aux géodonnées

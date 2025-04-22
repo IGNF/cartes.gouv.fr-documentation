@@ -1,0 +1,38 @@
+{% if navLinks %}
+  {% set flatNav = navLinks | flattenNav %}
+  {% set currentIndex = -1 %}
+  {% for item in flatNav %}
+    {% if item.url == page.url %}
+      {% set currentIndex = loop.index0 %}
+    {% endif %}
+  {% endfor %}
+  {% if currentIndex > 0 %}
+    {% set previousPage = flatNav[currentIndex - 1] %}
+  {% else %}
+    {% set previousPage = null %}
+  {% endif %}
+  {% if currentIndex < (flatNav | length) - 1 %}
+    {% set nextPage = flatNav[currentIndex + 1] %}
+  {% else %}
+    {% set nextPage = null %}
+  {% endif %}
+  {% if (previousPage or nextPage) 
+    and eleventyNavigation.nav != "main" %}
+    <div class="page-switcher fr-pt-6w fr-mt-14v">
+      {% if previousPage %}
+        <p class="fr-mb-0 previous-page">
+          <a class="fr-link fr-icon-arrow-left-line fr-link--icon-left" href="{{ previousPage.url }}">
+            {{ previousPage.title }}
+          </a>
+        </p>
+      {% endif %}
+      {% if nextPage %}
+        <p class="fr-mb-0 next-page">
+          <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="{{ nextPage.url }}">
+            {{ nextPage.title }}
+          </a>
+        </p>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endif %}

@@ -1,19 +1,14 @@
 ---
 title: Espaces de travail
 description: Gestion d'une communauté et de ses membres
-date: git Last Modified
 tags:
     - Gestion
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Espaces de travail
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 6
     nav: developpeur
+pictogram: environment/human-cooperation.svg
 ---
 
 {% from "components/component.njk" import component with context %}

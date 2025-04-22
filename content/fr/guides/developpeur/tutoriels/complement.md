@@ -1,19 +1,14 @@
 ---
 title: Données complémentaires
 description: Téléversement et diffusion de fichiers annexes et métadonnées
-date: git Last Modified
 tags:
     - Donnée complémentaire
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Données complémentaires
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 4
     nav: developpeur
+pictogram: document/document-add.svg
 ---
 
 {% from "components/component.njk" import component with context %}
