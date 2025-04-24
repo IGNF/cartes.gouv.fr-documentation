@@ -74,6 +74,23 @@ git checkout -b "nouvelle-branche"
 
 _N.B. : Cette commande est un raccourci qui vous place directement sur la branche nouvellement créée_
 
+Le dossier de votre copie locale du dépôt correspond à la branche en question. Il n'y a pas de duplication du dossier lors d'une création de branche.
+
+Dans la console _Git Bash_, le nom de la branche sur laquelle vous êtes apparait entre parenthèses après le chemin du dossier.
+
+Quelques commandes utiles :
+
+```sh
+# Pour changer de branche
+git checkout nom_de_la_branche
+
+# Par exemple revenir à la branche principale
+git checkout main
+
+# Pour lister les branches existantes sur votre copie locale (la branche sur laquelle on est est en surbrillance)
+git branch -l
+```
+
 ### Installer les dépendances
 
 ```bash
