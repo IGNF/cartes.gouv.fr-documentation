@@ -1,15 +1,7 @@
 ---
 title: Prévisualiser le site en local
-date: git Last Modified
 tags:
-    - Documentation
-    - Partenaire
     - Installation
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/creer-des-pages-de-documentation
-      title: Créer des pages de documentation
 eleventyNavigation:
     key: Prévisualiser le site en local
     parent: Créer des pages de documentation

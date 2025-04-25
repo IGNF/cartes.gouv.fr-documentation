@@ -1,16 +1,11 @@
 ---
 title: Ouvrir cartes.gouv.fr
-date: git Last Modified
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/publier-des-geodonnees-via-cartes-gouv
-      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Ouvrir cartes.gouv.fr
     parent: Publier des géodonnées via cartes.gouv.fr
-    order: 1
+    order: 2
     nav: producteur
+pictogram: digital/internet.svg
 ---
 
 1. Ouvrir le site dans un navigateur web&nbsp;: <a href="https://cartes.gouv.fr" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr - ouvre une nouvelle fenêtre">cartes.gouv.fr</a>.

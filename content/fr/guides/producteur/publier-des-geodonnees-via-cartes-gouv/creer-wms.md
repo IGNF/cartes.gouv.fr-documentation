@@ -1,16 +1,11 @@
 ---
 title: Créer et publier un service WMS
-date: git Last Modified
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/publier-des-geodonnees-via-cartes-gouv
-      title: Publier des géodonnées via cartes.gouv.fr
 eleventyNavigation:
     key: Créer et publier un service WMS
     parent: Publier des géodonnées via cartes.gouv.fr
-    order: 5
+    order: 6
     nav: producteur
+pictogram: map/map.svg
 ---
 
 1. Dans la fiche de votre donnée, cliquez sur **_Créer un service_** afin d’ouvrir la fenêtre permettant de **Choisir le service à configurer**&nbsp;: sélectionnez **Service d’images (Web Map Service - WMS)**.

@@ -1,5 +1,9 @@
 module.exports = {
     tags: ["Développeur"],
-    layout: "layouts/developpeur.njk",
-    showBreadcrumb: true,
+    segments: [
+        {
+            url: "/guides/developpeur",
+            title: "Guides développeur",
+        },
+    ],
 };

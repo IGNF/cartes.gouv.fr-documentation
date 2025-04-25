@@ -1,18 +1,10 @@
 ---
 title: Rédiger sa documentation
-date: git Last Modified
 tags:
-    - Documentation
-    - Partenaire
     - Rédaction
     - Modification
     - Fork
     - Clone
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/creer-des-pages-de-documentation
-      title: Créer des pages de documentation
 eleventyNavigation:
     key: Rédiger sa documentation
     parent: Créer des pages de documentation

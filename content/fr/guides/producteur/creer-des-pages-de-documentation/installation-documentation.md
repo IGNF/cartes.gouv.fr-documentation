@@ -1,17 +1,9 @@
 ---
 title: Installation de la documentation
-date: git Last Modified
 tags:
-    - Documentation
-    - Partenaire
     - Installation
     - Fork
     - Clone
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/creer-des-pages-de-documentation
-      title: Créer des pages de documentation
 eleventyNavigation:
     key: Installation de la documentation
     parent: Créer des pages de documentation

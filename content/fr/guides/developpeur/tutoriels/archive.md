@@ -1,19 +1,14 @@
 ---
 title: Données archives
 description: Chargement de fichiers archives, intégration, diffusion en téléchargement
-date: git Last Modified
 tags:
     - Donnée archive
-segments:
-    - url: /guides/developpeur
-      title: Guides développeur
-    - url: /guides/developpeur/tutoriels
-      title: Tutoriels d'utilisation de l'Entrepôt
 eleventyNavigation:
     key: Données archives
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 3
     nav: developpeur
+pictogram: custom/archive.svg
 ---
 
 {% from "components/component.njk" import component with context %}

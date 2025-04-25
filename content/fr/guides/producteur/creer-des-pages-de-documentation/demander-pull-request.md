@@ -1,17 +1,9 @@
 ---
 title: Demander la fusion au dépôt principal
-date: git Last Modified
 tags:
-    - Documentation
-    - Partenaire
     - Commit
     - Fork
     - Clone
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/creer-des-pages-de-documentation
-      title: Créer des pages de documentation
 eleventyNavigation:
     key: Demander la fusion au dépôt principal
     parent: Créer des pages de documentation

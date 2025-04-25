@@ -1,18 +1,10 @@
 ---
 title: Mettre à jour son fork et son clone
-date: git Last Modified
 tags:
-    - Documentation
-    - Partenaire
     - Installation
     - Mise à jour
     - Fork
     - Clone
-segments:
-    - url: /guides/producteur
-      title: Guides producteur
-    - url: /guides/producteur/creer-des-pages-de-documentation
-      title: Créer des pages de documentation
 eleventyNavigation:
     key: Mettre à jour son fork et son clone
     parent: Créer des pages de documentation
