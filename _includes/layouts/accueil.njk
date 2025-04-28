@@ -14,17 +14,14 @@ layout: layouts/base.njk
         {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.utilisateurNavigation %}
         {% set sidemenuTitle = "Guides utilisateur" %}
-        {% set sidemenuLink = "/fr/guides/utilisateur/" %}
       {% elif effectiveNav == "producteur" %}
         {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.producteurNavigation %}
         {% set sidemenuTitle = "Guides producteur" %}
-        {% set sidemenuLink = "/fr/guides/producteur/" %}
       {% elif effectiveNav == "developpeur" %}
         {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.developpeurNavigation %}
         {% set sidemenuTitle = "Guides développeur" %}
-        {% set sidemenuLink = "/fr/guides/developpeur/" %}
       {% endif %}
       {% include "templates/sidemenu.njk" %}
     </div>

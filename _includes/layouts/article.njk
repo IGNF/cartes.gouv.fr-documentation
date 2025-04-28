@@ -9,15 +9,12 @@ layout: layouts/base.njk
       {% if eleventyNavigation.nav == "utilisateur" %}
         {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set sidemenuTitle = "Guides utilisateur" %}
-        {% set sidemenuLink = "/fr/guides/utilisateur/" %}
       {% elif eleventyNavigation.nav == "producteur" %}
         {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set sidemenuTitle = "Guides producteur" %}
-        {% set sidemenuLink = "/fr/guides/producteur/" %}
       {% elif eleventyNavigation.nav == "developpeur" %}
         {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set sidemenuTitle = "Guides développeur" %}
-        {% set sidemenuLink = "/fr/guides/developpeur/" %}
       {% endif %}
       {% include "templates/sidemenu.njk" %}
     </div>
