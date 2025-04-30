@@ -40,6 +40,8 @@ Votre clone du dépôt sera disponible sous l'URL https://github.com/{votre_pseu
 
 ![alt text](img/image-8.png)
 
+Dans la suite `IGNF/cartes.gouv.fr-documentation` sera appelé le dépôt principal et `{nom_utilisateur_github}/cartes.gouv.fr-documentation` sera appelé "votre dépôt" ou "votre fork".
+
 ### Cloner le dépôt sur votre ordinateur
 
 Page d'explications : https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
@@ -56,6 +58,37 @@ Déplacez vous dans le dossier que vous venez de créer :
 
 ```bash
 cd cartes.gouv.fr-documentation
+```
+
+_Ce dossier est la "copie locale" de votre dépôt_
+
+### Créer une branche
+
+Il est chaudement recommandé d'effectuer des modifications sur une branche autre que la branche principale de votre dépôt (branche `main`). Ceci afin de vous permettre d'effectuer plusieurs modifications indépendantes en même temps et de faciliter la synchronisation de votre fork avec les dépôt principal.
+
+Identifiez le périmètre des modifications que vous allez effectuer et donner un nom de branche parlant. Créer une branche nommée "nouvelle-branche" avec la commande :
+
+```bash
+git checkout -b "nouvelle-branche"
+```
+
+_N.B. : Cette commande est un raccourci qui vous place directement sur la branche nouvellement créée_
+
+Le dossier de votre copie locale du dépôt correspond à la branche en question. Il n'y a pas de duplication du dossier lors d'une création de branche.
+
+Dans la console _Git Bash_, le nom de la branche sur laquelle vous êtes apparait entre parenthèses après le chemin du dossier.
+
+Quelques commandes utiles :
+
+```sh
+# Pour changer de branche
+git checkout nom_de_la_branche
+
+# Par exemple revenir à la branche principale
+git checkout main
+
+# Pour lister les branches existantes sur votre copie locale (la branche sur laquelle on est est en surbrillance)
+git branch -l
 ```
 
 ### Installer les dépendances
@@ -75,6 +108,8 @@ npm run build
 **Eleventy** est le logiciel utilisé pour construire le site. Il transforme les fichiers _markdown_ ou _nunjucks_ du dossier `content` en pages html à l'aide des gabarits du dossier `_includes`. Ensuite **Pagefind** indexe le contenu de ces pages pour que le moteur de recherche du site soit fonctionnel.
 
 A l'issu de cette commande, le dossier `_site` est rempli ou modifié avec un contenu HTML, visualisable dans un navigateur.
+
+_N.B. : Ces commandes sont exécutables quelle que soit la branche sur laquelle vous êtes situé._
 
 ### Déployer en local
 
@@ -100,11 +135,19 @@ Si vous n'avez pas effectué de modification sur votre fork ou sa copie locale d
 
 Rendez vous sur la page de votre fork. Github affiche au dessus de la liste des dossiers et fichiers l'état de synchronisation de votre fork.
 
-Si votre fork a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton "Sync fork" directement.
+Si votre fork a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **"Sync fork"** directement.
 
 ### Mettre à jour votre copie locale
 
-Placez vous avec Git Bash dans le dossier de votre copie et exécutez
+Placez vous avec Git Bash dans le dossier de votre copie.
+
+Placez vous sur la branche principale si vous n'y êtes pas déjà :
+
+```sh
+git checkout main
+```
+
+Récupérez les changements :
 
 ```sh
 git pull
