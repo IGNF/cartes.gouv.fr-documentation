@@ -77,6 +77,10 @@ Acceptez ensuite votre commit avec la commande suivante :
 git push --set-upstream origin nom-de-votre-branche
 ```
 
+:::info
+À ce moment, si vous voulez ajouter d'autres modifications à cette branche avant la fusion au dépôt principal, il suffira de repasser les commandes **git add .**, **git commit -m "message court"** et **git push**.
+:::
+
 À ce moment vous pourrez voir sur le github de votre fork que celle-ci est en avance de commit par rapport au dépôt principal.
 
 # 5 - Demander un pull request
