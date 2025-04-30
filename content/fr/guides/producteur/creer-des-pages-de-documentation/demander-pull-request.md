@@ -74,8 +74,10 @@ git commit -m "un message court décrivant la modification faite"
 Acceptez ensuite votre commit avec la commande suivante :
 
 ```bash
-git push
+git push --set-upstream origin nom-de-votre-branche
 ```
+
+À ce moment vous pourrez voir sur le github de votre fork que celle-ci est en avance de commit par rapport au dépôt principal.
 
 # 5 - Demander un pull request
 
