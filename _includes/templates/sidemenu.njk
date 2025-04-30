@@ -67,7 +67,7 @@
 
 <script>
     (() => {
-        const currentUrl = window.location.pathname;
+        const currentPath = window.location.pathname;
 
         function expandParents(element) {
             let parent = element.closest(".fr-collapse");
@@ -82,7 +82,7 @@
         }
 
         const activeLink = [...document.querySelectorAll('.fr-sidemenu__link')]
-            .find(link => link.getAttribute("href") === currentUrl);
+            .find(link => currentPath.endsWith(link.getAttribute("href")));
 
         if (activeLink) {
             activeLink.setAttribute("aria-current", "page");
@@ -90,7 +90,7 @@
         }
 
         const activeBtn = [...document.querySelectorAll('.fr-sidemenu__btn')]
-            .find(btn => btn.dataset.url === currentUrl);
+            .find(btn => currentPath.endsWith(btn.dataset.url));
 
         if (activeBtn) {
             activeBtn.setAttribute("aria-expanded", "true");
