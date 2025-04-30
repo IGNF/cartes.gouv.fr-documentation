@@ -20,9 +20,9 @@ Cette documentation s'adresse aux rédacteurs qui souhaitent installer le site l
 Cette documentation est technique mais vous permet de visualiser vos ajouts/modifications/suppressions dans un navigateur avant d'en demander la fusion avec le dépôt principal github.
 :::
 
-# Installation de l'environnement de travail
+# 1 - Installation de l'environnement de travail
 
-## Prérequis
+## 1.1 - Prérequis
 
 Pour disposer d'un environnement de travail confortable, il est recommandé de disposer des logiciels suivants :
 
@@ -32,13 +32,13 @@ Pour disposer d'un environnement de travail confortable, il est recommandé de d
 
 Git et NodeJS sont indispensables pour aller plus loin dans l'installation.
 
-## Variables d'environnement du compte
+## 1.2 - Variables d'environnement du compte
 
 Si vous travaillez derrière un proxy, il est nécessaire de vérifier vos variables d'environnement de compte (pas les variables système). Ajouter les variables "HTTP_PROXY" et "HTTPS_PROXY" si elles n'existent pas encore. Renseignez-vous auprès de votre DSI si vous ne connaissez pas les valeurs à indiquer (ces variables sont propres à chaque organisme).
 
-# Installation de la documentation en local
+# 2 - Installation de la documentation en local
 
-## Dupliquer le dépôt (fork)
+## 2.1 - Dupliquer le dépôt (fork)
 
 Rendez-vous sur le github du projet : [https://github.com/IGNF/cartes.gouv.fr-documentation](https://github.com/IGNF/cartes.gouv.fr-documentation)
 Il faut dupliquer le projet sur votre espace GitHub afin de pouvoir faire les changements de votre côté, les prévisualiser, puis les soumettre au dépôt principal.
@@ -63,7 +63,7 @@ Votre fork/duplication du dépôt sera disponible sous l'URL **https://github.co
         </div>
     </div>
 
-## Cloner le dépôt sur votre ordinateur
+## 2.2 - Cloner le dépôt sur votre ordinateur
 
 Sous Windows, après avoir installé _Git for Windows_, vous devriez avoir accès au clic droit dans l'explorateur à un menu contextuel "Git Bash here" qui vous permet de lancer une invite de commande qui est très adaptée à l'utilisation de Git et offre une bonne coloration syntaxique. Il est recommandé de la préférer à l'invite de commande par défaut de Windows.
 
@@ -83,25 +83,31 @@ Les lignes de commandes qui suivent pourront être copiées, puis collées (**ma
 
 Rendez-vous dans votre dossier à l'endroit où vous souhaitez coller le projet de documentation, puis faites un clic droit > **Git Bash Here** et collez la commande suivante (en remplaçant l'url par celle de votre fork) :
 
-:::callout
+```bash
+{% raw %}
 git clone https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation
-:::
+{% endraw %}
+```
 
 Votre fork est maintenant cloné en local sur votre ordinateur.
 
-## Installer les dépendances
+## 2.3 - Installer les dépendances
 
 Déplacez-vous dans le dossier que vous venez de créer avec la commande suivante :
 
-:::callout
+```bash
+{% raw %}
 cd cartes.gouv.fr-documentation
-:::
+{% endraw %}
+```
 
 Puis lancez la commande suivante :
 
-:::callout
+```bash
+{% raw %}
 npm install
-:::
+{% endraw %}
+```
 
 Cette commande crée un sous-dossier **node_modules** dans lequel vont s'installer toutes les dépendances du projet, conformément à ce qui est décrit dans les fichiers **package.json** et **package-lock.json**.
 
@@ -111,11 +117,11 @@ Cette commande n'est obligatoire que pour la première installation, ou s'il y a
 
 ---
 
-Votre copie est maintenant installée correctement ! Rendez-vous sur la page [Prévisualiser le site en local](http://localhost:8080/fr/guides/producteur/creer-des-pages-de-documentation/previsualiser-le-site-en-local/) pour commencer vos modifications.
+Votre copie est maintenant installée correctement ! Rendez-vous page suivante pour commencer vos modifications.
 
 ---
 
 :::callout Pour aller plus loin
 Si vous souhaitez avoir plus de détails sur l'utilisation des forks/duplications :
-https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/working-with-forks
+[Documentation github](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/working-with-forks)
 :::
