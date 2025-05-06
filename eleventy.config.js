@@ -183,6 +183,10 @@ module.exports = function (eleventyConfig) {
         return collection.find((post) => post.fileSlug === slug);
     });
 
+    eleventyConfig.addFilter("filterByPathStart", function (arr, pathStart) {
+        return arr.filter((item) => item.inputPath.startsWith(pathStart));
+    });
+
     eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {
         console.log(content);
         console.log(param1);
