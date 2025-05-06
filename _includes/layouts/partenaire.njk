@@ -1,3 +1,31 @@
 ---
 layout: layouts/base.njk
 ---
+
+{% from "components/component.njk" import component with context %}
+<div class="fr-container" data-pagefind-ignore>
+  <div class="fr-grid-row">
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row">
+        <div class="fr-col-12 fr-col-md-9">
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          <h1>{{ title }}</h1>
+          {% include "components/published_on.njk" %}
+          {% if description %}
+            <p class="fr-text--lead">{{ description }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {{ content | safe }}
+      {% set items = collections.all 
+        | filterByPathStart("./content/fr/partenaires/")
+        | filterCollectionLang 
+        | sort(attribute="data.title") %}
+      {% set columns = 4 %}
+      {% include "components/card_list.njk" %}
+      {% include "components/page_switcher.njk" %}
+    </div>
+  </div>
+</div>
