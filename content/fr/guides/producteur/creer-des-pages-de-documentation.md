@@ -1,7 +1,7 @@
 ---
 title: Créer des pages de documentation
 layout: layouts/parent.njk
-description: L’article suivant présente la fonctionnalité de création, modification et publication de documentation partenaire sur le site de documentation de Cartes.gouv.fr
+description: Création, modification et publication de documentation partenaire sur le site de documentation de Cartes.gouv.fr
 tags:
     - Documentation
     - Partenaire
@@ -9,4 +9,5 @@ eleventyNavigation:
     key: Créer des pages de documentation
     order: 2
     nav: producteur
+pictogram: "document/document-add.svg"
 ---
