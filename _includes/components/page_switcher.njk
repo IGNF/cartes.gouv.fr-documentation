@@ -18,7 +18,7 @@
   {% endif %}
   {% if (previousPage or nextPage) 
     and eleventyNavigation.nav != "main" %}
-    <div class="page-switcher fr-pt-6w fr-mt-14v">
+    <div class="page-switcher fr-pt-6w fr-mt-14v" data-pagefind-ignore>
       {% if previousPage %}
         <p class="fr-mb-0 previous-page">
           <a class="fr-link fr-icon-arrow-left-line fr-link--icon-left" href="{{ previousPage.url }}">
