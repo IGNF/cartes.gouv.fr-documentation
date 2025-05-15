@@ -107,6 +107,28 @@ Ajoutez un titre et une description concise puis cliquez sur **Create pull reque
 
 Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès que cela sera fait, les modifications apparaitront sur le site.
 
+# 6 - Supprimer la branche
+
+Une fois que le _merge_ a été accepté, il faudra supprimer la branche.
+
+Un merge accepté apparaitra en violet avec cette icône :
+
+    <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+            ![Image décrivant un pull request accepté](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/05_Pull-request-accepte.png){.fr-responsive-img .frx-border-img}
+        </div>
+    </div>
+
+Pour supprimer une branche, il suffit de se rendre sur github, sur votre fork, et de cliquer sur « Branch » :
+
+    <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+            ![Image décrivant commment accéder à ses branches sur github](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/06_Supprimer-branche.png){.fr-responsive-img .frx-border-img}
+        </div>
+    </div>
+
+Il vous suffit alors de supprimer la branche concernée par le _merge_ accepté.
+
 ---
 
 Vous avez terminé de créer et de modifier vos pages de documentation ! N’hésitez pas à parcourir le site pour découvrir les autres fonctionnalités de Cartes.gouv et de sa documentation.

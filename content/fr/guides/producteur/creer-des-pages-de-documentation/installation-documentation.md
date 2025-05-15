@@ -39,7 +39,7 @@ Si vous travaillez derrière un proxy, il est nécessaire de vérifier vos varia
 
 ## 2.1 - Dupliquer le dépôt (fork)
 
-Rendez-vous sur le github du projet : [https://github.com/IGNF/cartes.gouv.fr-documentation](https://github.com/IGNF/cartes.gouv.fr-documentation)
+Rendez-vous sur le github du projet : [https://github.com/IGNF/cartes.gouv.fr-documentation](https://github.com/IGNF/cartes.gouv.fr-documentation).
 Il faut dupliquer le projet sur votre espace GitHub afin de pouvoir faire les changements de votre côté, les prévisualiser, puis les soumettre au dépôt principal.
 
 Dans le coin supérieur droit de la page, cliquez sur **Fork** (**Dupliquer** en français) puis **Create a new fork**.
