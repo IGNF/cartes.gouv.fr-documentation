@@ -16,7 +16,7 @@ eleventyNavigation:
 Cette page explique la procédure pour fusionner vos modifications faites en local avec le dépôt principal de la documentation de Cartes.gouv.fr.
 
 :::info
-Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre fork : voir [Étapes préalables aux modifications](./etapes-initiales-aux-modifications/).
+Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre fork : voir [Étapes préalables aux modifications](../etapes-prealables-aux-modifications).
 :::
 
 # 1 - Enregistrer
