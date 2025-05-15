@@ -16,7 +16,7 @@ eleventyNavigation:
 Cette page explique la procédure pour fusionner vos modifications faites en local avec le dépôt principal de la documentation de Cartes.gouv.fr.
 
 :::info
-Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre fork : voir [Étapes préalables aux modifications](./etapes-initiales-aux-modifications/).
+Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre fork : voir [Étapes préalables aux modifications](../etapes-prealables-aux-modifications/).
 :::
 
 # 1 - Enregistrer
@@ -106,6 +106,28 @@ Ajoutez un titre et une description concise puis cliquez sur **Create pull reque
     </div>
 
 Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès que cela sera fait, les modifications apparaitront sur le site.
+
+# 6 - Supprimer la branche
+
+Une fois que le _merge_ a été accepté, il faudra supprimer la branche.
+
+Un merge accepté apparaitra en violet avec cette icône :
+
+    <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+            ![Image décrivant un pull request accepté](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/05_Pull-request-accepte.png){.fr-responsive-img .frx-border-img}
+        </div>
+    </div>
+
+Pour supprimer une branche, il suffit de se rendre sur github, sur votre fork, et de cliquer sur « Branch » :
+
+    <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+            ![Image décrivant commment accéder à ses branches sur github](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/06_Supprimer-branche.png){.fr-responsive-img .frx-border-img}
+        </div>
+    </div>
+
+Il vous suffit alors de supprimer la branche concernée par le _merge_ accepté.
 
 ---
 

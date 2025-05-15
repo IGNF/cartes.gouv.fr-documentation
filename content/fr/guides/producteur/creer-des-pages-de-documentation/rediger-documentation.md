@@ -136,6 +136,10 @@ Ce fichier contient en général les liens vers les différentes pages contenues
 
 Complétez l’url avec l’url complète de la page. Ex : /partenaires/producteurABC/dossier/sous-dossier/nom-de-la-page/
 
+:::warning
+Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
+:::
+
 ## 2.3 - Pages de documentation en markdown
 
 Les pages de documentation sont des fichiers de texte en markdown (.md), éditables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
