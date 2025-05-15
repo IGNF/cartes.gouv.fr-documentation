@@ -21,8 +21,11 @@
                         </div>
                     </div>
                     <div class="fr-header__service">
-                        <a href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.title }} - {{ metadata.service }}">
-                            <p class="fr-header__service-title">{{ metadata.title }}</p>
+                        <a href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.description }} - {{ metadata.title }}">
+                            <p class="fr-header__service-title">
+                                {{ metadata.title }}
+                                <span class="fr-badge fr-badge--success fr-badge--no-icon">Bêta</span>
+                            </p>
                         </a>
                         <p class="fr-header__service-tagline">{{ metadata.description }}</p>
                     </div>
