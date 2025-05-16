@@ -33,6 +33,7 @@ module.exports = {
     published_on: "Dernière modification le",
     read_also: "À lire aussi",
     results: "résultats",
+    search: "Rechercher",
     see_breadcrumb: "Voir le fil d’Ariane",
     see_more: "En savoir plus",
     select_lang: "Sélectionner une langue",
