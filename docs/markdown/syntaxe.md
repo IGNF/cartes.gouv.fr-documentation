@@ -27,8 +27,6 @@ La syntaxe markdown de base est la suivante :
 
 La cible du lien peut être une URL absolue (commençant par `https://...`) ou relative (vers une autre page du site). Dans ce cas il très facile de faire une erreur de chemin et la prévisualisation du site permet de vérifier que le lien fonctionne.
 
-Pour faire un lien qui ouvre un nouvel onglet.
-
 ## Les images
 
 Les images sont à déposer dans un dossier de `public/img/` en utilisant une arborescence similaire à celle de `content`.
@@ -70,6 +68,14 @@ Faire l'effort d'utiliser des majuscules accentuées même si le clavier azerty 
 ### Apostrophes
 
 Utiliser de préférence une apostrophe `’` plutôt qu'une simple quote `'`. En tout cas éviter de mélanger les 2 sur une page.
+
+### Guillemets
+
+Utiliser des guillemets français `«` et `»`(alt+174 et alt+175) et comme ce sont des symboles de ponctuation doubles, ajoutez des espaces insécables pour garantir qu'aucun saut de ligne ne viendra couper juste après les guillemets ouvrants ou juste après le guillemets fermants. Exemple
+
+```md
+«&nbsp;le texte entre guillemets&nbsp;»
+```
 
 ## Composants
 
