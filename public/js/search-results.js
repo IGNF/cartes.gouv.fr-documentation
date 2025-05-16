@@ -5,7 +5,7 @@ const RESULT_COUNT_SELECTOR = "#result-count";
 const SEARCH_RESULTS_SELECTOR = "#search-results";
 const SEARCH_FILTER_TAGS_SELECTOR = "#search-filter-tags";
 
-const FULL_WIDTH_COL_CLASS = "fr-col-12";
+const FULL_WIDTH_COL_CLASS = "fr-col-8";
 
 class PageFinder {
     constructor(pagefind) {
@@ -93,11 +93,11 @@ class PageFinder {
             div.className = "fr-grid-row fr-grid-row--middle fr-my-2v";
 
             let divTitle = document.createElement("div");
-            divTitle.className = "fr-col-12 fr-col-sm-2";
+            divTitle.className = "fr-col-12 fr-mb-2v";
             divTitle.textContent = `${filterType.charAt(0).toUpperCase() + filterType.slice(1)} : `;
 
             let divTags = document.createElement("div");
-            divTags.className = "fr-col-12 fr-col-sm-10";
+            divTags.className = "fr-col-8";
 
             let ulTags = document.createElement("ul");
             ulTags.className = "fr-tags-group";
@@ -183,15 +183,29 @@ class PageFinder {
         return filters;
     }
 
+    formatExcerpt(excerpt) {
+        if (!excerpt || excerpt.trim() === "") return "";
+
+        const plainText = excerpt.replace(/<[^>]+>/g, "").trim();
+
+        const startsWithUpper = /^[A-ZÀ-ÖÙ-Ü]/.test(plainText);
+        const endsWithDot = /[.!?…]$/.test(plainText);
+
+        const prefix = startsWithUpper ? "" : "... ";
+        const suffix = endsWithDot ? "" : " ...";
+
+        return `${prefix}${excerpt.trim()}${suffix}`;
+    }
+
     _getCardHtml(title, excerpt, url, filters = []) {
         return `
-<div class="fr-card fr-enlarge-link fr-card--horizontal">
+<div class="fr-card fr-card--horizontal">
     <div class="fr-card__body">
         <div class="fr-card__content">
             <h3 class="fr-card__title">
                 <a href="${url}">${title}</a>
             </h3>
-            <p class="fr-card__desc">${excerpt}</p>
+            <p class="fr-card__desc">${this.formatExcerpt(excerpt)}</p>
             <div class="fr-card__start">
                 <ul class="fr-tags-group">
                     ${filters
