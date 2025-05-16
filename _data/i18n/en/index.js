@@ -33,6 +33,7 @@ module.exports = {
     published_on: "Last modified on",
     read_also: "Read Also",
     results: "results",
+    search: "Search",
     see_breadcrumb: "See Breadcrumb",
     see_more: "See More",
     select_lang: "Select Language",

@@ -12,6 +12,12 @@
                             </p>
                         </div>
                         <div class="fr-header__navbar">
+                            <button class="fr-btn fr-icon-search-line"
+                                    data-fr-opened="false" 
+                                    aria-controls="modal-474" 
+                                    aria-haspopup="dialog"
+                                    id="button-475"
+                                    title="{{ "search" | i18n }}">{{ "search" | i18n }}</button>
                             <button class="fr-btn--menu fr-btn"
                                     data-fr-opened="false"
                                     aria-controls="modal-491"
@@ -57,7 +63,7 @@
                         </ul>
                         {# {% include "templates/translate.njk" %} #}
                     </div>
-                    <div class="fr-header__search fr-modal" id="modal-474">
+                    <div class="fr-header__search fr-modal" id="modal-474" aria-labelledby="button-475">
                         <div class="fr-container fr-container-lg--fluid">
                             <button class="fr-btn--close fr-btn" aria-controls="modal-474" title="Fermer">Fermer</button>
                             <div class="fr-search-bar" id="header-search" role="search">
