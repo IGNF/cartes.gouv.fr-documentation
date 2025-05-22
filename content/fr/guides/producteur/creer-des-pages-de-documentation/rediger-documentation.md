@@ -2,7 +2,9 @@
 title: Rédiger sa documentation
 tags:
     - Rédaction
+    - Documentation
     - Modification
+    - Github
     - Fork
     - Clone
 eleventyNavigation:
@@ -10,6 +12,7 @@ eleventyNavigation:
     parent: Créer des pages de documentation
     order: 3
     nav: producteur
+pictogram: document/document.svg
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -20,13 +23,13 @@ Cette page explique la procédure pour créer/modifier/supprimer des pages de do
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
 :::
 
-# 1 - Prévisualisation sur VS Code
+## 1 - Prévisualisation sur _VS Code_
 
-À la suite de l’installation de VS Code, vous pouvez prévisualiser l’écriture de contenu de plusieurs facons. Néanmoins, cette prévisualisation n’englobera pas les composants DSFR. Il faudra déployer le site en local pour avoir une image complète de prévisualisation (cf. page précédente).
+À la suite de l’installation de _VS Code_, vous pouvez prévisualiser l’écriture de contenu de plusieurs facons. Néanmoins, cette prévisualisation n’englobera pas les composants DSFR. Il faudra déployer le site en local pour avoir une image complète de prévisualisation (cf. page précédente).
 
-## 1.1 - Dans la même fenêtre VS Code
+### 1.1 - Dans la même fenêtre _VS Code_
 
-Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers **crtl+k** puis **V**) :
+Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers **« crtl+k »** puis **« V »**) :
 
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--center">
@@ -40,9 +43,9 @@ Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers 
         </div>
     </div>
 
-## 1.2 - Dans un autre onglet de VS Code
+### 1.2 - Dans un autre onglet de _VS Code_
 
-Utilisez les raccourcis clavier **Ctrl + Shift + V**
+Utilisez les raccourcis clavier **« Ctrl + Shift + V »**
 
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--center">
@@ -50,27 +53,27 @@ Utilisez les raccourcis clavier **Ctrl + Shift + V**
         </div>
     </div>
 
-# 2 - Effectuer des modifications
+## 2 - Effectuer des modifications
 
-## 2.1 - Modifier des fichiers
+### 2.1 - Modifier des fichiers
 
-Il vous suffit d’éditer, de créer ou de supprimer les fichiers dans votre dossier. Lorsque vous enregistrez, la modification est prise en compte par Eleventy et s’affichera dans la prévisualisation en localhost sur votre navigateur.
+Il vous suffit d’éditer, de créer ou de supprimer les fichiers dans votre dossier. Lorsque vous enregistrez, la modification est prise en compte par _Eleventy_ et s’affichera dans la prévisualisation en _localhost_ sur votre navigateur.
 
 :::info
-la modification peut ne pas bien s’afficher dans le cas d’une création d’un nouveau fichier. Dans ce cas arrêtez Eleventy en faisant **ctrl+C** dans l’invite de commande Git Bash, puis relancez la commande **npm start**
+la modification peut ne pas bien s’afficher dans le cas d’une création d’un nouveau fichier. Dans ce cas arrêtez _Eleventy_ en faisant **« ctrl+C »** dans l’invite de commande _Git Bash_, puis relancez la commande **« npm start »**
 :::
 
-## 2.2 - Structure
+### 2.2 - Structure
 
 En tant que rédacteur, vous n’aurez généralement pas de modification à effectuer hors de ces deux dossiers :
 
-- **content** et même uniquement **content/fr/** pour le contenu en français. Ce dossier contient le contenu des pages sous forme de fichiers au format markdown (_.md_). Les fichiers de ce dossier sont ensuite transformés en pages HTML dans le dossier **\_site** qui est absent du dépôt car généré seulement pour le déploiement.
-- **public** qui contient les fichiers ne nécessitant pas de transformation pour être affichés dans un navigateur web (notamment les images)
+- **« content »** et même uniquement **« content/fr/ »** pour le contenu en français. Ce dossier contient le contenu des pages sous forme de fichiers au format _markdown_ (_.md_). Les fichiers de ce dossier sont ensuite transformés en pages _html_ dans le dossier **« _site »** qui est absent du dépôt car généré seulement pour le déploiement.
+- **« public »** qui contient les fichiers ne nécessitant pas de transformation pour être affichés dans un navigateur web (notamment les images).
 
 Le contenu de la barre de navigation n’est pas directement déterminée par l’arborescence des dossiers et fichiers mais par le contenu des _cartouches_ (ou _en-têtes_) de chaque fichier.
 Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette navigation pour faciliter le repérage.
 
-Chaque sous-dossier doit contenir un fichier **nom-du-dossier-parent.11tydata.js** qui permet de déterminer l’arborescence des fichiers adjacents.
+Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
 
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--center">
@@ -94,7 +97,7 @@ module.exports = {
 {% endraw %}
 ```
 
-Chaque dossier doit également contenir un fichier **.md** pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
+Chaque dossier doit également contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
 
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--center">
@@ -102,7 +105,7 @@ Chaque dossier doit également contenir un fichier **.md** pour chacun de ses so
         </div>
     </div>
 
-Ce fichier correspond à la _page d’accueil_ de ce sous-dossier. Il définit via son _en-tête_ l’arborescence du dossier dans la navigation :
+Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit via son _en-tête_ l’arborescence du dossier dans la navigation :
 
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--center">
@@ -110,7 +113,7 @@ Ce fichier correspond à la _page d’accueil_ de ce sous-dossier. Il définit v
         </div>
     </div>
 
-Ce fichier contient en général les liens vers les différentes pages contenues sous forme de cards, dont la syntaxe est la suivante :
+Ce fichier contient en général les liens vers les différentes pages contenues sous forme de _cards_, dont la syntaxe est la suivante :
 
 ```njk
 {% raw %}
@@ -134,15 +137,15 @@ Ce fichier contient en général les liens vers les différentes pages contenues
 {% endraw %}
 ```
 
-Complétez l’url avec l’url complète de la page. Ex : /partenaires/producteurABC/dossier/sous-dossier/nom-de-la-page/
+Complétez l’url avec l’url complète de la page. Ex : **« /partenaires/producteurABC/dossier/sous-dossier/nom-de-la-page/ »**
 
 :::warning
-Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
+Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 :::
 
-## 2.3 - Pages de documentation en markdown
+### 2.3 - Pages de documentation en _markdown_
 
-Les pages de documentation sont des fichiers de texte en markdown (.md), éditables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
+Les pages de documentation sont des fichiers de texte en _markdown_ (_.md_), éditables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
 
 Le texte est découpé en 2 parties : une _en-tête_ (ou _cartouche_) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte.
 
@@ -152,7 +155,7 @@ Le texte est découpé en 2 parties : une _en-tête_ (ou _cartouche_) qui conti
         </div>
     </div>
 
-Si des éléments njk (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après *l’en-tête* :
+Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après *l’en-tête* :
 
 ```njk
 {% raw %}
@@ -160,14 +163,14 @@ Si des éléments njk (_nunjucks_) sont utilisés dans la page (par exemple pour
 {% endraw %}
 ```
 
-La syntaxe propre au [markdown](https://fr.wikipedia.org/wiki/Markdown) est relativement simple. Ci-dessous vous pouvez retrouver les différentes syntaxes à utiliser :
+La syntaxe propre au <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener noreferrer" title="Documentation Markdown - ouvre une nouvelle fenêtre">mardown</a> est relativement simple. Ci-dessous vous pouvez retrouver les différentes syntaxes à utiliser :
 
 ```markdown
-# Titre de niveau 1
+## 1 - Titre de niveau 1
 
-## Titre de niveau 2
+### 1.1 - Titre de niveau 2
 
-### Titre de niveau 3
+#### 1.1.1 - Titre de niveau 3
 
 [Nom du lien url](https://monurl.fr)
 **texte en gras**
@@ -204,6 +207,17 @@ Pour afficher un extrait de code :
         contenu du code
     {% endraw %}
     ```
+
+Pour afficher un tableau
+{{ component("table", {
+    headers: ["Titre 1", "Titre 2", "Titre 3"],
+    data: [
+        ["cellule 1.1", "cellule 1.2", "cellule 1.3"],
+        ["cellule 2.1", "cellule 2.2", "cellule 2.3"],
+        ["cellule 3.1", "cellule 3.2", "cellule 3.3"]
+    ]
+}) }}
+
 {% endraw %}
 ````
 
@@ -211,7 +225,7 @@ Pour afficher un extrait de code :
 Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne et de garder les espaces tels que présentés ci-dessus.
 :::
 
-Les images sont stockées dans le dossier **cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/...**.
+Les images sont stockées dans le dossier **« cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/... »**.
 
 ---
 
@@ -221,5 +235,5 @@ Vous savez maintenant tout ce qu’il faut savoir pour modifier votre documentat
 
 :::callout Pour aller plus loin
 Si vous souhaitez avoir plus de détails sur l’utilisation de Visual Studio :
-[Documentation VStudio](https://learn.microsoft.com/fr-fr/visualstudio/windows/?view=vs-2022)
+<a href="https://learn.microsoft.com/fr-fr/visualstudio/windows/?view=vs-2022" target="_blank" rel="noopener noreferrer" title="Documentation VStudio - ouvre une nouvelle fenêtre">Documentation VStudio</a>
 :::
