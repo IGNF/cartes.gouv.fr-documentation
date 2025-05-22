@@ -117,7 +117,7 @@ Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès
 
 ## 6 - Supprimer la branche
 
-Une fois que le _pul request_ a été accepté, il faudra supprimer la branche.
+Une fois que le _pull request_ a été accepté, il faudra supprimer la branche.
 
 Un _pull request_ accepté apparaitra en violet avec cette icône :
 
