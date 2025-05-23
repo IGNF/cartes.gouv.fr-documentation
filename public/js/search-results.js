@@ -128,7 +128,7 @@ class PageFinder {
 
         tagEntries.forEach(([filterKeyword, count]) => {
             const button = document.createElement("button");
-            button.className = "fr-tag";
+            button.className = "fr-tag fr-tag--sm";
             button.ariaPressed = initHashFilters[filterType]?.includes(filterKeyword) ? "true" : "false";
             button.textContent = `${filterKeyword} (${count})`;
 
@@ -272,7 +272,7 @@ class PageFinder {
 
     _getCardHtml(title, excerpt, url, filters = []) {
         return `
-<div class="fr-card fr-card--horizontal">
+<div class="fr-card fr-card--horizontal fr-enlarge-link fr-card--sm">
     <div class="fr-card__body">
         <div class="fr-card__content">
             <h3 class="fr-card__title">
