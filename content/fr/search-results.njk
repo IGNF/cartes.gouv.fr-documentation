@@ -8,7 +8,7 @@ layout: layouts/base.njk
         <div class="fr-col-12">
             <div class="fr-mb-6w">
                 <h1>
-                    {{ title }} “<span id="search-term"></span>”
+                    {{ title }} «&nbsp;<span id="search-term"></span>&nbsp;»
                 </h1>
                 <p class="fr-text--lg">
                     <span id="result-count">0</span> {{ "results" | i18n }}
@@ -16,8 +16,8 @@ layout: layouts/base.njk
                 <div id="search-filter-tags"></div>
                 <div class="fr-grid-row fr-grid-row--gutters" id="search-results"></div>
             </div>
-            {% include "components/back_to_top.njk" %}
         </div>
+        <nav id="pagination-container" role="navigation" class="fr-pagination fr-col-12 fr-col-lg-8" aria-label="Pagination"></nav>
     </div>
 </div>
 {% js "body" %}
