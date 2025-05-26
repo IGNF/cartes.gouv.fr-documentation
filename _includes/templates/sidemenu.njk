@@ -72,6 +72,9 @@
         function expandParents(element) {
             let parent = element.closest(".fr-collapse");
             while (parent) {
+                if (parent.id === "fr-sidemenu-wrapper") {
+                    break;
+                }
                 const toggleButton = parent.previousElementSibling;
                 if (toggleButton?.classList.contains("fr-sidemenu__btn")) {
                     toggleButton.setAttribute("aria-expanded", "true");
