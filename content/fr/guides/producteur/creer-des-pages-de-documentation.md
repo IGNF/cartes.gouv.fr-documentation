@@ -7,7 +7,7 @@ tags:
     - Partenaire
 eleventyNavigation:
     key: Créer des pages de documentation
-    order: 2
+    order: 3
     nav: producteur
 pictogram: "document/document-add.svg"
 ---
