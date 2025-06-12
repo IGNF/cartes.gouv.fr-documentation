@@ -26,7 +26,7 @@ Elle est également présente dans une balise `<meta>` de la page, ce qui va êt
 
 Par défaut, les pages du site sont datées du moment de leur dernière révision dans le dépôt.
 
-L'absence de précision dans le cartouche équivaut à :
+L'absence de précision dans le cartouche équivaut à :
 
 ```yml
 date: git Last Modified
@@ -55,9 +55,9 @@ Il est d'usage qu'un fil d'ariane soit présent sur toutes les pages d'un site w
 
 Le fil d'ariane commence toujours par un lien vers la page d'accueil et se termine par le titre de la page courante (non cliquable). Entre les 2 doivent se trouver des liens vers des pages intermédiaires dans la hiérarchie du site.
 
-Référence : https://www.systeme-de-design.gouv.fr/composants-et-modeles/composants/fil-d-ariane
+Référence : https://www.systeme-de-design.gouv.fr/composants-et-modeles/composants/fil-d-ariane
 
-Pour un fil d'ariane de cette forme : `Accueil > Documentation producteur > Page courante`. Il suffit de décrire le segment intermédiaire :
+Pour un fil d'ariane de cette forme : `Accueil > Documentation producteur > Page courante`. Il suffit de décrire le segment intermédiaire :
 
 ```yml
 segments:

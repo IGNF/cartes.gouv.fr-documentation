@@ -1,7 +1,6 @@
 ---
 title: Choisir le flux à publier
 tags:
-    - Producteur
     - Flux
     - Service
     - Publier

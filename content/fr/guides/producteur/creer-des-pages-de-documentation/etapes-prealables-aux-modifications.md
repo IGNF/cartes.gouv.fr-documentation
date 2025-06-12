@@ -2,7 +2,6 @@
 title: Étapes préalables aux modifications
 tags:
     - Installation
-    - Documentation
     - Mise à jour
     - Github
     - Fork
@@ -26,13 +25,7 @@ Afin de partir sur des bases saines il est conseillé de mettre à jour votre _f
 ## 2 - Mettre à jour votre _fork_
 
 Rendez-vous sur la page de votre _fork_. Github affiche au dessus de la liste des dossiers et fichiers l’état de synchronisation de votre _fork_ (commits en avance ou en retard)
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant l’affichage du statut du fork sur github](/img/guides/producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/01_Statut-fork-sur-github.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
+![Image décrivant l’affichage du statut du fork sur github](/img/guides/producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/01_Statut-fork-sur-github.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Si votre _fork_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync *fork* »** directement pour le mettre à jour.
 
 ## 3 - Créer une branche
@@ -48,12 +41,7 @@ git checkout -b "nom-de-la-nouvelle-branche"
 ```
 
 Cette commande créera une nouvelle branche et vous y placera : **« (nom-de-la-nouvelle-branche) »** est indiqué dans l’invite de commande au lieu de **« (main) »** :
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant la création de la branche par l’invite de commande Git Bash](/img/guides/producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/02_Creation-branche.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+![Image décrivant la création de la branche par l’invite de commande Git Bash](/img/guides/producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/02_Creation-branche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::warning
 En passant par l’invite de commande cela crée également la branche sur github. Il n’est pas recommandé de créer la nouvelle branche via le navigateur car cela rajouterait des étapes supplémentaires qui ne seront pas abordées dans cette documentation.
@@ -75,11 +63,7 @@ git branch -l
 {% endraw %}
 ```
 
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant le listing et le changement de branches dans l’invite de commande Git Bash](/img/guides/producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/03_Liste-des-branches.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+![Image décrivant le listing et le changement de branches dans l’invite de commande Git Bash](/img/guides/producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/03_Liste-des-branches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## 4 - Mettre à jour votre clone local
 

@@ -2,7 +2,6 @@
 title: Rédiger sa documentation
 tags:
     - Rédaction
-    - Documentation
     - Modification
     - Github
     - Fork
@@ -30,28 +29,13 @@ Avant de commencer vos modifications, pensez à effectuer les étapes préalable
 ### 1.1 - Dans la même fenêtre _VS Code_
 
 Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers **« crtl+k »** puis **« V »**) :
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant le bouton de prévisualisation](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+![Image décrivant le bouton de prévisualisation](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### 1.2 - Dans un autre onglet de _VS Code_
 
 Utilisez les raccourcis clavier **« Ctrl + Shift + V »**
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/03_Previsualisation_VS.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/03_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## 2 - Effectuer des modifications
 
@@ -70,17 +54,10 @@ En tant que rédacteur, vous n’aurez généralement pas de modification à eff
 - **« content »** et même uniquement **« content/fr/ »** pour le contenu en français. Ce dossier contient le contenu des pages sous forme de fichiers au format _markdown_ (_.md_). Les fichiers de ce dossier sont ensuite transformés en pages _html_ dans le dossier **« _site »** qui est absent du dépôt car généré seulement pour le déploiement.
 - **« public »** qui contient les fichiers ne nécessitant pas de transformation pour être affichés dans un navigateur web (notamment les images).
 
-Le contenu de la barre de navigation n’est pas directement déterminée par l’arborescence des dossiers et fichiers mais par le contenu des _cartouches_ (ou _en-têtes_) de chaque fichier.
-Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette navigation pour faciliter le repérage.
+Le contenu de la barre de navigation n’est pas directement déterminée par l’arborescence des dossiers et fichiers mais par le contenu des _cartouches_ (ou _en-têtes_) de chaque fichier. Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette navigation pour faciliter le repérage.
 
 Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/04_Fichier-11tydata.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
+![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/04_Fichier-11tydata.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier contient les informations suivantes :
 
 ```njk
@@ -98,21 +75,9 @@ module.exports = {
 ```
 
 Chaque dossier doit également contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant la présence du fichier d’index .md dans les dossiers](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichiers-index-en-markdown.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
+![Image décrivant la présence du fichier d’index .md dans les dossiers](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichiers-index-en-markdown.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit via son _en-tête_ l’arborescence du dossier dans la navigation :
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant l’en-tête du fichier de la page index](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/06_En-tete-fichier-index.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
+![Image décrivant l’en-tête du fichier de la page index](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/06_En-tete-fichier-index.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier contient en général les liens vers les différentes pages contenues sous forme de _cards_, dont la syntaxe est la suivante :
 
 ```njk
@@ -148,13 +113,7 @@ Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 Les pages de documentation sont des fichiers de texte en _markdown_ (_.md_), éditables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
 
 Le texte est découpé en 2 parties : une _en-tête_ (ou _cartouche_) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte.
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant l’entête](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/07_En-tete-pages-doc.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
+![Image décrivant l’entête](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/07_En-tete-pages-doc.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après *l’en-tête* :
 
 ```njk
@@ -195,18 +154,14 @@ Contenu du bloc grisé
 ````njk
 {% raw %}
 Pour afficher une image :
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Pour afficher un extrait de code :
-    ```njk
-    {% raw %}
-        contenu du code
-    {% endraw %}
-    ```
+```njk
+{% raw %}
+    contenu du code
+{% endraw %}
+```
 
 Pour afficher un tableau
 {{ component("table", {
@@ -217,7 +172,6 @@ Pour afficher un tableau
         ["cellule 3.1", "cellule 3.2", "cellule 3.3"]
     ]
 }) }}
-
 {% endraw %}
 ````
 

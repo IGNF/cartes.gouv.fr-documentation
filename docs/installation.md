@@ -6,7 +6,7 @@ Pour les rédacteurs, cette documentation est technique mais vous permet de visu
 
 ## Prérequis
 
-Pour disposer d'un environnement de travail confortable, il est recommandé de disposer des logiciels suivants :
+Pour disposer d'un environnement de travail confortable, il est recommandé de disposer des logiciels suivants :
 
 - **Visual Studio Code** (https://code.visualstudio.com/download) comme éditeur pour tous les langages utilisés par le site, notamment le markdown (mais vous pouvez utiliser un autre éditeur si vous préférez)
 - **NodeJS** (https://nodejs.org/en/download/prebuilt-installer) pour pouvoir construire le site localement sur votre poste de travail et le prévisualiser.
@@ -44,9 +44,9 @@ Dans la suite `IGNF/cartes.gouv.fr-documentation` sera appelé le dépôt princi
 
 ### Cloner le dépôt sur votre ordinateur
 
-Page d'explications : https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
+Page d'explications : https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 
-Clonez le dépôt (ou votre fork du dépôt, ce qui est préférable) sur votre poste de travail dans un nouveau dossier nommé `cartes.gouv.fr-documentation` :
+Clonez le dépôt (ou votre fork du dépôt, ce qui est préférable) sur votre poste de travail dans un nouveau dossier nommé `cartes.gouv.fr-documentation` :
 
 ```bash
 git clone https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation
@@ -54,7 +54,7 @@ git clone https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation
 
 (en cas de problème, vérifiez votre configuration réseau. Si vous travaillez derrière un proxy, vérifiez par exemple vos variables d'environnement utilisateur HTTP_PROXY et HTTPS_PROXY. Demandez à votre DSI si vous ne les connaissez pas)
 
-Déplacez vous dans le dossier que vous venez de créer :
+Déplacez vous dans le dossier que vous venez de créer :
 
 ```bash
 cd cartes.gouv.fr-documentation
@@ -66,19 +66,19 @@ _Ce dossier est la "copie locale" de votre dépôt_
 
 Il est chaudement recommandé d'effectuer des modifications sur une branche autre que la branche principale de votre dépôt (branche `main`). Ceci afin de vous permettre d'effectuer plusieurs modifications indépendantes en même temps et de faciliter la synchronisation de votre fork avec les dépôt principal.
 
-Identifiez le périmètre des modifications que vous allez effectuer et donner un nom de branche parlant. Créer une branche nommée "nouvelle-branche" avec la commande :
+Identifiez le périmètre des modifications que vous allez effectuer et donner un nom de branche parlant. Créer une branche nommée "nouvelle-branche" avec la commande :
 
 ```bash
 git checkout -b "nouvelle-branche"
 ```
 
-_N.B. : Cette commande est un raccourci qui vous place directement sur la branche nouvellement créée_
+_N.B. : Cette commande est un raccourci qui vous place directement sur la branche nouvellement créée_
 
 Le dossier de votre copie locale du dépôt correspond à la branche en question. Il n'y a pas de duplication du dossier lors d'une création de branche.
 
 Dans la console _Git Bash_, le nom de la branche sur laquelle vous êtes apparait entre parenthèses après le chemin du dossier.
 
-Quelques commandes utiles :
+Quelques commandes utiles :
 
 ```sh
 # Pour changer de branche
@@ -109,7 +109,7 @@ npm run build
 
 A l'issu de cette commande, le dossier `_site` est rempli ou modifié avec un contenu HTML, visualisable dans un navigateur.
 
-_N.B. : Ces commandes sont exécutables quelle que soit la branche sur laquelle vous êtes situé._
+_N.B. : Ces commandes sont exécutables quelle que soit la branche sur laquelle vous êtes situé._
 
 ### Déployer en local
 
@@ -119,11 +119,11 @@ npm start
 
 Cette commande rend le site disponible à l'adresse `http://localhost:8080/fr/` et reste active, à l'écoute des changements que vous effectuez dans le projet.
 
-**:sparkles: Vous avez maintenant réussi à déployer le site en local :sparkles:**
+**:sparkles: Vous avez maintenant réussi à déployer le site en local :sparkles:**
 
 :warning: Il est normal que la page d'accueil soit une erreur 404. La page d'accueil réelle et correctement fléchée lors des déploiements en production est `/fr`.
 
-Le site est ainsi maintenu à jour en même temps que vous modifiez des fichiers. Mais les contenus modifiés ne sont pas indexés pour la recherche et il peut arriver que certaines modifications ne soient pas immédiatement prises en compte. Dans ce cas, arrêtez le site (`Ctrl+C`) et relancez les 2 commandes précédentes : `npm run build` puis `npm start`.
+Le site est ainsi maintenu à jour en même temps que vous modifiez des fichiers. Mais les contenus modifiés ne sont pas indexés pour la recherche et il peut arriver que certaines modifications ne soient pas immédiatement prises en compte. Dans ce cas, arrêtez le site (`Ctrl+C`) et relancez les 2 commandes précédentes : `npm run build` puis `npm start`.
 
 Les développeurs peuvent exécuter un [mode de débogage](https://www.11ty.dev/docs/debugging/).
 
@@ -141,13 +141,13 @@ Si votre fork a du retard sur le dépôt principal, vous pouvez cliquer sur le b
 
 Placez vous avec Git Bash dans le dossier de votre copie.
 
-Placez vous sur la branche principale si vous n'y êtes pas déjà :
+Placez vous sur la branche principale si vous n'y êtes pas déjà :
 
 ```sh
 git checkout main
 ```
 
-Récupérez les changements :
+Récupérez les changements :
 
 ```sh
 git pull
@@ -157,7 +157,7 @@ Si vous avez des modifications locale non enregistrées et que la commande `git 
 
 ---
 
-Votre dépôt local est installé et à jour, vous pouvez maintenant :
+Votre dépôt local est installé et à jour, vous pouvez maintenant :
 
 - [Rédiger du contenu](redacteur.md)
 - [Soumettre vos modifications](commit.md)
