@@ -92,7 +92,7 @@ git stash apply
 ```
 
 :::info
-Les commandes peuvent se lancer depuis n’importe quelle branche mais il est conseillé de se placer à la racine du projet.
+Les commandes peuvent se lancer depuis n’importe quel sous-dossier mais il est conseillé de se placer à la racine du projet.
 :::
 
 ## 5 - Exécuter _Eleventy_ pour construire le site

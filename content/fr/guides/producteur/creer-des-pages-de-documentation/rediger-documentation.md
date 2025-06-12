@@ -16,7 +16,7 @@ pictogram: document/document.svg
 
 {% from "components/component.njk" import component with context %}
 
-Cette page explique la procédure pour créer/modifier/supprimer des pages de documentation pour les partenaires.
+Cette page explique la procédure pour créer, modifier ou supprimer des pages de documentation pour les partenaires.
 
 :::info
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
@@ -188,6 +188,6 @@ Vous savez maintenant tout ce qu’il faut savoir pour modifier votre documentat
 ---
 
 :::callout Pour aller plus loin
-Si vous souhaitez avoir plus de détails sur l’utilisation de Visual Studio :
-<a href="https://learn.microsoft.com/fr-fr/visualstudio/windows/?view=vs-2022" target="_blank" rel="noopener noreferrer" title="Documentation VStudio - ouvre une nouvelle fenêtre">Documentation VStudio</a>
+Si vous souhaitez avoir plus de détails sur l’utilisation de Visual Studio Code :
+<a href="https://learn.microsoft.com/fr-fr/visualstudio/windows/?view=vs-2022" target="_blank" rel="noopener noreferrer" title="Documentation VS Code - ouvre une nouvelle fenêtre">Documentation VS Code</a>
 :::
