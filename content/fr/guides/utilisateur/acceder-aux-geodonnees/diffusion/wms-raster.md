@@ -11,4 +11,4 @@ eleventyNavigation:
 
 Images WMS-Raster
 
-A compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70066
+A compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70066
