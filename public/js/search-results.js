@@ -91,6 +91,7 @@ class PageFinder {
      */
     populateFilters(filters, initHashFilters) {
         this.filterTagsEl.innerHTML = "";
+        this.filterTagsEl.className = "fr-mb-5v";
 
         const specialGuideTags = ["Utilisateur", "Développeur", "Producteur"];
 
@@ -101,7 +102,7 @@ class PageFinder {
             const otherTags = tagEntries.filter(([tag]) => !specialGuideTags.includes(tag));
 
             if (specialTags.length > 0) {
-                this.renderFilterBlock(filterType, specialTags, initHashFilters, "Types de guides :");
+                this.renderFilterBlock(filterType, specialTags, initHashFilters, "Guides :");
             }
 
             if (otherTags.length > 0) {
@@ -113,7 +114,7 @@ class PageFinder {
 
     renderFilterBlock(filterType, tagEntries, initHashFilters, title) {
         const div = document.createElement("div");
-        div.className = "fr-grid-row fr-grid-row--middle fr-my-2v";
+        div.className = "fr-grid-row fr-grid-row--middle fr-mb-2v";
 
         const divTitle = document.createElement("div");
         divTitle.className = "fr-col-12 fr-mb-2v";
