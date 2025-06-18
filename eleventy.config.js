@@ -187,6 +187,11 @@ module.exports = function (eleventyConfig) {
         return arr.filter((item) => item.inputPath.startsWith(pathStart));
     });
 
+    eleventyConfig.addFilter("split", function (str, separator) {
+        if (typeof str !== "string") return [];
+        return str.split(separator);
+    });
+
     eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {
         console.log(content);
         console.log(param1);
