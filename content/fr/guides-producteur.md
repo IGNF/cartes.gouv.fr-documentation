@@ -4,7 +4,7 @@ layout: layouts/accueil.njk
 eleventyNavigation:
     key: Guides producteur
     parent: Guides
-    order: 3
+    order: 4
     nav: main
 sidemenuNav: producteur
 ---

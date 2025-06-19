@@ -4,7 +4,7 @@ layout: layouts/page.njk
 eleventyNavigation:
     key: Questions fréquentes
     parent: Assistance
-    order: 1
+    order: 7
     nav: main
 ---
 
