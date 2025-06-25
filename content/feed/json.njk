@@ -8,7 +8,7 @@ numberOfLatestPostsToShow: 10
 "version": "https://jsonfeed.org/version/1.1",
 "title": "{{ metadata.title }}",
 "language": "{{ metadata.language }}",
-"home_page_url": "{{ metadata.url | addPathPrefixToFullUrl }}",
+"home_page_url": "{{ metadata.site_url | addPathPrefixToFullUrl }}",
 "feed_url": "{{ permalink | htmlBaseUrl(metadata.url) }}",
 "description": "{{ metadata.description }}",
 "author": {
@@ -16,8 +16,8 @@ numberOfLatestPostsToShow: 10
 "url": "{{ metadata.author.url }}"
 },
 "items": [
-{% for post in collections.posts| head(-1 * numberOfLatestPostsToShow) | reverse %}
-    {% set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
+{% for post in collections.all | selectattr("url") |  sort(attribute="date") | head(-1 * numberOfLatestPostsToShow) | reverse %}
+    {% set absolutePostUrl = metadata.site_url ~ post.url %}
     {
     "id": "{{ absolutePostUrl }}",
     "url": "{{ absolutePostUrl }}",
