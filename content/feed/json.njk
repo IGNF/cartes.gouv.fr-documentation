@@ -16,7 +16,7 @@ numberOfLatestPostsToShow: 10
 "url": "{{ metadata.author.url }}"
 },
 "items": [
-{% for post in collections.all | selectattr("url") |  sort(attribute="date") | head(-1 * numberOfLatestPostsToShow) | reverse %}
+{% for post in collections.all | selectattr("url") | head(-1 * numberOfLatestPostsToShow) | reverse %}
     {% set absolutePostUrl = metadata.site_url ~ post.url %}
     {
     "id": "{{ absolutePostUrl }}",
