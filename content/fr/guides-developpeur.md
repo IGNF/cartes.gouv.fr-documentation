@@ -3,7 +3,7 @@ title: Guides développeur
 layout: layouts/accueil.njk
 eleventyNavigation:
     key: Guides développeur
-    order: 3
+    order: 2
     nav: main
 sidemenuNav: guides-developpeur
 ---

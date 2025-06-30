@@ -86,11 +86,11 @@ Dans le fichier _eleventy.config.js_ situé à la racine du projet, en remplaça
 
 ```js
 {% raw %}
-    eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
-        return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
-        });
+eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
+    return collectionApi.getAll().filter((item) => {
+        return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
     });
+});
 {% endraw %}
 ```
 
@@ -98,10 +98,10 @@ Dans le fichier _accueil.njk_ situé dans **« _includes/layouts »**, en remp
 
 ```njk
 {% raw %}
-    {% elif effectiveNav == "ign" %}
-        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.ignNavigation %}
-        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+{% elif effectiveNav == "ign" %}
+    {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+    {% set navCollection = collections.ignNavigation %}
+    {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
 {% endraw %}
 ```
 
@@ -109,9 +109,9 @@ Dans le fichier _article.njk_ situé dans **« _includes/layouts »**, en remp
 
 ```njk
 {% raw %}
-    {% elif eleventyNavigation.nav == "ign" %}
-        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+{% elif eleventyNavigation.nav == "ign" %}
+    {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+    {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
 {% endraw %}
 ```
 
@@ -119,10 +119,10 @@ Dans le fichier _parent.njk_ situé dans **« _includes/layouts »**, en rempl
 
 ```njk
 {% raw %}
-    {% elif eleventyNavigation.nav == "ign" %}
-        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.ignNavigation %}
-        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+{% elif eleventyNavigation.nav == "ign" %}
+    {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+    {% set navCollection = collections.ignNavigation %}
+    {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
 {% endraw %}
 ```
 
@@ -134,8 +134,7 @@ Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit
 
 Cas n°1 : le sous-dossier correspondant se situe au premier niveau du menu latéral. Dans ce cas il faut écrire l’en-tête comme suit :
 
-```njk
-{% raw %}
+```markdown
 ---
 title: Créer des pages de documentation
 layout: layouts/parent.njk
@@ -147,13 +146,11 @@ order: 3
 nav: guides-producteur
 pictogram: "document/document-add.svg"
 ---
-{% endraw %}
 ```
 
 Cas n°2 : le sous-dossier correspondant se situe au deuxième ou au troisième niveau du menu latéral. Dans cas il faut ajouter un élément **« parent »** dans la partie **« eleventyNavigation »** :
 
-```njk
-{% raw %}
+```markdown
 ---
 title: Sous-dossier de niveau 2
 layout: layouts/parent.njk
@@ -166,7 +163,6 @@ nav: guides-producteur
 parent: Créer des pages de documentation
 pictogram: "document/document-add.svg"
 ---
-{% endraw %}
 ```
 
 Enfin, l’élément **« nav »** dépend de l’emplacement du sous-dossier :
@@ -206,9 +202,9 @@ module.exports = {
 
 Le texte est découpé en 2 parties : un en-tête (ou cartouche) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte. L’en-tête est similaire à celui des pages parents :
 
-```njk
-{% raw %}
----
+```markdown
+## {% raw %}
+
 title: Rédiger sa documentation
 tags: - Rédaction - Documentation - Modification - Github - Fork - Clone
 eleventyNavigation:
@@ -217,7 +213,9 @@ parent: Créer des pages de documentation
 order: 3
 nav: guides-producteur
 pictogram: document/document.svg
+
 ---
+
 {% endraw %}
 ```
 
@@ -233,7 +231,7 @@ Le contenu des pages de documentation est rédigé en _markdown_ (_.md_), édita
 
 La syntaxe propre au <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener noreferrer" title="Documentation Markdown - ouvre une nouvelle fenêtre">mardown</a> est relativement simple. Ci-dessous vous pouvez retrouver les différentes syntaxes à utiliser :
 
-```njk
+```markdown
 ## 1 - Titre de niveau 1
 
 ### 1.1 - Titre de niveau 2

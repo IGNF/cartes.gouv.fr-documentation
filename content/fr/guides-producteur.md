@@ -3,7 +3,7 @@ title: Guides producteur
 layout: layouts/accueil.njk
 eleventyNavigation:
     key: Guides producteur
-    order: 2
+    order: 3
     nav: main
 sidemenuNav: guides-producteur
 ---
