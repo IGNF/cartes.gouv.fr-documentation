@@ -1,11 +1,10 @@
 ---
 title: Institut national de l’information géographique et forestière
-segments:
-    - url: /partenaires
-      title: Documentations partenaires
+layout: layouts/accueil.njk
 image:
     path: ../../../cartes.gouv.fr-documentation/public/img/partenaires/ign.png
     alt: Logo IGN
+sidemenuNav: ign
 ---
 
 Liste des documentations spécifiques à l’IGN

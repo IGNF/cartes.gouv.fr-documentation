@@ -10,18 +10,26 @@ layout: layouts/base.njk
       {% if sidemenuNav %}
         {% set effectiveNav = sidemenuNav %}
       {% endif %}
-      {% if effectiveNav == "utilisateur" %}
+      {% if effectiveNav == "guides-utilisateur" %}
         {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.utilisateurNavigation %}
         {% set sidemenuTitle = "Guides utilisateur" %}
-      {% elif effectiveNav == "producteur" %}
+      {% elif effectiveNav == "guides-producteur" %}
         {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.producteurNavigation %}
         {% set sidemenuTitle = "Guides producteur" %}
-      {% elif effectiveNav == "developpeur" %}
+      {% elif effectiveNav == "guides-developpeur" %}
         {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.developpeurNavigation %}
         {% set sidemenuTitle = "Guides développeur" %}
+      {% elif effectiveNav == "nous-ecrire" %}
+        {% set navLinks = collections.nousEcrireNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.nousEcrireNavigation %}
+        {% set sidemenuTitle = "Nous écrire" %}
+      {% elif effectiveNav == "ign" %}
+        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.ignNavigation %}
+        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
       {% endif %}
       {% include "templates/sidemenu.njk" %}
     </div>

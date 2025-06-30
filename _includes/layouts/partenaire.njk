@@ -20,7 +20,7 @@ layout: layouts/base.njk
       </div>
       {{ content | safe }}
       {% set items = collections.all 
-        | filterByPathStart("./content/fr/partenaires/")
+        | filterRoot("./content/fr/partenaires/")
         | filterCollectionLang 
         | sort(attribute="data.title") %}
       {% set columns = 4 %}
