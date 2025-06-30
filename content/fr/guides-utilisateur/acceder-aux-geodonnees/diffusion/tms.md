@@ -9,4 +9,4 @@ eleventyNavigation:
     nav: guides-utilisateur
 ---
 
-Tuiles vectorielles TMS à compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70064
+Tuiles vectorielles TMS à compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70064

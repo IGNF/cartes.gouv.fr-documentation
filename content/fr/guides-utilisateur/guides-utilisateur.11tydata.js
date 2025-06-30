@@ -1,4 +1,5 @@
 module.exports = {
+    layout: "layouts/article.njk",
     tags: ["Utilisateur"],
     segments: [
         {

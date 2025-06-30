@@ -9,4 +9,4 @@ eleventyNavigation:
     nav: guides-utilisateur
 ---
 
-Images tuilées WMTS à compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70062
+Images tuilées WMTS à compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/diffusion#70062

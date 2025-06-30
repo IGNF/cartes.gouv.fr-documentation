@@ -8,4 +8,4 @@ eleventyNavigation:
 pictogram: system/system.svg
 ---
 
-![workflow-simple](/img/entrepot/workflow-simple.png){.fr-responsive-img}
+![workflow-simple](/img/entrepot/workflow-simple.png){.fr-responsive-img .frx-img-contained}

@@ -35,6 +35,5 @@ pictogram: digital/data-visualization.svg
     ]
 }) }}
 
-![Liens entre les différentes entités](/img/entrepot/liens-entites.png "Liens entre les différentes entités"){.fr-responsive-img}
-
-![Workflow d'utilisation de l'entrepôt Géoplateforme annoté](/img/entrepot/workflow-annote.png "Workflow d'utilisation de l'entrepôt Géoplateforme annoté avec les entités entrepôt manipulée lors de l'étape"){.fr-responsive-img}
+![Liens entre les différentes entités](/img/entrepot/liens-entites.png "Liens entre les différentes entités"){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Workflow d'utilisation de l'entrepôt Géoplateforme annoté](/img/entrepot/workflow-annote.png "Workflow d'utilisation de l'entrepôt Géoplateforme annoté avec les entités entrepôt manipulée lors de l'étape"){.fr-responsive-img .frx-border-img .frx-img-contained}

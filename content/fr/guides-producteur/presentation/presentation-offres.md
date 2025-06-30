@@ -1,7 +1,6 @@
 ---
 title: Présentation des offres
 tags:
-    - Producteur
     - Offres
     - Découverte
     - Essentielle

@@ -2,18 +2,20 @@
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
-
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{% for page in collections.allSortedByPathAsc %}
-    {% if page.url %}
-        {% set absoluteUrl %}
-            {{ page.url | htmlBaseUrl(metadata.url) }}
-        {% endset %}
-        <url>
-        <loc>{{ absoluteUrl }}</loc>
-        <lastmod>{{ page.date | htmlDateString }}</lastmod>
-        </url>
+{% macro renderSitemap(node) %}
+  {% for key, data in node %}
+    {% if data.__page %}
+      <url>
+        <loc>{{ data.__page.url | htmlBaseUrl(metadata.url) }}</loc>
+        <lastmod>{{ data.__page.date | htmlDateString }}</lastmod>
+      </url>
     {% endif %}
-{% endfor %}
+    {% if data.__children %}
+      {{ renderSitemap(data.__children) }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+{{ renderSitemap(tree) }}
 </urlset>

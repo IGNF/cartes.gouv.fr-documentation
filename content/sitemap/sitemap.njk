@@ -4,13 +4,21 @@ layout: layouts/page.njk
 showBreadcrumb: true
 ---
 
-{# List every content page in the project #}
-<ul data-pagefind-ignore>
-    {% for entry in collections.allSortedByPathAsc %}
-        {% if entry.url %}
-            <li>
-                <a href="{{ entry.url }}">{{ entry.data.title }} (<code>{{ entry.url }}</code>)</a>
-            </li>
+{% macro renderTree(node) %}
+  <ul>
+    {% for segment, data in node %}
+      <li>
+        {% if data.__page %}
+          <a href="{{ data.__page.url }}">{{ data.__page.data.title or data.__page.fileSlug }}</a>
+        {% else %}
+          {{ segment }}
         {% endif %}
+        {% if data.__children and (data.__children | length) > 0 %}
+          {{ renderTree(data.__children) }}
+        {% endif %}
+      </li>
     {% endfor %}
-</ul>
+  </ul>
+{% endmacro %}
+
+{{ renderTree(tree) }}

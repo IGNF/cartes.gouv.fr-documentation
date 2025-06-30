@@ -2,7 +2,6 @@
 title: Rédiger sa documentation
 tags:
     - Rédaction
-    - Documentation
     - Modification
     - Github
     - Fork
@@ -17,55 +16,30 @@ pictogram: document/document.svg
 
 {% from "components/component.njk" import component with context %}
 
-Cette page explique la structure de la documentation, la répartition entre les différents dossiers et fichiers, ainsi que la syntaxe _mardown_ utilisée dans chaque page.
+Cette page explique la procédure pour créer, modifier ou supprimer des pages de documentation pour les partenaires.
 
 :::info
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
 :::
 
----
-
-## 1 - Prévisualisation sur *VS Code* :
+## 1 - Prévisualisation sur _VS Code_
 
 À la suite de l’installation de _VS Code_, vous pouvez prévisualiser l’écriture de contenu de plusieurs facons. Néanmoins, cette prévisualisation n’englobera pas les composants DSFR. Il faudra déployer le site en local pour avoir une image complète de prévisualisation (cf. page précédente).
 
----
-
-### 1.1 - Dans la même fenêtre *VS Code* :
+### 1.1 - Dans la même fenêtre _VS Code_
 
 Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers **« crtl+k »** puis **« V »**) :
+![Image décrivant le bouton de prévisualisation](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant le bouton de prévisualisation](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
----
-
-### 1.2 - Dans un autre onglet de *VS Code* :
+### 1.2 - Dans un autre onglet de _VS Code_
 
 Utilisez les raccourcis clavier **« Ctrl + Shift + V »**
+![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/03_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/03_Previsualisation_VS.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+## 2 - Effectuer des modifications
 
----
-
-## 2 - Effectuer des modifications :
-
----
-
-### 2.1 - Modifier des fichiers :
+### 2.1 - Modifier des fichiers
 
 Il vous suffit d’éditer, de créer ou de supprimer les fichiers dans votre dossier. Lorsque vous enregistrez, la modification est prise en compte par _Eleventy_ et s’affichera dans la prévisualisation en _localhost_ sur votre navigateur.
 
@@ -73,25 +47,19 @@ Il vous suffit d’éditer, de créer ou de supprimer les fichiers dans votre do
 la modification peut ne pas bien s’afficher dans le cas d’une création d’un nouveau fichier. Dans ce cas arrêtez _Eleventy_ en faisant **« ctrl+C »** dans l’invite de commande _Git Bash_, puis relancez la commande **« npm start »**
 :::
 
----
+### 2.2 - Structure
 
-### 2.2 - Structure :
-
----
-
-#### 2.2.1 - Emplacement des modifications :
+#### 2.2.1 - Emplacement des modifications
 
 En tant que rédacteur, vous n’aurez généralement pas de modification à effectuer hors de ces deux dossiers :
 
-- **« content »** et même uniquement **« content/fr/ »** pour le contenu en français. Ce dossier contient le contenu des pages sous forme de fichiers au format _<html lang="en">markdown</html>_ (_.md_). Les fichiers de ce dossier sont ensuite transformés en pages _<html lang="en">html</html>_ dans le dossier **« _site »** qui est absent du dépôt car généré seulement pour le déploiement.
+- **« content »** et même uniquement **« content/fr/ »** pour le contenu en français. Ce dossier contient le contenu des pages sous forme de fichiers au format _markdown_ (_.md_). Les fichiers de ce dossier sont ensuite transformés en pages _html_ dans le dossier **« _site »** qui est absent du dépôt car généré seulement pour le déploiement.
 - **« public »** qui contient les fichiers ne nécessitant pas de transformation pour être affichés dans un navigateur web (notamment les images).
 
 Le contenu de la barre de navigation n’est pas directement déterminée par l’arborescence des dossiers et fichiers mais par le contenu des cartouches (ou en-têtes) de chaque fichier.
 Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette navigation pour faciliter le repérage.
 
----
-
-#### 2.2.2 - Nouveau partenaire :
+#### 2.2.2 - Nouveau partenaire
 
 Pour ajouter un nouveau partenaire à la documentation, il faut ajouter un fichier _.md_ dans le dossier **« partenaires »**, contenant les informations suivantes :
 
@@ -104,12 +72,13 @@ image:
     path: ../../../cartes.gouv.fr-documentation/public/img/partenaires/ign.png
     alt: Logo IGN
 sidemenuNav: ign
+---
 {% endraw %}
 ```
 
 - **« title »** correspond au titre de votre documentation partenaire.
 - **« layout »** est un terme technique à mettre systématiquement.
-- **« image/path »** indique le chemin de l’image à ajouter à la _<html lang="en">card</html>_ partenaire. L’image doit être déposée dans **« cartes/gouv.fr-documentation/public/img/partenaires/ »**.
+- **« image/path »** indique le chemin de l’image à ajouter à la _card_ partenaire. L’image doit être déposée dans **« cartes/gouv.fr-documentation/public/img/partenaires/ »**.
 - **« image/alt »** indique la description alternative de l’image.
 - **« sidemenuNav »** correspond à l’identifiant de navigation au sein de cette documentation partenaire. Cet identifiant devra être indiqué dans les en-têtes des pages filles (voir paragraphe ......) et dans les fichiers _.js_ décrits ci-après.
 
@@ -129,10 +98,10 @@ Dans le fichier _accueil.njk_ situé dans **« _includes/layouts »**, en remp
 
 ```njk
 {% raw %}
-            {% elif effectiveNav == "ign" %}
-                    {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-                    {% set navCollection = collections.ignNavigation %}
-                    {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+    {% elif effectiveNav == "ign" %}
+        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.ignNavigation %}
+        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
 {% endraw %}
 ```
 
@@ -140,9 +109,9 @@ Dans le fichier _article.njk_ situé dans **« _includes/layouts »**, en remp
 
 ```njk
 {% raw %}
-            {% elif eleventyNavigation.nav == "ign" %}
-                {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-                {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+    {% elif eleventyNavigation.nav == "ign" %}
+        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
 {% endraw %}
 ```
 
@@ -150,32 +119,24 @@ Dans le fichier _parent.njk_ situé dans **« _includes/layouts »**, en rempl
 
 ```njk
 {% raw %}
-            {% elif eleventyNavigation.nav == "ign" %}
-                {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-                {% set navCollection = collections.ignNavigation %}
-                {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+    {% elif eleventyNavigation.nav == "ign" %}
+        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.ignNavigation %}
+        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
 {% endraw %}
 ```
 
----
-
-#### 2.2.3 - Fichier .md parent :
+#### 2.2.3 - Fichier .md parent
 
 Chaque dossier doit contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant la présence du fichier d’index .md dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/04_Fichiers-index-en-markdown.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
+![Image décrivant la présence du fichier d’index .md dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/04_Fichiers-index-en-markdown.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit via son en-tête l’arborescence du dossier dans la navigation. L’en-tête de ce fichier peut être différent suivant deux cas :
 
 Cas n°1 : le sous-dossier correspondant se situe au premier niveau du menu latéral. Dans ce cas il faut écrire l’en-tête comme suit :
 
-```markdown
-## {% raw %}
-
+```njk
+{% raw %}
+---
 title: Créer des pages de documentation
 layout: layouts/parent.njk
 description: Création, modification et publication de documentation partenaire sur le site de documentation de Cartes.gouv.fr
@@ -185,17 +146,15 @@ key: Créer des pages de documentation
 order: 3
 nav: guides-producteur
 pictogram: "document/document-add.svg"
-
 ---
-
 {% endraw %}
 ```
 
 Cas n°2 : le sous-dossier correspondant se situe au deuxième ou au troisième niveau du menu latéral. Dans cas il faut ajouter un élément **« parent »** dans la partie **« eleventyNavigation »** :
 
-```markdown
-## {% raw %}
-
+```njk
+{% raw %}
+---
 title: Sous-dossier de niveau 2
 layout: layouts/parent.njk
 description: Description du sous-dossier de niveau 2
@@ -206,9 +165,7 @@ order: 1
 nav: guides-producteur
 parent: Créer des pages de documentation
 pictogram: "document/document-add.svg"
-
 ---
-
 {% endraw %}
 ```
 
@@ -225,18 +182,10 @@ Voir paragraphe 2.4 pour plus de détails sur les pictogrammes.
 Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 :::
 
----
-
-#### 2.2.4 - Fichier .11data.js :
+#### 2.2.4 - Fichier .11data.js
 
 Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichier-11tydata.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
-
+![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichier-11tydata.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier contient les informations suivantes (modifiez les **« tags »**, **« url »** et **« title »** pour correspondre à votre page) :
 
 ```njk
@@ -253,15 +202,13 @@ module.exports = {
 {% endraw %}
 ```
 
----
-
-#### 2.2.5 - Fichier .md décrivant le contenu de la page :
+#### 2.2.5 - Fichier .md décrivant le contenu de la page
 
 Le texte est découpé en 2 parties : un en-tête (ou cartouche) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte. L’en-tête est similaire à celui des pages parents :
 
-```markdown
-## {% raw %}
-
+```njk
+{% raw %}
+---
 title: Rédiger sa documentation
 tags: - Rédaction - Documentation - Modification - Github - Fork - Clone
 eleventyNavigation:
@@ -270,9 +217,7 @@ parent: Créer des pages de documentation
 order: 3
 nav: guides-producteur
 pictogram: document/document.svg
-
 ---
-
 {% endraw %}
 ```
 
@@ -284,16 +229,16 @@ Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple po
 {% endraw %}
 ```
 
-Le contenu des pages de documentation est rédigé en _<html lang="en">markdown</html>_ (_.md_), éditables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
+Le contenu des pages de documentation est rédigé en _markdown_ (_.md_), éditables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
 
 La syntaxe propre au <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener noreferrer" title="Documentation Markdown - ouvre une nouvelle fenêtre">mardown</a> est relativement simple. Ci-dessous vous pouvez retrouver les différentes syntaxes à utiliser :
 
-```markdown
-## 1 - Titre de niveau 1 :
+```njk
+## 1 - Titre de niveau 1
 
-### 1.1 - Titre de niveau 2 :
+### 1.1 - Titre de niveau 2
 
-#### 1.1.1 - Titre de niveau 3 :
+#### 1.1.1 - Titre de niveau 3
 
 **texte en gras**
 _texte en italique_
@@ -331,11 +276,7 @@ Pour afficher un lien s’ouvrant dans une nouvelle fenêtre :
 ````njk
 {% raw %}
 Pour afficher une image :
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-containe}
 
 Pour afficher un extrait de code :
     ```njk
@@ -353,7 +294,6 @@ Pour afficher un tableau
         ["cellule 3.1", "cellule 3.2", "cellule 3.3"]
     ]
 }) }}
-
 {% endraw %}
 ````
 
@@ -361,19 +301,12 @@ Pour afficher un tableau
 Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne et de garder les espaces tels que présentés ci-dessus.
 :::
 
----
-
-### 2.4 - Images et pictogrammes :
+### 2.4 - Images et pictogrammes
 
 Les images sont stockées dans le dossier **« cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/... »**. Il suffit de rajouter votre image dans le dossier correspondant.
 
 Il existe une liste de pictogrammes réutilisables dans le dossier **« cartes.gouv.fr-documentation_site\artwork\pictograms »**. Pour appeler un pictogramme existant dans l’en-tête, il suffit d’indiquer le dossier parent de l’en-tête et son nom :
-
-    <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-            ![Image décrivant l’en-tête du fichier de la page index](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/09_En-tete-et-pictogramme.png){.fr-responsive-img .frx-border-img}
-        </div>
-    </div>
+![Image décrivant l’en-tête du fichier de la page index](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/09_En-tete-et-pictogramme.png){.fr-responsive-img .frx-border-img .frx-img-containe}
 
 Il est possible de créer ses propres pictogrammes customisés. Il faut alors respecter les recommandations du DSFR : <a href="https://www.systeme-de-design.gouv.fr/fondamentaux/pictogramme/" target="_blank" rel="noopener noreferrer" title="Pictogramme Système de Design de l'État - ouvre une nouvelle fenêtre">Pictogramme - Système de Design de l'État </a>
 
@@ -386,6 +319,6 @@ Vous savez maintenant tout ce qu’il faut savoir pour modifier votre documentat
 ---
 
 :::callout Pour aller plus loin
-Si vous souhaitez avoir plus de détails sur l’utilisation de Visual Studio :
-<a href="https://learn.microsoft.com/fr-fr/visualstudio/windows/?view=vs-2022" target="_blank" rel="noopener noreferrer" title="Documentation VStudio - ouvre une nouvelle fenêtre">Documentation VStudio</a>
+Si vous souhaitez avoir plus de détails sur l’utilisation de Visual Studio Code :
+<a href="https://learn.microsoft.com/fr-fr/visualstudio/windows/?view=vs-2022" target="_blank" rel="noopener noreferrer" title="Documentation VS Code - ouvre une nouvelle fenêtre">Documentation VS Code</a>
 :::
