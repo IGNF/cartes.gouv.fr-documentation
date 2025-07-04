@@ -6,7 +6,7 @@ tags:
 eleventyNavigation:
     key: Se connecter
     order: 1
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 Se connecter

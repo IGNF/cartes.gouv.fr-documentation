@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Autocomplétion
     parent: Accéder aux géodonnées
     order: 5
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 A compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/autocompletion

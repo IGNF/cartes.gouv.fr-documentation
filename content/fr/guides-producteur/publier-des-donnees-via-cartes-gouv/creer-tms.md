@@ -10,7 +10,7 @@ eleventyNavigation:
     key: Créer et publier un service TMS
     parent: Publier des données via Cartes.gouv.fr
     order: 5
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/internet.svg
 ---
 

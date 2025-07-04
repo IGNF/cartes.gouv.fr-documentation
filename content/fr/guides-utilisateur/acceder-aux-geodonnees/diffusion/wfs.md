@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Sélection d'objets WFS
     parent: API de diffusion
     order: 5
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 Sélection d'objets WFS

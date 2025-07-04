@@ -12,7 +12,7 @@ eleventyNavigation:
     key: Créer et publier un service WMTS
     parent: Publier des données via Cartes.gouv.fr
     order: 7
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/internet.svg
 ---
 

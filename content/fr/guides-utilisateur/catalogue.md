@@ -3,7 +3,7 @@ title: Catalogue
 eleventyNavigation:
     key: Catalogue
     order: 3
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 Catalogue

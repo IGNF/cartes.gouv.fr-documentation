@@ -7,7 +7,7 @@ eleventyNavigation:
     key: Données vecteur
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 1
-    nav: developpeur
+    nav: guides-developpeur
 pictogram: map/map.svg
 ---
 

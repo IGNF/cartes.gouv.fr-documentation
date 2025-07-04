@@ -8,8 +8,8 @@ tags:
 eleventyNavigation:
     key: Demander la fusion au dépôt principal
     parent: Créer des pages de documentation
-    order: 4
-    nav: producteur
+    order: 5
+    nav: guides-producteur
 pictogram: custom/document-upload.svg
 ---
 

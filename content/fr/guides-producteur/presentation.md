@@ -8,6 +8,6 @@ tags:
 eleventyNavigation:
     key: Présentation de Cartes.gouv.fr
     order: 1
-    nav: producteur
+    nav: guides-producteur
 pictogram: "map/location-france.svg"
 ---

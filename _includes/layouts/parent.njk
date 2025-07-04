@@ -6,18 +6,26 @@ layout: layouts/base.njk
 <div class="fr-container" data-pagefind-ignore>
   <div class="fr-grid-row">
     <div class="fr-col-12 fr-col-md-4">
-      {% if eleventyNavigation.nav == "utilisateur" %}
+      {% if eleventyNavigation.nav == "guides-utilisateur" %}
         {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.utilisateurNavigation %}
         {% set sidemenuTitle = "Guides utilisateur" %}
-      {% elif eleventyNavigation.nav == "producteur" %}
+      {% elif eleventyNavigation.nav == "guides-producteur" %}
         {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.producteurNavigation %}
         {% set sidemenuTitle = "Guides producteur" %}
-      {% elif eleventyNavigation.nav == "developpeur" %}
+      {% elif eleventyNavigation.nav == "guides-developpeur" %}
         {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.developpeurNavigation %}
         {% set sidemenuTitle = "Guides développeur" %}
+      {% elif eleventyNavigation.nav == "nous-ecrire" %}
+        {% set navLinks = collections.nousEcrireNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.nousEcrireNavigation %}
+        {% set sidemenuTitle = "Nous écrire" %}
+      {% elif eleventyNavigation.nav == "ign" %}
+        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.ignNavigation %}
+        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
       {% endif %}
       {% include "templates/sidemenu.njk" %}
     </div>

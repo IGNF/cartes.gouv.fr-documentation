@@ -10,7 +10,7 @@ eleventyNavigation:
     key: Étapes préalables aux modifications
     parent: Créer des pages de documentation
     order: 2
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/in-progress.svg
 ---
 
@@ -92,10 +92,22 @@ git stash apply
 ```
 
 :::info
-Les commandes peuvent se lancer depuis n’importe quel sous-dossier mais il est conseillé de se placer à la racine du projet.
+Les commandes peuvent se lancer depuis n’importe quelle branche mais il est conseillé de se placer à la racine du projet.
 :::
 
-## 5 - Exécuter _Eleventy_ pour construire le site
+## 5 - Changer son pseudonyme sur _github_
+
+Par défaut _github_ génère votre pseudonyme à partir des informations de votre ordinateur. Pour modifier le pseudonyme et le courriel à utiliser (qui seront visibles par tous les contributeurs), lancez les commandes suivantes sur *Git Bash* :
+
+```bash
+{% raw %}
+git config --global user.name "MonPseudoGithub"
+
+git config --global user.email mail@domaine.fr
+{% endraw %}
+```
+
+## 6 - Exécuter _Eleventy_ pour construire le site
 
 Cette procédure permet de prévisualiser votre clone local et toutes les modifications que vous y apportez dans votre navigateur, avant d’en demander la fusion finale au dépôt principal. La prévisualisation est disponible sous l’adresse <a href="http://localhost:8080/fr" target="_blank" rel="noopener noreferrer" title="http://localhost:8080/fr - ouvre une nouvelle fenêtre">http://localhost:8080/fr</a>.
 

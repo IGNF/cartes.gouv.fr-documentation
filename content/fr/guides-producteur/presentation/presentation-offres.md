@@ -9,7 +9,7 @@ eleventyNavigation:
     key: Présentation des offres
     parent: Présentation de Cartes.gouv.fr
     order: 3
-    nav: producteur
+    nav: guides-producteur
 pictogram: leisure/book.svg
 ---
 

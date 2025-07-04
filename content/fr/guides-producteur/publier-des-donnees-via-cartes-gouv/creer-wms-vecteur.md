@@ -14,7 +14,7 @@ eleventyNavigation:
     key: Créer et publier un service WMS-Vecteur
     parent: Publier des données via Cartes.gouv.fr
     order: 4
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/internet.svg
 ---
 

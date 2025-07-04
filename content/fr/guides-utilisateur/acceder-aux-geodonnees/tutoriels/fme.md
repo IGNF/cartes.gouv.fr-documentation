@@ -6,7 +6,7 @@ eleventyNavigation:
     key: FME
     parent: Tutoriels API
     order: 3
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 FME

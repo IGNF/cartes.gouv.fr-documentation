@@ -7,7 +7,7 @@ eleventyNavigation:
     key: Espace personnel
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 8
-    nav: developpeur
+    nav: guides-developpeur
 pictogram: document/national-identity-card.svg
 ---
 

@@ -8,7 +8,7 @@ eleventyNavigation:
     key: Déposer ses données sur Cartes.gouv.fr
     parent: Publier des données via Cartes.gouv.fr
     order: 1
-    nav: producteur
+    nav: guides-producteur
 pictogram: document/document-add.svg
 ---
 

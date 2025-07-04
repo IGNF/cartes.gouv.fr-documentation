@@ -13,7 +13,7 @@ eleventyNavigation:
     key: Créer et publier un service WFS
     parent: Publier des données via Cartes.gouv.fr
     order: 3
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/internet.svg
 ---
 

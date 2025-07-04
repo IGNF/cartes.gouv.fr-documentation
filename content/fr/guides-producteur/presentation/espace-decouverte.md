@@ -7,7 +7,7 @@ eleventyNavigation:
     key: Accéder à l’espace de travail « Découverte »
     parent: Présentation de Cartes.gouv.fr
     order: 4
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/search.svg
 ---
 

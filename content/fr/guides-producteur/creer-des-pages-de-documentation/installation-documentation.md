@@ -9,7 +9,7 @@ eleventyNavigation:
     key: Installation de la documentation
     parent: Créer des pages de documentation
     order: 1
-    nav: producteur
+    nav: guides-producteur
 pictogram: document/document-download.svg
 ---
 

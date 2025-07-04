@@ -7,7 +7,7 @@ eleventyNavigation:
     key: Données complémentaires
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 4
-    nav: developpeur
+    nav: guides-developpeur
 pictogram: document/document-add.svg
 ---
 

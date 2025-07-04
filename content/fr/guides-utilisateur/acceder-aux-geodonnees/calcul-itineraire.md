@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Calcul d'itinéraire
     parent: Accéder aux géodonnées
     order: 7
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 A compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/itineraire

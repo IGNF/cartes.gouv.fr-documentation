@@ -3,7 +3,7 @@ title: À propos
 layout: layouts/page.njk
 eleventyNavigation:
     key: À propos
-    order: 9
+    order: 8
     nav: main
 slugOverride: a-propos
 ---

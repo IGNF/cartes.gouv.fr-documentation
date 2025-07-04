@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Calcul altimétrique
     parent: Accéder aux géodonnées
     order: 6
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 A compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/altimetrie

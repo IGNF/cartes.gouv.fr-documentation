@@ -6,7 +6,7 @@ eleventyNavigation:
     key: QGIS
     parent: Tutoriels API
     order: 1
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 QGIS

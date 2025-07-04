@@ -6,7 +6,7 @@ eleventyNavigation:
     key: AcrGIS
     parent: Tutoriels API
     order: 2
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 AcrGIS

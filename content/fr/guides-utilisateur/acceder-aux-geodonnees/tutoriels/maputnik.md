@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Maputnik
     parent: Tutoriels API
     order: 5
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 Maputnik

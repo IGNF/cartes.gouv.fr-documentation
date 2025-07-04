@@ -7,7 +7,7 @@ eleventyNavigation:
     key: Offre « Essentielle »
     parent: Présentation de Cartes.gouv.fr
     order: 5
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/search.svg
 ---
 

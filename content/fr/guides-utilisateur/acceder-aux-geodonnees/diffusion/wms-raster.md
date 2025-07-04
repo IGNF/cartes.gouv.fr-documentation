@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Images WMS-Raster
     parent: API de diffusion
     order: 3
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 Images WMS-Raster

@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Service Géoplateforme de recherche
     parent: Accéder aux géodonnées
     order: 9
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 ## Généralités

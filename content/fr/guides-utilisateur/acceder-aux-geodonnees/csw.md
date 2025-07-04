@@ -7,7 +7,7 @@ eleventyNavigation:
     key: Découverte des métadonnées CSW
     parent: Accéder aux géodonnées
     order: 3
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 ## Présentation

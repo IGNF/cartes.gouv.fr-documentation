@@ -7,7 +7,7 @@ eleventyNavigation:
     key: Contrôle des accès
     parent: Tutoriels d'utilisation de l'Entrepôt
     order: 5
-    nav: developpeur
+    nav: guides-developpeur
 pictogram: system/padlock.svg
 ---
 

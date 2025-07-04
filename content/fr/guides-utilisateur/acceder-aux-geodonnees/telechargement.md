@@ -6,7 +6,7 @@ eleventyNavigation:
     key: API de téléchargement
     parent: Accéder aux géodonnées
     order: 2
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 ## Présentation

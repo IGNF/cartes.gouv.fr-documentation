@@ -13,7 +13,7 @@ eleventyNavigation:
     key: Créer et publier un service WMS-Raster
     parent: Publier des données via Cartes.gouv.fr
     order: 6
-    nav: producteur
+    nav: guides-producteur
 pictogram: digital/internet.svg
 ---
 

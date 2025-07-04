@@ -6,5 +6,5 @@ tags:
 eleventyNavigation:
     key: Accéder aux géodonnées
     order: 5
-    nav: utilisateur
+    nav: guides-utilisateur
 ---

@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Global Mapper
     parent: Tutoriels API
     order: 6
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 Global Mapper

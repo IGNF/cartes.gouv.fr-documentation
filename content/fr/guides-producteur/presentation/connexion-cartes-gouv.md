@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Connexion à Cartes.gouv.fr
     parent: Présentation de Cartes.gouv.fr
     order: 2
-    nav: producteur
+    nav: guides-producteur
 pictogram: map/location-france.svg
 ---
 

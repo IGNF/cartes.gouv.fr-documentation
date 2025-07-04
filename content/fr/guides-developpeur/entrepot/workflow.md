@@ -4,7 +4,7 @@ eleventyNavigation:
     key: Workflow général d'utilisation de l'entrepôt
     parent: Concepts de l'Entrepôt
     order: 1
-    nav: developpeur
+    nav: guides-developpeur
 pictogram: system/system.svg
 ---
 

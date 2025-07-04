@@ -94,19 +94,25 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addCollection("utilisateurNavigation", function (collectionApi) {
         return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "utilisateur";
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "guides-utilisateur";
         });
     });
 
     eleventyConfig.addCollection("developpeurNavigation", function (collectionApi) {
         return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "developpeur";
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "guides-developpeur";
         });
     });
 
     eleventyConfig.addCollection("producteurNavigation", function (collectionApi) {
         return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "producteur";
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "guides-producteur";
+        });
+    });
+
+    eleventyConfig.addCollection("nousEcrireNavigation", function (collectionApi) {
+        return collectionApi.getAll().filter((item) => {
+            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "nous-ecrire";
         });
     });
 
@@ -183,8 +189,12 @@ module.exports = function (eleventyConfig) {
         return collection.find((post) => post.fileSlug === slug);
     });
 
-    eleventyConfig.addFilter("filterByPathStart", function (arr, pathStart) {
-        return arr.filter((item) => item.inputPath.startsWith(pathStart));
+    eleventyConfig.addFilter("filterRoot", function (arr, pathStart) {
+        return arr.filter((item) => {
+            if (!item.inputPath.startsWith(pathStart)) return false;
+            const relative = item.inputPath.slice(pathStart.length);
+            return !relative.includes("/");
+        });
     });
 
     eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {

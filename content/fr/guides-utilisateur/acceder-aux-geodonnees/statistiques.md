@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Statistiques d'utilisation
     parent: Accéder aux géodonnées
     order: 10
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
 
 API de statistiques d'utilisation

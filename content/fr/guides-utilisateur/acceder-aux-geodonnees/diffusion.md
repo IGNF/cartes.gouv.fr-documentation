@@ -7,5 +7,5 @@ eleventyNavigation:
     key: API de diffusion
     parent: Accéder aux géodonnées
     order: 1
-    nav: utilisateur
+    nav: guides-utilisateur
 ---
