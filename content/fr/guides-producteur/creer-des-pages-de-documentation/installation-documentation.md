@@ -44,19 +44,19 @@ Si vous travaillez derrière un _proxy_, il est nécessaire de vérifier vos var
 Rendez-vous sur le _github_ du projet : <a href="https://github.com/IGNF/cartes.gouv.fr-documentation" target="_blank" rel="noopener noreferrer" title="https://github.com/IGNF/cartes.gouv.fr-documentation - ouvre une nouvelle fenêtre">https://github.com/IGNF/cartes.gouv.fr-documentation</a>. Il faut dupliquer le projet sur votre espace _Github_ afin de pouvoir faire les changements de votre côté, les prévisualiser, puis les soumettre au dépôt principal.
 
 Dans le coin supérieur droit de la page, cliquez sur **« Fork »** (**« Dupliquer »** en français) puis **« Create a new fork »**.
-![Image décrivant la description précédente](/img/guides/producteur/creer-des-pages-de-documentation/installation-documentation/01_Dupliquer-le-depot.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant la description précédente](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/01_Dupliquer-le-depot.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Dans le champ **« Description »**, vous pouvez renseigner la description de votre _fork_/duplication. Si vous le souhaitez, sélectionnez **« Copier la branche PAR DÉFAUT »** uniquement.
 
 Cliquez sur **« Create a new fork »** (**« Créer une duplication »** en français).
 
 Votre _fork_/duplication du dépôt sera disponible sous l’URL **« https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation »**. Vous bénéficiez alors d’un espace de travail qui vous est propre. Vous pourrez choisir de soumettre au dépôt principal seulement les éléments que vous choisissez.
-![Image décrivant le résultat de la duplication](/img/guides/producteur/creer-des-pages-de-documentation/installation-documentation/02_Resultat-duplication.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le résultat de la duplication](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/02_Resultat-duplication.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### 2.2 - Cloner le dépôt sur votre ordinateur
 
 Sous Windows, après avoir installé _Git for Windows_, vous devriez avoir accès au clic droit dans l’explorateur à un menu contextuel **« Git Bash here »** qui vous permet de lancer une invite de commande qui est très adaptée à l’utilisation de _Git_ et offre une bonne coloration syntaxique. Il est recommandé de la préférer à l’invite de commande par défaut de Windows.
-![Image décrivant le clic-droit > Git Bash Here](/img/guides/producteur/creer-des-pages-de-documentation/installation-documentation/03_Ouvrir-git-bash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-![Image décrivant l’apparence de la console git](/img/guides/producteur/creer-des-pages-de-documentation/installation-documentation/04_Resultat-ouvrir-git-bash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le clic-droit > Git Bash Here](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/03_Ouvrir-git-bash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant l’apparence de la console git](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/04_Resultat-ouvrir-git-bash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Les lignes de commandes qui suivent pourront être copiées, puis collées (**« maj+Inser »** ou **clic droit** > **« paste »**) et executées (**Entrée**) dans l’invite de commande qui a été ouverte.
 
 Rendez-vous dans votre dossier à l’endroit où vous souhaitez coller le projet de documentation, puis faites un **clic droit** > **« Git Bash Here »** et collez la commande suivante (en remplaçant l’url par celle de votre _fork_) :
