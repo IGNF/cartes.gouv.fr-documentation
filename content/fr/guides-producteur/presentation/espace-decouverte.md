@@ -19,7 +19,8 @@ Cet espace « bac à sable » est commun à tous les utilisateurs. Y sont donc
 
 ## 1 - Accéder à l’espace « Déouverte »
 
-Rendez-vous dans votre tableau de bord en cliquant sur votre profil en haut à droite de la page. Puis ouvrez l’onglet **« Découverte »** :
+Rendez-vous dans votre tableau de bord en cliquant sur votre profil en haut à droite de la page. Puis ouvrez l’onglet **« Découverte »** 
+
 ![Image décrivant la page d’accueil de l’espace Découverte](/img/guides-producteur/presentation/espace-decouverte/01_decouverte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
@@ -27,6 +28,7 @@ Si le site indique que vous n’avez pas les droits, patientez une minute ou deu
 :::
 
 Vous accéderez alors à l’espace mutualisé **« Données Découverte »** :
+
 ![Image décrivant l’espace découverte mutualisé](/img/guides-producteur/presentation/espace-decouverte/02_donnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## 2 - Créer une fiche de données
