@@ -26,7 +26,7 @@
     },
     "license": "MIT",
     "engines": {
-        "node": ">=18"
+        "node": ">=22.14.0"
     },
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1",
@@ -35,7 +35,7 @@
         "@11ty/eleventy-plugin-bundle": "^1.0.5",
         "@11ty/eleventy-plugin-rss": "^1.2.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-        "@gouvfr/dsfr": "^1.11.2",
+        "@gouvfr/dsfr": "^1.14.0",
         "chalk": "^5.0.0",
         "husky": "^9.0.11",
         "ics": "^3.8.1",

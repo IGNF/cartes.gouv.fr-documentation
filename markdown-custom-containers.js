@@ -13,7 +13,7 @@ module.exports = {
                     // opening tag
                     return `
 <div class="fr-callout">
-    <h3 class="fr-callout__title">${md.utils.escapeHtml(params?.[1]) || ""}</h3>
+    <p class="fr-callout__title">${md.utils.escapeHtml(params?.[1]) || ""}</p>
     <div class="fr-callout__text">
 `;
                 } else {
