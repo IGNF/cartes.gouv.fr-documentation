@@ -24,7 +24,8 @@ Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pri
 ## 1 - Enregistrer
 
 Pensez à bien enregistrer toutes vos modifications, sinon elles ne seront pas prises en compte dans la suite de la procédure. Dans _Visual Studio_ un petit rond apparait à côté du nom du fichier si celui-ci a été modifié et pas encore enregistré.
-![Image décrivant un fichier non enregistré dans Visual Studio](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/01_Fichier-non-enregistre.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant un fichier non enregistré dans Visual Studio](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/01_Fichier-non-enregistre.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## 2 - Passer en revue les modifications
 
@@ -42,7 +43,7 @@ Cela vous résumera toutes les modifications que vous avez faites sur votre clon
 Les fichiers non-enregistrés peuvent ne pas apparaitre dans la liste des modifications.
 :::
 
-![Image décrivant le résultat de la commande git status](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/02_Git-status.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le résultat de la commande git status](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/02_Git-status.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## 3 - Choisir les fichiers à fusionner
 
@@ -77,7 +78,8 @@ git push --set-upstream origin nom-de-votre-branche
 :::
 
 Vous pouvez voir sur le _github_ de votre _fork_ que celle-ci est à présent en avance de _commit_ par rapport au dépôt principal :
-![Image décrivant l’avance du fork sur le dépôt princiapl](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/03_Avance-du-fork-sur-le-depot-principal.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant l’avance du fork sur le dépôt princiapl](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/03_Avance-du-fork-sur-le-depot-principal.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## 5 - Demander une _pull request_
 
@@ -86,7 +88,9 @@ La dernière étape consiste à demander au dépôt principal d’accepter vos m
 En restant sur la même page _github_, cliquez sur **« Contribute »** puis sur **« Open pull request »**
 
 Ajoutez un titre et une description concise puis cliquez sur **« Create pull request »**.
-![Image décrivant la demande de pull request](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/04_Demande-de-pull-request.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant la demande de pull request](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/04_Demande-de-pull-request.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès que cela sera fait, les modifications apparaitront sur le site.
 
 ## 6 - Supprimer la branche
@@ -94,9 +98,13 @@ Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès
 Une fois que la _pull request_ a été acceptée, il faudra supprimer la branche.
 
 Une _pull request_ acceptée apparaitra en violet avec cette icône :
-![Image décrivant une pull request acceptée](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/05_Pull-request-accepte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant une pull request acceptée](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/05_Pull-request-accepte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Pour supprimer une branche, il suffit de se rendre sur _github_, sur votre _fork_, et de cliquer sur **« Branch »** :
-![Image décrivant commment accéder à ses branches sur github](/img/guides/producteur/creer-des-pages-de-documentation/demander-pull-request/06_Supprimer-branche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant comment accéder à ses branches sur github](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/06_Supprimer-branche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Il vous suffit alors de supprimer la branche concernée par la _pull request_ acceptée.
 
 ---

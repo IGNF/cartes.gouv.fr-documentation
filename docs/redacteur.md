@@ -15,6 +15,7 @@ A la suite de l'installation de VS Code, vous pouvez prévisualiser l'écriture 
 `crtl+k` puis `V` ou cliquer sur le bouton de prévisualisation
 
 ![alt text](img/image-2.png)
+
 ![alt text](img/image-4.png)
 
 #### Dans un autre onglet de VS Code

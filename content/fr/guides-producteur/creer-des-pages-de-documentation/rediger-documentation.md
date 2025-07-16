@@ -29,13 +29,16 @@ Avant de commencer vos modifications, pensez à effectuer les étapes préalable
 ### 1.1 - Dans la même fenêtre _VS Code_
 
 Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers **« crtl+k »** puis **« V »**) :
-![Image décrivant le bouton de prévisualisation](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant le bouton de prévisualisation](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### 1.2 - Dans un autre onglet de _VS Code_
 
 Utilisez les raccourcis clavier **« Ctrl + Shift + V »**
-![Image décrivant le résultat de l’opération précédente](/img/guides/producteur/creer-des-pages-de-documentation/rediger-documentation/03_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/03_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## 2 - Effectuer des modifications
 
@@ -129,6 +132,7 @@ Dans le fichier _parent.njk_ situé dans **« _includes/layouts »**, en rempl
 #### 2.2.3 - Fichier .md parent
 
 Chaque dossier doit contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
+
 ![Image décrivant la présence du fichier d’index .md dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/04_Fichiers-index-en-markdown.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit via son en-tête l’arborescence du dossier dans la navigation. L’en-tête de ce fichier peut être différent suivant deux cas :
 
@@ -181,6 +185,7 @@ Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 #### 2.2.4 - Fichier .11data.js
 
 Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
+
 ![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichier-11tydata.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier contient les informations suivantes (modifiez les **« tags »**, **« url »** et **« title »** pour correspondre à votre page) :
 
@@ -274,7 +279,8 @@ Pour afficher un lien s’ouvrant dans une nouvelle fenêtre :
 ````njk
 {% raw %}
 Pour afficher une image :
-![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-containe}
+
+![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Pour afficher un extrait de code :
     ```njk
@@ -304,7 +310,8 @@ Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne
 Les images sont stockées dans le dossier **« cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/... »**. Il suffit de rajouter votre image dans le dossier correspondant.
 
 Il existe une liste de pictogrammes réutilisables dans le dossier **« cartes.gouv.fr-documentation_site\artwork\pictograms »**. Pour appeler un pictogramme existant dans l’en-tête, il suffit d’indiquer le dossier parent de l’en-tête et son nom :
-![Image décrivant l’en-tête du fichier de la page index](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/09_En-tete-et-pictogramme.png){.fr-responsive-img .frx-border-img .frx-img-containe}
+
+![Image décrivant l’en-tête du fichier de la page index](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/06_En-tete-et-pictogramme.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Il est possible de créer ses propres pictogrammes customisés. Il faut alors respecter les recommandations du DSFR : <a href="https://www.systeme-de-design.gouv.fr/fondamentaux/pictogramme/" target="_blank" rel="noopener noreferrer" title="Pictogramme Système de Design de l'État - ouvre une nouvelle fenêtre">Pictogramme - Système de Design de l'État </a>
 
