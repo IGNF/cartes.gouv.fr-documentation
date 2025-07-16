@@ -90,6 +90,7 @@ En restant sur la même page _github_, cliquez sur **« Contribute »** puis s
 Ajoutez un titre et une description concise puis cliquez sur **« Create pull request »**.
 
 ![Image décrivant la demande de pull request](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/04_Demande-de-pull-request.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès que cela sera fait, les modifications apparaitront sur le site.
 
 ## 6 - Supprimer la branche
@@ -99,9 +100,11 @@ Une fois que la _pull request_ a été acceptée, il faudra supprimer la branche
 Une _pull request_ acceptée apparaitra en violet avec cette icône :
 
 ![Image décrivant une pull request acceptée](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/05_Pull-request-accepte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Pour supprimer une branche, il suffit de se rendre sur _github_, sur votre _fork_, et de cliquer sur **« Branch »** :
 
-![Image décrivant commment accéder à ses branches sur github](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/06_Supprimer-branche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant comment accéder à ses branches sur github](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/06_Supprimer-branche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Il vous suffit alors de supprimer la branche concernée par la _pull request_ acceptée.
 
 ---

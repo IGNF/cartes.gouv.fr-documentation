@@ -46,6 +46,7 @@ Rendez-vous sur le _github_ du projet : <a href="https://github.com/IGNF/cartes
 Dans le coin supérieur droit de la page, cliquez sur **« Fork »** (**« Dupliquer »** en français) puis **« Create a new fork »**.
 
 ![Image décrivant la description précédente](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/01_Dupliquer-le-depot.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Dans le champ **« Description »**, vous pouvez renseigner la description de votre _fork_/duplication. Si vous le souhaitez, sélectionnez **« Copier la branche PAR DÉFAUT »** uniquement.
 
 Cliquez sur **« Create a new fork »** (**« Créer une duplication »** en français).
@@ -61,6 +62,7 @@ Sous Windows, après avoir installé _Git for Windows_, vous devriez avoir accè
 ![Image décrivant le clic-droit > Git Bash Here](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/03_Ouvrir-git-bash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ![Image décrivant l’apparence de la console git](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/04_Resultat-ouvrir-git-bash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Les lignes de commandes qui suivent pourront être copiées, puis collées (**« maj+Inser »** ou **clic droit** > **« paste »**) et executées (**Entrée**) dans l’invite de commande qui a été ouverte.
 
 Rendez-vous dans votre dossier à l’endroit où vous souhaitez coller le projet de documentation, puis faites un **clic droit** > **« Git Bash Here »** et collez la commande suivante (en remplaçant l’url par celle de votre _fork_) :

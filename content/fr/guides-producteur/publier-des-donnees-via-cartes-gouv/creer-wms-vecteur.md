@@ -56,9 +56,11 @@ La création d’un fichier _SLD_ fait l’objet d’un autre tutoriel.
 Dans le parcours **« Découverte »**, les données ne seront pas visibles dans le catalogue. Toutefois, prenez l’habitude de renseigner soigneusement ces champs qui seraient visibles dans la fiche de donnée du catalogue dans l’offre **« Essentielle »**. Tous les champs sont obligatoires.
 
 ![Description de la ressource](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/05_description.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Remplissez les informations complémentaires suivantes :
 
 ![Attribution, informations sur les metadonnées et type de représentation spatiale](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/06_info-metadonnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Ces métadonnées sont à remplir uniquement pour le premier service de votre fiche de données. Vous retrouverez la plupart des champs déjà remplis lors de la publication d’autres services (WFS/WMS/TMS).
 
 ### 1.6 - Restriction d’accès
@@ -78,6 +80,7 @@ Cliquez sur **« Publier le service maintenant »**. À la suite d’un écran
 Pour visualiser cartographiquement les données du service WMS ainsi créé, cliquez sur **« Visualiser »** afin d’accéder à l’écran suivant :
 
 ![Visualisation d’un service WMS](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/09_visualisation.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 L’affichage est déjà plus rapide que le WFS mais les images demandées sont générées à la demande, il n’y a pas encore de tuiles précalculées.
 
 Si vous voulez changer de style, il faut publier un autre service WMS ou modifier les informations de publication de ce service existant.

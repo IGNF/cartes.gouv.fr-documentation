@@ -63,6 +63,7 @@ La génération des pyramides peut prendre du temps. Si vos données sont très 
 ![Image décrivant la possibilité de tester sur un échantillon](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/06_echantillon.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ![Image décrivant l’emprise de l’échantillon](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/07_echantillon2.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Vous pourrez alors vérifier que tous les tests de vérification ont bien été passés avec succès en cliquant sur le bouton de menu à droite de l’échantillon, puis sur **« Voir les détails »** :
 
 ![Image décrivant la possibilité de tester sur un échantillon](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/08_verifier-echantillon.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -90,9 +91,11 @@ S’agissant d’un flux de données vecteur, comme pour le WFS, l’application
 Dans le parcours **« Découverte »**, les données ne seront pas visibles dans le catalogue. Toutefois, prenez l’habitude de renseigner soigneusement ces champs qui seraient visibles dans la fiche de donnée du catalogue dans l’offre **« Essentielle »**. Tous les champs sont obligatoires.
 
 ![Description de la ressource](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/11_description-ressource.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Remplissez les informations complémentaires suivantes :
 
 ![Description de la ressource](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/12_description-ressource2.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Ces métadonnées sont à remplir uniquement pour le premier service de votre fiche de données. Vous retrouverez la plupart des champs déjà remplis lors de la publication d’autres services (WFS/WMS/TMS).
 
 ### 2.4 - Restriction d’accès

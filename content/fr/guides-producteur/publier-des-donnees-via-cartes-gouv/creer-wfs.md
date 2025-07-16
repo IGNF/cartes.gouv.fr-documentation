@@ -51,9 +51,11 @@ Dans le parcours **« Découverte »**, les données ne seront pas visibles da
 ![Description](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/06_description.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ![Référence temporelle et responsable de la ressource](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/07_ref-temporelle.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Remplissez les informations complémentaires suivantes :
 
 ![Attribution, informations sur les métadonnées et type de représentation spatiale](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/08_info-supp.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Ces métadonnées sont à remplir uniquement pour le premier service de votre fiche de données. Vous retrouverez la plupart des champs déjà remplis lors de la publication d’autres services (WFS/WMS/TMS).
 
 ### 1.5 - Restricitons d’accès

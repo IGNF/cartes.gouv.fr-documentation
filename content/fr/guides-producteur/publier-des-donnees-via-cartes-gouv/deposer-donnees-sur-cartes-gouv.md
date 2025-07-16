@@ -26,6 +26,7 @@ Téléversez votre fichier en cliquant sur **« Parcourir »**. Le format de f
 Avant de cliquer sur **« Déposer votre fichier »**, vous pouvez, si besoin, modifier deux champs identifiés dans votre donnée : le **« Nom technique de votre donnée »** et la **« Projection de vos données »** (projection des données d’origine) :
 
 ![Image décrivant les informations complémentaires à renseigner lors de la création d’une fiche de données](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/deposer-donnees-sur-cartes-gouv/02_creer-fiche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Le processus **« Vos données vecteur sont en cours de dépôt »** se met en route. Voici en quatre étapes son fonctionnement côté API :
 
 - Chargement du fichier
@@ -42,6 +43,7 @@ Ce processus peut prendre quelques minutes. Des travaux d’amélioration des pe
 La fiche de données est désormais stockée et classée en **« Non publié »**, dans l’onglet **« Données Découvertes »**.
 
 ![Image décrivant la fiche de données ainsi créée](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/deposer-donnees-sur-cartes-gouv/04_fiche-donnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 À partir de ce moment, si vous quittez Cartes.gouv.fr, vous pourrez éventuellement revenir à votre fiche de données et cliquer sur **« reprendre l’intégration »**.
 
 Vos données sont stockées avec d’autres données de test dans le *bac à sable* :

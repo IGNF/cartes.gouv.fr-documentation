@@ -69,9 +69,11 @@ Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en co
 Dans le parcours **« Découverte »**, les données ne seront pas visibles dans le catalogue. Toutefois, prenez l’habitude de renseigner soigneusement ces champs qui seraient visibles dans la fiche de donnée du catalogue dans l’offre **« Essentielle »**. Tous les champs sont obligatoires.
 
 ![Description de la ressource](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wmts/08_description-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Remplissez les informations complémentaires suivantes :
 
 ![Description de la ressource](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wmts/09_info-complementaires-metadonnees-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 Ces métadonnées sont à remplir uniquement pour le premier service de votre fiche de données. Vous retrouverez la plupart des champs déjà remplis lors de la publication d’autres services (WFS/WMS/TMS).
 
 ### 2.4 - Restriction d’accès
