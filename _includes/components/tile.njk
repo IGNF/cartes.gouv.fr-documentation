@@ -1,10 +1,14 @@
 {% if not tile %}
     {% set tile = params %}
 {% endif %}
-<div class="fr-tile fr-enlarge-link">
+<div class="fr-tile {% if tile.small %} fr-tile--sm {% endif %} fr-enlarge-link">
     <div class="fr-tile__body">
         <div class="fr-tile__content">
-            {% set tileUrl = tile.url | locale_url or tile.externalUrl %}
+            {% if tile.url is string %}
+                {% set tileUrl = tile.url %}
+            {% else %}
+                {% set tileUrl = tile.externalUrl %}
+            {% endif %}
             {% set urlDescription %}
                 {{ tile.title }}
                 {% if tile.externalUrl %}- {{ "new_window" | i18n }}{% endif %}

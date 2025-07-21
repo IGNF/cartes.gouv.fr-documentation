@@ -95,6 +95,24 @@ h2 + .header-anchor {
     }
 }
 
+@media (min-width: 62em) {
+    .five-cols > div {
+        flex: 0 0 20%;
+    }
+}
+
+@media (max-width: 48em) {
+    .hide-below-md {
+        display: none !important;
+    }
+}
+
+@media (max-width: 62em) {
+    .hide-below-lg {
+        display: none !important;
+    }
+}
+
 .fr-responsive-img.fr-ratio-auto {
     object-fit: contain;
 }
@@ -145,6 +163,14 @@ div.fr-callout__text p {
 /* Custom */
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.black-text {
+    color: #000;
 }
 
 .frx-swagger-ui {
