@@ -1,6 +1,8 @@
 ---
 title: Guides développeur
 layout: layouts/accueil.njk
+tags:
+    - Développeur
 eleventyNavigation:
     key: Guides développeur
     order: 2

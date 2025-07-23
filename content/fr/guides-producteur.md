@@ -1,6 +1,8 @@
 ---
 title: Guides producteur
 layout: layouts/accueil.njk
+tags:
+    - Producteur
 eleventyNavigation:
     key: Guides producteur
     order: 3

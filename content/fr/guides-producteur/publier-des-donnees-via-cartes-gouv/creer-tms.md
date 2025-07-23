@@ -4,7 +4,6 @@ tags:
     - TMS
     - Vecteur
     - Service
-    - Publier
     - Métadonnée
 eleventyNavigation:
     key: Créer et publier un service TMS

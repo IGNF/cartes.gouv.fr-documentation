@@ -1,6 +1,9 @@
 ---
 title: Nous écrire
 layout: layouts/accueil.njk
+tags:
+    - Assistance
+    - Aide
 eleventyNavigation:
     key: Nous écrire
     order: 5

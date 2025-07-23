@@ -5,7 +5,6 @@ tags:
     - WMS-Raster
     - Raster
     - Service
-    - Publier
     - Métadonnée
     - Style
     - SLD

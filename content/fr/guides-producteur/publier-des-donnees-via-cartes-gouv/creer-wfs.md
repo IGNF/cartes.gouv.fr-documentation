@@ -4,7 +4,6 @@ tags:
     - WFS
     - Vecteur
     - Service
-    - Publier
     - Métadonnée
     - Style
     - SLD

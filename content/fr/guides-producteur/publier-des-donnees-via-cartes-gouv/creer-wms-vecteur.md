@@ -6,7 +6,6 @@ tags:
     - Vecteur
     - Raster
     - Service
-    - Publier
     - Métadonnée
     - Style
     - SLD

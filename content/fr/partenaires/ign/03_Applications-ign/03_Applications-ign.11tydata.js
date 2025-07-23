@@ -1,9 +1,9 @@
 module.exports = {
-    tags: ["IGNF", "Applications"],
+    tags: ["Applications"],
     segments: [
         {
             url: "/partenaires/ign/03_Applications-ign",
-            title: "Présentation des applications et autres services de l’IGNF",
+            title: "Présentation des applications et autres services de l'IGNF",
         },
     ],
 };

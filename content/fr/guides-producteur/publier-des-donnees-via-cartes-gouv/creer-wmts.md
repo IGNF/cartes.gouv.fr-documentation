@@ -4,7 +4,6 @@ tags:
     - WMTS
     - Raster
     - Service
-    - Publier
     - Métadonnée
     - Style
     - SLD

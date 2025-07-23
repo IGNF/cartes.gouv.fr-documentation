@@ -3,7 +3,7 @@ layout: layouts/base.njk
 ---
 
 {% from "components/component.njk" import component with context %}
-<div class="fr-container" data-pagefind-ignore>
+<div class="fr-container">
   <div class="fr-grid-row">
     <div class="fr-col-12 fr-col-md-4">
       {% set effectiveNav = eleventyNavigation.nav %}
@@ -29,7 +29,7 @@ layout: layouts/base.njk
       {% elif effectiveNav == "ign" %}
         {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.ignNavigation %}
-        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+        {% set sidemenuTitle = "Institut national de l'information géographique et forestière" %}
       {% endif %}
       {% include "templates/sidemenu.njk" %}
     </div>

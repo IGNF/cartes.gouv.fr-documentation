@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 ---
 
 {% macro renderTree(node) %}
-  <ul>
+  <ul data-pagefind-ignore>
     {% for segment, data in node %}
       <li>
         {% if data.__page %}
