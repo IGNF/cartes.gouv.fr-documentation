@@ -1,5 +1,5 @@
 module.exports = {
-    tags: ["IGNF", "Données"],
+    tags: ["Données"],
     segments: [
         {
             url: "/partenaires/ign/02_donnees-ign",

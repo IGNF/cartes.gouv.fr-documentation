@@ -3,7 +3,6 @@ title: Choisir le flux à publier
 tags:
     - Flux
     - Service
-    - Publier
 eleventyNavigation:
     key: Choisir le flux à publier
     parent: Publier des données via Cartes.gouv.fr

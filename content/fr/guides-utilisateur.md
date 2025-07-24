@@ -1,6 +1,8 @@
 ---
 title: Guides utilisateur
 layout: layouts/accueil.njk
+tags:
+    - Utilisateur
 eleventyNavigation:
     key: Guides utilisateur
     order: 1

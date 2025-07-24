@@ -1,4 +1,5 @@
 module.exports = {
+    tags: ["Présentation"],
     segments: [
         {
             url: "/guides-producteur/presentation",

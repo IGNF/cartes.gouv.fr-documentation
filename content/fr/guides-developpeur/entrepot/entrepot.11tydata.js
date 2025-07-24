@@ -1,5 +1,5 @@
 module.exports = {
-    tags: ["Géoplateforme", "Entrepôt"],
+    tags: ["Géoplateforme", "Entrepôt", "Concepts Entrepôt", "Terminologie", "Workflow d'alimentation"],
     segments: [
         {
             url: "/guides-developpeur/entrepot",

@@ -3,6 +3,8 @@ title: Concepts de l'Entrepôt
 layout: layouts/parent.njk
 description: Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation
 tags:
+    - Géoplateforme
+    - Entrepôt
     - Concepts Entrepôt
     - Terminologie
     - Workflow d'alimentation

@@ -101,11 +101,19 @@ class PageFinder {
             const specialTags = tagEntries.filter(([tag]) => specialGuideTags.includes(tag));
             const otherTags = tagEntries.filter(([tag]) => !specialGuideTags.includes(tag));
 
+            const sortTags = (a, b) => {
+                const countDiff = b[1] - a[1];
+                if (countDiff !== 0) return countDiff;
+                return a[0].localeCompare(b[0], "fr", { sensitivity: "base" });
+            };
+
             if (specialTags.length > 0) {
+                specialTags.sort(sortTags);
                 this.renderFilterBlock(filterType, specialTags, initHashFilters, "Guides :");
             }
 
             if (otherTags.length > 0) {
+                otherTags.sort(sortTags);
                 const title = `${filterType.charAt(0).toUpperCase() + filterType.slice(1)} :`;
                 this.renderFilterBlock(filterType, otherTags, initHashFilters, title);
             }

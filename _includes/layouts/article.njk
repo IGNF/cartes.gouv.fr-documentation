@@ -20,7 +20,7 @@ layout: layouts/base.njk
         {% set sidemenuTitle = "Nous écrire" %}
       {% elif eleventyNavigation.nav == "ign" %}
         {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
+        {% set sidemenuTitle = "Institut national de l'information géographique et forestière" %}
       {% endif %}
       {% include "templates/sidemenu.njk" %}
     </div>
