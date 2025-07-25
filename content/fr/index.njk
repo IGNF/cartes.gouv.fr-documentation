@@ -5,12 +5,12 @@ layout: layouts/home.njk
 
 {% from "components/component.njk" import component with context %}
 
-<div class="fr-py-6w" style="background-image: url('/img/home/background.png'); background-size: cover; background-position: center;">
+<div class="fr-py-6w home-background">
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--center">
             <div class="fr-col-10 text-center fr-pagination__list">
-                <h1 class="fr-mt-25v black-text">Toute la documentation de cartes.gouv.fr</h1>
-                <p class="fr-text--lead black-text">Trouvez les réponses à vos besoins sur les services et les données de cartes.gouv</p>
+                <h1 class="fr-mt-25v">Toute la documentation de cartes.gouv.fr</h1>
+                <p class="fr-text--lead">Trouvez les réponses à vos besoins sur les services et les données de cartes.gouv.fr</p>
                 <div class="fr-search-bar fr-search-bar--lg fr-col-8 fr-mb-25v" role="search">
                     <label class="fr-label" for="search-input-lg">Recherche</label>
                     <input class="fr-input"
@@ -66,7 +66,7 @@ layout: layouts/home.njk
                     small: true,
                     url: "guides-utilisateur/se-connecter",
                     title: "Se connecter",
-                    pictogram: "digital/avatar.svg"
+                    pictogram: "custom/account.svg"
                 }) }}
             </div>
             <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
@@ -74,7 +74,7 @@ layout: layouts/home.njk
                     small: true,
                     url: "guides-utilisateur/visualiseur-cartographique",
                     title: "Explorer les cartes",
-                    pictogram: "map/map.svg"
+                    pictogram: "custom/viewer.svg"
                 }) }}
             </div>
             <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
@@ -82,7 +82,7 @@ layout: layouts/home.njk
                     small: true,
                     url: "guides-utilisateur/catalogue",
                     title: "Rechercher une données",
-                    pictogram: "digital/search.svg"
+                    pictogram: "custom/catalogue.svg"
                 }) }}
             </div>
             <div class="fr-col-md-3 fr-col hide-below-md">
@@ -90,7 +90,7 @@ layout: layouts/home.njk
                     small: true,
                     url: "guides-utilisateur/editeur-cartographique",
                     title: "Créer une carte",
-                    pictogram: "leisure/digital-art.svg"
+                    pictogram: "custom/editor.svg"
                 }) }}
             </div>
             <div class="fr-col hide-below-lg">
@@ -98,7 +98,7 @@ layout: layouts/home.njk
                     small: true,
                     url: "guides-utilisateur/acceder-aux-geodonnees",
                     title: "Accéder aux géodonnées",
-                    pictogram: "digital/data-visualization.svg"
+                    pictogram: "custom/uploader.svg"
                 }) }}
             </div>
         </div>
@@ -127,7 +127,7 @@ layout: layouts/home.njk
     </p>
 </div>
 
-<div class="fr-background-alt--green-emeraude">
+<div class="fr-background-alt--beige-gris-galet">
     <div class="fr-container fr-col-12 fr-py-15v">
         <h2 class="fr-mb-15v">Consulter les sujets populaires</h2>
         {% set latestPages = collections.all | selectattr("url") | sort(true, 'date') | head(-9)| reverse %}

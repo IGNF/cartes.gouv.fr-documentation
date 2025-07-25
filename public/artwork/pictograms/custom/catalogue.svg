@@ -1,0 +1,11 @@
+<svg width="80px" height="80px" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="artwork-minor">
+    <path fill="#DAE6FD" d="M80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 80 17.9086 80 40Z"/>
+  </symbol>
+  <symbol id="artwork-major">
+    <path fill="#161616" d="M52.062 49.234L60.628 57.798L57.798 60.628L49.234 52.062C46.0475 54.6164 42.084 56.0058 38 56C28.064 56 20 47.936 20 38C20 28.064 28.064 20 38 20C47.936 20 56 28.064 56 38C56.0058 42.084 54.6164 46.0475 52.062 49.234ZM48.05 47.75C50.5882 45.1398 52.0057 41.6409 52 38C52 30.264 45.734 24 38 24C30.264 24 24 30.264 24 38C24 45.734 30.264 52 38 52C41.6409 52.0057 45.1398 50.5882 47.75 48.05L48.05 47.75Z"/>
+  </symbol>
+  <use class="fr-artwork-decorative" href="#artwork-decorative"/>
+  <use class="fr-artwork-minor" href="#artwork-minor"/>
+  <use class="fr-artwork-major" href="#artwork-major"/>
+</svg>

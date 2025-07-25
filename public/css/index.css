@@ -169,10 +169,6 @@ div.fr-callout__text p {
     text-align: right;
 }
 
-.black-text {
-    color: #000;
-}
-
 .frx-swagger-ui {
     background-color: #ffffff;
     padding-top: 0.8rem;
@@ -230,4 +226,18 @@ div.fr-callout__text p {
 
 .page-switcher:has(> p.previous-page) {
     justify-content: space-between;
+}
+
+/* Home */
+.home-background {
+    background-size: cover;
+    background-position: center;
+}
+
+[data-fr-theme="light"] .home-background {
+    background-image: url("/img/home/background-light.png");
+}
+
+[data-fr-theme="dark"] .home-background {
+    background-image: url("/img/home/background-dark.png");
 }
