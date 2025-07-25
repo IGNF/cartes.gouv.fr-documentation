@@ -5,7 +5,7 @@ tags:
     - Développeur
 eleventyNavigation:
     key: Guides développeur
-    order: 2
+    order: 3
     nav: main
 sidemenuNav: guides-developpeur
 ---

@@ -3,20 +3,138 @@ title: Accueil
 layout: layouts/home.njk
 ---
 
-<div class="fr-py-6w fr-background-alt--blue-cumulus">
+{% from "components/component.njk" import component with context %}
+
+<div class="fr-py-6w home-background">
     <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--center">
-            <div class="fr-col-10">
-                <h1>
-                    Centraliser, partager et informer
-                    <br />
-                    toute la documentation de cartes.gouv.fr
-                </h1>
-                <p class="fr-text--lead">Accédez à toutes les informations utiles concernant cartes.gouv.fr et les services de la géoplateforme</p>
-                <p>
-                    <a class="fr-btn fr-btn--primary" href="./guides-developpeur/">{{ "access_guides" | i18n }}</a>
-                </p>
+            <div class="fr-col-10 text-center fr-pagination__list">
+                <h1 class="fr-mt-25v">Toute la documentation de cartes.gouv.fr</h1>
+                <p class="fr-text--lead">Trouvez les réponses à vos besoins sur les services et les données de cartes.gouv.fr</p>
+                <div class="fr-search-bar fr-search-bar--lg fr-col-8 fr-mb-25v" role="search">
+                    <label class="fr-label" for="search-input-lg">Recherche</label>
+                    <input class="fr-input"
+                        placeholder="Rechercher"
+                        type="search"
+                        id="search-input-lg"
+                        name="search-input-lg">
+                    <button class="fr-btn" title="Rechercher">Rechercher</button>
+                </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="fr-container fr-my-15v">
+    <div class="fr-col-12">
+        <h2 class="fr-mb-15v" id="guides">Découvrir les guides</h2>
+        <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
+            <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
+                {{ component("tile", {
+                    url: "guides-utilisateur",
+                    title: "Guides utilisateur",
+                    description: "Découvrez les services de cartes.gouv, explorer leurs fonctionnalités et apprenez à les utiliser, pas à pas.",
+                    pictogram: "custom/user-book.svg"
+                }) }}
+            </div>
+            <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
+                {{ component("tile", {
+                    url: "guides-producteur",
+                    title: "Guides producteur",
+                    description: "Découvrez comment utiliser les différentes APIs et extensions pour exploiter des données dans vos environnements web.",
+                    pictogram: "custom/provider-book.svg"
+                }) }}
+            </div>
+            <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
+                {{ component("tile", {
+                    url: "guides-developpeur",
+                    title: "Guides développeur",
+                    description: "Découvrez comment stocker vos données, les partager et les publier sous forme de flux. ",
+                    pictogram: "custom/dev-book.svg"
+                }) }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fr-background-alt--grey">
+    <div class="fr-container fr-col-12 fr-py-15v">
+        <h2 class="fr-mb-15v">Rechercher par services</h2>
+        <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center five-cols">
+            <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
+                {{ component("tile", {
+                    small: true,
+                    url: "guides-utilisateur/se-connecter",
+                    title: "Se connecter",
+                    pictogram: "custom/account.svg"
+                }) }}
+            </div>
+            <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
+                {{ component("tile", {
+                    small: true,
+                    url: "guides-utilisateur/visualiseur-cartographique",
+                    title: "Explorer les cartes",
+                    pictogram: "custom/viewer.svg"
+                }) }}
+            </div>
+            <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
+                {{ component("tile", {
+                    small: true,
+                    url: "guides-utilisateur/catalogue",
+                    title: "Rechercher une données",
+                    pictogram: "custom/catalogue.svg"
+                }) }}
+            </div>
+            <div class="fr-col-md-3 fr-col hide-below-md">
+                {{ component("tile", {
+                    small: true,
+                    url: "guides-utilisateur/editeur-cartographique",
+                    title: "Créer une carte",
+                    pictogram: "custom/editor.svg"
+                }) }}
+            </div>
+            <div class="fr-col hide-below-lg">
+                {{ component("tile", {
+                    small: true,
+                    url: "guides-utilisateur/acceder-aux-geodonnees",
+                    title: "Accéder aux géodonnées",
+                    pictogram: "custom/uploader.svg"
+                }) }}
+            </div>
+        </div>
+        <p class="text-right fr-mt-10v">
+            <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="#guides">Voir tous les services</a>
+        </p>
+    </div>
+</div>
+
+<div class="fr-container fr-col-12 fr-py-15v">
+    <h2 class="fr-mb-15v">Découvrir la documentation des partenaires</h2>
+    <div class="fr-grid-row fr-grid-row--gutters">
+        <div class="fr-col-6 fr-col-sm-4 fr-col-md-3 fr-col-lg-2">
+            <svg class="fr-artwork" aria-hidden="true" viewBox="0 0 80 80" width="100%">
+                <use class="fr-artwork-decorative" xlink:href="/artwork/pictograms/digital/ecosystem.svg#artwork-decorative"></use>
+                <use class="fr-artwork-minor" xlink:href="/artwork/pictograms/digital/ecosystem.svg#artwork-minor"></use>
+                <use class="fr-artwork-major" xlink:href="/artwork/pictograms/digital/ecosystem.svg#artwork-major"></use>
+            </svg>
+        </div>
+        <div class="fr-col-12 fr-col-md-7 fr-col-lg-5">
+            <p class="fr-text--lead fr-pt-10v fr-pl-10v">Retrouvez les différents partenaires de cartes.gouv, leurs missions, leurs données et leurs usages.</p>
+        </div>
+    </div>
+    <p class="text-right fr-mt-10v">
+        <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="partenaires">Découvrir tous les partenaires</a>
+    </p>
+</div>
+
+<div class="fr-background-alt--beige-gris-galet">
+    <div class="fr-container fr-col-12 fr-py-15v">
+        <h2 class="fr-mb-15v">Consulter les sujets populaires</h2>
+        {% set latestPages = collections.all | selectattr("url") | sort(true, 'date') | head(-9)| reverse %}
+        {% set items = latestPages %}
+        {% set columns = 4 %}
+        {% set small_cards = true %}
+        {% set show_images = false %}
+        {% include "components/card_list.njk" %}
     </div>
 </div>
