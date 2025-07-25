@@ -113,9 +113,10 @@ layout: layouts/home.njk
     <div class="fr-grid-row fr-grid-row--gutters">
         <div class="fr-col-6 fr-col-sm-4 fr-col-md-3 fr-col-lg-2">
             <svg class="fr-artwork" aria-hidden="true" viewBox="0 0 80 80" width="100%">
-                <use class="fr-artwork-decorative" xlink:href="/artwork/pictograms/digital/ecosystem.svg#artwork-decorative"></use>
-                <use class="fr-artwork-minor" xlink:href="/artwork/pictograms/digital/ecosystem.svg#artwork-minor"></use>
-                <use class="fr-artwork-major" xlink:href="/artwork/pictograms/digital/ecosystem.svg#artwork-major"></use>
+                {% set ecosystemPictogramUrl = "/artwork/pictograms/digital/ecosystem.svg" %}
+                <use class="fr-artwork-decorative" xlink:href="{{ ecosystemPictogramUrl | htmlBaseUrl }}#artwork-decorative"></use>
+                <use class="fr-artwork-minor" xlink:href="{{ ecosystemPictogramUrl | htmlBaseUrl }}#artwork-minor"></use>
+                <use class="fr-artwork-major" xlink:href="{{ ecosystemPictogramUrl | htmlBaseUrl }}#artwork-major"></use>
             </svg>
         </div>
         <div class="fr-col-12 fr-col-md-7 fr-col-lg-5">

@@ -235,9 +235,9 @@ div.fr-callout__text p {
 }
 
 [data-fr-theme="light"] .home-background {
-    background-image: url("/img/home/background-light.png");
+    background-image: url("../img/home/background-light.png");
 }
 
 [data-fr-theme="dark"] .home-background {
-    background-image: url("/img/home/background-dark.png");
+    background-image: url("../img/home/background-dark.png");
 }
