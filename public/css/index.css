@@ -234,10 +234,6 @@ div.fr-callout__text p {
     background-position: center;
 }
 
-.home-background {
-    background-image: url("./../img/home/background.png");
-}
-
 [data-fr-theme="dark"] .home-background {
     border-image: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)) fill 1;
 }
