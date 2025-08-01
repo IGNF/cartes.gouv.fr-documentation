@@ -33,12 +33,22 @@ Si votre _fork_ a du retard sur le dépôt principal, vous pouvez cliquer sur le
 
 Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation, il est conseillé de travailler avec des _branches_. Par défaut votre _fork_/duplication contient une seule branche, la branche principale (_main_).
 
+Si ce n'est pas votre première contribution, vous êtes peut-être resté sur une branche de votre contribution précédente. Retournez sur la branche _main_.
+
+```bash
+git checkout main
+```
+
+Assurez-vous que votre branche main est à jour sur votre poste de travail avant de créer une nouvelle branche.
+
+```bash
+git pull
+```
+
 Choisissez un nom de branche parlant, qui correspond au périmètre des modifications que vous souhaitez faire, puis lancez la commande suivante dans l’invite de commande *Git Bash* :
 
 ```bash
-{% raw %}
-git checkout -b "nom-de-la-nouvelle-branche"
-{% endraw %}
+git checkout -b nom-de-la-nouvelle-branche
 ```
 
 Cette commande créera une nouvelle branche et vous y placera : **« (nom-de-la-nouvelle-branche) »** est indiqué dans l’invite de commande au lieu de **« (main) »** :
@@ -52,17 +62,13 @@ En passant par l’invite de commande cela crée également la branche sur githu
 Pour naviguer entre les branches existantes il faut lancer la commande suivante :
 
 ```bash
-{% raw %}
 git checkout nom-de-la-branche
-{% endraw %}
 ```
 
 Pour lister les branches existantes il faut lancer la commande suivante :
 
 ```bash
-{% raw %}
 git branch -l
-{% endraw %}
 ```
 
 ![Image décrivant le listing et le changement de branches dans l’invite de commande Git Bash](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/03_Liste-des-branches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -72,25 +78,19 @@ git branch -l
 Dans l’invite de commande _Git Bash_ lancez la commande suivante :
 
 ```bash
-{% raw %}
 git pull
-{% endraw %}
 ```
 
 Si vous avez des modifications locales non enregistrées et que la commande _git pull_ vous en informe, il faut mettre de côté les modifications locales avec la commande suivante :
 
 ```bash
-{% raw %}
 git stash
-{% endraw %}
 ```
 
 Exécutez à nouveau le _git pull_, puis réappliquez les modifications locales avec la commande suivante :
 
 ```bash
-{% raw %}
 git stash apply
-{% endraw %}
 ```
 
 :::info
@@ -102,11 +102,8 @@ Les commandes peuvent se lancer depuis n’importe quelle branche mais il est co
 Par défaut _github_ génère votre pseudonyme à partir des informations de votre ordinateur. Pour modifier le pseudonyme et le courriel à utiliser (qui seront visibles par tous les contributeurs), lancez les commandes suivantes sur *Git Bash* :
 
 ```bash
-{% raw %}
 git config --global user.name "MonPseudoGithub"
-
 git config --global user.email mail@domaine.fr
-{% endraw %}
 ```
 
 ## 6 - Exécuter _Eleventy_ pour construire le site
@@ -120,9 +117,7 @@ _Eleventy_ est le logiciel utilisé pour construire le site. Il transforme les f
 Lancez la commande suivante :
 
 ```bash
-{% raw %}
 npm start
-{% endraw %}
 ```
 
 Cette commande rend le site disponible à l’adresse <a href="http://localhost:8080/fr" target="_blank" rel="noopener noreferrer" title="http://localhost:8080/fr - ouvre une nouvelle fenêtre">http://localhost:8080/fr</a> et reste active, à l’écoute des changements que vous effectuez dans le projet. Normalement cette commande lance automatiquement la commande _npm run build_.
