@@ -106,9 +106,12 @@ La requête a pour caractéristiques :
         - Format : booléen (texte)
         - Valeurs possibles : false (réponse étendue), true (simple tableau de valeurs)
         - Valeur par défaut : false
-- Remarques :
-    - Pour un point située dans une zone non couverte par la donnée, l’altitude renvoyée sera « -99999 »
-    - Les altitudes fournies sont arrondies à 2 chiffres après la virgule
+
+:::info
+
+- Pour un point située dans une zone non couverte par la donnée, l’altitude renvoyée sera « -99999 »
+- Les altitudes fournies sont arrondies à 2 chiffres après la virgule
+  :::
 
 Exemple de requête et résultat en JSON :
 
