@@ -11,7 +11,7 @@ eleventyNavigation:
 
 ## 1 - Présentation
 
-L’API de calcul altimétrique de la Géoplateforme permet d’obtenir l’altitude d’un ou de plusieurs points et un profil altrimétrique le long d’une courbe.
+L’API de calcul altimétrique de la Géoplateforme permet d’obtenir l’altitude d’un ou de plusieurs points et un profil altimétrique le long d’une courbe.
 
 Son usage est limité à 5 requêtes par seconde depuis une même adresse IP.
 
@@ -108,7 +108,7 @@ La requête a pour caractéristiques :
         - Valeur par défaut : false
 
 :::info
-- Pour un point située dans une zone non couverte par la donnée, l’altitude renvoyée sera « -99999 »
+- Pour un point situé dans une zone non couverte par la donnée, l’altitude renvoyée sera « -99999 »
 - Les altitudes fournies sont arrondies à 2 chiffres après la virgule
 :::
 
@@ -168,7 +168,10 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48|1.
 
 ```json
 {
-    "elevations": [164.34, 141.33]
+    "elevations": [
+        164.34,
+        141.33
+    ]
 }
 ```
 
