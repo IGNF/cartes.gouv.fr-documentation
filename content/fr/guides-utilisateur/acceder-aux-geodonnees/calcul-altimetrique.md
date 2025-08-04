@@ -57,7 +57,7 @@ https://data.geopf.fr/altimetrie/resources/ign_rge_alti_wld
 
 ## 4 - Calculer des altitudes
 
-### 4.1 Déterminer l’altitude d’un ou plusieurs points via la méthode GET
+### 4.1 - Déterminer l’altitude d’un ou plusieurs points via la méthode GET
 
 Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir de leurs coordonnées géographiques. Il est accessible via l’URL suivante :
 
@@ -201,7 +201,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48;1.
 }
 ```
 
-### 4.2 Déterminer l’altitude d’un ou plusieurs points via la méthode POST
+### 4.2 - Déterminer l’altitude d’un ou plusieurs points via la méthode POST
 
 Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir de leurs coordonnées géographiques. Il est accessible via l’URL suivante :
 
@@ -229,7 +229,7 @@ curl -X 'POST' \
 }'
 ```
 
-### 4.3 Déterminer le profil altimétrique d’une courbe via la méthode GET
+### 4.3 - Déterminer le profil altimétrique d’une courbe via la méthode GET
 
 Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL suivante :
 
@@ -358,7 +358,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json?lon=1.4
 }
 ```
 
-### 4.4 Déterminer le profil altimétrique d’une courbe via la méthode POST
+### 4.4 - Déterminer le profil altimétrique d’une courbe via la méthode POST
 
 Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL suivante :
 
