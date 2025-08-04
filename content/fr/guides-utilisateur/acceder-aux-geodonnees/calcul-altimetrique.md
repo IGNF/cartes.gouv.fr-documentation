@@ -108,9 +108,10 @@ La requête a pour caractéristiques :
         - Valeur par défaut : false
 
 :::info
+
 - Pour un point située dans une zone non couverte par la donnée, l’altitude renvoyée sera « -99999 »
 - Les altitudes fournies sont arrondies à 2 chiffres après la virgule
-:::
+  :::
 
 Exemple de requête et résultat en JSON :
 
@@ -118,8 +119,23 @@ Exemple de requête et résultat en JSON :
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48|1.49&lat=43.54|43.55&resource=ign_rge_alti_wld&delimiter=|&indent=false&measures=false&zonly=false
 ```
 
-```plain
-{"elevations": [{"lon": 1.48, "lat": 43.54, "z": 164.34, "acc": "Variable suivant la source de mesure"}, {"lon": 1.49, "lat": 43.55, "z": 141.33, "acc": "Variable suivant la source de mesure"}]}
+```json
+{
+    "elevations": [
+        {
+            "lon": 1.48,
+            "lat": 43.54,
+            "z": 164.34,
+            "acc": "Variable suivant la source de mesure"
+        },
+        {
+            "lon": 1.49,
+            "lat": 43.55,
+            "z": 141.33,
+            "acc": "Variable suivant la source de mesure"
+        }
+    ]
+}
 ```
 
 Exemple de requête et résultat en XML :
@@ -128,20 +144,20 @@ Exemple de requête et résultat en XML :
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.xml?lon=1.48|1.49&lat=43.54|43.55&resource=ign_rge_alti_wld&delimiter=|&indent=false&measures=false&zonly=false
 ```
 
-```plain
+```xml
 <elevations>
-  <elevation>
-    <lon>1.48</lon>
-    <lat>43.54</lat>
-    <z>164.34</z>
-    <acc>Variable suivant la source de mesure</acc>
-  </elevation>
-  <elevation>
-    <lon>1.49</lon>
-    <lat>43.55</lat>
-    <z>141.33</z>
-    <acc>Variable suivant la source de mesure</acc>
-  </elevation>
+    <elevation>
+        <lon>1.48</lon>
+        <lat>43.54</lat>
+        <z>164.34</z>
+        <acc>Variable suivant la source de mesure</acc>
+    </elevation>
+    <elevation>
+        <lon>1.49</lon>
+        <lat>43.55</lat>
+        <z>141.33</z>
+        <acc>Variable suivant la source de mesure</acc>
+    </elevation>
 </elevations>
 ```
 
@@ -151,12 +167,9 @@ Exemple de requête et résultat en JSON, sous forme de tableau de valeurs, avec
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48|1.49&lat=43.54|43.55&resource=ign_rge_alti_wld&delimiter=|&indent=true&measures=false&zonly=true
 ```
 
-```plain
+```json
 {
-    "elevations": [
-        164.34,
-        141.33
-    ]
+    "elevations": [164.34, 141.33]
 }
 ```
 
@@ -166,7 +179,7 @@ Exemple de requête et résultat en JSON, sous forme de tableau de valeurs, avec
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48;1.49&lat=43.54;43.55&resource=ign_rge_alti_wld&delimiter=;&indent=true&measures=true&zonly=false
 ```
 
-```plain
+```json
 {
     "elevations": [
         {
@@ -215,7 +228,7 @@ Il utilise la méthode POST et nécessite donc de fournir en entrée un « body
 
 Exemple d’appel :
 
-```plain
+```bash
 curl -X 'POST' \
   'https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json' \
   -H 'accept: application/json' \
@@ -260,7 +273,7 @@ Exemple de requête et résultat en JSON en profile_mode « simple » :
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json?lon=1.48|1.49&lat=43.54|43.55&resource=ign_rge_alti_wld&delimiter=|&indent=true&measures=false&profile_mode=simple&sampling=4
 ```
 
-```plain
+```json
 {
     "elevations": [
         {
@@ -301,7 +314,7 @@ Exemple de requête et résultat en JSON en profile_mode « accurate » :
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json?lon=1.48|1.49&lat=43.54|43.55&resource=ign_rge_alti_wld&delimiter=|&indent=true&measures=false&profile_mode=accurate&sampling=4
 ```
 
-```plain
+```json
 {
     "elevations": [
         {
@@ -372,7 +385,7 @@ Il utilise la méthode POST et nécessite donc de fournir en entrée un « body
 
 Exemple d’appel :
 
-```plain
+```bash
 curl -X 'POST' \
   'https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json' \
   -H 'accept: application/json' \
