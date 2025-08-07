@@ -30,6 +30,8 @@ module.exports = function (eleventyConfig) {
         "./node_modules/@gouvfr/dsfr/dist/utility/utility.min.css": "/css/utility/utility.min.css",
         "./node_modules/@gouvfr/dsfr/dist/dsfr.module.min.js": "/js/dsfr.module.min.js",
         "./node_modules/@gouvfr/dsfr/dist/dsfr.nomodule.min.js": "/js/dsfr.nomodule.min.js",
+        "./node_modules/@gouvfr/dsfr/dist/analytics/analytics.module.min.js": "js/analytics.module.min.js",
+        "./node_modules/@gouvfr/dsfr/dist/analytics/analytics.nomodule.min.js": "js/analytics.nomodule.min.js",
         "./node_modules/@gouvfr/dsfr/dist/artwork": "/artwork",
         "./node_modules/mermaid/dist/mermaid.min.js": "/js/mermaid.min.js",
         "./node_modules/swagger-ui/dist/swagger-ui.css": "/css/swagger-ui.css",
