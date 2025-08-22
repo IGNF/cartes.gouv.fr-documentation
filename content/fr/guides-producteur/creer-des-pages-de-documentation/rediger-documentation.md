@@ -325,5 +325,5 @@ Vous savez maintenant tout ce qu’il faut savoir pour modifier votre documentat
 
 :::callout Pour aller plus loin
 Si vous souhaitez avoir plus de détails sur l’utilisation de Visual Studio Code :
-<a href="https://learn.microsoft.com/fr-fr/visualstudio/windows/?view=vs-2022" target="_blank" rel="noopener noreferrer" title="Documentation VS Code - ouvre une nouvelle fenêtre">Documentation VS Code</a>
+<a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer" title="Documentation VS Code - ouvre une nouvelle fenêtre">Documentation VS Code</a>
 :::
