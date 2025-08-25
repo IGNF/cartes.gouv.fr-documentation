@@ -39,6 +39,27 @@
 {% endcss %}
 <style>{% getBundle "css" %}</style>
 <meta name="generator" content="{{ eleventy.generator }}">
+
+{# Configuration de l'API JS DSFR (avant chargement des modules) #}
+<script>
+    window.dsfr = {
+        mode: 'auto',
+        production: {{ metadata.analytics.site.environment == "production" }},
+        analytics: {
+            domain: '{{ metadata.analytics.domain }}',
+            collection: 'auto',
+            isActionEnabled: true,
+            page: {
+                template: 'article'
+            },
+            site: {
+                entity: '{{ metadata.analytics.site.entity }}',
+                environment: '{{ metadata.analytics.site.environment | default("production") }}'
+            }
+        }
+    };
+</script>
+
 {% if mermaid %}
     <script src="/js/mermaid.min.js"></script>
     <script src="/js/mermaid.initialize.js"></script>
@@ -79,10 +100,12 @@
 <script type="text/javascript" src="/js/search.js"></script>
 {% endjs %}
 {% getBundle "js", "body" %}
+
+
 <!-- Script en version es6 module et nomodule pour les navigateurs le ne supportant pas -->
 <script type="module" src="/js/dsfr.module.min.js"></script>
+<script type="module" src="/js/analytics.module.min.js"></script>
 <script type="text/javascript" nomodule src="/js/dsfr.nomodule.min.js"></script>
-<!-- Script Matomo pour le suivi des visites -->
-<!-- <script type="text/javascript" src="/js/matomo.js"></script> -->
+<script type="text/javascript" nomodule src="/js/analytics.nomodule.min.js"></script>
 </body>
 </html>
