@@ -32,7 +32,7 @@ layout: layouts/home.njk
         <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
             <div class="fr-col-12 fr-col-md-4 fr-col-lg-3 fr-mx-4v">
                 {{ component("tile", {
-                    url: "guides-utilisateur",
+                    url: "/fr/guides-utilisateur/" | htmlBaseUrl,
                     title: "Guides utilisateur",
                     description: "Découvrez les services de cartes.gouv, explorer leurs fonctionnalités et apprenez à les utiliser, pas à pas.",
                     pictogram: "custom/user-book.svg"
@@ -40,7 +40,7 @@ layout: layouts/home.njk
             </div>
             <div class="fr-col-12 fr-col-md-4 fr-col-lg-3 fr-mx-4v">
                 {{ component("tile", {
-                    url: "guides-producteur",
+                    url: "/fr/guides-producteur/" | htmlBaseUrl,
                     title: "Guides producteur",
                     description: "Découvrez comment utiliser les différentes APIs et extensions pour exploiter des données dans vos environnements web.",
                     pictogram: "custom/provider-book.svg"
@@ -48,7 +48,7 @@ layout: layouts/home.njk
             </div>
             <div class="fr-col-12 fr-col-md-4 fr-col-lg-3 fr-mx-4v">
                 {{ component("tile", {
-                    url: "guides-developpeur",
+                    url: "/fr/guides-developpeur/" | htmlBaseUrl,
                     title: "Guides développeur",
                     description: "Découvrez comment stocker vos données, les partager et les publier sous forme de flux. ",
                     pictogram: "custom/dev-book.svg"
@@ -65,7 +65,7 @@ layout: layouts/home.njk
             <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
                 {{ component("tile", {
                     small: true,
-                    url: "guides-utilisateur/se-connecter",
+                    url: "/fr/guides-utilisateur/se-connecter/" | htmlBaseUrl,
                     title: "Se connecter",
                     pictogram: "custom/account.svg"
                 }) }}
@@ -73,7 +73,7 @@ layout: layouts/home.njk
             <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
                 {{ component("tile", {
                     small: true,
-                    url: "guides-utilisateur/visualiseur-cartographique",
+                    url: "/fr/guides-utilisateur/visualiseur-cartographique/" | htmlBaseUrl,
                     title: "Explorer les cartes",
                     pictogram: "custom/viewer.svg"
                 }) }}
@@ -81,7 +81,7 @@ layout: layouts/home.njk
             <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
                 {{ component("tile", {
                     small: true,
-                    url: "guides-utilisateur/catalogue",
+                    url: "/fr/guides-utilisateur/catalogue/" | htmlBaseUrl,
                     title: "Rechercher une données",
                     pictogram: "custom/catalogue.svg"
                 }) }}
@@ -89,7 +89,7 @@ layout: layouts/home.njk
             <div class="fr-col-md-3 fr-col hide-below-md">
                 {{ component("tile", {
                     small: true,
-                    url: "guides-utilisateur/editeur-cartographique",
+                    url: "/fr/guides-utilisateur/editeur-cartographique/" | htmlBaseUrl,
                     title: "Créer une carte",
                     pictogram: "custom/editor.svg"
                 }) }}
@@ -97,7 +97,7 @@ layout: layouts/home.njk
             <div class="fr-col hide-below-lg">
                 {{ component("tile", {
                     small: true,
-                    url: "guides-utilisateur/acceder-aux-geodonnees",
+                    url: "/fr/guides-utilisateur/acceder-aux-geodonnees/" | htmlBaseUrl,
                     title: "Accéder aux géodonnées",
                     pictogram: "custom/uploader.svg"
                 }) }}
