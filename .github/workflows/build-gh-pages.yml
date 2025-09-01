@@ -35,8 +35,6 @@ jobs:
                   npm run build-ghpages
             - name: Index site for pagefind
               run: npm run postbuild
-            - name: fr fallback homepage
-              run: "cp _site/fr/index.html _site/index.html"
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
 
