@@ -2,7 +2,7 @@ module.exports = {
     title: "cartes.gouv.fr",
     url: "https://cartes.gouv.fr/documentation",
     contact_form_url: "https://cartes.gouv.fr/nous-ecrire",
-    site_url: "https://ignf.github.io/cartes.gouv.fr-documentation",
+    site_url: "https://cartes.gouv.fr/documentation",
     newsletter: [
         {
             url: "",
@@ -25,7 +25,14 @@ module.exports = {
     author: {
         name: "IGN",
         email: "geoplateforme@ign.fr",
-        url: "https://url_du_service.gouv.fr/",
+        url: "https://cartes.gouv.fr/",
     },
     service: "Institut National de l'Information Géographique et Forestière (IGN)",
+    analytics: {
+        domain: "acwg.cartes.gouv.fr",
+        site: {
+            entity: "IGN",
+            environment: process.env.SITE_ENV || "development",
+        },
+    },
 };
