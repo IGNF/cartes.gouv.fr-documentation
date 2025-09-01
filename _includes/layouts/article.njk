@@ -15,9 +15,6 @@ layout: layouts/base.njk
       {% elif eleventyNavigation.nav == "guides-developpeur" %}
         {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set sidemenuTitle = "Guides développeur" %}
-      {% elif eleventyNavigation.nav == "nous-ecrire" %}
-        {% set navLinks = collections.nousEcrireNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set sidemenuTitle = "Nous écrire" %}
       {% elif eleventyNavigation.nav == "ign" %}
         {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
         {% set sidemenuTitle = "Institut national de l'information géographique et forestière" %}

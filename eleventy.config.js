@@ -112,12 +112,6 @@ module.exports = function (eleventyConfig) {
         });
     });
 
-    eleventyConfig.addCollection("nousEcrireNavigation", function (collectionApi) {
-        return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "nous-ecrire";
-        });
-    });
-
     eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
         return collectionApi.getAll().filter((item) => {
             return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
