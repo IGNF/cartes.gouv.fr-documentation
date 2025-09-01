@@ -19,7 +19,6 @@ RUN npm ci \
 #----------------------------------------------------------------------
 FROM nginxinc/nginx-unprivileged:alpine-slim
 COPY --from=builder /app/_site /usr/share/nginx/html/
-COPY --from=builder /app/_site/fr/index.html /usr/share/nginx/html/
 COPY .docker/nginx.conf /etc/nginx/nginx.conf
 
 # WORKDIR /app
