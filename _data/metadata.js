@@ -2,7 +2,7 @@ module.exports = {
     title: "cartes.gouv.fr",
     url: "https://cartes.gouv.fr/documentation",
     contact_form_url: "https://cartes.gouv.fr/nous-ecrire",
-    site_url: "https://ignf.github.io/cartes.gouv.fr-documentation",
+    site_url: "https://cartes.gouv.fr/documentation",
     newsletter: [
         {
             url: "",
