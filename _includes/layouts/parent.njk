@@ -18,10 +18,6 @@ layout: layouts/base.njk
         {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.developpeurNavigation %}
         {% set sidemenuTitle = "Guides développeur" %}
-      {% elif eleventyNavigation.nav == "nous-ecrire" %}
-        {% set navLinks = collections.nousEcrireNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.nousEcrireNavigation %}
-        {% set sidemenuTitle = "Nous écrire" %}
       {% elif eleventyNavigation.nav == "ign" %}
         {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
         {% set navCollection = collections.ignNavigation %}
