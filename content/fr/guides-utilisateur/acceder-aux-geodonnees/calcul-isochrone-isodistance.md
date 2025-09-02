@@ -10,4 +10,4 @@ eleventyNavigation:
     nav: guides-utilisateur
 ---
 
-A compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/itineraire
+En attendant sa mise à disposition sur cette page, vous pouvez consulter la documentation du service de calcul d’isochrone/isodistance sur le site [geoservices.ign.fr](https://geoservices.ign.fr/documentation/services/services-geoplateforme/itineraire).

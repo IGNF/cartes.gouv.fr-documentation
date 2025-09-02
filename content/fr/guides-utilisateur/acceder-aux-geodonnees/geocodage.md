@@ -9,4 +9,4 @@ eleventyNavigation:
     nav: guides-utilisateur
 ---
 
-A compléter à partir de : https://geoservices.ign.fr/documentation/services/services-geoplateforme/geocodage
+En attendant sa mise à disposition sur cette page, la documentation du service de géocodage est consultable sur [geoservices.ign.fr](https://geoservices.ign.fr/documentation/services/services-geoplateforme/geocodage).
