@@ -11,5 +11,5 @@ eleventyNavigation:
 
 En attendant la mise à disposition des ces informations sur cette page, vous pouvez consulter [geoservices.ign.fr](https://geoservices.ign.fr/documentation/services/limite-d-usage).
 
-Les limites d’usages font également parties des [conditions générales d’utilisation de cartes.gouv.fr](https://cartes.gouv.fr/cgu)
+Les limites d’usage font également partie des [conditions générales d’utilisation de cartes.gouv.fr](https://cartes.gouv.fr/cgu)
 
