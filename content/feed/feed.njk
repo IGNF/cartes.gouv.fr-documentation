@@ -5,7 +5,7 @@ numberOfLatestPostsToShow: 10
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.language }}">
-<title>{{ metadata.title }}</title>
+<title>{{ metadata.description ~ " | " ~ metadata.title }}</title>
 <subtitle>{{ metadata.description }}</subtitle>
 <link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self" />
 <link href="{{ metadata.url | addPathPrefixToFullUrl }}" />
