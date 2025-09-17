@@ -9,10 +9,7 @@
             {% else %}
                 {% set tileUrl = tile.externalUrl %}
             {% endif %}
-            {% set urlDescription %}
-                {{ tile.title }}
-                {% if tile.externalUrl %}- {{ "new_window" | i18n }}{% endif %}
-            {% endset %}
+            {% set urlDescription %}{{ tile.title }}{% if tile.externalUrl %} - {{ "new_window" | i18n }}{% endif %}{% endset %}
             <h4 class="fr-tile__title">
                 <a class="fr-tile__link"
                    href="{{ tileUrl }}"
