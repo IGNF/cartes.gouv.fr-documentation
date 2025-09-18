@@ -11,7 +11,7 @@ eleventyNavigation:
 pictogram: digital/data-visualization.svg
 ---
 
-Le but de ce tutoriel va être de diffuser des données vecteur en WFS et WMS. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
+Le but de ce tutoriel va être de diffuser des données vecteur en WFS et WMS. Les concepts de l’entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
 
 ```mermaid
 ---
@@ -111,13 +111,13 @@ flowchart LR
 
 ## Données du tutoriel
 
-Les données de l'exemple sont deux tables, les pays et régions écologiques mondiales, au format Geopackage, téléchargeable
-<a id="link-gpkg" 
-   download="monde.gpkg" 
-   href="/data/tutoriels/alimentation-diffusion-simple/monde.gpkg" 
-   target="_self" 
-   class="fr-link fr-link--download">
-Télécharger le jeu de données – Monde<span class="fr-link__detail">GPKG</span>
-</a>.
+Les données de l’exemple sont deux tables, les pays et régions écologiques mondiales :
+
+{% from "components/component.njk" import component with context %}
+{{ component("download", {
+    title: "monde.gpkg",
+    href: "/data/tutoriels/alimentation-diffusion-simple/monde.gpkg",
+    detail: "Geopackage - 11.1Mo"
+}) }}
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/donnees_presentation_vecteur.png){.fr-responsive-img .frx-border-img .frx-img-contained}
