@@ -18,15 +18,14 @@ Dans cet exemple, on part de la donnée des écorégions du tutoriel de base, pu
 
 Toutes ces actions vont être définie au format SQL, dans un fichier statique. Ce fichier n'a pas vocation à contenir de la donnée, mais simplement des instructions de modification
 
-Exemple :
+:material-file: Exemple :
+  {{ component("download", {
+    title: "derivation.sql",
+    href: "/data/tutoriels/alimentation-maj/derivation.sql",
+    detail: "SQL - 133Ko"
+}) }}
 
-:material-file: <a id="link-sql" 
-     download="derivation.sql" 
-     href="/data/tutoriels/alimentation-maj/derivation.sql" 
-     target="_self" 
-     class="fr-link fr-link--download">
-  derivation.sql<span class="fr-link__detail">derivation.sql</span>
-  </a>
+
 
 ```sql title="Contenu"
 -- /data/tutoriels/alimentation-maj/derivation.sql --
