@@ -63,43 +63,40 @@ stateDiagram
 
 Les données de l'exemple sont les <a title="installations classées pour la protection de l'environnement" id="link-2" href="https://www.georisques.gouv.fr/donnees/bases-de-donnees/installations-industrielles" target="_blank" rel="noopener external" class="fr-link">installations classées pour la protection de l'environnement</a> (source Géorisques) :
 
-- <a id="link-sql" 
-     download="installation-init.sql" 
-     href="/data/tutoriels/alimentation-maj/installation-init.sql" 
-     target="_self" 
-     class="fr-link fr-link--download">
-  SQL<span class="fr-link__detail">SQL</span>
-  </a> définissant une table `installation` et une vue `installation_autorisation` ne montrant que les lignes où l'attribut `lib_regime` est à `Autorisation`. Il n'y a pas de données. La vérification vecteur sur la Géoplateforme n'autorise pas la livraison de contenu en SQL.
-- <a id="link-gpkg" 
-     download="installation.gpkg" 
-     href="/data/tutoriels/alimentation-maj/installation.gpkg" 
-     target="_self" 
-     class="fr-link fr-link--download">
-  Un Geopackage<span class="fr-link__detail">GPKG</span>
-  </a> avec un premier lot de données (département des Ardennes). On livre les données à ajouter dans la table, pas le vue.
-- <a id="link-csv" 
-     download="installation.csv" 
-     href="/data/tutoriels/alimentation-maj/installation.csv" 
-     target="_self" 
-     class="fr-link fr-link--download">
-  Un CSV<span class="fr-link__detail">CSV</span>
-  </a> (<a id="link-csv" 
-     download="installation.csvt" 
-     href="/data/tutoriels/alimentation-maj/installation.csvt" 
-     target="_self" 
-     class="fr-link fr-link--download">
-  et le CSVT<span class="fr-link__detail">CSVT</span>
-  </a>) avec un deuxième lot de données (département du Doubs).
-- </a> <a id="link-delete" 
-     download="installation.delete" 
-     href="/data/tutoriels/alimentation-maj/installation.delete" 
-     target="_self" 
-     class="fr-link fr-link--download">
-  Un CSV de suppression<span class="fr-link__detail">DELETE</span>
-  </a> et un </a> <a id="link-update" 
-     download="installation.update" 
-     href="/data/tutoriels/alimentation-maj/installation.update" 
-     target="_self" 
-     class="fr-link fr-link--download">
-  CSV de modification<span class="fr-link__detail">UPDATE</span>
-  </a>
+- Le SQL définissant une table `installation` et une vue `installation_autorisation` ne montrant que les lignes où l'attribut `lib_regime` est à `Autorisation`. Il n'y a pas de données. La vérification vecteur sur la Géoplateforme n'autorise pas la livraison de contenu en SQL.
+{% from "components/component.njk" import component with context %}
+{{ component("download", {
+    title: "SQL",
+    href: "/data/tutoriels/alimentation-maj/installation-init.sql",
+    detail: "SQL - 455o"
+}) }}
+- Un premier lot de données (département des Ardennes). On livre les données à ajouter dans la table, pas le vue.
+  {{ component("download", {
+    title: "GPKG",
+    href: "/data/tutoriels/alimentation-maj/installation.gpkg",
+    detail: "GPKG - 360Ko"
+}) }}
+- 
+  {{ component("download", {
+    title: "CSV",
+    href: "/data/tutoriels/alimentation-maj/installation.csv",
+    detail: "CSV - 661Ko"
+}) }}
+  {{ component("download", {
+    title: "CSVT",
+    href: "/data/tutoriels/alimentation-maj/installation.csvt",
+    detail: "CSVT - 84o"
+}) }}
+   avec un deuxième lot de données (département du Doubs).
+- 
+  {{ component("download", {
+    title: "Un CSV de suppression",
+    href: "/data/tutoriels/alimentation-maj/installation.delete",
+    detail: "CSV - 45o"
+}) }}
+   et un 
+  {{ component("download", {
+    title: "CSV de modification",
+    href: "/data/tutoriels/alimentation-maj/installation.update",
+    detail: "CSV - 187o"
+}) }}
