@@ -41,7 +41,7 @@ Les entités (tables, vues, fonctions...) écrites le sont dans la donnée de so
 Un exemple d'utilisation est disponible
 <a title="ici" 
    id="link-10" 
-   href="../exemple1" 
+   href="../derivation/exemple" 
    target="\_self"
    rel="noopener external" 
    class="fr-link fr-icon-arrow-right-line fr-link--icon-right">
