@@ -1,10 +1,16 @@
 ---
 title: Exemple d'ajout de colonne avec valeur paramétrable
-tags:
-    - Donnée vecteur
-    - Dérivation
-    - Injection
+swaggerui: true
+eleventyNavigation:
+    key: Exemple d'ajout de colonne avec valeur paramétrable
+    parent: Dérivation d'une donnée vecteur en base
+    order: 1
+    nav: guides-developpeur
 ---
+
+
+{% from "components/component.njk" import component with context %}
+
 
 Dans cet exemple, on part de la donnée des écorégions du tutoriel de base, publiée en WFS, que l'on va modifier en ajoutant une colonne.
 
@@ -22,14 +28,15 @@ Exemple :
   derivation.sql<span class="fr-link__detail">derivation.sql</span>
   </a>
 
-```html title="Contenu"
---8<-- docs/assets/data/derivation.sql --8<--
+```sql title="Contenu"
+-- /data/tutoriels/alimentation-maj/derivation.sql --
 ```
 
 Ce fichier va permettre :
 
 - D'ajouter une colonne à la table `ecoregions`
 - De remplir avec pour valeur celle de l'attribut `nnh` multipliée par un nombre fourni en paramètre de l'exécution de traitement. La syntaxe {% raw %}`{{ params.<x> }}`{% endraw %} permet de rendre dynamique ces scripts de dérivation.
+
 
 ??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
@@ -56,7 +63,7 @@ Ce fichier va permettre :
 
 En consultant la donnée en WFS, notamment sa table attributaire, on retrouve le contenu suivant.
 
-![Table attributaire avant dérivation](../../assets/images/derivation_avant.png)
+![Table attributaire avant dérivation](/img/guides-developpeur/vecteur/derivation_avant.png)
 
 ## Jeu de la dérivation sur une donnée
 
@@ -209,6 +216,7 @@ On peut voir le nouveau champ apparaître dans la description de la donnée
 Comme la structure a changé (ajout d'une colonne), il faut resynchroniser l'offre pour que le serveur de diffusion prenne connaissance de ce changement. Dans le cas d'un ajout, la consultation fonctionne mais la nouvelle colonne n'apparait pas. Dans le cas d'une suppression, on aura des erreurs car le serveur de diffusion aura des échec de lecture sur la colonne disparue. De manière générale, quand la structure est modifiée avec ce traitement, il est préférable de resynchroniser toutes les offres utilisant la donnée stockée modifiée.
 
 ??? request-put "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering wfs}"
+
 
 Si vous utilisez QGis, il peut être nécessaire de vider le cache pour qu'il ne garde pas l'ancienne description de la couche WFS. On retrouve désormais le contenu suivant.
 
