@@ -81,7 +81,7 @@ Les formats de fichier vecteur gérés sont :
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
 ```
 
-{{ component("segmented", {
+{{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
         ["file = `<monde.gpkg>`"]

@@ -41,15 +41,6 @@ Ce fichier va permettre :
 - De remplir avec pour valeur celle de l'attribut `nnh` multipliée par un nombre fourni en paramètre de l'exécution de traitement. La syntaxe {% raw %}`{{ params.<x> }}`{% endraw %} permet de rendre dynamique ces scripts de dérivation.
 
 
-{{ component("segmented", {
-    headers: ["Corps de requête Multipart"],
-    data: [
-        ["file = `<derivation.sql>`"],
-        ["type = DERIVATION-SQL"],
-        ["name = Ajout d'une colonne et calcul par multiplication"]
-    ]
-}) }}
-
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ``` title="Contenu" 
