@@ -5,6 +5,9 @@ module.exports = {
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
         },
+        public: {
+            wfs: "https://data.geopf.fr/wfs",
+        },
     },
     permalink: function (data) {
         if (data.slugOverride) {

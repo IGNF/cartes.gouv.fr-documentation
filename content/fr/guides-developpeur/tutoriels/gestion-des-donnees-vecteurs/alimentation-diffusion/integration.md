@@ -1,18 +1,11 @@
 ---
-title: Intégration en base de données vecteur
+title: Intégration des données
 mermaid: true
 eleventyNavigation:
-    key: Intégration en base de données vecteur
+    key: Intégration des données
     parent: Alimentation et diffusion simple
     order: 2
     nav: guides-developpeur
----
-
----
-title: Intégration en base de données vecteur
-tags:
-    - Donnée vecteur
-    - Intégration
 ---
 
 ## Intégration en base
