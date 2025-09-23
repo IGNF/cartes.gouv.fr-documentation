@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Intégration de données vecteur livrées en base",
+        "description": "Ce traitement permet de stocker dans les bases de données PostgreSQL de la plateforme des données vecteurs livrées. Les formats pris en charge sont le CSV, le Shapefile, le Geopackage et le GeoJSON. Il est également possible de préciser un autre système afin de réaliser une reprojection à l'intégration",
+        "_id": "0de8c60b-9938-4be9-aa36-9026b77c3c96"
+    },
+    {
+        "name": "Recopie d'une archive livrée",
+        "description": "Génération ou mise à jour d'une donnée stockée ARCHIVE à partir d'une archive livrées. Si un fichier livré existait déjà dans la donnée en sortie, celui ci va écraser l'ancienne version",
+        "_id": "12cdc646-3976-4f18-b273-f34fca37e2a6"
+    },
+    {
+        "name": "Calcul de pyramide raster",
+        "description": "Génération ou mise à jour d'une pyramide de tuiles raster à partir d'une livraison d'images géo-référencées",
+        "_id": "2ae50661-986c-4f47-a3f0-e380417b522c"
+    },
+    {
+        "name": "Calcul ou mise à jour de pyramide raster par moissonnage WMS",
+        "description": "Il n'y a pas besoin de donnée en entrée. Sont fournis en paramètres toutes les informations sur le service WMS et le jeu de données à moissonner, ainsi que la zone sur laquelle faire le moissonnage",
+        "_id": "6a54dc92-fc93-4c8e-9f02-046bf889550e"
+    },
+    {
+        "name": "Fusion de pyramides raster",
+        "description": "Ce traitement permet de générer une pyramide raster par composition de plusieurs pyramides indépendantes. Seules les dalles présentes dans plusieurs entrées seront recalculées. Celles présentes dans une seule entrée seront référencées. La pyramide en sortie a donc des dépendances avec celles en entrée.",
+        "_id": "7cdca031-9e86-4804-8764-9b1d783b087d"
+    },
+    {
+        "name": "Calcul de pyramide vecteur",
+        "description": "Génération ou mise à jour d'une pyramide de tuiles vectorielles à partir d'une donnée vecteur en base",
+        "_id": "aa5f9391-0bdb-4b97-9209-fcde351b82f6"
+    }
+]
