@@ -27,11 +27,13 @@ Toutes ces actions vont être définie au format SQL, dans un fichier statique. 
     detail: "SQL - 133Ko"
 }) }}
 
-
-
 ```sql title="Contenu"
- /data/tutoriels/alimentation-maj/derivation.sql 
+ALTER TABLE ecoregions ADD COLUMN test_add_column integer; 
+
+UPDATE ecoregions
+   SET test_add_column = nnh * {{ params.multiply }};
 ```
+
 
 Ce fichier va permettre :
 
