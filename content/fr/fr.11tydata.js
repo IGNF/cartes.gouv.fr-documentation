@@ -8,6 +8,9 @@ module.exports = {
         public: {
             wfs: "https://data.geopf.fr/wfs",
         },
+        public: {
+            wmsv: "https://data.geopf.fr/wms-v",
+        },
     },
     permalink: function (data) {
         if (data.slugOverride) {

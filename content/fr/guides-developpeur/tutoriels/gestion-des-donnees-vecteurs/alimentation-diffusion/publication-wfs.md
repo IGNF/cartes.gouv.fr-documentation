@@ -23,6 +23,9 @@ Dans le cas du WFS, une configuration va donner plusieurs couches finales, le la
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
+``` title="Contenu" 
+{{ urls.api_entrepot }}/datastores/{datastore}/configurations
+```
 
 ```json
 {
@@ -74,6 +77,9 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
+``` title="Contenu" 
+{{ urls.api_entrepot }}/datastores/{datastore}
+```
 
 ```json
 /data/tutoriels/alimentation-maj/globales/{{ environnement }}/endpoints.json
@@ -86,6 +92,9 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings"
 
+``` title="Contenu" 
+{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings
+```
 
 ```json
 {
