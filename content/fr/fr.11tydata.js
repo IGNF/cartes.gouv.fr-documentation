@@ -11,6 +11,9 @@ module.exports = {
         public: {
             wmsv: "https://data.geopf.fr/wms-v",
         },
+        public: {
+            tmsv: "https://data.geopf.fr/vector-tms",
+        },
     },
     permalink: function (data) {
         if (data.slugOverride) {
