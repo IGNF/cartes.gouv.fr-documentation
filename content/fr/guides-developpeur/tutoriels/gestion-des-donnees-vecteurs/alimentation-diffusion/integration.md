@@ -47,7 +47,7 @@ flowchart LR
 ```
 
 ```json
-/data/tutoriels/alimentation-maj/globales/{{ environnement }}/processings.json
+/data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/processings.json
 
 ```
 ???

@@ -2,17 +2,15 @@ module.exports = {
     lang: "fr",
     urls: {
         api_entrepot: "https://data.geopf.fr/api",
+        annexes: "https://data.geopf.fr/annexes",
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
         },
         public: {
             wfs: "https://data.geopf.fr/wfs",
-        },
-        public: {
             wmsv: "https://data.geopf.fr/wms-v",
-        },
-        public: {
             tmsv: "https://data.geopf.fr/vector-tms",
+            tms: "https://data.geopf.fr/tms",
         },
     },
     permalink: function (data) {

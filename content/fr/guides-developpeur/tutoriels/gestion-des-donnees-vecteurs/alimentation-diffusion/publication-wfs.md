@@ -82,7 +82,7 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 ```
 
 ```json
-/data/tutoriels/alimentation-maj/globales/{{ environnement }}/endpoints.json
+/data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/endpoints.json
 ```
 ???
 

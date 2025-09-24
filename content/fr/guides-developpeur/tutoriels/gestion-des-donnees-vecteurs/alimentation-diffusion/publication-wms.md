@@ -79,7 +79,7 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 ```
 
 ```json
-/data/tutoriels/alimentation-maj/globales/{{ environnement }}/endpoints.json
+/data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/endpoints.json
 ```
 ??? 
 ### Publication
