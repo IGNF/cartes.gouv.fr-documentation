@@ -30,7 +30,7 @@ stateDiagram
     note left of PYR
         Traitement (processing)
         Exécution de traitement (processing execution)
-        Données stockée (stored data)
+        Données stockées (stored data)
     end note
 
     PUB_TILED: Publication en WMTS/TMS
@@ -85,7 +85,7 @@ flowchart LR
         off["Offre (offering)"]
 	end
 
-    dat -- à accès à une partie, avec quota ----> glo
+    dat -- a accès à une partie, avec quota ----> glo
 
     exe -- utilise en entrée --> upl
     exe -- génère en sortie --> sd

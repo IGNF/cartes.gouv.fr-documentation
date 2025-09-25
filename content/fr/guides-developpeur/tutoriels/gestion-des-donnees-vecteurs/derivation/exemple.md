@@ -1,6 +1,5 @@
 ---
 title: Exemple d'ajout de colonne avec valeur paramétrable
-
 mermaid: true
 eleventyNavigation:
     key: Exemple d'ajout de colonne avec valeur paramétrable
@@ -18,7 +17,7 @@ Dans cet exemple, on part de la donnée des écorégions du tutoriel de base, pu
 
 ## Téléversement d'un fichier SQL de dérivation
 
-Toutes ces actions vont être définie au format SQL, dans un fichier statique. Ce fichier n'a pas vocation à contenir de la donnée, mais simplement des instructions de modification
+Toutes ces actions vont être définies au format SQL, dans un fichier statique. Ce fichier n'a pas vocation à contenir de la donnée, mais simplement des instructions de modification
 
 :material-file: Exemple :
   {{ component("download", {
@@ -76,7 +75,7 @@ https://data.geopf.fr/api/datastores/{datastore}/statics
 
 En consultant la donnée en WFS, notamment sa table attributaire, on retrouve le contenu suivant.
 
-![Table attributaire avant dérivation](/img/guides-developpeur/vecteur/derivation_avant.png)
+![Table attributaire avant dérivation](/img/guides-developpeur/vecteur/derivation_avant.png){.fr-responsive-img .frx-img-contained}
 
 ## Jeu de la dérivation sur une donnée
 
@@ -157,7 +156,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
             "multiply": "3"
         }
     },
-    "_id": "{execution dérivation}}"
+    "_id": "{execution dérivation}"
 }
 ```
 ???
@@ -240,7 +239,7 @@ On peut voir le nouveau champ apparaître dans la description de la donnée
 ???
 ## Contrôle des données après dérivation
 
-Comme la structure a changé (ajout d'une colonne), il faut resynchroniser l'offre pour que le serveur de diffusion prenne connaissance de ce changement. Dans le cas d'un ajout, la consultation fonctionne mais la nouvelle colonne n'apparait pas. Dans le cas d'une suppression, on aura des erreurs car le serveur de diffusion aura des échec de lecture sur la colonne disparue. De manière générale, quand la structure est modifiée avec ce traitement, il est préférable de resynchroniser toutes les offres utilisant la donnée stockée modifiée.
+Comme la structure a changé (ajout d'une colonne), il faut resynchroniser l'offre pour que le serveur de diffusion prenne connaissance de ce changement. Dans le cas d'un ajout, la consultation fonctionne mais la nouvelle colonne n'apparaît pas. Dans le cas d'une suppression, on aura des erreurs car le serveur de diffusion aura des échecs de lecture sur la colonne disparue. De manière générale, quand la structure est modifiée avec ce traitement, il est préférable de resynchroniser toutes les offres utilisant la donnée stockée modifiée.
 
 ??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering wfs}"
 
@@ -252,4 +251,4 @@ Comme la structure a changé (ajout d'une colonne), il faut resynchroniser l'off
 
 Si vous utilisez QGis, il peut être nécessaire de vider le cache pour qu'il ne garde pas l'ancienne description de la couche WFS. On retrouve désormais le contenu suivant.
 
-![Table attributaire après dérivation](/img/guides-developpeur/vecteur/derivation_apres.png)
+![Table attributaire après dérivation](/img/guides-developpeur/vecteur/derivation_apres.png){.fr-responsive-img .frx-img-contained}

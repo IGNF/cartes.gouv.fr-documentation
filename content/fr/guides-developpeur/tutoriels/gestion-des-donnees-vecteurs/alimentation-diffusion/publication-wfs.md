@@ -11,7 +11,7 @@ eleventyNavigation:
 
 ## Configuration de la diffusion
 
-La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. A ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
 
 * nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WFS de la plateforme)
 * table absente de la donnée stockée

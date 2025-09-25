@@ -10,7 +10,7 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-Cette étape supplémentaire permet une diffusion à plus grande échelle de données vecteurs. Seules les parties nouvelles sont détaillées.
+Cette étape supplémentaire permet une diffusion à plus grande échelle de données vecteur. Seules les parties nouvelles sont détaillées.
 
 ## Calcul de la pyramide de tuiles vectorielle
 
@@ -116,7 +116,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
         },
         {
             "name": "height",
-            "description": "Nombre de tuiles dans une dalle, dans le sens de la haureur",
+            "description": "Nombre de tuiles dans une dalle, dans le sens de la hauteur",
             "mandatory": false,
             "default_value": 16
         },
@@ -127,7 +127,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
             "default_value": 1
         }
     ],
-    "_id": "{{ ids.processings['db-to-pyramid'] }}"
+    "_id": "{{ ids.processings['db-to-pyramid'] }}",
     "required_checks": []
 }
 ```
@@ -258,7 +258,7 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
 ???
 ## Diffusion des tuiles vectorielles
 
-Les données de la pyramide de tuiles vectorielles sont diffusable selon l'API Tile Map Service. Cette API est disponible sur un point d'accès de type WMTS-TMS.
+Les données de la pyramide de tuiles vectorielles sont diffusables selon l'API Tile Map Service. Cette API est disponible sur un point d'accès de type WMTS-TMS.
 
 ### Création de la configuration
 
@@ -319,7 +319,7 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 ???
 On peut vérifier la présence de notre couche `pays_ecoregions` dans le [getCapabilities du service TMS]({{ urls.public.tms }}/1.0.0). On peut également avoir des [détails sur cette couche]({{ urls.public.tms }}/1.0.0/pays_ecoregions).
 
-On peut également récupérer nos données dans QGis. Il faut ajouter une source de donnée "Tuile vectorielle" et précisé comme URL `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
+On peut également récupérer nos données dans QGis. Il faut ajouter une source de donnée "Tuile vectorielle" et préciser comme URL `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
 
 
 ### Hébergement du style sous forme d'annexe
@@ -360,8 +360,8 @@ Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvo
 * URL = `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
 * URL du style = `{{ urls.annexes }}/{technical_name}/styles/mapbox/pays_ecoregions.json`
 
-![Définition d'une source "Tulie vectorielle"](/img/guides-developpeur/vecteur/alimentation-diffusion/qgis_tms_definition.png)
+![Définition d'une source "Tuile vectorielle"](/img/guides-developpeur/vecteur/alimentation-diffusion/qgis_tms_definition.png){.fr-responsive-img .frx-img-contained}
 
-En zoomant en dessous du niveau 5, on voit bien nos regions écologiques et les limites des payes, avec le style mis en ligne.
+En zoomant en dessous du niveau 5, on voit bien nos régions écologiques et les limites des pays, avec le style mis en ligne.
 
-![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/qgis_tms_visualisation.png)
+![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/qgis_tms_visualisation.png){.fr-responsive-img .frx-img-contained}

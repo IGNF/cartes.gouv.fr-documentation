@@ -10,13 +10,13 @@ eleventyNavigation:
 
 ## Configuration de la diffusion WMS
 
-Contrairement au WFS, une configuration WMS va définir une couche seule couche finale. Il est possible d'utiliser plusieurs tables, mais seul l'agrégat sera consultable, avec les styles définis.
+Contrairement au WFS, une configuration WMS va définir une seule couche finale. Il est possible d'utiliser plusieurs tables, mais seul l'agrégat sera consultable, avec les styles définis.
 
 La création de la configuration WMS va permettre de vérifier de nombreuses informations :
 
 * nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMS Vecteur de la plateforme)
 * table absente de la donnée stockée
-* style ou FTL exploitant des attributs absent de la table utilisée
+* style ou FTL exploitant des attributs absents de la table utilisée
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
@@ -68,7 +68,7 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
 :::
 ## Envoi sur les services de diffusion
 
-Comme pour le WFS, seule la création d'une offre sur un point d'accès (publication) permet d'envoyer les informations de configuration au serveurs de diffusion.
+Comme pour le WFS, seule la création d'une offre sur un point d'accès (publication) permet d'envoyer les informations de configuration aux serveurs de diffusion.
 
 ### Consultation des points de diffusion disponibles
 

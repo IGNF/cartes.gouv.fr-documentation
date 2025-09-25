@@ -70,7 +70,7 @@ Les données de l'exemple sont les <a title="installations classées pour la pro
     href: "/data/tutoriels/alimentation-maj/installation-init.sql",
     detail: "SQL - 455o"
 }) }}
-- Un premier lot de données (département des Ardennes). On livre les données à ajouter dans la table, pas le vue.
+- Un premier lot de données (département des Ardennes). On livre les données à ajouter dans la table, pas la vue.
   {{ component("download", {
     title: "GPKG",
     href: "/data/tutoriels/alimentation-maj/installation.gpkg",

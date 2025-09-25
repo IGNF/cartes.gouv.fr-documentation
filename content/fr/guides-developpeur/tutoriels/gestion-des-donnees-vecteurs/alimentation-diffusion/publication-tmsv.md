@@ -11,7 +11,7 @@ eleventyNavigation:
 
 ## Configuration de la diffusion
 
-La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. A ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
 
 * nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations TMS vecteur de la plateforme)
 * table absente de la donnée stockée
@@ -93,4 +93,4 @@ On peut vérifier la présence de nos couches `pays_ecoregions.regions_ecologiqu
 
 L'avantage de ce service est de pouvoir faire du filtrage côté serveur, en précisant un paramètre `filter`, ainsi que limiter les champs retournés avec le paramètre `properties`. Voici un exemple en définissant une source `Tuiles vectorielles` dans QGIs avec l'URL suivante : `{{ urls.public.tmsv }}/1.0.0/pays_ecoregions.regions_ecologiques/{z}/{x}/{y}.pbf?filter=realm='Palearctic'&properties=id,eco_name`
 
-![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/qgis_tmsv_visualisation.png)
+![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/qgis_tmsv_visualisation.png){.fr-responsive-img .frx-img-contained}

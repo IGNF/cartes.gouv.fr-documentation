@@ -63,12 +63,12 @@ Les formats de fichier vecteur gérés sont :
 * Shapefile
 * CSV : 
     * si la géométrie est dans un colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
-    * si la donnée est ponctuelle est que les coordonnées sont dans deux colonnes, elles doivent avoir comme nom :
+    * si la donnée est ponctuelle et que les coordonnées sont dans deux colonnes, elles doivent avoir comme nom :
         * `lon`, `x`, `longitude`
         * `lat`, `y`, `latitude`
-* SQL. Les instruction autorisées sont les suivantes, sans préciser de nom de schéma :
+* SQL. Les instructions autorisées sont les suivantes, sans préciser de nom de schéma :
     * CREATE TABLE
-    * CREATE VIEX
+    * CREATE VIEW
     * CREATE INDEX
     * CREATE SEQUENCE
     * ALTER TABLE
@@ -119,7 +119,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
 
 ## Terminer la livraison
 
-Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu'elles puissent être traitées sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problème qui auraient mis en échec les traitements à suivre.
+Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu'elles puissent être traitées sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problèmes qui auraient mis en échec les traitements à suivre.
 
 ### Fermeture
 
@@ -130,7 +130,7 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 ???
 ### Consultation des vérifications sur ma livraison
 
-Plusieurs vérifications peuvent tourner sur une mếme livraison, celles ci ne faisant que lire les données déposées.
+Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne faisant que lire les données déposées.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
