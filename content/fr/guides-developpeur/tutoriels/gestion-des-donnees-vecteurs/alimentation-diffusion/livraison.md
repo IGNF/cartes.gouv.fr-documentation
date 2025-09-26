@@ -76,7 +76,7 @@ Les formats de fichier vecteur gérés sont :
     * ALTER TABLE
     * ALTER SEQUENCE
 
-:material-file: `<monde.gpkg>`
+📄 `<monde.gpkg>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg"
 
 ``` title="Contenu" 
