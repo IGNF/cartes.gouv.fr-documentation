@@ -18,6 +18,9 @@ const customMarkdownContainers = require("./markdown-custom-containers");
 
 const { translations } = require("./_data/i18n");
 
+const fs = require("fs");
+const path = require("path");
+
 module.exports = function (eleventyConfig) {
     // Copy the contents of the `public` folder to the output folder
     // For example, `./public/css/` ends up in `_site/css/`
@@ -191,6 +194,12 @@ module.exports = function (eleventyConfig) {
             const relative = item.inputPath.slice(pathStart.length);
             return !relative.includes("/");
         });
+    });
+
+    // Filter to read a JSON file
+    eleventyConfig.addFilter("readJSON", function (filePath) {
+        const fullPath = path.join(__dirname, filePath);
+        return fs.readFileSync(fullPath, "utf-8");
     });
 
     eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {

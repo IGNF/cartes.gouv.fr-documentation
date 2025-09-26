@@ -1,0 +1,343 @@
+{
+    "version": 8,
+    "name": "Éco-régions",
+    "layers": [
+        {
+            "filter": ["==", "biome_name", "Boreal Forests/Taiga"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#3BC922"
+            },
+            "id": "r0_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Boreal Forests/Taiga"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r0_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Deserts & Xeric Shrublands"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#2C49ED"
+            },
+            "id": "r1_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Deserts & Xeric Shrublands"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r1_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Flooded Grasslands & Savannas"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#C4C959"
+            },
+            "id": "r2_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Flooded Grasslands & Savannas"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r2_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Mangroves"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#E83A54"
+            },
+            "id": "r3_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Mangroves"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r3_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Mediterranean Forests, Woodlands & Scrub"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#7B5BDA"
+            },
+            "id": "r4_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Mediterranean Forests, Woodlands & Scrub"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r4_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Montane Grasslands & Shrublands"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#88E1E5"
+            },
+            "id": "r5_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Montane Grasslands & Shrublands"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r5_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Temperate Broadleaf & Mixed Forests"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#D50FCB"
+            },
+            "id": "r6_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Temperate Broadleaf & Mixed Forests"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r6_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Temperate Conifer Forests"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#D97C5D"
+            },
+            "id": "r7_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Temperate Conifer Forests"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r7_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Temperate Grasslands, Savannas & Shrublands"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#9F36D8"
+            },
+            "id": "r8_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Temperate Grasslands, Savannas & Shrublands"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r8_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Coniferous Forests"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#57A0DB"
+            },
+            "id": "r9_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Coniferous Forests"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r9_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Dry Broadleaf Forests"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#D96AA7"
+            },
+            "id": "r10_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Dry Broadleaf Forests"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r10_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Grasslands, Savannas & Shrublands"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#70C9AA"
+            },
+            "id": "r11_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Grasslands, Savannas & Shrublands"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r11_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Moist Broadleaf Forests"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#90DB33"
+            },
+            "id": "r12_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tropical & Subtropical Moist Broadleaf Forests"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r12_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tundra"],
+            "type": "fill",
+            "paint": {
+                "fill-color": "#DDBE85"
+            },
+            "id": "r13_sy0_st0",
+            "source-layer": "ecoregions"
+        },
+        {
+            "filter": ["==", "biome_name", "Tundra"],
+            "type": "line",
+            "paint": {
+                "line-color": "#232323",
+                "line-width": 0.26
+            },
+            "id": "r13_sy0_st1",
+            "source-layer": "ecoregions"
+        },
+        {
+            "type": "line",
+            "paint": {
+                "line-color": "#000000",
+                "line-width": 0.5
+            },
+            "id": "r15_sy0_st1",
+            "source-layer": "pays"
+        }
+    ],
+    "metadata": {
+        "geostyler:ref": {
+            "rules": [
+                {
+                    "name": "Boreal Forests/Taiga",
+                    "symbolizers": [["r0_sy0_st0", "r0_sy0_st1"]]
+                },
+                {
+                    "name": "Deserts & Xeric Shrublands",
+                    "symbolizers": [["r1_sy0_st0", "r1_sy0_st1"]]
+                },
+                {
+                    "name": "Flooded Grasslands & Savannas",
+                    "symbolizers": [["r2_sy0_st0", "r2_sy0_st1"]]
+                },
+                {
+                    "name": "Mangroves",
+                    "symbolizers": [["r3_sy0_st0", "r3_sy0_st1"]]
+                },
+                {
+                    "name": "Mediterranean Forests, Woodlands & Scrub",
+                    "symbolizers": [["r4_sy0_st0", "r4_sy0_st1"]]
+                },
+                {
+                    "name": "Montane Grasslands & Shrublands",
+                    "symbolizers": [["r5_sy0_st0", "r5_sy0_st1"]]
+                },
+                {
+                    "name": "Temperate Broadleaf & Mixed Forests",
+                    "symbolizers": [["r6_sy0_st0", "r6_sy0_st1"]]
+                },
+                {
+                    "name": "Temperate Conifer Forests",
+                    "symbolizers": [["r7_sy0_st0", "r7_sy0_st1"]]
+                },
+                {
+                    "name": "Temperate Grasslands, Savannas & Shrublands",
+                    "symbolizers": [["r8_sy0_st0", "r8_sy0_st1"]]
+                },
+                {
+                    "name": "Tropical & Subtropical Coniferous Forests",
+                    "symbolizers": [["r9_sy0_st0", "r9_sy0_st1"]]
+                },
+                {
+                    "name": "Tropical & Subtropical Dry Broadleaf Forests",
+                    "symbolizers": [["r10_sy0_st0", "r10_sy0_st1"]]
+                },
+                {
+                    "name": "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+                    "symbolizers": [["r11_sy0_st0", "r11_sy0_st1"]]
+                },
+                {
+                    "name": "Tropical & Subtropical Moist Broadleaf Forests",
+                    "symbolizers": [["r12_sy0_st0", "r12_sy0_st1"]]
+                },
+                {
+                    "name": "Tundra",
+                    "symbolizers": [["r13_sy0_st0", "r13_sy0_st1"]]
+                }
+            ]
+        }
+    }
+}

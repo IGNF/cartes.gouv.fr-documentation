@@ -7,5 +7,4 @@ module.exports = {
             title: "Guides développeur",
         },
     ],
-    layout: "layouts/article.njk",
 };
