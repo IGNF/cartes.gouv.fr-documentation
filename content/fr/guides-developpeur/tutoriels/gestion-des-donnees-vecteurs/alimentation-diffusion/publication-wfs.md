@@ -110,4 +110,4 @@ On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiqu
 
 On peut également récupérer nos données dans QGis. Pour les régions écologiques, le service se limite à 1000 objets, ils ne seront donc pas tous téléchargés en une fois.
 
-![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/donnees_wfs.png)
+![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/donnees_wfs.png){.fr-responsive-img .frx-img-contained}
