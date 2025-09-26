@@ -2,6 +2,7 @@
 title: Alimentation et diffusion simple
 description: Téléversement d'images géoréférencées, calcul de pyramide raster, diffusion en WMS, WMTS et TMS
 mermaid: true
+layout: layouts/parent.njk
 eleventyNavigation:
     key: Alimentation et diffusion simple
     parent: Gestion des données raster
