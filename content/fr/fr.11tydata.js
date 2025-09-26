@@ -12,6 +12,7 @@ module.exports = {
             tmsv: "https://data.geopf.fr/vector-tms",
             tms: "https://data.geopf.fr/tms",
             wmts: "https://data.geopf.fr/wmts",
+            wmsr: "https://data.geopf.fr/wms-r",
         },
     },
     permalink: function (data) {
