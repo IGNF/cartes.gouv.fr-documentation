@@ -54,6 +54,8 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 }
 ```
 ???
+<br>
+
 ### Téléverser un fichier
 
 Les formats de fichier vecteur gérés sont :
@@ -88,6 +90,7 @@ Les formats de fichier vecteur gérés sont :
     ]
 }) }}
 ???
+<br>
 
 ### Contrôler le contenu
 
@@ -116,6 +119,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
 ]
 ```
 ???
+<br>
 
 ## Terminer la livraison
 
@@ -128,6 +132,8 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close
 ```
 ???
+<br>
+
 ### Consultation des vérifications sur ma livraison
 
 Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne faisant que lire les données déposées.
@@ -162,6 +168,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne f
 }
 ```
 ???
+<br>
 
 Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l'appel précédent sera :
 
@@ -195,3 +202,4 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 }
 ```
 ???
+<br>

@@ -99,6 +99,8 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 }
 ```
 ???
+<br>
+
 📄 `pays.sld`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
@@ -124,6 +126,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 }
 ```
 ???
+<br>
 
 📄 `ecoregions.ftl`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
@@ -155,6 +158,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 }
 ```
 ???
+<br>
 
 📄 `pays.ftl`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
@@ -185,3 +189,4 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 }
 ```
 ???
+<br>

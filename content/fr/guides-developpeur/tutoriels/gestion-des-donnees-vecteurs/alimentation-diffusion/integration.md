@@ -51,6 +51,8 @@ flowchart LR
 
 ```
 ???
+<br>
+
 ### Consultation du traitement qui nous intéresse
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
@@ -100,6 +102,8 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
 }
 ```
 ???
+<br>
+
 ### Configuration d'une exécution de ce traitement
 
 On distingue le traitement, ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
@@ -168,6 +172,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 }
 ```
 ???
+<br>
 
 ### Déclenchement de cette exécution
 
@@ -176,6 +181,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch
 ```
 ???
+<br>
 
 :::warning "Attention"
 
@@ -234,6 +240,8 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 }
 ```
 ???
+<br>
+
 ## Consultation de la donnée stockée en sortie
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées, tables et attributs).
@@ -322,6 +330,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 }
 ```
 ???
+<br>
 
 ## Nettoyage de la livraison
 
@@ -332,3 +341,4 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}
 ```
 ???
+<br>

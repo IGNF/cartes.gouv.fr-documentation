@@ -26,6 +26,8 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 /data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/processings.json
 ```
 ???
+<br>
+
 ### Consultation du traitement qui nous intéresse
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db-to-pyramid'] }}"
@@ -132,6 +134,8 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 }
 ```
 ???
+<br>
+
 ### Configuration d'une exécution de ce traitement
 
 :::warning "Points d'attentions"
@@ -180,6 +184,8 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
 }
 ```
 ???
+<br>
+
 ### Consultation de la donnée stockée en sortie
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées, grille et niveaux).
@@ -256,6 +262,8 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
 }
 ```
 ???
+<br>
+
 ## Diffusion des tuiles vectorielles
 
 Les données de la pyramide de tuiles vectorielles sont diffusables selon l'API Tile Map Service. Cette API est disponible sur un point d'accès de type WMTS-TMS.
@@ -287,6 +295,8 @@ Les données de la pyramide de tuiles vectorielles sont diffusables selon l'API 
 }
 ```
 ???
+<br>
+
 La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier de style à préciser au niveau de la configuration.
 
 ### Consultation des points de diffusion disponibles
@@ -300,7 +310,8 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 ```json
 /data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/endpoints.json
 ```
-
+???
+<br>
 
 ### Publication
 
@@ -317,6 +328,8 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 }
 ```
 ???
+<br>
+
 On peut vérifier la présence de notre couche `pays_ecoregions` dans le [getCapabilities du service TMS]({{ urls.public.tms }}/1.0.0). On peut également avoir des [détails sur cette couche]({{ urls.public.tms }}/1.0.0/pays_ecoregions).
 
 On peut également récupérer nos données dans QGis. Il faut ajouter une source de donnée "Tuile vectorielle" et préciser comme URL `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
@@ -355,6 +368,8 @@ Ce [style d'exemple](/data/tutoriels/alimentation-diffusion-simple/globales/prod
 }
 ```
 ??? 
+<br>
+
 Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement. On va pouvoir définir une couche "Tuile vectorielle" dans QGis, en précisant la source des tuiles et l'URL du style :
 
 * URL = `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`

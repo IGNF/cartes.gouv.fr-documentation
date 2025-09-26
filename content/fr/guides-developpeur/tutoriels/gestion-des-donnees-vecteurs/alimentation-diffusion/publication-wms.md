@@ -62,6 +62,8 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
 }
 ```
 ???
+<br>
+
 :::warning "Attention"
 
     Une configuration WMS-VECTOR donnera une unique couche. Même si elle utilise plusieurs tables, ces dernières ne seront pas consultables individuellement en WMS. Si c'est votre besoin, faites une configuration (et donc une couche) par table.
@@ -82,6 +84,8 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 /data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/endpoints.json
 ```
 ??? 
+<br>
+
 ### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings"
@@ -97,4 +101,6 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 }
 ```
 ???
+<br>
+
 On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [getCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
