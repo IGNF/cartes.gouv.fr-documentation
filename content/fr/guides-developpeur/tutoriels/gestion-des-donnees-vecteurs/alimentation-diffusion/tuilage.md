@@ -310,7 +310,7 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 ```
 
 ```json
-/data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/endpoints.json
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
 ???
 <br>

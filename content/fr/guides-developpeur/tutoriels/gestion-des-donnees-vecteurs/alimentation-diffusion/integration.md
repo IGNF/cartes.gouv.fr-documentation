@@ -47,8 +47,7 @@ flowchart LR
 ```
 
 ```json
-/data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/processings.json
-
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
 ```
 ???
 <br>

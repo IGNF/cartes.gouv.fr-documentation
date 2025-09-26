@@ -81,7 +81,7 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 ```
 
 ```json
-/data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/endpoints.json
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
 ??? 
 <br>
