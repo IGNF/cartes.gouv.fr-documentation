@@ -1,7 +1,7 @@
 ---
 title: Alimentation et diffusion simple
+description: Téléversement d'images géoréférencées, calcul de pyramide raster, diffusion en WMS, WMTS et TMS
 mermaid: true
-layout: layouts/parent.njk
 eleventyNavigation:
     key: Alimentation et diffusion simple
     parent: Gestion des données raster
@@ -57,7 +57,7 @@ stateDiagram
     fork_state --> PUB_TILED
     fork_state --> PUB_WMS
 
-    classDef concepts fill:#eee,stroke:#8d1d75,stroke-width:3px;
+    classDef concepts fill:#eee,stroke:#8d1d75,stroke-width:3px,color:#000;
 
     class TEL,PYR,PUB_TILED,PUB_WMS concepts
 ```
@@ -68,7 +68,7 @@ title: Concepts entrepôt manipulés et leurs liens. En bleu les entités global
 ---
 flowchart LR
 
-	subgraph glo[Ressources globales de la plateforme]
+	subgraph glo[Ressources globales]
 
     direction TB
 
@@ -94,18 +94,24 @@ flowchart LR
     off -- synchronise --> con
     off -- sur --> endp
 
-    classDef group fill:#fff,stroke:#aaa,stroke-width:3px;
-    classDef indiv fill:#eee,stroke:#ff8000,stroke-width:3px;
-	classDef global fill:#eee,stroke:#3465a4,stroke-width:3px;
+    classDef group fill:#fff,stroke:#aaa,stroke-width:3px,color:#000;
+    classDef indiv fill:#eee,stroke:#ff8000,stroke-width:3px,color:#000;
+	classDef global fill:#eee,stroke:#3465a4,stroke-width:3px,color:#000;
 
     class dat,glo group
     class upl,sd,exe,con,off indiv
     class sto,chec,proc,endp global
+        linkStyle 0 color:#000
+    linkStyle 1 color:#000
+    linkStyle 2 color:#000
+    linkStyle 3 color:#000
+    linkStyle 4 color:#000
+    linkStyle 5 color:#000
 ```
 
 ## Données du tutoriel
 
-Les données de l'exemple sont une image SCAN 1000 sur la Corse, au format [TIFF](public/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tif) avec un [TFW](public/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tfw) pour le géo-référencement.
+Les données de l'exemple sont une image SCAN 1000 sur la Corse, au format [TIFF](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tif) avec un [TFW](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tfw) pour le géo-référencement.
 
-![Visualisation des données du tutoriel](/img/guides-developpeur/raster/donnees_presentation_raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_presentation_raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
