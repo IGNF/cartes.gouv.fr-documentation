@@ -1,6 +1,8 @@
 ---
 title: Diffusion en tuiles vectorielles précalculée
 mermaid: true
+eleventyComputed:
+  markdownTemplateEngine: njk
 eleventyNavigation:
     key: Diffusion en tuiles vectorielles précalculée
     parent: Alimentation et diffusion simple
@@ -23,7 +25,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 ```
 
 ```json
-/data/tutoriels/alimentation-diffusion-simple/globales/{{ environnement }}/processings.json
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
 ???
 <br>
