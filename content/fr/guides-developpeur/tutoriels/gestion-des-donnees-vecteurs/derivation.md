@@ -16,7 +16,7 @@ Il est possible de modifier une donnée vecteur en lui ajoutant des index, des c
 :::warning Impacts sur la diffusion
 Lors de la modification d'une donnée stockée existante et diffusée, pour que ce soit pris en compte, il peut être nécessaire de mettre à jour les offres de diffusion.
 
-Dans certains cas, la modification peut aller jusqu'à "casser" la diffusion, comme la suppression de colonne ou le changement de type. En effet, les services de diffusion ont en mémoire une structure qui n'est plus valide et la lecture des données ne sera plus fonctionnelle tant que la synchronisation de l'offre n'est pas faite.
+Dans certains cas, la modification peut aller jusqu'à « casser » la diffusion, comme la suppression de colonne ou le changement de type. En effet, les services de diffusion ont en mémoire une structure qui n'est plus valide et la lecture des données ne sera plus fonctionnelle tant que la synchronisation de l'offre n'est pas faite.
 :::
 
 Les instructions SQL suivantes sont autorisées :

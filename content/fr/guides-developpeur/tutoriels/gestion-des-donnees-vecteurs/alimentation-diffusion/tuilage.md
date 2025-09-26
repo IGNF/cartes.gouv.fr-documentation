@@ -372,7 +372,7 @@ Ce [style d'exemple](/data/tutoriels/alimentation-diffusion-simple/globales/prod
 ??? 
 <br>
 
-Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement. On va pouvoir définir une couche "Tuile vectorielle" dans QGis, en précisant la source des tuiles et l'URL du style :
+Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement. On va pouvoir définir une couche «Tuile vectorielle» dans QGis, en précisant la source des tuiles et l'URL du style :
 
 * URL = `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
 * URL du style = `{{ urls.annexes }}/{technical_name}/styles/mapbox/pays_ecoregions.json`
