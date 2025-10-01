@@ -12,9 +12,9 @@ eleventyNavigation:
 
 ## Livraison des données
 
-La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l'entrepôt. Une livraison et son contenu sera toujours utilisée comme un tout.
+La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l'entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
 
-La livraison n'a qu'un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
+La livraison n'a qu'un rôle temporaire : elle existe uniquement le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
 
 ### Déclarer la livraison
 
@@ -111,7 +111,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 ## Terminer la livraison
 
-Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin que l'on puisse le traiter sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problème qui aurait mis en échec les traitements à suivre.
+Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin que l'on puisse le traiter sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problèmes qui auraient mis en échec les traitements à suivre.
 
 ### Fermeture
 

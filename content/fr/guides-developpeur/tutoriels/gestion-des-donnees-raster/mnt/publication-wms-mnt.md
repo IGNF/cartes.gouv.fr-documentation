@@ -12,7 +12,7 @@ eleventyNavigation:
 
 ## Mise en place d'un style
 
-Les données MNT ont un format particulier : les images ont un unique canal, avec des valeurs flottantes. Les flux WMS et WMTS vont permettre de récupérer la donnée brute (pour d'éventuels calculs), mais l'affichage peut être compliqué.
+Les données MNT ont un format particulier : les images possèdent un unique canal contenant des valeurs flottantes. Les flux WMS et WMTS permettent de récupérer les données brutes (pour d'éventuels calculs), mais leur affichage peut s'avérer complexe.
 
 En WMS, on va permettre la demande de donnée symbolisée, en appliquant des teintes hypsométriques. Afin que le consommateur des flux puisse connaître les caractéristiques de ces teintes, nous allons mettre en ligne la légende, qui sera référencée dans le style via son URL.
 
@@ -26,7 +26,7 @@ Avec la légende :
 
 ### Hébergement de la légende sous forme d'annexe
 
-Pour obtenir une URL publique pointant sur notre légende, nous allons la téléverser dans l'entrepôt sous forme d'annexe, en en demandant la publication immédiate.
+Pour obtenir une URL publique pointant sur notre légende, nous allons la téléverser dans l'entrepôt sous forme d'annexe, en demandant la publication immédiate.
 
 📄 `<hypso_legende.png>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
@@ -47,13 +47,13 @@ Pour obtenir une URL publique pointant sur notre légende, nous allons la télé
 ???
 <br>
 
-Le renseignement d'un label va permettre de plus facilement retrouver et publier / dépublier les annexes.
+L'ajout d'un label facilite la recherche des annexes et leur gestion (publication/dépublication).
 
 La légende est maintenant accessible à l'URL `{{ urls.annexes }}/{technical_name}/legendes/teintes_hypsometriques.png`.
 
 ### Téléversement du style à destination du serveur WMS
 
-Le style permettant au serveur WMS d'appliquer ces teintes sur de la donnée MNT est le suivant :
+Le style permettant au serveur WMS d'appliquer ces teintes aux donnée MNT est le suivant :
 
 ```json title="Contenu de hypso.json"
 {

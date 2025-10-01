@@ -54,7 +54,7 @@ flowchart LR
 
 ### Consultation du traitement qui nous intéresse
 
-Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
+Le détail sur un traitement permet de voir les types de données attendus en entrée (livrées ou stockées), les types de données produits en sortie, ainsi que les paramètres et les vérifications requises pour les livraisons en entrée.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}"
 
@@ -201,7 +201,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
 
 ### Configuration d'une exécution de ce traitement
 
-On distingue le traitement, ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
+On distingue le traitement, qui est une ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et prend en entrée ainsi qu'en sortie des données spécifiques.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
