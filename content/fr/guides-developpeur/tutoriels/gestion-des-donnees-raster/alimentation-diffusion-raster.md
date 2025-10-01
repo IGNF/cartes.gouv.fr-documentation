@@ -102,7 +102,8 @@ flowchart LR
     class dat,glo group
     class upl,sd,exe,con,off indiv
     class sto,chec,proc,endp global
-        linkStyle 0 color:#000
+    
+    linkStyle 0 color:#000
     linkStyle 1 color:#000
     linkStyle 2 color:#000
     linkStyle 3 color:#000
