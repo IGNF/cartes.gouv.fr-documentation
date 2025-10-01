@@ -13,6 +13,7 @@ module.exports = {
             tms: "https://data.geopf.fr/tms",
             wmts: "https://data.geopf.fr/wmts",
             wmsr: "https://data.geopf.fr/wms-r",
+            alti: "https://data.geopf.fr/altimetrie",
         },
     },
     permalink: function (data) {
