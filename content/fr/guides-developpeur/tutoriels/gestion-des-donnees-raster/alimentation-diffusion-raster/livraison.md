@@ -3,7 +3,7 @@ title: Livraison des données raster
 mermaid: true
 eleventyNavigation:
     key: Livraison des données raster
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple raster
     order: 1
     nav: guides-developpeur
 ---

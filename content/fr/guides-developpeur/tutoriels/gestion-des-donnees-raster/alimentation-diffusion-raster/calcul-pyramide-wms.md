@@ -3,7 +3,7 @@ title: Calcul de pyramide par moissonnage
 mermaid: true
 eleventyNavigation:
     key: Calcul de pyramide par moissonnage
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple raster
     order: 5
     nav: guides-developpeur
 ---

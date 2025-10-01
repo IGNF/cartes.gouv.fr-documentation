@@ -4,7 +4,7 @@ description: Téléversement d'images géoréférencées, calcul de pyramide ras
 mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
-    key: Alimentation et diffusion simple
+    key: Alimentation et diffusion simple raster
     parent: Gestion des données raster
     order: 1
     nav: guides-developpeur

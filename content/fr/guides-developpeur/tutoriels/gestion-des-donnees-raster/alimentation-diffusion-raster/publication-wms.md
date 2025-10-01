@@ -3,7 +3,7 @@ title: Publication en WMS
 mermaid: true
 eleventyNavigation:
     key: Publication en WMS
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple raster
     order: 4
     nav: guides-developpeur
 ---

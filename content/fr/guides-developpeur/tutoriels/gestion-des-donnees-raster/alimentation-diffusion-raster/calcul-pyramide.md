@@ -3,7 +3,7 @@ title: Calcul d'une pyramide raster
 mermaid: true
 eleventyNavigation:
     key: Calcul d'une pyramide raster
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple raster
     order: 2
     nav: guides-developpeur
 ---
