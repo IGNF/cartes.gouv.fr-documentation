@@ -12,24 +12,26 @@ eleventyNavigation:
     order: 2
     nav: guides-producteur
 pictogram: digital/in-progress.svg
+summary:
+    visible: true
 ---
 
 {% from "components/component.njk" import component with context %}
 
 Cette page explique la procédure à suivre avant de faire toute modification de contenu.
 
-## 1 - Principe
+## Principe
 
 Afin de partir sur des bases saines il est conseillé de mettre à jour votre _fork_ (duplication github) et votre clone local afin qu’ils soient identiques au dépôt principal. Une fois cela fait, vous pourrez être sûr que les modifications que vous proposez ne viennent pas en conflit avec d’autres modifications récentes.
 
-## 2 - Mettre à jour votre _fork_
+## Mettre à jour votre _fork_
 
 Rendez-vous sur la page de votre _fork_. Github affiche au dessus de la liste des dossiers et fichiers l’état de synchronisation de votre _fork_ (commits en avance ou en retard)
 
 ![Image décrivant l’affichage du statut du fork sur github](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/01_Statut-fork-sur-github.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Si votre _fork_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync *fork* »** directement pour le mettre à jour.
 
-## 3 - Créer une branche
+## Créer une branche
 
 Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation, il est conseillé de travailler avec des _branches_. Par défaut votre _fork_/duplication contient une seule branche, la branche principale (_main_).
 
@@ -73,7 +75,7 @@ git branch -l
 
 ![Image décrivant le listing et le changement de branches dans l’invite de commande Git Bash](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/03_Liste-des-branches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 4 - Mettre à jour votre clone local
+## Mettre à jour votre clone local
 
 Dans l’invite de commande _Git Bash_ lancez la commande suivante :
 
@@ -97,7 +99,7 @@ git stash apply
 Les commandes peuvent se lancer depuis n’importe quelle branche mais il est conseillé de se placer à la racine du projet.
 :::
 
-## 5 - Changer son pseudonyme sur _github_
+## Changer son pseudonyme sur _github_
 
 Par défaut _github_ génère votre pseudonyme à partir des informations de votre ordinateur. Pour modifier le pseudonyme et le courriel à utiliser (qui seront visibles par tous les contributeurs), lancez les commandes suivantes sur *Git Bash* :
 
@@ -106,7 +108,7 @@ git config --global user.name "MonPseudoGithub"
 git config --global user.email mail@domaine.fr
 ```
 
-## 6 - Exécuter _Eleventy_ pour construire le site
+## Exécuter _Eleventy_ pour construire le site
 
 Cette procédure permet de prévisualiser votre clone local et toutes les modifications que vous y apportez dans votre navigateur, avant d’en demander la fusion finale au dépôt principal. La prévisualisation est disponible sous l’adresse <a href="http://localhost:8080/fr" target="_blank" rel="noopener noreferrer" title="http://localhost:8080/fr - ouvre une nouvelle fenêtre">http://localhost:8080/fr</a>.
 

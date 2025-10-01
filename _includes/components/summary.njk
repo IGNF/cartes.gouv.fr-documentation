@@ -1,0 +1,20 @@
+
+{% macro itemList(subItems) %}
+    {% for item in subItems %}
+        <li>
+            <a class="fr-summary__link" id="summary-link-{{ item.id }}" href="#{{ item.id }}">{{ item.name }}</a>
+            {% if item.children.length > 0 %}
+                <ol>
+                    {{ itemList(item.children) }}
+                </ol>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+<nav class="fr-summary" role="navigation" aria-labelledby="fr-summary-title">
+    <h2 class="fr-summary__title" id="fr-summary-title">Sommaire</h2>
+    <ol>
+        {{ itemList(summaryItems) }}
+    </ol>
+</nav>
