@@ -17,7 +17,7 @@ Le but de ce tutoriel va être de gérer une pyramide raster mise à jour par li
 
 Il y a plusieurs façon de contruire par morceau une pyramide :
 
-- [Au fur et à mesure](./furetamesure.md) : à chaque nouveau jeu de donnée, on le livre et on calcule une pyramide qui intègre les nouvelles données et les données de la pyramide précédente. À chaque mise à jour, on a une nouvelle pyramide sur laquelle il est nécessaire de reconfigurer la diffusion
+- [Au fur et à mesure](../alimentation-mise-a-jour-raster/fur-et-a-mesure) : à chaque nouveau jeu de donnée, on le livre et on calcule une pyramide qui intègre les nouvelles données et les données de la pyramide précédente. À chaque mise à jour, on a une nouvelle pyramide sur laquelle il est nécessaire de reconfigurer la diffusion
 - [Par injection](./parinjection.md) : à chaque nouveau jeu de donnée, on le livre et on modifie une pyramide déjà existente pour ajouter ces nouvelles données
 - [Par composition a posteriori](./composition.md) : chaque jeu de donnée donne une nouvelle pyramide indépendante. On va ensuite construire une pyramide par fusion
 
