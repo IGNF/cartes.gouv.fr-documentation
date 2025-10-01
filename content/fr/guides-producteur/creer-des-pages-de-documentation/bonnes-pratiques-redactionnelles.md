@@ -173,9 +173,9 @@ Utilisez les apostrophes spéciaux : « ’ ». Raccourci clavier : <kbd>alt
 
 ### Espaces insécables
 
-Utilisez des espaces insécables aux endroits ou vous ne souhaitez pas de passage à la ligne intempestifs sur certaines largeurs d’écran.
+Utilisez des espaces insécables aux endroits où vous ne souhaitez pas de passage à la ligne intempestifs sur certaines largeurs d’écran.
 
-Placez en notamment avant les signes de ponctuation double : ! « etc.
+Placez-en notamment avant les signes de ponctuation double : ! « etc.
 
 Raccourci clavier : <kbd>alt+0160</kbd>
 
