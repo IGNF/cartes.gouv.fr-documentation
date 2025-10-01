@@ -17,6 +17,7 @@ const pluginCalendar = require("@codegouvfr/eleventy-plugin-calendar");
 const customMarkdownContainers = require("./markdown-custom-containers");
 
 const { translations } = require("./_data/i18n");
+const { getSummaryItems } = require("./utils.js");
 
 const fs = require("fs");
 const path = require("path");
@@ -201,6 +202,9 @@ module.exports = function (eleventyConfig) {
         const fullPath = path.join(__dirname, filePath);
         return fs.readFileSync(fullPath, "utf-8");
     });
+
+    // Get summary items (headers) from a content string
+    eleventyConfig.addFilter("getSummaryItems", getSummaryItems);
 
     eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {
         console.log(content);

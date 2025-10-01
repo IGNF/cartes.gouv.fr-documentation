@@ -11,6 +11,8 @@ eleventyNavigation:
     order: 5
     nav: guides-producteur
 pictogram: custom/document-upload.svg
+summary:
+    visible: true
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -21,13 +23,13 @@ Cette page explique la procédure pour fusionner vos modifications faites en loc
 Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre *fork* : voir [Étapes préalables aux modifications](./etapes-initiales-aux-modifications/).
 :::
 
-## 1 - Enregistrer
+## Enregistrer les modifications
 
 Pensez à bien enregistrer toutes vos modifications, sinon elles ne seront pas prises en compte dans la suite de la procédure. Dans _Visual Studio_ un petit rond apparait à côté du nom du fichier si celui-ci a été modifié et pas encore enregistré.
 
 ![Image décrivant un fichier non enregistré dans Visual Studio](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/01_Fichier-non-enregistre.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 2 - Passer en revue les modifications
+## Passer en revue les modifications
 
 Gardez l’invite de commande _Git Bash_ utilisée pour faire tourner la prévisualisation avec _Eleventy_ ouvert à part. Ouvrez une nouvelle invite de commande _Git Bash_ à la racine du projet.
 
@@ -45,7 +47,7 @@ Les fichiers non-enregistrés peuvent ne pas apparaitre dans la liste des modifi
 
 ![Image décrivant le résultat de la commande git status](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/02_Git-status.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 3 - Choisir les fichiers à fusionner
+## Choisir les fichiers à fusionner
 
 Vous pouvez soit ajouter toutes vos modifications avec la commande suivante :
 
@@ -59,7 +61,7 @@ Soit ajouter uniquement certains fichiers un à un avec la commande suivante :
 git add content/fr/partenaires/partenaireABC/.../monfichier.md
 ```
 
-## 4 - Pousser les modifications sur votre _fork_
+## Pousser les modifications sur votre _fork_
 
 Il faut maintenant transmettre vos modifications locales à votre _fork_ sur _github_. Pour cela lancez la commande suivante pour créer un nouveau paquet (_commit_) :
 
@@ -81,7 +83,7 @@ Vous pouvez voir sur le _github_ de votre _fork_ que celle-ci est à présent en
 
 ![Image décrivant l’avance du fork sur le dépôt princiapl](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/03_Avance-du-fork-sur-le-depot-principal.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 5 - Demander une _pull request_
+## Demander une _pull request_
 
 La dernière étape consiste à demander au dépôt principal d’accepter vos modifications, il s’agit de la _pull request_ (ou de la demande de _merge_).
 
@@ -93,7 +95,7 @@ Ajoutez un titre et une description concise puis cliquez sur **« Create pull r
 
 Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès que cela sera fait, les modifications apparaitront sur le site.
 
-## 6 - Supprimer la branche
+## Supprimer la branche
 
 Une fois que la _pull request_ a été acceptée, il faudra supprimer la branche.
 

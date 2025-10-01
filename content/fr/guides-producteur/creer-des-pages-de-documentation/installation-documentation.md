@@ -11,6 +11,9 @@ eleventyNavigation:
     order: 1
     nav: guides-producteur
 pictogram: document/document-download.svg
+summary:
+    visible: true
+    depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -21,9 +24,9 @@ Cette page explique la procédure d’installation du projet de documentation de
 Cette documentation est technique mais vous permet de visualiser vos ajouts, modifications ou suppressions dans un navigateur avant d’en demander la fusion avec le dépôt principal _github_.
 :::
 
-## 1 - Installation de l’environnement de travail
+## Installation de l’environnement de travail
 
-### 1.1 - Prérequis
+### Prérequis
 
 Pour disposer d’un environnement de travail confortable, il est recommandé de disposer des logiciels suivants :
 
@@ -33,13 +36,13 @@ Pour disposer d’un environnement de travail confortable, il est recommandé de
 
 _Git_ et _NodeJS_ sont indispensables pour aller plus loin dans l’installation.
 
-### 1.2 - Variables d’environnement du compte
+### Variables d’environnement du compte
 
 Si vous travaillez derrière un _proxy_, il est nécessaire de vérifier vos variables d’environnement **de compte** (pas les variables système). Ajouter les variables **« HTTP_PROXY »** et **« HTTPS_PROXY »** si elles n’existent pas encore. Renseignez-vous auprès de votre _DSI_ si vous ne connaissez pas les valeurs à indiquer (ces variables sont propres à chaque organisme).
 
-## 2 - Installation de la documentation en local
+## Installation de la documentation en local
 
-### 2.1 - Dupliquer le dépôt (_fork_)
+### Dupliquer le dépôt (_fork_)
 
 Rendez-vous sur le _github_ du projet : <a href="https://github.com/IGNF/cartes.gouv.fr-documentation" target="_blank" rel="noopener noreferrer" title="https://github.com/IGNF/cartes.gouv.fr-documentation - ouvre une nouvelle fenêtre">https://github.com/IGNF/cartes.gouv.fr-documentation</a>. Il faut dupliquer le projet sur votre espace _Github_ afin de pouvoir faire les changements de votre côté, les prévisualiser, puis les soumettre au dépôt principal.
 
@@ -55,7 +58,7 @@ Votre _fork_/duplication du dépôt sera disponible sous l’URL **« https://g
 
 ![Image décrivant le résultat de la duplication](/img/guides-producteur/creer-des-pages-de-documentation/installation-documentation/02_Resultat-duplication.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 2.2 - Cloner le dépôt sur votre ordinateur
+### Cloner le dépôt sur votre ordinateur
 
 Sous Windows, après avoir installé _Git for Windows_, vous devriez avoir accès au clic droit dans l’explorateur à un menu contextuel **« Git Bash here »** qui vous permet de lancer une invite de commande qui est très adaptée à l’utilisation de _Git_ et offre une bonne coloration syntaxique. Il est recommandé de la préférer à l’invite de commande par défaut de Windows.
 
@@ -75,7 +78,7 @@ git clone https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation
 
 Votre _fork_ est maintenant cloné en local sur votre ordinateur.
 
-### 2.3 - Installer les dépendances
+### Installer les dépendances
 
 Déplacez-vous dans le dossier que vous venez de créer avec la commande suivante :
 

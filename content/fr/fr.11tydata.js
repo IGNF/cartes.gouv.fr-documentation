@@ -20,4 +20,7 @@ module.exports = {
     },
     showBreadcrumb: true,
     date: "git Last Modified",
+    summary: {
+        visible: false,
+    },
 };
