@@ -4,7 +4,7 @@ description: "Téléversement de fichiers vecteurs, intégration en base de donn
 mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
-    key: Alimentation et diffusion simple
+    key: Alimentation et diffusion simple vecteur
     parent: Gestion des données vecteurs
     order: 1
     nav: guides-developpeur

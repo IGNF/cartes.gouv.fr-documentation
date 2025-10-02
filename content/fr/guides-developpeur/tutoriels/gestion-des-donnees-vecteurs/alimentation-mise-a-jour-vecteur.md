@@ -3,7 +3,7 @@ title: Alimentation par mise à jour
 description: "Téléversement de fichiers vecteurs, intégration en base de données déjà existante et diffusée"
 mermaid: true
 eleventyNavigation:
-    key: Alimentation par mise à jour
+    key: Alimentation par mise à jour vecteur
     parent: Gestion des données vecteurs
     order: 2
     nav: guides-developpeur

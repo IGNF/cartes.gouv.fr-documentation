@@ -3,7 +3,7 @@ title: Configuration de la diffusion de données vecteur en WMS
 mermaid: true
 eleventyNavigation:
     key: Configuration de la diffusion de données vecteur en WMS
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple vecteur
     order: 5
     nav: guides-developpeur
 ---

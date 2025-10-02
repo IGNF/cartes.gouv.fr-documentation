@@ -3,7 +3,7 @@ title: Livraison des données archives
 mermaid: true
 eleventyNavigation:
     key: Livraison des données archives
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple vecteur
     order: 1
     nav: guides-developpeur
 ---

@@ -3,7 +3,7 @@ title: Gestion des styles pour la diffusion WMS de données vecteur
 mermaid: true
 eleventyNavigation:
     key: Gestion des styles pour la diffusion WMS de données vecteur
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple vecteur
     order: 4
     nav: guides-developpeur
 ---

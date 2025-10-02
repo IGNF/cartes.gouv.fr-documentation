@@ -3,7 +3,7 @@ title: Intégration des données
 mermaid: true
 eleventyNavigation:
     key: Intégration des données
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple vecteur
     order: 2
     nav: guides-developpeur
 ---

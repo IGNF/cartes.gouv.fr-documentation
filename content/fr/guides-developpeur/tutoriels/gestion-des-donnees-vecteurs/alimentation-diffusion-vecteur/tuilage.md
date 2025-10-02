@@ -5,7 +5,7 @@ eleventyComputed:
   markdownTemplateEngine: njk
 eleventyNavigation:
     key: Diffusion en tuiles vectorielles précalculée
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple vecteur
     order: 7
     nav: guides-developpeur
 ---

@@ -3,7 +3,7 @@ title: Configuration de la diffusion de données vecteur en TMS
 mermaid: true
 eleventyNavigation:
     key: Configuration de la diffusion de données vecteur en TMS
-    parent: Alimentation et diffusion simple
+    parent: Alimentation et diffusion simple vecteur
     order: 6
     nav: guides-developpeur
 ---
