@@ -3,7 +3,7 @@ title: Par injection
 mermaid: true
 eleventyNavigation:
     key: Par injection
-    parent: Alimentation par mise à jour
+    parent: Alimentation par mise à jour raster
     order: 2
     nav: guides-developpeur
 summary:

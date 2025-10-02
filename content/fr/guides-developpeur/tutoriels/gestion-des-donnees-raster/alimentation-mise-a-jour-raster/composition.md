@@ -3,7 +3,7 @@ title: Par composition a posteriori
 mermaid: true
 eleventyNavigation:
     key: Par composition a posteriori
-    parent: Alimentation par mise à jour
+    parent: Alimentation par mise à jour raster
     order: 3
     nav: guides-developpeur
 summary:

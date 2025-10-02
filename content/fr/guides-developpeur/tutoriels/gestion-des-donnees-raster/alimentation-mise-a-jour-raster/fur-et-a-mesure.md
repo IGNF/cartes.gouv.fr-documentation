@@ -3,7 +3,7 @@ title: Au fur et à mesure
 mermaid: true
 eleventyNavigation:
     key: Au fur et à mesure
-    parent: Alimentation par mise à jour
+    parent: Alimentation par mise à jour raster
     order: 1
     nav: guides-developpeur
 summary:
