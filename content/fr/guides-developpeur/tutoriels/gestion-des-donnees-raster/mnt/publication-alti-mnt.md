@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Gestion de données MNT
     order: 4
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}

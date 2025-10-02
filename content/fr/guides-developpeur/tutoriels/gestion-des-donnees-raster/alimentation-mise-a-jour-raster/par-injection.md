@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Alimentation par mise à jour
     order: 2
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 L'avantage de la mise à jour par injection, c'est qu'il n'est pas nécessaire de reconfigurer la diffusion : les flux sont mis à jour "à chaud".

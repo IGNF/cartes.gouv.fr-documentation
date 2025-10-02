@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Gestion de données MNT
     order: 2
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 ## Calcul de la pyramide raster MNT

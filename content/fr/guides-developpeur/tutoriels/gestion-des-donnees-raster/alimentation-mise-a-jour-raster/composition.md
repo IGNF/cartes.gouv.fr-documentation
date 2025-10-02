@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Alimentation par mise à jour
     order: 3
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 L'avantage de ce mode de fonctionnement est que les générations des pyramides indépendantes peuvent se faire en parallèle. Il n'y a pas de modifications de données et celles ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les pyramides utilisées dans la composition).

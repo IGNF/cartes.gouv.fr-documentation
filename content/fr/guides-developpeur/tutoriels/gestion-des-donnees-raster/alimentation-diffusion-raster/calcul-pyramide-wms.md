@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Alimentation et diffusion simple raster
     order: 5
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 ## Calcul de la pyramide raster par moissonnage WMS

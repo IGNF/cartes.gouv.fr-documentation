@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Gestion de données MNT
     order: 3
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -120,7 +123,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 ???
 <br>
 
-Pour que la même couche puisse être aussi interrogée au format brut, nous allons déposer un style qui ne modifie pas la donnée
+Pour que la même couche puisse également être interrogée au format brut, nous allons déposer un style qui ne modifie pas les données.
 
 ```json title="Contenu de normal.json"
 {
@@ -172,7 +175,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 
 ## Configuration de la diffusion
 
-Nous allons publier la donnée selon une couche, avec les deux styles. Le style mis en premier sera celui appliqué par défaut si aucun style n'est précisé dans la requête GetMap.
+Nous allons publier la donnée sous une couche, avec les deux styles. Le style placé en premier sera appliqué par défaut si aucun style n'est précisé dans la requête GetMap.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 

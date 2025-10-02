@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Alimentation et diffusion simple raster
     order: 4
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 ## Configuration de la diffusion

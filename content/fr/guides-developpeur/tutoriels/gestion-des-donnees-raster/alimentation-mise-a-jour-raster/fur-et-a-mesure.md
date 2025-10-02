@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Alimentation par mise à jour
     order: 1
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 Une mise à jour par chaînage va créer une nouvelle donnée stockée. Le nouveau contenu sera ajouté et les anciennes données seront référencées.
