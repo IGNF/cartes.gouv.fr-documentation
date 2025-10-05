@@ -11,12 +11,15 @@ eleventyNavigation:
     order: 1
     nav: guides-producteur
 pictogram: document/document-download.svg
+description: Les prérequis techniques pour modifier des pages
 summary:
     visible: true
     depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 Cette page explique la procédure d’installation du projet de documentation de **Cartes.gouv.fr**, afin d’ouvrir à l’édition les pages de documentation des partenaires.
 

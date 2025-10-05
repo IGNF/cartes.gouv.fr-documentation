@@ -1,23 +1,26 @@
 ---
-title: Accéder à l’espace de travail « Découverte »
+title: Espace de travail « Découverte »
 tags:
     - Découverte
     - Entrepôt
 eleventyNavigation:
-    key: Accéder à l’espace de travail « Découverte »
+    key: Espace de travail « Découverte »
     parent: Présentation de Cartes.gouv.fr
-    order: 4
+    order: 3
     nav: guides-producteur
 pictogram: digital/search.svg
+description: Un espace commun pour faire vos test
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 :::info
 Cet espace « bac à sable » est commun à tous les utilisateurs. Y sont donc listées les données de tous les utilisateurs. Nous vous recommandons de choisir vos intitulés avec précaution et veiller à n’interagir qu’avec vos propres données.
 :::
 
-## 1 - Accéder à l’espace « Déouverte »
+## 1 - Accéder à l’espace « Découverte »
 
 Rendez-vous dans votre tableau de bord en cliquant sur votre profil en haut à droite de la page. Puis ouvrez l’onglet **« Découverte »** 
 

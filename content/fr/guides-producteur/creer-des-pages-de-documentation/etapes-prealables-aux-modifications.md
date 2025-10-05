@@ -12,13 +12,14 @@ eleventyNavigation:
     order: 2
     nav: guides-producteur
 pictogram: digital/in-progress.svg
+description: Ce qu’il faut faire avant toute modification
 summary:
     visible: true
 ---
 
 {% from "components/component.njk" import component with context %}
 
-Cette page explique la procédure à suivre avant de faire toute modification de contenu.
+---
 
 ## Principe
 

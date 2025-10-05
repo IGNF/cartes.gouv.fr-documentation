@@ -14,9 +14,12 @@ eleventyNavigation:
     order: 3
     nav: guides-producteur
 pictogram: digital/internet.svg
+description: Procédure pour publier un flux WFS
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 ## 1 - Créer un service WFS
 

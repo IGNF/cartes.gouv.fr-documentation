@@ -1,17 +1,20 @@
 ---
-title: Offre « Essentielle »
+title: Espace de travail dédié
 tags:
     - Essentielle
     - Entrepôt
 eleventyNavigation:
-    key: Offre « Essentielle »
+    key: Espace de travail dédié
     parent: Présentation de Cartes.gouv.fr
-    order: 5
+    order: 4
     nav: guides-producteur
 pictogram: digital/search.svg
+description: Un espace dédié pour votre communauté
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 Rendez-vous dans votre tableau de bord en cliquant sur votre profil en haut à droite de la page.
 
@@ -40,6 +43,10 @@ Dans votre tableau de bord, cliquez sur **« Demande de création d’un espace
 La demande sera transmise aux équipes de la Géoplateforme qui vous notifieront par courriel lorsque l’entrepôt sera créé. Puisqu’il s’agit d’un entrepôt privé, il est dédié à votre compte et ne sera pas visible des autres utilisateurs.
 
 Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via Cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/)).
+
+:::warning
+Pensez à vérifier au préalable si votre structure dispose déjà d’un espace de travail.
+:::
 
 ## 3 - Créer un nouvel espace de travail public
 

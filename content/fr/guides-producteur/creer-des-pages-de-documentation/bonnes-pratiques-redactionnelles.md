@@ -10,12 +10,15 @@ eleventyNavigation:
     order: 4
     nav: guides-producteur
 pictogram: document/contract.svg
+description: Petit guide pour des pages bien écrites
 summary:
     visible: true
     depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 Cette page répertorie les bonnes pratiques d’écriture à appliquer à votre documentation, pour son accessibilité et la cohérence d’ensemble du site.
 

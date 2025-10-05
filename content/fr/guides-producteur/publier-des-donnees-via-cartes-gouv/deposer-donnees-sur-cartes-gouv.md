@@ -10,6 +10,11 @@ eleventyNavigation:
     order: 1
     nav: guides-producteur
 pictogram: document/document-add.svg
+description: Étape préalable à la publication de tout flux
+---
+
+{% from "components/component.njk" import component with context %}
+
 ---
 
 Dans l’espace **« Découverte »** ou dans votre entrepôt, cliquez sur **« Créer une fiche de données »**. Cela ouvrira une page associée, dans laquelle vous pourrez définir le nom de votre fiche de données.

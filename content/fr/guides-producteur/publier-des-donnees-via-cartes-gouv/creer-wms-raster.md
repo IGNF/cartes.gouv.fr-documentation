@@ -14,9 +14,12 @@ eleventyNavigation:
     order: 6
     nav: guides-producteur
 pictogram: digital/internet.svg
+description: Procédure pour publier un flux WMS-r
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 :::warning
 Pour publier un service WMS-Raster il est nécessaire d'avoir au préalable créé un service WMS-Vecteur

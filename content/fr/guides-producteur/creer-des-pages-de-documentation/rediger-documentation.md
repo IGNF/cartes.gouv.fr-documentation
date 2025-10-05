@@ -12,6 +12,7 @@ eleventyNavigation:
     order: 3
     nav: guides-producteur
 pictogram: document/document.svg
+description: Créer, modifier ou supprimer des pages
 summary:
     visible: true
     depth: 2
@@ -19,7 +20,7 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
-Cette page explique la procédure pour créer, modifier ou supprimer des pages de documentation pour les partenaires.
+---
 
 :::info
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
@@ -29,23 +30,13 @@ Avant de commencer vos modifications, pensez à effectuer les étapes préalable
 
 À la suite de l’installation de _VS Code_, vous pouvez prévisualiser l’écriture de contenu de plusieurs facons. Néanmoins, cette prévisualisation n’englobera pas les composants DSFR. Il faudra déployer le site en local pour avoir une image complète de prévisualisation (cf. page précédente).
 
-### Dans la même fenêtre _VS Code_
-
 Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers **« crtl+k »** puis **« V »**) :
 
 ![Image décrivant le bouton de prévisualisation](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### Dans un autre onglet de _VS Code_
-
-Utilisez les raccourcis clavier **« Ctrl + Shift + V »**
-
-![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/03_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-## Effectuer des modifications
-
-### Modifier des fichiers
+## Modifier des fichiers
 
 Il vous suffit d’éditer, de créer ou de supprimer les fichiers dans votre dossier. Lorsque vous enregistrez, la modification est prise en compte par _Eleventy_ et s’affichera dans la prévisualisation en _localhost_ sur votre navigateur.
 
@@ -53,9 +44,7 @@ Il vous suffit d’éditer, de créer ou de supprimer les fichiers dans votre do
 la modification peut ne pas bien s’afficher dans le cas d’une création d’un nouveau fichier. Dans ce cas arrêtez _Eleventy_ en faisant **« ctrl+C »** dans l’invite de commande _Git Bash_, puis relancez la commande **« npm start »**
 :::
 
-### Structure
-
-#### Emplacement des modifications
+## Emplacement des modifications
 
 En tant que rédacteur, vous n’aurez généralement pas de modification à effectuer hors de ces deux dossiers :
 
@@ -65,7 +54,7 @@ En tant que rédacteur, vous n’aurez généralement pas de modification à eff
 Le contenu de la barre de navigation n’est pas directement déterminée par l’arborescence des dossiers et fichiers mais par le contenu des cartouches (ou en-têtes) de chaque fichier.
 Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette navigation pour faciliter le repérage.
 
-#### Nouveau partenaire
+## Nouveau partenaire
 
 Pour ajouter un nouveau partenaire à la documentation, il faut ajouter un fichier _.md_ dans le dossier **« partenaires »**, contenant les informations suivantes :
 
@@ -132,7 +121,7 @@ Dans le fichier _parent.njk_ situé dans **« _includes/layouts »**, en rempl
 {% endraw %}
 ```
 
-#### Fichier .md parent
+## Fichier .md parent
 
 Chaque dossier doit contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
 
@@ -185,7 +174,7 @@ Voir paragraphe 2.4 pour plus de détails sur les pictogrammes.
 Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 :::
 
-#### Fichier .11data.js
+## Fichier .11data.js
 
 Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
 
@@ -206,24 +195,31 @@ module.exports = {
 {% endraw %}
 ```
 
-#### Fichier .md décrivant le contenu de la page
+## Fichier .md décrivant le contenu de la page
 
 Le texte est découpé en 2 parties : un en-tête (ou cartouche) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte. L’en-tête est similaire à celui des pages parents :
 
 ```markdown
-## {% raw %}
-
-title: Rédiger sa documentation
-tags: - Rédaction - Documentation - Modification - Github - Fork - Clone
-eleventyNavigation:
-key: Rédiger sa documentation
-parent: Créer des pages de documentation
-order: 3
-nav: guides-producteur
-pictogram: document/document.svg
-
+{% raw %}
 ---
-
+title: Rédiger sa documentation
+tags:
+    - Rédaction
+    - Modification
+    - Github
+    - Fork
+    - Clone
+eleventyNavigation:
+    key: Rédiger sa documentation
+    parent: Créer des pages de documentation
+    order: 3
+    nav: guides-producteur
+pictogram: document/document.svg
+description: Créer, modifier ou supprimer des pages
+summary:
+    visible: true
+    depth: 2
+---
 {% endraw %}
 ```
 
@@ -308,7 +304,7 @@ Pour afficher un tableau
 Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne et de garder les espaces tels que présentés ci-dessus.
 :::
 
-### Images et pictogrammes
+## Images et pictogrammes
 
 Les images sont stockées dans le dossier **« cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/... »**. Il suffit de rajouter votre image dans le dossier correspondant.
 

@@ -11,9 +11,12 @@ eleventyNavigation:
     order: 5
     nav: guides-producteur
 pictogram: digital/internet.svg
+description: Procédure pour publier un flux TMS
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 ## 1 - Créer un service TMS
 

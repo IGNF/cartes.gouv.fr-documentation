@@ -9,9 +9,12 @@ eleventyNavigation:
     order: 2
     nav: guides-producteur
 pictogram: digital/internet.svg
+description: La nature, les avantages et les inconvénients de chaque type de flux
 ---
 
 {% from "components/component.njk" import component with context %}
+
+---
 
 Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur Cartes.gouv, avec une description, les avantages et les inconvénients de chacun.
 
@@ -29,11 +32,11 @@ Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur
 {{ component("table", {
     headers: ["Type de flux", "Avantages", "Inconvénients"],
     data: [
-        ["WFS", "permet d’interroger précisémment la donnée \n rapide à publier", "lourd à charger à petite échelle"],
+        ["WFS", "permet d’interroger précisémment la donnée et rapide à publier", "lourd à charger à petite échelle"],
         ["WMS-V", "rapide à publier", "lourd à charger à petite échelle"],
-        ["TMS", "performant à l’affichage", "ne permet pas d’interroger précisémment la donnée \n nécessite plus d’espace de stockage"],
+        ["TMS", "performant à l’affichage", "plus lent à publier et nécessite plus d’espace de stockage"],
         ["WMS-R", "rapide à publier", "lourd à charger à petite échelle"],
-        ["WMTS", "performant à l’affichage", "ne permet pas d’interroger la donnée \n nécessite plus d’espace de stockage"]
+        ["WMTS", "performant à l’affichage", "plus lent à publier et nécessite plus d’espace de stockage"]
     ]
 }) }}
 
