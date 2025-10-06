@@ -18,10 +18,6 @@ summary:
     depth: 2
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 :::info
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
 :::
@@ -58,8 +54,7 @@ Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette 
 
 Pour ajouter un nouveau partenaire à la documentation, il faut ajouter un fichier _.md_ dans le dossier **« partenaires »**, contenant les informations suivantes :
 
-```njk
-{% raw %}
+```yaml
 ---
 title: Institut national de l’information géographique et forestière
 layout: layouts/accueil.njk
@@ -68,7 +63,6 @@ image:
     alt: Logo IGN
 sidemenuNav: ign
 ---
-{% endraw %}
 ```
 
 - **« title »** correspond au titre de votre documentation partenaire.
@@ -80,13 +74,11 @@ sidemenuNav: ign
 Dans le fichier _eleventy.config.js_ situé à la racine du projet, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé :
 
 ```js
-{% raw %}
 eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
     return collectionApi.getAll().filter((item) => {
         return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
     });
 });
-{% endraw %}
 ```
 
 Dans le fichier _accueil.njk_ situé dans **« _includes/layouts »**, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé et en indiquant le titre de la documentation partenaire :
@@ -130,7 +122,7 @@ Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit
 
 Cas n°1 : le sous-dossier correspondant se situe au premier niveau du menu latéral. Dans ce cas il faut écrire l’en-tête comme suit :
 
-```markdown
+```yaml
 ---
 title: Créer des pages de documentation
 layout: layouts/parent.njk
@@ -146,7 +138,7 @@ pictogram: "document/document-add.svg"
 
 Cas n°2 : le sous-dossier correspondant se situe au deuxième ou au troisième niveau du menu latéral. Dans cas il faut ajouter un élément **« parent »** dans la partie **« eleventyNavigation »** :
 
-```markdown
+```yaml
 ---
 title: Sous-dossier de niveau 2
 layout: layouts/parent.njk
@@ -181,8 +173,7 @@ Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydat
 ![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichier-11tydata.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier contient les informations suivantes (modifiez les **« tags »**, **« url »** et **« title »** pour correspondre à votre page) :
 
-```njk
-{% raw %}
+```js
 module.exports = {
     tags: ["Documentation", "Partenaire"],
     segments: [
@@ -192,15 +183,13 @@ module.exports = {
         },
     ],
 };
-{% endraw %}
 ```
 
 ## Fichier .md décrivant le contenu de la page
 
 Le texte est découpé en 2 parties : un en-tête (ou cartouche) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte. L’en-tête est similaire à celui des pages parents :
 
-```markdown
-{% raw %}
+```yaml
 ---
 title: Rédiger sa documentation
 tags:
@@ -220,7 +209,6 @@ summary:
     visible: true
     depth: 2
 ---
-{% endraw %}
 ```
 
 Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après l’en-tête :
@@ -270,25 +258,37 @@ Pour afficher un lien s’ouvrant dans la même fenêtre :
 Pour afficher un lien s’ouvrant dans une nouvelle fenêtre :
 
 ```html
-<a href="https://lien-url.com" target="_blank" rel="noopener noreferrer" title="Titre à afficher au survol - ouvre une nouvelle fenêtre"
-    >Titre à afficher dans le texte</a
+<a
+    href="https://lien-url.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Titre à afficher au survol - ouvre une nouvelle fenêtre"
 >
+    Titre à afficher dans le texte
+</a>
 ```
 
-````njk
-{% raw %}
 Pour afficher une image :
 
+```markdown
 ![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+```
 
 Pour afficher un extrait de code :
-    ```njk
-    {% raw %}
-        contenu du code
-    {% endraw %}
-    ```
+````njk
+{% raw %}
+```njk
+{% raw %}
+    contenu du code
+{% endraw %}
+```
+{% endraw %}
+````
 
-Pour afficher un tableau
+Pour afficher un tableau :
+
+```njk
+{% raw %}
 {{ component("table", {
     headers: ["Titre 1", "Titre 2", "Titre 3"],
     data: [
@@ -298,7 +298,7 @@ Pour afficher un tableau
     ]
 }) }}
 {% endraw %}
-````
+```
 
 :::info
 Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne et de garder les espaces tels que présentés ci-dessus.

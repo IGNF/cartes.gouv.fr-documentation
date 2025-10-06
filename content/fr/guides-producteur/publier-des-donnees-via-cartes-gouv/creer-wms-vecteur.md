@@ -18,10 +18,6 @@ pictogram: digital/internet.svg
 description: Procédure pour publier un flux WMS-v
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 ## 1 - Créer un service WMS-Vecteur
 
 ### 1.1 - Lancer la création d’un service

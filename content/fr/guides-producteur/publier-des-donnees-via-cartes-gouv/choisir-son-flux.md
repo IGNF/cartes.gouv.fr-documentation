@@ -14,8 +14,6 @@ description: La nature, les avantages et les inconvénients de chaque type de fl
 
 {% from "components/component.njk" import component with context %}
 
----
-
 Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur Cartes.gouv, avec une description, les avantages et les inconvénients de chacun.
 
 {{ component("table", {

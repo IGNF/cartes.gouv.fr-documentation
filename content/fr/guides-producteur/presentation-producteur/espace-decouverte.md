@@ -12,10 +12,6 @@ pictogram: digital/search.svg
 description: Un espace commun pour faire vos test
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 :::info
 Cet espace « bac à sable » est commun à tous les utilisateurs. Y sont donc listées les données de tous les utilisateurs. Nous vous recommandons de choisir vos intitulés avec précaution et veiller à n’interagir qu’avec vos propres données.
 :::

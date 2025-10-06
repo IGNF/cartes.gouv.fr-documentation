@@ -17,10 +17,6 @@ summary:
     visible: true
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 ## Principe
 
 Afin de partir sur des bases saines il est conseillé de mettre à jour votre _fork_ (duplication github) et votre clone local afin qu’ils soient identiques au dépôt principal. Une fois cela fait, vous pourrez être sûr que les modifications que vous proposez ne viennent pas en conflit avec d’autres modifications récentes.

@@ -2,7 +2,6 @@
 title: Bonnes pratiques rédactionnelles
 tags:
     - Rédaction
-    - Documentation
     - Modification
 eleventyNavigation:
     key: Bonnes pratiques rédactionnelles
@@ -17,8 +16,6 @@ summary:
 ---
 
 {% from "components/component.njk" import component with context %}
-
----
 
 Cette page répertorie les bonnes pratiques d’écriture à appliquer à votre documentation, pour son accessibilité et la cohérence d’ensemble du site.
 
@@ -148,11 +145,11 @@ Pour garantir une information fiable et objective aux citoyens, il est indispens
 Lorsqu’on cite un texte en langue étrangère dans une page dont la langue principale renseignée est le français, il faut indiquer le changement de langue sur chaque élément de la page concerné via l’attribut html lang. Afin de mettre le mot en exergue, ajoutez également des _<html lang="en">underscores</html>_ pour mettre le mot en italique.
 
 ```html
-{% raw %} Exemple d’une phrase contenant _
+Exemple d’une phrase contenant _
 <html lang="en">
     an english portion of text
 </html>
-_. {% endraw %}
+_.
 ```
 
 ### Liens url
@@ -197,13 +194,9 @@ Commencez par « ## » pour les titres de premier niveau car le # seul est ré
 Ne sautez pas de niveau hiérarchique.
 
 ```markdown
-{% raw %}
-
 ## Mon titre de niveau 1
 
 ### Mon titre de niveau 2
-
-{% endraw %}
 ```
 
 ### Extraits de texte
@@ -211,9 +204,7 @@ Ne sautez pas de niveau hiérarchique.
 Indiquez les citations/extraits de site en **gras** et **entre guillemets français**. Exemple :
 
 ```markdown
-{% raw %}
 Cliquez sur **« Pyramides de tuiles raster »**
-{% endraw %}
 ```
 
 ### Infinitif et impératif
@@ -225,12 +216,9 @@ Privilégiez de conjuguer les verbes à la deuxième personne du pluriel plutôt
 Ajoutez de l’aération à vos pages à l’aide de lignes séparatrices :
 
 ```markdown
-{% raw %}
 […] et c’est ainsi que se termine le dernier paragraphe de la partie 1.1 de cette page.
 
 ### Titre de la partie 1.2
-
-{% endraw %}
 ```
 
 ### _Tags_

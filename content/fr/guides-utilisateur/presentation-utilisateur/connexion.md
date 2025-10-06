@@ -12,10 +12,6 @@ pictogram: digital/avatar.svg
 description: La procédure pour créer un compte Géoplateforme/Cartes.gouv.fr et se connecter
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 :::info
 Cartes.gouv.fr est une interface qui se base sur l’infrastructure Géoplateforme. Ainsi, un compte personnel Cartes.gouv.fr est en réalité un compte Géoplateforme.
 :::

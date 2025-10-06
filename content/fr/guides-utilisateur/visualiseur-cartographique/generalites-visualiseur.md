@@ -1,9 +1,6 @@
 ---
 title: Généralités
 layout: layouts/parent.njk
-tags:
-    - Cartes
-    - Géoportail
 eleventyNavigation:
     key: Généralités
     order: 1
@@ -11,10 +8,6 @@ eleventyNavigation:
     parent: Explorer les cartes
 pictogram: "map/location-france.svg"
 description: Explorez la richesse des cartes de Cartes.gouv.fr
----
-
-{% from "components/component.njk" import component with context %}
-
 ---
 
 :::info

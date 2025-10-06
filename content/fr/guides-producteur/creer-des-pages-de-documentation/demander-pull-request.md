@@ -16,10 +16,6 @@ summary:
     visible: true
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 Cette page explique la procédure pour fusionner vos modifications faites en local avec le dépôt principal de la documentation de Cartes.gouv.fr.
 
 :::info

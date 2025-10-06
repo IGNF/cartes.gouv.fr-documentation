@@ -12,10 +12,6 @@ pictogram: digital/search.svg
 description: Un espace dédié pour votre communauté
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 Rendez-vous dans votre tableau de bord en cliquant sur votre profil en haut à droite de la page.
 
 Dans la partie **« Espaces de travail »**, vous pourrez faire une **« Demande de création d’un espace de travail »**, ou bien **« Rejoindre un espace de travail existant »** :
