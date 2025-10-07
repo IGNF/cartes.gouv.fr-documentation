@@ -39,6 +39,9 @@ layout: layouts/base.njk
           {% endif %}
         </div>
       </div>
+      {% if description %}
+        <hr>
+      {% endif %}
       {{ content | safe }}
       {% include "components/page_switcher.njk" %}
     </div>

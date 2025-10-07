@@ -14,10 +14,6 @@ pictogram: digital/internet.svg
 description: Procédure pour publier un flux TMS
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 ## 1 - Créer un service TMS
 
 ### 1.1 - Lancer la création d’un service 

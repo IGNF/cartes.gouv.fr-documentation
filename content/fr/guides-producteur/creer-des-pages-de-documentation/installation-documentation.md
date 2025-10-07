@@ -19,8 +19,6 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
----
-
 Cette page explique la procédure d’installation du projet de documentation de **Cartes.gouv.fr**, afin d’ouvrir à l’édition les pages de documentation des partenaires.
 
 :::info
@@ -74,9 +72,7 @@ Les lignes de commandes qui suivent pourront être copiées, puis collées (**«
 Rendez-vous dans votre dossier à l’endroit où vous souhaitez coller le projet de documentation, puis faites un **clic droit** > **« Git Bash Here »** et collez la commande suivante (en remplaçant l’url par celle de votre _fork_) :
 
 ```bash
-{% raw %}
 git clone https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation
-{% endraw %}
 ```
 
 Votre _fork_ est maintenant cloné en local sur votre ordinateur.
@@ -86,17 +82,13 @@ Votre _fork_ est maintenant cloné en local sur votre ordinateur.
 Déplacez-vous dans le dossier que vous venez de créer avec la commande suivante :
 
 ```bash
-{% raw %}
 cd cartes.gouv.fr-documentation
-{% endraw %}
 ```
 
 Puis lancez la commande suivante :
 
 ```bash
-{% raw %}
 npm install
-{% endraw %}
 ```
 
 Cette commande crée un sous-dossier **« node_modules »** dans lequel vont s’installer toutes les dépendances du projet, conformément à ce qui est décrit dans les fichiers _package.json_ et _package-lock.json_.

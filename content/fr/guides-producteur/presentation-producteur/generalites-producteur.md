@@ -9,10 +9,6 @@ pictogram: map/location-france.svg
 description: Présentation générale de Cartes.gouv.fr
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 ## 1 - Cartes.gouv.fr, le service public des cartes et données du territoire
 
 La carte est un outil de médiation majeur. Par sa capacité inégalée à montrer des phénomènes complexes, parfois peu visibles voire invisibles, elle est la plus efficace des invitations à nous faire agir. Dans le contexte actuel de changements rapides de notre environnement, la carte constitue un guide de lecture indispensable pour permettre à chacun de comprendre ces changements et de se les approprier pour faciliter la prise de décision et le passage à l’action.

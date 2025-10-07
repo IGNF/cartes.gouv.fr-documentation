@@ -16,10 +16,6 @@ pictogram: digital/internet.svg
 description: Procédure pour publier un flux WMTS
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 :::warning
 Pour publier un service WMTS il est nécessaire d'avoir au préalable créé un service WMS-Vecteur
 :::

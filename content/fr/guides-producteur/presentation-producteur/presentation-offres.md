@@ -14,10 +14,6 @@ pictogram: leisure/book.svg
 description: Présentation des différentes offres de la Géoplateforme
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 L’interface Cartes.gouv.fr et son socle technique Géoplateforme vous permettent de charger, stocker, diffuser et visualiser de la donnée géoréférencées.
 
 Pour les producteurs et diffuseurs de données, il existe trois offres disponibles proposées par la Géoplateforme :
