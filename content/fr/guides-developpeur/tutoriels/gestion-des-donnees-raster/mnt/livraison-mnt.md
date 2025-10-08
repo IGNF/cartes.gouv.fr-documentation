@@ -129,7 +129,7 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 
 ### Consultation des vérifications sur ma livraison
 
-Plusieurs vérifications peuvent tourner sur une mếme livraison, celles-ci ne faisant que lire les données déposées.
+Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne faisant que lire les données déposées.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks"
 

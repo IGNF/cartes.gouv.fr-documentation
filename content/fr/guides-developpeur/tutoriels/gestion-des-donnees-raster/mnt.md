@@ -1,6 +1,6 @@
 ---
 title: Gestion de données MNT
-description: Téléversement d'images à canal flottant, calcul de pyramide, diffusion en WMS et utilisation dans le service d'altimétrie
+description: Téléversement d'images à canal flottant, calcul de pyramides, diffusion en WMS et utilisation dans le service d'altimétrie
 mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
@@ -11,9 +11,7 @@ eleventyNavigation:
 pictogram: digital/data-visualization.svg
 ---
 
-# Gestion de données MNT
-
-Le but de ce tutoriel va être de diffuser des données raster (images géoréférencées) de type MNT (canal flottant) en WMTS/TMS, WMS et sur le service d'altimétrie. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
+Le but de ce tutoriel est de diffuser des données raster (images géoréférencées) de type MNT (canal flottant) en WMTS/TMS, WMS et sur le service d'altimétrie. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
 
 ```mermaid
 ---
@@ -32,7 +30,7 @@ stateDiagram
     note left of PYR
         Traitement (processing)
         Exécution de traitement (processing execution)
-        Données stockée (stored data)
+        Données stockées (stored data)
     end note
 
     PUB_TILED: Publication en WMTS/TMS
@@ -74,7 +72,7 @@ stateDiagram
 
 ```mermaid
 ---
-title: Concepts entrepôt manipulés et leurs liens. En bleu les entités globale à la plateforme, en orange les entités des utilisateurs
+title: Concepts entrepôt manipulés et leurs liens. En bleu les entités globales à la plateforme, en orange les entités des utilisateurs
 ---
 flowchart LR
 
@@ -121,4 +119,4 @@ flowchart LR
 
 ## Données du tutoriel
 
-Les données de l'exemple sont une dalle kilométrique MNT issue du LidarHD (50 cm de résolution), au format [GeoTIFF](/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif). On pourra traiter de la même manière la dalle kilométrique correspondante contenant le [MNS](/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif).
+Les données de l'exemple sont constituées d'une dalle kilométrique MNT issue du LidarHD (50 cm de résolution), au format [GeoTIFF](/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif). On pourra traiter de la même manière la dalle kilométrique correspondante contenant le [MNS](/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif).

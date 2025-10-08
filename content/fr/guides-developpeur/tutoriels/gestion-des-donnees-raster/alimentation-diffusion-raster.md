@@ -11,9 +11,7 @@ eleventyNavigation:
 pictogram: digital/data-visualization.svg
 ---
 
-# Alimentation et diffusion simple
-
-Le but de ce tutoriel va être de diffuser des données raster (images géoréférencées) en WMTS/TMS et WMS. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
+Le but de ce tutoriel est de diffuser des données raster (images géoréférencées) en WMTS/TMS et WMS. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
 
 ```mermaid
 ---
@@ -32,7 +30,7 @@ stateDiagram
     note left of PYR
         Traitement (processing)
         Exécution de traitement (processing execution)
-        Données stockée (stored data)
+        Données stockées (stored data)
     end note
 
     PUB_TILED: Publication en WMTS/TMS
@@ -65,7 +63,7 @@ stateDiagram
 
 ```mermaid
 ---
-title: Concepts entrepôt manipulés et leurs liens. En bleu les entités globale à la plateforme, en orange les entités des utilisateurs
+title: Concepts entrepôt manipulés et leurs liens. En bleu les entités globales à la plateforme, en orange les entités des utilisateurs
 ---
 flowchart LR
 
@@ -113,7 +111,7 @@ flowchart LR
 
 ## Données du tutoriel
 
-Les données de l'exemple sont une image SCAN 1000 sur la Corse, au format [TIFF](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tif) avec un [TFW](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tfw) pour le géo-référencement.
+Les données de l'exemple sont constituées d'une image SCAN 1000 sur la Corse, au format [TIFF](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tif) avec un [TFW](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tfw) pour le géoréférencement.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_presentation_raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

@@ -13,7 +13,7 @@ summary:
 
 ## Calcul de la pyramide raster MNT
 
-Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d'images (la donnée est calculée dans plusieurs résolutions) sur du sotckage S3. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
+Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d'images (la donnée est calculée dans plusieurs résolutions) sur du stockage S3. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
 
 Pour transformer la donnée livrée en donnée stockée, des traitements sont mis à disposition de l'entrepôt.
 
@@ -136,7 +136,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
         },
         {
             "name": "height",
-            "description": "Nombre de tuiles dans une dalle, dans le sens de la haureur",
+            "description": "Nombre de tuiles dans une dalle, dans le sens de la hauteur",
             "mandatory": false,
             "default_value": 16,
             "constraints": {
@@ -416,7 +416,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     },
     "size": 14817315,
     "status": "GENERATED",
-    "_id": "{stored data MNT}"
+    "_id": "{stored data MNT}",
     "type_infos": {
         "tms": "LAMB93_50cm",
         "levels": [

@@ -13,7 +13,7 @@ summary:
 
 Une mise à jour par chaînage va créer une nouvelle donnée stockée. Le nouveau contenu sera ajouté et les anciennes données seront référencées.
 
-L'avantage est qu'il n'y a pas de modifications des anciennes données et que celles ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les anciennes données).
+L'avantage est qu'il n'y a pas de modifications des anciennes données et que celles-ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les anciennes données).
 
 ```mermaid
 ---
@@ -122,6 +122,7 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
 ```
 ???
 <br>
+
 * Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
 
 ### Diffusion

@@ -58,7 +58,7 @@ La pyramide calculée va également pouvoir être diffusée en WMS
 
 ## Envoi sur les services de diffusion
 
-Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (publication) permet d'envoyer les informations de configuration au serveurs de diffusion.
+Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (publication) permet d'envoyer les informations de configuration aux serveurs de diffusion.
 
 ### Consultation des points de diffusion disponibles
 

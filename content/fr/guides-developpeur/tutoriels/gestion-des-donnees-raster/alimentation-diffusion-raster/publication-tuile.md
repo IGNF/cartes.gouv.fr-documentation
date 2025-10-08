@@ -13,7 +13,7 @@ summary:
 
 ## Configuration de la diffusion tuilée
 
-La configuration centralise toutes les informations nécessaire à la diffusion de données sur les services. On va contrôler à ce moment les paramètres et détecter les erreurs ou conflits potentiels :
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. On va contrôler à ce moment les paramètres et détecter les erreurs ou conflits potentiels :
 
 * nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMTS-TMS de la plateforme)
 * Niveau absent de la donnée stockée
@@ -58,7 +58,7 @@ La configuration centralise toutes les informations nécessaire à la diffusion 
 ???
 <br>
 
-Si les niveaux d'utilisation ne sont pas cohérent avec ce que contient la pyramide, une erreur est retournée.
+Si les niveaux d'utilisation ne sont pas cohérents avec ce que contient la pyramide, une erreur est retournée.
 
 On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du service. On configure également le GetFeatureInfo : il retournera ici la valeur du pixel dans la donnée.
 

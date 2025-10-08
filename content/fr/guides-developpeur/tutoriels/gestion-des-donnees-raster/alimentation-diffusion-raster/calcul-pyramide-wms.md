@@ -13,7 +13,7 @@ summary:
 
 ## Calcul de la pyramide raster par moissonnage WMS
 
-Il existe une autre possibilité pour générer une pyramide raster dans l'entrepôt sans avoir à déposer de données : le moissonnage WMS. Le traitement prendra uniquement des paramètres précisant le service et les couches à moissonner, ainsi que la zone sur laquelle faire ce moisonnage.
+Il existe une autre possibilité pour générer une pyramide raster dans l'entrepôt sans avoir à déposer de données : le moissonnage WMS. Le traitement prendra uniquement des paramètres précisant le service et les couches à moissonner, ainsi que la zone sur laquelle faire ce moissonnage.
 
 ```mermaid
 flowchart LR
@@ -334,10 +334,10 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 ???
 <br>
 
-La zone de moissonnage est à fournie en WKT, en EPSG:4326 (longitude en premier).
+La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier).
 
 :::warning "Points d'attentions"
-    Les flux sortant des noeuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d'un usage avec d'autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
+    Les flux sortant des nœuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d'un usage avec d'autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
 :::
 
 :::warning "Données privées"
@@ -353,6 +353,7 @@ La zone de moissonnage est à fournie en WKT, en EPSG:4326 (longitude en premier
 ```
 
 ???
+<br>
 
 ## Consultation de la donnée stockée en sortie
 
@@ -535,4 +536,4 @@ On peut visualiser nos données dans QGis en WMS.
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_wms_harvest.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 
-La donnée moissonnée est plus large que la zone voulue car l'intégralité des dalles intersectant la zone sont calculées et stockées.
+La donnée moissonnée est plus large que la zone voulue car l'intégralité des dalles intersectant la zone est calculée et stockée.

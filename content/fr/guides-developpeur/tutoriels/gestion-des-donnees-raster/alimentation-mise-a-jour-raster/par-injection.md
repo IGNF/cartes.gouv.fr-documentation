@@ -13,7 +13,7 @@ summary:
 
 L'avantage de la mise à jour par injection, c'est qu'il n'est pas nécessaire de reconfigurer la diffusion : les flux sont mis à jour "à chaud".
 
-En revanche, la modification n'étant pas reversible, on peut détériorer la pyramide et le flux si les données livrées ne sont pas valides.
+En revanche, la modification n'étant pas réversible, on peut détériorer la pyramide et le flux si les données livrées ne sont pas valides.
 
 ```mermaid
 ---
@@ -47,12 +47,12 @@ stateDiagram
     end note
 
     [*] --> LIV1
-    LIV1 --> PUB_TILED
+    LIV1 --> PUB_TILED1
     PUB_TILED1 --> LIV2
 
     classDef concepts fill:#eee,stroke:#8d1d75,stroke-width:3px,color:#000;
 
-    class LIV1,LIV2,PUB_TILED concepts
+    class LIV1,LIV2,PUB_TILED1 concepts
 ```
 
 ## Initialisation de la pyramide et des flux

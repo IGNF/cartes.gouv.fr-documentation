@@ -86,7 +86,7 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
     "parameters": [
         {
             "name": "bottom",
-            "description": "Niveau du bas de la pyramide. Attention à ne pas sur-échantillonner les données utilisées. En ne précisant pas de niveau, le traitement prendra le niveau de la grille dont lé résolution est la plus proche des images livrées",
+            "description": "Niveau du bas de la pyramide. Attention à ne pas sur-échantillonner les données utilisées. En ne précisant pas de niveau, le traitement prendra le niveau de la grille dont la résolution est la plus proche des images livrées",
             "mandatory": false
         },
         {
@@ -150,7 +150,7 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
         },
         {
             "name": "height",
-            "description": "Nombre de tuiles dans une dalle, dans le sens de la haureur",
+            "description": "Nombre de tuiles dans une dalle, dans le sens de la hauteur",
             "mandatory": false,
             "default_value": 16
         }
@@ -248,7 +248,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 ???
 <br>
 
-:::warning "Points d'attentions"
+:::warning "Points d'attention"
     Si votre pyramide est destinée à être mise à jour (voir [l'alimentation raster par mise à jour](../mise-a-jour/index.md)), il peut être important de préciser que l'on souhaite calculer les masques de données (paramètre `"mask": true`).
 :::
 
@@ -268,7 +268,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 Une exécution va avoir les statuts dans l'ordre suivant :
 
 * CREATED : créée mais non lancée
-* WAITING : lancée mais pas encore pris en charge par le cluster de calcul
+* WAITING : lancée mais pas encore prise en charge par le cluster de calcul
 * PROGRESS : en cours d'exécution sur le cluster de calcul
 * SUCCESS ou FAILURE : terminé
 
@@ -379,7 +379,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     },
     "size": 5104340,
     "status": "GENERATED",
-    "_id": "{stored data}"
+    "_id": "{stored data}",
     "type_infos": {
         "tms": "PM",
         "levels": [

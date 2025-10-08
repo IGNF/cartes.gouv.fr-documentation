@@ -6,7 +6,7 @@ tags:
 eleventyNavigation:
     key: Espaces de travail
     parent: Tutoriels d'utilisation de l'Entrepôt
-    order: 6
+    order: 7
     nav: guides-developpeur
 pictogram: environment/human-cooperation.svg
 ---
