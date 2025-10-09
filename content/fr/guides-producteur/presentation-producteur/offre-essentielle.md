@@ -10,6 +10,9 @@ eleventyNavigation:
     nav: guides-producteur
 pictogram: digital/search.svg
 description: Un espace dédié pour votre communauté
+summary:
+    visible: true
+    depth: 1
 ---
 
 Rendez-vous dans votre tableau de bord en cliquant sur votre profil en haut à droite de la page.
@@ -18,7 +21,7 @@ Dans la partie **« Espaces de travail »**, vous pourrez faire une **« Dema
 
 ![Image décrivant comment débuter l’offre Essentielle](/img/guides-producteur/presentation/offre-essentielle/01_demander-ou-rejoindre.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 1 - Rejoindre un espace de travail existant
+## Rejoindre un espace de travail existant
 
 Si l’entrepôt que vous souhaitez rejoindre est public, vous pourrez le rechercher dans la liste :
 
@@ -30,7 +33,9 @@ Vous pouvez ajouter un message optionnel à votre demande :
 
 Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via Cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/).)
 
-## 2 - Créer un nouvel espace de travail privé
+---
+
+## Créer un nouvel espace de travail privé
 
 Dans votre tableau de bord, cliquez sur **« Demande de création d’un espace de travail »**, puis renseignez le nom de votre entrepôt et une description éventuelle :
 
@@ -44,7 +49,9 @@ Une fois votre demande acceptée, vous aurez accès à cet espace de travail pou
 Pensez à vérifier au préalable si votre structure dispose déjà d’un espace de travail.
 :::
 
-## 3 - Créer un nouvel espace de travail public
+---
+
+## Créer un nouvel espace de travail public
 
 Un entrepôt public est visible des autres utilisateurs qui pourront formuler une demande pour rejoindre l’entrepôt. Il permet de travailler en collaboration avec plusieurs utilisateurs sur un même espace de travail.
 

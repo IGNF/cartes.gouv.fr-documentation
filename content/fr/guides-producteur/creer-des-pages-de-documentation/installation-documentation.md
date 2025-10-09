@@ -41,6 +41,8 @@ _Git_ et _NodeJS_ sont indispensables pour aller plus loin dans l’installation
 
 Si vous travaillez derrière un _proxy_, il est nécessaire de vérifier vos variables d’environnement **de compte** (pas les variables système). Ajouter les variables **« HTTP_PROXY »** et **« HTTPS_PROXY »** si elles n’existent pas encore. Renseignez-vous auprès de votre _DSI_ si vous ne connaissez pas les valeurs à indiquer (ces variables sont propres à chaque organisme).
 
+---
+
 ## Installation de la documentation en local
 
 ### Dupliquer le dépôt (_fork_)
