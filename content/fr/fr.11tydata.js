@@ -11,6 +11,9 @@ module.exports = {
             wmsv: "https://data.geopf.fr/wms-v",
             tmsv: "https://data.geopf.fr/vector-tms",
             tms: "https://data.geopf.fr/tms",
+            wmts: "https://data.geopf.fr/wmts",
+            wmsr: "https://data.geopf.fr/wms-r",
+            alti: "https://data.geopf.fr/altimetrie",
         },
     },
     permalink: function (data) {
