@@ -6,7 +6,7 @@ tags:
 eleventyNavigation:
     key: Données complémentaires
     parent: Tutoriels d'utilisation de l'Entrepôt
-    order: 4
+    order: 5
     nav: guides-developpeur
 pictogram: document/document-add.svg
 ---
