@@ -2,7 +2,6 @@
 title: Bonnes pratiques rédactionnelles
 tags:
     - Rédaction
-    - Documentation
     - Modification
 eleventyNavigation:
     key: Bonnes pratiques rédactionnelles
@@ -10,6 +9,7 @@ eleventyNavigation:
     order: 4
     nav: guides-producteur
 pictogram: document/contract.svg
+description: Petit guide pour des pages bien écrites
 summary:
     visible: true
     depth: 2
@@ -140,16 +140,16 @@ En cas de doute, partez du principe que le citoyen ne connaît pas la significa
 
 Pour garantir une information fiable et objective aux citoyens, il est indispensable de toujours citer la source d’une information. Celle-ci sera indiquée entre parenthèses : « (Source : XX) ».
 
-### Langues
+### Extraits en langue étrangère
 
-Lorsqu’on cite un texte en langue étrangère dans une page dont la langue principale renseignée est le français, il faut indiquer le changement de langue sur chaque élément de la page concerné via l’attribut html lang. Afin de mettre le mot en exergue, ajoutez également des _<html lang="en">underscores</html>_ pour mettre le mot en italique.
+Lorsqu’on cite un texte en langue étrangère dans une page dont la langue principale renseignée est le français, il faut indiquer le changement de langue sur chaque élément de la page concerné via l’attribut html lang. Afin de mettre le mot en exergue, ajoutez également des _<span lang="en">underscores</span>_ pour mettre le mot en italique.
 
 ```html
-{% raw %} Exemple d’une phrase contenant _
-<html lang="en">
+Exemple d’une phrase contenant _
+<span lang="en">
     an english portion of text
-</html>
-_. {% endraw %}
+</span>
+_.
 ```
 
 ### Liens url
@@ -165,6 +165,8 @@ Rendez les liens url explicites à la lecture. Ci-dessous plusieurs exemples :
     ]
 }) }}
 
+---
+
 ## Recommandations pour cohérence d’ensemble du site Cartes.gouv.fr
 
 ### Apostrophes spéciaux
@@ -175,7 +177,7 @@ Utilisez les apostrophes spéciaux : « ’ ». Raccourci clavier : <kbd>alt
 
 Utilisez des espaces insécables aux endroits où vous ne souhaitez pas de passage à la ligne intempestifs sur certaines largeurs d’écran.
 
-Placez-en notamment avant les signes de ponctuation double : ! « etc.
+Placez-en notamment avant les signes de ponctuation nécéssitant un espace (_« » : ! ; ?_)
 
 Raccourci clavier : <kbd>alt+0160</kbd>
 
@@ -183,7 +185,7 @@ Raccourci clavier : <kbd>alt+0160</kbd>
 
 Utilisez les guillemets français : « ». Raccourcis clavier : <kbd>alt+174</kbd> et <kbd>alt+175</kbd>
 
-Attention : le guillemet ouvrant doit être suivi d’un espace insécable et le guillemet fermant suivi d’un espace insécable.
+Attention : le guillemet ouvrant doit être suivi d’un espace insécable et le guillemet fermant précédé d’un espace insécable.
 
 ### Titres
 
@@ -194,13 +196,9 @@ Commencez par « ## » pour les titres de premier niveau car le # seul est ré
 Ne sautez pas de niveau hiérarchique.
 
 ```markdown
-{% raw %}
-
 ## Mon titre de niveau 1
 
 ### Mon titre de niveau 2
-
-{% endraw %}
 ```
 
 ### Extraits de texte
@@ -208,9 +206,7 @@ Ne sautez pas de niveau hiérarchique.
 Indiquez les citations/extraits de site en **gras** et **entre guillemets français**. Exemple :
 
 ```markdown
-{% raw %}
 Cliquez sur **« Pyramides de tuiles raster »**
-{% endraw %}
 ```
 
 ### Infinitif et impératif
@@ -222,12 +218,11 @@ Privilégiez de conjuguer les verbes à la deuxième personne du pluriel plutôt
 Ajoutez de l’aération à vos pages à l’aide de lignes séparatrices :
 
 ```markdown
-{% raw %}
-[…] et c’est ainsi que se termine le dernier paragraphe de la partie 1.1 de cette page.
+[…] et c’est ainsi que se termine le dernier paragraphe de la partie 2 de cette page.
 
-### Titre de la partie 1.2
+---
 
-{% endraw %}
+## Titre de la partie 2
 ```
 
 ### _Tags_

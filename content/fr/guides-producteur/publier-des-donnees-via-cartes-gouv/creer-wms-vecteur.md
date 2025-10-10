@@ -15,31 +15,33 @@ eleventyNavigation:
     order: 4
     nav: guides-producteur
 pictogram: digital/internet.svg
+description: Procédure pour publier un flux WMS-v
+summary:
+    visible: true
+    depth: 2
 ---
 
-{% from "components/component.njk" import component with context %}
+## Créer un service WMS-Vecteur
 
-## 1 - Créer un service WMS-Vecteur
-
-### 1.1 - Lancer la création d’un service
+### Lancer la création d’un service
 
 Dans la fiche de votre donnée, cliquez sur **« Créer un service »** afin d’ouvrir une fenêtre permettant de **« Choisir le service à configurer »** : sélectionnez **« Service d’images (Web Map Service - WMS) »**.
 
 ![Sélectionner Service d’images (Web Map Service - WMS)](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/01_service-wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 1.2 - Sélectionner l’origine du service
+### Sélectionner l’origine du service
 
 Sélectionnez une ou plusieurs tables pour créer le service :
 
 ![Sélectionner les tables nécessaires au service](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/02_selection-tables.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 1.3 - Importer directement vos métadonnées
+### Importer directement vos métadonnées
 
 Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en cours de construction.
 
 ![Source des metadonnées](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/03_source-metadonnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 1.4 - Déposer un fichier de style SLD
+### Déposer un fichier de style SLD
 
 Étape obligatoire, il faut déposer un fichier de style _SLD_ (_Styled Layer Descriptor_). Les messages d’erreur vous guident pour modifier votre _SLD_ (seul format possible pour le WMS). Ce fichier sera déposé sur la Géoplateforme comme fichier statique.
 
@@ -50,7 +52,7 @@ L’erreur ci-dessus est systématique, elle indique que le champ _name_ du styl
 La création d’un fichier _SLD_ fait l’objet d’un autre tutoriel.
 :::
 
-### 1.5 - Décrire la ressource
+### Décrire la ressource
 
 Dans le parcours **« Découverte »**, les données ne seront pas visibles dans le catalogue. Toutefois, prenez l’habitude de renseigner soigneusement ces champs qui seraient visibles dans la fiche de donnée du catalogue dans l’offre **« Essentielle »**. Tous les champs sont obligatoires.
 
@@ -62,19 +64,21 @@ Remplissez les informations complémentaires suivantes :
 
 Ces métadonnées sont à remplir uniquement pour le premier service de votre fiche de données. Vous retrouverez la plupart des champs déjà remplis lors de la publication d’autres services (WFS/WMS/TMS).
 
-### 1.6 - Restriction d’accès
+### Restriction d’accès
 
 La publication du service est obligatoirement **« Tout public »** lorsque les données sont dans le bac à sable. Dans votre entrepôt, il est possible de restreindre le service ou de le laisser en **« Tout public »** :
 
 ![Restrictions d’accès](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/07_restrictions.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 1.7 - Publier le service
+### Publier le service
 
 Cliquez sur **« Publier le service maintenant »**. À la suite d’un écran **« Création du service WMS en cours »**, vous apercevrez votre fiche de données classée en **« Publié »** :
 
 ![Services publiés](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/08_service-publie.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 2 - Visualiser le service WMS
+---
+
+## Visualiser le service WMS
 
 Pour visualiser cartographiquement les données du service WMS ainsi créé, cliquez sur **« Visualiser »** afin d’accéder à l’écran suivant :
 

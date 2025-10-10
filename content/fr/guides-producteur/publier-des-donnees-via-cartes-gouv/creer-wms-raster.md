@@ -14,31 +14,33 @@ eleventyNavigation:
     order: 6
     nav: guides-producteur
 pictogram: digital/internet.svg
+description: Procédure pour publier un flux WMS-r
+summary:
+    visible: true
+    depth: 2
 ---
-
-{% from "components/component.njk" import component with context %}
 
 :::warning
 Pour publier un service WMS-Raster il est nécessaire d'avoir au préalable créé un service WMS-Vecteur
 :::
 
-## 1 - Créer une pyramide raster
+## Créer une pyramide raster
 
 Dans la fiche de votre donnée, cliquez sur l’onglet **« Jeux de données »** : si la pyramide raster souhaitée n’existe pas encore dans la partie **« Pyramides de tuiles raster »**, alors suivez les étapes suivantes jusqu’à la partie **2-**. Sinon vous pouvez sauter ces étapes.
 
-### 1.1 - Lancer la création d’une pyramide raster
+### Lancer la création d’une pyramide raster
 
 Dans la fiche de votre donnée, cliquez sur l’onglet **« Services »**, puis sur le bouton menu à droite du service WMS-V que vous souhaitez, et enfin sur **« Créer un service raster WMS/WMTS »** :
 
 ![Image décrivant comment lancer la création d'un service WMS-V](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/01_creer-service-raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 1.2 - Générer une pyramide de tuiles raster
+### Générer une pyramide de tuiles raster
 
 Renseignez le nom technique que vous souhaitez attribuer à votre pyramide raster :
 
 ![Image décrivant la saisie du nom technique du flux WMS-R](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/02_nom-pyramide-raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 1.3 - Choisir les niveaux de pyramide
+### Choisir les niveaux de pyramide
 
 Définissez la plage de visibilité de votre pyramide :
 
@@ -47,9 +49,11 @@ Puis cliquez sur **« Publier »**. La pyramide apparaît à présent dans la 
 
 ![Image décrivant la pyramide raster publiée dans les jeux de données](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/04_pyramide-publiee.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 2 - Créer le service WMS-Raster
+---
 
-### 2.1 - Démarrer la publication du service
+## Créer le service WMS-Raster
+
+### Démarrer la publication du service
 
 Il faut maintenant créer le service WMS-R à partir de cette pyramide. Cliquez sur **« Publier »** :
 
@@ -58,13 +62,13 @@ Choisissez le type de service à configurer (ici **« Web Map Service - WMS »
 
 ![Image décrivant le choix du type de service à créer](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/06_type-de-service.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 2.2 - Importer directement vos métadonnées
+### Importer directement vos métadonnées
 
 Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en cours de construction.
 
 ![Image décrivant la possibilité de tester sur un échantillon](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/07_source-metadonnees-wms-r.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 2.3 - Décrire la ressource
+### Décrire la ressource
 
 Dans le parcours **« Découverte »**, les données ne seront pas visibles dans le catalogue. Toutefois, prenez l’habitude de renseigner soigneusement ces champs qui seraient visibles dans la fiche de donnée du catalogue dans l’offre **« Essentielle »**. Tous les champs sont obligatoires.
 
@@ -76,13 +80,13 @@ Remplissez les informations complémentaires suivantes :
 
 Ces métadonnées sont à remplir uniquement pour le premier service de votre fiche de données. Vous retrouverez la plupart des champs déjà remplis lors de la publication d’autres services (WFS/WMS/TMS).
 
-### 2.4 - Restriction d’accès
+### Restriction d’accès
 
 La publication du service est obligatoirement **« Tout public »** lorsque les données sont dans le bac à sable. Dans votre entrepôt, il est possible de restreindre le service ou de le laisser en **« Tout public »** :
 
 ![Restrictions d’accès](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/10_restrictions-wms-r.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### 2.5 - Publier le service
+### Publier le service
 
 Cliquez sur **« Publier le service maintenant »**. À la suite d’un écran **« Création du service WMS en cours »**, vous apercevrez votre fiche de données classée en **« Publié »** :
 
@@ -90,7 +94,9 @@ Cliquez sur **« Publier le service maintenant »**. À la suite d’un écran
 
 ![Image décrivant service publié](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/12_service-wms-r.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 3 - Visualiser le service WMS-R
+---
+
+## Visualiser le service WMS-R
 
 Pour visualiser cartographiquement les données du service WMS-R ainsi créé, cliquez sur **« Visualiser »** afin d’accéder à l’écran suivant :
 

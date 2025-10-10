@@ -11,6 +11,7 @@ eleventyNavigation:
     order: 1
     nav: guides-producteur
 pictogram: document/document-download.svg
+description: Les prérequis techniques pour modifier des pages
 summary:
     visible: true
     depth: 2
@@ -39,6 +40,8 @@ _Git_ et _NodeJS_ sont indispensables pour aller plus loin dans l’installation
 ### Variables d’environnement du compte
 
 Si vous travaillez derrière un _proxy_, il est nécessaire de vérifier vos variables d’environnement **de compte** (pas les variables système). Ajouter les variables **« HTTP_PROXY »** et **« HTTPS_PROXY »** si elles n’existent pas encore. Renseignez-vous auprès de votre _DSI_ si vous ne connaissez pas les valeurs à indiquer (ces variables sont propres à chaque organisme).
+
+---
 
 ## Installation de la documentation en local
 
@@ -71,9 +74,7 @@ Les lignes de commandes qui suivent pourront être copiées, puis collées (**«
 Rendez-vous dans votre dossier à l’endroit où vous souhaitez coller le projet de documentation, puis faites un **clic droit** > **« Git Bash Here »** et collez la commande suivante (en remplaçant l’url par celle de votre _fork_) :
 
 ```bash
-{% raw %}
 git clone https://github.com/{votre_pseudo_github}/cartes.gouv.fr-documentation
-{% endraw %}
 ```
 
 Votre _fork_ est maintenant cloné en local sur votre ordinateur.
@@ -83,17 +84,13 @@ Votre _fork_ est maintenant cloné en local sur votre ordinateur.
 Déplacez-vous dans le dossier que vous venez de créer avec la commande suivante :
 
 ```bash
-{% raw %}
 cd cartes.gouv.fr-documentation
-{% endraw %}
 ```
 
 Puis lancez la commande suivante :
 
 ```bash
-{% raw %}
 npm install
-{% endraw %}
 ```
 
 Cette commande crée un sous-dossier **« node_modules »** dans lequel vont s’installer toutes les dépendances du projet, conformément à ce qui est décrit dans les fichiers _package.json_ et _package-lock.json_.

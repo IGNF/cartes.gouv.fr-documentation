@@ -1,9 +1,8 @@
 ---
-title: Éditeur cartographique
+title: Créer des cartes personnalisées
 eleventyNavigation:
-    key: Éditeur cartographique
+    key: Créer des cartes personnalisées
     order: 4
     nav: guides-utilisateur
+description: L’éditeur cartographique de Cartes.gouv.fr
 ---
-
-Éditeur cartographique
