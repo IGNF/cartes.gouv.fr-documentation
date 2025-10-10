@@ -1,11 +1,9 @@
 ---
 title: Téléversement d'une annexe
-description: Téléversement de fichiers en tant qu'annexe et publication
-mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Téléversement d'une annexe
-    parent: Gestion des données complementaires
+    parent: Gestion des annexes
     order: 1
     nav: guides-developpeur
 pictogram: digital/data-visualization.svg
