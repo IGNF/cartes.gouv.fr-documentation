@@ -172,7 +172,7 @@ Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 
 ---
 
-## Fichier .11data.js
+## Fichier .11tydata.js
 
 Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
 

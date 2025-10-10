@@ -20,7 +20,7 @@ summary:
 
 ## Principe
 
-Afin de partir sur des bases saines il est conseillé de mettre à jour votre _<html lang="en">fork</html>_ (duplication github) et votre clone local afin qu’ils soient identiques au dépôt principal. Une fois cela fait, vous pourrez être sûr que les modifications que vous proposez ne viennent pas en conflit avec d’autres modifications récentes.
+Afin de partir sur des bases saines il est conseillé de mettre à jour votre _<span lang="en">fork</span>_ (duplication github) et votre clone local afin qu’ils soient identiques au dépôt principal. Une fois cela fait, vous pourrez être sûr que les modifications que vous proposez ne viennent pas en conflit avec d’autres modifications récentes.
 
 ## Changer son pseudonyme sur _github_
 
@@ -31,18 +31,18 @@ git config --global user.name "MonPseudoGithub"
 git config --global user.email mail@domaine.fr
 ```
 
-## Mettre à jour votre _<html lang="en">fork</html>_
+## Mettre à jour votre _<span lang="en">fork</span>_
 
-Rendez-vous sur la page de votre _<html lang="en">fork</html>_. Github affiche au dessus de la liste des dossiers et fichiers l’état de synchronisation de votre _<html lang="en">fork</html>_ (commits en avance ou en retard)
+Rendez-vous sur la page de votre _<span lang="en">fork</span>_. Github affiche au dessus de la liste des dossiers et fichiers l’état de synchronisation de votre _<span lang="en">fork</span>_ (commits en avance ou en retard)
 
 ![Image décrivant l’affichage du statut du fork sur github](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/01_Statut-fork-sur-github.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-Si votre _<html lang="en">fork</html>_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync _<html lang="en">fork</html>_ »** directement pour le mettre à jour.
+Si votre _<span lang="en">fork</span>_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync _<span lang="en">fork</span>_ »** directement pour le mettre à jour.
 
 ## Créer une branche
 
-Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation entre collaborateurs, il est conseillé de travailler avec des _branches_. Par défaut votre _<html lang="en">fork</html>_/duplication contient une seule branche : la branche principale (_<html lang="en">main</html>_)._
+Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation entre collaborateurs, il est conseillé de travailler avec des _branches_. Par défaut votre _<span lang="en">fork</span>_/duplication contient une seule branche : la branche principale (_<span lang="en">main</span>_)._
 
-Si ce n'est pas votre première contribution, vous êtes peut-être resté sur une branche de votre contribution précédente. Retournez sur la branche _<html lang="en">main</html>_.
+Si ce n'est pas votre première contribution, vous êtes peut-être resté sur une branche de votre contribution précédente. Retournez sur la branche _<span lang="en">main</span>_.
 
 ```bash
 git checkout main
