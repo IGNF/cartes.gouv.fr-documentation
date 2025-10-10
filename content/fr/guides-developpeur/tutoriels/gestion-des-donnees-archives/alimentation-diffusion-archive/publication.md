@@ -163,7 +163,7 @@ C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
 
 ## Consultation du service de téléchargement
 
-En consultant les [capacités du service de téléchargement]({{ urls.open.download }}/capabilities), on retrouve notre couche (on demande ici la réponse en JSON, c'est le format XML Atom par défaut). On va également filtrer sur nos valeurs spécifiques pour n'avoir que notre résultat.
+En consultant les [capacités du service de téléchargement]({{ urls.public.download }}/capabilities), on retrouve notre couche (on demande ici la réponse en JSON, c'est le format XML Atom par défaut). On va également filtrer sur nos valeurs spécifiques pour n'avoir que notre résultat.
 
 ??? GET "{{ urls.open.download }}/capabilities"
 
@@ -297,7 +297,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.open.downl
 ???
 <br>
 
-Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit [le lien dans l'entrée]({{ urls.open.download }}/resource/limites_administratives), c'est à dire les sous-ressources. Dans notre cas, on a une seule sous ressource, `departements`.
+Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit [le lien dans l'entrée]({{ urls.public.download }}/resource/limites_administratives), c'est à dire les sous-ressources. Dans notre cas, on a une seule sous ressource, `departements`.
 
 
 ??? GET "{{ urls.open.download }}/resource/limites_administratives"
@@ -415,7 +415,7 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
 ???
 <br>
 
-Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous ressource en suivant le [lien de l'entrée]({{ urls.open.download }}/resource/limites_administratives/departements).
+Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous ressource en suivant le [lien de l'entrée]({{ urls.public.download }}/resource/limites_administratives/departements).
 
 ??? GET "{{ urls.open.download }}/resource/limites_administratives/departements"
 
