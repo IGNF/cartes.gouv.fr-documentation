@@ -9,7 +9,7 @@ eleventyNavigation:
     nav: guides-developpeur
 ---
 
-# Alimentation et diffusion simple
+{% from "components/component.njk" import component with context %}
 
 Le but de ce tutoriel va être de diffuser des données archive en téléchargement. Le type de données archive est le plus simple gérés par la plateforme : les fichiers de cette donnée sont simplement hébergées pour une diffusion en l'état. Aucun contrainte n'est appliquées aux fichiers d'une telle donnée.
 
@@ -46,7 +46,7 @@ stateDiagram
     TEL --> INT
     INT --> PUB
 
-    classDef concepts fill:#eee,stroke:#8d1d75,stroke-width:3px;
+    classDef concepts fill:#eee,stroke:#8d1d75,stroke-width:3px,color:#000;
 
     class TEL,INT,PUB concepts
 ```
@@ -83,29 +83,77 @@ flowchart LR
     off -- synchronise --> con
     off -- sur --> endp
 
-    classDef group fill:#fff,stroke:#aaa,stroke-width:3px;
-    classDef indiv fill:#eee,stroke:#ff8000,stroke-width:3px;
-	classDef global fill:#eee,stroke:#3465a4,stroke-width:3px;
+    classDef group fill:#fff,stroke:#aaa,stroke-width:3px,color:#000;
+    classDef indiv fill:#eee,stroke:#ff8000,stroke-width:3px,color:#000;
+	classDef global fill:#eee,stroke:#3465a4,stroke-width:3px,color:#000;
 
     class dat,glo group
     class upl,sd,exe,con,off indiv
     class sto,chec,proc,endp global
+
+    linkStyle 0 color:#000
+    linkStyle 1 color:#000
+    linkStyle 2 color:#000
+    linkStyle 3 color:#000
+    linkStyle 4 color:#000
+    linkStyle 5 color:#000
 ```
 
 ## Données du tutoriel
 
 Les données de l'exemple sont 10 fichiers, données brutes des limites départementales, en Shapefile :
 
-* [DEPARTEMENT.cpg](../../assets/data/archive/DEPARTEMENT.cpg)
-* [DEPARTEMENT.dbf](../../assets/data/archive/DEPARTEMENT.dbf)
-* [DEPARTEMENT.prj](../../assets/data/archive/DEPARTEMENT.prj)
-* [DEPARTEMENT.shp](../../assets/data/archive/DEPARTEMENT.shp)
-* [DEPARTEMENT.shx](../../assets/data/archive/DEPARTEMENT.shx)
-* [LIMITE_DEPARTEMENT.cpg](../../assets/data/archive/LIMITE_DEPARTEMENT.cpg)
-* [LIMITE_DEPARTEMENT.dbf](../../assets/data/archive/LIMITE_DEPARTEMENT.dbf)
-* [LIMITE_DEPARTEMENT.prj](../../assets/data/archive/LIMITE_DEPARTEMENT.prj)
-* [LIMITE_DEPARTEMENT.shp](../../assets/data/archive/LIMITE_DEPARTEMENT.shp)
-* [LIMITE_DEPARTEMENT.shx](../../assets/data/archive/LIMITE_DEPARTEMENT.shx)
+{{ component("download", {
+    title: "DEPARTEMENT.cpg",
+    href: "/data/tutoriels/archives/DEPARTEMENT.cpg",
+    detail: "cpg - 6 octets"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.dbf",
+    href: "/data/tutoriels/archives/DEPARTEMENT.dbf",
+    detail: "dbf - 16.8 Ko"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.prj",
+    href: "/data/tutoriels/archives/DEPARTEMENT.prj",
+    detail: "prj - 449 octets"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.shp",
+    href: "/data/tutoriels/archives/DEPARTEMENT.shp",
+    detail: "shp - 3 Mo"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.shx",
+    href: "/data/tutoriels/archives/DEPARTEMENT.shx",
+    detail: "shx - 868 octets"
+}) }}
+
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.cpg",
+    href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.cpg",
+    detail: "cpg - 6 octets"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.dbf",
+    href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.dbf",
+    detail: "dbf - 1.9 Mo"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.prj",
+    href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.prj",
+    detail: "prj - 449 octets"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.shp",
+    href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.shp",
+    detail: "shp - 2.4 Mo"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.shx",
+    href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.shx",
+    detail: "shx - 70.9 Ko"
+}) }}
 
 ## Outil de requête
 
