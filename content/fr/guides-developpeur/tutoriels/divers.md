@@ -6,7 +6,7 @@ tags:
 eleventyNavigation:
     key: Cas d'utilisation divers
     parent: Tutoriels d'utilisation de l'Entrepôt
-    order: 10
+    order: 11
     nav: guides-developpeur
 pictogram: leisure/paint.svg
 ---

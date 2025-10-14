@@ -14,6 +14,7 @@ module.exports = {
             wmts: "https://data.geopf.fr/wmts",
             wmsr: "https://data.geopf.fr/wms-r",
             alti: "https://data.geopf.fr/altimetrie",
+            download: "https://data.geopf.fr/telechargement",
         },
     },
     permalink: function (data) {
