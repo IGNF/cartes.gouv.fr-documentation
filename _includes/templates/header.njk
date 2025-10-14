@@ -7,7 +7,7 @@
                         <div class="fr-header__logo">
                             <p class="fr-logo">
                                 République
-                                <br />
+                                <br>
                                 française
                             </p>
                         </div>
@@ -40,25 +40,72 @@
                     <div class="fr-header__tools-links">
                         <ul class="fr-btns-group">
                             <li>
-                                <a href="https://cartes.gouv.fr/"
-                                   class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right"
-                                   target="_blank"
-                                   rel="noreferrer"
-                                   title="Accéder à cartes.gouv.fr - ouvre une nouvelle fenêtre">cartes.gouv.fr</a>
+                                <div class="fr-translate fr-nav">
+                                    <div class="fr-nav__item">
+                                        <button aria-controls="help-collapse" aria-expanded="false" title="Aide" class="fr-translate__btn fr-btn fr-px-2w">
+                                            <span class="fr-icon-question-fill fr-icon--sm fr-mr-1w" aria-hidden="true"></span>Aide</button>
+                                        <div class="fr-collapse fr-translate__menu fr-menu" id="help-collapse">
+                                            <ul class="fr-menu__list">
+                                                <li class="">
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/faq">
+                                                        <span class="fr-icon-question-mark fr-icon--sm">&emsp;Questions fréquentes</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="/fr/">
+                                                        <span class="fr-icon-external-link-line fr-icon--sm ">&emsp;Documentation</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/nous-ecrire">
+                                                        <span class="fr-icon-mail-line fr-icon--sm ">&emsp;Nous contacter</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <a href="https://www.geoportail.gouv.fr/carte"
-                                   class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right"
-                                   target="_blank"
-                                   rel="noreferrer"
-                                   title="Accéder au Géoportail - ouvre une nouvelle fenêtre">Géoportail</a>
+                                <div class="fr-translate fr-nav">
+                                    <div class="fr-nav__item">
+                                        <button aria-controls="services-collapse" aria-expanded="false" title="Services" class="fr-translate__btn fr-btn fr-px-2w">
+                                            <span class="fr-icon-grid-fill fr-icon--sm fr-mr-1w" aria-hidden="true"></span>Services</button>
+                                        <div class="fr-collapse fr-translate__menu fr-menu" id="services-collapse">
+                                            <ul class="fr-menu__list">
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/cartes/">
+                                                        <span class="fr-icon-road-map-line fr-icon--sm">&emsp;Explorer les cartes</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/catalogue/search">
+                                                        <span class="fr-icon-search-line fr-icon--sm ">&emsp;Rechercher une donnée</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/tableau-de-bord">
+                                                        <span class="fr-icon-database-line fr-icon--sm ">&emsp;Publier une donnée</span></a>
+                                                </li>
+                                                {# <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="#">
+                                                        <span class="fr-icon-brush-line fr-icon--sm ">&emsp;Créer une carte</span></a>
+                                                </li> #}
+                                                <li>
+                                                    <div class="custom-center-btn">
+                                                        <a href="https://cartes.gouv.fr"
+                                                            class="fr-btn fr-btn--tertiary fr-mt-3v  fr-mx-3w"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer">
+                                                            Découvrir cartes.gouv
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <a href="https://cartes.gouv.fr/catalogue"
-                                   class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right"
-                                   target="_blank"
-                                   rel="noreferrer"
-                                   title="Accéder au catalogue - ouvre une nouvelle fenêtre">Catalogue</a>
+                                <a href="https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/auth?scope=openid%20profile%20email&state=ec7bf5a1efd4a3f024513b8f1a2cd163&response_type=code&approval_prompt=auto&redirect_uri=https%3A%2F%2Fcartes.gouv.fr%2Flogin%2Fcheck&client_id=cartes-gouv-dev"
+                                   class="fr-icon-account-circle-fill fr-btn"
+                                   title="Se connecter">Se connecter
+                                </a>
                             </li>
                         </ul>
                         {# {% include "templates/translate.njk" %} #}
