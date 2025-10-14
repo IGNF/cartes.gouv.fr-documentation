@@ -5,7 +5,7 @@ layout: layouts/parent.njk
 eleventyNavigation:
     key: Gestion des données archives
     parent: Tutoriels d'utilisation de l'Entrepôt
-    order: 2
+    order: 3
     nav: guides-developpeur
 pictogram: map/map.svg
 ---

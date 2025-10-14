@@ -15,7 +15,7 @@ summary:
 
 ## Configuration de la diffusion
 
-La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. A ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
 
 * nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations DOWNLOAD de la plateforme)
 * doublon dans le nom des sous-couches (si on veut diffuser plusieurs données ARCHIVE au sein d'une même configuration)
@@ -64,7 +64,7 @@ La configuration centralise toutes les informations nécessaires à la diffusion
 
 Si on ne précise pas de titre ou de résumé pour la donnée stockée diffusée, ce sera son nom qui sera utilisé. Les codes des langues sont ceux [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1).
 
-Dans les sous-ressources, `format`, `zone` et `resolution` (non utilisé ici) s'appuieront sur les nomenclatures pour afficher au niveau du service de téléchargement des noms plus humains. On fournit ici les `term` et les `label` seront ajoutés. Si la valeur dans la configuration ne correspond à aucun term pour le type correspondant, le label prendra la même valeur. Le SRS de la donnée stockée sera également enrichie en utilisant la nomenclature. Dans le service de téléchargement, le `term` sera convertit en URL pour respecter les specifications Atom.
+Dans les sous-ressources, `format`, `zone` et `resolution` (non utilisé ici) s'appuieront sur les nomenclatures pour afficher au niveau du service de téléchargement des noms plus humains. On fournit ici les `term` et les `label` seront ajoutés. Si la valeur dans la configuration ne correspond à aucun term pour le type correspondant, le label prendra la même valeur. Le SRS de la donnée stockée sera également enrichie en utilisant la nomenclature. Dans le service de téléchargement, le `term` sera converti en URL pour respecter les spécifications Atom.
 
 Voici un exemple pour voir la nomenclature des zones :
 
@@ -138,7 +138,6 @@ C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
 }
 ```
 
-
 ```json
 {
     "open": true,
@@ -160,6 +159,7 @@ C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
 }
 ```
 ???
+</br>
 
 ## Consultation du service de téléchargement
 
@@ -297,7 +297,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
 ???
 <br>
 
-Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit [le lien dans l'entrée]({{ urls.public.download }}/resource/limites_administratives), c'est à dire les sous-ressources. Dans notre cas, on a une seule sous ressource, `departements`.
+Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit [le lien dans l'entrée]({{ urls.public.download }}/resource/limites_administratives), c'est-à-dire les sous-ressources. Dans notre cas, on a une seule sous-ressource, `departements`.
 
 
 ??? GET "{{ urls.open.download }}/resource/limites_administratives"
@@ -415,7 +415,7 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
 ???
 <br>
 
-Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous ressource en suivant le [lien de l'entrée]({{ urls.public.download }}/resource/limites_administratives/departements).
+Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous-ressource en suivant le [lien de l'entrée]({{ urls.public.download }}/resource/limites_administratives/departements).
 
 ??? GET "{{ urls.open.download }}/resource/limites_administratives/departements"
 
@@ -423,13 +423,12 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
 {{ urls.open.download }}/resource/limites_administratives/departements
 ```
 
-    {{ component("table", {
-        headers: ["En-tête de requête"],
-        data: [
-            ["Accept = `application/json`"]
-        ]
-    }) }}
-
+{{ component("table", {
+    headers: ["En-tête de requête"],
+    data: [
+        ["Accept = `application/json`"]
+    ]
+}) }}
 
 ```json
 {
@@ -459,7 +458,7 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
     "resolution":
     {
         "term": "1m",
-        "label": "Précision à 1 mètres"
+        "label": "Précision à 1 mètre"
     },
     "editionDate": "2022-09-30",
     "link":

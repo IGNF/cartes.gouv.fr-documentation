@@ -21,7 +21,7 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 ### Déclarer la livraison
 
-Le système de coordonnées ne sera jamais utilisée dans des calculs. Il sera simplement une information 
+Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera simplement une information 
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
@@ -66,7 +66,7 @@ Le système de coordonnées ne sera jamais utilisée dans des calculs. Il sera s
 
 ### Téléverser un fichier
 
-Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La seule contrainte est sur le nommage : on ne peut pas avoir deux fichiers qui ont le même nom à des endroits différents de l'oarborescence de la livraison. La vérification sortirait en erreur. Les fichiers étant stockés de manière pérenne à plat, on ne veut pas de conflit sur le nommage.
+Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La seule contrainte est sur le nommage : on ne peut pas avoir deux fichiers qui ont le même nom à des endroits différents de l'arborescence de la livraison. La vérification sortirait en erreur. Les fichiers étant stockés de manière pérenne à plat, on ne veut pas de conflit sur le nommage.
 
 
 
@@ -307,7 +307,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
 
 ## Terminer la livraison
 
-Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu'elles puissent être traitées sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problème qui auraient mis en échec les traitements à suivre.
+Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu'elles puissent être traitées sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problèmes qui auraient mis en échec les traitements à suivre.
 
 ### Fermeture
 
@@ -321,7 +321,7 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 
 ### Consultation des vérifications sur ma livraison
 
-Plusieurs vérifications peuvent tourner sur une mếme livraison, celles ci ne faisant que lire les données déposées.
+Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne faisant que lire les données déposées.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 

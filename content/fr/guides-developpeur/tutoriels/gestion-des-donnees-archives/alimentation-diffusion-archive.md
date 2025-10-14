@@ -1,5 +1,5 @@
 ---
-title: Alimentation et diffusion simple
+title: Alimentation et diffusion simple d'archives
 mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
@@ -11,9 +11,9 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-Le but de ce tutoriel va être de diffuser des données archive en téléchargement. Le type de données archive est le plus simple gérés par la plateforme : les fichiers de cette donnée sont simplement hébergées pour une diffusion en l'état. Aucun contrainte n'est appliquées aux fichiers d'une telle donnée.
+Le but de ce tutoriel est de diffuser des données archive en téléchargement. Le type de données archive est le plus simple géré par la plateforme : les fichiers de cette donnée sont simplement hébergés pour une diffusion en l'état. Aucune contrainte n'est appliquée aux fichiers d'une telle donnée.
 
-Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
+Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
 
 ```mermaid
 ---
@@ -32,7 +32,7 @@ stateDiagram
     note left of INT
         Traitement (processing)
         Exécution de traitement (processing execution)
-        Données stockée (stored data)
+        Donnée stockée (stored data)
     end note
 
     PUB: Publication en téléchargement
@@ -57,7 +57,7 @@ title: Concepts entrepôt manipulés et leurs liens. En bleu les entités global
 ---
 flowchart LR
 
-	subgraph glo[Ressources globales de la plateforme]
+	subgraph glo[Ressources globales]
 
     direction TB
 
@@ -75,7 +75,7 @@ flowchart LR
         off["Offre (offering)"]
 	end
 
-    dat -- à accès à une partie, avec quota ----> glo
+    dat -- a accès à une partie, avec quota ----> glo
 
     exe -- utilise en entrée --> upl
     exe -- génère en sortie --> sd

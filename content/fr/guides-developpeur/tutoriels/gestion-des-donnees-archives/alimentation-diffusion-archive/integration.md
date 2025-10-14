@@ -13,7 +13,7 @@ summary:
 
 ## Intégration des données
 
-Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données archive, il n'y aucune modification des données, une simple copie sur le stockage pérenne. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
+Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données archives, il n'y a aucune modification des données, une simple copie sur le stockage pérenne. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
 
 Pour recopier la donnée livrée en donnée stockée, des traitements sont mis à disposition de l'entrepôt.
 
@@ -68,7 +68,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
 ```json
 {
     "name": "Recopie d'une archive livrée",
-    "description": "Génération ou mise à jour d'une donnée stockée ARCHIVE à partir d'une archive livrées. Si un fichier livré existait déjà dans la donnée en sortie, celui ci va écraser l'ancienne version",
+    "description": "Génération ou mise à jour d'une donnée stockée ARCHIVE à partir d'une archive livrée. Si un fichier livré existait déjà dans la donnée en sortie, celui-ci va écraser l'ancienne version",
     "priority": "STANDARD",
     "input_types": {
         "upload": [
@@ -163,7 +163,6 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 ???
 <br>
 
-
 ### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
@@ -180,7 +179,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 Une exécution va avoir les statuts dans l'ordre suivant :
 
 * CREATED : créée mais non lancée
-* WAITING : lancée mais pas encore pris en charge par le cluster de calcul
+* WAITING : lancée mais pas encore prise en charge par le cluster de calcul
 * PROGRESS : en cours d'exécution sur le cluster de calcul
 * SUCCESS ou FAILURE : terminé
 
@@ -227,7 +226,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, nombre de fichiers, système de coordonnées).
 
-Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel format, potentiellement des fichiers compressés. C'est pourquoi le traitement d'intégration n'extraie pas d'étendue à partir des données. Nous allons pouvoir la préciser (géométrie en GeoJSON avec au plus 5000 points), ainsi que des dates d'édition.
+Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel format, potentiellement des fichiers compressés. C'est pourquoi le traitement d'intégration n'extrait pas d'étendue à partir des données. Nous allons pouvoir la préciser (géométrie en GeoJSON avec au plus 5000 points), ainsi que des dates d'édition.
 
 
 ??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
@@ -453,7 +452,6 @@ Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel f
     }
 }
 ```
-
 
 ```json
 {

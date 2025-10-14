@@ -6,7 +6,7 @@ tags:
 eleventyNavigation:
     key: Index de recherche
     parent: Tutoriels d'utilisation de l'Entrepôt
-    order: 8
+    order: 9
     nav: guides-developpeur
 pictogram: digital/search.svg
 ---
