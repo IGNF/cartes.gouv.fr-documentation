@@ -1,0 +1,13 @@
+---
+title: Connexion avec FME 
+mermaid: true
+eleventyNavigation:
+    key: Connexion avec FME 
+    parent: Contrôle des accès à l'API Entrepôt 
+    order: 3
+    nav: guides-developpeur
+---
+
+Cette vidéo montre comment récupérer un token grâce à une requête comportant des paramètres relatifs aux informations de notre compte utilisateur en utilisant l'outil FME. Ce token sera à préciser dans chaque en-tête (header) de requête afin de s’authentifier.
+
+<iframe style="display: block; margin: 0 auto;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/96dYjCz97Kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
