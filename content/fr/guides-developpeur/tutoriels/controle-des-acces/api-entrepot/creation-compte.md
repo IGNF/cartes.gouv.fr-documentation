@@ -14,6 +14,8 @@ Toutes les applications de la Géoplateforme s'appuient, pour l'authentification
 
 Par convention, le nom d'utilisateur doit être de la forme {prenom}.{nom}, en minuscule.
 
-![Création d'un compte](../../assets/images/authentification_enregistrement.png) ![Connexion](../../assets/images/authentification_connexion.png)
+![Création d'un compte](/img/guides-developpeur/controle-acces/authentification_enregistrement.png){.fr-responsive-img .frx-img-contained} ![Connexion](/img/guides-developpeur/controle-acces/authentification_connexion.png){.fr-responsive-img .frx-img-contained} 
+
+
 
 Lors de l'enregistrement, vous aurez à utiliser une application de génération de code à usage unique (FreeOTP sur votre téléphone par exemple). Vous en aurez besoin à chaque authentification.

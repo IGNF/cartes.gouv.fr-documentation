@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/guides-developpeur/tutoriels/controle-des-acces",
+            url: "/guides-developpeur/tutoriels/controle-des-acces/service-de-diffusion",
             title: "Contrôle des accès",
         },
     ],
