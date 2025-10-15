@@ -59,11 +59,11 @@ stateDiagram
 
 ### Calcul de la pyramide
 
-* Création de la livraison
+- Création de la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -75,16 +75,17 @@ stateDiagram
     "srs": "EPSG:2154"
 }
 ```
+
 ???
 <br>
 
-* Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
-* Fermeture de la livraison
-* Création de l'exécution de traitement :
+- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
+- Fermeture de la livraison
+- Création de l'exécution de traitement :
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -92,9 +93,7 @@ stateDiagram
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
     "inputs": {
-        "upload": [
-            "{upload Corse Nord}"
-        ]
+        "upload": ["{upload Corse Nord}"]
     },
     "output": {
         "stored_data": {
@@ -109,22 +108,23 @@ stateDiagram
     }
 }
 ```
+
 ???
 <br>
 
-* Lancement de l'exécution
-* Les informations sur notre donnée stockées sont :
+- Lancement de l'exécution
+- Les informations sur notre donnée stockées sont :
     - ID `{stored data Corse}`
     - taille : 4 967 972 octets
     - étendue : 7.70943739,42.08814213 10.2673901,43.12553835
 
 ### Diffusion
 
-* Création de la configuration WMTS-TMS
+- Création de la configuration WMTS-TMS
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -143,9 +143,7 @@ stateDiagram
     "type_infos": {
         "title": "SCAN 1000 Corse",
         "abstract": "Données SCAN 1000 sur la Corse, alimenté par injection",
-        "keywords": [
-            "Tutoriel", "Raster", "Mise à jour", "Injection"
-        ],
+        "keywords": ["Tutoriel", "Raster", "Mise à jour", "Injection"],
         "used_data": [
             {
                 "bottom_level": "10",
@@ -159,25 +157,25 @@ stateDiagram
     }
 }
 ```
+
 ???
 <br>
 
-* Création de l'offre
+- Création de l'offre
 
 On met tout de suite les informations cible, le but étant de ne pas avoir à modifier la diffusion à chaque mise à jour.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-maj/wmts_rastermaj_nord.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-
 ## Ajout du deuxième jeu de données
 
 ### Modification de la pyramide
 
-* Création de la livraison
+- Création de la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -189,28 +187,27 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
     "srs": "EPSG:2154"
 }
 ```
+
 ???
 <br>
 
-* Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
-* Fermeture de la livraison
-* Création de l'exécution de traitement : on renseigne en sortie la pyramide déjà existante, pour signifier qu'on souhaite la modifier
+- Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
+- Fermeture de la livraison
+- Création de l'exécution de traitement : on renseigne en sortie la pyramide déjà existante, pour signifier qu'on souhaite la modifier
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
 ```json
 {
-"processing": "{{ ids.processings['raster-to-pyramid'] }}",
-"inputs": {
-    "upload": [
-    "{upload Corse Sud}"
-    ]
-},
-"output": {
+    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
+    "inputs": {
+        "upload": ["{upload Corse Sud}"]
+    },
+    "output": {
         "stored_data": {
             "id": "{stored data Corse}"
         }
@@ -218,11 +215,12 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
     "parameters": {}
 }
 ```
+
 ???
 <br>
 
-* Lancement de l'exécution
-* Les informations sur notre donnée stockées sont maintenant :
+- Lancement de l'exécution
+- Les informations sur notre donnée stockées sont maintenant :
     - taille : 5 102 292 octets
     - étendue : 7.55821978,41.22153919 10.2673901,43.12553835
 

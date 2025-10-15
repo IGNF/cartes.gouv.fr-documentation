@@ -8,19 +8,19 @@ eleventyNavigation:
     nav: guides-developpeur
 summary:
     visible: true
-    depth: 2    
+    depth: 2
 ---
 
 ## Configuration de la diffusion tuilée
 
 La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. On va contrôler à ce moment les paramètres et détecter les erreurs ou conflits potentiels :
 
-* nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMTS-TMS de la plateforme)
-* Niveau absent de la donnée stockée
+- nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMTS-TMS de la plateforme)
+- Niveau absent de la donnée stockée
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -39,9 +39,7 @@ La configuration centralise toutes les informations nécessaires à la diffusion
     "type_infos": {
         "title": "SCAN 1000 Corse",
         "abstract": "Données SCAN 1000 sur la Corse",
-        "keywords": [
-            "Tutoriel", "Raster"
-        ],
+        "keywords": ["Tutoriel", "Raster"],
         "used_data": [
             {
                 "bottom_level": "10",
@@ -55,6 +53,7 @@ La configuration centralise toutes les informations nécessaires à la diffusion
     }
 }
 ```
+
 ???
 <br>
 
@@ -70,22 +69,22 @@ On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du serv
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
+
 ???
 <br>
-
 
 ### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings
 ```
 
@@ -95,10 +94,12 @@ On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du serv
     "open": true
 }
 ```
+
 ???
 <br>
 
 On peut vérifier la présence de nos couches `scan1000` dans :
+
 - le [getCapabilities du service WMTS]({{ urls.public.wmts }}?REQUEST=GetCapabilities&SERVICE=WMTS&VERSION=1.0.0)
 - le [getCapabilities du service TMS]({{ urls.public.tms }}/1.0.0)
 

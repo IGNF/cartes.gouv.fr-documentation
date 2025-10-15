@@ -23,19 +23,18 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
 ```json
 {
-"description": "Données SCAN1000 sur la Corse",
-"name": "SCAN1000 - Corse",
-"type": "RASTER",
-"srs": "EPSG:2154"
+    "description": "Données SCAN1000 sur la Corse",
+    "name": "SCAN1000 - Corse",
+    "type": "RASTER",
+    "srs": "EPSG:2154"
 }
 ```
-
 
 ```json
 {
@@ -57,6 +56,7 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
     "type_infos": {}
 }
 ```
+
 ???
 <br>
 
@@ -64,14 +64,14 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 Les formats de fichier raster gérés sont :
 
-* GeoTIFF
-* TIFF + TFW
-* JPEG2000
+- GeoTIFF
+- TIFF + TFW
+- JPEG2000
 
 📄 `<scan1000_corse.tif>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tif"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tif
 ```
 
@@ -88,7 +88,7 @@ Les formats de fichier raster gérés sont :
 📄 `<scan1000_corse.tfw>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tfw"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tfw
 ```
 
@@ -108,7 +108,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
 
@@ -133,6 +133,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
     }
 ]
 ```
+
 ???
 <br>
 
@@ -143,9 +144,11 @@ Terminer la livraison consiste à retirer les droits en écriture sur les donné
 ### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
-``` title="Contenu" 
+
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close
 ```
+
 ???
 <br>
 
@@ -155,7 +158,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 
@@ -182,6 +185,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
     "failed": []
 }
 ```
+
 ???
 <br>
 
@@ -189,7 +193,7 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 
@@ -216,5 +220,6 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
     "failed": []
 }
 ```
+
 ???
 <br>

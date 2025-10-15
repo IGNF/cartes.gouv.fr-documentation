@@ -15,9 +15,9 @@ Il permet un affichage rapide d’images précalculées​, avec la possibilité
 
 Il propose les méthodes suivantes :
 
-* Accès aux métadonnées du service
-* Accès aux métadonnées d’une donnée
-* Accès à une tuile
+- Accès aux métadonnées du service
+- Accès aux métadonnées d’une donnée
+- Accès à une tuile
 
 ## Accès aux métadonnées du service
 
@@ -44,4 +44,3 @@ https://data.geopf.fr/annexes/ressources/vectorTiles/styles/{Layer}/{style}.json
 ```
 
 L’IGN propose une [bibliothèque de styles disponible ici](https://geoservices.ign.fr/documentation/services/api-et-services-ogc/tuiles-vectorielles-tmswmts/styles).
-

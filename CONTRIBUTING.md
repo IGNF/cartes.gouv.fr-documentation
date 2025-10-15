@@ -18,11 +18,11 @@ Ci-dessous, un guide pas à pas décrit le processus de contribution via un fork
 
 ### Première installation
 
--   Créez un compte Github
--   Installez Git sur votre poste de travail
--   Configurez Git avec votre nom et votre email
--   Forkez le dépôt
--   Clonez votre fork (en utilisant SSH ou l'url HTTPS) :
+- Créez un compte Github
+- Installez Git sur votre poste de travail
+- Configurez Git avec votre nom et votre email
+- Forkez le dépôt
+- Clonez votre fork (en utilisant SSH ou l'url HTTPS) :
 
 ```bash
 git clone git@github.com:your_GH_account/cartes.gouv.fr-documentation.git
@@ -30,25 +30,25 @@ git clone git@github.com:your_GH_account/cartes.gouv.fr-documentation.git
 
 (en cas de problème, vérifiez votre configuration réseau. Si vous travaillez derrière un proxy, vérifiez par exemple vos variables d'environnement HTTP_PROXY et HTTPS_PROXY)
 
--   Placez vous dans le nouveau dossier créé :
+- Placez vous dans le nouveau dossier créé :
 
 ```bash
 cd cartes.gouv.fr-documentation
 ```
 
--   Ajoutez le dépôt principal comme source "upstream" (en utilisant l'url HTTPS) :
+- Ajoutez le dépôt principal comme source "upstream" (en utilisant l'url HTTPS) :
 
 ```bash
 git remote add upstream https://github.com/IGNF/cartes.gouv.fr-documentation
 ```
 
--   Votre remote devrait maintenant être "origin", votre fork, et "upstream" devrait correspondre au dépôt principal sur IGNF. Vous pouvez le vérifier en utilisant la commande :
+- Votre remote devrait maintenant être "origin", votre fork, et "upstream" devrait correspondre au dépôt principal sur IGNF. Vous pouvez le vérifier en utilisant la commande :
 
 ```bash
 git remote -v
 ```
 
--   Vous devriez voir quelque-chose comme ça :
+- Vous devriez voir quelque-chose comme ça :
 
 ```
 origin	git@github.com:your_GH_account/cartes.gouv.fr-documentation.git (fetch)
@@ -61,19 +61,19 @@ Il est important qu'"origin" pointe bien vers votre fork.
 
 ### Maintenir votre dépôt à jour
 
--   Assurez vous d'être sur la branche main :
+- Assurez vous d'être sur la branche main :
 
 ```bash
 git checkout main
 ```
 
--   Téléchargez les mises à jour de toutes les branches de upstream :
+- Téléchargez les mises à jour de toutes les branches de upstream :
 
 ```bash
 git fetch upstream
 ```
 
--   Mettez à jour votre branche main locale au même niveau que la branche main du dépôt principal :
+- Mettez à jour votre branche main locale au même niveau que la branche main du dépôt principal :
 
 ```bash
 git rebase upstream/main
@@ -88,19 +88,19 @@ mettez vos modifications locales de côté dans le "stash" en utilisant la comma
 git stash
 ```
 
--   Maintenant vous pouvez "rebaser" :
+- Maintenant vous pouvez "rebaser" :
 
 ```bash
 git rebase upstream/main
 ```
 
--   Puis réappliquez vos changements mis de côté :
+- Puis réappliquez vos changements mis de côté :
 
 ```bash
 git stash apply
 ```
 
--   Supprimez les changements que vous aviez mis dans le "stash" (optionnel):
+- Supprimez les changements que vous aviez mis dans le "stash" (optionnel):
 
 ```bash
 git stash pop
@@ -110,7 +110,7 @@ git stash pop
 
 Maintenant que vous avez mis à jour votre branche main locale, vous pouvez créer une nouvelle branche à partir d'elle :
 
--   Créez une branche (ici appelée "nouvelle-doc") et placez vous dessus :
+- Créez une branche (ici appelée "nouvelle-doc") et placez vous dessus :
 
 ```bash
 git checkout -b nouvelle-doc
@@ -122,14 +122,14 @@ Vous pouvez utiliser l'éditeur de votre choix pour apporter des changements. No
 
 ### Commiter les changements
 
--   Ajoutez les fichiers au commit (fichiers modifiés ou ajoutés) :
+- Ajoutez les fichiers au commit (fichiers modifiés ou ajoutés) :
 
 ```bash
 git add file1
 git add file2
 ```
 
--   Commitez le changement :
+- Commitez le changement :
 
 ```
 git commit -m "ajout nouvelle doc"
@@ -139,7 +139,7 @@ NB : dans l'exemple, le commit porte le message "ajout nouvelle doc". Utilisez u
 
 ### Pousser les changements sur GitHub
 
--   Poussez les changements de votre nouvelle branche sur votre fork sur github :
+- Poussez les changements de votre nouvelle branche sur votre fork sur github :
 
 ```bash
 git push origin nouvelle-doc
@@ -156,6 +156,6 @@ Si besoin, ils travailleront avec vous pour améliorer vos changements.
 
 Une fois que les changements dans votre pull request seront prêts à être intégrés, les mainteneurs décideront de la façon la plus appropriée de les intégrer dans la branche main du dépôt principal :
 
--   en mergeant la branche avec tous ces commits + un merge commit,
--   en combinant tous les commits en un seul (squash)
--   ou en rebasant tous vos commits sur la branche main, à la suite des commits déjà présents.
+- en mergeant la branche avec tous ces commits + un merge commit,
+- en combinant tous les commits en un seul (squash)
+- ou en rebasant tous vos commits sur la branche main, à la suite des commits déjà présents.

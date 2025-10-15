@@ -21,10 +21,9 @@ Il n'y a aucun contrôle sur le type de fichier téléversé, il sera stocké te
 
 Le fichier utilisé dans cet exemple est ![imagette.jpg](/img/guides-developpeur/complementaire/imagette.jpg){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
 
@@ -36,7 +35,7 @@ Le fichier utilisé dans cet exemple est ![imagette.jpg](/img/guides-developpeur
             ["paths = quickview/rgealti.jpg"]
         ]
     }) }}
-  
+
         ```json
         {
             "paths": [
@@ -49,6 +48,7 @@ Le fichier utilisé dans cet exemple est ![imagette.jpg](/img/guides-developpeur
             "_id": "{annexe}"
         }
         ```
+
 ???
 <br>
 

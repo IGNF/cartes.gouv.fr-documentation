@@ -17,9 +17,9 @@ Il permet un affichage d’images de données vectorielles ​avec des possibili
 
 Il propose les méthodes suivantes :
 
-* **GetCapabilities** pour obtenir les métadonnées du service
-* **GetMap** pour obtenir une carte
-* **GetFeatureInfo** pour obtenir les métadonnées d’une carte
+- **GetCapabilities** pour obtenir les métadonnées du service
+- **GetMap** pour obtenir une carte
+- **GetFeatureInfo** pour obtenir les métadonnées d’une carte
 
 ## Requête GetCapabilities
 

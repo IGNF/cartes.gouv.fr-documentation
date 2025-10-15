@@ -17,10 +17,10 @@ Il permet la récupération d’extraits de bases de données ​via des requêt
 
 Il propose les méthodes suivantes :
 
-* **GetCapabilities** pour obtenir les métadonnées du service
-* **DescribeFeatureType** pour obtenir la description de la structure d’une donnée
-* **GetFeature** (hits) pour obtenir le nombre d’objets associés à une demande
-* **GetFeature** (results) pour obtenir les objets associés à une demande
+- **GetCapabilities** pour obtenir les métadonnées du service
+- **DescribeFeatureType** pour obtenir la description de la structure d’une donnée
+- **GetFeature** (hits) pour obtenir le nombre d’objets associés à une demande
+- **GetFeature** (results) pour obtenir les objets associés à une demande
 
 ## Requête GetCapabilities
 

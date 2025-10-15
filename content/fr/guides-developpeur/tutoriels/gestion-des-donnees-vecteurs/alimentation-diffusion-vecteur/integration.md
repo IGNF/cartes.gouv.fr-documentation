@@ -42,13 +42,14 @@ flowchart LR
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -58,7 +59,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector-to-db'] }}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector-to-db'] }}
 ```
 
@@ -67,16 +68,12 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
     "name": "Intégration de données vecteur livrées en base",
     "description": "Ce traitement permet de stocker dans les bases de données PostgreSQL de la plateforme des données vecteurs livrées. Les formats pris en charge sont le CSV, le Shapefile, le Geopackage et le GeoJSON. Il est également possible de préciser un autre système afin de réaliser une reprojection à l'intégration",
     "input_types": {
-        "upload": [
-            "VECTOR"
-        ],
+        "upload": ["VECTOR"],
         "stored_data": []
     },
     "output_type": {
         "stored_data": "VECTOR-DB",
-        "storage": [
-            "POSTGRESQL"
-        ]
+        "storage": ["POSTGRESQL"]
     },
     "parameters": [
         {
@@ -100,6 +97,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
     ]
 }
 ```
+
 ???
 <br>
 
@@ -109,7 +107,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -117,9 +115,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 {
     "processing": "{{ ids.processings['vector-to-db'] }}",
     "inputs": {
-        "upload": [
-            "{upload}"
-        ]
+        "upload": ["{upload}"]
     },
     "output": {
         "stored_data": {
@@ -170,33 +166,39 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
     "_id": "{execution}"
 }
 ```
+
 ???
 <br>
 
 ### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
-``` title="Contenu" 
+
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch
 ```
+
 ???
 <br>
 
 :::warning "Attention"
 
     Les noms des tables et des champs sont "standardisés" lors de l'intégration en base pour éviter tout souci d'utilisation par les applications : pas de majuscules, pas d'accent, pas de tirets.
+
 :::
+
 ### Consultation de l'état de l'exécution
 
 Une exécution va avoir les statuts dans l'ordre suivant :
 
-* CREATED : créée mais non lancée
-* WAITING : lancée mais pas encore pris en charge par le cluster de calcul
-* PROGRESS : en cours d'exécution sur le cluster de calcul
-* SUCCESS ou FAILURE : terminé
+- CREATED : créée mais non lancée
+- WAITING : lancée mais pas encore pris en charge par le cluster de calcul
+- PROGRESS : en cours d'exécution sur le cluster de calcul
+- SUCCESS ou FAILURE : terminé
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
-``` title="Contenu" 
+
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}
 ```
 
@@ -238,6 +240,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "_id": "{execution}"
 }
 ```
+
 ???
 <br>
 
@@ -246,7 +249,8 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées, tables et attributs).
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
-``` title="Contenu" 
+
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
@@ -258,9 +262,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "contact": "email",
     "extent": {
         "type": "Polygon",
-        "coordinates": [
-
-        ]
+        "coordinates": []
     },
     "last_event": {
         "title": "Génération",
@@ -284,50 +286,20 @@ Une exécution va avoir les statuts dans l'ordre suivant :
             {
                 "name": "ecoregions",
                 "type": "TABLE",
-                "attributes": [
-                    "ogc_fid",
-                    "id",
-                    "eco_name",
-                    "biome_name",
-                    "realm",
-                    "nnh",
-                    "nnh_name",
-                    "color",
-                    "color_bio",
-                    "color_nnh",
-                    "geom"
-                ],
-                "primary_key": [
-                    "ogc_fid"
-                ]
+                "attributes": ["ogc_fid", "id", "eco_name", "biome_name", "realm", "nnh", "nnh_name", "color", "color_bio", "color_nnh", "geom"],
+                "primary_key": ["ogc_fid"]
             },
             {
                 "name": "pays",
                 "type": "TABLE",
-                "attributes": [
-                    "ogc_fid",
-                    "id",
-                    "fips",
-                    "iso2",
-                    "iso3",
-                    "un",
-                    "name",
-                    "area",
-                    "pop2005",
-                    "region",
-                    "subregion",
-                    "lon",
-                    "lat",
-                    "geom"
-                ],
-                "primary_key": [
-                    "ogc_fid"
-                ]
+                "attributes": ["ogc_fid", "id", "fips", "iso2", "iso3", "un", "name", "area", "pop2005", "region", "subregion", "lon", "lat", "geom"],
+                "primary_key": ["ogc_fid"]
             }
         ]
     }
 }
 ```
+
 ???
 <br>
 
@@ -336,8 +308,10 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}"
-``` title="Contenu" 
+
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}
 ```
+
 ???
 <br>

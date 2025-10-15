@@ -36,11 +36,11 @@ git config --global user.email mail@domaine.fr
 Rendez-vous sur la page de votre _<span lang="en">fork</span>_. Github affiche au dessus de la liste des dossiers et fichiers l’état de synchronisation de votre _<span lang="en">fork</span>_ (commits en avance ou en retard)
 
 ![Image décrivant l’affichage du statut du fork sur github](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/01_Statut-fork-sur-github.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-Si votre _<span lang="en">fork</span>_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync _<span lang="en">fork</span>_ »** directement pour le mettre à jour.
+Si votre _<span lang="en">fork</span>_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync *<span lang="en">fork</span>* »** directement pour le mettre à jour.
 
 ## Créer une branche
 
-Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation entre collaborateurs, il est conseillé de travailler avec des _branches_. Par défaut votre _<span lang="en">fork</span>_/duplication contient une seule branche : la branche principale (_<span lang="en">main</span>_)._
+Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation entre collaborateurs, il est conseillé de travailler avec des _branches_. Par défaut votre _<span lang="en">fork</span>_/duplication contient une seule branche : la branche principale (_<span lang="en">main</span>_).\_
 
 Si ce n'est pas votre première contribution, vous êtes peut-être resté sur une branche de votre contribution précédente. Retournez sur la branche _<span lang="en">main</span>_.
 
@@ -101,6 +101,7 @@ Importez la mise à jour avec la commande suivante :
 ```bash
 git pull
 ```
+
 Enfin, réappliquez les modifications locales sauvegardées avec la commande suivante :
 
 ```bash

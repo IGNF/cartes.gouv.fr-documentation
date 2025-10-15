@@ -15,9 +15,9 @@ Il permet un affichage rapide d’images précalculées​ dans un format, un sy
 
 Il propose les méthodes suivantes :
 
-* **GetCapabilities** pour obtenir les métadonnées du service
-* **GetTile** pour obtenir une tuile
-* **GetFeatureInfo** pour obtenir les métadonnées d’une tuile
+- **GetCapabilities** pour obtenir les métadonnées du service
+- **GetTile** pour obtenir une tuile
+- **GetFeatureInfo** pour obtenir les métadonnées d’une tuile
 
 ## Requête GetCapabilities
 
@@ -27,12 +27,12 @@ https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
 
 La requête a pour caractéristiques :
 
-* Paramètres obligatoires :
-   - SERVICE=WMTS
-   - REQUEST=GetCapabilities
-   - VERSION=1.0.0
-* Méthode possible : GET
-* Format de réponse : XML
+- Paramètres obligatoires :
+    - SERVICE=WMTS
+    - REQUEST=GetCapabilities
+    - VERSION=1.0.0
+- Méthode possible : GET
+- Format de réponse : XML
 
 ## Requête GetTile
 
@@ -42,7 +42,7 @@ https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER={Cou
 
 La requête a pour caractéristiques :
 
-* Paramètres obligatoires :
+- Paramètres obligatoires :
     - SERVICE=WMTS
     - REQUEST=GetTile
     - VERSION=1.0.0
@@ -53,18 +53,18 @@ La requête a pour caractéristiques :
     - TILEMATRIX : le nom de la matrice qui contient la tuile
     - TILEROW : le numéro de ligne du coin supérieur gauche de la tuile
     - TILECOL : le numéro de colonne du coin supérieur gauche de la tuile
-* Méthode possible : GET
-* Format de réponse : dépend du format de la donnée (PNG, JPEG, TIFF, BIL...)
+- Méthode possible : GET
+- Format de réponse : dépend du format de la donnée (PNG, JPEG, TIFF, BIL...)
 
 ## Requête GetFeatureInfo
 
 ```plain
-https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetFeatureInfo&VERSION=1.0.0&LAYER={Couche}&STYLE={Style}&FORMAT={Format}&I={abscisse}&J={ordonnée}&INFOFORMAT={format} 
+https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetFeatureInfo&VERSION=1.0.0&LAYER={Couche}&STYLE={Style}&FORMAT={Format}&I={abscisse}&J={ordonnée}&INFOFORMAT={format}
 ```
 
 La requête a pour caractéristiques :
 
-* Paramètres obligatoires :
+- Paramètres obligatoires :
     - SERVICE=WMTS
     - REQUEST=GetFeatureInfo
     - VERSION=1.0.0
@@ -74,4 +74,4 @@ La requête a pour caractéristiques :
     - LAYER : la couche demandée
     - STYLE : le nom d’un style de rendu de la couche à appliquer
     - FORMAT
-* Méthode possible : GET
+- Méthode possible : GET

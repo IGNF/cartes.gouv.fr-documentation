@@ -76,7 +76,7 @@ flowchart LR
         proc["Traitement (processing)"]
         endp["Point d'accès (endpoint)"]
     end
-    
+
 	subgraph dat[Entrepôt]
         upl["Livraison (upload)"]
         exe["Exécution de traitement (processing execution)"]
@@ -100,7 +100,7 @@ flowchart LR
     class dat,glo group
     class upl,sd,exe,con,off indiv
     class sto,chec,proc,endp global
-    
+
     linkStyle 0 color:#000
     linkStyle 1 color:#000
     linkStyle 2 color:#000
@@ -114,4 +114,3 @@ flowchart LR
 Les données de l'exemple sont constituées d'une image SCAN 1000 sur la Corse, au format [TIFF](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tif) avec un [TFW](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tfw) pour le géoréférencement.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_presentation_raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-

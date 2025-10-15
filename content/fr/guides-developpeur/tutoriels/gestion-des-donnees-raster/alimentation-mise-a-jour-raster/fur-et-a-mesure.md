@@ -70,11 +70,11 @@ stateDiagram
 
 On a notre permier jeu de donnée, la pyramide calculée se fera dans les même conditions que dans le [tutoriel de diffusion de données raster](../../alimentation-diffusion-raster).
 
-* Création de la livraison
+- Création de la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -86,16 +86,17 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
     "srs": "EPSG:2154"
 }
 ```
-??? 
+
+???
 <br>
 
-* Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
-* Fermeture de la livraison
-* Création de l'exécution de traitement
+- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
+- Fermeture de la livraison
+- Création de l'exécution de traitement
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -103,9 +104,7 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
     "inputs": {
-        "upload": [
-            "{upload Corse Nord}"
-        ]
+        "upload": ["{upload Corse Nord}"]
     },
     "output": {
         "stored_data": {
@@ -120,18 +119,19 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
     }
 }
 ```
+
 ???
 <br>
 
-* Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
+- Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
 
 ### Diffusion
 
-* Création de la configuration WMTS-TMS : ID `{configuration}`
+- Création de la configuration WMTS-TMS : ID `{configuration}`
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -150,9 +150,7 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
     "type_infos": {
         "title": "SCAN 1000 Nord Corse",
         "abstract": "Données SCAN 1000 sur le Nord de la Corse",
-        "keywords": [
-            "Tutoriel", "Raster", "Mise à jour"
-        ],
+        "keywords": ["Tutoriel", "Raster", "Mise à jour"],
         "used_data": [
             {
                 "bottom_level": "10",
@@ -166,10 +164,11 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
     }
 }
 ```
+
 ???
 <br>
 
-* Création de l'offre : ID `{offering}`
+- Création de l'offre : ID `{offering}`
 
 On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jour la diffusion, on ne pourra plus le changer.
 
@@ -179,11 +178,11 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
 
 ### Calcul de la pyramide
 
-* Création de la livraison
+- Création de la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -195,16 +194,17 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     "srs": "EPSG:2154"
 }
 ```
+
 ???
 <br>
 
-* Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
-* Fermeture de la livraison
-* Création de l'exécution de traitement : on a ici deux données en entrée, la nouvelle zone livrée, ainsi que la pyramide ne contenant que le Nord de la Corse
+- Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
+- Fermeture de la livraison
+- Création de l'exécution de traitement : on a ici deux données en entrée, la nouvelle zone livrée, ainsi que la pyramide ne contenant que le Nord de la Corse
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -212,12 +212,8 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
     "inputs": {
-        "upload": [
-            "{upload Corse Sud}"
-        ],
-        "stored_data": [
-            "{stored data Corse Nord}"
-        ]
+        "upload": ["{upload Corse Sud}"],
+        "stored_data": ["{stored data Corse Nord}"]
     },
     "output": {
         "stored_data": {
@@ -228,15 +224,16 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     "parameters": {}
 }
 ```
+
 ???
 <br>
 
-* Lancement de l'exécution : ID de la données stockée `{stored data Corse}`
-* À la fin, on peut voir que notre nouvelle pyramide a une dépendance : elle utilise notre première pyramide, qu'on ne pourra plus supprimer
+- Lancement de l'exécution : ID de la données stockée `{stored data Corse}`
+- À la fin, on peut voir que notre nouvelle pyramide a une dépendance : elle utilise notre première pyramide, qu'on ne pourra plus supprimer
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
 ```
 
@@ -251,16 +248,17 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     ]
 }
 ```
+
 ???
 <br>
 
 ### Diffusion
 
-* Mise à jour de la configuration WMTS-TMS : on change le titre, le résumé et surtout la donnée stockée utilisée. À ce stade, la diffusion n'a pas encore été mise à jour
- 
+- Mise à jour de la configuration WMTS-TMS : on change le titre, le résumé et surtout la donnée stockée utilisée. À ce stade, la diffusion n'a pas encore été mise à jour
+
 ??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}
 ```
 
@@ -279,9 +277,7 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     "type_infos": {
         "title": "SCAN 1000 Corse complète",
         "abstract": "Données SCAN 1000 sur toute la Corse",
-        "keywords": [
-            "Tutoriel", "Raster", "Mise à jour"
-        ],
+        "keywords": ["Tutoriel", "Raster", "Mise à jour"],
         "used_data": [
             {
                 "bottom_level": "10",
@@ -295,16 +291,18 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     }
 }
 ```
+
 ???
 <br>
 
-* Synchronisation de l'offre : cette action va renvoyer les informations auprès des serveurs de diffusion pour prendre en compte les modifications. Cela permet de conserver l'offre et son identifiant, ce qui est intéressant lorsque des restrictions d'accès ont été définies 
+- Synchronisation de l'offre : cette action va renvoyer les informations auprès des serveurs de diffusion pour prendre en compte les modifications. Cela permet de conserver l'offre et son identifiant, ce qui est intéressant lorsque des restrictions d'accès ont été définies
 
 ??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}
 ```
+
 ???
 <br>
 

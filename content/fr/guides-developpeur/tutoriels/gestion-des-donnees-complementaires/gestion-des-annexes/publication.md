@@ -17,10 +17,9 @@ Publier une annexe revient à modifier son statut de publication.
 
 ??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}
 ```
-
 
 ```json
 {
@@ -30,10 +29,7 @@ Publier une annexe revient à modifier son statut de publication.
 
 ```json
 {
-    "paths": [
-        "/imagettes/rgealti.jpg",
-        "/quickview/rgealti.jpg"
-    ],
+    "paths": ["/imagettes/rgealti.jpg", "/quickview/rgealti.jpg"],
     "size": 18415,
     "mime_type": "image/jpeg",
     "published": true,
@@ -41,12 +37,13 @@ Publier une annexe revient à modifier son statut de publication.
     "_id": "{annexe}"
 }
 ```
+
 ???
 <br>
 
 Les URL suivantes sont maintenant disponibles :
 
-* {{ urls.annexes }}/{technical_name}/imagettes/rgealti.jpg
-* {{ urls.annexes }}/{technical_name}/quickview/rgealti.jpg
+- {{ urls.annexes }}/{technical_name}/imagettes/rgealti.jpg
+- {{ urls.annexes }}/{technical_name}/quickview/rgealti.jpg
 
 Les étiquettes (labels), non utilisées ici, permettent de rechercher plus facilement des annexes via l'API Entrepôt et de publier par paquet.

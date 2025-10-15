@@ -1,8 +1,8 @@
 module.exports = {
     segments: [
         {
-            url: "/guides-developpeur/tutoriels/gestion-des-donnees-raster/alimentation-diffusion-raster",
-            title: "Alimentation et diffusion simple",
+            url: "/guides-developpeur/tutoriels/gestion-des-donnees-complementaires/gestion-des-annexes",
+            title: "Gestion des annexes",
         },
     ],
 };

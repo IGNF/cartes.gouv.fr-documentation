@@ -45,13 +45,14 @@ flowchart LR
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -61,7 +62,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}
 ```
 
@@ -70,18 +71,12 @@ Le détail sur un traitement permet de voir les types de données attendus en en
     "name": "Calcul de pyramide raster",
     "description": "Génération ou mise à jour d'une pyramide de tuiles raster à partir d'une livraison d'images géo-référencées",
     "input_types": {
-        "upload": [
-            "RASTER"
-        ],
-        "stored_data": [
-            "ROK4-PYRAMID-RASTER"
-        ]
+        "upload": ["RASTER"],
+        "stored_data": ["ROK4-PYRAMID-RASTER"]
     },
     "output_type": {
         "stored_data": "ROK4-PYRAMID-RASTER",
-        "storage": [
-            "S3"
-        ]
+        "storage": ["S3"]
     },
     "parameters": [
         {
@@ -89,12 +84,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
             "description": "Tile Matrix Set, grille de définition des tuiles. Dans le cas d'une génération initiale, il est obligatoire",
             "mandatory": false,
             "constraints": {
-                "enum": [
-                    "PM",
-                    "4326",
-                    "LAMB93_10cm",
-                    "LAMB93_50cm"
-                ],
+                "enum": ["PM", "4326", "LAMB93_10cm", "LAMB93_50cm"],
                 "type": "string"
             }
         },
@@ -125,12 +115,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
             "description": "Compression des données dans les tuiles",
             "mandatory": false,
             "constraints": {
-                "enum": [
-                    "jpg",
-                    "png",
-                    "zip",
-                    "jpg90"
-                ],
+                "enum": ["jpg", "png", "zip", "jpg90"],
                 "type": "string"
             }
         },
@@ -150,11 +135,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
             "description": "Interpolation",
             "mandatory": false,
             "constraints": {
-                "enum": [
-                    "nn",
-                    "linear",
-                    "bicubic"
-                ],
+                "enum": ["nn", "linear", "bicubic"],
                 "type": "string"
             }
         },
@@ -199,6 +180,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
     ]
 }
 ```
+
 ???
 <br>
 
@@ -208,7 +190,7 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -216,9 +198,7 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
     "inputs": {
-        "upload": [
-        "{upload MNT}"
-        ]
+        "upload": ["{upload MNT}"]
     },
     "output": {
         "stored_data": {
@@ -275,20 +255,22 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
     "_id": "{execution MNT}"
 }
 ```
+
 ???
 <br>
 
 :::warning "Points d'attentions"
-    On précise une étiquette de stockage pour la donnée en sortie. Selon la configuration de votre entrepôt, il est possible que vous ayez accès à plusieurs stockages de type S3. Ce sont les étiquettes qui vont permettre de choisir le stockage S3 cible.
+On précise une étiquette de stockage pour la donnée en sortie. Selon la configuration de votre entrepôt, il est possible que vous ayez accès à plusieurs stockages de type S3. Ce sont les étiquettes qui vont permettre de choisir le stockage S3 cible.
 
     On utilise le TMS `LAMB93_50cm` qui a le même système de coordonnée que l'image livrée, ainsi qu'un niveau à la même résolution (50cm). En choisissant une interpolation `nn`, on s'assure d'avoir un niveau de pyramide parfaitement calé sur les données sources, sans réechantillonnage, donc avec des valeurs d'origine. Les niveaux supérieurs eux seront calculé en moyennant les pixels 4 par 4. En ajoutant les masques, on évite de prendre en compte le nodata dans cette moyenne.
+
 :::
 
 ### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}/launch"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}/launch
 ```
 
@@ -299,14 +281,14 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
 
 Une exécution va avoir les statuts dans l'ordre suivant :
 
-* CREATED : créée mais non lancée
-* WAITING : lancée mais pas encore pris en charge par le cluster de calcul
-* PROGRESS : en cours d'exécution sur le cluster de calcul
-* SUCCESS ou FAILURE : terminé
+- CREATED : créée mais non lancée
+- WAITING : lancée mais pas encore pris en charge par le cluster de calcul
+- PROGRESS : en cours d'exécution sur le cluster de calcul
+- SUCCESS ou FAILURE : terminé
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}
 ```
 
@@ -352,6 +334,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "_id": "{execution}"
 }
 ```
+
 ???
 <br>
 
@@ -361,7 +344,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data MNT}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data MNT}
 ```
 
@@ -375,26 +358,11 @@ Une exécution va avoir les statuts dans l'ordre suivant :
         "type": "Polygon",
         "coordinates": [
             [
-                [
-                    5.96481676,
-                    45.12825517
-                ],
-                [
-                    5.96481676,
-                    45.13691567
-                ],
-                [
-                    5.95162868,
-                    45.13691567
-                ],
-                [
-                    5.95162868,
-                    45.12825517
-                ],
-                [
-                    5.96481676,
-                    45.12825517
-                ]
+                [5.96481676, 45.12825517],
+                [5.96481676, 45.13691567],
+                [5.95162868, 45.13691567],
+                [5.95162868, 45.12825517],
+                [5.96481676, 45.12825517]
             ]
         ]
     },
@@ -408,38 +376,14 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "tags": {},
     "storage": {
         "type": "S3",
-        "labels": [
-            "PARTENAIRE",
-            "PYRAMIDE",
-            "PERF"
-        ]
+        "labels": ["PARTENAIRE", "PYRAMIDE", "PERF"]
     },
     "size": 14817315,
     "status": "GENERATED",
     "_id": "{stored data MNT}",
     "type_infos": {
         "tms": "LAMB93_50cm",
-        "levels": [
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-        ],
+        "levels": ["11", "12", "13", "14", "15", "16", "17", "18", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
         "channels_format": "FLOAT32",
         "channels_number": 1,
         "compression": "ZIP",
@@ -447,6 +391,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     }
 }
 ```
+
 ???
 <br>
 
@@ -456,7 +401,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}
 ```
 

@@ -146,9 +146,7 @@ Lorsqu’on cite un texte en langue étrangère dans une page dont la langue pri
 
 ```html
 Exemple d’une phrase contenant _
-<span lang="en">
-    an english portion of text
-</span>
+<span lang="en"> an english portion of text </span>
 _.
 ```
 
@@ -233,7 +231,7 @@ Dans l’espace documentaire, écrivez les _tags_ en français, avec la premièr
 
 Les _tags_ apparaissent dans les résultats de recherche et permettent de les filtrer. Vérifiez qu’il n’existe pas de variantes orthographiques d’un même tag
 
-----
+---
 
 Vous savez maintenant tout ce qu’il faut savoir pour modifier votre documentation ! Rendez-vous page suivante pour connaitre la procédure pour faire valider ces modifications.
 

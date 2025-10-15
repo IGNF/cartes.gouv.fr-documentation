@@ -17,9 +17,9 @@ Il permet un affichage d’images avec des possibilités de ​personnalisation 
 
 Il propose les méthodes suivantes :
 
-* **GetCapabilities** pour obtenir les métadonnées du service
-* **GetMap** pour obtenir une carte
-* **GetFeatureInfo** pour obtenir les métadonnées d’une carte
+- **GetCapabilities** pour obtenir les métadonnées du service
+- **GetMap** pour obtenir une carte
+- **GetFeatureInfo** pour obtenir les métadonnées d’une carte
 
 ## Requête GetCapabilities
 
@@ -38,4 +38,3 @@ https://data.geopf.fr/wms-r?LAYERS={couche}&FORMAT={format}&SERVICE=WMS&VERSION=
 ```plain
 https://data.geopf.fr/wms-r?LAYERS={couche}&QUERY_LAYERS={donnée_requêtée}&INFO_FORMAT={format_de_sortie}&FORMAT={format}&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&STYLES={style}&CRS={crs}&BBOX={Xmin,Ymin,Xmax,Ymax}&WIDTH={largeur}&HEIGHT={hauteur}&I={abscisse}&J={ordonnée}
 ```
-

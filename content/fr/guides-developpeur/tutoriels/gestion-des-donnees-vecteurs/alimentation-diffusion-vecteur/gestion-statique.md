@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 4
     nav: guides-developpeur
 ---
+
 {% from "components/component.njk" import component with context %}
 
 ## Gestion des styles
@@ -18,16 +19,17 @@ Pour certains types de diffusion, le serveur de diffusion peut avoir besoin de f
 Après l'export des styles depuis QGis dans son format, il est nécessaire d'utiliser l'outil geostyler en ligne de commande pour les convertir :
 
 ```bash
-$  geostyler-cli -o ecoregions.sld -t sld -s qgis ecoregions.qml 
+$  geostyler-cli -o ecoregions.sld -t sld -s qgis ecoregions.qml
 ✔ File "ecoregions.qml" translated successfully. Output written to ecoregions.sld
-$  geostyler-cli -o pays.sld -t sld -s qgis pays.qml 
+$  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ✔ File "pays.qml" translated successfully. Output written to pays.sld
 ```
 
 :::warning "Attention"
 
     Chaque outil d'export peut entraîner des comportements différents. Au final, le SLD sera interprété par Geoserver sur la Géoplateforme. Le plugin [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) peut également être utilisé.
-:::    
+
+:::
 
 {{ component("download", {
     title: "Télécharger ecoregions.sld",
@@ -44,7 +46,6 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ### Écriture de FTL
 
 Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarker.html) permettent de mettre en forme la réponse HTML lors des appels au GetFeatureInfo
-
 
 {{ component("download", {
     title: "Télécharger ecoregions.ftl",
@@ -73,7 +74,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 📄 `ecoregions.sld`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
@@ -84,7 +85,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
         ["type = GEOSERVER-STYLE"],
         ["name = Style pour les écorégions"]
     ]
-}) }} 
+}) }}
 
 ```json
 {
@@ -92,19 +93,18 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     "type": "GEOSERVER-STYLE",
     "_id": "{sld ecoregions}",
     "type_infos": {
-        "used_attributes": [
-            "biome_name"
-        ]
+        "used_attributes": ["biome_name"]
     }
 }
 ```
+
 ???
 <br>
 
 📄 `pays.sld`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
@@ -115,7 +115,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
         ["type = GEOSERVER-STYLE"],
         ["name = Style pour les pays"]
     ]
-}) }} 
+}) }}
 
 ```json
 {
@@ -125,13 +125,14 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     "type_infos": {}
 }
 ```
+
 ???
 <br>
 
 📄 `ecoregions.ftl`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
@@ -142,7 +143,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
         ["type = GEOSERVER-FTL"],
         ["name = FTL pour les écorégions"]
     ]
-}) }} 
+}) }}
 
 ```json
 {
@@ -150,20 +151,18 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     "type": "GEOSERVER-FTL",
     "_id": "{ftl ecoregions}",
     "type_infos": {
-        "used_attributes": [
-            "biome_name",
-            "eco_name"
-        ]
+        "used_attributes": ["biome_name", "eco_name"]
     }
 }
 ```
+
 ???
 <br>
 
 📄 `pays.ftl`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
@@ -174,7 +173,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
         ["type = GEOSERVER-FTL"],
         ["name = FTL pour les pays"]
     ]
-}) }} 
+}) }}
 
 ```json
 {
@@ -182,11 +181,10 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     "type": "GEOSERVER-FTL",
     "_id": "{ftl pays}",
     "type_infos": {
-        "used_attributes": [
-            "name"
-        ]
+        "used_attributes": ["name"]
     }
 }
 ```
+
 ???
 <br>
