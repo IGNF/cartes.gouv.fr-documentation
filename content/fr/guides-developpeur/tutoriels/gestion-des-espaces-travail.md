@@ -1,8 +1,7 @@
 ---
 title: Espaces de travail
 description: Gestion d'une communauté et de ses membres
-tags:
-    - Gestion
+layout: layouts/parent.njk
 eleventyNavigation:
     key: Espaces de travail
     parent: Tutoriels d'utilisation de l'Entrepôt
@@ -10,6 +9,7 @@ eleventyNavigation:
     nav: guides-developpeur
 pictogram: environment/human-cooperation.svg
 ---
+
 
 {% from "components/component.njk" import component with context %}
 
