@@ -1,8 +1,8 @@
 ---
-title: Gestion des membres d'une communauté A
+title: Gestion des droits des membres d'une communauté
 mermaid: true
 eleventyNavigation:
-    key: Gestion des membres d'une communauté A
+    key: Gestion des droits des membres d'une communauté
     parent: Gestion des membres d'une communauté
     order: 1
     nav: guides-developpeur

@@ -37,82 +37,90 @@ Les droits sont :
 Lorsque l'on récupère ses informations personnelles sur l'Entrepôt, on voit la liste des communautés auxquelles on appartient, ainsi que nos droits dans chacune.
 
 
-??? request-get "{{ urls.api_entrepot }}/users/me"
+??? GET "{{ urls.api_entrepot }}/users/me"
 
-    === "Corps de réponse JSON"
+``` title="Contenu" 
+{{ urls.api_entrepot }}/users/me
+```
 
-        ``` json
+``` json
+{
+    "email": "dave.lopper@ign.fr",
+    "creation": "2023-02-01T09:45:10.725069Z",
+    "last_call": "2023-03-24T17:02:32.676055Z",
+    "communities_member": [
+        {...},
         {
-            "email": "dave.lopper@ign.fr",
-            "creation": "2023-02-01T09:45:10.725069Z",
-            "last_call": "2023-03-24T17:02:32.676055Z",
-            "communities_member": [
-                {...},
-                {
-                    "rights": [
-                        "ANNEX",
-                        "UPLOAD",
-                        "BROADCAST",
-                        "PROCESSING",
-                        "COMMUNITY"
-                    ],
-                    "community": {
-                        "name": "Communauté des tutoriels",
-                        "technical_name": "tutoriels",
-                        "datastore": "{datastore}",
-                        "supervisor": "{user}",
-                        "public": true,
-                        "_id": "{community}"
-                    }
-                },
-                {...}
+            "rights": [
+                "ANNEX",
+                "UPLOAD",
+                "BROADCAST",
+                "PROCESSING",
+                "COMMUNITY"
             ],
-            "technical": false,
-            "administrator": false,
-            "_id": "{user}",
-            "last_name": "Lopper",
-            "first_name": "Dave"
-        }
-        ```
+            "community": {
+                "name": "Communauté des tutoriels",
+                "technical_name": "tutoriels",
+                "datastore": "{datastore}",
+                "supervisor": "{user}",
+                "public": true,
+                "_id": "{community}"
+            }
+        },
+        {...}
+    ],
+    "technical": false,
+    "administrator": false,
+    "_id": "{user}",
+    "last_name": "Lopper",
+    "first_name": "Dave"
+}
+```
+???
+<br>
 
 ## Lister les membres
 
 
-??? request-get "{{ urls.api_entrepot }}/communities/{community}/users"
+??? GET "{{ urls.api_entrepot }}/communities/{community}/users"
 
-    === "Corps de réponse JSON"
+``` title="Contenu" 
+{{ urls.api_entrepot }}/communities/{community}/users
+```
 
-        ``` json
-        [
-            {
-                "rights": [
-                    "BROADCAST",
-                    "PROCESSING",
-                    "UPLOAD",
-                    "COMMUNITY",
-                    "ANNEX"
-                ],
-                "user": {
-                    "email": "dave.lopper@ign.fr",
-                    "_id": "{user}",
-                    "last_name": "Lopper",
-                    "first_name": "Dave"
-                }
-            },
-            {
-                "rights": [
-                    "BROADCAST",
-                    "COMMUNITY"
-                ],
-                "user": {
-                    "email": "anne.halise@ign.fr",
-                    "_id": "{user}",
-                    "last_name": "Halise",
-                    "first_name": "Anne"
-                }
-            }
-        ]
-        ```
+``` json
+[
+    {
+        "rights": [
+            "BROADCAST",
+            "PROCESSING",
+            "UPLOAD",
+            "COMMUNITY",
+            "ANNEX"
+        ],
+        "user": {
+            "email": "dave.lopper@ign.fr",
+            "_id": "{user}",
+            "last_name": "Lopper",
+            "first_name": "Dave"
+        }
+    },
+    {
+        "rights": [
+            "BROADCAST",
+            "COMMUNITY"
+        ],
+        "user": {
+            "email": "anne.halise@ign.fr",
+            "_id": "{user}",
+            "last_name": "Halise",
+            "first_name": "Anne"
+        }
+    }
+]
+```
+???
+<br>
 
 ## Ajouter / modifier un membre
 
@@ -120,18 +128,29 @@ Une seule route de l'API va permettre d'ajouter ou modifier les droits d'un memb
 
 ??? request-put "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
 
-    === "Corps de réponse JSON"
-        ```json
-        {
-            "rights": [
-                "UPLOAD",
-                "BROADCAST",
-                "COMMUNITY"
-            ]
-        }
-        ```
+``` title="Contenu" 
+{{ urls.api_entrepot }}/communities/{community}/users/{user}
+```
+
+```json
+{
+    "rights": [
+        "UPLOAD",
+        "BROADCAST",
+        "COMMUNITY"
+    ]
+}
+```
+???
+<br>
 
 ## Exclure un membre
 
-??? request-delete "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
+??? DELETE "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
 
+``` title="Contenu" 
+{{ urls.api_entrepot }}/communities/{community}/users/{user}
+```
+
+???
+<br>
