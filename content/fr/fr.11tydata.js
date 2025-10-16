@@ -19,6 +19,9 @@ module.exports = {
             download: "https://data.geopf.fr/telechargement",
         },
     },
+    secrets: {
+        qgis: "F77z01QHTaJClBJ1p2OZYkFGL24XYLti",
+    },
     permalink: function (data) {
         if (data.slugOverride) {
             return `/${data.lang}/${this.slugify(data.slugOverride)}/`;
