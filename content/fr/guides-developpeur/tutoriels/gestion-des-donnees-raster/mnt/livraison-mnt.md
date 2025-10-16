@@ -23,7 +23,7 @@ La livraison n'a qu'un rôle temporaire : elle existe uniquement le temps que le
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -56,6 +56,7 @@ La livraison n'a qu'un rôle temporaire : elle existe uniquement le temps que le
     "type_infos": {}
 }
 ```
+
 ???
 <br>
 
@@ -63,13 +64,13 @@ La livraison n'a qu'un rôle temporaire : elle existe uniquement le temps que le
 
 Les formats de fichier raster gérés pour du MNT sont :
 
-* GeoTIFF
-* TIFF + TFW
+- GeoTIFF
+- TIFF + TFW
 
 📄 `<LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/data?path=data/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/data?path=data/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif
 ```
 
@@ -78,8 +79,9 @@ Les formats de fichier raster gérés pour du MNT sont :
     data: [
         ["file = `<LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif>`"]
     ]
+
 }) }}
-    
+
 ???
 <br>
 
@@ -89,7 +91,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
 
@@ -109,6 +111,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
     }
 ]
 ```
+
 ???
 <br>
 
@@ -120,7 +123,7 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/close"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/close
 ```
 
@@ -133,7 +136,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks
 ```
 
@@ -160,6 +163,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
     "failed": []
 }
 ```
+
 ???
 <br>
 
@@ -167,7 +171,7 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks
 ```
 
@@ -194,5 +198,6 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
     "failed": []
 }
 ```
+
 ???
 <br>

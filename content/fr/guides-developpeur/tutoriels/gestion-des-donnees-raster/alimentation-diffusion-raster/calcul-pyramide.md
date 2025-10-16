@@ -45,13 +45,14 @@ flowchart LR
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -61,7 +62,7 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}
 ```
 
@@ -170,6 +171,7 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
     ]
 }
 ```
+
 ???
 <br>
 
@@ -179,7 +181,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -187,9 +189,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
     "inputs": {
-        "upload": [
-        "{upload}"
-        ]
+        "upload": ["{upload}"]
     },
     "output": {
         "stored_data": {
@@ -245,18 +245,19 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
     "_id": "{execution}"
 }
 ```
+
 ???
 <br>
 
 :::warning "Points d'attention"
-    Si votre pyramide est destinée à être mise à jour (voir [l'alimentation raster par mise à jour](../mise-a-jour/index.md)), il peut être important de préciser que l'on souhaite calculer les masques de données (paramètre `"mask": true`).
+Si votre pyramide est destinée à être mise à jour (voir [l'alimentation raster par mise à jour](../mise-a-jour/index.md)), il peut être important de préciser que l'on souhaite calculer les masques de données (paramètre `"mask": true`).
 :::
 
 ### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch
 ```
 
@@ -267,14 +268,14 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 
 Une exécution va avoir les statuts dans l'ordre suivant :
 
-* CREATED : créée mais non lancée
-* WAITING : lancée mais pas encore prise en charge par le cluster de calcul
-* PROGRESS : en cours d'exécution sur le cluster de calcul
-* SUCCESS ou FAILURE : terminé
+- CREATED : créée mais non lancée
+- WAITING : lancée mais pas encore prise en charge par le cluster de calcul
+- PROGRESS : en cours d'exécution sur le cluster de calcul
+- SUCCESS ou FAILURE : terminé
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}
 ```
 
@@ -319,6 +320,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "_id": "{execution}"
 }
 ```
+
 ???
 <br>
 
@@ -328,7 +330,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
@@ -342,26 +344,11 @@ Une exécution va avoir les statuts dans l'ordre suivant :
         "type": "Polygon",
         "coordinates": [
             [
-                [
-                    43.0475237,
-                    8.35476935
-                ],
-                [
-                    43.0475237,
-                    9.75281343
-                ],
-                [
-                    41.23486116,
-                    9.75281343
-                ],
-                [
-                    41.23486116,
-                    8.35476935
-                ],
-                [
-                    43.0475237,
-                    8.35476935
-                ]
+                [43.0475237, 8.35476935],
+                [43.0475237, 9.75281343],
+                [41.23486116, 9.75281343],
+                [41.23486116, 8.35476935],
+                [43.0475237, 8.35476935]
             ]
         ]
     },
@@ -382,19 +369,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "_id": "{stored data}",
     "type_infos": {
         "tms": "PM",
-        "levels": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-        ],
+        "levels": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
         "channels_format": "UINT8",
         "channels_number": 3,
         "compression": "JPG",
@@ -402,6 +377,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     }
 }
 ```
+
 ???
 <br>
 
@@ -411,7 +387,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}
 ```
 

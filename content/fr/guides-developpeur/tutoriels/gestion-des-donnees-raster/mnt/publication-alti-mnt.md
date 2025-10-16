@@ -19,7 +19,7 @@ La pyramide générée va être également utilisable par le service d'altimétr
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -31,11 +31,7 @@ La pyramide générée va être également utilisable par le service d'altimétr
     "type_infos": {
         "title": "LidarHD : MNT et MNS",
         "abstract": "LidarHD : MNT et MNS, à 50 cm",
-        "keywords": [
-            "LidarHD",
-            "MNT",
-            "MNS"
-        ],
+        "keywords": ["LidarHD", "MNT", "MNS"],
         "used_data": [
             {
                 "title": "MNT à 50cm, issu du Lidar HD",
@@ -61,6 +57,7 @@ La pyramide générée va être également utilisable par le service d'altimétr
     }
 }
 ```
+
 ???
 <br>
 
@@ -74,13 +71,14 @@ Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -88,7 +86,7 @@ Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration altimétrie}/offerings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration altimétrie}/offerings
 ```
 
@@ -98,6 +96,7 @@ Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
     "open": true
 }
 ```
+
 ???
 <br>
 
@@ -105,7 +104,7 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
 
 ??? GET "{{ urls.open.alti }}/calcul/alti/rest/elevation.json"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.open.alti }}/calcul/alti/rest/elevation.json
 ```
 
@@ -169,5 +168,6 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
     ]
 }
 ```
+
 ???
 <br>

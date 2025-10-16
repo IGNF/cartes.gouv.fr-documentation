@@ -69,11 +69,11 @@ stateDiagram
 
 ## Gestion du premier jeu de données
 
-* Création de la livraison
+- Création de la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -85,18 +85,17 @@ stateDiagram
     "srs": "EPSG:2154"
 }
 ```
+
 ???
 <br>
 
-* Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
-* Fermeture de la livraison
-* Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
-
-
+- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
+- Fermeture de la livraison
+- Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -104,9 +103,7 @@ stateDiagram
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
     "inputs": {
-        "upload": [
-            "{upload Corse Nord}"
-        ]
+        "upload": ["{upload Corse Nord}"]
     },
     "output": {
         "stored_data": {
@@ -122,20 +119,21 @@ stateDiagram
     }
 }
 ```
+
 ???
 <br>
 
-* Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
+- Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
 
 Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui sur le deuxième jeu.
 
 ## Gestion du deuxième jeu de données
 
-* Création de la livraison
+- Création de la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -147,16 +145,17 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
     "srs": "EPSG:2154"
 }
 ```
+
 ???
 <br>
 
-* Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
-* Fermeture de la livraison
-* Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
+- Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
+- Fermeture de la livraison
+- Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -164,9 +163,7 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
     "inputs": {
-        "upload": [
-            "{upload Corse Sud}"
-        ]
+        "upload": ["{upload Corse Sud}"]
     },
     "output": {
         "stored_data": {
@@ -182,21 +179,21 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
     }
 }
 ```
+
 ???
 <br>
 
-* Lancement de l'exécution : ID de la données stockée `{stored data Corse Sud}`
+- Lancement de l'exécution : ID de la données stockée `{stored data Corse Sud}`
 
 ## Génération de la pyramide fusionnée
 
 Lorsque les deux pyramides indépendantes sont générées :
 
-* Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids-to-pyramid'] }}`
-
+- Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids-to-pyramid'] }}`
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids-to-pyramid'] }}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids-to-pyramid'] }}
 ```
 
@@ -206,15 +203,11 @@ Lorsque les deux pyramides indépendantes sont générées :
     "description": "Ce traitement permet de générer une pyramide raster par composition de plusieurs pyramides indépendantes. Seules les dalles présentes dans plusieurs entrées seront recalculées. Celles présentes dans une seule entrée seront référencées. La pyramide en sortie a donc des dépendances avec celles en entrée.",
     "input_types": {
         "upload": [],
-        "stored_data": [
-            "ROK4-PYRAMID-RASTER"
-        ]
+        "stored_data": ["ROK4-PYRAMID-RASTER"]
     },
     "output_type": {
         "stored_data": "ROK4-PYRAMID-RASTER",
-        "storage": [
-            "S3"
-        ]
+        "storage": ["S3"]
     },
     "parameters": [
         {
@@ -243,14 +236,15 @@ Lorsque les deux pyramides indépendantes sont générées :
     "required_checks": []
 }
 ```
+
 ???
 <br>
 
-* Création de l'exécution de traitement (on s'appuie sur les valeurs par défaut des paramètres)
+- Création de l'exécution de traitement (on s'appuie sur les valeurs par défaut des paramètres)
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -258,10 +252,7 @@ Lorsque les deux pyramides indépendantes sont générées :
 {
     "processing": "{{ ids.processings['pyramids-to-pyramid'] }}",
     "inputs": {
-        "stored_data": [
-            "{stored data Corse Nord}",
-            "{stored data Corse Sud}"
-        ]
+        "stored_data": ["{stored data Corse Nord}", "{stored data Corse Sud}"]
     },
     "output": {
         "stored_data": {
@@ -272,15 +263,16 @@ Lorsque les deux pyramides indépendantes sont générées :
     "parameters": {}
 }
 ```
+
 ???
 <br>
 
-* Lancement de l'exécution
-* À la fin, on peut voir que notre nouvelle pyramide a deux dépendances : elle utilise nos deux pyramides indépendantes, qu'on ne pourra plus supprimer.
+- Lancement de l'exécution
+- À la fin, on peut voir que notre nouvelle pyramide a deux dépendances : elle utilise nos deux pyramides indépendantes, qu'on ne pourra plus supprimer.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
 ```
 
@@ -299,6 +291,7 @@ Lorsque les deux pyramides indépendantes sont générées :
     ]
 }
 ```
+
 ???
 <br>
 

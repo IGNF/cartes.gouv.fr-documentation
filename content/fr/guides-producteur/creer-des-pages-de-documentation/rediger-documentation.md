@@ -266,12 +266,7 @@ Pour afficher un lien s’ouvrant dans la même fenêtre :
 Pour afficher un lien s’ouvrant dans une nouvelle fenêtre :
 
 ```html
-<a
-    href="https://lien-url.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    title="Titre à afficher au survol - ouvre une nouvelle fenêtre"
->
+<a href="https://lien-url.com" target="_blank" rel="noopener noreferrer" title="Titre à afficher au survol - ouvre une nouvelle fenêtre">
     Titre à afficher dans le texte
 </a>
 ```
@@ -283,6 +278,7 @@ Pour afficher une image :
 ```
 
 Pour afficher un extrait de code :
+
 ````njk
 {% raw %}
 ```njk

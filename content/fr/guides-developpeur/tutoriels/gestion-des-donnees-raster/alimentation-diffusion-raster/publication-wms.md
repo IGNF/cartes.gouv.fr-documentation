@@ -17,7 +17,7 @@ La pyramide calculée va également pouvoir être diffusée en WMS
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -36,9 +36,7 @@ La pyramide calculée va également pouvoir être diffusée en WMS
     "type_infos": {
         "title": "SCAN 1000 Corse",
         "abstract": "Données SCAN 1000 sur la Corse",
-        "keywords": [
-            "Tutoriel", "Raster"
-        ],
+        "keywords": ["Tutoriel", "Raster"],
         "interpolation": "NEAREST-NEIGHBOUR",
         "used_data": [
             {
@@ -53,6 +51,7 @@ La pyramide calculée va également pouvoir être diffusée en WMS
     }
 }
 ```
+
 ???
 <br>
 
@@ -64,13 +63,14 @@ Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (pu
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -78,7 +78,7 @@ Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (pu
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings
 ```
 
@@ -88,6 +88,7 @@ Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (pu
     "open": true
 }
 ```
+
 ???
 <br>
 

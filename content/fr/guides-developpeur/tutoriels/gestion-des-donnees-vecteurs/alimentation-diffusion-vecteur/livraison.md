@@ -19,8 +19,9 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 ### Déclarer la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
-``` title="Contenu" 
-{{ urls.api_entrepot }}/datastores/{datastore}/uploads 
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
 ```json
@@ -53,6 +54,7 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
     "_id": "{upload}"
 }
 ```
+
 ???
 <br>
 
@@ -60,26 +62,26 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 Les formats de fichier vecteur gérés sont :
 
-* Geopackage
-* GeoJSON
-* Shapefile
-* CSV : 
-    * si la géométrie est dans un colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
-    * si la donnée est ponctuelle et que les coordonnées sont dans deux colonnes, elles doivent avoir comme nom :
-        * `lon`, `x`, `longitude`
-        * `lat`, `y`, `latitude`
-* SQL. Les instructions autorisées sont les suivantes, sans préciser de nom de schéma :
-    * CREATE TABLE
-    * CREATE VIEW
-    * CREATE INDEX
-    * CREATE SEQUENCE
-    * ALTER TABLE
-    * ALTER SEQUENCE
+- Geopackage
+- GeoJSON
+- Shapefile
+- CSV :
+    - si la géométrie est dans un colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
+    - si la donnée est ponctuelle et que les coordonnées sont dans deux colonnes, elles doivent avoir comme nom :
+        - `lon`, `x`, `longitude`
+        - `lat`, `y`, `latitude`
+- SQL. Les instructions autorisées sont les suivantes, sans préciser de nom de schéma :
+    - CREATE TABLE
+    - CREATE VIEW
+    - CREATE INDEX
+    - CREATE SEQUENCE
+    - ALTER TABLE
+    - ALTER SEQUENCE
 
 📄 `<monde.gpkg>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
 ```
 
@@ -98,7 +100,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
 
@@ -118,6 +120,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
     }
 ]
 ```
+
 ???
 <br>
 
@@ -128,9 +131,11 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 ### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
-``` title="Contenu" 
+
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close
 ```
+
 ???
 <br>
 
@@ -140,7 +145,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne f
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 
@@ -167,6 +172,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne f
     "failed": []
 }
 ```
+
 ???
 <br>
 
@@ -174,7 +180,7 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 
@@ -201,5 +207,6 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
     "failed": []
 }
 ```
+
 ???
 <br>

@@ -2,7 +2,7 @@
 title: Diffusion en tuiles vectorielles précalculée
 mermaid: true
 eleventyComputed:
-  markdownTemplateEngine: njk
+    markdownTemplateEngine: njk
 eleventyNavigation:
     key: Diffusion en tuiles vectorielles précalculée
     parent: Alimentation et diffusion simple vecteur
@@ -20,13 +20,14 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -34,7 +35,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db-to-pyramid'] }}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db-to-pyramid'] }}
 ```
 
@@ -44,16 +45,11 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
     "description": "Génération ou mise à jour d'une pyramide de tuiles vectorielles à partir d'une donnée vecteur en base",
     "input_types": {
         "upload": [],
-        "stored_data": [
-            "VECTOR-DB",
-            "ROK4-PYRAMID-VECTOR"
-        ]
+        "stored_data": ["VECTOR-DB", "ROK4-PYRAMID-VECTOR"]
     },
     "output_type": {
         "stored_data": "ROK4-PYRAMID-VECTOR",
-        "storage": [
-            "S3"
-        ]
+        "storage": ["S3"]
     },
     "parameters": [
         {
@@ -62,11 +58,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
             "mandatory": false,
             "constraints": {
                 "$schema": "https://json-schema.org/draft/2020-12/schema",
-                "required": [
-                    "table",
-                    "bottom_level",
-                    "top_level"
-                ],
+                "required": ["table", "bottom_level", "top_level"],
                 "properties": {
                     "layer": {
                         "type": "string"
@@ -135,6 +127,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
     "required_checks": []
 }
 ```
+
 ???
 <br>
 
@@ -143,13 +136,14 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 :::warning "Points d'attentions"
 
     Les niveaux sur lesquels on transforme les données vecteurs en tuiles vectorielles sont importants : en calculant un niveau trop résolu (trop bas), le temps de génération et le volume occupé par la pyramide en sortie sera inutilement grand. En utilisant une table volumineuse dans des niveaux trop hauts, les tuiles seront très lourdes car contenant trop de données (ou vidées de la majoraité des objets). Il faut donc prêter une attention particulière aux niveaux d'utilisation des tables.
+
 :::
 
 Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans tous les niveaux, et les écorégions ne seront présents que jusqu'au niveau 5. On ne filtre pas les données et on ne change pas les noms des tables dans les tuiles. On veut tous les attributs.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -157,9 +151,7 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
 {
     "processing": "{{ ids.processings['db-to-pyramid'] }}",
     "inputs": {
-    "stored_data": [
-        "{stored data}"
-    ]
+        "stored_data": ["{stored data}"]
     },
     "output": {
         "stored_data": {
@@ -185,6 +177,7 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
     }
 }
 ```
+
 ???
 <br>
 
@@ -194,7 +187,7 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data pyramide}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data pyramide}
 ```
 
@@ -208,26 +201,11 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
         "type": "Polygon",
         "coordinates": [
             [
-                [
-                    175,
-                    -85
-                ],
-                [
-                    175,
-                    83.623596
-                ],
-                [
-                    -175,
-                    83.623596
-                ],
-                [
-                    -175,
-                    -85
-                ],
-                [
-                    175,
-                    -85
-                ]
+                [175, -85],
+                [175, 83.623596],
+                [-175, 83.623596],
+                [-175, -85],
+                [175, -85]
             ]
         ]
     },
@@ -248,21 +226,11 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
     "_id": "{stored data pyramide}",
     "type_infos": {
         "tms": "PM",
-        "levels": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"
-        ]
+        "levels": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     }
 }
 ```
+
 ???
 <br>
 
@@ -274,7 +242,7 @@ Les données de la pyramide de tuiles vectorielles sont diffusables selon l'API 
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -296,6 +264,7 @@ Les données de la pyramide de tuiles vectorielles sont diffusables selon l'API 
     }
 }
 ```
+
 ???
 <br>
 
@@ -305,13 +274,14 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -319,7 +289,7 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings
 ```
 
@@ -329,6 +299,7 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
     "open": true
 }
 ```
+
 ???
 <br>
 
@@ -336,16 +307,15 @@ On peut vérifier la présence de notre couche `pays_ecoregions` dans le [getCap
 
 On peut également récupérer nos données dans QGis. Il faut ajouter une source de donnée "Tuile vectorielle" et préciser comme URL `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
 
-
 ### Hébergement du style sous forme d'annexe
 
-L'affichage des tuiles vectorielles implique l'application d'un style côté client. Il suffit donc de fournir un style accessible pour faciliter la consommation de telles données. On va exploiter la fonctionnalité des annexes pour mettre à disposition une URL publique pour un tel style. 
+L'affichage des tuiles vectorielles implique l'application d'un style côté client. Il suffit donc de fournir un style accessible pour faciliter la consommation de telles données. On va exploiter la fonctionnalité des annexes pour mettre à disposition une URL publique pour un tel style.
 
 Ce [style d'exemple](/data/tutoriels/alimentation-diffusion-simple/globales/production/pays_ecoregions.json) est format mapbox.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
 
@@ -356,26 +326,25 @@ Ce [style d'exemple](/data/tutoriels/alimentation-diffusion-simple/globales/prod
         ["paths = `styles/mapbox/pays_ecoregions.json`"],
         ["published = `true`"]
     ]
-}) }}   
+}) }}
 
 ```json
 {
-    "paths": [
-        "/styles/mapbox/pays_ecoregions.json"
-    ],
+    "paths": ["/styles/mapbox/pays_ecoregions.json"],
     "size": 10768,
     "mime_type": "application/json",
     "published": true,
     "_id": "{annexe}"
 }
 ```
-??? 
+
+???
 <br>
 
 Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement. On va pouvoir définir une couche «Tuile vectorielle» dans QGis, en précisant la source des tuiles et l'URL du style :
 
-* URL = `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
-* URL du style = `{{ urls.annexes }}/{technical_name}/styles/mapbox/pays_ecoregions.json`
+- URL = `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
+- URL du style = `{{ urls.annexes }}/{technical_name}/styles/mapbox/pays_ecoregions.json`
 
 ![Définition d'une source "Tuile vectorielle"](/img/guides-developpeur/vecteur/alimentation-diffusion/qgis_tms_definition.png){.fr-responsive-img .frx-img-contained}
 

@@ -14,13 +14,13 @@ Le site statique est parfois appelé "l'application" ou "le site" dans la suite.
 
 ## Arborescence du dépôt
 
--   `.docker` contient des fichiers de configuration pour conteneuriser l'application avec docker, pour en faire une "image docker" prête pour le déploiement.
--   `.github` contient les templates des formulaires d'issues et les actions pour github (packager l'application, déployer sur github pages)
--   `.husky` contient une instruction qui corrige la syntaxe des fichiers avant qu'ils soient commités (un "pre-commit hook")
--   `.vscode` contient des informations de configuration pour l'éditeur Visual Studio Code
--   `LICENSES` + `LICENSE.md` contient les textes des licences applicables à ce dépôt
--   `_data` contient des données utiles sur l'ensemble du site, notamment des chaines traduites car eleventy gère l'internationalisation
--   `_includes` contient les gabarits des pages et les squelettes des composants au format nunjucks (`.njk`)
--   `content` contient presque tout le contenu du site, toutes ses pages, généralement au format markdown (`.md`) et plus exceptionnellement au format nunjucks
--   `docs` contient la documentation relative au dépôt
--   `public` contient les fichiers qui doivent être disponibles sur le site, sans êtres modifiés par eleventy (images, feuilles de styles,...). On les appelle aussi parfois `assets`.
+- `.docker` contient des fichiers de configuration pour conteneuriser l'application avec docker, pour en faire une "image docker" prête pour le déploiement.
+- `.github` contient les templates des formulaires d'issues et les actions pour github (packager l'application, déployer sur github pages)
+- `.husky` contient une instruction qui corrige la syntaxe des fichiers avant qu'ils soient commités (un "pre-commit hook")
+- `.vscode` contient des informations de configuration pour l'éditeur Visual Studio Code
+- `LICENSES` + `LICENSE.md` contient les textes des licences applicables à ce dépôt
+- `_data` contient des données utiles sur l'ensemble du site, notamment des chaines traduites car eleventy gère l'internationalisation
+- `_includes` contient les gabarits des pages et les squelettes des composants au format nunjucks (`.njk`)
+- `content` contient presque tout le contenu du site, toutes ses pages, généralement au format markdown (`.md`) et plus exceptionnellement au format nunjucks
+- `docs` contient la documentation relative au dépôt
+- `public` contient les fichiers qui doivent être disponibles sur le site, sans êtres modifiés par eleventy (images, feuilles de styles,...). On les appelle aussi parfois `assets`.

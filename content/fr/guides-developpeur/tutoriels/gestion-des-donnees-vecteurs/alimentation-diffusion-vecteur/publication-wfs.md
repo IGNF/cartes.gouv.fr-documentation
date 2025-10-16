@@ -8,22 +8,21 @@ eleventyNavigation:
     nav: guides-developpeur
 ---
 
-
 ## Configuration de la diffusion
 
 La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
 
-* nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WFS de la plateforme)
-* table absente de la donnée stockée
+- nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WFS de la plateforme)
+- table absente de la donnée stockée
 
 Dans le cas du WFS, une configuration va donner plusieurs couches finales, le layername défini va servir de préfixe au nom des tables. On aura dans notre exemple les couches WFS :
 
-* `pays_ecoregions:regions_ecologiques`
-* `pays_ecoregions:pays`
+- `pays_ecoregions:regions_ecologiques`
+- `pays_ecoregions:pays`
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -46,17 +45,13 @@ Dans le cas du WFS, une configuration va donner plusieurs couches finales, le la
                         "native_name": "ecoregions",
                         "public_name": "regions_ecologiques",
                         "title": "Régions écologiques",
-                        "keywords": [
-                            "Tutoriel", "Données mondiales"
-                        ],
+                        "keywords": ["Tutoriel", "Données mondiales"],
                         "abstract": "Grandes régions naturelles mondiales"
                     },
                     {
                         "native_name": "pays",
                         "title": "Pays du monde",
-                        "keywords": [
-                            "Tutoriel", "Données mondiales"
-                        ],
+                        "keywords": ["Tutoriel", "Données mondiales"],
                         "abstract": "Pays du monde"
                     }
                 ],
@@ -66,6 +61,7 @@ Dans le cas du WFS, une configuration va donner plusieurs couches finales, le la
     }
 }
 ```
+
 ???
 <br>
 
@@ -79,13 +75,14 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -93,7 +90,7 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings
 ```
 
@@ -103,6 +100,7 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
     "open": true
 }
 ```
+
 ???
 <br>
 

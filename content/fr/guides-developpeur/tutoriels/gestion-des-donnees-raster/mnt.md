@@ -85,7 +85,7 @@ flowchart LR
         proc["Traitement (processing)"]
         endp["Point d'accès (endpoint)"]
     end
-    
+
 	subgraph dat[Entrepôt]
         upl["Livraison (upload)"]
         exe["Exécution de traitement (processing execution)"]

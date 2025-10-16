@@ -34,7 +34,7 @@ Pour obtenir une URL publique pointant sur notre légende, nous allons la télé
 📄 `<hypso_legende.png>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
 
@@ -47,6 +47,7 @@ Pour obtenir une URL publique pointant sur notre légende, nous allons la télé
             ["labels = legende"]
         ]
     }) }}
+
 ???
 <br>
 
@@ -60,10 +61,10 @@ Le style permettant au serveur WMS d'appliquer ces teintes aux donnée MNT est l
 
 ```json title="Contenu de hypso.json"
 {
-	"identifier": "hypsometrique",
+    "identifier": "hypsometrique",
     "title": "Teintes hypsométriques",
-	"abstract": "Teintes hypsométriques",
-	"keywords": ["MNT"],
+    "abstract": "Teintes hypsométriques",
+    "keywords": ["MNT"],
     "legend": {
         "format": "image/png",
         "url": "{{ urls.annexes }}/{technical_name}/legendes/teintes_hypsometriques.png",
@@ -73,7 +74,7 @@ Le style permettant au serveur WMS d'appliquer ces teintes aux donnée MNT est l
         "max_scale_denominator": 10000000
     },
     "palette": {
-        "max_value": 3.40282e+38,
+        "max_value": 3.40282e38,
         "rgb_continuous": true,
         "alpha_continuous": true,
         "colours": [
@@ -95,7 +96,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 📄 `hypso.json`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
@@ -107,7 +108,6 @@ On y précise bien les informations sur la légende associée. Le champ `identif
             ["name = Teintes hypsométriques"]
         ]
     }) }}
-  
 
 ```json
 {
@@ -120,6 +120,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
     }
 }
 ```
+
 ???
 <br>
 
@@ -127,10 +128,10 @@ Pour que la même couche puisse également être interrogée au format brut, nou
 
 ```json title="Contenu de normal.json"
 {
-	"identifier": "normal",
+    "identifier": "normal",
     "title": "Données brutes",
-	"abstract": "Données brutes, sans transformation",
-	"keywords": ["MNT"],
+    "abstract": "Données brutes, sans transformation",
+    "keywords": ["MNT"],
     "legend": {
         "format": "image/jpeg",
         "url": "https://data.geopf.fr/annexes/ressources/legendes/LEGEND.jpg",
@@ -147,9 +148,10 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 📄 `normal.json`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
+
     {{ component("table", {
         headers: ["Corps de requête Multipart"],
         data: [
@@ -157,7 +159,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
             ["type = ROK4-STYLE"],
             ["name = Données brutes"]
         ]
-    }) }}  
+    }) }}
 
 ```json
 {
@@ -170,6 +172,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
     }
 }
 ```
+
 ???
 <br>
 
@@ -179,7 +182,7 @@ Nous allons publier la donnée sous une couche, avec les deux styles. Le style p
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -191,13 +194,8 @@ Nous allons publier la donnée sous une couche, avec les deux styles. Le style p
     "type_infos": {
         "title": "MNT LidarHD",
         "abstract": "MNT LidarHD brut",
-        "keywords": [
-            "MNT", "LidarHD"
-        ],
-        "styles": [
-            "{style normal}",
-            "{style hypso}"
-        ],
+        "keywords": ["MNT", "LidarHD"],
+        "styles": ["{style normal}", "{style hypso}"],
         "interpolation": "NEAREST-NEIGHBOUR",
         "used_data": [
             {
@@ -212,6 +210,7 @@ Nous allons publier la donnée sous une couche, avec les deux styles. Le style p
     }
 }
 ```
+
 ???
 <br>
 
@@ -223,13 +222,14 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -237,7 +237,7 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms lidarhd}/offerings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms lidarhd}/offerings
 ```
 
@@ -247,6 +247,7 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
     "open": true
 }
 ```
+
 ???
 <br>
 

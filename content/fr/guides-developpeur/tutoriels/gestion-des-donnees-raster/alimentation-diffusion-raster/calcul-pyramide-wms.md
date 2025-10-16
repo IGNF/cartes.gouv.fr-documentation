@@ -36,13 +36,14 @@ flowchart LR
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
 ```
+
 ???
 <br>
 
@@ -50,7 +51,7 @@ flowchart LR
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms-to-pyramid'] }}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms-to-pyramid'] }}
 ```
 
@@ -60,15 +61,11 @@ flowchart LR
     "description": "Il n'y a pas besoin de donnée en entrée. Sont fournis en paramètres toutes les informations sur le service WMS et le jeu de données à moissonner, ainsi que la zone sur laquelle faire le moissonnage",
     "input_types": {
         "upload": [],
-        "stored_data": [
-            "ROK4-PYRAMID-RASTER"
-        ]
+        "stored_data": ["ROK4-PYRAMID-RASTER"]
     },
     "output_type": {
         "stored_data": "ROK4-PYRAMID-RASTER",
-        "storage": [
-            "S3"
-        ]
+        "storage": ["S3"]
     },
     "parameters": [
         {
@@ -105,13 +102,7 @@ flowchart LR
             "description": "La compression des données en sortie (valeurs possibles: raw, jpg, png, zip, jpg90)",
             "mandatory": false,
             "constraints": {
-                "enum": [
-                    "raw",
-                    "jpg",
-                    "png",
-                    "zip",
-                    "jpg90"
-                ],
+                "enum": ["raw", "jpg", "png", "zip", "jpg90"],
                 "type": "string"
             }
         },
@@ -136,9 +127,7 @@ flowchart LR
             "description": "L identifiant du quadrillage à utiliser (Tile Matrix Set)",
             "mandatory": false,
             "constraints": {
-                "enum": [
-                    "PM"
-                ],
+                "enum": ["PM"],
                 "type": "string"
             }
         },
@@ -164,10 +153,7 @@ flowchart LR
             "description": "Format des canaux dans les dalles en sortie (UINT8 ou FLOAT32)",
             "mandatory": false,
             "constraints": {
-                "enum": [
-                    "UINT8",
-                    "FLOAT32"
-                ],
+                "enum": ["UINT8", "FLOAT32"],
                 "type": "string"
             }
         },
@@ -253,6 +239,7 @@ flowchart LR
     "required_checks": []
 }
 ```
+
 ???
 <br>
 
@@ -264,7 +251,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -292,8 +279,6 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
     }
 }
 ```
-
-
 
 ```json
 {
@@ -337,18 +322,18 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier).
 
 :::warning "Points d'attentions"
-    Les flux sortant des nœuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d'un usage avec d'autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
+Les flux sortant des nœuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d'un usage avec d'autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
 :::
 
 :::warning "Données privées"
-    Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extras` en précisant une apikey : "harvest_extras": "apikey={apikey}"
+Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extras` en précisant une apikey : "harvest_extras": "apikey={apikey}"
 :::
 
 ### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution moissonnage}/launch"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution moissonnage}/launch
 ```
 
@@ -361,7 +346,7 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data moissonnage}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data moissonnage}
 ```
 
@@ -375,26 +360,11 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
         "type": "Polygon",
         "coordinates": [
             [
-                [
-                    9.591,
-                    41.338
-                ],
-                [
-                    9.591,
-                    43.004
-                ],
-                [
-                    8.507,
-                    43.004
-                ],
-                [
-                    8.507,
-                    41.338
-                ],
-                [
-                    9.591,
-                    41.338
-                ]
+                [9.591, 41.338],
+                [9.591, 43.004],
+                [8.507, 43.004],
+                [8.507, 41.338],
+                [9.591, 41.338]
             ]
         ]
     },
@@ -415,23 +385,7 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
     "_id": "{stored data moissonnage}",
     "type_infos": {
         "tms": "PM",
-        "levels": [
-            "11",
-            "12",
-            "13",
-            "14",
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-        ],
+        "levels": ["11", "12", "13", "14", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
         "channels_format": "UINT8",
         "channels_number": 3,
         "compression": "JPG",
@@ -439,6 +393,7 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
     }
 }
 ```
+
 ???
 <br>
 
@@ -448,7 +403,7 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -457,56 +412,47 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
     "type": "WMS-RASTER",
     "name": "Orthos Corse",
     "layer_name": "ortho",
-    "attribution":
-    {
+    "attribution": {
         "title": "IGN",
         "url": "https://www.ign.fr/",
-        "logo":
-        {
+        "logo": {
             "format": "image/jpeg",
             "url": "https://www.geoportail.gouv.fr/depot/producers/ign.jpg",
             "width": 220,
             "height": 110
         }
     },
-    "metadata":
-    [
+    "metadata": [
         {
             "format": "application/xml",
             "url": "https://geoservices.ign.fr/sites/default/files/2021-07/IGNF_BDORTHOr_2-0.xml",
             "type": "ISO19115:2003"
         }
     ],
-    "type_infos":
-    {
+    "type_infos": {
         "bbox": {
-                "north": 43.0475237,
-                "west": 8.35476935,
-                "east": 9.75281343,
-                "south": 41.23486116
+            "north": 43.0475237,
+            "west": 8.35476935,
+            "east": 9.75281343,
+            "south": 41.23486116
         },
         "title": "Ortho-photographies Corse",
         "abstract": "Photographies aériennes sur la Corse",
-        "keywords":
-        [
-            "Tutoriel",
-            "Raster"
-        ],
-        "used_data":
-        [
+        "keywords": ["Tutoriel", "Raster"],
+        "used_data": [
             {
                 "bottom_level": "13",
                 "top_level": "0",
                 "stored_data": "{stored data moissonnage}"
             }
         ],
-        "getfeatureinfo":
-        {
+        "getfeatureinfo": {
             "stored_data": true
         }
     }
 }
 ```
+
 ???
 <br>
 
@@ -514,7 +460,7 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms moissonnage}/offerings"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms moissonnage}/offerings
 ```
 
@@ -524,6 +470,7 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
     "open": true
 }
 ```
+
 ???
 <br>
 
@@ -534,6 +481,5 @@ On peut vérifier la présence de notre couche `ortho` dans le [getCapabilities 
 On peut visualiser nos données dans QGis en WMS.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_wms_harvest.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
 
 La donnée moissonnée est plus large que la zone voulue car l'intégralité des dalles intersectant la zone est calculée et stockée.
