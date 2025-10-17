@@ -237,3 +237,17 @@ div.fr-callout__text p {
 [data-fr-theme="dark"] .home-background {
     border-image: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)) fill 1;
 }
+
+/* Header */
+.fr-translate__btn::before {
+    content: none !important;
+}
+
+.fr-translate__menu {
+    width: max-content !important;
+}
+
+.custom-center-btn {
+    display: flex;
+    justify-content: center;
+}
