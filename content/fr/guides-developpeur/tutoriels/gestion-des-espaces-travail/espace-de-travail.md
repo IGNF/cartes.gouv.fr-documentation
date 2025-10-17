@@ -222,7 +222,7 @@ C'est au niveau de l'entrepôt que l'on va affecter tout ou partie des ressource
 <br>
 
 Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès sont en nombre d'offres.
-`{{ ids.storages.s3_upload }}`
+
 ??? ABSTRACT "Ressources par usage"
 
 {{ component("table", {
