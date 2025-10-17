@@ -224,24 +224,25 @@ C'est au niveau de l'entrepôt que l'on va affecter tout ou partie des ressource
 Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès sont en nombre d'offres.
 `{{ ids.storages.s3_upload }}`
 ??? ABSTRACT "Ressources par usage"
+
 {{ component("table", {
     headers: ["Usage commun"],
     data: [
-        ["Stockage : Stockage OpenIO pour les annexes = `{{ ids.storages.s3_upload }}` (S3)"],
-        ["Stockage : Stockage OpenIO pour les livraisons = `{{ ids.storages.s3_annexe }}` (S3)"],
-        ["Vérification : Vérification standard = `{{ ids.storages.s3_upload }}` (S3)"],
-        ["Point d'accès : Catalogue des métadonnées = `{{ ids.endpoints.open.csw }}` (CSW)"]
+        ["Stockage : Stockage OpenIO pour les annexes = `" ~ ids.storages.s3_upload ~ "` (S3)"],
+        ["Stockage : Stockage OpenIO pour les livraisons = `" ~ ids.storages.s3_annexe ~ "` (S3)"],
+        ["Vérification : Vérification standard = `" ~ ids.storages.s3_upload ~ "` (S3)"],
+        ["Point d'accès : Catalogue des métadonnées = `" ~ ids.endpoints.open.csw ~ "` (CSW)"]
     ]
 }) }} 
     
 {{ component("table", {
     headers: ["Usage vecteur"],
     data: [
-        ["Stockage : Stockage en base pour les données vecteur des partenaires = `{{ ids.storages.postgresql }}` (POSTGRESQL)`{{ ids.storages.postgresql }}` (POSTGRESQL)"],
-        ["Vérification : Vérification vecteur =  `{{ ids.checks.vector }}`"],
-        ["Traitement : Intégration en base = `{{ ids.processings['vector_to_db'] }}`"],
-        ["Point d'accès : Service de diffusion WMS Vecteur principal = `{{ ids.endpoints.open.wmsv }}` (WMS-VECTOR)"],
-        ["Point d'accès : Service de diffusion WFS principal = `{{ ids.endpoints.open.wfs }}` (WFS)"]
+        ["Stockage : Stockage en base pour les données vecteur des partenaires = `" ~ ids.storages.postgresql ~ "` (POSTGRESQL)`" ~ ids.storages.postgresql ~ "`(POSTGRESQL)"],
+        ["Vérification : Vérification vecteur =  `" ~ ids.checks.vector ~ "`"],
+        ["Traitement : Intégration en base = `" ~ ids.processings['vector_to_db'] ~ "`"],
+        ["Point d'accès : Service de diffusion WMS Vecteur principal = `" ~ ids.endpoints.open.wmsv ~ "` (WMS-VECTOR)"],
+        ["Point d'accès : Service de diffusion WFS principal = `" ~ ids.endpoints.open.wfs ~ "` (WFS)"]
     ]
 }) }} 
 
@@ -249,8 +250,8 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {{ component("table", {
     headers: ["Usage vecteur avancé"],
     data: [
-        ["Traitement : Calcul de pyramide vecteur = `{{ ids.processings['db_to_pyramid'] }}`"],
-        ["Point d'accès : Service de diffusion WMTS/TMS principal = `{{ ids.endpoints.open.wmts }}` (WMTS-TMS)"]
+        ["Traitement : Calcul de pyramide vecteur = `" ~ ids.processings['db_to_pyramid'] ~ "`"],
+        ["Point d'accès : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"]
     ]
 }) }} 
 
@@ -258,13 +259,13 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {{ component("table", {
     headers: ["Usage raster"],
     data: [
-        ["Stockage : Stockage OpenIO performant pour les données pyramides des partenaires = `{{ ids.storages.s3_data_pyramid }}` (S3)"],
-        ["Vérification : Vérification raster = `{{ ids.checks.raster }}`"],
-        ["Traitements : Calcul de pyramide raster = `{{ ids.processings['raster_to_pyramid'] }}`"],
-        ["Traitements : Calcul ou mise à jour de pyramide raster par moissonnage WMS = `{{ ids.processings['wms_to_pyramid'] }}`"],
-        ["Traitements : Fusion de pyramides raster = `{{ ids.processings['pyramids_to_pyramid'] }}`"],
-        ["Points d'accès : Service de diffusion WMS Raster principal = `{{ ids.endpoints.open.wmsr }}` (WMS-RASTER)"],
-        ["Points d'accès : Service de diffusion WMTS/TMS principal = `{{ ids.endpoints.open.wmts }}` (WMTS-TMS)"]
+        ["Stockage : Stockage OpenIO performant pour les données pyramides des partenaires = `" ~ ids.storages.s3_data_pyramid ~ "` (S3)"],
+        ["Vérification : Vérification raster = `" ~ ids.checks.raster ~ "`"],
+        ["Traitements : Calcul de pyramide raster = `" ~ ids.processings['raster_to_pyramid'] ~ "`"],
+        ["Traitements : Calcul ou mise à jour de pyramide raster par moissonnage WMS = `" ~ ids.processings['wms_to_pyramid'] ~ "`"],
+        ["Traitements : Fusion de pyramides raster = `" ~ ids.processings['pyramids_to_pyramid'] ~ "`"],
+        ["Points d'accès : Service de diffusion WMS Raster principal = `" ~ ids.endpoints.open.wmsr ~ "` (WMS-RASTER)"],
+        ["Points d'accès : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"]
     ]
 }) }} 
 
@@ -272,10 +273,10 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {{ component("table", {
     headers: ["Usage archive"],
     data: [
-        ["Stockage : Stockage OpenIO performant pour les données archives des partenaires = `{{ ids.storages.s3_data_archive }}` (S3)"],
-        ["Vérification : Vérification archive = `{{ ids.checks.archive }}`"],
-        ["Traitements : Recopie d'une archive livrée = `{{ ids.processings['archive_to_archive'] }}`"],
-        ["Points d'accès : Service de Téléchargement principal = `{{ ids.endpoints.open.download }}` (DOWNLOAD)"]
+        ["Stockage : Stockage OpenIO performant pour les données archives des partenaires = `" ~ ids.storages.s3_data_archive ~ "` (S3)"],
+        ["Vérification : Vérification archive = `" ~ ids.checks.archive ~ "`"],
+        ["Traitements : Recopie d'une archive livrée = `" ~ ids.processings['archive_to_archive'] ~ "`"],
+        ["Points d'accès : Service de Téléchargement principal = `" ~ ids.endpoints.open.download ~ "` (DOWNLOAD)"]
     ]
 }) }} 
 
@@ -287,11 +288,11 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {{ component("table", {
     headers: ["Vérifications"],
     data: [
-        ["Vérification standard = `{{ ids.checks.standard }}`"],
-        ["Vérification raster = `{{ ids.checks.raster }}`"],
-        ["Vérification vecteur  = `{{ ids.checks.vector }}`"],
-        ["Vérification archive = `{{ ids.checks.archive }}`"],
-        ["Vérification pyramide ROK4 = `{{ ids.checks['pyramid_rok4'] }}`"]
+        ["Vérification standard = `" ~ ids.checks.standard ~ "`"],
+        ["Vérification raster = `" ~ ids.checks.raster ~ "`"],
+        ["Vérification vecteur  = `" ~ ids.checks.vector ~ "`"],
+        ["Vérification archive = `" ~ ids.checks.archive ~ "`"],
+        ["Vérification pyramide ROK4 = `" ~ ids.checks['pyramid_rok4'] ~ "`"]
     ]
 }) }} 
 
@@ -299,12 +300,12 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {{ component("table", {
     headers: ["Traitements"],
     data: [
-        ["Intégration de données vecteur livrées en base = `{{ ids.processings['vector_to_db'] }}`"],
-        ["Recopie d'une archive livrée = `{{ ids.processings['archive_to_archive'] }}`"],
-        ["Calcul de pyramide raster  = `{{ ids.processings['raster_to_pyramid'] }}`"],
-        ["Calcul ou mise à jour de pyramide raster par moissonnage WMS = `{{ ids.processings['wms_to_pyramid'] }}`"],
-        ["Fusion de pyramides raster = `{{ ids.processings['pyramids_to_pyramid'] }}`"],
-        ["Calcul de pyramide vecteur = `{{ ids.processings['db_to_pyramid'] }}`"]
+        ["Intégration de données vecteur livrées en base = `" ~ ids.processings['vector_to_db'] ~ "`"],
+        ["Recopie d'une archive livrée = `" ~ ids.processings['archive_to_archive'] ~ "`"],
+        ["Calcul de pyramide raster  = `" ~ ids.processings['raster_to_pyramid'] ~ "`"],
+        ["Calcul ou mise à jour de pyramide raster par moissonnage WMS = `" ~ ids.processings['wms_to_pyramid'] ~ "`"],
+        ["Fusion de pyramides raster = `" ~ ids.processings['pyramids_to_pyramid'] ~ "`"],
+        ["Calcul de pyramide vecteur = `" ~ ids.processings['db_to_pyramid'] ~ "`"]
     ]
 }) }} 
 
@@ -312,52 +313,52 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {{ component("table", {
     headers: ["Stockages"],
     data: [
-        ["S3 : Stockage OpenIO pour les livraisons = `{{ ids.storages.s3_upload }}`"],
-        ["S3 : Stockage OpenIO pour les annexes = `{{ ids.storages.s3_annexe }}`"],
-        ["S3 : Stockage OpenIO performant pour les données pyramides  = `{{ ids.storages.s3_data_pyramid }}`"],
-        ["S3 : Stockage OpenIO performant pour les données archives = `{{ ids.storages.s3_data_archive }}`"],
-        ["POSTGRESQL : Stockage PostgreSQL standard  = `{{ ids.storages.postgresql }}`
+        ["S3 : Stockage OpenIO pour les livraisons = `" ~ ids.storages.s3_upload ~ "`"],
+        ["S3 : Stockage OpenIO pour les annexes = `" ~ ids.storages.s3_annexe ~ "`"],
+        ["S3 : Stockage OpenIO performant pour les données pyramides  = `" ~ ids.storages.s3_data_pyramid ~ "`"],
+        ["S3 : Stockage OpenIO performant pour les données archives = `" ~ ids.storages.s3_data_archive ~ "`"],
+        ["POSTGRESQL : Stockage PostgreSQL standard  = `" ~ ids.storages.postgresql ~ "`
 {% if ids.storages['postgresql_routing'] %}            
-        * POSTGRESQL-ROUTING
-            * Stockage PostgreSQL standard avec PGRouting : `{{ ids.storages['postgresql_routing'] }}`
+        * POSTGRESQL_ROUTING
+            * Stockage PostgreSQL standard avec PGRouting : `" ~ ids.storages['postgresql_routing'] ~ "`
 {% endif %}
 {% if ids.storages.opensearch %}
         * OPENSEARCH
-            * Stockage OpenSearch standard : `{{ ids.storages.opensearch }}`
+            * Stockage OpenSearch standard : `" ~ ids.storages.opensearch ~ "`
  {% endif %}"
  ]]}) }} 
 
 {{ component("table", {
     headers: ["Points d'accès"],
     data: [
-        ["Services open : Service de diffusion WFS principal = `{{ ids.endpoints.open.wfs }}` (WFS)"],
-        ["Services open : Service de diffusion WMTS/TMS principal = `{{ ids.endpoints.open.wmts }}` (WMTS-TMS)"],
-        ["Services open : Service de diffusion WMS Raster principal  = `{{ ids.endpoints.open.wmsr }}` (WMS-RASTER)"],
-        ["Services open : Service de diffusion WMS Vecteur principal = `{{ ids.endpoints.open.wmsv }}` (WMS-VECTOR)"],
-        ["Services open : Service de Téléchargement principal = `{{ ids.endpoints.open.download }}` (DOWNLOAD)"],
-        ["Services open : Service de diffusion CSW = `{{ ids.endpoints.open.csw }}` (METADATA)
+        ["Services open : Service de diffusion WFS principal = `" ~ ids.endpoints.open.wfs ~ "` (WFS)"],
+        ["Services open : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"],
+        ["Services open : Service de diffusion WMS Raster principal  = `" ~ ids.endpoints.open.wmsr ~ "` (WMS-RASTER)"],
+        ["Services open : Service de diffusion WMS Vecteur principal = `" ~ ids.endpoints.open.wmsv ~ "` (WMS-VECTOR)"],
+        ["Services open : Service de Téléchargement principal = `" ~ ids.endpoints.open.download ~ "` (DOWNLOAD)"],
+        ["Services open : Service de diffusion CSW = `" ~ ids.endpoints.open.csw ~ "` (METADATA)
         {% if ids.endpoints.open.alti %}
-            * Service d'altimétrie : `{{ ids.endpoints.open.alti }}` (ALTI)
+            * Service d'altimétrie : `" ~ ids.endpoints.open.alti ~ "` (ALTI)
 {% endif %}
 {% if ids.endpoints.itinerary %}
-            * Service d'itinéraire et d'isochrone : `{{ ids.endpoints.open.itinerary }}` (ITINERARY-ISOCURVE)
+            * Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.open.itinerary ~ "` (ITINERARY-ISOCURVE)
 {% endif %}
 {% if ids.endpoints.open.search %}
-            * Service de recherche : `{{ ids.endpoints.open.search }}` (SEARCH)
+            * Service de recherche : `" ~ ids.endpoints.open.search ~ "` (SEARCH)
 {% endif %}"],
-        ["Services restreint : Service de téléchargement privé = `{{ ids.endpoints.private.download }}` (DOWNLOAD)"],
-        ["Services restreint : Service de diffusion WFS privé = `{{ ids.endpoints.private.wfs }}` (WFS)"],
-        ["Services restreint : Service de diffusion WMS Vecteur privé = `{{ ids.endpoints.private.wmsv }}` (WMS-VECTOR)"],
-        ["Services restreint : Service de diffusion WMS Raster privé = `{{ ids.endpoints.private.wmsr }}` (WMS-RASTER)"],
-        ["Services restreint : Service de diffusion WMTS/TMS privé = `{{ ids.endpoints.private.wmts }}` (WMTS-TMS)
+        ["Services restreint : Service de téléchargement privé = `" ~ ids.endpoints.private.download ~ "` (DOWNLOAD)"],
+        ["Services restreint : Service de diffusion WFS privé = `" ~ ids.endpoints.private.wfs ~ "` (WFS)"],
+        ["Services restreint : Service de diffusion WMS Vecteur privé = `" ~ ids.endpoints.private.wmsv ~ "` (WMS-VECTOR)"],
+        ["Services restreint : Service de diffusion WMS Raster privé = `" ~ ids.endpoints.private.wmsr ~ "` (WMS-RASTER)"],
+        ["Services restreint : Service de diffusion WMTS/TMS privé = `" ~ ids.endpoints.private.wmts ~ "` (WMTS-TMS)
         {% if ids.endpoints.private.csw %}
-            * Service d'altimétrie : `{{ ids.endpoints.private.alti }}` (ALTI)
+            * Service d'altimétrie : `" ~ ids.endpoints.private.alti ~ "` (ALTI)
 {% endif %}
 {% if ids.endpoints.private.itinerary %}
-            * Service d'itinéraire et d'isochrone : `{{ ids.endpoints.private.itinerary }}` (ITINERARY-ISOCURVE)
+            * Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.private.itinerary ~ "` (ITINERARY-ISOCURVE)
 {% endif %}
 {% if ids.endpoints.private.search %}
-            * Service de recherche : `{{ ids.endpoints.private.search }}` (SEARCH)
+            * Service de recherche : `" ~ ids.endpoints.private.search ~ "` (SEARCH)
 {% endif %}"]
 ]}) }}
 
