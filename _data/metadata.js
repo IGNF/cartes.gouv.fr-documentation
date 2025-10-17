@@ -21,7 +21,7 @@ module.exports = {
     sourcehut_url: "",
     repository_url: "https://github.com/IGNF/cartes.gouv.fr-documentation",
     language: "fr",
-    description: "Documentation",
+    description: "Le service public des cartes et données du territoire",
     author: {
         name: "IGN",
         email: "geoplateforme@ign.fr",
