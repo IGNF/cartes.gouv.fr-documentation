@@ -4,7 +4,7 @@ mermaid: true
 eleventyNavigation:
     key: Connexion avec FME 
     parent: Contrôle des accès à l'API Entrepôt 
-    order: 3
+    order: 2
     nav: guides-developpeur
 ---
 

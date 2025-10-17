@@ -20,7 +20,7 @@ module.exports = {
         },
     },
     secrets: {
-        qgis: "F77z01QHTaJClBJ1p2OZYkFGL24XYLti",
+        qgis: process.env.QGIS_SECRET,
     },
     permalink: function (data) {
         if (data.slugOverride) {

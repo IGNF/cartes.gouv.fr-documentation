@@ -4,9 +4,11 @@ mermaid: true
 eleventyNavigation:
     key: Connexion à l'API Entrepôt
     parent: Contrôle des accès à l'API Entrepôt 
-    order: 2
+    order: 1
     nav: guides-developpeur
 ---
+
+La procédure pour créer un compte Géoplateforme/Cartes.gouv.fr et se connecter (voir [Inscription/ Se connecter via Cartes.gouv.fr](/fr/guides-utilisateur/presentation-utilisateur/connexion))
 
 Une fois le compte existant, on va pouvoir manipuler l'API Entrepôt.
 
