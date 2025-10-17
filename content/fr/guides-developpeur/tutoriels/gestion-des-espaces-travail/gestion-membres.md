@@ -126,7 +126,7 @@ Lorsque l'on récupère ses informations personnelles sur l'Entrepôt, on voit l
 
 Une seule route de l'API va permettre d'ajouter ou modifier les droits d'un membre (en mode "UPSERT"). Pour ajouter une personne, il faut avoir son identifiant Entrepôt. Cela implique qu'elle ait joué la requête de récupération des ses informations personnelles. Si la personne était déjà membre, on remplace ses droits par ceux définis dans le corps. Sinon on ajoute la personne avec ces droits.
 
-??? request-put "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
+??? PUT "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/communities/{community}/users/{user}
