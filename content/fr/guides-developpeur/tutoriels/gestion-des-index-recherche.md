@@ -1,8 +1,6 @@
 ---
 title: Index de recherche
 description: Service de recherche des données de la Géoplateforme et gestion des index customs
-tags:
-    - Donnée indexée
 eleventyNavigation:
     key: Index de recherche
     parent: Tutoriels d'utilisation de l'Entrepôt
