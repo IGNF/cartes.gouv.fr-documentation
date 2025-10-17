@@ -10,11 +10,11 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-En tant que consommateur de données, c'est également via l'API que l'on va pouvoir configuer ses clés d'accès. Cela n'implique pas d'avoir accès à une entrepôt, ni même d'être le membre d'une communauté.
+En tant que consommateur de données, c'est également via l'API que l'on va pouvoir configurer ses clés d'accès. Cela n'implique pas d'avoir accès à un entrepôt, ni même d'être membre d'une communauté.
 
 ## Consultation des permissions
 
-L'ensemble des permissions qui m'ont été personnellement donnée ou qui ont été données à une communauté à laquelle l'utilisateur appartient constitue une sorte de catalogue de données qu'il va être possible de consommer.
+L'ensemble des permissions qui m'ont été personnellement données ou qui ont été données à une communauté à laquelle l'utilisateur appartient constitue une sorte de catalogue de données qu'il va être possible de consommer.
 
 ### Récupérer ses permissions personnelles
 
@@ -99,7 +99,7 @@ Les deux permissions donnent accès à la même offre. Lors de la configuration 
 
 ### Consulter une permission
 
-Dans la suite, nous allons exploiter la permission personnelle. Il est possible d'avoir plus d'informations sur celle ci.
+Dans la suite, nous allons exploiter la permission personnelle. Il est possible d'avoir plus d'informations sur celle-ci.
 
 ??? GET "{{ urls.api_entrepot }}/users/me/permissions/{permission utilisateur}"
 
@@ -132,7 +132,7 @@ Dans la suite, nous allons exploiter la permission personnelle. Il est possible 
 
 ## Gérer une clé d'accès
 
-Sans clé d'accès, il n'est pas possible de consulter le service de diffusion, même pour une [requête de capacité du service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0).
+Sans clé d'accès, il n'est pas possible de consulter le service de diffusion, même pour une [requête de capacités du service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0).
 
 ??? GET "{{ urls.private.wfs }}"
 
@@ -160,9 +160,9 @@ Sans clé d'accès, il n'est pas possible de consulter le service de diffusion, 
 ???
 <br>
 
-La clé d'accès est un moyen de s'identifier lors de l'utilisation des services de diffusion. Il existe trois type d'identification :
+La clé d'accès est un moyen de s'identifier lors de l'utilisation des services de diffusion. Il existe trois types d'identification :
 
-* Le hash en paramètre de requête `api_key` ou en header `X-Key`
+* Un hash en paramètre de requête `api_key` ou en header `X-Key`
 * Une authentification `Basic`
 * Une authentification `Bearer` (jeton généré par le gestionnaire d'identité). C'est l'authentification forte, qui peut être nécessaire pour exploiter les permissions dont le champ `only_oauth` est à vrai.
 
@@ -202,14 +202,14 @@ Nous allons ici voir un exemple de mise en place d'une clé de type HASH.
 ???
 <br>
 
-Quelque soit le type de clé, il est possible de préciser des conditions d'utilisation de la clé :
+Quel que soit le type de clé, il est possible de préciser des conditions d'utilisation de la clé :
 
 * Limiter les IP pouvant l'utiliser (whitelist)
 * Bloquer des IP (blacklist)
 * Forcer le referer
 * Forcer le user agent
 
-Il est maintenant possible [d'interroger le service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle). Cependant, aucune couche ne semble disponible, car nous n'avons pas encore donné de droit à cette clé.
+Il est maintenant possible [d'interroger le service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle). Cependant, aucune couche ne semble disponible, car nous n'avons pas encore donné de droits à cette clé.
 
 ### Gérer les accès à la clé
 
@@ -325,7 +325,7 @@ Clé HASH dans QGis
 
 ### Créer une clé de type BASIC
 
-Nous allons ajouter à cette clé des limites d'utilisation, un user agent particulier qui limite l'usage de la clé au client QGis. À noter que l'ajout d'un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
+Nous allons ajouter à cette clé des limites d'utilisation et un user agent particulier qui limite l'usage de la clé au client QGis. À noter que l'ajout d'un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
 
 
 ??? POST "{{ urls.api_entrepot }}/users/me/keys"
@@ -341,7 +341,7 @@ Nous allons ajouter à cette clé des limites d'utilisation, un user agent parti
     "user_agent": ".*QGIS.*",
     "type_infos": {
         "login": "cestmoi",
-        "password": "cestmaclesecrète"
+        "password": "cestmaclesecrete"
     }
 }
 ```
@@ -366,7 +366,7 @@ Nous allons ajouter à cette clé des limites d'utilisation, un user agent parti
 
 L'affectation d'accès sur cette clé se fait exactement comme pour la première clé.
 
-Afin que les requêtes passent, il est maintenant nécessaire que le header "Referer" contienne une valeur avec QGIS (cela permet par exemple d'accepter toutes les requêtes venant de QGis, quelque soit la version et le système d'exploitation).
+Afin que les requêtes passent, il est maintenant nécessaire que le header "Referer" contienne une valeur avec QGIS (cela permet par exemple d'accepter toutes les requêtes venant de QGis, quelle que soit la version et le système d'exploitation).
 
 
 ![Clé BASIC dans QGis](/img/guides-developpeur/controle-acces/qgis_cle_basic.png){.fr-responsive-img .frx-img-contained} 

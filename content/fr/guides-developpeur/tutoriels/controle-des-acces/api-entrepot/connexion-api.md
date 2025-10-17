@@ -8,13 +8,13 @@ eleventyNavigation:
     nav: guides-developpeur
 ---
 
-La procédure pour créer un compte Géoplateforme/Cartes.gouv.fr et se connecter (voir [Inscription/ Se connecter via Cartes.gouv.fr](/fr/guides-utilisateur/presentation-utilisateur/connexion))
+La procédure pour créer un compte Géoplateforme/Cartes.gouv.fr et se connecter est décrite dans la page [Connexion](/fr/guides-utilisateur/presentation-utilisateur/connexion).
 
-Une fois le compte existant, on va pouvoir manipuler l'API Entrepôt.
+Une fois le compte créé, on peut manipuler l'API Entrepôt.
 
 ## Qui suis-je ?
 
-Un premier appel va permettre de récupérer nos informations personnelles et principalement les communautés dont nous sommes membres.
+Un premier appel permet de récupérer nos informations personnelles et principalement les communautés dont nous sommes membres.
 
 ??? GET "{{ urls.api_entrepot }}/users/me"
 
@@ -56,12 +56,12 @@ Un premier appel va permettre de récupérer nos informations personnelles et pr
 ???
 <br>
 
-L'identifiant de votre utilisateur est une information :
+L'identifiant de votre compte utilisateur est une information :
 
 * à fournir à un gestionnaire de communauté si vous voulez la rejoindre
 * à l'adresse `geoplateforme@ign.fr` si vous souhaitez qu'un espace de travail soit créé pour vous (en tant que producteur ou gestionnaire de consommateur de données).
 
-Lorsque la communauté est associée à un entrepôt, on a également dans cette réponse son identifiant. Cet identifiant d'entrepôt sera systèmatiquement présent dans les routes d'appels à l'API pour l'alimentation précisant au sein de quel entrepôt on souhaite travailler.
+Lorsque la communauté est associée à un entrepôt, on a également dans cette réponse son identifiant. Cet identifiant d'entrepôt sera systématiquement présent dans les routes d'appels à l'API pour l'alimentation précisant au sein de quel entrepôt on souhaite travailler.
 
 On voit également les droits que l'on a dans chaque communauté, limitant les actions autorisées.
 
@@ -71,11 +71,11 @@ La vidéo suivante montre comment avoir ces informations en utilisant l'[interfa
   <source src="/videos/recuperation_id_utilisateur_swagger.webm" type="video/webm">
   Votre navigateur ne supporte pas la lecture de vidéos.
 </video>
-
+<br>
 
 ## Quelles possibilités a mon entrepôt ?
 
-La plateforme dispose de ressources globales pour permettre l'alimentation et la diffusion de données :
+La plateforme dispose de ressources globales permettant l'alimentation et la diffusion de données :
 
 * Des vérifications
 * Des traitements
@@ -84,7 +84,7 @@ La plateforme dispose de ressources globales pour permettre l'alimentation et la
 
 Ces ressources sont individuellement mises à disposition des entrepôts, avec quotas.
 
-Pour voir celles accessibles par mon entrepôt (la réponse dépend des ressources qui vous ont été allouées) :
+Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressources qui vous ont été allouées) :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
@@ -302,4 +302,3 @@ Pour voir celles accessibles par mon entrepôt (la réponse dépend des ressourc
 }
 ```
 ???
-<br>

@@ -8,20 +8,8 @@ eleventyNavigation:
     nav: guides-developpeur
 ---
 
-# Contrôle des accès
+Les fonctionnalités de contrôle des accès permettent de restreindre l'accès aux données via les services de diffusion.
 
-Les fonctionnalités de contrôle des accès permet de restreindre l'accès aux données via les services de diffusion.
+Le producteur de la donnée définit les permissions sur son offre, c'est-à-dire définir les utilisateurs ou les communautés qui peuvent consommer l'offre : [Gestion des permissions d'accès aux services de diffusion](../permission/).
 
-Le producteur de la donnée va définir les permissions sur son offre, c'est-à-dire définir les utilisateurs ou les communautés qui peuvent consommer l'offre 
-<a
-id="link-1"
-href="../permission"
-target="\_self"
-class="fr-link fr-icon-arrow-right-line fr-link--icon-right"> permission </a> .
-
-Le consommateur de la donnée va définir ses clés d'accès et exploiter les permissions auxquelles il a droit, personnellement ou via les communautés auxquelles il appartient 
-<a
-id="link-1"
-href="../cle"
-target="\_self"
-class="fr-link fr-icon-arrow-right-line fr-link--icon-right"> cle </a> .
+Le consommateur de la donnée définit ses clés d'accès et exploiter les permissions auxquelles il a droit, personnellement ou via les communautés auxquelles il appartient : [Gestion des clés de consommation des services de diffusion](../cle/).

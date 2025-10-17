@@ -50,7 +50,7 @@ Le champ `available` permet facilement de bloquer tous les accès sans dépublie
 
 ## Création de permissions
 
-Une permission est un lien entre UN utilisateur **ou** UNE commuanuté et DES offres. L'appel de création permet de créer plusieurs permissions en une fois, c'est à dire de préciser une liste d'utilisateurs ou une liste de communautés. La réponse à un tel appel est donc une liste de permissions.
+Une permission est un lien entre UN utilisateur **ou** UNE communauté et DES offres. L'appel de création permet de créer plusieurs permissions en une fois, c'est-à-dire de préciser une liste d'utilisateurs ou une liste de communautés. La réponse à un tel appel est donc une liste de permissions.
 
 ### Permissions personnelles
 
@@ -134,12 +134,7 @@ Il faut pour cela avoir les identifiants entrepôt des utilisateurs à qui on so
 ???
 <br>
 
-Le champ `only_oauth` permet de forcer les consommateurs de données à exploiter la permission uniquement avec leur compte personnel, et non des clés moins sécurisées (voir le [tutoriel sur les clés]) 
-<a
-id="link-1"
-href="../cle"
-target="\_self"
-class="fr-link fr-icon-arrow-right-line fr-link--icon-right"> cle </a> .
+Le champ `only_oauth` permet de forcer les consommateurs de données à exploiter la permission uniquement avec leur compte personnel, et non des clés moins sécurisées (voir [Gestion des clés de consommation des services de diffusion](../cle/)).
 
 ### Permissions communautaires
 
@@ -202,11 +197,11 @@ Sensiblement de la même manière, on va pouvoir préciser la ou les communauté
 ???
 <br>
 
-Le travail du producteur de données s'arrêtent ici. C'est maintenant aux consommateurs de données de gérer leurs clés et leurs accès.
+Le travail du producteur de données s'arrête ici. C'est maintenant aux consommateurs de données de gérer leurs clés et leurs accès.
 
 ## Désactiver une offre
 
-Si une anomalie est constatée (contenu des données, consommation abusive...), il est possible de bloquer facilement toutes les consommations en changer le statut `available` au niveau de l'offre. Cela permet de ne rien perdre de la configuration des permissions et accès, et de pouvoir rapidement revenir en arrière.
+Si une anomalie est constatée (contenu des données, consommation abusive...), il est possible de bloquer facilement toutes les consommations en changeant le statut `available` au niveau de l'offre. Cela permet de ne rien perdre de la configuration des permissions et accès, et de pouvoir rapidement revenir en arrière.
 
 ??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
 
@@ -222,4 +217,4 @@ Si une anomalie est constatée (contenu des données, consommation abusive...), 
 ???
 <br>
 
-Les couches correspondantes à l'offre n'apparaîtront plus dans les capacités du services et ne peuvent plus être consultées. Cela n'est possible que pour les offres liées à un point d'accès non ouvert.
+Les couches correspondantes à l'offre n'apparaîtront plus dans les capacités du service et ne peuvent plus être consultées. Cela n'est possible que pour les offres liées à un point d'accès non ouvert.
