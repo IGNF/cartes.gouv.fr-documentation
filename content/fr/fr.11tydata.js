@@ -30,8 +30,9 @@ module.exports = {
             s3_data_archive: "4c2d24e6-870d-4194-8bc8-3ac8b7f76d08",
             s3_upload: "40d3ae5e-f46b-4cb7-b08b-9a2f207f4dc6",
             s3_annexe: "1b0371a1-aad9-4f0f-b687-367d485a665b",
-            opensearch: "d5134033-c9c1-4342-a348-fbc4182f34bc",
-            postgresql_routing: "",
+            postgresql_routing: {
+                opensearch: "d5134033-c9c1-4342-a348-fbc4182f34bc",
+            },
         },
         endpoints: {
             open: {

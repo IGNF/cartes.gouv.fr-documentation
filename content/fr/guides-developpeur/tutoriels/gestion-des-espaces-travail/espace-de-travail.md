@@ -310,57 +310,81 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 }) }} 
 
 
+
+{% set data = [] %}
+
+{% set _ = data.push(["S3 : Stockage OpenIO pour les livraisons = `" ~ ids.storages.s3_upload ~ "`"]) %}
+{% set _ = data.push(["S3 : Stockage OpenIO pour les annexes = `" ~ ids.storages.s3_annexe ~ "`"]) %}
+{% set _ = data.push(["S3 : Stockage OpenIO performant pour les données pyramides = `" ~ ids.storages.s3_data_pyramid ~ "`"]) %}
+{% set _ = data.push(["S3 : Stockage OpenIO performant pour les données archives = `" ~ ids.storages.s3_data_archive ~ "`"]) %}
+
+{% set postgresEntry = "POSTGRESQL : Stockage PostgreSQL standard = `" ~ ids.storages.postgresql ~ "`" %}
+
+{% set OPENSEARCHEntry = "OPENSEARCH  : Stockage OpenSearch standard = `" ~ ids.storages.postgresql_routing.opensearch ~ "`" %}
+
+{% if ids.storages.opensearch %}
+    {% set OPENSEARCHEntry = OPENSEARCHEntry
+      + "<br>* OPENSEARCH : `" ~ ids.storages.postgresql_routing.opensearch ~ "`" %}
+{% endif %}
+
+{% set _ = data.push([postgresEntry]) %}
+{% set _ = data.push([OPENSEARCHEntry]) %}
 {{ component("table", {
     headers: ["Stockages"],
-    data: [
-        ["S3 : Stockage OpenIO pour les livraisons = `" ~ ids.storages.s3_upload ~ "`"],
-        ["S3 : Stockage OpenIO pour les annexes = `" ~ ids.storages.s3_annexe ~ "`"],
-        ["S3 : Stockage OpenIO performant pour les données pyramides  = `" ~ ids.storages.s3_data_pyramid ~ "`"],
-        ["S3 : Stockage OpenIO performant pour les données archives = `" ~ ids.storages.s3_data_archive ~ "`"],
-        ["POSTGRESQL : Stockage PostgreSQL standard  = `" ~ ids.storages.postgresql ~ "`
-{% if ids.storages['postgresql_routing'] %}            
-        * POSTGRESQL_ROUTING
-            * Stockage PostgreSQL standard avec PGRouting : `" ~ ids.storages['postgresql_routing'] ~ "`
-{% endif %}
-{% if ids.storages.opensearch %}
-        * OPENSEARCH
-            * Stockage OpenSearch standard : `" ~ ids.storages.opensearch ~ "`
- {% endif %}"
- ]]}) }} 
+    data: data
+}) }}
 
-{{ component("table", {
-    headers: ["Points d'accès"],
-    data: [
-        ["Services open : Service de diffusion WFS principal = `" ~ ids.endpoints.open.wfs ~ "` (WFS)"],
-        ["Services open : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"],
-        ["Services open : Service de diffusion WMS Raster principal  = `" ~ ids.endpoints.open.wmsr ~ "` (WMS-RASTER)"],
-        ["Services open : Service de diffusion WMS Vecteur principal = `" ~ ids.endpoints.open.wmsv ~ "` (WMS-VECTOR)"],
-        ["Services open : Service de Téléchargement principal = `" ~ ids.endpoints.open.download ~ "` (DOWNLOAD)"],
-        ["Services open : Service de diffusion CSW = `" ~ ids.endpoints.open.csw ~ "` (METADATA)
-        {% if ids.endpoints.open.alti %}
-            * Service d'altimétrie : `" ~ ids.endpoints.open.alti ~ "` (ALTI)
+
+{% set accessData = [] %}
+
+{# Services open #}
+{% set _ = accessData.push(["Service de diffusion WFS principal = `" ~ ids.endpoints.open.wfs ~ "` (WFS)"]) %}
+{% set _ = accessData.push(["Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"]) %}
+{% set _ = accessData.push(["Service de diffusion WMS Raster principal = `" ~ ids.endpoints.open.wmsr ~ "` (WMS-RASTER)"]) %}
+{% set _ = accessData.push(["Service de diffusion WMS Vecteur principal = `" ~ ids.endpoints.open.wmsv ~ "` (WMS-VECTOR)"]) %}
+{% set _ = accessData.push(["Service de Téléchargement principal = `" ~ ids.endpoints.open.download ~ "` (DOWNLOAD)"]) %}
+
+{# Service CSW + optionnels #}
+{% set cswEntry = "Service de diffusion CSW = `" ~ ids.endpoints.open.csw ~ "` (METADATA)" %}
+{% if ids.endpoints.open.alti %}
+  {% set cswEntry = cswEntry + "<br> Service d'altimétrie : `" ~ ids.endpoints.open.alti ~ "` (ALTI)" %}
 {% endif %}
-{% if ids.endpoints.itinerary %}
-            * Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.open.itinerary ~ "` (ITINERARY-ISOCURVE)
+{% if ids.endpoints.open.itinerary %}
+  {% set cswEntry = cswEntry + "<br> Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.open.itinerary ~ "` (ITINERARY-ISOCURVE)" %}
 {% endif %}
 {% if ids.endpoints.open.search %}
-            * Service de recherche : `" ~ ids.endpoints.open.search ~ "` (SEARCH)
-{% endif %}"],
-        ["Services restreint : Service de téléchargement privé = `" ~ ids.endpoints.private.download ~ "` (DOWNLOAD)"],
-        ["Services restreint : Service de diffusion WFS privé = `" ~ ids.endpoints.private.wfs ~ "` (WFS)"],
-        ["Services restreint : Service de diffusion WMS Vecteur privé = `" ~ ids.endpoints.private.wmsv ~ "` (WMS-VECTOR)"],
-        ["Services restreint : Service de diffusion WMS Raster privé = `" ~ ids.endpoints.private.wmsr ~ "` (WMS-RASTER)"],
-        ["Services restreint : Service de diffusion WMTS/TMS privé = `" ~ ids.endpoints.private.wmts ~ "` (WMTS-TMS)
-        {% if ids.endpoints.private.csw %}
-            * Service d'altimétrie : `" ~ ids.endpoints.private.alti ~ "` (ALTI)
+  {% set cswEntry = cswEntry + "<br> Service de recherche : `" ~ ids.endpoints.open.search ~ "` (SEARCH)" %}
 {% endif %}
+{% set _ = accessData.push([cswEntry]) %}
+
+{# Services restreints #}
+{% set _ = accessData.push(["Service de téléchargement privé = `" ~ ids.endpoints.private.download ~ "` (DOWNLOAD)"]) %}
+{% set _ = accessData.push(["Service de diffusion WFS privé = `" ~ ids.endpoints.private.wfs ~ "` (WFS)"]) %}
+{% set _ = accessData.push(["Service de diffusion WMS Vecteur privé = `" ~ ids.endpoints.private.wmsv ~ "` (WMS-VECTOR)"]) %}
+{% set _ = accessData.push(["Service de diffusion WMS Raster privé = `" ~ ids.endpoints.private.wmsr ~ "` (WMS-RASTER)"]) %}
+
+{# Service WMTS privé + optionnels #}
+{% set wmtsEntry = "Service de diffusion WMTS/TMS privé = `" ~ ids.endpoints.private.wmts ~ "` (WMTS-TMS)" %}
+
+{% if ids.endpoints.private.alti %}
+  {% set wmtsEntry = wmtsEntry + " </br> Service d'altimétrie : `" ~ ids.endpoints.private.alti ~ "` (ALTI)" %}
+{% endif %}
+
 {% if ids.endpoints.private.itinerary %}
-            * Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.private.itinerary ~ "` (ITINERARY-ISOCURVE)
+  {% set wmtsEntry = wmtsEntry + " </br> Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.private.itinerary ~ "` (ITINERARY-ISOCURVE)" %}
 {% endif %}
+
 {% if ids.endpoints.private.search %}
-            * Service de recherche : `" ~ ids.endpoints.private.search ~ "` (SEARCH)
-{% endif %}"]
-]}) }}
+  {% set wmtsEntry = wmtsEntry + " </br> Service de recherche : `" ~ ids.endpoints.private.search ~ "` (SEARCH)" %}
+{% endif %}
+
+{% set _ = accessData.push([wmtsEntry]) %}
+
+{{ component("table", {
+  headers: ["Points d'accès"],
+  data: accessData
+}) }}
+
 
 ## Activer l'entrepôt
 
