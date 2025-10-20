@@ -8,6 +8,8 @@ eleventyNavigation:
     nav: guides-developpeur
 ---
 
+{% from "components/component.njk" import component with context %}
+
 En plus de l'index standard, il est possible de créer ses propres index de recherche. Ce sont les index custom.
 
 Ils permettent d'intégrer des offres qui ne sont pas disponibles dans l'entrepôt Géoplateforme. Ces offres peuvent être intégrer dans un index custom par l'intermédiaire d'un fichier CSV ou JSON. La recherche se faisant non plus sur l'index géoplateforme mais sur l'index custom.
@@ -64,7 +66,7 @@ Comme observé, le séparateur pour les CSV doit être ";".
 
 Exemple de fichier **Schema JSON** utilisant une géométrie WKT :
 
-```
+```json
 {
     "type": "array",
     "items" : {
@@ -76,12 +78,11 @@ Exemple de fichier **Schema JSON** utilisant une géométrie WKT :
       }
     }
 }
-
 ```
 
 Exemple de fichier **JSON** correspondant :
 
-```
+```json
 [
   {
       "name": "Example Object",
@@ -89,12 +90,11 @@ Exemple de fichier **JSON** correspondant :
       "geometry": "POINT(8.8249 47.2274)"
   }
 ]
-
 ```
 
 Exemple de fichier **Schema JSON** utilisant une géométrie geoJSON de type Point:
 
-```
+```json
 {
     "type": "array",
     "items" : {
@@ -125,7 +125,7 @@ Exemple de fichier **Schema JSON** utilisant une géométrie geoJSON de type Poi
 
 Exemple de fichier **JSON** correspondant :
 
-```
+```json
 [
     {
         "titre" : "Titre1",
@@ -163,7 +163,7 @@ offeringId;layerName;title;description;open;thumbnail;type;endpointUrl;attributi
 
 Le **Schema JSON** doit contenir obligatoirement le format suivant :
 
-```
+```json
 {
    "type": "array",
    "items" : {
@@ -274,7 +274,7 @@ Le **Schema JSON** doit contenir obligatoirement le format suivant :
 
 Et voici un exemple de fichier **JSON** correpondant (le nom des colonnes n'est pas modifiable) :
 
-```
+```json
 [
   {
     "offeringId":"00112233-4455-6677-8899-aabbccddeeff",
@@ -331,52 +331,99 @@ Il faudra que le datastore possède la vérification *checkindex*, le storage *O
 
 Pour cela, on commence par créer la livraison :
 
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-    === "Corps de requête JSON"
-        ```json
-        {
-        "type": "INDEX",
-        "description": "TESTAUTOINDEXCUSTOM",
-        "name": "TESTAUTOINDEXCUSTOM",
-        "type_infos" : {
-            "is_search_layer" : false
-        },
-        "srs": "EPSG:4326"
-        }
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/uploads
+```
 
-        ```
+  ```json
+  {
+  "type": "INDEX",
+  "description": "TESTAUTOINDEXCUSTOM",
+  "name": "TESTAUTOINDEXCUSTOM",
+  "type_infos" : {
+      "is_search_layer" : false
+  },
+  "srs": "EPSG:4326"
+  }
+
+  ```
+???
+<br>
 
 C'est à cette étape qu'est défini le flag is_search_layer.
 
 Il faut ensuite ajouter les fichiers à la livraison (exemple pour un CSV) :
 
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/example_wkt.csvt"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/example_wkt.csvt"
 
-    === "Corps de requête Multipart"
-        * file = `example_wkt.csvt`
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/example_wkt.csvt
+```
 
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/example_wkt.csv"
+    {{ component("table", {
+        headers: ["Corps de requête Multipart"],
+        data: [
+            ["file = `example_wkt.csvt`"]
+        ]
+    }) }}
 
-    === "Corps de requête Multipart"
-        * file = `example_wkt.csv`
+???
+<br>
+
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/example_wkt.csv"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/example_wkt.csv
+```
+
+    {{ component("table", {
+        headers: ["Corps de requête Multipart"],
+        data: [
+            ["file = `example_wkt.csv`"]
+        ]
+    }) }}
+
+???
+<br>
 
 Il doit avoir autant de fichiers CSV que de fichiers CSVT dans la livraison.
 
 Enfin, il ne reste plus qu'à clôturer la livraison :
 
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close
+```
+
+???
+<br>
 
 Une vérification va automatiquement être lancée pour vérifier la cohérence des fichiers. Il est possible de suivre le résultat de la vérification avec cette route :
 
-??? request-get "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}
+```
+
+???
+<br>
 
 Lorsque la vérification devient *passed*, il est possible de passer à la suite de la création de l'index.
 
 Pour accéder aux logs de la vérification (en cas d'erreur par exemple) :
 
-??? request-get "{{ urls.api_entrepot }}/datastores/{datastore}/checks/executions/{execution}/logs"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/checks/executions/{execution}/logs"
 
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/checks/executions/{execution}/logs
+```
+
+???
+<br>
 
 ## Traitements
 
@@ -384,104 +431,147 @@ Une fois la livraison terminée, le traitement utilisé est **index2index** qui 
 
 Pour cela, il faut commencer par créer un traitement **index2index** :
 
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-    === "Corps de requête JSON"
-        ```json
-        {
-            "processing": "{{ ids.processings.index2index }}",
-            "inputs": {
-                "upload": [
-                    "{upload}"
-                ]
-            },
-            "output": {
-                "stored_data": {
-                    "name" : "index",
-                    "storage_type" : "OPENSEARCH",
-                    "storage_tags": []
-                }
-            }
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+```
+
+```json
+{
+    "processing": "{{ ids.processings.index2index }}",
+    "inputs": {
+        "upload": [
+            "{upload}"
+        ]
+    },
+    "output": {
+        "stored_data": {
+            "name" : "index",
+            "storage_type" : "OPENSEARCH",
+            "storage_tags": []
         }
-        ```
+    }
+}
+```
+???
+<br>
 
 Cette requête donne un *execution_id* et un *stored_data_id* qu'il faut conserver pour la suite.
 
 Il faut ensuite lancer le traitement avec la requête suivante :
 
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch
+```
+
+???
+<br>
 
 Comme pour la livraison, on peut suivre le statut du traitement avec la requête suivante :
 
-??? request-get "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}
+```
+
+???
+<br>
 
 Il est possible de suivre les logs du traitement :
 
-??? request-get "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/logs"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/logs"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/logs
+```
+
+???
+<br>
 
 Une fois que le traitement passe en **SUCCESS**, il est possible de passer à la suite de la création de l'index. Il est possible de vérifier la stored data générée :
 
-??? request-get "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}
+```
+
+???
+<br>
 
 ## Configuration et publication
 
 Une fois le traitement terminé, il faut créer la configuration de l'index custom :
 
-??? request-post "{{ urls.api_entrepot }}/{datastore}/datastores/configurations"
+??? POST "{{ urls.api_entrepot }}/{datastore}/datastores/configurations"
 
-    === "Corps de requête JSON"
-        ```json
+```title="Contenu"
+{{ urls.api_entrepot }}/{datastore}/datastores/configurations
+```
+
+```json
+{
+"type":"SEARCH",
+"name":"layer AUTO TEST INDEX20",
+"layer_name":"layerAUTOTEST_INDEX20",
+"type_infos":{
+    "title":"title",
+    "abstract":"abstract",
+    "keywords":[
+        "AUTO",
+        "TEST"
+    ],
+    "bbox":{
+        "west":0,
+        "south":0,
+        "north":90,
+        "east":90
+    },
+    "used_data":[
         {
-        "type":"SEARCH",
-        "name":"layer AUTO TEST INDEX20",
-        "layer_name":"layerAUTOTEST_INDEX20",
-        "type_infos":{
-            "title":"title",
-            "abstract":"abstract",
-            "keywords":[
-                "AUTO",
-                "TEST"
-            ],
-            "bbox":{
-                "west":0,
-                "south":0,
-                "north":90,
-                "east":90
-            },
-            "used_data":[
-                {
-                    "stored_data":"{stored_data}"
-                }
-            ]
-        },
-        "metadata":[  
-        ],
-        "attribution":{
-            "title":"newAttributionTitle",
-            "url":"https://www.google.com/",
-            "logo":{
-                "format":"image/jpeg",
-                "url":"https://www.google.com/",
-                "width":90,
-                "height":90
-            }
+            "stored_data":"{stored_data}"
         }
-        }
-        ```
+    ]
+},
+"metadata":[  
+],
+"attribution":{
+    "title":"newAttributionTitle",
+    "url":"https://www.google.com/",
+    "logo":{
+        "format":"image/jpeg",
+        "url":"https://www.google.com/",
+        "width":90,
+        "height":90
+    }
+}
+}
+```
+???
+<br>
 
 On récupère l'id de la configuration en retour de cette requête.
 
 Enfin, pour que l'index custom soit visible, il faut publié l'offre :
 
-??? request-post "{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings"
+??? POST "{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings"
 
-    === "Corps de requête JSON"
-        ```json
-        {
-            "endpoint": "{{ ids.endpoints.private.search }}",
-            "open": true
-        }
-        ```
+```title="Contenu"
+{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings
+```
+
+```json
+{
+    "endpoint": "{{ ids.endpoints.private.search }}",
+    "open": true
+}
+```
+???
+<br>
 
 Le champ *open* permet de déterminer le niveau de visibilité de l'index custom :
     
@@ -490,7 +580,14 @@ Le champ *open* permet de déterminer le niveau de visibilité de l'index custom
 
 On peut surveiller le statut de la publication :
 
-??? request-get "{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings"
+??? GET "{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings"
+
+```title="Contenu"
+{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings
+```
+
+???
+<br>
 
 Une fois l'offre en *PUBLISHED*, l'index custom est bien disponible et il est possible de rechercher dans cet index.
 
@@ -500,25 +597,30 @@ Une fois l'offre en *PUBLISHED*, l'index custom est bien disponible et il est po
 
 Pour ajouter des documents à un index, il faut livrer les nouveaux documents en respectant le schéma défini précédemment pour l'index. Il faut ensuite refaire un traitement avec la nouvelle livraison en précisant l'id de la donnée stockée de l'index à mettre à jour :
 
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-    === "Corps de requête JSON"
-        ```json
-        {
-            "processing": "{{ ids.processings.index2index }}",
-            "inputs": {
-                "upload": [
-                    "{upload}"
-                ],
-                "stored_data": []
-            },
-            "output": {
-                "stored_data": {
-                    "id" : "{stored_data}"
-                }
-            }
+```title="Contenu"
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+```
+
+```json
+{
+    "processing": "{{ ids.processings.index2index }}",
+    "inputs": {
+        "upload": [
+            "{upload}"
+        ],
+        "stored_data": []
+    },
+    "output": {
+        "stored_data": {
+            "id" : "{stored_data}"
         }
-        ```
+    }
+}
+```
+???
+<br>
 
 Une fois le traitement terminé, l'index est à jour et les nouveaux documents sont recherchables.
 

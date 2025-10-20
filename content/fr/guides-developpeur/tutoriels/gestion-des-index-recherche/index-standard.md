@@ -236,12 +236,12 @@ Les champ *production_year* et *producer* sont aussi à définir manuellement ma
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/tags
 ```
 
-        ```json
-        {
-            "production_year" : 2023,
-            "producer" : "IGN"
-        }
-        ```
+```json
+{
+    "production_year" : 2023,
+    "producer" : "IGN"
+}
+```
 ???
 <br>
 
