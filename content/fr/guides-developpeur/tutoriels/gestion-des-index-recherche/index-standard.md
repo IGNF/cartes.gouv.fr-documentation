@@ -1,5 +1,6 @@
 ---
 title: Recherche dans l'index standard
+description : Consultation du service de recherche de couche, identification des ressources publiées
 mermaid: true
 eleventyNavigation:
     key: Recherche dans l'index standard
