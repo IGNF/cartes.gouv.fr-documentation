@@ -1,6 +1,9 @@
 ---
 title: Recherche dans un index personnalisé
 mermaid: true
+summary:
+    visible: true
+    depth: 2
 eleventyNavigation:
     key: Recherche dans un index personnalisé
     parent: Mise en place d'un index de recherche personnalisé

@@ -1,6 +1,9 @@
 ---
 title: Création et publication de l'index
 mermaid: true
+summary:
+    visible: true
+    depth: 2
 eleventyNavigation:
     key: Création et publication de l'index
     parent: Mise en place d'un index de recherche personnalisé
