@@ -1,10 +1,10 @@
 ---
-title: Création et publication de l'index
+title: Recherche dans un index personnalisé
 mermaid: true
 eleventyNavigation:
-    key: Création et publication de l'index
+    key: Recherche dans un index personnalisé
     parent: Mise en place d'un index de recherche personnalisé
-    order: 1
+    order: 2
     nav: guides-developpeur
 ---
 
@@ -78,6 +78,7 @@ Exemple de fichier **Schema JSON** utilisant une géométrie WKT :
       }
     }
 }
+
 ```
 
 Exemple de fichier **JSON** correspondant :
@@ -90,6 +91,7 @@ Exemple de fichier **JSON** correspondant :
       "geometry": "POINT(8.8249 47.2274)"
   }
 ]
+
 ```
 
 Exemple de fichier **Schema JSON** utilisant une géométrie geoJSON de type Point:
@@ -337,18 +339,18 @@ Pour cela, on commence par créer la livraison :
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
-  ```json
-  {
-  "type": "INDEX",
-  "description": "TESTAUTOINDEXCUSTOM",
-  "name": "TESTAUTOINDEXCUSTOM",
-  "type_infos" : {
-      "is_search_layer" : false
-  },
-  "srs": "EPSG:4326"
-  }
+```json
+{
+    "type": "INDEX",
+    "description": "TESTAUTOINDEXCUSTOM",
+    "name": "TESTAUTOINDEXCUSTOM",
+    "type_infos" : {
+        "is_search_layer" : false
+    },
+    "srs": "EPSG:4326"
+    }
 
-  ```
+```
 ???
 <br>
 
@@ -377,7 +379,6 @@ Il faut ensuite ajouter les fichiers à la livraison (exemple pour un CSV) :
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/example_wkt.csv
 ```
-
     {{ component("table", {
         headers: ["Corps de requête Multipart"],
         data: [
