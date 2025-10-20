@@ -9,6 +9,3 @@ eleventyNavigation:
     nav: guides-developpeur
 pictogram: digital/search.svg
 ---
-
-{% from "components/component.njk" import component with context %}
-

@@ -1,6 +1,6 @@
 ---
 title: Recherche dans l'index standard
-description : Consultation du service de recherche de couche, identification des ressources publiées
+description: Consultation du service de recherche de couche, identification des ressources publiées
 mermaid: true
 summary:
     visible: true
@@ -26,7 +26,7 @@ La recherche standard permet de rechercher des informations de recherche (ou doc
 
 Les éléments de recherche sont synchronisés au moment de la publication (ou dépublication) des offres.
 
-On considère que ces documents de recherche font parti de l'index géoplateforme.
+On considère que ces documents de recherche font partie de l'index géoplateforme.
 
 ## Recherche Standard
 
@@ -40,25 +40,25 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
 
 ```json
 {
-    "title" : "Titre",
-    "layer_name" :  "layer_name", // Nom technique de la ressource
-    "description" : "Description",
-    "open" : true, // Visibilité de l'offre
-    "type" : "WMS", // Type d'offre
-    "theme" : "Thématique",
-    "keywords" : "Mots clefs associés",
-    "srs" : "EPSG:4326", // Projections
-    "shape" : GeoJSON, // liste de points géographique du document
+    "title": "Titre",
+    "layer_name":  "layer_name", // Nom technique de la ressource
+    "description": "Description",
+    "open": true, // Visibilité de l'offre
+    "type": "WMS", // Type d'offre
+    "theme": "Thématique",
+    "keywords": "Mots clefs associés",
+    "srs": "EPSG:4326", // Projections
+    "shape": "GeoJSON", // liste de points géographiques du document
     // exemple : "shape": { "type": "MultiPoint", "coordinates": [ [ 68.0, 44.0 ], [ 78.0, 28.0 ] ]}
-    "publication_date" : {"min_publication_date" : "2023-05-15", "max_publication_date" : "2023-12-01"},
+    "publication_date": {"min_publication_date": "2023-05-15", "max_publication_date": "2023-12-01"},
     // exemple : "publication_date" : { "min_publication_date" : "2023-05-15"}
-    "production_years" :  { "min" : 1920, "max" : 1922 },
-    "aggregation" : {"fields": ["type"]}, // pour demander une aggregation sur un champs des docuements de recherche
-    "highlight" : true, // Effectuer le highlight
-    "attribution_title" : "Géoportail",
-    "attribution_email" : "email",
-    "metadata_urls" : "true", // true pour ne retourner que les résultats avec une metadata URL
-    "producers" : "IGN"
+    "production_years":  { "min": 1920, "max": 1922 },
+    "aggregation": {"fields": ["type"]}, // pour demander une aggregation sur un champs des docuements de recherche
+    "highlight": true, // Effectuer le highlight
+    "attribution_title": "Géoportail",
+    "attribution_email": "email",
+    "metadata_urls": "true", // true pour ne retourner que les résultats avec une metadata URL
+    "producers": "IGN"
 }
 ```
 
@@ -77,7 +77,7 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
             "open": true,
             "theme": "BD_topo",
             "production_years": [
-            2023
+                2023
             ],
             "publication_date": "2023-09-18",
             "keywords": [
@@ -115,10 +115,10 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
             "srs": [
                 "EPSG:5490"
             ],
-            "extra" : {
-                "tag" : "topo"
+            "extra": {
+                "tag": "topo"
             },
-            "producers" : [
+            "producers": [
                 "IGN"
             ],
             "highlights": {}
@@ -188,23 +188,23 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
 ???
 <br>
 
-Si aucun champ n'est précisé dans le JSON, la réponse obtenue renvoit tous les documents présent dans l'index géoplateforme.
+Si aucun champ n'est précisé dans le JSON, la réponse obtenue renvoie tous les documents présent dans l'index géoplateforme.
 
 #### Highlight
 
-Le système du **highlight** permet de mettre en relief lors d'une recherche les elements qui matche celle-ci dans le texte.
+Le système du **highlight** permet de mettre en relief lors d'une recherche les éléments qui matchent celle-ci dans le texte.
 
-Cela permet notament de voir dans une petite liste de resultats possible au fur et a mesure que l'on écris dans une barre de recherche, les matches potentiels.
+Cela permet notamment de voir dans une petite liste de résultats possible au fur et à mesure que l'on écrit dans une barre de recherche, les matches potentiels.
 
-Dans l'API de recherche cela se traduit par un champs highlight dans la réponse, avec le texte html issue du document matchant deja mis en relief.
+Dans l'API de recherche cela se traduit par un champs highlight dans la réponse, avec le texte HTML issu du document matchant, déjà mis en relief.
 
 #### Aggregation
 
-Le système d'**aggrégration** permet de donner plus d'information lors de l'expériencxe de recherche, sur les possibles regroupements des docuyments matchant une recherche.
+Le système d'**agrégration** permet de donner plus d'information lors de l'expérience de recherche, sur les possibles regroupements des documents matchant une recherche.
 
-Par exemple si notre recherche se base sur les années de production 1920 a 1922, et que nous demandons uns aggregations sur le theme, on pourrait avoir 100 documents qui ont tous pour themes "Paris", et 500 autres tous pour theme "Lyon".
+Par exemple si notre recherche se base sur les années de production 1920 a 1922, et que nous demandons uns agrégations sur le theme, on pourrait avoir 100 documents qui ont tous pour thèmes "Paris", et 500 autres tous pour theme "Lyon".
 
-Cela donne donc plus d'information sur notre recherche et l'utilisateurs pourra peut etre affiner en incluyant Paris dans une future recherche.
+Cela donne donc plus d'information sur notre recherche et l'utilisateur pourra peut-être affiner en incluyant Paris dans une future recherche.
 
 L'aggregation n'est possible que sur des champs de texte.
 
@@ -222,9 +222,9 @@ Voici un exemple pour ajouter les différents tags après la création d'une con
 
 ```json
 {
-    "theme" : {un nom de theme},
-    "licence" : {licence},
-    "thumbnail" : {thumbnail}
+    "theme": "un nom de theme",
+    "licence": "licence",
+    "thumbnail": "thumbnail"
 }
 ```
 ???
@@ -232,7 +232,7 @@ Voici un exemple pour ajouter les différents tags après la création d'une con
 
 #### Champs *production_year* et *producer*
 
-Les champ *production_year* et *producer* sont aussi à définir manuellement mais, cette fois-ci, il est à définir à partir d'un tag de la **stored_data** de la donnée publiée. De même, le tag peut être ajouté au moment de la création de la configuration ou ajoutée par la suite :
+Les champs *production_year* et *producer* sont aussi à définir manuellement mais, cette fois-ci, il est à définir à partir d'un tag de la **stored_data** de la donnée publiée. De même, le tag peut être ajouté au moment de la création de la configuration ou ajouté par la suite :
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/tags"
 
@@ -242,8 +242,8 @@ Les champ *production_year* et *producer* sont aussi à définir manuellement ma
 
 ```json
 {
-    "production_year" : 2023,
-    "producer" : "IGN"
+    "production_year": 2023,
+    "producer": "IGN"
 }
 ```
 ???
@@ -263,12 +263,12 @@ Pour ajouter un champ extra dans la configuration :
 
 ```json
 {
-    "extra" : {
+    "extra": {
         "_search": {
-            "toto": "titi
+            "toto": "titi"
         },
         "interne": "secret",
-    },
+    }
 }
 ```
 ???
@@ -276,15 +276,15 @@ Pour ajouter un champ extra dans la configuration :
 
 Dans le service de recherche, nous retrouverons ainsi ce champ extra (après publication ou synchronisation de l'offre) :
 
-```
-"extra" : {
-    "toto": "titi
+```json
+"extra": {
+    "toto": "titi"
 },
 ```
 
 ## Suggestions par champ(s)
 
-La suggestion par champ permet une auto-complétion (sur les champs autorisés) du texte recherché suivant le champ demandé. La suggestion commence à partir de l'écriture de 3 lettres.
+La suggestion par champ permet une autocomplétion (sur les champs autorisés) du texte recherché suivant le champ demandé. La suggestion commence à partir de l'écriture de 3 lettres.
 
 Les champs utilisables pour la suggestion sont *title*, *description*, *layer_name*, *theme*, *keywords*, *producers*, *type*, *production_years* et *metadata_urls*. Il est possible d'avoir une suggestion sur tous ces champs en même temps à partir d'une requête de ce type :
 
@@ -294,12 +294,12 @@ Les champs utilisables pour la suggestion sont *title*, *description*, *layer_na
 {{ urls.open.search }}/api/indexes/geoplateforme/suggest
 ```
 
-    {{ component("table", {
-        headers: ["Paramètres de requête"],
-        data: [
-            ["text = `bd topo`"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Paramètres de requête"],
+    data: [
+        ["text = `bd topo`"]
+    ]
+}) }}
     
 
 ```json
@@ -473,13 +473,13 @@ Il est possible de ne rechercher que dans un seul champ en ajoutant un paramètr
 {{ urls.open.search }}/api/indexes/geoplateforme/suggest
 ```
 
-    {{ component("table", {
-        headers: ["Paramètres de requête"],
-        data: [
-            ["text = `bd topo`"],
-            ["fields = `keywords`"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Paramètres de requête"],
+    data: [
+        ["text = `bd topo`"],
+        ["fields = `keywords`"]
+    ]
+}) }}
     
 
 ```json
@@ -599,7 +599,7 @@ Il est aussi possible de préciser plusieurs champs sur lesquels effectuer la su
 
 ## Autocomplétion de titre
 
-L'autocomplétion de titre permet de de corriger les mots d'une recherche pour correspondre aux mots des champs du document. L'autocomplétion de titre est utilisable sur les champs suivant : *title*, *description*, *theme* et *keywords*.
+L'autocomplétion de titre permet de corriger les mots d'une recherche pour correspondre aux mots des champs du document. L'autocomplétion de titre est utilisable sur les champs suivants : *title*, *description*, *theme* et *keywords*.
 
 Sans précision du champs précisé, l'autocomplétion a lieu sur le champ *title* :
 
@@ -709,9 +709,9 @@ Mais, il est possible de préciser le champ sur lequel s'appuie l'autocomplétio
 ???
 <br>
 
-## Consultation par id d'un document
+## Consultation par ID d'un document
 
-Il est possible de retrouver un document de recherche à partir de son id :
+Il est possible de retrouver un document de recherche à partir de son ID :
 
 ??? GET "{{ urls.open.search }}/api/indexes/geoplateforme/documents/{document}"
 

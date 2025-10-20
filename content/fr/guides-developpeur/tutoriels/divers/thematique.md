@@ -2,7 +2,6 @@
 title: Mise en place d'un groupe thématique de couches
 description: Sélection d'un sous-partie des capacités d'un service et mise à disposition pour une utilisation dans un logiciel SIG
 mermaid: true
-layout: layouts/parent.njk
 eleventyNavigation:
     key: Mise en place d'un groupe thématique de couches
     parent: Utilisations diverses
@@ -24,15 +23,15 @@ On commence par télécharger les [capacités complètes]({{ urls.public.wfs }}?
 curl -o getcap.xml "{{ urls.open.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0"
 ```
 
-Le nettoyage doit se faire au sein des noeuds XML `wfs:WFS_Capabilities/FeatureTypeList/FeatureType`. Il est également possible de nettoyer les namespaces définis au niveau du noeud racine du document. Il est nécessaire de ne pas toucher aux autres éléments du document XML, afin que celui ci reste une réponse interprétable par les clients applicatifs consommant du WFS.
+Le nettoyage doit se faire au sein des nœuds XML `wfs:WFS_Capabilities/FeatureTypeList/FeatureType`. Il est également possible de nettoyer les _<span lang="en">namespaces</span>_ définis au niveau du noeud racine du document. Il est nécessaire de ne pas toucher aux autres éléments du document XML, afin que celui-ci reste une réponse interprétable par les clients applicatifs consommant du WFS.
 
-Les informations particulièrement importantes sont les URL à utiliser pour les requêtes de consultation (noeuds `wfs:WFS_Capabilities/ows:OperationsMetadata/ows:Operation`) : elles doivent bien correspondre au point d'accès cible.
+Les informations particulièrement importantes sont les URL à utiliser pour les requêtes de consultation (nœuds `wfs:WFS_Capabilities/ows:OperationsMetadata/ows:Operation`) : elles doivent bien correspondre au point d'accès cible.
 
 Il n'est pas nécessaire d'être le propriétaire des couches laissées dans la liste.
 
 ## Hébergement sous forme d'annexe
 
-Afin de rendre ce fichier accessible, nous allons le déposer au sein de l'entrepôt sous forme d'annexe. Il est bien sur possible de l'héberger de n'importe quelle manière, par un simple serveur de fichier.
+Afin de rendre ce fichier accessible, nous allons le déposer au sein de l'entrepôt sous forme d'annexe. Il est bien sûr possible de l'héberger de n'importe quelle manière, par un simple serveur de fichier.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 

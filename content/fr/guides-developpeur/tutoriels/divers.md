@@ -9,5 +9,3 @@ eleventyNavigation:
     nav: guides-developpeur
 pictogram: leisure/paint.svg
 ---
-
-{% from "components/component.njk" import component with context %}
