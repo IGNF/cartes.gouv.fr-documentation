@@ -1,15 +1,12 @@
 ---
 title: Consultation d'un organisme
 description: Lecture du contenu des communautés via leur organisme de rattachement
-mermaid: true
-layout: layouts/parent.njk
 eleventyNavigation:
     key: Consultation d'un organisme
     parent: Espaces de travail
     order: 2
     nav: guides-developpeur
 ---
-
 
 Lorsque l'on appartient à un organisme, on a la possibilité d'en gérer les membres et de lire le contenu de ses communautés.
 
@@ -34,7 +31,7 @@ Pour connaître les membres de l'organisme (pagination disponible) :
     {
         "last_name": "Oriale",
         "first_name": "Edith",
-        "email": "edith.orial@organization.org",
+        "email": "edith.oriale@organization.org",
         "_id": "{user}"
     }
 ]
@@ -101,15 +98,14 @@ Avoir la liste des communautés rattachées à l'organisme peut se faire via l'a
 ???
 <br>
 
-La liste des entités suivantes sont consultables au niveau de l'organisme. Dans les réponses, l'identifiant de la communauté et de l'entrepôt sont disponible pour pouvoir en consulter le détail. Les filtres présents sur les routes de consultation de l'entrepôt sont également disponibles dans ces routes (consulter les spécifications OpenAPI pour avoir le détail). Il est possible en plus de filtrer par communauté ou entrepôt.
+La liste des entités suivantes est consultable au niveau de l'organisme. Dans les réponses, l'identifiant de la communauté et de l'entrepôt sont disponibles pour pouvoir en consulter le détail. Les filtres présents sur les routes de consultation de l'entrepôt sont également disponibles dans ces routes (consulter les spécifications OpenAPI pour avoir le détail). Il est possible en plus de filtrer par communauté ou entrepôt.
 
 * les annexes : `GET {{ urls.api_entrepot }}/organizations/{organization}/annexes`
 * les configurations : `GET {{ urls.api_entrepot }}/organizations/{organization}/configurations`
 * les points d'accès disponibles, avec les quotas : `GET {{ urls.api_entrepot }}/organizations/{organization}/endpoints`
-* Les offres : `GET {{ urls.api_entrepot }}/organizations/{organization}/offerings`
+* les offres : `GET {{ urls.api_entrepot }}/organizations/{organization}/offerings`
 * les permissions : `GET {{ urls.api_entrepot }}/organizations/{organization}/permissions`
 * les exécutions de traitement : `GET {{ urls.api_entrepot }}/organizations/{organization}/processings/executions`
 * les fichiers statiques : `GET {{ urls.api_entrepot }}/organizations/{organization}/statics`
 * les données stockées : `GET {{ urls.api_entrepot }}/organizations/{organization}/stored_data`
 * les livraisons : `GET {{ urls.api_entrepot }}/organizations/{organization}/uploads`
-

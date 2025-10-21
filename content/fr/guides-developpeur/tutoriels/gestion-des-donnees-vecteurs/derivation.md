@@ -1,7 +1,6 @@
 ---
 title: Dérivation d'une donnée vecteur en base
-description: "Téléversement de fichier statique, modification ou création d'une donnée stockée vecteur à partir d'une autre"
-mermaid: true
+description: Téléversement de fichier statique, modification ou création d'une donnée stockée vecteur à partir d'une autre
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Dérivation d'une donnée vecteur en base

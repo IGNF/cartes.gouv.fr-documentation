@@ -1,8 +1,6 @@
 ---
 title: Gestion des membres d'une communauté
-description: Ajout ou suppresion de membres, définition des droits
-mermaid: true
-layout: layouts/parent.njk
+description: Ajout ou suppression de membres, définition des droits
 eleventyNavigation:
     key: Gestion des membres d'une communauté
     parent: Espaces de travail
@@ -18,7 +16,7 @@ Lorsque l'on appartient à une communauté avec le droit `COMMUNITY`, on a la po
 - Modifier les droits d'un membre
 - Exclure un membre
 
-Le membre superviseur de la communauté ne peut pas être exlu et possède forcément tous les droits.
+Le membre superviseur de la communauté ne peut pas être exclu et possède forcément tous les droits.
 
 ## Présentation des droits
 
@@ -26,11 +24,11 @@ Les droits sur une communauté sont très globaux : ils ne portent pas sur chaqu
 
 Les droits sont :
 
-- `ANNEX` : autorise le téléversement, la publication et la suppression des annexes
-- `UPLOAD` : autorise la création de livraisons, le téléversement de fichiers dans les livraisons, la fermeture/ouverture et la suppression
-- `BROADCAST` : autorise la configuration et la publication d'offres
-- `PROCESSING` : autorise la création d'exécutions de traitements et leur déclenchement
-- `COMMUNITY` : autorise la modification d'une communauté et la gestion de ses membres. Voir la liste des membres est l'une des rares lectures à n'être autorisée qu'en cas de possession de ce droit.
+- `ANNEX` : Autorise le téléversement, la publication et la suppression des annexes.
+- `UPLOAD` : Autorise la création de livraisons, le téléversement de fichiers dans les livraisons, la fermeture/ouverture et la suppression.
+- `BROADCAST` : Autorise la configuration et la publication d'offres.
+- `PROCESSING` : Autorise la création d'exécutions de traitements et leur déclenchement.
+- `COMMUNITY` : Autorise la modification d'une communauté et la gestion de ses membres. Voir la liste des membres est l'une des rares lectures à n'être autorisée qu'en cas de possession de ce droit.
 
 ## Connaître ses droits
 
@@ -124,7 +122,7 @@ Lorsque l'on récupère ses informations personnelles sur l'Entrepôt, on voit l
 
 ## Ajouter / modifier un membre
 
-Une seule route de l'API va permettre d'ajouter ou modifier les droits d'un membre (en mode "UPSERT"). Pour ajouter une personne, il faut avoir son identifiant Entrepôt. Cela implique qu'elle ait joué la requête de récupération des ses informations personnelles. Si la personne était déjà membre, on remplace ses droits par ceux définis dans le corps. Sinon on ajoute la personne avec ces droits.
+Une seule route de l'API va permettre d'ajouter ou modifier les droits d'un membre (en mode "UPSERT"). Pour ajouter une personne, il faut avoir son identifiant Entrepôt. Cela implique qu'elle ait joué la requête de récupération de ses informations personnelles. Si la personne était déjà membre, on remplace ses droits par ceux définis dans le corps. Sinon on ajoute la personne avec ces droits.
 
 ??? PUT "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
 
@@ -153,4 +151,3 @@ Une seule route de l'API va permettre d'ajouter ou modifier les droits d'un memb
 ```
 
 ???
-<br>

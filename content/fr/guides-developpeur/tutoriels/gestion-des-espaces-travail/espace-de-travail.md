@@ -1,9 +1,6 @@
 ---
 title: Gestion des espaces de travail
-description: Création des espaces de travail, affectation des ressources et définition des quotas. 
-<br> :warning: Nécessite d'avoir le rôle ADMINISTRATEUR
-mermaid: true
-layout: layouts/parent.njk
+description: Création des espaces de travail, affectation des ressources et définition des quotas
 eleventyNavigation:
     key: Gestion des espaces de travail
     parent: Espaces de travail
@@ -13,11 +10,11 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-Le but de ce tutoriel est de permettre à des utilisateurs **ayant le rôle ADMINISTRATOR** de créer et modifier des espaces de travail pour permettre à des producteurs de données d'utiliser l'Entrepôt Géoplateforme.
+Le but de ce tutoriel est de permettre à des utilisateurs **ayant le rôle ADMINISTRATEUR** de créer et de modifier des espaces de travail pour permettre à des producteurs de données d'utiliser l'Entrepôt Géoplateforme.
 
 ## Lister les entités globales
 
-Définir un espace de travail implique de connaître les ressources partagées pour les affecter avec quota. Il y 4 types de ressources partagées :
+Définir un espace de travail implique de connaître les ressources partagées pour les affecter avec quota. Il a y 4 types de ressources partagées :
 
 - Les espaces de stockages : **GET** `{{ urls.api_entrepot }}/administrator/storages`
 - Les points d'accès pour la diffusion des données : **GET** `{{ urls.api_entrepot }}/administrator/endpoints`
@@ -44,7 +41,6 @@ La communauté permet de définir les utilisateurs qui y ont accès et leurs dro
 }
 ```
 
-
 ```json
 {
     "name": "Communauté des tutoriels",
@@ -67,7 +63,7 @@ Le superviseur est un utilisateur qui a forcément tous les droits sur la commun
 
 ## Créer l'entrepôt
 
-Comme nous souhaitons mettre en place un espace de travail pour de producteur de données, nous allons associer à cette communauté d'utilisateurs un entrepôt. Une communauté sans entrepôt sera utile pour regrouper des consommateurs des flux et centraliser les permissions sur les offres de données (flux de diffusion).
+Comme nous souhaitons mettre en place un espace de travail pour des producteurs de données, nous allons associer à cette communauté d'utilisateurs un entrepôt. Une communauté sans entrepôt sera utile pour regrouper des consommateurs des flux et centraliser les permissions sur les offres de données (flux de diffusion).
 
 C'est au niveau de l'entrepôt que l'on va affecter tout ou partie des ressources partagées, potentiellement avec quota. On crée dans l'exemple un entrepôt pour la gestion de base de la donnée vecteur (sans tuiles vectorielles). On liste après l'exemple les ressources à attribuer pour chaque usage et par type.
 
@@ -228,8 +224,8 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {{ component("table", {
     headers: ["Usage commun"],
     data: [
-        ["Stockage : Stockage OpenIO pour les annexes = `" ~ ids.storages.s3_upload ~ "` (S3)"],
-        ["Stockage : Stockage OpenIO pour les livraisons = `" ~ ids.storages.s3_annexe ~ "` (S3)"],
+        ["Stockage : Stockage OpenIO pour les annexes = `" ~ ids.storages.s3_annexe ~ "` (S3)"],
+        ["Stockage : Stockage OpenIO pour les livraisons = `" ~ ids.storages.s3_upload ~ "` (S3)"],
         ["Vérification : Vérification standard = `" ~ ids.storages.s3_upload ~ "` (S3)"],
         ["Point d'accès : Catalogue des métadonnées = `" ~ ids.endpoints.open.csw ~ "` (CSW)"]
     ]
@@ -385,10 +381,12 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
   data: accessData
 }) }}
 
+???
+<br>
 
 ## Activer l'entrepôt
 
-À ce stade, l'entrepôt n'est pas utilisable car non activé. Pour l'activer, il suffit de modifier son champ `active`:
+À ce stade, l'entrepôt n'est pas utilisable car non activé. Pour l'activer, il suffit de modifier son champ `active` :
 
 ??? PATCH "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
 
@@ -404,7 +402,7 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 ???
 <br>
 
-Par la suite, il sera possible de désactiver un entrepôt pour bloquer instantanément tous les nouveaux appels sur celui ci. Rien n'est supprimé, mais cela permet de mettre en sécurité un entrepôt pour lequel une utilisation frauduleuse ou dangereurse est détectée.
+Par la suite, il sera possible de désactiver un entrepôt pour bloquer instantanément tous les nouveaux appels sur celui ci. Rien n'est supprimé, mais cela permet de mettre en sécurité un entrepôt pour lequel une utilisation frauduleuse ou dangereuse est détectée.
 
 ## Modifier un espace de travail
 
@@ -424,7 +422,7 @@ Il est possible de changer le superviseur d'une communauté après coup :
 ???
 <br>
 
-On peut également modifier les quotas après coup, ou donner accès à de nouveaux traitements. Il n'est pas nécessaire de tout fournie, mais seulement les parties à changer. Un exemple ici pour augmenter le quota de l'espace de livraison à 100 Go :
+On peut également modifier les quotas après coup, ou donner accès à de nouveaux traitements. Il n'est pas nécessaire de tout fournir, mais seulement les parties à changer. Un exemple ici pour augmenter le quota de l'espace de livraison à 100 Go :
 
 ??? request-patch "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
 
@@ -443,4 +441,3 @@ On peut également modifier les quotas après coup, ou donner accès à de nouve
 }
 ```
 ???
-<br>

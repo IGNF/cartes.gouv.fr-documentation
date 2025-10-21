@@ -1,6 +1,5 @@
 ---
 title: Exemple d'ajout de colonne avec valeur paramétrable
-mermaid: true
 eleventyNavigation:
     key: Exemple d'ajout de colonne avec valeur paramétrable
     parent: Dérivation d'une donnée vecteur en base

@@ -1,6 +1,5 @@
 ---
 title: Publication sur le service d'altimétrie
-mermaid: true
 eleventyNavigation:
     key: Publication sur le service d'altimétrie
     parent: Gestion de données MNT
@@ -108,15 +107,15 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
 {{ urls.open.alti }}/calcul/alti/rest/elevation.json
 ```
 
-    {{ component("table", {
-        headers: ["Paramètres de requête"],
-        data: [
-            ["resource = `lidarhd_test`"],
-            ["lon = `5.96|5.961`"],
-            ["lat = `45.13|45.131`"],
-            ["measures = `true`"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Paramètres de requête"],
+    data: [
+        ["resource = `lidarhd_test`"],
+        ["lon = `5.96|5.961`"],
+        ["lat = `45.13|45.131`"],
+        ["measures = `true`"]
+    ]
+}) }}
 
 ```json
 {

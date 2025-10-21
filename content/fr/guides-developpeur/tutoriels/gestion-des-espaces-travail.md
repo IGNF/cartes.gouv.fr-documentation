@@ -9,4 +9,3 @@ eleventyNavigation:
     nav: guides-developpeur
 pictogram: environment/human-cooperation.svg
 ---
-

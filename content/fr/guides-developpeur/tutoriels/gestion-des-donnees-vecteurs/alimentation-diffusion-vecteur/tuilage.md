@@ -1,6 +1,5 @@
 ---
 title: Diffusion en tuiles vectorielles précalculée
-mermaid: true
 eleventyComputed:
     markdownTemplateEngine: njk
 eleventyNavigation:

@@ -1,6 +1,5 @@
 ---
 title: Livraison des données archives
-mermaid: true
 eleventyNavigation:
     key: Livraison des données archives
     parent: Alimentation et diffusion simple d'archives
@@ -38,7 +37,6 @@ Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera si
 }
 ```
 
-
 ```json
 {
     "name": "Données départementales",
@@ -68,8 +66,6 @@ Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera si
 
 Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La seule contrainte est sur le nommage : on ne peut pas avoir deux fichiers qui ont le même nom à des endroits différents de l'arborescence de la livraison. La vérification sortirait en erreur. Les fichiers étant stockés de manière pérenne à plat, on ne veut pas de conflit sur le nommage.
 
-
-
 📄 `<DEPARTEMENT.cpg>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.cpg"
 
@@ -77,12 +73,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.cpg
 ```
 
-    {{ component("table", {
-        headers: ["Corps de requête Multipart"],
-        data: [
-            ["file = `<DEPARTEMENT.cpg>`"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<DEPARTEMENT.cpg>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -93,13 +89,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.dbf
 ```
 
-    {{ component("table", {
-        headers: ["Corps de requête Multipart"],
-        data: [
-            ["file = `<DEPARTEMENT.dbf>`"]
-        ]
-    }) }}
-
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<DEPARTEMENT.dbf>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -110,12 +105,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.prj
 ```
 
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<DEPARTEMENT.prj>`"]
-            ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<DEPARTEMENT.prj>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -126,13 +121,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.shp
 ```
 
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<DEPARTEMENT.shp>`"]
-            ]
-    }) }}
-
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<DEPARTEMENT.shp>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -142,12 +136,13 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.shx
 ```
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<DEPARTEMENT.shx>`"]
-            ]
-    }) }}
+
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<DEPARTEMENT.shx>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -157,12 +152,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.cpg
 ```
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<LIMITE_DEPARTEMENT.cpg>`"]
-            ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<LIMITE_DEPARTEMENT.cpg>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -173,12 +168,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.dbf
 ```
 
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<LIMITE_DEPARTEMENT.dbf>`"]
-            ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<LIMITE_DEPARTEMENT.dbf>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -189,12 +184,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.prj
 ```
 
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<LIMITE_DEPARTEMENT.prj>`"]
-            ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<LIMITE_DEPARTEMENT.prj>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -205,13 +200,13 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.shp
 ```
 
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<LIMITE_DEPARTEMENT.shp>`"]
-            ]
-    }) }}
-???
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<LIMITE_DEPARTEMENT.shp>`"]
+    ]
+}) }}
+
 <br>
 
 📄 `<LIMITE_DEPARTEMENT.shx>`
@@ -221,13 +216,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.shx
 ```
 
-    {{ component("table", {
-            headers: ["Corps de requête Multipart"],
-            data: [
-                ["file = `<LIMITE_DEPARTEMENT.shx>`"]
-            ]
-    }) }}
-
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<LIMITE_DEPARTEMENT.shx>`"]
+    ]
+}) }}
 ???
 <br>
 
@@ -387,4 +381,3 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 }
 ```
 ???
-<br>

@@ -1,6 +1,5 @@
 ---
 title: Configuration de la diffusion en téléchargement
-mermaid: true
 eleventyNavigation:
     key: Configuration de la diffusion en téléchargement
     parent: Alimentation et diffusion simple d'archives
@@ -74,12 +73,12 @@ Voici un exemple pour voir la nomenclature des zones :
 {{ urls.api_entrepot }}/statics/nomenclatures
 ```
 
-    {{ component("table", {
-        headers: ["Paramètres de requête"],
-        data: [
-            ["type = `ZONE`"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Paramètres de requête"],
+    data: [
+        ["type = `ZONE`"]
+    ]
+}) }}
 
 ```json
     [
@@ -171,23 +170,21 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
 {{ urls.open.download }}/capabilities
 ```
 
-    {{ component("table", {
-        headers: ["Paramètres de requête"],
-        data: [
-            ["crs = `https://www.opengis.net/def/crs/EPSG/0/2154`"],
-            ["zone = `FXX`"],
-            ["format = `SHP`"],
-            ["editionDateTo = `2024-09-16`"]
-        ]
-    }) }}
-
-    {{ component("table", {
-        headers: ["En-tête de requête"],
-        data: [
-            ["Accept = `application/json`"]
-        ]
-    }) }}
-
+{{ component("table", {
+    headers: ["Paramètres de requête"],
+    data: [
+        ["crs = `https://www.opengis.net/def/crs/EPSG/0/2154`"],
+        ["zone = `FXX`"],
+        ["format = `SHP`"],
+        ["editionDateTo = `2024-09-16`"]
+    ]
+}) }}
+{{ component("table", {
+    headers: ["En-tête de requête"],
+    data: [
+        ["Accept = `application/json`"]
+    ]
+}) }}
 
 ```json
 {
@@ -306,12 +303,12 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
 {{ urls.open.download }}/resource/limites_administratives
 ```
 
-    {{ component("table", {
-        headers: ["En-tête de requête"],
-        data: [
-            ["Accept = `application/json`"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["En-tête de requête"],
+    data: [
+        ["Accept = `application/json`"]
+    ]
+}) }}
     
 ```json
 {
@@ -445,24 +442,20 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
     "subtitle": "Départements et limites départementales, au format Shapefile, sur la France métropolitaine",
     "id": "{{ urls.open.download }}/resource/limites_administratives/departements",
     "updated": "2024-09-16",
-    "zone":
-    {
+    "zone": {
         "term": "FXX",
         "label": "France métropolitaine"
     },
-    "format":
-    {
+    "format": {
         "term": "SHP",
         "label": "Shapefile"
     },
-    "resolution":
-    {
+    "resolution": {
         "term": "1m",
         "label": "Précision à 1 mètre"
     },
     "editionDate": "2022-09-30",
-    "link":
-    [
+    "link": [
         {
             "href": "{{ urls.open.download }}/resource/limites_administratives/departements?lang=fr",
             "hreflang": "fr",
@@ -485,11 +478,9 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             "bbox": null
         }
     ],
-    "entry":
-    [
+    "entry": [
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg",
                     "rel": "alternate",
@@ -500,21 +491,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg",
             "content": "ed16c6bc54359dade2e7fafa83607f16",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "image/x-cpg"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf",
                     "rel": "alternate",
@@ -525,21 +513,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf",
             "content": "d9c1ff8f8980daa8f9b969a429987673",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "application/octet-stream"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.prj",
                     "rel": "alternate",
@@ -550,21 +535,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.prj",
             "content": "a125df3368127b8203a6c823c4e2b881",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "image/x-prj"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shp",
                     "rel": "alternate",
@@ -575,21 +557,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shp",
             "content": "ab9b820b4c50936862f45f21eb434d82",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "application/x-shapefile"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shx",
                     "rel": "alternate",
@@ -600,21 +579,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shx",
             "content": "1b4b27aa51e8c981c80fc009c5612f36",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "application/octet-stream"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg",
                     "rel": "alternate",
@@ -625,21 +601,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg",
             "content": "ed16c6bc54359dade2e7fafa83607f16",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "image/x-cpg"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf",
                     "rel": "alternate",
@@ -650,21 +623,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf",
             "content": "d5b48ce0035f521dba949d29cf6c7770",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "application/octet-stream"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj",
                     "rel": "alternate",
@@ -675,21 +645,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj",
             "content": "a125df3368127b8203a6c823c4e2b881",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "image/x-prj"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp",
                     "rel": "alternate",
@@ -700,21 +667,18 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp",
             "content": "afd8b8f3d13da008b5305fe49e8ccab3",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "application/x-shapefile"
             ]
         },
         {
-            "link":
-            [
+            "link": [
                 {
                     "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx",
                     "rel": "alternate",
@@ -725,15 +689,13 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             ],
             "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx",
             "content": "bcef9e262f77e5b1dcfe1eed5e14f935",
-            "category":
-            [
+            "category": [
                 {
                     "term": "https://www.opengis.net/def/crs/EPSG/0/2154",
                     "label": "RGF93 v1 / Lambert-93 -- France"
                 }
             ],
-            "mime_type":
-            [
+            "mime_type": [
                 "application/octet-stream"
             ]
         }

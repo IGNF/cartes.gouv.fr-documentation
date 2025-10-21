@@ -1,6 +1,5 @@
 ---
 title: Publication en WMTS/TMS
-mermaid: true
 eleventyNavigation:
     key: Publication en WMTS/TMS
     parent: Alimentation et diffusion simple raster
