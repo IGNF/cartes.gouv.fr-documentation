@@ -1,7 +1,9 @@
 module.exports = {
     lang: "fr",
     urls: {
+        iam: "https://sso.geopf.fr/realms/geoplateforme",
         api_entrepot: "https://data.geopf.fr/api",
+        swagger: "https://data.geopf.fr/api/swagger-ui/index.html",
         annexes: "https://data.geopf.fr/annexes",
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
@@ -17,6 +19,9 @@ module.exports = {
             csw: "https://data.geopf.fr/csw",
             download: "https://data.geopf.fr/telechargement",
         },
+    },
+    secrets: {
+        qgis: process.env.QGIS_SECRET,
     },
     permalink: function (data) {
         if (data.slugOverride) {
