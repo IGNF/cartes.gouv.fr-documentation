@@ -27,10 +27,10 @@
                         </div>
                     </div>
                     <div class="fr-header__service">
-                        <a href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.description }} - {{ metadata.title }}">
+                        <a href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.subtitle }} - {{ metadata.title }}">
                             <p class="fr-header__service-title">
                                 {{ metadata.title }}
-                                <span class="fr-badge fr-badge--brown-opera"><span class="fr-icon-question-fill fr-icon--sm"></span>&nbsp;Aide</span>
+                                <span class="fr-badge fr-badge--brown-opera"><span class="fr-icon-question-fill fr-icon--sm"></span>&nbsp;{{ metadata.subtitle }}</span>
                                 <span class="fr-badge fr-badge--success fr-badge--no-icon">Bêta</span>
                             </p>
                         </a>

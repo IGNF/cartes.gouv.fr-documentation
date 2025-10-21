@@ -23,6 +23,6 @@ services:
             - web_dev
         labels:
             - "traefik.enable=true"
-            - "traefik.http.routers.cartesgouvfr-documentation.rule=Host(`cartesgouvfr-documentation.docker.localhost`) && PathPrefix(`/documentation`)"
+            - "traefik.http.routers.cartesgouvfr-documentation.rule=Host(`cartesgouvfr-documentation.docker.localhost`) && PathPrefix(`/aide`)"
             - "traefik.http.routers.cartesgouvfr-documentation.entrypoints=websecure"
             - "traefik.http.services.cartesgouvfr-documentation.loadbalancer.server.port=8082"
