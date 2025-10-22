@@ -1,6 +1,5 @@
 ---
 title: Alimentation avec FME
-mermaid: true
 eleventyNavigation:
     key: Alimentation avec FME
     parent: Alimentation et diffusion simple vecteur

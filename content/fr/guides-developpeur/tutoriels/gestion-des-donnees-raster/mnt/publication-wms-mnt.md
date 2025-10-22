@@ -1,6 +1,5 @@
 ---
 title: Publication en WMS
-mermaid: true
 eleventyNavigation:
     key: Publication en WMS
     parent: Gestion de données MNT
@@ -38,16 +37,15 @@ Pour obtenir une URL publique pointant sur notre légende, nous allons la télé
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
 
-    {{ component("table", {
-        headers: ["Corps de requête Multipart"],
-        data: [
-            ["file = `<hypso_legende.png>`"],
-            ["paths = legendes/teintes_hypsometriques.png"],
-            ["published = `true`"],
-            ["labels = legende"]
-        ]
-    }) }}
-
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = `<hypso_legende.png>`"],
+        ["paths = legendes/teintes_hypsometriques.png"],
+        ["published = `true`"],
+        ["labels = legende"]
+    ]
+}) }}
 ???
 <br>
 
@@ -100,14 +98,14 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
-    {{ component("table", {
-        headers: ["Corps de requête Multipart"],
-        data: [
-            ["file = <hypso.json>"],
-            ["type = ROK4-STYLE"],
-            ["name = Teintes hypsométriques"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = <hypso.json>"],
+        ["type = ROK4-STYLE"],
+        ["name = Teintes hypsométriques"]
+    ]
+}) }}
 
 ```json
 {
@@ -151,15 +149,14 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
-
-    {{ component("table", {
-        headers: ["Corps de requête Multipart"],
-        data: [
-            ["file = <normal.json>"],
-            ["type = ROK4-STYLE"],
-            ["name = Données brutes"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = <normal.json>"],
+        ["type = ROK4-STYLE"],
+        ["name = Données brutes"]
+    ]
+}) }}  
 
 ```json
 {

@@ -1,6 +1,5 @@
 ---
 title: Publication en WMS
-mermaid: true
 eleventyNavigation:
     key: Publication en WMS
     parent: Alimentation et diffusion simple raster

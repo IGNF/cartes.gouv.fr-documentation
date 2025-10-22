@@ -1,7 +1,6 @@
 ---
 title: Alimentation par mise à jour
 description: Téléversement d'images géoréférencées, mise à jour de pyramides par injection ou par référence, composition à posteriori
-mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Alimentation par mise à jour raster
