@@ -1,8 +1,8 @@
 module.exports = {
     title: "cartes.gouv.fr",
-    url: "https://cartes.gouv.fr/documentation",
+    url: "https://cartes.gouv.fr/aide",
     contact_form_url: "https://cartes.gouv.fr/nous-ecrire",
-    site_url: "https://cartes.gouv.fr/documentation",
+    site_url: "https://cartes.gouv.fr/aide",
     newsletter: [
         {
             url: "",
@@ -21,7 +21,8 @@ module.exports = {
     sourcehut_url: "",
     repository_url: "https://github.com/IGNF/cartes.gouv.fr-documentation",
     language: "fr",
-    description: "Documentation",
+    subtitle: "Aide",
+    description: "Le service public des cartes et données du territoire",
     author: {
         name: "IGN",
         email: "geoplateforme@ign.fr",

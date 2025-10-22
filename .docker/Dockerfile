@@ -9,7 +9,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm ci \
-	&& SITE_ENV=production npx @11ty/eleventy --pathprefix=/documentation \
+	&& SITE_ENV=production npx @11ty/eleventy --pathprefix=/aide \
 	&& npx pagefind --site _site/ --output-subdir \"_pagefind\" \
 	&& rm -rf node_modules .git
 
