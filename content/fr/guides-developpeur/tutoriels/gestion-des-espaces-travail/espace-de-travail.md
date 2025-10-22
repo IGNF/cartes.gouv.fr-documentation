@@ -10,16 +10,16 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-Le but de ce tutoriel est de permettre à des utilisateurs **ayant le rôle ADMINISTRATEUR** de créer et de modifier des espaces de travail pour permettre à des producteurs de données d'utiliser l'Entrepôt Géoplateforme.
+Le but de ce tutoriel est de permettre à des utilisateurs **ayant le rôle ADMINISTRATEUR** de créer et de modifier des espaces de travail pour permettre à des producteurs de données d’utiliser l’Entrepôt Géoplateforme.
 
 ## Lister les entités globales
 
-Définir un espace de travail implique de connaître les ressources partagées pour les affecter avec quota. Il a y 4 types de ressources partagées :
+Définir un espace de travail implique de connaître les ressources partagées pour les affecter avec quota. Il a y 4 types de ressources partagées :
 
-- Les espaces de stockages : **GET** `{{ urls.api_entrepot }}/administrator/storages`
-- Les points d'accès pour la diffusion des données : **GET** `{{ urls.api_entrepot }}/administrator/endpoints`
-- Les vérifications pour les livraisons : **GET** `{{ urls.api_entrepot }}/administrator/checks`
-- Les traitements : **GET** `{{ urls.api_entrepot }}/administrator/processings`
+- Les espaces de stockages : **GET** `{{ urls.api_entrepot }}/administrator/storages`
+- Les points d’accès pour la diffusion des données : **GET** `{{ urls.api_entrepot }}/administrator/endpoints`
+- Les vérifications pour les livraisons : **GET** `{{ urls.api_entrepot }}/administrator/checks`
+- Les traitements : **GET** `{{ urls.api_entrepot }}/administrator/processings`
 
 ## Créer la communauté
 
@@ -59,13 +59,13 @@ La communauté permet de définir les utilisateurs qui y ont accès et leurs dro
 ???
 <br>
 
-Le superviseur est un utilisateur qui a forcément tous les droits sur la communauté et ne peut pas être enlevé. Cela assure la présence d'au moins une personne qui pourra en faire entrer d'autres.
+Le superviseur est un utilisateur qui a forcément tous les droits sur la communauté et ne peut pas être enlevé. Cela assure la présence d’au moins une personne qui pourra en faire entrer d’autres.
 
-## Créer l'entrepôt
+## Créer l’entrepôt
 
-Comme nous souhaitons mettre en place un espace de travail pour des producteurs de données, nous allons associer à cette communauté d'utilisateurs un entrepôt. Une communauté sans entrepôt sera utile pour regrouper des consommateurs des flux et centraliser les permissions sur les offres de données (flux de diffusion).
+Comme nous souhaitons mettre en place un espace de travail pour des producteurs de données, nous allons associer à cette communauté d’utilisateurs un entrepôt. Une communauté sans entrepôt sera utile pour regrouper des consommateurs des flux et centraliser les permissions sur les offres de données (flux de diffusion).
 
-C'est au niveau de l'entrepôt que l'on va affecter tout ou partie des ressources partagées, potentiellement avec quota. On crée dans l'exemple un entrepôt pour la gestion de base de la donnée vecteur (sans tuiles vectorielles). On liste après l'exemple les ressources à attribuer pour chaque usage et par type.
+C’est au niveau de l’entrepôt que l’on va affecter tout ou partie des ressources partagées, potentiellement avec quota. On crée dans l’exemple un entrepôt pour la gestion de base de la donnée vecteur (sans tuiles vectorielles). On liste après l’exemple les ressources à attribuer pour chaque usage et par type.
 
 ??? POST "{{ urls.api_entrepot }}/administrator/datastores"
 
@@ -217,7 +217,7 @@ C'est au niveau de l'entrepôt que l'on va affecter tout ou partie des ressource
 ???
 <br>
 
-Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès sont en nombre d'offres.
+Les quotas de stockage sont à définir en octets. Ceux sur les points d’accès sont en nombre d’offres.
 
 ??? ABSTRACT "Ressources par usage"
 
@@ -227,7 +227,7 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
         ["Stockage : Stockage OpenIO pour les annexes = `" ~ ids.storages.s3_annexe ~ "` (S3)"],
         ["Stockage : Stockage OpenIO pour les livraisons = `" ~ ids.storages.s3_upload ~ "` (S3)"],
         ["Vérification : Vérification standard = `" ~ ids.storages.s3_upload ~ "` (S3)"],
-        ["Point d'accès : Catalogue des métadonnées = `" ~ ids.endpoints.open.csw ~ "` (CSW)"]
+        ["Point d’accès : Catalogue des métadonnées = `" ~ ids.endpoints.open.csw ~ "` (CSW)"]
     ]
 }) }} 
     
@@ -237,8 +237,8 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
         ["Stockage : Stockage en base pour les données vecteur des partenaires = `" ~ ids.storages.postgresql ~ "` (POSTGRESQL)`" ~ ids.storages.postgresql ~ "`(POSTGRESQL)"],
         ["Vérification : Vérification vecteur =  `" ~ ids.checks.vector ~ "`"],
         ["Traitement : Intégration en base = `" ~ ids.processings['vector_to_db'] ~ "`"],
-        ["Point d'accès : Service de diffusion WMS Vecteur principal = `" ~ ids.endpoints.open.wmsv ~ "` (WMS-VECTOR)"],
-        ["Point d'accès : Service de diffusion WFS principal = `" ~ ids.endpoints.open.wfs ~ "` (WFS)"]
+        ["Point d’accès : Service de diffusion WMS Vecteur principal = `" ~ ids.endpoints.open.wmsv ~ "` (WMS-VECTOR)"],
+        ["Point d’accès : Service de diffusion WFS principal = `" ~ ids.endpoints.open.wfs ~ "` (WFS)"]
     ]
 }) }} 
 
@@ -247,7 +247,7 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
     headers: ["Usage vecteur avancé"],
     data: [
         ["Traitement : Calcul de pyramide vecteur = `" ~ ids.processings['db_to_pyramid'] ~ "`"],
-        ["Point d'accès : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"]
+        ["Point d’accès : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"]
     ]
 }) }} 
 
@@ -260,8 +260,8 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
         ["Traitements : Calcul de pyramide raster = `" ~ ids.processings['raster_to_pyramid'] ~ "`"],
         ["Traitements : Calcul ou mise à jour de pyramide raster par moissonnage WMS = `" ~ ids.processings['wms_to_pyramid'] ~ "`"],
         ["Traitements : Fusion de pyramides raster = `" ~ ids.processings['pyramids_to_pyramid'] ~ "`"],
-        ["Points d'accès : Service de diffusion WMS Raster principal = `" ~ ids.endpoints.open.wmsr ~ "` (WMS-RASTER)"],
-        ["Points d'accès : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"]
+        ["Points d’accès : Service de diffusion WMS Raster principal = `" ~ ids.endpoints.open.wmsr ~ "` (WMS-RASTER)"],
+        ["Points d’accès : Service de diffusion WMTS/TMS principal = `" ~ ids.endpoints.open.wmts ~ "` (WMTS-TMS)"]
     ]
 }) }} 
 
@@ -271,8 +271,8 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
     data: [
         ["Stockage : Stockage OpenIO performant pour les données archives des partenaires = `" ~ ids.storages.s3_data_archive ~ "` (S3)"],
         ["Vérification : Vérification archive = `" ~ ids.checks.archive ~ "`"],
-        ["Traitements : Recopie d'une archive livrée = `" ~ ids.processings['archive_to_archive'] ~ "`"],
-        ["Points d'accès : Service de Téléchargement principal = `" ~ ids.endpoints.open.download ~ "` (DOWNLOAD)"]
+        ["Traitements : Recopie d’une archive livrée = `" ~ ids.processings['archive_to_archive'] ~ "`"],
+        ["Points d’accès : Service de Téléchargement principal = `" ~ ids.endpoints.open.download ~ "` (DOWNLOAD)"]
     ]
 }) }} 
 
@@ -297,7 +297,7 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
     headers: ["Traitements"],
     data: [
         ["Intégration de données vecteur livrées en base = `" ~ ids.processings['vector_to_db'] ~ "`"],
-        ["Recopie d'une archive livrée = `" ~ ids.processings['archive_to_archive'] ~ "`"],
+        ["Recopie d’une archive livrée = `" ~ ids.processings['archive_to_archive'] ~ "`"],
         ["Calcul de pyramide raster  = `" ~ ids.processings['raster_to_pyramid'] ~ "`"],
         ["Calcul ou mise à jour de pyramide raster par moissonnage WMS = `" ~ ids.processings['wms_to_pyramid'] ~ "`"],
         ["Fusion de pyramides raster = `" ~ ids.processings['pyramids_to_pyramid'] ~ "`"],
@@ -343,10 +343,10 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {# Service CSW + optionnels #}
 {% set cswEntry = "Service de diffusion CSW = `" ~ ids.endpoints.open.csw ~ "` (METADATA)" %}
 {% if ids.endpoints.open.alti %}
-  {% set cswEntry = cswEntry + "<br> Service d'altimétrie : `" ~ ids.endpoints.open.alti ~ "` (ALTI)" %}
+  {% set cswEntry = cswEntry + "<br> Service d’altimétrie : `" ~ ids.endpoints.open.alti ~ "` (ALTI)" %}
 {% endif %}
 {% if ids.endpoints.open.itinerary %}
-  {% set cswEntry = cswEntry + "<br> Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.open.itinerary ~ "` (ITINERARY-ISOCURVE)" %}
+  {% set cswEntry = cswEntry + "<br> Service d’itinéraire et d’isochrone : `" ~ ids.endpoints.open.itinerary ~ "` (ITINERARY-ISOCURVE)" %}
 {% endif %}
 {% if ids.endpoints.open.search %}
   {% set cswEntry = cswEntry + "<br> Service de recherche : `" ~ ids.endpoints.open.search ~ "` (SEARCH)" %}
@@ -363,11 +363,11 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {% set wmtsEntry = "Service de diffusion WMTS/TMS privé = `" ~ ids.endpoints.private.wmts ~ "` (WMTS-TMS)" %}
 
 {% if ids.endpoints.private.alti %}
-  {% set wmtsEntry = wmtsEntry + " </br> Service d'altimétrie : `" ~ ids.endpoints.private.alti ~ "` (ALTI)" %}
+  {% set wmtsEntry = wmtsEntry + " </br> Service d’altimétrie : `" ~ ids.endpoints.private.alti ~ "` (ALTI)" %}
 {% endif %}
 
 {% if ids.endpoints.private.itinerary %}
-  {% set wmtsEntry = wmtsEntry + " </br> Service d'itinéraire et d'isochrone : `" ~ ids.endpoints.private.itinerary ~ "` (ITINERARY-ISOCURVE)" %}
+  {% set wmtsEntry = wmtsEntry + " </br> Service d’itinéraire et d’isochrone : `" ~ ids.endpoints.private.itinerary ~ "` (ITINERARY-ISOCURVE)" %}
 {% endif %}
 
 {% if ids.endpoints.private.search %}
@@ -377,16 +377,16 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 {% set _ = accessData.push([wmtsEntry]) %}
 
 {{ component("table", {
-  headers: ["Points d'accès"],
+  headers: ["Points d’accès"],
   data: accessData
 }) }}
 
 ???
 <br>
 
-## Activer l'entrepôt
+## Activer l’entrepôt
 
-À ce stade, l'entrepôt n'est pas utilisable car non activé. Pour l'activer, il suffit de modifier son champ `active` :
+À ce stade, l’entrepôt n’est pas utilisable car non activé. Pour l’activer, il suffit de modifier son champ `active` :
 
 ??? PATCH "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
 
@@ -402,11 +402,11 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d'accès 
 ???
 <br>
 
-Par la suite, il sera possible de désactiver un entrepôt pour bloquer instantanément tous les nouveaux appels sur celui ci. Rien n'est supprimé, mais cela permet de mettre en sécurité un entrepôt pour lequel une utilisation frauduleuse ou dangereuse est détectée.
+Par la suite, il sera possible de désactiver un entrepôt pour bloquer instantanément tous les nouveaux appels sur celui ci. Rien n’est supprimé, mais cela permet de mettre en sécurité un entrepôt pour lequel une utilisation frauduleuse ou dangereuse est détectée.
 
 ## Modifier un espace de travail
 
-Il est possible de changer le superviseur d'une communauté après coup :
+Il est possible de changer le superviseur d’une communauté après coup :
 
 ??? PATCH "{{ urls.api_entrepot }}/administrator/communities/{community}"
 
@@ -422,7 +422,7 @@ Il est possible de changer le superviseur d'une communauté après coup :
 ???
 <br>
 
-On peut également modifier les quotas après coup, ou donner accès à de nouveaux traitements. Il n'est pas nécessaire de tout fournir, mais seulement les parties à changer. Un exemple ici pour augmenter le quota de l'espace de livraison à 100 Go :
+On peut également modifier les quotas après coup, ou donner accès à de nouveaux traitements. Il n’est pas nécessaire de tout fournir, mais seulement les parties à changer. Un exemple ici pour augmenter le quota de l’espace de livraison à 100 Go :
 
 ??? request-patch "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
 
