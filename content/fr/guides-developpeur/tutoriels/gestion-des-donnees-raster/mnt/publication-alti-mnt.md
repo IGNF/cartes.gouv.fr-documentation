@@ -101,10 +101,10 @@ Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
 
 On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le [getCapabilities du service]({{ urls.public.alti }}/resources). Voici un exemple de demande d'altitude en deux points :
 
-??? GET "{{ urls.open.alti }}/calcul/alti/rest/elevation.json"
+??? GET "{{ urls.public.alti }}/calcul/alti/rest/elevation.json"
 
 ```title="Contenu"
-{{ urls.open.alti }}/calcul/alti/rest/elevation.json
+{{ urls.public.alti }}/calcul/alti/rest/elevation.json
 ```
 
 {{ component("table", {

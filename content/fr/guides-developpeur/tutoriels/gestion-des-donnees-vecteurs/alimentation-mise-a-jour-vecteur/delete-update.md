@@ -220,7 +220,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 
 ```json
 {
-    "processing": "{{ ids.processings['vector-to-db'] }}",
+    "processing": "{{ ids.processings['vector_to_db'] }}",
     "inputs": {
         "upload": [
             "{upload suppression modification}}"
@@ -243,7 +243,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 {
     "processing": {
         "name": "Intégration de données vecteur livrées en base",
-        "_id": "{{ ids.processings['vector-to-db'] }}"
+        "_id": "{{ ids.processings['vector_to_db'] }}"
     },
     "status": "CREATED",
     "creation": "2023-10-20T12:44:07.451183707Z",

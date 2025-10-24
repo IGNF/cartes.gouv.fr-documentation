@@ -7,6 +7,14 @@ module.exports = {
         annexes: "https://data.geopf.fr/annexes",
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
+            wmsv: "https://data.geopf.fr/private/wms-v",
+            wmts: "https://data.geopf.fr/private/wmts",
+            tms: "https://data.geopf.fr/private/tms",
+            wmsr: "https://data.geopf.fr/private/wms-r",
+            download: "https://data.geopf.fr/private/telechargement",
+            alti: "https://data.geopf.fr/private/altimetrie",
+            iti_iso: "https://data.geopf.fr/private/navigation",
+            search: "https://data.geopf.fr/private/recherche",
         },
         public: {
             wfs: "https://data.geopf.fr/wfs",
@@ -18,6 +26,7 @@ module.exports = {
             alti: "https://data.geopf.fr/altimetrie",
             csw: "https://data.geopf.fr/csw",
             download: "https://data.geopf.fr/telechargement",
+            search: "https://data.geopf.fr/recherche",
         },
     },
     secrets: {

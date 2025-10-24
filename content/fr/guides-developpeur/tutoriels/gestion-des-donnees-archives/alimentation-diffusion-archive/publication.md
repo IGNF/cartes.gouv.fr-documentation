@@ -164,10 +164,10 @@ C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
 
 En consultant les [capacités du service de téléchargement]({{ urls.public.download }}/capabilities), on retrouve notre couche (on demande ici la réponse en JSON, c'est le format XML Atom par défaut). On va également filtrer sur nos valeurs spécifiques pour n'avoir que notre résultat.
 
-??? GET "{{ urls.open.download }}/capabilities"
+??? GET "{{ urls.public.download }}/capabilities"
 
 ``` title="Contenu" 
-{{ urls.open.download }}/capabilities
+{{ urls.public.download }}/capabilities
 ```
 
 {{ component("table", {
@@ -179,6 +179,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
         ["editionDateTo = `2024-09-16`"]
     ]
 }) }}
+
 {{ component("table", {
     headers: ["En-tête de requête"],
     data: [
@@ -199,7 +200,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
     "totalentries": 1,
     "title": "Public Download Service of Géoplateforme",
     "subtitle": "This Download Service allows you to download public datasources",
-    "id": "{{ urls.open.download }}/capabilities",
+    "id": "{{ urls.public.download }}/capabilities",
     "rights": "Conditions Générales d'Utilisation disponibles ici : https://cartes.gouv.fr/cgu-licences",
     "updated": "2024-09-17",
     "author":
@@ -210,14 +211,14 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
     "link":
     [
         {
-            "href": "{{ urls.open.download }}/capabilities",
+            "href": "{{ urls.public.download }}/capabilities",
             "rel": "self",
             "type": "application/atom+xml",
             "title": "This document",
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/capabilities?lang=en",
+            "href": "{{ urls.public.download }}/capabilities?lang=en",
             "hreflang": "en",
             "rel": "alternate",
             "type": "application/atom+xml",
@@ -225,7 +226,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/capabilities?lang=fr",
+            "href": "{{ urls.public.download }}/capabilities?lang=fr",
             "hreflang": "fr",
             "rel": "alternate",
             "type": "application/atom+xml",
@@ -233,7 +234,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/capabilities",
+            "href": "{{ urls.public.download }}/capabilities",
             "rel": "up",
             "type": "application/atom+xml",
             "bbox": null
@@ -247,13 +248,13 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
             "link":
             [
                 {
-                    "href": "{{ urls.open.download }}/resource/limites_administratives",
+                    "href": "{{ urls.public.download }}/resource/limites_administratives",
                     "rel": "alternate",
                     "type": "application/atom+xml",
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/resource/limites_administratives",
+            "id": "{{ urls.public.download }}/resource/limites_administratives",
             "updated": "2024-09-16",
             "content": "Limites administratives, au format Shapefile, sur la France métropolitaine",
             "polygon": "-5.33254008 41.20611066 9.85432008 41.20611066 9.85432008 51.20324649 -5.33254008 51.20324649 -5.33254008 41.20611066",
@@ -297,10 +298,10 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
 Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit [le lien dans l'entrée]({{ urls.public.download }}/resource/limites_administratives), c'est-à-dire les sous-ressources. Dans notre cas, on a une seule sous-ressource, `departements`.
 
 
-??? GET "{{ urls.open.download }}/resource/limites_administratives"
+??? GET "{{ urls.public.download }}/resource/limites_administratives"
 
 ``` title="Contenu" 
-{{ urls.open.download }}/resource/limites_administratives
+{{ urls.public.download }}/resource/limites_administratives
 ```
 
 {{ component("table", {
@@ -323,13 +324,13 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
     "totalentries": 1,
     "title": "Administrative units",
     "subtitle": "Limites administratives, au format Shapefile, sur la France métropolitaine",
-    "id": "{{ urls.open.download }}/resource/limites_administratives",
+    "id": "{{ urls.public.download }}/resource/limites_administratives",
     "updated": "2024-09-16",
     "spatialDatasetIdentifierCode": "Admin Express",
     "link":
     [
         {
-            "href": "{{ urls.open.download }}/resource/limites_administratives?lang=en",
+            "href": "{{ urls.public.download }}/resource/limites_administratives?lang=en",
             "hreflang": "en",
             "rel": "alternate",
             "type": "application/atom+xml",
@@ -337,7 +338,7 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/resource/limites_administratives?lang=fr",
+            "href": "{{ urls.public.download }}/resource/limites_administratives?lang=fr",
             "hreflang": "fr",
             "rel": "alternate",
             "type": "application/atom+xml",
@@ -345,14 +346,14 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/resource/limites_administratives",
+            "href": "{{ urls.public.download }}/resource/limites_administratives",
             "rel": "self",
             "type": "application/atom+xml",
             "title": "This document",
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/capabilities",
+            "href": "{{ urls.public.download }}/capabilities",
             "rel": "up",
             "type": "application/atom+xml",
             "bbox": null
@@ -365,14 +366,14 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
             "link":
             [
                 {
-                    "href": "{{ urls.open.download }}/resource/limites_administratives/departements",
+                    "href": "{{ urls.public.download }}/resource/limites_administratives/departements",
                     "rel": "alternate",
                     "type": "application/atom+xml",
                     "title": "Données départementales",
                     "bbox": "-5.33254008 41.20611066 9.85432008 51.20324649"
                 }
             ],
-            "id": "{{ urls.open.download }}/resource/limites_administratives/departements",
+            "id": "{{ urls.public.download }}/resource/limites_administratives/departements",
             "updated": "2024-09-16",
             "content": "Départements et limites départementales, au format Shapefile, sur la France métropolitaine",
             "polygon": "9.09172851 42.89115936 9.12915131 43.2450106 9.61454396 43.37599636 9.85432008 42.28024058 9.59263351 41.27883529 9.17895507 41.20611066 8.57606386 41.52172702 8.37515061 42.18155293 8.60679353 42.88081313 9.09172851 42.89115936 -5.11714547 48.69143916 -5.11904295 48.7036136 -3.53090169 49.07144036 -2.05981435 48.92176625 -2.39266145 49.61836715 -1.44304026 49.97518135 -0.28790953 49.71802866 1.16554867 50.22539848 1.2106405 51.10547173 2.68327037 51.20324649 4.36996119 50.39029281 5.12108028 50.52630512 5.36566614 50.02071857 7.44864671 49.52189837 8.75795607 49.11102171 8.46599244 48.64627595 7.99941283 47.83257925 7.55725079 47.1390034 6.89685602 46.70928797 7.3839402 46.33582437 7.64872697 45.69932199 7.59199086 44.80571585 8.1070412 44.4026185 8.14445803 43.87311823 7.46554269 43.21632897 6.55534602 42.85813836 5.32652298 42.92854218 4.0485537 43.1811621 3.59296671 42.79301466 3.90045719 42.26485025 3.25766156 42.10938675 0.45381917 42.38499265 -2.10506004 43.12661715 -1.60510675 43.99536685 -1.49342246 45.59517123 -2.88176427 46.80885968 -4.86703502 47.65004168 -5.33254008 48.29493047 -5.11714547 48.69143916",
@@ -414,10 +415,10 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
 
 Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous-ressource en suivant le [lien de l'entrée]({{ urls.public.download }}/resource/limites_administratives/departements).
 
-??? GET "{{ urls.open.download }}/resource/limites_administratives/departements"
+??? GET "{{ urls.public.download }}/resource/limites_administratives/departements"
 
 ``` title="Contenu" 
-{{ urls.open.download }}/resource/limites_administratives/departements
+{{ urls.public.download }}/resource/limites_administratives/departements
 ```
 
 {{ component("table", {
@@ -440,7 +441,7 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
     "totalentries": 10,
     "title": "Données départementales",
     "subtitle": "Départements et limites départementales, au format Shapefile, sur la France métropolitaine",
-    "id": "{{ urls.open.download }}/resource/limites_administratives/departements",
+    "id": "{{ urls.public.download }}/resource/limites_administratives/departements",
     "updated": "2024-09-16",
     "zone": {
         "term": "FXX",
@@ -457,7 +458,7 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
     "editionDate": "2022-09-30",
     "link": [
         {
-            "href": "{{ urls.open.download }}/resource/limites_administratives/departements?lang=fr",
+            "href": "{{ urls.public.download }}/resource/limites_administratives/departements?lang=fr",
             "hreflang": "fr",
             "rel": "alternate",
             "type": "application/atom+xml",
@@ -465,14 +466,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/resource/limites_administratives/departements",
+            "href": "{{ urls.public.download }}/resource/limites_administratives/departements",
             "rel": "self",
             "type": "application/atom+xml",
             "title": "This document",
             "bbox": null
         },
         {
-            "href": "{{ urls.open.download }}/resource/limites_administratives",
+            "href": "{{ urls.public.download }}/resource/limites_administratives",
             "rel": "up",
             "type": "application/atom+xml",
             "bbox": null
@@ -482,14 +483,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg",
                     "rel": "alternate",
                     "type": "image/x-cpg",
                     "length": 6,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg",
             "content": "ed16c6bc54359dade2e7fafa83607f16",
             "category": [
                 {
@@ -504,14 +505,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf",
                     "rel": "alternate",
                     "type": "application/octet-stream",
                     "length": 17186,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf",
             "content": "d9c1ff8f8980daa8f9b969a429987673",
             "category": [
                 {
@@ -526,14 +527,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.prj",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.prj",
                     "rel": "alternate",
                     "type": "image/x-prj",
                     "length": 449,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.prj",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.prj",
             "content": "a125df3368127b8203a6c823c4e2b881",
             "category": [
                 {
@@ -548,14 +549,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shp",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shp",
                     "rel": "alternate",
                     "type": "application/x-shapefile",
                     "length": 3125208,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shp",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shp",
             "content": "ab9b820b4c50936862f45f21eb434d82",
             "category": [
                 {
@@ -570,14 +571,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shx",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shx",
                     "rel": "alternate",
                     "type": "application/octet-stream",
                     "length": 868,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/DEPARTEMENT.shx",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shx",
             "content": "1b4b27aa51e8c981c80fc009c5612f36",
             "category": [
                 {
@@ -592,14 +593,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg",
                     "rel": "alternate",
                     "type": "image/x-cpg",
                     "length": 6,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg",
             "content": "ed16c6bc54359dade2e7fafa83607f16",
             "category": [
                 {
@@ -614,14 +615,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf",
                     "rel": "alternate",
                     "type": "application/octet-stream",
                     "length": 2039048,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf",
             "content": "d5b48ce0035f521dba949d29cf6c7770",
             "category": [
                 {
@@ -636,14 +637,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj",
                     "rel": "alternate",
                     "type": "image/x-prj",
                     "length": 449,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj",
             "content": "a125df3368127b8203a6c823c4e2b881",
             "category": [
                 {
@@ -658,14 +659,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp",
                     "rel": "alternate",
                     "type": "application/x-shapefile",
                     "length": 2527748,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp",
             "content": "afd8b8f3d13da008b5305fe49e8ccab3",
             "category": [
                 {
@@ -680,14 +681,14 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         {
             "link": [
                 {
-                    "href": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx",
+                    "href": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx",
                     "rel": "alternate",
                     "type": "application/octet-stream",
                     "length": 72596,
                     "bbox": null
                 }
             ],
-            "id": "{{ urls.open.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx",
+            "id": "{{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx",
             "content": "bcef9e262f77e5b1dcfe1eed5e14f935",
             "category": [
                 {

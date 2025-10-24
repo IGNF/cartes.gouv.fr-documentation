@@ -189,12 +189,12 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
 
 Lorsque les deux pyramides indépendantes sont générées :
 
-- Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids-to-pyramid'] }}`
+- Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids_to_pyramid'] }}`
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids-to-pyramid'] }}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}"
 
 ```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids-to-pyramid'] }}
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}
 ```
 
 ```json
@@ -232,7 +232,7 @@ Lorsque les deux pyramides indépendantes sont générées :
             "mandatory": false
         }
     ],
-    "_id": "{{ ids.processings['pyramids-to-pyramid'] }}",
+    "_id": "{{ ids.processings['pyramids_to_pyramid'] }}",
     "required_checks": []
 }
 ```
@@ -250,7 +250,7 @@ Lorsque les deux pyramides indépendantes sont générées :
 
 ```json
 {
-    "processing": "{{ ids.processings['pyramids-to-pyramid'] }}",
+    "processing": "{{ ids.processings['pyramids_to_pyramid'] }}",
     "inputs": {
         "stored_data": ["{stored data Corse Nord}", "{stored data Corse Sud}"]
     },

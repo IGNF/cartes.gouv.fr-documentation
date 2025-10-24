@@ -59,10 +59,10 @@ flowchart LR
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive-to-archive'] }}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive_to_archive'] }}"
 
 ``` title="Contenu" 
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive-to-archive'] }}
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive_to_archive'] }}
 ```
 
 ```json
@@ -83,7 +83,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
         ]
     },
     "parameters": [],
-    "_id": "{{ ids.processings['archive-to-archive'] }}",
+    "_id": "{{ ids.processings['archive_to_archive'] }}",
     "required_checks": [
         {
             "name": "Vérification archive",
@@ -113,7 +113,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 
 ```json
 {
-    "processing": "{{ ids.processings['archive-to-archive'] }}",
+    "processing": "{{ ids.processings['archive_to_archive'] }}",
     "inputs": {
         "upload": [
             "{upload}"
@@ -132,7 +132,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 {
     "processing": {
         "name": "Recopie d'une archive livrée",
-        "_id": "{{ ids.processings['archive-to-archive'] }}"
+        "_id": "{{ ids.processings['archive_to_archive'] }}"
     },
     "status": "CREATED",
     "creation": "2023-07-03T18:21:07.051091271Z",
@@ -189,7 +189,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 {
     "processing": {
         "name": "Recopie d'une archive livrée",
-        "_id": "{{ ids.processings['archive-to-archive'] }}"
+        "_id": "{{ ids.processings['archive_to_archive'] }}"
     },
     "status": "PROGRESS",
     "creation": "2023-07-03T18:21:07.051091Z",

@@ -166,7 +166,7 @@ On utilise le traitement d'intégration de données vecteur.
 
 ```json
 {
-    "processing": "{{ ids.processings['vector-to-db'] }}",
+    "processing": "{{ ids.processings['vector_to_db'] }}",
     "inputs": {
         "upload": [
             "{upload initialisation}"
@@ -185,7 +185,7 @@ On utilise le traitement d'intégration de données vecteur.
 {
     "processing": {
         "name": "Intégration de données vecteur livrées en base",
-        "_id": "{{ ids.processings['vector-to-db'] }}"
+        "_id": "{{ ids.processings['vector_to_db'] }}"
     },
     "status": "CREATED",
     "creation": "2023-05-24T15:21:21.279291196Z",
@@ -456,6 +456,6 @@ Télécharger [installation.ftl](../../assets/data/installation.ftl)
 ???
 <br>
 
-On peut vérifier la présence de notre couche `installations_classees` dans le [getCapabilities du service]({{ urls.open.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `installations_classees` dans le [getCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
 
 Si on consulte la donnée sur QGis, on ne verra pour le moment aucune donnée.

@@ -100,11 +100,11 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
         "_id": "{community}"
     },
     "processings": [
-        "{{ ids.processings['vector-to-db'] }}"
-        "{{ ids.processings['archive-to-archive'] }}",
-        "{{ ids.processings['db-to-pyramid'] }}",
-        "{{ ids.processings['raster-to-pyramid'] }}",
-        "{{ ids.processings['pyramids-to-pyramid'] }}"
+        "{{ ids.processings['vector_to_db'] }}"
+        "{{ ids.processings['archive_to_archive'] }}",
+        "{{ ids.processings['db_to_pyramid'] }}",
+        "{{ ids.processings['raster_to_pyramid'] }}",
+        "{{ ids.processings['pyramids_to_pyramid'] }}"
     ],
     "name": "Communauté des tutoriels",
     "technical_name": "tutoriels",
@@ -119,7 +119,7 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
                 "urls": [
                     {
                         "type": "WMS",
-                        "url": "{{ urls.open.wmsv }}"
+                        "url": "{{ urls.public.wmsv }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.wmsv }}",
@@ -137,7 +137,7 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
                 "urls": [
                     {
                         "type": "WFS",
-                        "url": "{{ urls.open.wfs }}"
+                        "url": "{{ urls.public.wfs }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.wfs }}",
@@ -155,7 +155,7 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
                 "urls": [
                     {
                         "type": "WMS",
-                        "url": "{{ urls.open.wmsr }}"
+                        "url": "{{ urls.public.wmsr }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.wmsr }}",
@@ -172,11 +172,11 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
                 "urls": [
                     {
                         "type": "WMTS",
-                        "url": "{{ urls.open.wmts }}"
+                        "url": "{{ urls.public.wmts }}"
                     },
                     {
                         "type": "TMS",
-                        "url": "{{ urls.open.tms }}"
+                        "url": "{{ urls.public.tms }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.wmts }}",
@@ -193,7 +193,7 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
                 "urls": [
                     {
                         "type": "DOWNLOAD",
-                        "url": "{{ urls.open.download }}"
+                        "url": "{{ urls.public.download }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.download }}",
@@ -210,7 +210,7 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
                 "urls": [
                     {
                         "type": "CSW",
-                        "url": "{{ urls.open.csw }}"
+                        "url": "{{ urls.public.csw }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.csw }}",

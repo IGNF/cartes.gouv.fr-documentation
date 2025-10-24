@@ -136,7 +136,7 @@ C’est au niveau de l’entrepôt que l’on va affecter tout ou partie des res
                 "urls": [
                     {
                         "type": "WMS",
-                        "url": "{{ urls.open.wmsv }}"
+                        "url": "{{ urls.public.wmsv }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.wmsv }}",
@@ -154,7 +154,7 @@ C’est au niveau de l’entrepôt que l’on va affecter tout ou partie des res
                 "urls": [
                     {
                         "type": "WFS",
-                        "url": "{{ urls.open.wfs }}"
+                        "url": "{{ urls.public.wfs }}"
                     }
                 ],
                 "_id": "{{ ids.endpoints.open.wfs }}",
