@@ -11,6 +11,8 @@ summary:
     depth: 2
 ---
 
+{% from "components/component.njk" import component with context %}
+
 ## Calcul de la pyramide raster MNT
 
 Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d'images (la donnée est calculée dans plusieurs résolutions) sur du stockage S3. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
@@ -409,4 +411,11 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 
 ## Calcul de la pyramide MNS
 
-Toutes ces étapes peuvent être répétées avec la dalle [LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif](/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif), dans une livraison à part. Cela permettra d'exploiter les deux données pour enrichir les services.
+Toutes ces étapes peuvent être répétées avec la dalle :
+
+{{ component("download", {
+    title: "[GeoTIFF] LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
+    href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
+    detail: "TIFF - 15.3 Mo"
+}) }}
+, dans une livraison à part. Cela permettra d'exploiter les deux données pour enrichir les services.

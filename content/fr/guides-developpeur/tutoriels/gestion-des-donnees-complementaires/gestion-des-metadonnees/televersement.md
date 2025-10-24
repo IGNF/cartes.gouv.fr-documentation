@@ -23,8 +23,17 @@ Le fichier de métadonnée :
 
 Exemple :
 
-- [métadonnée de lot](/data/tutoriels/complementaire/metadonnee_lot.xml)
-- [métadonnée de produit](/data/tutoriels/complementaire/metadonnee_produit.xml)
+-{{ component("download", {
+    title: "metadonnee_lot.xml",
+    href: "/data/tutoriels/complementaire/metadonnee_lot.xml",
+    detail: "XML - 28.4 Ko"
+}) }}
+
+-{{ component("download", {
+    title: "metadonnee_produit.xml",
+    href: "/data/tutoriels/complementaire/metadonnee_produit.xml",
+    detail: "XML - 29.7 Ko"
+}) }}
 
 📄 `<metadonnee_lot.xml>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/metadata"

@@ -250,7 +250,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 <br>
 
 :::warning Points d'attention
-Si votre pyramide est destinée à être mise à jour (voir [l'alimentation raster par mise à jour](../mise-a-jour/index.md)), il peut être important de préciser que l'on souhaite calculer les masques de données (paramètre `"mask": true`).
+Si votre pyramide est destinée à être mise à jour (voir [l'alimentation raster par mise à jour](../../alimentation-mise-a-jour-raster)), il peut être important de préciser que l'on souhaite calculer les masques de données (paramètre `"mask": true`).
 :::
 
 ### Déclenchement de cette exécution

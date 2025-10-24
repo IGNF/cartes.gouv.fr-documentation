@@ -36,18 +36,18 @@ Le fichier utilisé dans cet exemple est ![imagette.jpg](/img/guides-developpeur
         ]
     }) }}
 
-        ```json
-        {
-            "paths": [
-                "/imagettes/rgealti.jpg",
-                "/quickview/rgealti.jpg"
-            ],
-            "size": 18415,
-            "mime_type": "image/jpeg",
-            "published": false,
-            "_id": "{annexe}"
-        }
-        ```
+```json
+{
+    "paths": [
+        "/imagettes/rgealti.jpg",
+        "/quickview/rgealti.jpg"
+    ],
+    "size": 18415,
+    "mime_type": "image/jpeg",
+    "published": false,
+    "_id": "{annexe}"
+}
+```
 
 ???
 <br>

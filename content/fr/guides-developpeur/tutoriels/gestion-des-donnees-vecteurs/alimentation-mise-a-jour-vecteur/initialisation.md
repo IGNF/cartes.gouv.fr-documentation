@@ -316,9 +316,13 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 
 ### Téléversement du style
 
-Télécharger [installation.sld](../../assets/data/installation.sld)
+{{ component("download", {
+    title: "installation.sld",
+    href: "/data/tutoriels/alimentation-maj/installation.sld",
+    detail: "sld - 4.3 Ko"
+}) }}
 
-:material-file: `<installation.sld>`
+📄 `<installation.sld>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
@@ -352,9 +356,13 @@ Télécharger [installation.sld](../../assets/data/installation.sld)
 
 ### Téléversement du template d'info-bulle
 
-Télécharger [installation.ftl](../../assets/data/installation.ftl)
+{{ component("download", {
+    title: "installation.ftl",
+    href: "/data/tutoriels/alimentation-maj/installation.delete",
+    detail: "Ftl - 45 octets"
+}) }}
 
-:material-file: `<installation.ftl>`
+📄 `<installation.ftl>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"

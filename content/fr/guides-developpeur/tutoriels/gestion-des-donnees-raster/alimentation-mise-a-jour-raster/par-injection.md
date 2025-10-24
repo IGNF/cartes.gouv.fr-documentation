@@ -11,6 +11,8 @@ summary:
     depth: 2
 ---
 
+{% from "components/component.njk" import component with context %}
+
 L'avantage de la mise à jour par injection, c'est qu'il n'est pas nécessaire de reconfigurer la diffusion : les flux sont mis à jour "à chaud".
 
 En revanche, la modification n'étant pas réversible, on peut détériorer la pyramide et le flux si les données livrées ne sont pas valides.
@@ -79,7 +81,14 @@ stateDiagram
 ???
 <br>
 
-- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
+- Livraison des fichiers :
+
+{{ component("download", {
+    title: "scan1000_corse_nord.tif",
+    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif",
+    detail: "TIFF - 7.5 Mo"
+}) }}
+
 - Fermeture de la livraison
 - Création de l'exécution de traitement :
 
@@ -191,7 +200,13 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
 ???
 <br>
 
-- Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
+- Livraison des fichiers : 
+{{ component("download", {
+    title: "scan1000_corse_sud.tif",
+    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
+    detail: "TIFF - 7.7 Mo"
+}) }}
+
 - Fermeture de la livraison
 - Création de l'exécution de traitement : on renseigne en sortie la pyramide déjà existante, pour signifier qu'on souhaite la modifier
 

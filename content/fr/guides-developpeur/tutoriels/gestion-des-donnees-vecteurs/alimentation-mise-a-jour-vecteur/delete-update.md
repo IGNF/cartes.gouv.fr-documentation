@@ -21,7 +21,7 @@ Les suppressions sont jouées en premier, puis les modifications et enfin les in
 Exemple :
 
 {{ component("download", {
-      title: "Télécharger (CSV de suppression)",
+      title: "installation.delete",
       href: "/data/tutoriels/alimentation-maj/installation.delete",
       detail: "CSV - 45o"
 }) }}
@@ -33,7 +33,7 @@ Exemple :
 ```
 
 {{ component("download", {
-      title: "Télécharger (CSV de modification)",
+      title: "installation.update",
       href: "/data/tutoriels/alimentation-maj/installation.update",
       detail: "CSV - 187o"
 }) }}
