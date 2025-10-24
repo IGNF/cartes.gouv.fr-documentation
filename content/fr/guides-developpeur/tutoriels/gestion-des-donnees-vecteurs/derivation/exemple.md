@@ -77,7 +77,7 @@ En consultant la donnée en WFS, notamment sa table attributaire, on retrouve le
 
 On utilise le traitement de dérivation vecteur.
 
-:::warning "Points d'attentions"
+:::warning Points d'attentions
 Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On précise également cette donnée comme étant en entrée de notre exécution. On va donc modifier une donnée plutôt qu'en créer une nouvelle.
 :::
 

@@ -259,11 +259,10 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
 ???
 <br>
 
-:::warning "Points d'attentions"
+:::warning Points d'attentions
 On précise une étiquette de stockage pour la donnée en sortie. Selon la configuration de votre entrepôt, il est possible que vous ayez accès à plusieurs stockages de type S3. Ce sont les étiquettes qui vont permettre de choisir le stockage S3 cible.
 
     On utilise le TMS `LAMB93_50cm` qui a le même système de coordonnée que l'image livrée, ainsi qu'un niveau à la même résolution (50cm). En choisissant une interpolation `nn`, on s'assure d'avoir un niveau de pyramide parfaitement calé sur les données sources, sans réechantillonnage, donc avec des valeurs d'origine. Les niveaux supérieurs eux seront calculé en moyennant les pixels 4 par 4. En ajoutant les masques, on évite de prendre en compte le nodata dans cette moyenne.
-
 :::
 
 ### Déclenchement de cette exécution

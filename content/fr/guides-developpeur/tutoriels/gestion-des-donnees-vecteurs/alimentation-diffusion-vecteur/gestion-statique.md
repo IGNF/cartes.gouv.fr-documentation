@@ -24,10 +24,8 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ✔ File "pays.qml" translated successfully. Output written to pays.sld
 ```
 
-:::warning "Attention"
-
+:::warning Attention
     Chaque outil d'export peut entraîner des comportements différents. Au final, le SLD sera interprété par Geoserver sur la Géoplateforme. Le plugin [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) peut également être utilisé.
-
 :::
 
 {{ component("download", {

@@ -208,7 +208,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 On utilise à nouveau le traitement d'intégration de données vecteur.
 
-:::warning "Points d'attentions"
+:::warning Points d'attentions
     Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu'en créer une nouvelle. Par défaut, le traitement d'intégration ne prend pas en compte les fichiers de suppressions et modifications, pour limiter les mauvaises manipulations. On va donc préciser en paramètre que nous voulons faire ce genre d'action.
 :::
 

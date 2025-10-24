@@ -181,10 +181,8 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 ???
 <br>
 
-:::warning "Attention"
-
+:::warning Attention
     Les noms des tables et des champs sont "standardisés" lors de l'intégration en base pour éviter tout souci d'utilisation par les applications : pas de majuscules, pas d'accent, pas de tirets.
-
 :::
 
 ### Consultation de l'état de l'exécution

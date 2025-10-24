@@ -62,10 +62,8 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
 ???
 <br>
 
-:::warning "Attention"
-
+:::warning Attention
     Une configuration WMS-VECTOR donnera une unique couche. Même si elle utilise plusieurs tables, ces dernières ne seront pas consultables individuellement en WMS. Si c'est votre besoin, faites une configuration (et donc une couche) par table.
-
 :::
 
 ## Envoi sur les services de diffusion

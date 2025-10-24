@@ -321,11 +321,11 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 
 La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier).
 
-:::warning "Points d'attentions"
+:::warning Points d'attentions
 Les flux sortant des nœuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d'un usage avec d'autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
 :::
 
-:::warning "Données privées"
+:::warning Données privées
 Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extras` en précisant une apikey : "harvest_extras": "apikey={apikey}"
 :::
 
