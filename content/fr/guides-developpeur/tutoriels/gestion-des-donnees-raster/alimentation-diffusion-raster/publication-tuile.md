@@ -73,7 +73,7 @@ On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du serv
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???

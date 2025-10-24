@@ -115,7 +115,7 @@ Voici un exemple pour voir la nomenclature des zones :
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 ???
 <br>

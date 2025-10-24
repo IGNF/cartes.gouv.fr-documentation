@@ -20,7 +20,7 @@ C'est le point de diffusion de type `CSW` qui nous intéresse.
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 ???
 <br>

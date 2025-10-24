@@ -79,7 +79,7 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???

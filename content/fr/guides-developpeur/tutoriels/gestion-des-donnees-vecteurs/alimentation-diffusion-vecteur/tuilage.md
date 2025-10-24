@@ -24,7 +24,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???
@@ -278,7 +278,7 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???

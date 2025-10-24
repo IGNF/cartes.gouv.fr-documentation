@@ -198,7 +198,7 @@ module.exports = function (eleventyConfig) {
     });
 
     // Filter to read a JSON file
-    eleventyConfig.addFilter("readJSON", function (filePath) {
+    eleventyConfig.addFilter("readFILE", function (filePath) {
         const fullPath = path.join(__dirname, filePath);
         return fs.readFileSync(fullPath, "utf-8");
     });

@@ -2,6 +2,7 @@
 title: Alimentation par mise à jour
 description: "Téléversement de fichiers vecteurs, intégration en base de données déjà existante et diffusée"
 mermaid: true
+layout: layouts/parent.njk
 eleventyNavigation:
     key: Alimentation par mise à jour vecteur
     parent: Gestion des données vecteurs

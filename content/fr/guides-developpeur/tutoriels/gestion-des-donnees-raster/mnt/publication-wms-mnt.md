@@ -224,7 +224,7 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???

@@ -75,7 +75,7 @@ Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???
