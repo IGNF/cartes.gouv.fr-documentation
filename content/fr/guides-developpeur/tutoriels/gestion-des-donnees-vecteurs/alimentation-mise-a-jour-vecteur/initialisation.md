@@ -86,22 +86,22 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/tree
 ```
 
-        ```json
-        [
+```json
+[
+    {
+        "type": "DIRECTORY",
+        "name": "data",
+        "size": 411,
+        "children": [
             {
-                "type": "DIRECTORY",
-                "name": "data",
-                "size": 411,
-                "children": [
-                    {
-                        "type": "FILE",
-                        "name": "installation-init.sql",
-                        "size": 411
-                    }
-                ]
+                "type": "FILE",
+                "name": "installation-init.sql",
+                "size": 411
             }
         ]
-        ```
+    }
+]
+```
 ???
 <br>
 
@@ -126,29 +126,29 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/checks
 ```
 
-        ```json
+```json
+{
+    "asked": [
         {
-            "asked": [
-                {
-                    "check": {
-                        "name": "Vérification vecteur",
-                        "_id": "{{ ids.checks.vector }}"
-                    },
-                    "_id": "{execution}"
-                },
-                {
-                    "check": {
-                        "name": "Vérification standard",
-                        "_id": "{{ ids.checks.standard }}"
-                    },
-                    "_id": "{execution}"
-                }
-            ],
-            "in_progress": [],
-            "passed": [],
-            "failed": []
+            "check": {
+                "name": "Vérification vecteur",
+                "_id": "{{ ids.checks.vector }}"
+            },
+            "_id": "{execution}"
+        },
+        {
+            "check": {
+                "name": "Vérification standard",
+                "_id": "{{ ids.checks.standard }}"
+            },
+            "_id": "{execution}"
         }
-        ```
+    ],
+    "in_progress": [],
+    "passed": [],
+    "failed": []
+}
+```
 ???
 <br>
 
