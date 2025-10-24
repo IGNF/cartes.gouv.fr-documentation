@@ -67,37 +67,37 @@ Les données de l'exemple sont les <a title="installations classées pour la pro
 - Le SQL définissant une table `installation` et une vue `installation_autorisation` ne montrant que les lignes où l'attribut `lib_regime` est à `Autorisation`. Il n'y a pas de données. La vérification vecteur sur la Géoplateforme n'autorise pas la livraison de contenu en SQL.
   {% from "components/component.njk" import component with context %}
   {{ component("download", {
-      title: "Télécharger installation-init.sql",
+      title: "installation-init.sql",
       href: "/data/tutoriels/alimentation-maj/installation-init.sql",
       detail: "SQL - 455o"
   }) }}
 
 - Un premier lot de données (département des Ardennes). On livre les données à ajouter dans la table, pas la vue.
   {{ component("download", {
-      title: "Télécharger installation.gpkg",
+      title: "installation.gpkg",
       href: "/data/tutoriels/alimentation-maj/installation.gpkg",
       detail: "GPKG - 360Ko"
   }) }}
   {{ component("download", {
-      title: "Télécharger installation.csv",
+      title: "installation.csv",
       href: "/data/tutoriels/alimentation-maj/installation.csv",
       detail: "CSV - 661Ko"
   }) }}
   {{ component("download", {
-      title: "Télécharger installation.csvt",
+      title: "installation.csvt",
       href: "/data/tutoriels/alimentation-maj/installation.csvt",
       detail: "CSVT - 84o"
   }) }}
 
 - avec un deuxième lot de données (département du Doubs).
   {{ component("download", {
-      title: "Télécharger installation.delete (CSV de suppression)",
+      title: "installation.delete (CSV de suppression)",
       href: "/data/tutoriels/alimentation-maj/installation.delete",
       detail: "CSV - 45o"
   }) }}
   et un
   {{ component("download", {
-      title: "Télécharger installation.update (CSV de modification)",
+      title: "installation.update (CSV de modification)",
       href: "/data/tutoriels/alimentation-maj/installation.update",
       detail: "CSV - 187o"
   }) }}

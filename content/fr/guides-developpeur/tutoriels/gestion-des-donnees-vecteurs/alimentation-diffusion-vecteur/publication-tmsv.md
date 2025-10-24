@@ -5,6 +5,9 @@ eleventyNavigation:
     parent: Alimentation et diffusion simple vecteur
     order: 6
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 ## Configuration de la diffusion

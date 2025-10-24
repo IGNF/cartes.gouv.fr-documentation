@@ -1,11 +1,13 @@
 ---
 title: Téléversement d'une métadonnée
-layout: layouts/parent.njk
 eleventyNavigation:
     key: Téléversement d'une métadonnée
     parent: Gestion des métadonnées
     order: 1
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 pictogram: digital/data-visualization.svg
 ---
 

@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Alimentation et diffusion simple vecteur
     order: 2
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 ## Intégration en base

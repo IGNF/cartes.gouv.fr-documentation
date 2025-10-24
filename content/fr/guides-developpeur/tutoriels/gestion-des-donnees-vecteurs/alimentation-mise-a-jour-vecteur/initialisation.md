@@ -5,6 +5,9 @@ eleventyNavigation:
     parent: Alimentation par mise à jour vecteur
     order: 1
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}

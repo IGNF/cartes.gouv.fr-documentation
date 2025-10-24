@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Contrôle des accès aux services de diffusion
     order: 2
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 Certains points de diffusion des données ne sont pas en accès libre. Cela permet de définir les personnes qui pourront consommer la donnée à partir des flux mis en place.

@@ -1,11 +1,13 @@
 ---
 title: Publication d'une métadonnée
-layout: layouts/parent.njk
 eleventyNavigation:
     key: Publication d'une métadonnée
     parent: Gestion des métadonnées
     order: 2
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 pictogram: digital/data-visualization.svg
 ---
 La publication des métadonnées va envoyer les fichiers au niveaux des services de catalogage des métadonnées et permettre leur consultation publique et leur moissonnage.
