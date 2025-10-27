@@ -10,12 +10,16 @@
                 {% set tileUrl = tile.externalUrl %}
             {% endif %}
             {% set urlDescription %}{{ tile.title }}{% if tile.externalUrl %} - {{ "new_window" | i18n }}{% endif %}{% endset %}
-            <h4 class="fr-tile__title">
+            {% set title_tag = tile.title_tag | default("h4") %}
+            {% if title_tag not in ["p", "h2", "h3", "h4", "h5", "h6"] %}
+                {% set title_tag = "h4" %}
+            {% endif %}
+            <{{- title_tag }} class="fr-tile__title">
                 <a class="fr-tile__link"
                    href="{{ tileUrl }}"
                    title="{{ urlDescription }}"
                    {% if tile.externalUrl %}target="_blank" rel="noopener"{% endif %}>{{ tile.title }}</a>
-            </h4>
+            </{{- title_tag -}}>
             <p class="fr-tile__desc">{{ tile.description }}</p>
         </div>
     </div>
