@@ -32,13 +32,13 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 :::
 
 {{ component("download", {
-    title: "Télécharger ecoregions.sld",
+    title: "ecoregions.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.sld",
     detail: "SLD - 10.6Ko"
 }) }}
 
 {{ component("download", {
-    title: "Télécharger pays.sld",
+    title: "pays.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.sld",
     detail: "SLD - 847o"
 }) }}
@@ -48,7 +48,7 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarker.html) permettent de mettre en forme la réponse HTML lors des appels au GetFeatureInfo
 
 {{ component("download", {
-    title: "Télécharger ecoregions.ftl",
+    title: "ecoregions.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.ftl",
     detail: "FTL - 118o"
 }) }}
@@ -58,7 +58,7 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
 ```
 
 {{ component("download", {
-    title: "Télécharger pays.ftl",
+    title: "pays.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.ftl",
     detail: "FTL - 75o"
 }) }}
