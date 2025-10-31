@@ -7,7 +7,7 @@
                         <div class="fr-header__logo">
                             <p class="fr-logo">
                                 République
-                                <br />
+                                <br>
                                 française
                             </p>
                         </div>
@@ -27,9 +27,10 @@
                         </div>
                     </div>
                     <div class="fr-header__service">
-                        <a href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.description }} - {{ metadata.title }}">
+                        <a href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.subtitle }} - {{ metadata.title }}">
                             <p class="fr-header__service-title">
                                 {{ metadata.title }}
+                                <span class="fr-badge fr-badge--brown-opera"><span class="fr-icon-question-fill fr-icon--sm"></span>&nbsp;{{ metadata.subtitle }}</span>
                                 <span class="fr-badge fr-badge--success fr-badge--no-icon">Bêta</span>
                             </p>
                         </a>
@@ -39,26 +40,50 @@
                 <div class="fr-header__tools">
                     <div class="fr-header__tools-links">
                         <ul class="fr-btns-group">
+                            
                             <li>
-                                <a href="https://cartes.gouv.fr/"
-                                   class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right"
-                                   target="_blank"
-                                   rel="noreferrer"
-                                   title="Accéder à cartes.gouv.fr - ouvre une nouvelle fenêtre">cartes.gouv.fr</a>
+                                <div class="fr-translate fr-nav">
+                                    <div class="fr-nav__item">
+                                        <button aria-controls="services-collapse" aria-expanded="false" title="Services" class="fr-translate__btn fr-btn fr-px-2w">
+                                            <span class="fr-icon-grid-fill fr-icon--sm fr-mr-1w" aria-hidden="true"></span>Services</button>
+                                        <div class="fr-collapse fr-translate__menu fr-menu" id="services-collapse">
+                                            <ul class="fr-menu__list">
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/cartes/">
+                                                        <span class="fr-icon-road-map-line fr-icon--sm">&emsp;Explorer les cartes</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/catalogue/search/">
+                                                        <span class="fr-icon-search-line fr-icon--sm ">&emsp;Rechercher une donnée</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/tableau-de-bord/">
+                                                        <span class="fr-icon-database-line fr-icon--sm ">&emsp;Publier une donnée</span></a>
+                                                </li>
+                                                {# <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="#">
+                                                        <span class="fr-icon-brush-line fr-icon--sm ">&emsp;Créer une carte</span></a>
+                                                </li> #}
+                                                <li>
+                                                    <div class="custom-center-btn">
+                                                        <a href="https://cartes.gouv.fr"
+                                                            class="fr-btn fr-btn--tertiary fr-mt-3v  fr-mx-3w"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer">
+                                                            Découvrir cartes.gouv
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <a href="https://www.geoportail.gouv.fr/carte"
-                                   class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right"
-                                   target="_blank"
-                                   rel="noreferrer"
-                                   title="Accéder au Géoportail - ouvre une nouvelle fenêtre">Géoportail</a>
-                            </li>
-                            <li>
-                                <a href="https://cartes.gouv.fr/catalogue"
-                                   class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right"
-                                   target="_blank"
-                                   rel="noreferrer"
-                                   title="Accéder au catalogue - ouvre une nouvelle fenêtre">Catalogue</a>
+                                <a href="https://cartes.gouv.fr/tableau-de-bord/"
+                                   class="fr-icon-account-circle-fill fr-btn"
+                                   title="Se connecter">Se connecter
+                                </a>
                             </li>
                         </ul>
                         {# {% include "templates/translate.njk" %} #}

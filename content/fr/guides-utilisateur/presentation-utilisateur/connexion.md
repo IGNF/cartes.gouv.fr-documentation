@@ -12,10 +12,6 @@ pictogram: digital/avatar.svg
 description: La procédure pour créer un compte Géoplateforme/Cartes.gouv.fr et se connecter
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 :::info
 Cartes.gouv.fr est une interface qui se base sur l’infrastructure Géoplateforme. Ainsi, un compte personnel Cartes.gouv.fr est en réalité un compte Géoplateforme.
 :::
@@ -36,10 +32,10 @@ Si vous ne possédez pas encore de compte Géoplateforme, ciquez sur **« Pas e
 
 Si vous choisissez cette deuxième option, complétez votre profil avec :
 
-* Un nom d’utilisateur (il ne sera pas visible des autres utilisateurs)
-* Un mot de passe fort (il vous sera demandé de le renouveler une fois par an)
-* Une confirmation du mot de passe
-* Votre courriel
+- Un nom d’utilisateur (il ne sera pas visible des autres utilisateurs)
+- Un mot de passe fort (il vous sera demandé de le renouveler une fois par an)
+- Une confirmation du mot de passe
+- Votre courriel
 
 ![Image décrivant la fenêtre pour compléter son profil](/img/guides-utilisateur/presentation-utilisateur/connexion/03_renseigner-le-profil.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -51,10 +47,10 @@ Vous pouvez compléter votre profil avec des informations complémentaires qui s
 
 Les éléments pouvant être complétés sont les suivants :
 
-* Nom
-* Prénom
-* Numéro de téléphone
-* Photo de profil
+- Nom
+- Prénom
+- Numéro de téléphone
+- Photo de profil
 
 ![Image décrivant la fenêtre pour compléter son identité](/img/guides-utilisateur/presentation-utilisateur/connexion/04_renseigner-une-identite.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -62,9 +58,9 @@ Les éléments pouvant être complétés sont les suivants :
 
 Les éléments suivants sont également optionnels :
 
-* Numéro et rue
-* Localité
-* Code postal
+- Numéro et rue
+- Localité
+- Code postal
 
 ![Image décrivant la fenêtre pour compléter son adresse](/img/guides-utilisateur/presentation-utilisateur/connexion/05_renseigner-une-adresse.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -72,12 +68,12 @@ Les éléments suivants sont également optionnels :
 
 Vous êtes invité ici à renseigner votre catégorie professionnelle (optionnel). Si vous cochez « Professionnel », vous pourrez renseigner les éléments suivants :
 
-* SIRET ou TVA
-* Nom de l’entreprise
-* Poste occupé
-* Numéro et rue de l’entreprise
-* Localité de l’entreprise
-* Code postal de l’entreprise
+- SIRET ou TVA
+- Nom de l’entreprise
+- Poste occupé
+- Numéro et rue de l’entreprise
+- Localité de l’entreprise
+- Code postal de l’entreprise
 
 ![Image décrivant la fenêtre pour compléter ses informations professionnelles](/img/guides-utilisateur/presentation-utilisateur/connexion/06_renseigner-des-informations-professionnelles.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -96,4 +92,5 @@ Cliquez enfin sur **« Enregistrement »** pour terminer la création de votre
 Cliquez sur **« Se connecter »** (en haut à droite), pour ouvrir la page de connexion. Vous pouvez vous identifier avec un courriel + mot de passe, avec _FranceConnect_ ou avec _ProConnect_.
 
 ![Image décrivant comment se connecter par FranceConnect ou AgentConnect](/img/guides-utilisateur/presentation-utilisateur/connexion/09_connexion-franceconnect.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-Si vous avez activé la double authentification, il vous sera demandé de renseigné un code à usage unique via l’application authentificator. Si vous n’avez plus accès à l’application (ex : changement de téléphone) il faudra créer une demande au support de la Géoplateforme : [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)
+
+Si vous avez activé la double authentification, il vous sera demandé de renseigné un code à usage unique via l’application authentificator. Si vous n’avez plus accès à l’application (par exemple si vous changez de téléphone) il faudra créer une demande au support de la Géoplateforme : [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)

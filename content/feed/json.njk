@@ -6,7 +6,7 @@ numberOfLatestPostsToShow: 10
 
 {
 "version": "https://jsonfeed.org/version/1.1",
-"title": "{{ metadata.description ~ " | " ~ metadata.title }}",
+"title": "{{ metadata.subtitle ~ " | " ~ metadata.title }}",
 "language": "{{ metadata.language }}",
 "home_page_url": "{{ metadata.site_url | addPathPrefixToFullUrl }}",
 "feed_url": "{{ permalink | htmlBaseUrl(metadata.url) }}",

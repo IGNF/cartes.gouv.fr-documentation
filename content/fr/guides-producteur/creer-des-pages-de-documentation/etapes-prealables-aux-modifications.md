@@ -15,28 +15,34 @@ pictogram: digital/in-progress.svg
 description: Ce qu’il faut faire avant toute modification
 summary:
     visible: true
----
-
-{% from "components/component.njk" import component with context %}
-
+    depth: 1
 ---
 
 ## Principe
 
-Afin de partir sur des bases saines il est conseillé de mettre à jour votre _fork_ (duplication github) et votre clone local afin qu’ils soient identiques au dépôt principal. Une fois cela fait, vous pourrez être sûr que les modifications que vous proposez ne viennent pas en conflit avec d’autres modifications récentes.
+Afin de partir sur des bases saines il est conseillé de mettre à jour votre _<span lang="en">fork</span>_ (duplication github) et votre clone local afin qu’ils soient identiques au dépôt principal. Une fois cela fait, vous pourrez être sûr que les modifications que vous proposez ne viennent pas en conflit avec d’autres modifications récentes.
 
-## Mettre à jour votre _fork_
+## Changer son pseudonyme sur _github_
 
-Rendez-vous sur la page de votre _fork_. Github affiche au dessus de la liste des dossiers et fichiers l’état de synchronisation de votre _fork_ (commits en avance ou en retard)
+Par défaut _github_ génère votre pseudonyme à partir des informations de votre ordinateur. Pour modifier le pseudonyme et le courriel à utiliser (qui seront visibles par tous les contributeurs), lancez les commandes suivantes sur *Git Bash* :
+
+```bash
+git config --global user.name "MonPseudoGithub"
+git config --global user.email mail@domaine.fr
+```
+
+## Mettre à jour votre _<span lang="en">fork</span>_
+
+Rendez-vous sur la page de votre _<span lang="en">fork</span>_. Github affiche au dessus de la liste des dossiers et fichiers l’état de synchronisation de votre _<span lang="en">fork</span>_ (commits en avance ou en retard)
 
 ![Image décrivant l’affichage du statut du fork sur github](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/01_Statut-fork-sur-github.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-Si votre _fork_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync *fork* »** directement pour le mettre à jour.
+Si votre _<span lang="en">fork</span>_ a du retard sur le dépôt principal, vous pouvez cliquer sur le bouton **« Sync *<span lang="en">fork</span>* »** directement pour le mettre à jour.
 
 ## Créer une branche
 
-Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation, il est conseillé de travailler avec des _branches_. Par défaut votre _fork_/duplication contient une seule branche, la branche principale (_main_).
+Afin de permettre d’effectuer plusieurs modifications en parallèle et de facilliter la synchronisation entre collaborateurs, il est conseillé de travailler avec des _branches_. Par défaut votre _<span lang="en">fork</span>_/duplication contient une seule branche : la branche principale (_<span lang="en">main</span>_).\_
 
-Si ce n'est pas votre première contribution, vous êtes peut-être resté sur une branche de votre contribution précédente. Retournez sur la branche _main_.
+Si ce n'est pas votre première contribution, vous êtes peut-être resté sur une branche de votre contribution précédente. Retournez sur la branche _<span lang="en">main</span>_.
 
 ```bash
 git checkout main
@@ -58,14 +64,10 @@ Cette commande créera une nouvelle branche et vous y placera : **« (nom-de-l
 
 ![Image décrivant la création de la branche par l’invite de commande Git Bash](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/02_Creation-branche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-:::warning
-En passant par l’invite de commande cela crée également la branche sur github. Il n’est pas recommandé de créer la nouvelle branche via le navigateur car cela rajouterait des étapes supplémentaires qui ne seront pas abordées dans cette documentation.
-:::
-
-Pour naviguer entre les branches existantes il faut lancer la commande suivante :
+Répercutez ensuite la création de cette branche sur github, en lançant la commande suivante :
 
 ```bash
-git checkout nom-de-la-branche
+git push origin nom-de-la-nouvelle-branche
 ```
 
 Pour lister les branches existantes il faut lancer la commande suivante :
@@ -74,40 +76,41 @@ Pour lister les branches existantes il faut lancer la commande suivante :
 git branch -l
 ```
 
+Vous pouvez alors naviguer entre les branches existantes avec la commande suivante :
+
+```bash
+git checkout nom-de-la-branche
+```
+
 ![Image décrivant le listing et le changement de branches dans l’invite de commande Git Bash](/img/guides-producteur/creer-des-pages-de-documentation/etapes-prealables-aux-modifications/03_Liste-des-branches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ## Mettre à jour votre clone local
 
-Dans l’invite de commande _Git Bash_ lancez la commande suivante :
+Vous reprenez vos modifications alors que le dépôt principal a été modifié depuis la création de votre branche ? Dans ce cas il faut mettre à jour votre branche github (cf. _3. Mettre à jour votre fork_), puis mettre à jour votre clone en local.
 
-```bash
-git pull
-```
-
-Si vous avez des modifications locales non enregistrées et que la commande _git pull_ vous en informe, il faut mettre de côté les modifications locales avec la commande suivante :
+Mettez de côté les modifications locales avec la commande suivante :
 
 ```bash
 git stash
 ```
 
-Exécutez à nouveau le _git pull_, puis réappliquez les modifications locales avec la commande suivante :
+Ainsi elles ne seront pas surchargées par la mise à jour.
+
+Importez la mise à jour avec la commande suivante :
+
+```bash
+git pull
+```
+
+Enfin, réappliquez les modifications locales sauvegardées avec la commande suivante :
 
 ```bash
 git stash apply
 ```
 
 :::info
-Les commandes peuvent se lancer depuis n’importe quelle branche mais il est conseillé de se placer à la racine du projet.
+Les commandes peuvent se lancer depuis n’importe quel sous-dossier mais il est conseillé de se placer à la racine du projet.
 :::
-
-## Changer son pseudonyme sur _github_
-
-Par défaut _github_ génère votre pseudonyme à partir des informations de votre ordinateur. Pour modifier le pseudonyme et le courriel à utiliser (qui seront visibles par tous les contributeurs), lancez les commandes suivantes sur *Git Bash* :
-
-```bash
-git config --global user.name "MonPseudoGithub"
-git config --global user.email mail@domaine.fr
-```
 
 ## Exécuter _Eleventy_ pour construire le site
 

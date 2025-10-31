@@ -108,9 +108,10 @@ La requête a pour caractéristiques :
         - Valeur par défaut : false
 
 :::info
+
 - Pour un point situé dans une zone non couverte par la donnée, l’altitude renvoyée sera « -99999 »
 - Les altitudes fournies sont arrondies à 2 chiffres après la virgule
-:::
+  :::
 
 Exemple de requête et résultat en JSON :
 
@@ -168,10 +169,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48|1.
 
 ```json
 {
-    "elevations": [
-        164.34,
-        141.33
-    ]
+    "elevations": [164.34, 141.33]
 }
 ```
 

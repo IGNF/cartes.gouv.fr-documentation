@@ -16,10 +16,6 @@ summary:
     visible: true
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 Cette page explique la procédure pour fusionner vos modifications faites en local avec le dépôt principal de la documentation de Cartes.gouv.fr.
 
 :::info
@@ -31,6 +27,8 @@ Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pri
 Pensez à bien enregistrer toutes vos modifications, sinon elles ne seront pas prises en compte dans la suite de la procédure. Dans _Visual Studio_ un petit rond apparait à côté du nom du fichier si celui-ci a été modifié et pas encore enregistré.
 
 ![Image décrivant un fichier non enregistré dans Visual Studio](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/01_Fichier-non-enregistre.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+---
 
 ## Passer en revue les modifications
 
@@ -50,6 +48,8 @@ Les fichiers non-enregistrés peuvent ne pas apparaitre dans la liste des modifi
 
 ![Image décrivant le résultat de la commande git status](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/02_Git-status.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
+---
+
 ## Choisir les fichiers à fusionner
 
 Vous pouvez soit ajouter toutes vos modifications avec la commande suivante :
@@ -63,6 +63,8 @@ Soit ajouter uniquement certains fichiers un à un avec la commande suivante :
 ```bash
 git add content/fr/partenaires/partenaireABC/.../monfichier.md
 ```
+
+---
 
 ## Pousser les modifications sur votre _fork_
 
@@ -86,6 +88,8 @@ Vous pouvez voir sur le _github_ de votre _fork_ que celle-ci est à présent en
 
 ![Image décrivant l’avance du fork sur le dépôt princiapl](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/03_Avance-du-fork-sur-le-depot-principal.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
+---
+
 ## Demander une _pull request_
 
 La dernière étape consiste à demander au dépôt principal d’accepter vos modifications, il s’agit de la _pull request_ (ou de la demande de _merge_).
@@ -97,6 +101,8 @@ Ajoutez un titre et une description concise puis cliquez sur **« Create pull r
 ![Image décrivant la demande de pull request](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/04_Demande-de-pull-request.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Un autre membre du projet devra alors vérifier la demande et l’accepter. Dès que cela sera fait, les modifications apparaitront sur le site.
+
+---
 
 ## Supprimer la branche
 

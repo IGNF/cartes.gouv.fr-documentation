@@ -20,13 +20,11 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
----
-
 :::info
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
 :::
 
-## Prévisualisation sur _VS Code_
+## Modifier et prévisualiser avec _VS Code_
 
 À la suite de l’installation de _VS Code_, vous pouvez prévisualiser l’écriture de contenu de plusieurs facons. Néanmoins, cette prévisualisation n’englobera pas les composants DSFR. Il faudra déployer le site en local pour avoir une image complète de prévisualisation (cf. page précédente).
 
@@ -36,13 +34,13 @@ Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers 
 
 ![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## Modifier des fichiers
-
-Il vous suffit d’éditer, de créer ou de supprimer les fichiers dans votre dossier. Lorsque vous enregistrez, la modification est prise en compte par _Eleventy_ et s’affichera dans la prévisualisation en _localhost_ sur votre navigateur.
+Lorsque vous enregistrez, la modification est prise en compte par _Eleventy_ et s’affichera dans la prévisualisation en _localhost_ sur votre navigateur.
 
 :::info
 la modification peut ne pas bien s’afficher dans le cas d’une création d’un nouveau fichier. Dans ce cas arrêtez _Eleventy_ en faisant **« ctrl+C »** dans l’invite de commande _Git Bash_, puis relancez la commande **« npm start »**
 :::
+
+---
 
 ## Emplacement des modifications
 
@@ -54,12 +52,13 @@ En tant que rédacteur, vous n’aurez généralement pas de modification à eff
 Le contenu de la barre de navigation n’est pas directement déterminée par l’arborescence des dossiers et fichiers mais par le contenu des cartouches (ou en-têtes) de chaque fichier.
 Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette navigation pour faciliter le repérage.
 
+---
+
 ## Nouveau partenaire
 
 Pour ajouter un nouveau partenaire à la documentation, il faut ajouter un fichier _.md_ dans le dossier **« partenaires »**, contenant les informations suivantes :
 
-```njk
-{% raw %}
+```yaml
 ---
 title: Institut national de l’information géographique et forestière
 layout: layouts/accueil.njk
@@ -68,7 +67,6 @@ image:
     alt: Logo IGN
 sidemenuNav: ign
 ---
-{% endraw %}
 ```
 
 - **« title »** correspond au titre de votre documentation partenaire.
@@ -80,13 +78,11 @@ sidemenuNav: ign
 Dans le fichier _eleventy.config.js_ situé à la racine du projet, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé :
 
 ```js
-{% raw %}
 eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
     return collectionApi.getAll().filter((item) => {
         return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
     });
 });
-{% endraw %}
 ```
 
 Dans le fichier _accueil.njk_ situé dans **« _includes/layouts »**, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé et en indiquant le titre de la documentation partenaire :
@@ -121,6 +117,8 @@ Dans le fichier _parent.njk_ situé dans **« _includes/layouts »**, en rempl
 {% endraw %}
 ```
 
+---
+
 ## Fichier .md parent
 
 Chaque dossier doit contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
@@ -130,7 +128,7 @@ Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit
 
 Cas n°1 : le sous-dossier correspondant se situe au premier niveau du menu latéral. Dans ce cas il faut écrire l’en-tête comme suit :
 
-```markdown
+```yaml
 ---
 title: Créer des pages de documentation
 layout: layouts/parent.njk
@@ -146,7 +144,7 @@ pictogram: "document/document-add.svg"
 
 Cas n°2 : le sous-dossier correspondant se situe au deuxième ou au troisième niveau du menu latéral. Dans cas il faut ajouter un élément **« parent »** dans la partie **« eleventyNavigation »** :
 
-```markdown
+```yaml
 ---
 title: Sous-dossier de niveau 2
 layout: layouts/parent.njk
@@ -174,15 +172,16 @@ Voir paragraphe 2.4 pour plus de détails sur les pictogrammes.
 Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 :::
 
-## Fichier .11data.js
+---
+
+## Fichier .11tydata.js
 
 Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
 
 ![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichier-11tydata.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier contient les informations suivantes (modifiez les **« tags »**, **« url »** et **« title »** pour correspondre à votre page) :
 
-```njk
-{% raw %}
+```js
 module.exports = {
     tags: ["Documentation", "Partenaire"],
     segments: [
@@ -192,15 +191,15 @@ module.exports = {
         },
     ],
 };
-{% endraw %}
 ```
+
+---
 
 ## Fichier .md décrivant le contenu de la page
 
 Le texte est découpé en 2 parties : un en-tête (ou cartouche) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte. L’en-tête est similaire à celui des pages parents :
 
-```markdown
-{% raw %}
+```yaml
 ---
 title: Rédiger sa documentation
 tags:
@@ -220,7 +219,6 @@ summary:
     visible: true
     depth: 2
 ---
-{% endraw %}
 ```
 
 Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après l’en-tête :
@@ -270,25 +268,33 @@ Pour afficher un lien s’ouvrant dans la même fenêtre :
 Pour afficher un lien s’ouvrant dans une nouvelle fenêtre :
 
 ```html
-<a href="https://lien-url.com" target="_blank" rel="noopener noreferrer" title="Titre à afficher au survol - ouvre une nouvelle fenêtre"
-    >Titre à afficher dans le texte</a
->
+<a href="https://lien-url.com" target="_blank" rel="noopener noreferrer" title="Titre à afficher au survol - ouvre une nouvelle fenêtre">
+    Titre à afficher dans le texte
+</a>
 ```
+
+Pour afficher une image :
+
+```markdown
+![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+```
+
+Pour afficher un extrait de code :
 
 ````njk
 {% raw %}
-Pour afficher une image :
+```njk
+{% raw %}
+    contenu du code
+{% endraw %}
+```
+{% endraw %}
+````
 
-![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+Pour afficher un tableau :
 
-Pour afficher un extrait de code :
-    ```njk
-    {% raw %}
-        contenu du code
-    {% endraw %}
-    ```
-
-Pour afficher un tableau
+```njk
+{% raw %}
 {{ component("table", {
     headers: ["Titre 1", "Titre 2", "Titre 3"],
     data: [
@@ -298,11 +304,13 @@ Pour afficher un tableau
     ]
 }) }}
 {% endraw %}
-````
+```
 
 :::info
 Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne et de garder les espaces tels que présentés ci-dessus.
 :::
+
+---
 
 ## Images et pictogrammes
 

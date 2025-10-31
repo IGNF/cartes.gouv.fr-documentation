@@ -1,6 +1,5 @@
 ---
 title: Exemple d'ajout de colonne avec valeur paramétrable
-mermaid: true
 eleventyNavigation:
     key: Exemple d'ajout de colonne avec valeur paramétrable
     parent: Dérivation d'une donnée vecteur en base
@@ -8,10 +7,7 @@ eleventyNavigation:
     nav: guides-developpeur
 ---
 
-
 {% from "components/component.njk" import component with context %}
-
-
 
 Dans cet exemple, on part de la donnée des écorégions du tutoriel de base, publiée en WFS, que l'on va modifier en ajoutant une colonne.
 
@@ -20,30 +16,28 @@ Dans cet exemple, on part de la donnée des écorégions du tutoriel de base, pu
 Toutes ces actions vont être définies au format SQL, dans un fichier statique. Ce fichier n'a pas vocation à contenir de la donnée, mais simplement des instructions de modification
 
 Exemple :
-  {{ component("download", {
+{{ component("download", {
     title: "derivation.sql",
     href: "/data/tutoriels/alimentation-maj/derivation.sql",
     detail: "SQL - 133Ko"
 }) }}
 
 ```sql title="Contenu"
-ALTER TABLE ecoregions ADD COLUMN test_add_column integer; 
+ALTER TABLE ecoregions ADD COLUMN test_add_column integer;
 
 UPDATE ecoregions
    SET test_add_column = nnh * {{ params.multiply }};
 ```
-
 
 Ce fichier va permettre :
 
 - D'ajouter une colonne à la table `ecoregions`
 - De remplir avec pour valeur celle de l'attribut `nnh` multipliée par un nombre fourni en paramètre de l'exécution de traitement. La syntaxe {% raw %}`{{ params.<x> }}`{% endraw %} permet de rendre dynamique ces scripts de dérivation.
 
-
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-``` title="Contenu" 
-https://data.geopf.fr/api/datastores/{datastore}/statics 
+```title="Contenu"
+https://data.geopf.fr/api/datastores/{datastore}/statics
 ```
 
 {{ component("table", {
@@ -55,21 +49,19 @@ https://data.geopf.fr/api/datastores/{datastore}/statics
     ]
 }) }}
 
-
-
 ### Corps de réponse JSON
+
 ```json
 {
-  "name": "Ajout d'une colonne et calcul par multiplication",
-  "type": "DERIVATION-SQL",
-  "_id": "{sql derivation}",
-  "type_infos": {
-    "used_variables": [
-      "params.multiply"
-    ]
-  }
+    "name": "Ajout d'une colonne et calcul par multiplication",
+    "type": "DERIVATION-SQL",
+    "_id": "{sql derivation}",
+    "type_infos": {
+        "used_variables": ["params.multiply"]
+    }
 }
 ```
+
 ???
 <br>
 
@@ -91,18 +83,17 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
 ### Corps de réponse JSON
+
 ```json
 {
     "processing": "{{ ids.processings['db-to-db'] }}",
     "inputs": {
-        "stored_data": [
-            "{stored data}"
-        ]
+        "stored_data": ["{stored data}"]
     },
     "output": {
         "stored_data": {
@@ -110,9 +101,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
         }
     },
     "parameters": {
-        "derivations": [
-            "{sql derivation}"
-        ],
+        "derivations": ["{sql derivation}"],
         "params": {
             "multiply": "3"
         }
@@ -121,6 +110,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 ```
 
 ### Corps de réponse JSON
+
 ```json
 {
     "processing": {
@@ -161,6 +151,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
     "_id": "{execution dérivation}"
 }
 ```
+
 ???
 <br>
 
@@ -168,11 +159,11 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution dérivation}/launch"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution dérivation}/launch
 ```
 
-??? 
+???
 <br>
 
 ## Consultation de la donnée
@@ -181,11 +172,12 @@ On peut voir le nouveau champ apparaître dans la description de la donnée
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
 ### Corps de réponse JSON
+
 ```json
 {
     "name": "Pays et écorégions",
@@ -242,6 +234,7 @@ On peut voir le nouveau champ apparaître dans la description de la donnée
     }
 }
 ```
+
 ???
 <br>
 
@@ -251,7 +244,7 @@ Comme la structure a changé (ajout d'une colonne), il faut resynchroniser l'off
 
 ??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering wfs}"
 
-``` title="Contenu" 
+```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering wfs}
 ```
 

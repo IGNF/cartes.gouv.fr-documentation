@@ -13,10 +13,6 @@ pictogram: document/document-add.svg
 description: Étape préalable à la publication de tout flux
 ---
 
-{% from "components/component.njk" import component with context %}
-
----
-
 Dans l’espace **« Découverte »** ou dans votre entrepôt, cliquez sur **« Créer une fiche de données »**. Cela ouvrira une page associée, dans laquelle vous pourrez définir le nom de votre fiche de données.
 
 ![Image décrivant la première étape de création d’une fiche de données](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/deposer-donnees-sur-cartes-gouv/01_creer-fiche.png){.fr-responsive-img .frx-border-img .frx-img-contained}

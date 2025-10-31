@@ -6,10 +6,10 @@ Il est construit sur la base des templates de [codegouvfr/eleventy-dsfr](https:/
 
 ## Prise en main
 
--   [Guide de contribution](CONTRIBUTING.md)
--   [Principes généraux](docs/index.md)
--   [Documentation rédacteur](docs/redacteur.md)
--   [Documentation développeur](docs/developpeur.md)
+- [Guide de contribution](CONTRIBUTING.md)
+- [Principes généraux](docs/index.md)
+- [Documentation rédacteur](docs/redacteur.md)
+- [Documentation développeur](docs/developpeur.md)
 
 ## Déploiements
 

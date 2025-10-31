@@ -6,7 +6,7 @@ tags:
 eleventyNavigation:
     key: Données raster
     parent: Tutoriels d'utilisation de l'Entrepôt
-    order: 2
+    order: 4
     nav: guides-developpeur
 pictogram: custom/raster.svg
 ---
