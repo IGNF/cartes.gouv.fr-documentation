@@ -18,8 +18,6 @@ summary:
     depth: 2
 ---
 
-{% from "components/component.njk" import component with context %}
-
 :::info
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
 :::

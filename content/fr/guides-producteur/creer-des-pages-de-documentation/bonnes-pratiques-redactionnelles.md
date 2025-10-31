@@ -17,8 +17,6 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
----
-
 Cette page répertorie les bonnes pratiques d’écriture à appliquer à votre documentation, pour son accessibilité et la cohérence d’ensemble du site.
 
 :::info
