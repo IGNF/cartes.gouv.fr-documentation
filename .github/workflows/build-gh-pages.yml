@@ -27,8 +27,6 @@ jobs:
               uses: actions/checkout@v5
               with:
                   fetch-depth: 0
-            - name: Setup Pages
-              uses: actions/configure-pages@v5
             - name: Build with Eleventy
               run: |
                   npm install
