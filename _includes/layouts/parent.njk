@@ -51,6 +51,7 @@ layout: layouts/base.njk
         {% set children = children | sort(attribute = "data.eleventyNavigation.order") %}
         {% set items = children %}
         {% set columns = 4 %}
+        {% set title_tag = "h2" %}
         {% include "components/tile_list.njk" %}
       {% endif %}
       {% include "components/page_switcher.njk" %}
