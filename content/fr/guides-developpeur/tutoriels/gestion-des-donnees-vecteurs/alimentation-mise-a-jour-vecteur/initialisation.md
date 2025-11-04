@@ -337,7 +337,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
     data: [
         ["file = `<installation.sld>`"],
         ["type = GEOSERVER-STYLE"],
-        ["file = Style pour les installations"]
+        ["name = Style pour les installations"]
     ]
 }) }}
   
@@ -418,7 +418,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
         "title": "Installations classées pour la protection de l'environnement",
         "abstract": "Ce jeu de données correspond aux Installations classées pour la protection de l'environnement (ICPE) soumises à autorisation ou à enregistrement (en fonctionnement ou en cessation d'activité).",
         "keywords": [
-            "Tutoriel", "Géorisques", "Installation classées"
+            "Tutoriel", "Géorisques", "Installations classées"
         ],
         "bbox": {
             "west": -175,
@@ -444,7 +444,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 ???
 <br>
 
-:::warning Points d'attentions
+:::warning Points d'attention
     - Comme les tables sont vides, il est indispensable de surcharger le rectangle englobant, en mettant la couverture cible des données (ici une bbox mondiale)
     - On publie bien la vue et non la table
 :::

@@ -12,10 +12,10 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
-On peut également réaliser des suppressions et des modifications dans les tables de la donnée cible. Suppressions et modifications se font via des fichiers eu format CSV :
+On peut également réaliser des suppressions et des modifications dans les tables de la donnée cible. Suppressions et modifications se font via des fichiers au format CSV :
 
-* Des suppressions dans une table se fait via la livraison d'un fichier CSV `<nom de la table>.delete`. Chaque ligne de ce fichier donnera une instruction d'un DELETE dont le filtre est défini par les champs précisés.
-* Des modifications dans un table se fait via la livraison d'un fichier CSV `<nom de la table>.update`. La table cible doit avoir une clé primaire de définie et le fichier CSV doit préciser les valeurs des attributs de cette clé primaire. Chaque ligne de ce fichier donnera une instruction d'un UPDATE dont le filtre est défini par les champs de la clé primaire et les champs modifiés par les autres champs présent.
+* Des suppressions dans une table se font via la livraison d'un fichier CSV `<nom de la table>.delete`. Chaque ligne de ce fichier donnera une instruction d'un DELETE dont le filtre est défini par les champs précisés.
+* Des modifications dans un table se font via la livraison d'un fichier CSV `<nom de la table>.update`. La table cible doit avoir une clé primaire de définie et le fichier CSV doit préciser les valeurs des attributs de cette clé primaire. Chaque ligne de ce fichier donnera une instruction d'un UPDATE dont le filtre est défini par les champs de la clé primaire et les champs modifiés par les autres champs présent.
 
 Les suppressions sont jouées en premier, puis les modifications et enfin les insertions via des fichiers vecteurs comme vu précédemment.
 
@@ -211,8 +211,8 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 On utilise à nouveau le traitement d'intégration de données vecteur.
 
-:::warning Points d'attentions
-    Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu'en créer une nouvelle. Par défaut, le traitement d'intégration ne prend pas en compte les fichiers de suppressions et modifications, pour limiter les mauvaises manipulations. On va donc préciser en paramètre que nous voulons faire ce genre d'action.
+:::warning Points d'attention
+    Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu'en créer une nouvelle. Par défaut, le traitement d'intégration ne prend pas en compte les fichiers de suppression et modification, pour limiter les mauvaises manipulations. On va donc préciser en paramètre que nous voulons faire ce genre d'action.
 :::
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
@@ -226,7 +226,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     "processing": "{{ ids.processings['vector_to_db'] }}",
     "inputs": {
         "upload": [
-            "{upload suppression modification}}"
+            "{upload suppression modification}"
         ]
     },
     "output": {
@@ -408,13 +408,13 @@ Notre flux WMS retourne désormais la donnée modifiée sur les Ardennes et le D
 
 ![Comparaison avant / après de la suppression](/img/guides-developpeur/vecteur/comparaison_suppression.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-??? GET "{{ urls.public.wmsv }}?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=47.15389042500531502,5.95024509374819122,47.37809636403335389,6.16439800318477449&CRS=EPSG:4326&WIDTH=916&HEIGHT=959&LAYERS=installations_classees&STYLES=&FORMAT=image/png&QUERY_LAYERS=installations_classees&INFO_FORMAT=application/json&I=437&J=478&FEATURE_COUNT=10"
+???? GET "{{ urls.public.wmsv }}?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo{...}"
 
 ```title="Contenu"
 {{ urls.public.wmsv }}?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=47.15389042500531502,5.95024509374819122,47.37809636403335389,6.16439800318477449&CRS=EPSG:4326&WIDTH=916&HEIGHT=959&LAYERS=installations_classees&STYLES=&FORMAT=image/png&QUERY_LAYERS=installations_classees&INFO_FORMAT=application/json&I=437&J=478&FEATURE_COUNT=10
 ```
 
-    === "Avant"
+??? Avant
 
 ```json
 {
@@ -473,8 +473,8 @@ Notre flux WMS retourne désormais la donnée modifiée sur les Ardennes et le D
     ]
 }
 ```
-
-    === "Après"
+???
+??? Après
 
 ```json
 {
@@ -534,4 +534,5 @@ Notre flux WMS retourne désormais la donnée modifiée sur les Ardennes et le D
 }
 ```
 ???
+????
 <br>

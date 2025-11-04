@@ -200,7 +200,8 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
 ???
 <br>
 
-- Livraison des fichiers : 
+- Livraison des fichiers :
+
 {{ component("download", {
     title: "scan1000_corse_sud.tif",
     href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",

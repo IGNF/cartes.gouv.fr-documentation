@@ -200,11 +200,13 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
 ???
 <br>
 
-- Livraison des fichiers : {{ component("download", {
-                                title: "scan1000_corse_sud.tif",
-                                href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
-                                detail: "tif - 7.5 Mo"
-                            }) }}
+- Livraison des fichiers :
+
+{{ component("download", {
+    title: "scan1000_corse_sud.tif",
+    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
+    detail: "tif - 7.5 Mo"
+}) }}
 
 - Fermeture de la livraison
 - Création de l'exécution de traitement : on a ici deux données en entrée, la nouvelle zone livrée, ainsi que la pyramide ne contenant que le Nord de la Corse
