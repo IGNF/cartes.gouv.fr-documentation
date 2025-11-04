@@ -41,7 +41,7 @@ flowchart LR
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
 
 ???
@@ -49,10 +49,10 @@ flowchart LR
 
 ### Consultation du traitement qui nous intéresse
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms-to-pyramid'] }}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms_to_pyramid'] }}"
 
 ```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms-to-pyramid'] }}
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms_to_pyramid'] }}
 ```
 
 ```json
@@ -235,7 +235,7 @@ flowchart LR
             }
         }
     ],
-    "_id": "{{ ids.processings['wms-to-pyramid'] }}",
+    "_id": "{{ ids.processings['wms_to_pyramid'] }}",
     "required_checks": []
 }
 ```
@@ -257,7 +257,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 
 ```json
 {
-    "processing": "{{ ids.processings['wms-to-pyramid'] }}",
+    "processing": "{{ ids.processings['wms_to_pyramid'] }}",
     "inputs": {},
     "output": {
         "stored_data": {
@@ -284,7 +284,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 {
     "processing": {
         "name": "Calcul ou mise à jour de pyramide raster par moissonnage WMS",
-        "_id": "{{ ids.processings['wms-to-pyramid'] }}"
+        "_id": "{{ ids.processings['wms_to_pyramid'] }}"
     },
     "status": "CREATED",
     "creation": "2023-05-30T14:48:14.997796818Z",
@@ -321,11 +321,11 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 
 La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier).
 
-:::warning "Points d'attentions"
+:::warning Points d'attentions
 Les flux sortant des nœuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d'un usage avec d'autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
 :::
 
-:::warning "Données privées"
+:::warning Données privées
 Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extras` en précisant une apikey : "harvest_extras": "apikey={apikey}"
 :::
 

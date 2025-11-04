@@ -20,7 +20,7 @@ Dans la suite, nous allons travailler avec le service WFS public.
 On commence par télécharger les [capacités complètes]({{ urls.public.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0) du service de diffusion ciblé.
 
 ```bash
-curl -o getcap.xml "{{ urls.open.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0"
+curl -o getcap.xml "{{ urls.public.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0"
 ```
 
 Le nettoyage doit se faire au sein des nœuds XML `wfs:WFS_Capabilities/FeatureTypeList/FeatureType`. Il est également possible de nettoyer les _<span lang="en">namespaces</span>_ définis au niveau du noeud racine du document. Il est nécessaire de ne pas toucher aux autres éléments du document XML, afin que celui-ci reste une réponse interprétable par les clients applicatifs consommant du WFS.

@@ -11,6 +11,8 @@ summary:
     depth: 2
 ---
 
+{% from "components/component.njk" import component with context %}
+
 ## Calcul de la pyramide raster MNT
 
 Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d'images (la donnée est calculée dans plusieurs résolutions) sur du stockage S3. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
@@ -50,7 +52,7 @@ flowchart LR
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
 
 ???
@@ -259,11 +261,10 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
 ???
 <br>
 
-:::warning "Points d'attentions"
+:::warning Points d'attentions
 On précise une étiquette de stockage pour la donnée en sortie. Selon la configuration de votre entrepôt, il est possible que vous ayez accès à plusieurs stockages de type S3. Ce sont les étiquettes qui vont permettre de choisir le stockage S3 cible.
 
     On utilise le TMS `LAMB93_50cm` qui a le même système de coordonnée que l'image livrée, ainsi qu'un niveau à la même résolution (50cm). En choisissant une interpolation `nn`, on s'assure d'avoir un niveau de pyramide parfaitement calé sur les données sources, sans réechantillonnage, donc avec des valeurs d'origine. Les niveaux supérieurs eux seront calculé en moyennant les pixels 4 par 4. En ajoutant les masques, on évite de prendre en compte le nodata dans cette moyenne.
-
 :::
 
 ### Déclenchement de cette exécution
@@ -410,4 +411,11 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 
 ## Calcul de la pyramide MNS
 
-Toutes ces étapes peuvent être répétées avec la dalle [LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif](/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif), dans une livraison à part. Cela permettra d'exploiter les deux données pour enrichir les services.
+Toutes ces étapes peuvent être répétées avec la dalle :
+
+{{ component("download", {
+    title: "[GeoTIFF] LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
+    href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
+    detail: "TIFF - 15.3 Mo"
+}) }}
+, dans une livraison à part. Cela permettra d'exploiter les deux données pour enrichir les services.

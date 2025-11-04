@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Espaces de travail
     order: 2
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 Lorsque l’on appartient à un organisme, on a la possibilité d’en gérer les membres et de lire le contenu de ses communautés.

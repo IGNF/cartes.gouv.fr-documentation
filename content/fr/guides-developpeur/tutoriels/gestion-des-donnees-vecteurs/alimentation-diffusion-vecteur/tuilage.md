@@ -7,6 +7,9 @@ eleventyNavigation:
     parent: Alimentation et diffusion simple vecteur
     order: 7
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -24,7 +27,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???
@@ -132,10 +135,8 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 
 ### Configuration d'une exécution de ce traitement
 
-:::warning "Points d'attentions"
-
+:::warning Points d'attentions
     Les niveaux sur lesquels on transforme les données vecteurs en tuiles vectorielles sont importants : en calculant un niveau trop résolu (trop bas), le temps de génération et le volume occupé par la pyramide en sortie sera inutilement grand. En utilisant une table volumineuse dans des niveaux trop hauts, les tuiles seront très lourdes car contenant trop de données (ou vidées de la majoraité des objets). Il faut donc prêter une attention particulière aux niveaux d'utilisation des tables.
-
 :::
 
 Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans tous les niveaux, et les écorégions ne seront présents que jusqu'au niveau 5. On ne filtre pas les données et on ne change pas les noms des tables dans les tuiles. On veut tous les attributs.
@@ -278,7 +279,7 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 
 ???

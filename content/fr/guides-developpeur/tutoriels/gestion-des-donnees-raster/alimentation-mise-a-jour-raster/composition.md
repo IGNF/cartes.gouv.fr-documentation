@@ -11,6 +11,8 @@ summary:
     depth: 2
 ---
 
+{% from "components/component.njk" import component with context %}
+
 L'avantage de ce mode de fonctionnement est que les générations des pyramides indépendantes peuvent se faire en parallèle. Il n'y a pas de modifications de données et celles-ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les pyramides utilisées dans la composition).
 
 ```mermaid
@@ -89,7 +91,13 @@ stateDiagram
 ???
 <br>
 
-- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
+- Livraison des fichiers : 
+{{ component("download", {
+    title: "scan1000_corse_nord.tif",
+    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif",
+    detail: "TIFF - 7.5 Mo"
+}) }}
+
 - Fermeture de la livraison
 - Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
@@ -149,7 +157,12 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
 ???
 <br>
 
-- Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
+- Livraison des fichiers : 
+{{ component("download", {
+    title: "scan1000_corse_sud.tif",
+    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
+    detail: "TIFF - 7.7 Mo"
+}) }}
 - Fermeture de la livraison
 - Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
@@ -189,12 +202,12 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
 
 Lorsque les deux pyramides indépendantes sont générées :
 
-- Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids-to-pyramid'] }}`
+- Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids_to_pyramid'] }}`
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids-to-pyramid'] }}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}"
 
 ```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids-to-pyramid'] }}
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}
 ```
 
 ```json
@@ -232,7 +245,7 @@ Lorsque les deux pyramides indépendantes sont générées :
             "mandatory": false
         }
     ],
-    "_id": "{{ ids.processings['pyramids-to-pyramid'] }}",
+    "_id": "{{ ids.processings['pyramids_to_pyramid'] }}",
     "required_checks": []
 }
 ```
@@ -250,7 +263,7 @@ Lorsque les deux pyramides indépendantes sont générées :
 
 ```json
 {
-    "processing": "{{ ids.processings['pyramids-to-pyramid'] }}",
+    "processing": "{{ ids.processings['pyramids_to_pyramid'] }}",
     "inputs": {
         "stored_data": ["{stored data Corse Nord}", "{stored data Corse Sud}"]
     },

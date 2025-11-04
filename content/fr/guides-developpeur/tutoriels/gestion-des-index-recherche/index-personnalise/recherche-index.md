@@ -13,7 +13,7 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-Pour effectuer une recherche sur un index custom, il faudra se connecter au préalable avec [un compte Géoplateforme ou une clé définie précédemment](../../controle-des-acces/diffusion/cle.md).
+Pour effectuer une recherche sur un index custom, il faudra se connecter au préalable avec [un compte Géoplateforme ou une clé définie précédemment](/fr/guides-developpeur//tutoriels/controle-des-acces/service-de-diffusion/diffusion).
 
 Il est possible de lister les différents index custom qui nous sont disponibles avec cette route (tous les index custom à *open=true* et les *open=false* où vous avez la permission) :
 

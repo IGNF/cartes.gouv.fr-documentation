@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Espaces de travail
     order: 1
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 

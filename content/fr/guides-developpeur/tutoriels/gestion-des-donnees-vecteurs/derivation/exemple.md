@@ -5,6 +5,9 @@ eleventyNavigation:
     parent: Dérivation d'une donnée vecteur en base
     order: 1
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -77,7 +80,7 @@ En consultant la donnée en WFS, notamment sa table attributaire, on retrouve le
 
 On utilise le traitement de dérivation vecteur.
 
-:::warning "Points d'attentions"
+:::warning Points d'attentions
 Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On précise également cette donnée comme étant en entrée de notre exécution. On va donc modifier une donnée plutôt qu'en créer une nouvelle.
 :::
 
@@ -91,7 +94,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 
 ```json
 {
-    "processing": "{{ ids.processings['db-to-db'] }}",
+    "processing": "{{ ids.processings['db_to_db'] }}",
     "inputs": {
         "stored_data": ["{stored data}"]
     },
@@ -115,7 +118,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 {
     "processing": {
         "name": "Génération ou mise à jour d’une donnée vecteur à partir d’une donnée vecteur",
-        "_id": "{{ ids.processings['db-to-db'] }}"
+        "_id": "{{ ids.processings['db_to_db'] }}"
     },
     "status": "CREATED",
     "creation": "2024-02-16T14:51:24.152451997Z",
