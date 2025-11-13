@@ -38,7 +38,7 @@ jobs:
 
     deploy-ghpages:
         name: Deploy to github pages
-        if: github.event_name == 'push' && github.ref_name == 'main'
+        if: github.event_name == 'push' && github.ref_name == 'main' && github.repository == 'IGNF/cartes.gouv.fr-documentation'
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
