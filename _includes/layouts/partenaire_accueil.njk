@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/component.njk" import component with context %}
+<div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      {% set effectiveNav = eleventyNavigation.nav %}
+      {% if sidemenuNav %}
+        {% set effectiveNav = sidemenuNav %}
+      {% endif %}
+      {% if effectiveNav == "guides-utilisateur" %}
+        {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.utilisateurNavigation %}
+        {% set sidemenuTitle = "Guides utilisateur" %}
+      {% elif effectiveNav == "guides-producteur" %}
+        {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.producteurNavigation %}
+        {% set sidemenuTitle = "Guides producteur" %}
+      {% elif effectiveNav == "guides-developpeur" %}
+        {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.developpeurNavigation %}
+        {% set sidemenuTitle = "Guides développeur" %}
+      {% elif effectiveNav == "ign" %}
+        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.ignNavigation %}
+        {% set sidemenuTitle = "Institut national de l'information géographique et forestière" %}
+      {% endif %}
+      {% include "templates/sidemenu.njk" %}
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row">
+        <div class="fr-col-12">
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          <img src="{{ image.path }}"
+            alt="{{ image.alt }}"
+            height="80"
+            class="fr-artwork" />
+          {% include "components/published_on.njk" %}
+          <h1>{{ title }}</h1>
+          {% if tileTag %}
+              <div class="fr-tile__start">
+                  <p class="fr-tag {{ tileTag.icon }} fr-tag--icon-left">{{ tileTag.label }}</p>
+              </div>
+          {% endif %}
+        </div>
+      </div>
+      {{ content | safe }}
+      {% set generalitesPage = null %}
+      {% set topLevelPages = [] %}
+      {% for entry in navCollection %}
+        {% if not entry.data.eleventyNavigation.parent %}
+          {% if entry.data.title == "Généralités" %}
+            {% set generalitesPage = entry %}
+          {% else %}
+            {% set _ = topLevelPages.push(entry) %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if generalitesPage %}
+        <div class="fr-col-12 fr-my-10v">
+          {% set card = {
+              title: generalitesPage.data.title,
+              url: generalitesPage.url,
+              description: generalitesPage.data.description,
+              horizontal: true,
+              small: true
+          } %}
+          {% include "components/card.njk" %}
+        </div>
+      {% endif %}
+      <h2>Offre produit et services</h2>
+      <p>{{ hintText }}</p>
+      {% set topLevelPages = topLevelPages | sort(attribute = "data.eleventyNavigation.order") %}
+      {% set items = topLevelPages %}
+      {% set columns = 4 %}
+      {% set title_tag = "h2" %}
+      {% set small_cards = true %}
+      {% set ratio_cards = "16x9" %}
+      {% include "components/card_list.njk" %}
+    </div>
+  </div>
+</div>

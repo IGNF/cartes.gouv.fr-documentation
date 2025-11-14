@@ -43,19 +43,17 @@ layout: layouts/base.njk
         </div>
       </div>
       {{ content | safe }}
-      {% if eleventyNavigation and eleventyNavigation.key %}
-        {% set topLevelPages = [] %}
-        {% for entry in navCollection %}
-          {% if not entry.data.eleventyNavigation.parent %}
-            {% set _ = topLevelPages.push(entry) %}
-          {% endif %}
-        {% endfor %}
-        {% set topLevelPages = topLevelPages | sort(attribute = "data.eleventyNavigation.order") %}
-        {% set items = topLevelPages %}
-        {% set columns = 6 %}
-        {% set title_tag = "h2" %}
-        {% include "components/tile_list.njk" %}
-      {% endif %}
+      {% set topLevelPages = [] %}
+      {% for entry in navCollection %}
+        {% if not entry.data.eleventyNavigation.parent %}
+          {% set _ = topLevelPages.push(entry) %}
+        {% endif %}
+      {% endfor %}
+      {% set topLevelPages = topLevelPages | sort(attribute = "data.eleventyNavigation.order") %}
+      {% set items = topLevelPages %}
+      {% set columns = 6 %}
+      {% set title_tag = "h2" %}
+      {% include "components/tile_list.njk" %}
       {% include "components/page_switcher.njk" %}
     </div>
   </div>
