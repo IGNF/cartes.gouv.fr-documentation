@@ -1,7 +1,7 @@
 {% if not card %}
     {% set card = params %}
 {% endif %}
-<div class="fr-card {% if not card.externalUrl %} fr-enlarge-link {% endif %} {% if card.small %} fr-card--sm {% endif %} {{ card.addClass }}">
+<div class="fr-card {% if not card.externalUrl %} fr-enlarge-link {% endif %} {% if card.small %} fr-card--sm {% endif %} {% if card.horizontal %} fr-card--horizontal {% endif %} {{ card.addClass }}">
     <div class="fr-card__body">
         <div class="fr-card__content">
             {% if card.url is string %}
@@ -18,7 +18,7 @@
             </h3>
             <p class="fr-card__desc">{{ card.description }}</p>
             <div class="fr-card__start">
-                {% if card.tags %}
+                {% if card.tags and (card.show_tag is not defined or card.show_tag) %}
                     {% set tags = card.tags %}
                     {% include "components/taggroup-disabled.njk" %}
                 {% endif %}
@@ -64,7 +64,7 @@
                     <div class="fr-card__img">{% imageSync card.image.path, card.image.alt %}</div>
                 {% elif card.image.src %}
                     <div class="fr-card__img">
-                        <img class="fr-responsive-img {% if card.addClass == "fr-card--horizontal-tier" %} fr-responsive-img--16x9{% else %} fr-responsive-img--1x1{% endif %}"
+                        <img class="fr-responsive-img {% if card.addClass == "fr-card--horizontal-tier" %} fr-responsive-img--16x9{% else %} {% if card.ratio %} fr-responsive-img--{{ card.ratio }}{% else %}fr-responsive-img--1x1{% endif %}{% endif %}"
                             src="{{ card.image.src }}"
                             alt="{{ card.image.alt }}">
                     </div>

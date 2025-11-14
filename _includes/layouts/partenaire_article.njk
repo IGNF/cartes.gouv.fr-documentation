@@ -1,0 +1,70 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/component.njk" import component with context %}
+<div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      {% if eleventyNavigation.nav == "guides-utilisateur" %}
+        {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.utilisateurNavigation %}
+        {% set sidemenuTitle = "Guides utilisateur" %}
+      {% elif eleventyNavigation.nav == "guides-producteur" %}
+        {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.producteurNavigation %}
+        {% set sidemenuTitle = "Guides producteur" %}
+      {% elif eleventyNavigation.nav == "guides-developpeur" %}
+        {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.developpeurNavigation %}
+        {% set sidemenuTitle = "Guides développeur" %}
+      {% elif eleventyNavigation.nav == "ign" %}
+        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
+        {% set navCollection = collections.ignNavigation %}
+        {% set sidemenuTitle = "Institut national de l'information géographique et forestière" %}
+      {% endif %}
+      {% include "templates/sidemenu.njk" %}
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row">
+        <div class="fr-col-12">
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          {% include "components/published_on.njk" %}
+          <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v">
+            {% if parentInfo.image %}
+              <div class="fr-col-auto" style="width: 170px; height: 170px; overflow: hidden;">
+                <img src="{{ parentInfo.image.src }}"
+                    alt="{{ parentInfo.image.alt }}"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
+              </div>
+            {% endif %}
+            <div class="fr-col">
+              <h1>{{ parentInfo.title }}</h1>
+              {% if parentInfo.tags %}
+                {% set tags = parentInfo.tags %}
+                {% include "components/taggroup-disabled.njk" %}
+              {% endif %}
+              {% if parentInfo.description %}
+                <p class="fr-text--bold">{{ parentInfo.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+          {% if parentInfo.quote %}
+            <div class="fr-grid-row fr-grid-row--gutters">
+              <span class="fr-col-auto fr-icon-quote-fill fr-icon--lg fr-text-title--blue-france" aria-hidden="true"></span>
+              <p class="fr-col">{{ parentInfo.quote }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if eleventyNavigation.parent != parentInfo.title %}
+        <h2 class="fr-mt-2v">{{ eleventyNavigation.parent }}</h2>
+      {% endif %}
+      <h3 class="fr-mt-2v">{{ title }}</h3>
+      {{ content | safe }}
+      {% include "components/page_switcher.njk" %}
+    </div>
+  </div>
+</div>
