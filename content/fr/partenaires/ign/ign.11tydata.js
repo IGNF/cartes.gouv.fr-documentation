@@ -1,5 +1,4 @@
 module.exports = {
-    tags: ["IGNF"],
     segments: [
         {
             url: "/partenaires/ign",
