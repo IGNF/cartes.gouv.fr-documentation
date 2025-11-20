@@ -44,7 +44,7 @@ Le géocodage **inverse** a pour but de retourner, à partir d’un ou plusieurs
 Le géocodage s’appuie sur plusieurs sources de données :
 
  * L’index des adresses est actualisé chaque semaine à partir des adresses de la [Base Adresse Nationale (BAN)](https://adresse.data.gouv.fr/decouvrir-la-BAN).
- * Les lieux nommés proviennent de la couche des « points d’intérêt » (POI) de la [BD TOPO®](https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO), qui est actualisée tous les trimestres.
+ * Les lieux nommés proviennent de la couche des « points d’intérêt » (POI) de la [BD TOPO®](https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO), qui est actualisée tous les trimestres.
  * Les parcelles cadastrales proviennent du [Parcellaire Express (PCI)](https://cartes.gouv.fr/catalogue/dataset/IGNF_PARCELLAIRE-EXPRESS-PCI), actualisé tous les trimestres.
 
 Le service de géocodage est disponible au travers des URLs suivantes :
@@ -65,11 +65,11 @@ Ces deux types de géocodage se déclinent sous la forme d’appels unitaires en
 
 ## Géocodage par lot synchrone (batch) et asynchrone (batch-async)
 
-Pour géocoder un grand nombre d’adresses, la possibilité est offerte de passer par un traitement par lot, dit « batch », pour la recherche directe ou inverse.
+Pour géocoder un grand nombre d’adresses, la possibilité est offerte de passer par un traitement par lot, dit « batch », pour la recherche directe ou inverse.
 
 Les fichiers doivent être encodés en UTF8 et faire moins de 50 Mo ou 200000 lignes.
 
 Le site national de l’adresse propose une [interface intuitive](https://adresse.data.gouv.fr/outils/csv) pour la gestion des opérations de géocodage **direct** par fichiers.
 
-Enfin pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (Cf. section « Géocodage par lot asynchrone » dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
+Enfin pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (Cf. section « Géocodage par lot asynchrone » dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
 

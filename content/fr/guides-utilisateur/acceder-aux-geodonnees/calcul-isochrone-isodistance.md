@@ -16,7 +16,7 @@ summary:
 
 ## Présentation
 
-L'API de calcul d'isochrone/isodistance de la Géoplateforme permet de déterminer l’ensemble des lieux que l’on peut atteindre depuis un point de départ ou dont il faut partir pour atteindre un point d’arrivée en un temps (isochrone) ou une distance (isodistance) donné(e).
+L’API de calcul d’isochrone/isodistance de la Géoplateforme permet de déterminer l’ensemble des lieux que l’on peut atteindre depuis un point de départ ou dont il faut partir pour atteindre un point d’arrivée en un temps (isochrone) ou une distance (isodistance) donné(e).
 
 Son usage est limité à 5 requêtes par seconde depuis une même adresse IP.
 
@@ -24,18 +24,18 @@ Le calcul peut être paramétré, en fonction du besoin, selon plusieurs options
 
  * la méthode de calcul : isochrone ou isodistance
  * le type de véhicule : piéton ou voiture
- * la valeur de l'isochrone ou de l'isodistance
+ * la valeur de l’isochrone ou de l’isodistance
  * l’unité de la valeur de distance ou de durée
 
-Les données de référence utilisées au sein du service de calcul d’isochrone et isodistance proviennent du réseau routier et des tables de non communications de la base de données BD TOPO® de l'IGN.
+Les données de référence utilisées au sein du service de calcul d’isochrone et isodistance proviennent du réseau routier et des tables de non communications de la base de données BD TOPO® de l’IGN.
 
 L’API est interrogeable en méthodes GET et POST.
 
-Son swagger est accessible ici : [swagger du calcul d'isochrone/isodistance](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html).
+Son swagger est accessible ici : [swagger du calcul d’isochrone/isodistance](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html).
 
-## Capacités de l'API (getCapabilities)
+## Capacités de l’API (getCapabilities)
 
-La requête **getCapabilities** permet de découvrir les capacités de l'API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête **getCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante : 
 
@@ -47,11 +47,13 @@ Cette requête ne requiert aucun paramètre.
 
 ## Calculer une isochrone ou une isodistance
 
-Le calcul d'isochrone/isodistance est accessible via l’URL suivante :
+Le calcul d’isochrone/isodistance est accessible via l’URL suivante :
 
+```plain
 https://data.geopf.fr/navigation/isochrone
+```
 
-Les paramètres également précisés dans le [swagger du calcul d'isochrone/isodistance](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html) sont les suivants :
+Les paramètres également précisés dans le [swagger du calcul d’isochrone/isodistance](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html) sont les suivants :
 
 ### Calculer une isochrone ou une isodistance via la méthode GET
 
@@ -61,19 +63,19 @@ Les paramètres également précisés dans le [swagger du calcul d'isochrone/iso
         * Point de départ exprimé dans le CRS, par défaut, de la ressource (EPSG:4326) (exemple : 2.337306,48.849319).
     * **resource**
         * bdtopo-osrm : les calculs sont effectués avec le moteur « OSRM » , il permet des performances de calcul élevées mais présente un choix limité dans le paramétrage des requêtes notamment pour les l’expression des contraintes.
-        * bdtopo-valhalla : les calculs sont effectués avec le moteur « Valhalla » : il présente les mêmes avantages et inconvénients qu'OSRM, mais avec des performances un peu moindres. Nous vous conseillons de plutôt utiliser les ressources OSRM.
-        * bdtopo-pgr : les calculs sont effectués avec le moteur « pgRouting », il permet un plus grand choix dans le paramétrage des requêtes notamment pour l’expression des contraintes et pour la récupération d'attributs issus de la BD TOPO®. Cependant, les performances de calcul de ce moteur sont très inférieures à celles d'OSRM et Valhalla, nous vous conseillons donc de choisir de manière préférentielle OSRM, et de n'opter pour pgRouting que si vous avez des besoins précis concernant les contraintes de calcul et/ou les attributs récupérés.
+        * bdtopo-valhalla : les calculs sont effectués avec le moteur « Valhalla » : il présente les mêmes avantages et inconvénients qu’OSRM, mais avec des performances un peu moindres. Nous vous conseillons de plutôt utiliser les ressources OSRM.
+        * bdtopo-pgr : les calculs sont effectués avec le moteur « pgRouting », il permet un plus grand choix dans le paramétrage des requêtes notamment pour l’expression des contraintes et pour la récupération d’attributs issus de la BD TOPO®. Cependant, les performances de calcul de ce moteur sont très inférieures à celles d’OSRM et Valhalla, nous vous conseillons donc de choisir de manière préférentielle OSRM, et de n’opter pour pgRouting que si vous avez des besoins précis concernant les contraintes de calcul et/ou les attributs récupérés.
     * **costValue**
-        * Valeur du coût utilisé pour le calcul (une distance ou un temps selon l'optimisation choisie). L'unité dépendra des paramètres distanceUnit et timeUnit.
+        * Valeur du coût utilisé pour le calcul (une distance ou un temps selon l’optimisation choisie). L’unité dépendra des paramètres distanceUnit et timeUnit.
     * **costType**
-        * Type du coût utilisé pour le calcul. L'unité dépendra des paramètres distanceUnit et timeUnit.
+        * Type du coût utilisé pour le calcul. L’unité dépendra des paramètres distanceUnit et timeUnit.
         * Valeurs possibles : celles listées dans le getCapabilities (distance, time)
  * Paramètres facultatifs :
     * **profile**
         * Moyen de déplacement utilisé pour le calcul.
         * Valeurs possibles : celles listées dans le getCapabilities (car, pedestrian...)
     * **direction**
-        * Cela permet de définir le sens du parcours. Soit on définit un point de départ et on obtient les points d'arrivé potentiels. Soit on définit un point d'arrivé et on obtient les points de départ potentiels.
+        * Cela permet de définir le sens du parcours. Soit on définit un point de départ et on obtient les points d’arrivé potentiels. Soit on définit un point d’arrivé et on obtient les points de départ potentiels.
         * Valeurs possibles : celles listées dans le getCapabilities (departure, arrival) 
     * **constraints**
         * Contraintes utilisées pour le calcul.
@@ -101,9 +103,9 @@ https://data.geopf.fr/navigation/isochrone?gp-access-lib=3.4.2&resource=bdtopo-v
 
 ### Calculer une isochrone ou une isodistance via la méthode POST
 
-En utilisant la méthode POST, il est nécessaire de fournir en entrée un "body" sous la forme d'un objet JSON.
+En utilisant la méthode POST, il est nécessaire de fournir en entrée un "body" sous la forme d’un objet JSON.
 
-Exemple d'appel :
+Exemple d’appel :
 
 ```sh
 curl -X 'POST' \
@@ -133,6 +135,7 @@ Le nouveau mode de calcul des vitesses (septembre 2023) s’inspire très largem
 
 {{ component("table", {
     title: "Vitesses moyennes par ordre de traitement",
+    class: "fr-table--multiline",
     headers: ["Conditions", "Vitess moyenne VL"],
     data: [
         ["Etat de l’objet ≠ « En service »", "0"],
@@ -161,6 +164,25 @@ Le nouveau mode de calcul des vitesses (septembre 2023) s’inspire très largem
         ["Nature = « Type autoroutier » et Classement administratif ≠ « Autoroute », Importance = 3 et Urbain = vrai", "85"],
         ["Nature = « Type autoroutier » et Classement administratif ≠ « Autoroute », Importance = 4 et Urbain = faux", "90"],
         ["Nature = « Type autoroutier » et Classement administratif ≠ « Autoroute », Importance = 4 et Urbain = vrai", "67"]
+    ]
+}) }}
+
+{{ component("table", {
+    title: "Vitesses brutes par ordre de traitement",
+    class: "",
+    headers: ["Conditions", "Vitesse brute avant pénalités"],
+    data: [
+        ["Nature = « Rond-Point »", "25*"],
+        ["Nature = « Bretelle » et Importance = 1 à 4", "60*"],
+        ["Nature = « Bretelle » et Importance = 5 ou 6", "55*"],
+        ["Importance = 1 ou 2 et Urbain = faux", "80*"],
+        ["Importance = 1 ou 2 et Urbain = vrai", "50*"],
+        ["Importance = 3 et Urbain = faux", "75*"],
+        ["Importance = 3 et Urbain = vrai", "50*"],
+        ["Importance = 4 et Urbain = faux", "70*"],
+        ["Importance = 4 et Urbain = vrai", "45*"],
+        ["Importance = 5 et Urbain = faux", "55*"],
+        ["Importance = 5 et Urbain = vrai", "40*"]
     ]
 }) }}
 
@@ -196,7 +218,28 @@ La valeur est enfin arrondie à 5 km/h supérieur pour les objets d’importance
 
 **Calcul des pénalités cumulées**
 
-//TODO
+{{ component("table", {
+    title: "Calcul des pénalités cumulées",
+    headers: ["Dénomination", "Condition", "Pénalité"],
+    data: [
+        ["Densité", "Le point médian intersecte la zone de densité « zone habitée »","15%"],
+        ["Densité", "Le point médian intersecte la zone de densité « centre dense »","30%"],
+        ["Densité", "Le point médian intersecte la zone de densité « hyper centre »","40%"],
+        ["Passage protégé", "Le tronçon est à moins de 80 m d’une <Zone d’activité ou d’intérêt> de Nature = « Enseignement primaire » ou « Collège » ou « Mairie » ou Nature détaillée = « Crèche » ET urbain = Vrai OU intersecte les zones de densité « centre dense » ou « zone habitée » ET n’intersecte pas la zone de densité « hyper-centre »", "15%"],
+        ["Longueur", "Tronçon dont la longueur est inférieure ou égale à 80 m ET dont la nature est différente de « Route empierrée », « chemin » et « sentier » ET possède à ses deux sommets 3 liens ou plus avec des tronçons de nature différentes de « Route empierrée », « chemin » et « sentier ».", "(80 – longueur) / 4"],
+        ["Relance ronds-points proches (tronçons connexes)", "La longueur inférieure à 300m ET le tronçon touche 2 tronçons de Nature = « Rond-point »", "Arrondi entier le plus proche (300 – longueur) / 5 (coût maximum : 60%)"],
+        ["Relance ronds-points proches (tronçons connexes)", "La longueur inférieure à 300m ET le tronçon touche 4 tronçons de Nature = « Rond-point »", "Arrondi entier le plus proche (300 – longueur) / 7.5 (coût maximum : 40%)"],
+        ["Sinuosité", "Longueur du tronçon / distance entre les 2 extrémités >= 1.25", "20%"],
+        ["Sinuosité", "Longueur du tronçon / distance entre les 2 extrémités >= 1.05", "10%"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 3 touche un seul tronçon d’importance 1 ou 2", "Arrondi entier le plus proche (300- longueur) /3.75 (coût maximum : 80%)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 4 touche un seul tronçon d’importance 1 à 3", "Arrondi entier le plus proche (300- longueur) /3.75 (coût maximum : 80%)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 5 touche un seul tronçon d’importance 1 à 4", "Arrondi entier le plus proche (300- longueur) /3.75 (coût maximum : 80%)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 3 touche au moins deux tronçons d’importance 1 ou 2", "Arrondi entier le plus proche (300 – longueur) / 5 (coût maximum : 60%)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 4 touche au moins deux tronçons d’importance 1 à 3", "Arrondi entier le plus proche (300 – longueur) / 5 (coût maximum : 60%)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 5 touche au moins deux tronçons d’importance 1 à 4", "Arrondi entier le plus proche (300 – longueur) / 5 (coût maximum : 60%)"],
+        ["Largeur « rurale »", "Le tronçon n’est pas en zone urbaine, sa nature est différente de « Bretelle », son importance est 3 ou 4 et sa largeur est inférieure à 5m", "15%"]
+    ]
+}) }}
 
 Les pénalités sont ensuite additionnées, avec toutefois un plafond de 80%.
 
@@ -204,7 +247,7 @@ La vitesse brute est diminuée de cette somme des pénalités (vitesse moyenne =
 
 La valeur est enfin arrondie à 5 km/h supérieur pour les objets d’importance 1 à 4 et à 5 km/h inférieur pour les objets d’importance 5 ou 6.
 
-Contrainte sur l'attribut : Valeur obligatoire (calculée).
+Contrainte sur l’attribut : Valeur obligatoire (calculée).
 
 ### Vitesse piéton
 
