@@ -176,7 +176,7 @@ div.fr-callout__text p {
 }
 
 .frx-border-img {
-    border: 1px solid grey;
+    border: 1px solid var(--border-default-grey);
     padding: 0.5rem;
 }
 
