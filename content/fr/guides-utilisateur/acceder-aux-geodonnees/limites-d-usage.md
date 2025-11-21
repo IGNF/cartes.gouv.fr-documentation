@@ -33,7 +33,7 @@ Les limites d’usage fixées sont les suivantes :
     title: "Limites d’usage des API Géoplateforme",
     headers: ["API", "Limite d’usage par IP"],
     data: [
-        ["Diffusion d’images WMS-Raster"," 	40 requêtes/s"],
+        ["Diffusion d’images WMS-Raster"," 40 requêtes/s"],
         ["Diffusion d’images WMS-Vecteur"," 50 requêtes/s"],
         ["Diffusion d’objets WFS"," 30 requêtes/s"],
         ["Téléchargement"," 10 requêtes/s"],
@@ -61,8 +61,8 @@ Si le script sollicite l’API de géocodage sans précaution particulière, ave
     Les 50 premiers appels sont traités normalement ;
     Le 51ème appel et les suivants sont bloqués tant que le script continue à solliciter l’API de géocodage au-delà de la limite de 50 requêtes par seconde et que le délai de 5 secondes qui s’en suit n’est pas écoulé.
 
-Solution : paramétrer le script de telle sorte que la fréquence d’appel à l’API de géocodage ne dépasse pas 50 requêtes par seconde, en instaurant par exemple un plafond à 40 ou 45 requêtes pas seconde.
+Solution : paramétrer le script de telle sorte que la fréquence d’appel à l’API de géocodage ne dépasse pas 50 requêtes par seconde, en instaurant par exemple un plafond à 40 ou 45 requêtes par seconde.
 
-A titre d’illustration, pour une utilisation de l’ETL "FME" édité par Safe Software, le paramétrage de la fréquence d’appel peut être effectué comme suit :
+À titre d’illustration, pour une utilisation de l’ETL "FME" édité par Safe Software, le paramétrage de la fréquence d’appel peut être effectué comme suit :
 
-![Paramétrage de la fréquence d’appel sous FME, copie d’écran de l’interface](/img/guides-utilisateur/acceder-aux-geodonnees/limites-d-usage/rate-limiting-fme.png){.fr-responsive-img .frx-img-contained}
+![Paramétrage de la fréquence d’appel sous FME, copie d’écran de l’interface](/img/guides-utilisateur/acceder-aux-geodonnees/limites-d-usage/rate-limiting-fme.png){.fr-responsive-img .frx-border-img .frx-img-contained}

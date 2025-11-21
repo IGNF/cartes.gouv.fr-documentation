@@ -69,7 +69,7 @@ Cette requête a pour caractéristiques :
         * Description : le nombre maximum de réponses que l’on souhaite voir retournées
         * Valeurs possibles : entre 1 et 15
     * **bbox**
-        * Description : filtre avec une bbox suivant l’ordre Xmin,Ymin,Xmax,Ymax
+        * Description : filtre avec une bbox suivant l’ordre Xmin, Ymin, Xmax, Ymax
 
 Exemple de requête : 
 
