@@ -251,3 +251,7 @@ div.fr-callout__text p {
     display: flex;
     justify-content: center;
 }
+
+.importance {
+    display: none;
+}
