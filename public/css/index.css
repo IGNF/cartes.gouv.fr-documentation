@@ -364,3 +364,6 @@ div.fr-callout__text p {
     --underline-idle-width: 0;
     --underline-max-width: 0;
 }
+.importance {
+    display: none;
+}
