@@ -9,7 +9,7 @@ tags:
     - SLD
 eleventyNavigation:
     key: Créer et publier un service WMTS
-    parent: Publier des données via Cartes.gouv.fr
+    parent: Publier des données via cartes.gouv.fr
     order: 7
     nav: guides-producteur
 pictogram: digital/internet.svg

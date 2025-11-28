@@ -3,7 +3,7 @@ module.exports = {
     segments: [
         {
             url: "/guides-producteur/presentation-producteur",
-            title: "Présentation de Cartes.gouv.fr",
+            title: "Présentation de cartes.gouv.fr",
         },
     ],
 };
