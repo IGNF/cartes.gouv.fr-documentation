@@ -5,7 +5,7 @@ tags:
     - Entrepôt
 eleventyNavigation:
     key: Espace de travail « Découverte »
-    parent: Présentation de Cartes.gouv.fr
+    parent: Présentation de cartes.gouv.fr
     order: 3
     nav: guides-producteur
 pictogram: digital/search.svg
@@ -37,7 +37,7 @@ Vous accéderez alors à l’espace mutualisé **« Données Découverte »**�
 
 ## Créer une fiche de données
 
-Rendez-vous à la page [Déposer ses données sur Cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/deposer-donnees-sur-cartes-gouv/) pour déposer des données sur la Géoplateforme.
+Rendez-vous à la page [Déposer ses données sur cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/deposer-donnees-sur-cartes-gouv/) pour déposer des données sur la Géoplateforme.
 
 ---
 

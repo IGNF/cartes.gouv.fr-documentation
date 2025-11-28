@@ -1,7 +1,7 @@
 ---
 title: Créer des pages de documentation
 layout: layouts/parent.njk
-description: Création, modification et publication de documentation partenaire sur le site de documentation de Cartes.gouv.fr
+description: Création, modification et publication de documentation partenaire sur le site de documentation de cartes.gouv.fr
 tags:
     - Documentation
     - Partenaire
