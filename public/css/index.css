@@ -1,9 +1,6 @@
 /* Defaults */
 :root {
-    --font-family-monospace:
-        Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
-        Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-    --syntax-tab-size: 2;
+    --block-spacing: 1.5rem;
 }
 
 /* Global stylesheet */
@@ -255,5 +252,85 @@ div.fr-callout__text p {
 @media (min-width: 62em) {
     .fr-menu .fr-nav__link {
         box-shadow: inset 0 1px 0 0 var(--border-default-grey);
+    }
+}
+
+.dsfr-doc-tab-navigation {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.dsfr-doc-tab-navigation .fr-sidemenu {
+    padding-right: 0;
+}
+
+.dsfr-doc-tab-navigation ul {
+    padding-top: 1rem;
+}
+
+.dsfr-doc-tab-navigation__tab {
+    text-align: left;
+    width: 100%;
+    color: var(--text-default-grey);
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, var(--border-default-grey), var(--border-default-grey));
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    border: 0;
+    padding: 0.75rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    display: block;
+}
+
+.dsfr-doc-tab-navigation__tab[aria-current="page"] {
+    color: var(--text-active-blue-france);
+    display: none;
+}
+
+@media (width>=48em) {
+    .dsfr-doc-tab-navigation {
+        padding-top: 2rem;
+    }
+
+    .dsfr-doc-tab-navigation .fr-sidemenu__inner {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .dsfr-doc-tab-navigation ul {
+        background-image: linear-gradient(0deg, var(--border-default-grey), var(--border-default-grey));
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 2px;
+        flex-direction: row;
+        padding-top: 0;
+        display: flex;
+    }
+
+    .dsfr-doc-tab-navigation__tab {
+        background-repeat: no-repeat;
+        background-image: linear-gradient(0deg, var(--border-default-grey), var(--border-default-grey));
+        background-position: 0 100%;
+        background-size: 100% 2px;
+        padding: 0.75rem;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .dsfr-doc-tab-navigation__tab:hover:not([aria-current="page"]) {
+        background-image: linear-gradient(0deg, var(--border-contrast-grey), var(--border-contrast-grey));
+        background-position: 0 100%;
+        background-size: 100% 2px;
+        background-color: var(--background-default-grey-hover) !important;
+    }
+
+    .dsfr-doc-tab-navigation__tab[aria-current="page"] {
+        background-image: linear-gradient(0deg, var(--border-active-blue-france), var(--border-active-blue-france));
+        background-position: 0 100%;
+        background-size: 100% 2px;
+        display: block;
     }
 }
