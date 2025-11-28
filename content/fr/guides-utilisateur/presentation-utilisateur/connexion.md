@@ -5,15 +5,15 @@ tags:
     - Inscription
 eleventyNavigation:
     key: Connexion
-    parent: Présentation de Cartes.gouv.fr
+    parent: Présentation de cartes.gouv.fr
     order: 2
     nav: guides-utilisateur
 pictogram: digital/avatar.svg
-description: La procédure pour créer un compte Géoplateforme/Cartes.gouv.fr et se connecter
+description: La procédure pour créer un compte Géoplateforme/cartes.gouv.fr et se connecter
 ---
 
 :::info
-Cartes.gouv.fr est une interface qui se base sur l’infrastructure Géoplateforme. Ainsi, un compte personnel Cartes.gouv.fr est en réalité un compte Géoplateforme.
+Cartes.gouv.fr est une interface qui se base sur l’infrastructure Géoplateforme. Ainsi, un compte personnel cartes.gouv.fr est en réalité un compte Géoplateforme.
 :::
 
 ## 1 - Créer un compte Géoplateforme :
@@ -28,7 +28,7 @@ Si vous ne possédez pas encore de compte Géoplateforme, ciquez sur **« Pas e
 
 ### 1.1 - Étape 1/5 : renseigner un profil
 
-À cette étape vous pouvez renseigner votre identité via _FranceConnect_ ou _ProConnect_, ou alors créer un profil dédié Géoplateforme/Cartes.gouv.fr.
+À cette étape vous pouvez renseigner votre identité via _FranceConnect_ ou _ProConnect_, ou alors créer un profil dédié Géoplateforme/cartes.gouv.fr.
 
 Si vous choisissez cette deuxième option, complétez votre profil avec :
 
@@ -43,7 +43,7 @@ Cliquez ensuite sur **« Étape suivante »** pour compléter le profil plus e
 
 ### 1.2 - Étape 2/5 : renseigner une identité
 
-Vous pouvez compléter votre profil avec des informations complémentaires qui seront utilisées pour les communications de Cartes.gouv.fr avec les utilisateurs, notamment dans le cadre de la gestion et de l’animation de communautés.
+Vous pouvez compléter votre profil avec des informations complémentaires qui seront utilisées pour les communications de cartes.gouv.fr avec les utilisateurs, notamment dans le cadre de la gestion et de l’animation de communautés.
 
 Les éléments pouvant être complétés sont les suivants :
 
@@ -87,7 +87,7 @@ Cliquez enfin sur **« Enregistrement »** pour terminer la création de votre
 
 ![Vérification du courriel](/img/guides-utilisateur/presentation-utilisateur/connexion/08_inscription-verification-courriel.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## 2 - Se connecter à Cartes.gouv.fr :
+## 2 - Se connecter à cartes.gouv.fr :
 
 Cliquez sur **« Se connecter »** (en haut à droite), pour ouvrir la page de connexion. Vous pouvez vous identifier avec un courriel + mot de passe, avec _FranceConnect_ ou avec _ProConnect_.
 

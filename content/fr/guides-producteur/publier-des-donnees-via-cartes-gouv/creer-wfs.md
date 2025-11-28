@@ -10,7 +10,7 @@ tags:
     - QML
 eleventyNavigation:
     key: Créer et publier un service WFS
-    parent: Publier des données via Cartes.gouv.fr
+    parent: Publier des données via cartes.gouv.fr
     order: 3
     nav: guides-producteur
 pictogram: digital/internet.svg

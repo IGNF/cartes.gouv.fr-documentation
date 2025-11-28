@@ -16,7 +16,7 @@ summary:
     visible: true
 ---
 
-Cette page explique la procédure pour fusionner vos modifications faites en local avec le dépôt principal de la documentation de Cartes.gouv.fr.
+Cette page explique la procédure pour fusionner vos modifications faites en local avec le dépôt principal de la documentation de cartes.gouv.fr.
 
 :::info
 Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre *fork* : voir [Étapes préalables aux modifications](./etapes-initiales-aux-modifications/).
@@ -120,7 +120,7 @@ Il vous suffit alors de supprimer la branche concernée par la _pull request_ ac
 
 ---
 
-Vous avez terminé de créer et de modifier vos pages de documentation ! N’hésitez pas à parcourir le site pour découvrir les autres fonctionnalités de Cartes.gouv et de sa documentation.
+Vous avez terminé de créer et de modifier vos pages de documentation ! N’hésitez pas à parcourir le site pour découvrir les autres fonctionnalités de cartes.gouv.fr et de sa documentation.
 
 ---
 

@@ -5,7 +5,7 @@ tags:
     - Entrepôt
 eleventyNavigation:
     key: Espace de travail dédié
-    parent: Présentation de Cartes.gouv.fr
+    parent: Présentation de cartes.gouv.fr
     order: 4
     nav: guides-producteur
 pictogram: digital/search.svg
@@ -31,7 +31,7 @@ Vous pouvez ajouter un message optionnel à votre demande :
 
 ![Image décrivant la possibilité de rajouter un message optionnel à la demande](/img/guides-producteur/presentation/offre-essentielle/03_rejoindre-entrepot-public-message-optionnel.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via Cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/).)
+Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/).)
 
 ---
 
@@ -43,7 +43,7 @@ Dans votre tableau de bord, cliquez sur **« Demande de création d’un espace
 
 La demande sera transmise aux équipes de la Géoplateforme qui vous notifieront par courriel lorsque l’entrepôt sera créé. Puisqu’il s’agit d’un entrepôt privé, il est dédié à votre compte et ne sera pas visible des autres utilisateurs.
 
-Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via Cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/)).
+Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/)).
 
 :::warning
 Pensez à vérifier au préalable si votre structure dispose déjà d’un espace de travail.
@@ -57,4 +57,4 @@ Un entrepôt public est visible des autres utilisateurs qui pourront formuler un
 
 La création d’un tel entrepôt est limitée pour éviter les doublons et les chevauchements métiers. Il faut donc faire une demande argumentée et détaillée auprès de nos équipes ([geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)).
 
-Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via Cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/)).
+Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/)).

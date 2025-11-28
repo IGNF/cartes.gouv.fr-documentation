@@ -50,7 +50,7 @@ Cela vous permettra d’avoir plus d’informations sur la donnée sélectionné
 
 Dans le second onglet vous retrouverez l’ensemble des cartes accessibles depuis la **Géoplateforme**.
 
-Cet onglet offre la possibilité de filtrer par producteur ou par thématique sur l’ensemble des cartes. Partez à la découverte de la richesse cartographique proposée par **Cartes.gouv.fr** et trouvez votre bonheur.
+Cet onglet offre la possibilité de filtrer par producteur ou par thématique sur l’ensemble des cartes. Partez à la découverte de la richesse cartographique proposée par **cartes.gouv.fr** et trouvez votre bonheur.
 
 Vous pouvez également rechercher une carte spécifique avec son nom grâce à la barre de recherche inclue dans le cartalogue.
 

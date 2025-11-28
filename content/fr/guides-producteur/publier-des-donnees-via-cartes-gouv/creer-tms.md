@@ -7,7 +7,7 @@ tags:
     - Métadonnée
 eleventyNavigation:
     key: Créer et publier un service TMS
-    parent: Publier des données via Cartes.gouv.fr
+    parent: Publier des données via cartes.gouv.fr
     order: 5
     nav: guides-producteur
 pictogram: digital/internet.svg

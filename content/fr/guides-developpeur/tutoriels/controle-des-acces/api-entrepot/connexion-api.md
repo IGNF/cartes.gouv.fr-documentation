@@ -8,7 +8,7 @@ eleventyNavigation:
     nav: guides-developpeur
 ---
 
-La procédure pour créer un compte Géoplateforme/Cartes.gouv.fr et se connecter est décrite dans la page [Connexion](/fr/guides-utilisateur/presentation-utilisateur/connexion).
+La procédure pour créer un compte Géoplateforme/cartes.gouv.fr et se connecter est décrite dans la page [Connexion](/fr/guides-utilisateur/presentation-utilisateur/connexion).
 
 Une fois le compte créé, on peut manipuler l'API Entrepôt.
 
