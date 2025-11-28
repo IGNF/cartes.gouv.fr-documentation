@@ -7,3 +7,12 @@ eleventyNavigation:
     order: 1
     nav: ign
 ---
+
+{% from "components/component.njk" import component with context %}
+
+{% set tabnavLinks = [
+  { title: "Présentation", active: true },
+  { title: "Choisir mon produit", url: "./produit-imagerie" }
+] %}
+
+{{ component("tabnav", { items: tabnavLinks }) }}

@@ -59,10 +59,12 @@ layout: layouts/base.njk
           {% endif %}
         </div>
       </div>
-      {% if eleventyNavigation.parent != parentInfo.title %}
+      {% if eleventyNavigation.parent and eleventyNavigation.parent != parentInfo.title %}
         <h2 class="fr-mt-2v">{{ eleventyNavigation.parent }}</h2>
+        <h3 class="fr-mt-2v">{{ title }}</h3>
+      {% else %}
+        <h2 class="fr-mt-2v">{{ title }}</h2>
       {% endif %}
-      <h3 class="fr-mt-2v">{{ title }}</h3>
       {{ content | safe }}
       {% include "components/page_switcher.njk" %}
     </div>

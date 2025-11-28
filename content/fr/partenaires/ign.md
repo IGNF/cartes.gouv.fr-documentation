@@ -7,7 +7,7 @@ layout: layouts/partenaire_accueil.njk
 tags:
     - IGNF
 image:
-    path: /img/partenaires/ign.png
+    path: /img/partenaires/ign/ign.png
     alt: Logo IGN
 pictogram: custom/ign.png
 tileTag:
