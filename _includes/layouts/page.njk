@@ -12,7 +12,7 @@ layout: layouts/base.njk
                         {% include "components/breadcrumb.njk" %}
                     {% endif %}
                     <h1>{{ title }}</h1>
-                    {% if title != "Nous écrire" %}
+                    {% if title != "Nous écrire" and title != "Demande envoyée"%}
                         {% include "components/published_on.njk" %}
                     {% endif %}
 

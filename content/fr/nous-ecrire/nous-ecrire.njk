@@ -26,15 +26,15 @@ eleventyNavigation:
             <input name="first_name" autocomplete="given-name" class="fr-input" type="text" id="input-first-name">
             <div id="input-first-name-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
-        <fieldset id="fr-fieldset-radio" class="fr-fieldset fr-fieldset--inline" aria-labelledby="fr-fieldset-radio-legend fr-fieldset-radio-messages">
+        <fieldset id="fr-fieldset-radio" class="fr-fieldset fr-fieldset--inline" aria-labelledby="fr-fieldset-radio-legend fr-fieldset-radio-messages" onchange="onCategoryChange()">
             <legend id="fr-fieldset-radio-legend" class="fr-fieldset__legend fr-text--regular">Vous êtes ?</legend>
             <div class="fr-fieldset__content">
                 <div class="fr-radio-group">
-                    <input type="radio" id="input-category-0" name="category" value="Particulier" checked data-fr-js-radio-actionee="true">
+                    <input type="radio" id="input-category-0" name="category" value="Particulier" data-fr-js-radio-actionee="true">
                     <label class="fr-label" for="input-category-0">Particulier</label>
                 </div>
                 <div class="fr-radio-group">
-                    <input type="radio" id="input-category-1" name="category" value="Professionnel" data-fr-js-radio-actionee="true">
+                    <input type="radio" id="input-category-1" name="category" value="Professionnel" checked data-fr-js-radio-actionee="true">
                     <label class="fr-label" for="input-category-1">Professionnel</label>
                 </div>
             </div>
@@ -66,6 +66,27 @@ eleventyNavigation:
         <p>Les informations recueillies à partir de ce formulaire sont nécessaires à la gestion de votre demande par les services de l’IGN concernés. <a href="https://cartes.gouv.fr/donnees-personnelles">En savoir plus sur la gestion des données à caractère personnel</a>.</p>
         <div class="fr-grid-row fr-grid-row--right">
             <button id="fr-button-:r22:" class="fr-btn" data-fr-js-button-actionee="true" onclick="sendForm()">Envoyer</button>
+        </div>
+    </div>
+</div>
+<div id="contact-error" class="fr-alert fr-alert--error" data-fr-js-alert-actionee="true">
+    <h3 class="fr-alert__title">Votre message n'a pas pu être envoyé</h3>
+    <p id="contact-error-content"></p>
+    <button class="fr-link--close fr-link" data-fr-js-link-actionee="true">Masquer le message</button>
+</div>
+<div id="waiting-screen">
+    <div style="justify-content: center; align-items: center; background-color: var(--background-default-grey); color: var(--text-default-grey);">
+        <div class="fr-container fr-p-2w">
+            <div class="fr-container">
+                <div class="fr-grid-row fr-grid-row--middle">
+                    <div class="fr-col-2">
+                        <span class="fr-icon-refresh-line fr-icon--lg frx-icon-spin"></span>
+                    </div>
+                    <div class="fr-col-10">
+                        <h6 class="fr-h6 fr-m-0">Votre message est en cours d’envoi</h6>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
