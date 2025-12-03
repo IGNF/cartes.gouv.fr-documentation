@@ -1,10 +1,6 @@
 ---
 title: Demande envoyée
 layout: layouts/page.njk
-eleventyNavigation:
-    key: Demande envoyée
-    order: 5
-    nav: main
 ---
 
 
