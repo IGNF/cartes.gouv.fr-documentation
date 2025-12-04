@@ -13,4 +13,7 @@ module.exports = {
         title: "Vecteur",
         description: "Description vectorielle du territoire",
     },
+    eleventyNavigation: {
+        parent: "Vecteur",
+    },
 };

@@ -1,17 +1,21 @@
-{% if items and items.length %}
+{% if not card_list %}
+    {% set card_list = params %}
+{% endif %}
+{% if card_list.items and card_list.items.length %}
   <div class="fr-grid-row fr-grid-row--gutters fr-mt-6w" data-pagefind-ignore>
-    {% for item in items %}
-      <div class="fr-col-12 fr-col-md-6 fr-col-lg-{{ columns or 4 }}">
+    {% for item in card_list.items %}
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-{{ card_list.columns or 4 }}">
         {% set card = {
           title: item.data.title,
           url: item.url,
           description: item.data.description,
           tags: item.data.tags,
           image: item.data.image,
-          small: small_cards,
-          show_image: show_images,
-          show_tag: show_tags,
-          ratio: ratio_cards
+          small: card_list.small_cards,
+          show_image: card_list.show_images,
+          show_tag: card_list.show_tags,
+          ratio: card_list.ratio_cards,
+          black: card_list.black_cards
         } %}
         {% include "components/card.njk" %}
       </div>

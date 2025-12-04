@@ -9,7 +9,6 @@ tags:
 eleventyNavigation:
     key: Imagerie
     order: 2
-    nav: ign
 image:
     src: /img/partenaires/ign/imagerie.png
     alt: Imagerie

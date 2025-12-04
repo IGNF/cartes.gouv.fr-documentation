@@ -35,16 +35,17 @@ layout: layouts/base.njk
           {% if parentInfo %}
             <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v">
               {% if parentInfo.image %}
-                <div class="fr-col-auto" style="width: 170px; height: 170px; overflow: hidden;">
+                <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
                   <img src="{{ parentInfo.image.src }}"
                       alt="{{ parentInfo.image.alt }}"
                       style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
                 </div>
               {% endif %}
               <div class="fr-col">
-                <h1>{{ parentInfo.title }}</h1>
+                <h1 class="fr-mb-2v">{{ parentInfo.title }}</h1>
                 {% if parentInfo.tags %}
                   {% set tags = parentInfo.tags %}
+                  {% set small_tags = true %}
                   {% include "components/taggroup-disabled.njk" %}
                 {% endif %}
                 {% if parentInfo.description %}
@@ -61,15 +62,16 @@ layout: layouts/base.njk
           {% else %}
             <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v">
               {% if image %}
-                <div class="fr-col-auto" style="width: 170px; height: 170px; overflow: hidden;">
+                <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
                   <img src="{{ image.src }}"
                       alt="{{ image.alt }}"
                       style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
                 </div>
               {% endif %}
               <div class="fr-col">
-                <h1>{{ title }}</h1>
+                <h1 class="fr-mb-2v">{{ title }}</h1>
                 {% if tags %}
+                  {% set small_tags = true %}
                   {% include "components/taggroup-disabled.njk" %}
                 {% endif %}
                 {% if description %}
@@ -109,18 +111,20 @@ layout: layouts/base.njk
             url: decouvertePage.url,
             description: decouvertePage.data.description,
             horizontal: true,
-            small: true
+            small: true,
+            black: true
           } %}
           {% include "components/card.njk" %}
         </div>
       {% endif %}
-      {% set otherPages = otherPages | sort(attribute = "data.eleventyNavigation.order") %}
-      {% set items = otherPages %}
-      {% set columns = 4 %}
-      {% set title_tag = "h2" %}
-      {% set small_cards = true %}
-      {% set ratio_cards = "16x9" %}
-      {% include "components/card_list.njk" %}
+      {{ component("card_list", {
+          items: otherPages | sort(attribute = "data.eleventyNavigation.order"),
+          columns: 4,
+          title_tag: "h2",
+          small_cards: true,
+          ratio_cards: "16x9",
+          black_cards: true
+      }) }}
       {% include "components/page_switcher.njk" %}
     </div>
   </div>

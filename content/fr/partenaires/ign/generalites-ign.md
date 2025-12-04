@@ -5,5 +5,4 @@ layout: layouts/partenaire_parent.njk
 eleventyNavigation:
     key: Généralités
     order: 1
-    nav: ign
 ---

@@ -8,7 +8,6 @@ tags:
 eleventyNavigation:
     key: Relief
     order: 5
-    nav: ign
 image:
     src: /img/partenaires/ign/relief.png
     alt: Relief

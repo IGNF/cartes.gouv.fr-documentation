@@ -5,4 +5,7 @@ module.exports = {
             title: "Végétation et agriculture",
         },
     ],
+    eleventyNavigation: {
+        parent: "Végétation et agriculture",
+    },
 };

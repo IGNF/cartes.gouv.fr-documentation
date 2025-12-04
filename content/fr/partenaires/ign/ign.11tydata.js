@@ -5,4 +5,7 @@ module.exports = {
             title: "Institut national de l’information géographique et forestière",
         },
     ],
+    eleventyNavigation: {
+        nav: "ign",
+    },
 };

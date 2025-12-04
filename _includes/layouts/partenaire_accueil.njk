@@ -67,20 +67,22 @@ layout: layouts/base.njk
               url: generalitesPage.url,
               description: generalitesPage.data.description,
               horizontal: true,
-              small: true
+              small: true,
+              black: true
           } %}
           {% include "components/card.njk" %}
         </div>
       {% endif %}
       <h2>Offre produit et services</h2>
       <p>{{ hintText }}</p>
-      {% set topLevelPages = topLevelPages | sort(attribute = "data.eleventyNavigation.order") %}
-      {% set items = topLevelPages %}
-      {% set columns = 4 %}
-      {% set title_tag = "h2" %}
-      {% set small_cards = true %}
-      {% set ratio_cards = "16x9" %}
-      {% include "components/card_list.njk" %}
+      {{ component("card_list", {
+          items: topLevelPages | sort(attribute = "data.eleventyNavigation.order"),
+          columns: 4,
+          title_tag: "h2",
+          small_cards: true,
+          ratio_cards: "16x9",
+          black_cards: true
+      }) }}
     </div>
   </div>
 </div>

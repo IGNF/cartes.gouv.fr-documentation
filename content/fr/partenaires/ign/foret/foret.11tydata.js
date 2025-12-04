@@ -13,4 +13,7 @@ module.exports = {
         title: "Forêt",
         tags: ["Raster", "Ortho-mosaïque"],
     },
+    eleventyNavigation: {
+        parent: "Forêt",
+    },
 };

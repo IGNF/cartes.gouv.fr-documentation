@@ -8,7 +8,6 @@ tags:
 eleventyNavigation:
     key: Géodesie
     order: 6
-    nav: ign
 image:
     src: /img/partenaires/ign/geodesie.png
     alt: Géodesie

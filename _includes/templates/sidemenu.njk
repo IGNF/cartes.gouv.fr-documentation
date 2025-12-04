@@ -9,37 +9,36 @@
             </div>
             <ul class="fr-sidemenu__list">
                 {% for link in navLinks %}
-                    {% if not link.sidemenuActive %}
-                        {% set parentIdx = loop.index0 %}
-                        {% set level2Id = 'sidemenu-2-' ~ parentIdx %}
-                        <li class="fr-sidemenu__item">
-                            {% if not link.children | length %}
-                            <a class="fr-sidemenu__link" href={{ link.url | locale_url(lang) }} {% if link.url == page.url %} aria-current="page"{% endif %}>
-                                {{ link.title }}
-                            </a>
-                            {% else %}
-                            <button class="fr-sidemenu__btn" aria-expanded="false" aria-controls="{{ level2Id }}" data-url="{{ link.url | locale_url(lang) }}">
-                                {{ link.title }}
-                            </button>
-                            <div class="fr-collapse" id="{{ level2Id }}">
-                                <ul class="fr-sidemenu__list">
-                                {% for sublink in link.children %}
-                                    {% set level3Id = 'sidemenu-3-' ~ parentIdx ~ '-' ~ loop.index0 %}
-                                    <li class="fr-sidemenu__item">
-                                    {% if not sublink.children | length %}
-                                        <a class="fr-sidemenu__link"
-                                        href="{{ sublink.url | locale_url(lang) or sublink.externalUrl }}"
-                                        {% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}
-                                        {% if sublink.url == page.url %} aria-current="page"{% endif %}>
-                                        {{ sublink.title }}
-                                        </a>
-                                    {% else %}
-                                        <button class="fr-sidemenu__btn" aria-expanded="false" aria-controls="{{ level3Id }}" data-url="{{ sublink.url | locale_url(lang) or sublink.externalUrl }}">
-                                        {{ sublink.title }}
-                                        </button>
-                                        <div class="fr-collapse" id="{{ level3Id }}">
-                                        <ul class="fr-sidemenu__list">
-                                            {% for subsublink in sublink.children %}
+                    {% set parentIdx = loop.index0 %}
+                    {% set level2Id = 'sidemenu-2-' ~ parentIdx %}
+                    <li class="fr-sidemenu__item">
+                        {% if not link.children | length %}
+                        <a class="fr-sidemenu__link" href={{ link.url | locale_url(lang) }} {% if link.url == page.url %} aria-current="page"{% endif %}>
+                            {{ link.title }}
+                        </a>
+                        {% else %}
+                        <button class="fr-sidemenu__btn" aria-expanded="false" aria-controls="{{ level2Id }}" data-url="{{ link.url | locale_url(lang) }}">
+                            {{ link.title }}
+                        </button>
+                        <div class="fr-collapse" id="{{ level2Id }}">
+                            <ul class="fr-sidemenu__list">
+                            {% for sublink in link.children %}
+                                {% set level3Id = 'sidemenu-3-' ~ parentIdx ~ '-' ~ loop.index0 %}
+                                <li class="fr-sidemenu__item">
+                                {% if not sublink.children | length %}
+                                    <a class="fr-sidemenu__link"
+                                    href="{{ sublink.url | locale_url(lang) or sublink.externalUrl }}"
+                                    {% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}
+                                    {% if sublink.url == page.url %} aria-current="page"{% endif %}>
+                                    {{ sublink.title }}
+                                    </a>
+                                {% else %}
+                                    <button class="fr-sidemenu__btn" aria-expanded="false" aria-controls="{{ level3Id }}" data-url="{{ sublink.url | locale_url(lang) or sublink.externalUrl }}">
+                                    {{ sublink.title }}
+                                    </button>
+                                    <div class="fr-collapse" id="{{ level3Id }}">
+                                    <ul class="fr-sidemenu__list">
+                                        {% for subsublink in sublink.children %}
                                             <li class="fr-sidemenu__item">
                                                 <a class="fr-sidemenu__link"
                                                 href="{{ subsublink.url | locale_url(lang) or subsublink.externalUrl }}"
@@ -48,17 +47,16 @@
                                                 {{ subsublink.title }}
                                                 </a>
                                             </li>
-                                            {% endfor %}
-                                        </ul>
-                                        </div>
-                                    {% endif %}
-                                    </li>
-                                {% endfor %}
-                                </ul>
-                            </div>
-                            {% endif %}
-                        </li>
-                    {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                    </div>
+                                {% endif %}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </li>
                 {% endfor %}
             </ul>
         </div>
