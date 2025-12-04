@@ -30,7 +30,7 @@ module.exports = {
     personal_data: "Données personnelles",
     pick_theme: "Choisissez un thème pour personnaliser l’apparence du site.",
     previous_page: "Page précédente",
-    published_on: "Dernière modification le",
+    published_on: '<span class="fr-icon-calendar-line fr-icon--sm" aria-hidden="true"></span> Modifié le',
     read_also: "À lire aussi",
     results: "résultats",
     search: "Rechercher",

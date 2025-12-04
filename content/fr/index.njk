@@ -140,11 +140,21 @@ layout: layouts/home.njk
 <div class="fr-background-alt--beige-gris-galet">
     <div class="fr-container fr-col-12 fr-py-15v">
         <h2 class="fr-mb-15v">Consulter les sujets populaires</h2>
-        {% set latestPages = collections.all | selectattr("url") | sort(true, 'date') | head(-9)| reverse %}
-        {% set items = latestPages %}
-        {% set columns = 4 %}
-        {% set small_cards = true %}
-        {% set show_images = false %}
-        {% include "components/card_list.njk" %}
+        {% set items = collections.all %}
+        {% set filteredItems = [] %}
+        {% for item in items %}
+            {% if item.data.title != "Home" and item.data.title != "Accueil" %}
+                {% set _ = filteredItems.push(item) %}
+            {% endif %}
+        {% endfor %}
+        {{ component("card_list", {
+            items: filteredItems | selectattr("url")
+            | sort(true, 'date')
+            | head(-9)
+            | reverse,
+            small_cards: true,
+            show_images: false,
+            show_tags: false
+        }) }}
     </div>
 </div>

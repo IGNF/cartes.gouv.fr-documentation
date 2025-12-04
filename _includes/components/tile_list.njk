@@ -1,14 +1,19 @@
-{% if items and items.length %}
-    <div class="fr-grid-row fr-grid-row--gutters fr-mt-6w" data-pagefind-ignore>
-        {% for item in items %}
-            <div class="fr-col-12 fr-col-md-6 fr-col-lg-{{ columns or 4 }}">
+{% if not tile_list %}
+    {% set tile_list = params %}
+{% endif %}
+{% if tile_list.items and tile_list.items.length %}
+    <div class="fr-grid-row fr-grid-row--gutters fr-my-1v" data-pagefind-ignore>
+        {% for item in tile_list.items %}
+            <div class="fr-col-12 fr-col-md-6 fr-col-lg-{{ tile_list.columns or 4 }}">
                 {% set tile = {
                     title: item.data.title,
-                    title_tag: title_tag,
+                    title_tag: tile_list.title_tag,
                     url: item.url,
                     description: item.data.description,
                     pictogram: item.data.pictogram,
-                    externalUrl: item.data.externalUrl
+                    externalUrl: item.data.externalUrl,
+                    tileTag: item.data.tileTag,
+                    black: tile_list.black_tiles
                 } %}
                 {% include "components/tile.njk" %}
             </div>
