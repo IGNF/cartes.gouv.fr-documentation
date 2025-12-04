@@ -53,7 +53,7 @@ eleventyNavigation:
         <div class="fr-grid-row fr-grid-row--right fr-mb-2w fr-mt-1w">
             <p id="remaining-characters" class="fr-m-0 fr-text--xs">8000 caractères restants</p>
         </div>
-        <div id="fr-select-group" class="fr-select-group importance">
+        <div id="fr-select-group" class="fr-select-group hidden">
             <label class="fr-label" for="select-importance">importance</label>
             <select name="importance" class="fr-select" id="select-importance" aria-describedby="" data-fr-js-select-actionee="true">
                 <option value="0" selected="">0</option>
@@ -69,12 +69,12 @@ eleventyNavigation:
         </div>
     </div>
 </div>
-<div id="contact-error" class="fr-alert fr-alert--error" data-fr-js-alert-actionee="true">
+<div id="contact-error" class="fr-alert fr-alert--error hidden" data-fr-js-alert-actionee="true">
     <h3 class="fr-alert__title">Votre message n'a pas pu être envoyé</h3>
     <p id="contact-error-content"></p>
     <button class="fr-link--close fr-link" data-fr-js-link-actionee="true">Masquer le message</button>
 </div>
-<div id="waiting-screen">
+<div id="waiting-screen" class="hidden">
     <div style="justify-content: center; align-items: center; background-color: var(--background-default-grey); color: var(--text-default-grey);">
         <div class="fr-container fr-p-2w">
             <div class="fr-container">
