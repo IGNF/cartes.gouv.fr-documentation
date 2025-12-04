@@ -9,7 +9,7 @@ tags:
     - Widget
 eleventyNavigation:
     key: Les outils autour de la carte
-    order: 5
+    order: 6
     nav: guides-utilisateur
     parent: Explorer les cartes
 description: Découvrez tous les outils à votre disposition

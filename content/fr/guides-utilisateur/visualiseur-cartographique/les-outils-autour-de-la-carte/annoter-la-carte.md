@@ -16,7 +16,7 @@ eleventyNavigation:
     order: 3
     nav: guides-utilisateur
     parent: Les outils autour de la carte
-pictogram: ""
+pictogram: "custom/annoter-la-carte.svg"
 description: Ajoutez des points, lignes, formes ou textes directement sur la carte
 summary:
     visible: true

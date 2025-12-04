@@ -14,18 +14,16 @@ description: La nature, les avantages et les inconvénients de chaque type de fl
 
 {% from "components/component.njk" import component with context %}
 
----
-
 Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur Cartes.gouv, avec une description, les avantages et les inconvénients de chacun.
 
 {{ component("table", {
-    headers: ["Type de flux", "Source ", "Résultat ", "Détail"],
+    headers: ["Type de flux", "Signification", "Source ", "Résultat ", "Détail"],
     data: [
-        ["WFS", "vecteur", "vecteur", "calculé à la volée"],
-        ["WMS-V", "vecteur", "raster", "calculé à la volée"],
-        ["TMS", "vecteur", "vecteur", "pyramide pré-calculée"],
-        ["WMS-R", "raster", "raster", "* calculé à la volée \n * nécessite d’avoir créé un WMS-V au préalable"],
-        ["WMTS", "raster", "raster", "* pyramide pré-calculée \n * nécessite d’avoir créé un WMS-V au préalable"]
+        ["WFS", "Web Feature Service", "vecteur", "vecteur", "calculé à la volée à partir d’une donnée vecteur"],
+        ["WMS-V", "Web Map Service Vecteur", "vecteur", "raster", "calculé à la volée à partir d’une donnée vecteur"],
+        ["TMS", "Tile Map Service", "vecteur", "vecteur", "pyramide vectorielle pré-calculée"],
+        ["WMS-R", "Web Map Service Raster", "raster", "raster", "calculé à la volée à partir d’une donnée raster"],
+        ["WMTS", "Web Map Tile Service", "raster", "raster", "pyramide raster pré-calculée"]
     ]
 }) }}
 

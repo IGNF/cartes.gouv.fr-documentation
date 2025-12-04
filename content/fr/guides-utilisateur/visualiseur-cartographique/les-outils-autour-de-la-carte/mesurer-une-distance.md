@@ -13,7 +13,7 @@ eleventyNavigation:
     order: 1
     nav: guides-utilisateur
     parent: Les outils autour de la carte
-pictogram: ""
+pictogram: "custom/mesurer-une-distance.svg"
 description: Tracez un trajet pour connaître sa longueur
 ---
 
