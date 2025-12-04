@@ -373,7 +373,7 @@ div.fr-callout__text p {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
     inset: 0px;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -387,7 +387,8 @@ div.fr-callout__text p {
     margin: 0;
 }
 
-#contact-error {
+#waiting-screen.hidden,
+.hidden {
     display: none;
 }
 

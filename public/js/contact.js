@@ -11,6 +11,59 @@ document.getElementById("input-message").addEventListener("input", function (e) 
     }
 });
 
+//Récupération des alertes
+fetch("https://data.geopf.fr/annexes/cartes.gouv.fr-config/public/alerts.json", { method: "GET" }).then(async function (res) {
+    let result = await res.json();
+    for (let i in result) {
+        //si alerte concernant la page nous-ecrire
+        if (result[i].visibility) {
+            //ajout du HTML de l'alerte
+            createAlertHTML(result[i]);
+            //gestion de la visibilité et du style de l'alerte
+            document.getElementById("contact-alert").classList.toggle("hidden");
+            document.getElementById("contact-alert").classList.add("fr-notice--" + result[i].severity);
+            break;
+        }
+    }
+});
+
+//fonction pour créer le HTML des alertes
+let createAlertHTML = function (alert) {
+    let container = document.createElement("div");
+    container.classList.add("fr-container");
+    container.setAttribute("name", "alert-container");
+    let noticeBody = document.createElement("div");
+    noticeBody.classList.add("fr-notice__body");
+    let content = document.createElement("p");
+    let title = document.createElement("span");
+    title.classList.add("fr-notice__title");
+    title.innerText = alert.title ? alert.title : "";
+    let description = document.createElement("span");
+    description.classList.add("fr-notice__desc");
+    description.innerText = alert.description ? alert.description : "";
+    let link = document.createElement("a");
+    link.classList.add("fr-notice__link");
+    if (alert.link) {
+        link.setAttribute("title", alert.link.label + " - ouvre une nouvelle fenêtre");
+        link.setAttribute("href", "https://cartes.gouv.fr" + alert.link.url);
+        link.setAttribute("target", "_blank");
+        link.innerText = alert.link.label;
+    }
+    let closeBtn = document.createElement("button");
+    closeBtn.classList.add("fr-btn--close");
+    closeBtn.classList.add("fr-btn");
+    closeBtn.innerText = "Fermer";
+    closeBtn.addEventListener("click", () => document.getElementById("contact-alert").classList.toggle("hidden"));
+
+    content.append(title);
+    content.append(description);
+    content.append(link);
+    noticeBody.append(content);
+    noticeBody.append(closeBtn);
+    container.append(noticeBody);
+    document.getElementById("contact-alert").append(container);
+};
+
 //Fonction d'envoie du formulaire
 let sendForm = function () {
     //récupération des valeurs du formulaire
@@ -31,7 +84,8 @@ let sendForm = function () {
 
     //si le formulaire est valide, on envoie la requête POST vers la route "contact_us"
     if (isFormValid) {
-        document.getElementById("waiting-screen").style.display = "flex";
+        document.getElementById("waiting-screen").classList.toggle("hidden");
+
         fetch("https://cartes.gouv.fr/aide/fr/contact_us", {
             method: "POST",
             headers: {
@@ -55,8 +109,8 @@ let sendForm = function () {
             })
             .catch(function (error) {
                 document.getElementById("contact-error-content").innerText = error.message;
-                document.getElementById("contact-error").style.display = "block";
-                document.getElementById("waiting-screen").style.display = "none";
+                document.getElementById("waiting-screen").classList.toggle("hidden");
+                document.getElementById("contact-error").classList.toggle("hidden");
             });
     }
 };
