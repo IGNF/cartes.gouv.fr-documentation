@@ -6,6 +6,9 @@ eleventyNavigation:
     parent: Alimentation et diffusion simple vecteur
     order: 2
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 ## Intégration en base
@@ -47,7 +50,7 @@ flowchart LR
 ```
 
 ```json
-{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readJSON | safe }}
+{{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
 
 ???
@@ -57,10 +60,10 @@ flowchart LR
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector-to-db'] }}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector_to_db'] }}"
 
 ```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector-to-db'] }}
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector_to_db'] }}
 ```
 
 ```json
@@ -82,7 +85,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
             "mandatory": false
         }
     ],
-    "_id": "{{ ids.processings['vector-to-db'] }}",
+    "_id": "{{ ids.processings['vector_to_db'] }}",
     "required_checks": [
         {
             "name": "Vérification vecteur",
@@ -113,7 +116,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 
 ```json
 {
-    "processing": "{{ ids.processings['vector-to-db'] }}",
+    "processing": "{{ ids.processings['vector_to_db'] }}",
     "inputs": {
         "upload": ["{upload}"]
     },
@@ -133,7 +136,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 {
     "processing": {
         "name": "Intégration de données vecteur livrées en base",
-        "_id": "{{ ids.processings['vector-to-db'] }}"
+        "_id": "{{ ids.processings['vector_to_db'] }}"
     },
     "status": "CREATED",
     "creation": "2023-05-10T14:57:08.832176082Z",
@@ -181,10 +184,8 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 ???
 <br>
 
-:::warning "Attention"
-
+:::warning Attention
     Les noms des tables et des champs sont "standardisés" lors de l'intégration en base pour éviter tout souci d'utilisation par les applications : pas de majuscules, pas d'accent, pas de tirets.
-
 :::
 
 ### Consultation de l'état de l'exécution
@@ -206,7 +207,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 {
     "processing": {
         "name": "Intégration de données vecteur livrées en base",
-        "_id": "{{ ids.processings['vector-to-db'] }}"
+        "_id": "{{ ids.processings['vector_to_db'] }}"
     },
     "status": "PROGRESS",
     "creation": "2023-05-10T14:57:08.832176Z",

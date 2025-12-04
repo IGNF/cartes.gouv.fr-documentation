@@ -22,7 +22,7 @@ summary:
 
 L’outil **« Ouvrir le calcul d’itinéraire »** permet de trouver le meilleur chemin entre deux ou plusieurs points, à pied ou en voiture, et de dessiner le résultat sur la carte.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 
@@ -75,7 +75,7 @@ Cliquez sur le bouton **« Calculer l’itinéraire »** pour afficher le rés
 Cliquez sur l’icône **« Modifier le calcul »** pour revenir à l’étape précédente et modifier les options ou les étapes de l’itinéraire.
 
 :::warning
-Si vous cliquez sur un autre outil, puis que vous revenez à l’outil **« Calculer un itinéraire »**, alors cela entamera un nouvel itinéraire. Suivez [ces indications](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-un-itineraire/#modifier-un-itineraire-existant) pour reprendre un itinéraire existant.
+Si vous cliquez sur un autre outil, puis que vous revenez à l’outil **« Calculer un itinéraire »**, alors cela entamera un nouvel itinéraire. Suivez [ces indications](#modifier-un-itineraire-existant) pour reprendre un itinéraire existant.
 :::
 
 ---
@@ -96,10 +96,10 @@ Vous pouvez sauvegarder votre itinéraire en lui donnant un nom et en cliquant s
 ![Image décrivant comment enregistrer son itinéraire](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-un-itineraire/09_Enregistrer-son-itineraire.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-Si vous souhaitez enregistrer votre itinéraire, il faut que vous soyez [connecté](https://cartes.gouv.fr/aide/fr/guides-utilisateur/presentation-utilisateur/connexion) à votre compte au préalable.
+Si vous souhaitez enregistrer votre itinéraire, il faut que vous soyez [connecté](../../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vous retrouverez alors votre itinéraire avec son nouveau nom dans le [Gestionnaire de couches](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/menu-cartes/) :
+Vous retrouverez alors votre itinéraire avec son nouveau nom dans le [Gestionnaire de couches](../../gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](../../menu-cartes/) :
 
 ![Image décrivant où on peut retrouver son itinéraire enregistré](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-un-itineraire/10_Itineraire-sauvegarde.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -127,7 +127,7 @@ Cliquez ensuite sur **« Éditer la couche »** :
 
 Cela ouvrira le panneau pour éditer votre itinéraire :
 
-![Image décrivant le panneau pour reprendre un itinéraire existant](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/annoter-la-carte/14_Reprendre-un-itineraire-existant.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le panneau pour reprendre un itinéraire existant](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-un-itineraire/14_Reprendre-un-itineraire-existant.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Cliquez sur l’icône **« Modifier le calcul »** pour revenir à l’étape précédente et modifier les options ou les étapes de l’itinéraire.
 

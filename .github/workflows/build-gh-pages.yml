@@ -27,8 +27,6 @@ jobs:
               uses: actions/checkout@v5
               with:
                   fetch-depth: 0
-            - name: Setup Pages
-              uses: actions/configure-pages@v5
             - name: Build with Eleventy
               run: |
                   npm install
@@ -40,7 +38,7 @@ jobs:
 
     deploy-ghpages:
         name: Deploy to github pages
-        if: github.event_name == 'push' && github.ref_name == 'main'
+        if: github.event_name == 'push' && github.ref_name == 'main' && github.repository == 'IGNF/cartes.gouv.fr-documentation'
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}

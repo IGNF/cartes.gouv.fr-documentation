@@ -25,7 +25,7 @@ summary:
 
 L’outil **« Calculer un profil altimétrique »** permet de dessiner une ligne sur la carte et d’afficher la courbe d’altitude le long de cette ligne.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 
@@ -58,10 +58,10 @@ Vous pouvez sauvegarder votre profil en lui donnant un nom et en cliquant sur **
 ![Image décrivant comment enregistrer son profil altimétrique](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-un-profil-altimetrique/04_Enregistrer-le-profil-altimetrique.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-Si vous souhaitez enregistrer votre profil altimétrique, il faut que vous soyez [connecté](https://cartes.gouv.fr/aide/fr/guides-utilisateur/presentation-utilisateur/connexion) à votre compte au préalable.
+Si vous souhaitez enregistrer votre profil altimétrique, il faut que vous soyez [connecté](../../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vous retrouverez alors votre profil avec son nouveau nom dans le [Gestionnaire de couches](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/menu-cartes/) :
+Vous retrouverez alors votre profil avec son nouveau nom dans le [Gestionnaire de couches](../../gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](../../menu-cartes/) :
 
 ![Image décrivant où on peut retrouver son profil enregistré](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-un-profil-altimetrique/05_Profil-altimetrique-enregistre.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

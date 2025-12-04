@@ -28,10 +28,10 @@ summary:
 L’outil **« Annoter la carte »** permet de dessiner directement sur la carte : des points, des lignes, des surfaces ou du texte.
 
 :::info
-Si vous souhaitez [enregistrer](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/annoter-la-carte/#enregistrer-son-croquis) votre croquis, il faut que vous soyez [connecté](https://cartes.gouv.fr/aide/fr/guides-utilisateur/presentation-utilisateur/connexion) à votre compte au préalable.
+Si vous souhaitez [enregistrer](#enregistrer-son-croquis) votre croquis, il faut que vous soyez [connecté](../../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 
@@ -337,7 +337,7 @@ Vous pouvez sauvegarder votre croquis à tout moment en lui donnant un nom et en
 
 ![Image décrivant comment enregistrer son croquis](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/annoter-la-carte/41_Enregistrer-son-croquis-1.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Vous retrouverez alors votre croquis avec son nouveau nom dans le [Gestionnaire de couches](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/menu-cartes/) :
+Vous retrouverez alors votre croquis avec son nouveau nom dans le [Gestionnaire de couches](../../gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](../../menu-cartes/) :
 
 ![Image décrivant où on peut retrouver son croquis enregistré](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/annoter-la-carte/42_Enregistrer-son-croquis-2.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

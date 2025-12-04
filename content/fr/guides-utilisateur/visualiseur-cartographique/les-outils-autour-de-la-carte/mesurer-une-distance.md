@@ -19,7 +19,7 @@ description: Tracez un trajet pour connaître sa longueur
 
 L’outil **« Mesurer une distance »** permet de dessiner une ligne sur la carte et d’en connaître en temps réel la longueur.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 

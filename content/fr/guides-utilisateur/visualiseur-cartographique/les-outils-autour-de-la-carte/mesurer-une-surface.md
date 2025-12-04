@@ -19,7 +19,7 @@ description: Tracez une zone pour connaître son aire
 
 L’outil **« Mesurer une surface »** permet de dessiner une zone sur la carte et d’en connaître en temps réel la surface.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 

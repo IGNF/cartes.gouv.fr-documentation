@@ -53,6 +53,7 @@ layout: layouts/base.njk
         {% set topLevelPages = topLevelPages | sort(attribute = "data.eleventyNavigation.order") %}
         {% set items = topLevelPages %}
         {% set columns = 6 %}
+        {% set title_tag = "h2" %}
         {% include "components/tile_list.njk" %}
       {% endif %}
       {% include "components/page_switcher.njk" %}

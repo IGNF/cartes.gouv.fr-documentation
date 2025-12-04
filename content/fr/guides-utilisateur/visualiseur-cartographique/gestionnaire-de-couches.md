@@ -28,7 +28,7 @@ Une fois votre carte sélectionnée depuis le catalogue de cartes, elle apparait
 
 Le chiffre indiqué sur l’icône vous indique combien de couches contient le gestionnaire de couches. Une fois ouvert, il ressemble à ceci :
 
-![Image décrivant l’outil Gestionnaire de couches](/img/guides-utilisateur/visualiseur-cartographique/gestionnaire-de-couches/01_gestionnaire-de-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant l’outil Gestionnaire de couches](/img/guides-utilisateur/visualiseur-cartographique/gestionnaire-de-couches/01_Gestionnaire-de-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Chaque couche dispose d’outils qui auront une action sur celle-ci.
 

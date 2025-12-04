@@ -5,6 +5,9 @@ eleventyNavigation:
     parent: Alimentation et diffusion simple vecteur
     order: 4
     nav: guides-developpeur
+summary:
+    visible: true
+    depth: 2
 ---
 
 {% from "components/component.njk" import component with context %}
@@ -24,20 +27,18 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ✔ File "pays.qml" translated successfully. Output written to pays.sld
 ```
 
-:::warning "Attention"
-
+:::warning Attention
     Chaque outil d'export peut entraîner des comportements différents. Au final, le SLD sera interprété par Geoserver sur la Géoplateforme. Le plugin [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) peut également être utilisé.
-
 :::
 
 {{ component("download", {
-    title: "Télécharger ecoregions.sld",
+    title: "ecoregions.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.sld",
     detail: "SLD - 10.6Ko"
 }) }}
 
 {{ component("download", {
-    title: "Télécharger pays.sld",
+    title: "pays.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.sld",
     detail: "SLD - 847o"
 }) }}
@@ -47,7 +48,7 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarker.html) permettent de mettre en forme la réponse HTML lors des appels au GetFeatureInfo
 
 {{ component("download", {
-    title: "Télécharger ecoregions.ftl",
+    title: "ecoregions.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.ftl",
     detail: "FTL - 118o"
 }) }}
@@ -57,7 +58,7 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
 ```
 
 {{ component("download", {
-    title: "Télécharger pays.ftl",
+    title: "pays.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.ftl",
     detail: "FTL - 75o"
 }) }}

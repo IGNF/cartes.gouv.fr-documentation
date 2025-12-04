@@ -11,6 +11,8 @@ summary:
     depth: 2
 ---
 
+{% from "components/component.njk" import component with context %}
+
 Une mise à jour par chaînage va créer une nouvelle donnée stockée. Le nouveau contenu sera ajouté et les anciennes données seront référencées.
 
 L'avantage est qu'il n'y a pas de modifications des anciennes données et que celles-ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les anciennes données).
@@ -198,7 +200,14 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
 ???
 <br>
 
-- Livraison des fichiers : [scan1000_corse_sud.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif)
+- Livraison des fichiers :
+
+{{ component("download", {
+    title: "scan1000_corse_sud.tif",
+    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
+    detail: "tif - 7.5 Mo"
+}) }}
+
 - Fermeture de la livraison
 - Création de l'exécution de traitement : on a ici deux données en entrée, la nouvelle zone livrée, ainsi que la pyramide ne contenant que le Nord de la Corse
 

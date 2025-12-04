@@ -32,10 +32,10 @@ On considère que ces documents de recherche font partie de l'index géoplatefor
 
 Il est possible de rechercher à partir de nombreux champs dans les documents de recherche (aucun des champs n'est obligatoire pour effectuer la recherche) :
 
-??? POST "{{ urls.open.search }}/api/indexes/geoplateforme"
+??? POST "{{ urls.public.search }}/api/indexes/geoplateforme"
 
 ```title="Contenu"
-{{ urls.open.search }}/api/indexes/geoplateforme
+{{ urls.public.search }}/api/indexes/geoplateforme
 ```
 
 ```json
@@ -73,7 +73,7 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
             "title": "Routes de non communication 971",
             "description": "Routes de non communication du département 971",
             "type": "WFS",
-            "url": "https://{{ urls.open.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
+            "url": "https://{{ urls.public.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
             "open": true,
             "theme": "BD_topo",
             "production_years": [
@@ -131,7 +131,7 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
             "title": "Tronçons de route 971",
             "description": "Tronçons de route du département 971",
             "type": "WFS",
-            "url": "{{ urls.open.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:troncon_de_route",
+            "url": "{{ urls.public.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:troncon_de_route",
             "open": true,
             "theme": "BD_topo",
             "production_years": [
@@ -288,10 +288,10 @@ La suggestion par champ permet une autocomplétion (sur les champs autorisés) d
 
 Les champs utilisables pour la suggestion sont *title*, *description*, *layer_name*, *theme*, *keywords*, *producers*, *type*, *production_years* et *metadata_urls*. Il est possible d'avoir une suggestion sur tous ces champs en même temps à partir d'une requête de ce type :
 
-??? GET "{{ urls.open.search }}/api/indexes/geoplateforme/suggest"
+??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest"
 
 ```title="Contenu"
-{{ urls.open.search }}/api/indexes/geoplateforme/suggest
+{{ urls.public.search }}/api/indexes/geoplateforme/suggest
 ```
 
 {{ component("table", {
@@ -315,7 +315,7 @@ Les champs utilisables pour la suggestion sont *title*, *description*, *layer_na
             "title": "bdtopo_971",
             "description": "BD Topo allégé du département 971",
             "type": "WMS",
-            "url": "{{ urls.open.wmsv }}?service=WMS&version=1.3.0&request=DescribeLayer&layers=bdtopo_971",
+            "url": "{{ urls.public.wmsv }}?service=WMS&version=1.3.0&request=DescribeLayer&layers=bdtopo_971",
             "open": true,
             "publication_date": "2023-08-25",
             "keywords": [],
@@ -363,7 +363,7 @@ Les champs utilisables pour la suggestion sont *title*, *description*, *layer_na
             "title": "Routes de non communication 971",
             "description": "Routes de non communication du département 971",
             "type": "WFS",
-            "url": "{{ urls.open.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
+            "url": "{{ urls.public.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
             "open": true,
             "theme": "BD_topo",
             "production_year": 2023,
@@ -416,7 +416,7 @@ Les champs utilisables pour la suggestion sont *title*, *description*, *layer_na
             "title": "Tronçons de route 971",
             "description": "Tronçons de route du département 971",
             "type": "WFS",
-            "url": "{{ urls.open.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:troncon_de_route",
+            "url": "{{ urls.public.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:troncon_de_route",
             "open": true,
             "theme": "BD_topo",
             "production_year": 2023,
@@ -467,10 +467,10 @@ Les documents obtenus sont classés selon un score calculé par OpenSearch (et f
 
 Il est possible de ne rechercher que dans un seul champ en ajoutant un paramètre *fields* à la requête :
 
-??? GET "{{ urls.open.search }}/api/indexes/geoplateforme/suggest"
+??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest"
 
 ```title="Contenu"
-{{ urls.open.search }}/api/indexes/geoplateforme/suggest
+{{ urls.public.search }}/api/indexes/geoplateforme/suggest
 ```
 
 {{ component("table", {
@@ -495,7 +495,7 @@ Il est possible de ne rechercher que dans un seul champ en ajoutant un paramètr
             "title": "Routes de non communication 971",
             "description": "Routes de non communication du département 971",
             "type": "WFS",
-            "url": "{{ urls.open.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
+            "url": "{{ urls.public.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
             "open": true,
             "theme": "BD_topo",
             "production_year": 2023,
@@ -548,7 +548,7 @@ Il est possible de ne rechercher que dans un seul champ en ajoutant un paramètr
             "title": "Tronçons de route 971",
             "description": "Tronçons de route du département 971",
             "type": "WFS",
-            "url": "{{ urls.open.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:troncon_de_route",
+            "url": "{{ urls.public.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:troncon_de_route",
             "open": true,
             "theme": "BD_topo",
             "production_year": 2023,
@@ -603,10 +603,10 @@ L'autocomplétion de titre permet de corriger les mots d'une recherche pour corr
 
 Sans précision du champs précisé, l'autocomplétion a lieu sur le champ *title* :
 
-??? GET "{{ urls.open.search }}/api/indexes/geoplateforme/suggest_autocomplete"
+??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete"
 
 ```title="Contenu"
-{{ urls.open.search }}/api/indexes/geoplateforme/suggest_autocomplete
+{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete
 ```
 
 
@@ -662,10 +662,10 @@ Sans précision du champs précisé, l'autocomplétion a lieu sur le champ *titl
 
 Mais, il est possible de préciser le champ sur lequel s'appuie l'autocomplétion à partir du filtre *field* :
 
-??? GET "{{ urls.open.search }}/api/indexes/geoplateforme/suggest_autocomplete"
+??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete"
 
 ```title="Contenu"
-{{ urls.open.search }}/api/indexes/geoplateforme/suggest_autocomplete
+{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete
 ```
 
     {{ component("table", {
@@ -713,10 +713,10 @@ Mais, il est possible de préciser le champ sur lequel s'appuie l'autocomplétio
 
 Il est possible de retrouver un document de recherche à partir de son ID :
 
-??? GET "{{ urls.open.search }}/api/indexes/geoplateforme/documents/{document}"
+??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/documents/{document}"
 
 ```title="Contenu"
-{{ urls.open.search }}/api/indexes/geoplateforme/documents/{document}
+{{ urls.public.search }}/api/indexes/geoplateforme/documents/{document}
 ```    
 
 ```json
@@ -728,7 +728,7 @@ Il est possible de retrouver un document de recherche à partir de son ID :
     "title": "Routes de non communication 971",
     "description": "Routes de non communication du département 971",
     "type": "WFS",
-    "url": "{{ urls.open.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
+    "url": "{{ urls.public.wfs }}?service=WFS&version=2.0.0&request=DescribeFeatureType&typeNames=bdtopo_971:non_communication",
     "open": true,
     "theme": "BD_topo",
     "production_year": 2023,
@@ -777,10 +777,10 @@ Il est possible de retrouver un document de recherche à partir de son ID :
 
 Il est possible de récupérer tous les ids de document issus d'une offre :
 
-??? GET "{{ urls.open.search }}/api/indexes/geoplateforme/offerings/{offering}"
+??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/offerings/{offering}"
     
 ```title="Contenu"
-{{ urls.open.search }}/api/indexes/geoplateforme/offerings/{offering}
+{{ urls.public.search }}/api/indexes/geoplateforme/offerings/{offering}
 ```
 
 ```json

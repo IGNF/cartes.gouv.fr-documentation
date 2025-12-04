@@ -69,7 +69,7 @@ Vous pouvez vous déplacer sur la carte durant le choix de ces options afin de c
 
 ## Mes enregistrements
 
-Cette option est accessible si vous êtes connecté à **Cartes.gouv.fr** (voir [Connexion à Cartes.gouv.fr](https://cartes.gouv.fr/documentation/fr/guides-utilisateur/presentation-utilisateur/connexion/)).
+Cette option est accessible si vous êtes connecté à **Cartes.gouv.fr** (voir [Connexion à Cartes.gouv.fr](../../presentation-utilisateur/connexion/)).
 
 :::info
 Cliquer sur **« Mes enregistrements »** sans être connecté vous emmènera sur l’écran de connexion.
@@ -89,7 +89,7 @@ Vous pourrez alors donner un nom à cette carte pour la retrouver plus tard :
 
 ![Image décrivant comment enregistrer une nouvelle carte](/img/guides-utilisateur/visualiseur-cartographique/menu-cartes/08_Enregistrer-une-carte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-La carte ainsi sauvegardée contiendra **l’emprise** de l’écran, **les cartes sélectionnées** depuis le cartalogue (voir [Ajouter une carte depuis le cartalogue](https://cartes.gouv.fr/documentation/fr/guides-utilisateur/visualiseur-cartographique/ajouter-carte-depuis-geoplateforme/)) et **les outils sélectionnés** depuis le catalogue d’outils (voir [Catalogue d’outils](https://cartes.gouv.fr/documentation/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/))
+La carte ainsi sauvegardée contiendra **l’emprise** de l’écran, **les cartes sélectionnées** depuis le cartalogue (voir [Ajouter une carte depuis le cartalogue](../ajouter-carte-depuis-geoplateforme/)) et **les outils sélectionnés** depuis le catalogue d’outils (voir [Catalogue d’outils](../catalogue-d-outils/))
 
 Il suffira alors de cliquer sur la carte sauvegardée pour l’afficher sur votre écran.
 
@@ -119,7 +119,7 @@ Cliquez sur l’icône suivante pour copier le lien url à partager :
 
 ### Mes données
 
-Cet espace permet de lister un ensemble de données que vous avez sauvegardées. Cela peut être une **donnée importée** ou bien le résultat d’un **outil de calcul** (voir [Catalogue d’outils](https://cartes.gouv.fr/documentation/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/)).
+Cet espace permet de lister un ensemble de données que vous avez sauvegardées. Cela peut être une **donnée importée** ou bien le résultat d’un **outil de calcul** (voir [Catalogue d’outils](../catalogue-d-outils/)).
 
 #### Renommer une donnée
 

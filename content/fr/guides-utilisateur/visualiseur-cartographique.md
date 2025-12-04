@@ -1,5 +1,6 @@
 ---
 title: Explorer les cartes
+layout: layouts/parent.njk
 eleventyNavigation:
     key: Explorer les cartes
     order: 2

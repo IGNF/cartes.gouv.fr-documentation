@@ -176,7 +176,7 @@ div.fr-callout__text p {
 }
 
 .frx-border-img {
-    border: 1px solid grey;
+    border: 1px solid var(--border-default-grey);
     padding: 0.5rem;
 }
 
@@ -250,4 +250,10 @@ div.fr-callout__text p {
 .custom-center-btn {
     display: flex;
     justify-content: center;
+}
+
+@media (min-width: 62em) {
+    .fr-menu .fr-nav__link {
+        box-shadow: inset 0 1px 0 0 var(--border-default-grey);
+    }
 }
