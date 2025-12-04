@@ -8,7 +8,6 @@ tags:
 eleventyNavigation:
     key: Cartographie
     order: 3
-    nav: ign
 image:
     src: /img/partenaires/ign/cartographie.png
     alt: Cartographie

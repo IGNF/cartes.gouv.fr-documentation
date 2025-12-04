@@ -10,14 +10,17 @@ eleventyNavigation:
     nav: main
 ---
 
-<div class="fr-background-alt--beige-gris-galet">
-    <div class="fr-container fr-col-12 fr-py-15v">
+{% from "components/component.njk" import component with context %}
+
+<div class="background-blanc-beige">
+    <div class="fr-container fr-col-12 fr-py-10v">
         <h2>Liste des partenaires</h2>
-        {% set items = collections.all 
-        | filterRoot("./content/fr/partenaires/")
-        | filterCollectionLang 
-        | sort(attribute="data.title") %}
-        {% set columns = 4 %}
-        {% include "components/tile_list.njk" %}
+        {{- component("tile_list", {
+            items: collections.all 
+                | filterRoot("./content/fr/partenaires/")
+                | filterCollectionLang 
+                | sort(attribute="data.title"),
+            black_tiles: true
+        }) -}}
     </div>
 </div>

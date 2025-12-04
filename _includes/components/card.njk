@@ -1,7 +1,7 @@
 {% if not card %}
     {% set card = params %}
 {% endif %}
-<div class="fr-card {% if not card.externalUrl %} fr-enlarge-link {% endif %} {% if card.small %} fr-card--sm {% endif %} {% if card.horizontal %} fr-card--horizontal {% endif %} {{ card.addClass }}">
+<div class="fr-card {% if not card.externalUrl %} fr-enlarge-link {% endif %} {% if card.small %} fr-card--sm {% endif %} {% if card.horizontal %} fr-card--horizontal {% endif %} {{ card.addClass }} {% if card.black %} tile--black{% endif %}">
     <div class="fr-card__body">
         <div class="fr-card__content">
             {% if card.url is string %}

@@ -5,4 +5,7 @@ module.exports = {
             title: "Hydro et littoral",
         },
     ],
+    eleventyNavigation: {
+        parent: "Hydro et littoral",
+    },
 };

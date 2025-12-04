@@ -5,4 +5,7 @@ module.exports = {
             title: "Multithème",
         },
     ],
+    eleventyNavigation: {
+        parent: "Multithème",
+    },
 };

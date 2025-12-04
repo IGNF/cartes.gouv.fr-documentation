@@ -15,4 +15,7 @@ module.exports = {
         description: "Images issues d’acquisition aériennes et satellites",
         quote: "Images issues d’acquisition aériennes et satellites, orthorectifiées perpendiculaire à tout point de vue, mosaïquées, imbriquées les unes aux autres pour créer une image continue sur tout le territoire.",
     },
+    eleventyNavigation: {
+        parent: "Imagerie",
+    },
 };

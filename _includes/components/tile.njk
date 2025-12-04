@@ -1,7 +1,7 @@
 {% if not tile %}
     {% set tile = params %}
 {% endif %}
-<div class="fr-tile {% if tile.small %} fr-tile--sm {% endif %} fr-enlarge-link">
+<div class="fr-tile {% if tile.small %} fr-tile--sm {% endif %} {% if tile.black %} tile--black{% endif %} fr-enlarge-link">
     <div class="fr-tile__body">
         <div class="fr-tile__content">
             {% if tile.url is string %}

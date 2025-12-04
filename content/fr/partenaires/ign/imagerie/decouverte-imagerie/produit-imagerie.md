@@ -1,15 +1,9 @@
----
-title: Découverte de l’offre produit
-eleventyNavigation:
-  nav: ign
-  sidemenuActive: /fr/partenaires/ign/imagerie/decouverte-imagerie
----
-
 {% from "components/component.njk" import component with context %}
 
 {% set tabnavLinks = [
   { title: "Présentation", url: "../" },
-  { title: "Choisir mon produit", active: true }
+  { title: "Choisir mon produit", active: true },
+  { title: "Services web thématique", url: "../service-web-thematique" }
 ] %}
 
 {{ component("tabnav", { items: tabnavLinks }) }}

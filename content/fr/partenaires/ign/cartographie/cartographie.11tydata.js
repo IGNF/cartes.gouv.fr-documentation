@@ -14,4 +14,7 @@ module.exports = {
         tags: ["Plan", "Fond de carte"],
         description: "Fond de plan pour tous les usages numériques",
     },
+    eleventyNavigation: {
+        parent: "Cartographie",
+    },
 };

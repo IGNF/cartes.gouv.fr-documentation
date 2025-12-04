@@ -334,3 +334,33 @@ div.fr-callout__text p {
         display: block;
     }
 }
+
+.background-blanc-beige {
+    background: linear-gradient(
+        to bottom,
+        var(--background-default-grey) 0%,
+        var(--background-default-grey) 42%,
+        var(--artwork-background-beige-gris-galet) 42%,
+        var(--artwork-background-beige-gris-galet) 100%
+    );
+}
+
+/* Card/Tile */
+.tile--black .fr-tile__title a:before {
+    background-image: linear-gradient(0deg, black, black);
+}
+.tile--black {
+    --text-action-high-blue-france: black;
+}
+[data-fr-theme="dark"] .tile--black .fr-tile__title a:before {
+    background-image: linear-gradient(0deg, white, white);
+}
+[data-fr-theme="dark"] .tile--black {
+    --text-action-high-blue-france: white;
+}
+
+.no-underline {
+    --underline-hover-width: 0;
+    --underline-idle-width: 0;
+    --underline-max-width: 0;
+}

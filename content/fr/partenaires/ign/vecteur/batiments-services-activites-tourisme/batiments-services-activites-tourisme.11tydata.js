@@ -5,4 +5,7 @@ module.exports = {
             title: "Bâtiments, services, activités et tourisme",
         },
     ],
+    eleventyNavigation: {
+        parent: "Bâtiments, services, activités et tourisme",
+    },
 };

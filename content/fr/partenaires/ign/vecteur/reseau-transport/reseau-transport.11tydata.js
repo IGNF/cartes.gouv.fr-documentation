@@ -5,4 +5,7 @@ module.exports = {
             title: "Réseau et transport",
         },
     ],
+    eleventyNavigation: {
+        parent: "Réseau et transport",
+    },
 };

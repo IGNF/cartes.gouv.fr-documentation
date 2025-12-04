@@ -1,8 +1,7 @@
 ---
 title: Plan IGN
+layout: layouts/partenaire_parent.njk
 eleventyNavigation:
     key: Plan IGN
-    parent: Cartographie
     order: 2
-    nav: ign
 ---

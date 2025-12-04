@@ -5,4 +5,7 @@ module.exports = {
             title: "Référentiels géographiques",
         },
     ],
+    eleventyNavigation: {
+        parent: "Référentiels géographiques",
+    },
 };

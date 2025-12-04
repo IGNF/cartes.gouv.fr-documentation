@@ -47,12 +47,11 @@ layout: layouts/base.njk
             {% set _ = children.push(entry) %}
           {% endif %}
         {% endfor %}
-
-        {% set children = children | sort(attribute = "data.eleventyNavigation.order") %}
-        {% set items = children %}
-        {% set columns = 4 %}
-        {% set title_tag = "h2" %}
-        {% include "components/tile_list.njk" %}
+        {{ component("tile_list", {
+            items: children | sort(attribute = "data.eleventyNavigation.order"),
+            columns: 4,
+            title_tag: "h2"
+        }) }}
       {% endif %}
       {% include "components/page_switcher.njk" %}
     </div>
