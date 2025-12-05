@@ -11,7 +11,7 @@ eleventyNavigation:
     order: 4
     nav: guides-utilisateur
     parent: Les outils autour de la carte
-pictogram: ""
+pictogram: "custom/calculer-un-itineraire.svg"
 description: Trouvez le meilleur trajet à pied ou en voiture
 summary:
     visible: true

@@ -8,7 +8,7 @@ tags:
     - Mes enregistrements
 eleventyNavigation:
     key: Menu cartes
-    order: 6
+    order: 4
     nav: guides-utilisateur
     parent: Explorer les cartes
 pictogram: "document/passport.svg"

@@ -14,7 +14,7 @@ eleventyNavigation:
     order: 5
     nav: guides-utilisateur
     parent: Les outils autour de la carte
-pictogram: ""
+pictogram: "custom/profil-altimetrique.svg"
 description: Affichez l’altitude le long d’un trajet
 summary:
     visible: true
