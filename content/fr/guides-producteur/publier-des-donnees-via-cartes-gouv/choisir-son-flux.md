@@ -5,7 +5,7 @@ tags:
     - Service
 eleventyNavigation:
     key: Choisir le flux à publier
-    parent: Publier des données via Cartes.gouv.fr
+    parent: Publier des données via cartes.gouv.fr
     order: 2
     nav: guides-producteur
 pictogram: digital/internet.svg
@@ -14,7 +14,7 @@ description: La nature, les avantages et les inconvénients de chaque type de fl
 
 {% from "components/component.njk" import component with context %}
 
-Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur Cartes.gouv, avec une description, les avantages et les inconvénients de chacun.
+Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur cartes.gouv, avec une description, les avantages et les inconvénients de chacun.
 
 {{ component("table", {
     headers: ["Type de flux", "Signification", "Source ", "Résultat ", "Détail"],

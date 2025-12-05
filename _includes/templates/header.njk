@@ -11,6 +11,11 @@
                                 française
                             </p>
                         </div>
+                        <div class="fr-header__operator">
+                            <img class="fr-responsive-img" style="max-width: 9.0625rem;"
+                                 src="https://data.geopf.fr/annexes/ressources/header/cartes-gouv-logo.svg"
+                                 alt="Logo cartes.gouv.fr"/>
+                        </div>
                         <div class="fr-header__navbar">
                             <button class="fr-btn fr-icon-search-line"
                                     data-fr-opened="false" 
@@ -31,7 +36,6 @@
                             <p class="fr-header__service-title">
                                 {{ metadata.title }}
                                 <span class="fr-badge fr-badge--sm fr-badge--brown-opera"><span class="fr-icon-question-fill fr-icon--sm"></span>&nbsp;{{ metadata.subtitle }}</span>
-                                <span class="fr-badge fr-badge--sm fr-badge--success fr-badge--no-icon">Bêta</span>
                             </p>
                         </a>
                         <p class="fr-header__service-tagline">{{ metadata.description }}</p>
@@ -40,7 +44,30 @@
                 <div class="fr-header__tools">
                     <div class="fr-header__tools-links">
                         <ul class="fr-btns-group">
-                            
+                            <li>
+                                <div class="fr-translate fr-nav">
+                                    <div class="fr-nav__item">
+                                        <button aria-controls="aide-collapse" aria-expanded="false" title="Aide" class="fr-translate__btn fr-btn fr-px-2w">
+                                            <span class="fr-icon-question-fill fr-icon--sm fr-mr-1w" aria-hidden="true"></span>Aide</button>
+                                        <div class="fr-collapse fr-translate__menu fr-menu" id="aide-collapse">
+                                            <ul class="fr-menu__list">
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="/fr/">
+                                                        <span class="fr-icon-question-mark fr-icon--sm">&emsp;Questions fréquentes</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="/fr/guides-utilisateur/presentation-utilisateur/generalites-utilisateur/">
+                                                        <span class="fr-icon-book-2-line fr-icon--sm ">&emsp;Guide d'utilisation</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/nous-ecrire">
+                                                        <span class="fr-icon-mail-line fr-icon--sm ">&emsp;Nous contacter</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <li>
                                 <div class="fr-translate fr-nav">
                                     <div class="fr-nav__item">
@@ -60,17 +87,13 @@
                                                     <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/tableau-de-bord/">
                                                         <span class="fr-icon-database-line fr-icon--sm ">&emsp;Publier une donnée</span></a>
                                                 </li>
-                                                {# <li>
-                                                    <a class="fr-nav__link fr-mr-3w" href="#">
-                                                        <span class="fr-icon-brush-line fr-icon--sm ">&emsp;Créer une carte</span></a>
-                                                </li> #}
                                                 <li>
                                                     <div class="custom-center-btn">
-                                                        <a href="https://cartes.gouv.fr"
-                                                            class="fr-btn fr-btn--tertiary fr-mt-3v  fr-mx-3w"
+                                                        <a href="https://cartes.gouv.fr/decouvrir"
+                                                            class="fr-btn fr-btn--tertiary fr-btn--sm fr-mt-3v  fr-mx-3w"
                                                             target="_blank"
                                                             rel="noopener noreferrer">
-                                                            Découvrir cartes.gouv
+                                                            Découvrir cartes.gouv.fr
                                                         </a>
                                                     </div>
                                                 </li>

@@ -19,7 +19,7 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
-Cette page explique la procédure d’installation du projet de documentation de **Cartes.gouv.fr**, afin d’ouvrir à l’édition les pages de documentation des partenaires.
+Cette page explique la procédure d’installation du projet de documentation de **cartes.gouv.fr**, afin d’ouvrir à l’édition les pages de documentation des partenaires.
 
 :::info
 Cette documentation est technique mais vous permet de visualiser vos ajouts, modifications ou suppressions dans un navigateur avant d’en demander la fusion avec le dépôt principal _github_.

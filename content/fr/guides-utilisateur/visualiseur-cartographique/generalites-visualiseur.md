@@ -11,10 +11,10 @@ eleventyNavigation:
     nav: guides-utilisateur
     parent: Explorer les cartes
 pictogram: "map/location-france.svg"
-description: Explorez la richesse des cartes de Cartes.gouv.fr
+description: Explorez la richesse des cartes de cartes.gouv.fr
 ---
 
-Le service **« Explorer les cartes »** de **Cartes.gouv.fr** permet de visualiser les données cartographiques de la Géoplateforme.
+Le service **« Explorer les cartes »** de **cartes.gouv.fr** permet de visualiser les données cartographiques de la Géoplateforme.
 
 Successeur du **Géoportail**, il offre une interface moderne et personnalisable pour afficher, superposer et gérer des cartes, et accéder à une large gamme d’outils d’exploration. Vous pouvez y tracer des croquis, mesurer des distances ou des surfaces, calculer des itinéraires, créer un profil altimétrique, afficher la légende des couches ou rechercher des lieux, adresses ou parcelles.
 
