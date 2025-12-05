@@ -19,8 +19,6 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
----
-
 Cette page explique la procédure d’installation du projet de documentation de **Cartes.gouv.fr**, afin d’ouvrir à l’édition les pages de documentation des partenaires.
 
 :::info

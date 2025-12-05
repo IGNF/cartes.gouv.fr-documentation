@@ -19,7 +19,7 @@ description: Tracez une ligne pour connaître son angle par rapport au Nord
 
 L’outil **« Mesurer un angle »** permet de dessiner une ligne sur la carte et de connaître son angle par rapport au Nord géographique.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 

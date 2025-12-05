@@ -24,7 +24,7 @@ summary:
 
 L’outil **« Coordonnées du curseur »** permet d’afficher les coordonnées géographiques de la position du curseur en temps réel.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 

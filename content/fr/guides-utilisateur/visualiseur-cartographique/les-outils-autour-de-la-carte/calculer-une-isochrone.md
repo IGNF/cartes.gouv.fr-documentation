@@ -23,7 +23,7 @@ summary:
 
 L’outil **« Calculer une zone selon un temps de trajet »** permet d’afficher sur la carte un périmètre contenant l’ensemble des points situés à une certaine distance (**« Isodistance »**) ou temps de trajet (**« Isochrone »**).
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/catalogue-d-outils/).
+Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../../catalogue-d-outils/).
 
 Cliquez sur l’icône de l’outil :
 
@@ -86,7 +86,7 @@ Cliquez sur le bouton **« Calculer l’isodistance »** (si vous avez choisi 
 Cliquez sur l’icône **« Modifier le calcul »** pour revenir à l’étape précédente et modifier les options du calcul.
 
 :::warning
-Si vous cliquez sur un autre outil, puis que vous revenez à l’outil **« Calculer une zone selon un temps de trajet »**, alors cela entamera un nouveau calcul. Suivez [ces indications](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-une-isochrone/#modifier-une-isochrone-existante) pour reprendre un calcul existant.
+Si vous cliquez sur un autre outil, puis que vous revenez à l’outil **« Calculer une zone selon un temps de trajet »**, alors cela entamera un nouveau calcul.
 :::
 
 ---
@@ -98,10 +98,10 @@ Vous pouvez sauvegarder votre isochrone / isodistance en lui donnant un nom et
 ![Image décrivant comment enregistrer son résultat](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-une-isochrone/09_enregistrer-l-isochrone.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-Si vous souhaitez enregistrer votre résultat, il faut que vous soyez [connecté](https://cartes.gouv.fr/aide/fr/guides-utilisateur/presentation-utilisateur/connexion) à votre compte au préalable.
+Si vous souhaitez enregistrer votre résultat, il faut que vous soyez [connecté](../../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vous retrouverez alors votre isochrone / isodistance avec son nouveau nom dans le [Gestionnaire de couches](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/menu-cartes/) :
+Vous retrouverez alors votre isochrone / isodistance avec son nouveau nom dans le [Gestionnaire de couches](../../gestionnaire-de-couches/), ainsi que dans votre espace personnel dans le [Menu cartes](../../menu-cartes/) :
 
 ![Image décrivant où on peut retrouver son résultat enregistré](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-une-isochrone/10_isochrone-sauvegardee.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -113,7 +113,7 @@ Si vous effectuez des modifications, pensez à enregistrer de nouveau votre isoc
 
 Vous pouvez également exporter votre isochrone / isodistance en un fichier _*.geojson_ en cliquant sur le bouton **« Exporter »** :
 
-![Image décrivant comment exporter son résultat en local](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-un-itineraire/11_exporter-son-isochrone.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant comment exporter son résultat en local](/img/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/calculer-une-isochrone/11_exporter-son-isochrone.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ---
 
