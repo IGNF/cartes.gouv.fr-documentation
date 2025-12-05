@@ -7,6 +7,6 @@ tags:
 description: Le catalogue de données de cartes.gouv.fr
 eleventyNavigation:
     key: Rechercher une donnée
-    order: 2
+    order: 3
     nav: guides-utilisateur
 ---
