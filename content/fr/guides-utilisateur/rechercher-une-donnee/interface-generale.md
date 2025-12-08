@@ -11,7 +11,7 @@ eleventyNavigation:
     parent: Rechercher une donnée
     order: 2
     nav: guides-utilisateur
-pictogram: "document/document-add.svg"
+pictogram: "digital/search.svg"
 summary:
     visible: true
     depth: 2
@@ -39,7 +39,7 @@ Dans **la première partie**, deux filtrages sont mis en avant :
 -	Les thèmes : 19 thématiques qui balaient un large éventail de possibilités. 
 -	Le producteur : Le producteur de la donnée ou du service.
 
-Un système de tri de la donnée selon 5 critères :
+Ainsi qu’un système de tri de la donnée selon 5 critères :
 - Popularité : Tri sur la fréquentation d’une métadonnée catalogue.
 - Dernière modificiation : Tri sur la date de dernière modification.
 - Indicateur de qualité : Tri sur le pourcentage de qualité de la métadonnée catalogue.
@@ -60,7 +60,7 @@ Une fois l’interface ci-dessous développée, en plus des options précédemme
 
 ![Image listant toutes les options de filtrage](/img/guides-utilisateur/rechercher-une-donnee/05_affiner-recherche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-La **seconde partie** permet de filtrer les métadonnées catalogues selon leur catégorie : Tous, jeux de données, services et réutilisations.
+La **seconde partie** permet de filtrer les métadonnées catalogues selon leur catégorie : Tous, Jeux de données, Services et Réutilisations.
 
 ![Image détaillant la seconde partie de la barre d’outil](/img/guides-utilisateur/rechercher-une-donnee/06_filtrer-resultats-categories.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

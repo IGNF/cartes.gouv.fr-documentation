@@ -10,7 +10,7 @@ eleventyNavigation:
     parent: Rechercher une donnée
     order: 3
     nav: guides-utilisateur
-pictogram: "document/document-add.svg"
+pictogram: "document/document.svg"
 summary:
     visible: true
     depth: 2
@@ -19,13 +19,13 @@ summary:
 
 Pour illustrer une métadonnée catalogue, nous allons nous appuyer sur la donnée Plan IGN. 
 
-Une métadonnée catalogue se compose d’une partie **« à propos »**, une partie **« aperçu »** et une partie **« ressources et liens »**. 
+Une métadonnée catalogue se compose généralement d’une partie **« À propos »**, une partie **« Aperçu »** et une partie **« Ressources et liens »**. 
 
 ![Image décrivant l’entête d’une métadonnée catalogue](/img/guides-utilisateur/rechercher-une-donnee/11_menu-fiche-catalogue.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ---
 
-## A propos
+## À propos
 
 ![Image décrivant la partie à propos](/img/guides-utilisateur/rechercher-une-donnee/12_a-propos-fiche-catalogue.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -35,20 +35,21 @@ Dans cette première partie, vous retrouverez en haut de page le titre, la vigne
 
 En dessous, la partie gauche peut être décomposée en cinq éléments :
 
- -  **Le résumé**
-    Partie texte qui décrie la donnée/service. Possibilité de développer et réduire cette partie.
- - **Mots clés**
-    Les mots clés sont cliquables et permettent de chercher des fiches de métadonnées qui leur correspondent.
+- **Le résumé :**
+Partie texte qui décrie la donnée/service. Possibilité de développer et réduire cette partie.
+- **Mots clés :**
+Les mots clés sont cliquables et permettent de chercher des fiches de métadonnées qui leur correspondent.
 
-    :::info
-    les parties suivantes se déroulent en cliquant sur le bouton « + ».
-    :::
- - **Licences et conditions d’utilisation**
-    Les règles qui précisent comme la donnée référencée peut être utilisée. 
- - **A propose de la donnée**
-    Diverses informations comme la provenance de la donnée, son producteur, sa fréquence de mise à jour, sa date de publication...
- - **Autres informations**
-    Cette partie offre des informations supplémentaires comme la dernière date de modification de la métadonnée, l’accès à la fiche de métadonnée...
+:::info
+les parties suivantes se déroulent en cliquant sur le bouton « + ».
+:::
+
+- **Licences et conditions d’utilisation :**
+Les règles qui précisent comme la donnée référencée peut être utilisée. 
+- **A propose de la donnée :**
+Diverses informations comme la provenance de la donnée, son producteur, sa fréquence de mise à jour, sa date de publication...
+- **Autres informations :**
+Cette partie offre des informations supplémentaires comme la dernière date de modification de la métadonnée, l’accès à la fiche de métadonnée...
 
 ![Image décrivant la partie gauche de la partie à propos](/img/guides-utilisateur/rechercher-une-donnee/14_description-fiche-catalogue.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

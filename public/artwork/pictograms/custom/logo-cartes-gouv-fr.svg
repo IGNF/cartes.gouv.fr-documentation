@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 157.15 127.69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000091;
+      }
+
+      .cls-2 {
+        fill: #e1000f;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="103.19 54.41 103.19 45.41 94.19 45.41 94.19 54.41 94.19 61.88 94.19 63.41 103.19 63.41 112.19 63.41 112.19 54.41 103.19 54.41"/>
+  <polygon class="cls-3" points="76.19 81.41 76.19 90.41 85.19 90.41 85.19 81.41 76.22 81.41 76.19 81.41"/>
+  <rect class="cls-3" x="94.19" y="27.41" width="9" height="9"/>
+  <rect class="cls-3" x="58.19" y="36.41" width="9" height="9"/>
+  <rect class="cls-3" x="67.19" y="45.41" width="9" height="9"/>
+  <rect class="cls-3" x="103.19" y="36.41" width="9" height="9"/>
+  <rect class="cls-3" x="76.19" y="54.41" width="9" height="9"/>
+  <polygon class="cls-3" points="121.19 63.41 112.19 63.41 112.19 72.41 112.19 81.41 121.19 81.41 121.19 72.41 121.19 63.41"/>
+  <g>
+    <rect class="cls-2" x="130.19" y="90.41" width="9" height="9"/>
+    <rect class="cls-2" x="121.19" y="63.41" width="9" height="9"/>
+    <rect class="cls-2" x="112.19" y="27.41" width="9" height="9"/>
+    <rect class="cls-2" x="76.19" y="27.41" width="9" height="9"/>
+    <rect class="cls-2" x="103.19" y="45.41" width="9" height="9"/>
+    <rect class="cls-2" x="49.19" y="36.41" width="9" height="9"/>
+    <rect class="cls-2" x="58.19" y="81.41" width="9" height="9"/>
+    <rect class="cls-2" x="58.19" y="54.41" width="9" height="9"/>
+    <rect class="cls-2" x="85.19" y="108.41" width="9" height="9"/>
+    <rect class="cls-2" x="40.19" y="99.41" width="9" height="9"/>
+    <rect class="cls-2" x="103.19" y="72.41" width="9" height="9"/>
+    <rect class="cls-2" x="85.19" y="9.41" width="9" height="9"/>
+    <rect class="cls-2" x="85.19" y="54.41" width="9" height="9"/>
+    <g>
+      <polygon class="cls-1" points="112.19 90.41 121.19 90.41 121.19 81.41 112.19 81.41 103.19 81.41 103.19 90.41 112.19 90.41"/>
+      <rect class="cls-1" x="112.19" y="108.41" width="9" height="9"/>
+      <rect class="cls-1" x="121.19" y="72.41" width="9" height="9"/>
+      <rect class="cls-1" x="103.19" y="27.41" width="9" height="9"/>
+      <polygon class="cls-1" points="94.19 27.41 103.19 27.41 103.19 18.41 94.19 18.41 85.19 18.41 76.19 18.41 76.19 27.41 85.19 27.41 85.19 36.41 76.19 36.41 76.19 27.41 67.19 27.41 58.19 27.41 58.19 36.41 67.19 36.41 67.19 45.41 76.19 45.41 76.19 54.41 85.19 54.41 94.19 54.41 94.19 45.41 103.19 45.41 103.19 36.41 94.19 36.41 94.19 27.41"/>
+      <polygon class="cls-1" points="121.19 27.41 121.19 36.41 112.19 36.41 112.19 45.41 112.19 54.41 112.19 63.41 121.19 63.41 121.19 54.41 121.19 45.41 130.19 45.41 130.19 36.41 130.19 27.41 121.19 27.41"/>
+      <polygon class="cls-1" points="58.19 45.41 49.19 45.41 49.19 54.41 58.19 54.41 67.19 54.41 67.19 45.41 58.19 45.41"/>
+      <rect class="cls-1" x="40.19" y="36.41" width="9" height="9"/>
+      <rect class="cls-1" x="49.19" y="81.41" width="9" height="9"/>
+      <rect class="cls-1" x="67.19" y="108.41" width="9" height="9"/>
+      <rect class="cls-1" x="94.19" y="99.41" width="9" height="9"/>
+      <polygon class="cls-1" points="94.19 63.41 94.19 72.41 94.19 81.41 103.19 81.41 103.19 72.41 112.19 72.41 112.19 63.41 103.19 63.41 94.19 63.41"/>
+    </g>
+  </g>
+  <rect class="cls-2" x="67.19" y="90.41" width="9" height="9"/>
+  <rect class="cls-2" x="76.19" y="72.41" width="9" height="9"/>
+  <polygon class="cls-3" points="85.19 63.41 85.19 72.41 85.19 81.41 94.19 81.41 94.19 72.41 94.19 63.41 85.19 63.41"/>
+  <g>
+    <polygon class="cls-1" points="76.19 72.41 85.19 72.41 85.19 63.41 76.19 63.41 76.19 54.41 67.19 54.41 67.19 63.41 67.19 72.41 58.19 72.41 58.19 81.41 67.19 81.41 67.19 90.41 76.19 90.41 76.19 81.41 76.19 72.41"/>
+    <rect class="cls-1" x="85.19" y="81.41" width="9" height="9"/>
+    <rect class="cls-1" x="76.19" y="90.41" width="9" height="9"/>
+  </g>
+</svg>
