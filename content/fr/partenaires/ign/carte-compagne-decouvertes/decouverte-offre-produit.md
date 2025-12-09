@@ -1,6 +1,6 @@
 ---
 title: Découverte de l’offre produit
-description: Comprendre et comparer ce que contient l’offre de données et services La carte, compagne de vos découvertes, de l’Institut National de l’Information Géographique et Forestière
+description: Comprendre et comparer ce que contient l’offre de données et services La carte, compagne de vos découvertes, de l’Institut national de l’information géographique et forestière
 eleventyNavigation:
     key: Découverte de l’offre produit
     order: 1
