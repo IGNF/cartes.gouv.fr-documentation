@@ -1,6 +1,6 @@
 ---
 title: Relief
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 description: Description de la forme du relief du terrain
 tags:
     - Raster

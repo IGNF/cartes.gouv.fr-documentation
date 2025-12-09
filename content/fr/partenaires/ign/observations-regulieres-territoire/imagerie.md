@@ -1,6 +1,6 @@
 ---
 title: Imagerie
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 description: Images issues d’acquisitions aériennes et satellites
 tags:
     - Raster

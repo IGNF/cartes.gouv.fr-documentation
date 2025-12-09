@@ -1,5 +1,5 @@
 module.exports = {
-    layout: "layouts/partenaire_article.njk",
+    layout: "layouts/partenaire/article.njk",
     segments: [
         {
             url: "/partenaires",

@@ -1,7 +1,7 @@
 ---
 title: Documentations partenaires
 description: Consultez la documentation de nos partenaires pour vous accompagner dans la prise en main de l’offre produit de cartes.gouv.fr
-layout: layouts/partenaire.njk
+layout: layouts/partenaires.njk
 tags:
     - Documentations partenaires
 eleventyNavigation:

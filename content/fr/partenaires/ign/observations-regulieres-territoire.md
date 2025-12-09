@@ -1,6 +1,6 @@
 ---
 title: Observations régulières du territoire
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Observations régulières du territoire
     order: 2

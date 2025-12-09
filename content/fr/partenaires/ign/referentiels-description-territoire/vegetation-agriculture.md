@@ -1,6 +1,6 @@
 ---
 title: Végétation et agriculture
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Végétation et agriculture
     order: 6

@@ -1,6 +1,6 @@
 ---
 title: Forêt
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Forêt
     order: 7

@@ -1,6 +1,6 @@
 ---
 title: Représentations cartographiques souveraines
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Représentations cartographiques souveraines
     order: 4

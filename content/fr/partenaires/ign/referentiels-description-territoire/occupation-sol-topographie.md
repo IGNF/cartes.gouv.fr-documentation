@@ -1,6 +1,6 @@
 ---
 title: Occupation du sol et topographie
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Occupation du sol et topographie
     order: 2

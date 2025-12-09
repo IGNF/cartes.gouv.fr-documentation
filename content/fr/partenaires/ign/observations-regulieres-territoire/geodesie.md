@@ -1,6 +1,6 @@
 ---
 title: Géodésie
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 description: Positionnement sur la terre dans l’espace
 tags:
     - Positionnement

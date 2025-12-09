@@ -1,6 +1,6 @@
 ---
 title: Cartes historiques
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Cartes historiques
     order: 4

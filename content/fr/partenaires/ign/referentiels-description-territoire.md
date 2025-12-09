@@ -1,6 +1,6 @@
 ---
 title: Référentiels de description du territoire
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Référentiels de description du territoire
     order: 3

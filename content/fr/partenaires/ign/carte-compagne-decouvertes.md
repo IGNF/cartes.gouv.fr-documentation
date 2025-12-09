@@ -1,6 +1,6 @@
 ---
 title: La carte, compagne de vos découvertes
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: La carte, compagne de vos découvertes
     order: 7

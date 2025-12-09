@@ -1,6 +1,6 @@
 ---
 title: Services d’appui à la décision
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Services d’appui à la décision
     order: 6

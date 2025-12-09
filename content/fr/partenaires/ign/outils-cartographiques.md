@@ -1,6 +1,6 @@
 ---
 title: Outils cartographiques du service public
-layout: layouts/partenaire_parent.njk
+layout: layouts/partenaire/parent.njk
 eleventyNavigation:
     key: Outils cartographiques du service public
     order: 5
