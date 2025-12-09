@@ -13,11 +13,11 @@ description: L’éditeur cartographique de cartes.gouv.fr
 
 Mobilisez les données de cartes.gouv.fr et créez des cartes personnalisées, interactives et prêtes à être partagées.
 
-![Image décrivant le logo du service créer des cartes](/img/guides-utilisateur/creer-des-cartes-personnalisees/01_logo-creer-des-cartes.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le logo du service créer des cartes](/artwork/pictograms/custom/editor.svg){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Ce service rejoindra progressivement cartes.gouv.fr à partir de 2026.
 
-![Image décrivant le badge à venir](/img/guides-utilisateur/creer-des-cartes-personnalisees/02_badge-a-venir.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+<p style="text-align: center;"><span class="fr-badge fr-badge--new">à venir</span></p>
 
 Il offrira la création de cartes à partir de flux ou de données importées, la personnalisation de la symbologie et le partage en ligne, gratuitement.
 

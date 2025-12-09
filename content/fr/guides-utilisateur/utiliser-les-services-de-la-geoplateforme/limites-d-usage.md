@@ -68,4 +68,4 @@ Solution : paramétrer le script de telle sorte que la fréquence d’appel à 
 
 À titre d’illustration, pour une utilisation de l’ETL "FME" édité par Safe Software, le paramétrage de la fréquence d’appel peut être effectué comme suit :
 
-![Paramétrage de la fréquence d’appel sous FME, copie d’écran de l’interface](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/limites-d-usage/rate-limiting-fme.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Paramétrage de la fréquence d’appel sous FME, copie d’écran de l’interface](/img/guides-utilisateur/acceder-aux-geodonnees/limites-d-usage/rate-limiting-fme.png){.fr-responsive-img .frx-border-img .frx-img-contained}

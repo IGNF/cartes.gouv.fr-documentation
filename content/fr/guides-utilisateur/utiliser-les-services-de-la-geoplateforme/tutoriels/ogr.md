@@ -13,4 +13,4 @@ pictogram: "digital/coding.svg"
 description: Tutoriels pour utiliser les APIs de la Géoplateforme avec OGR
 ---
 
-OGR
+Retrouvez les tutoriels à l’adresse : [https://geoservices.ign.fr/documentation/services/utilisation-sig/tutoriel-ogr](https://geoservices.ign.fr/documentation/services/utilisation-sig/tutoriel-ogr)

@@ -9,17 +9,17 @@ eleventyNavigation:
     key: Collaborer sur des données
     order: 7
     nav: guides-utilisateur
-pictogram: custom/account.svg
+pictogram: custom/contributor.svg
 description: Co-construire une base de données via signalements et contributions
 ---
 
 Co-construisez une base de données à l’aide de signalements et de contributions directes.
 
-![Image décrivant le logo du service collaborer sur des données](/img/guides-utilisateur/collaborer-sur-des-donnees/01_logo-collaborer-sur-des-donnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant le logo du service collaborer sur des données](/artwork/pictograms/custom/contributor.svg){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Ce service rejoindra cartes.gouv.fr en partir de 2026.
+Ce service rejoindra cartes.gouv.fr à partir de 2026.
 
-![Image décrivant le badge à venir](/img/guides-utilisateur/creer-des-cartes-personnalisees/02_badge-a-venir.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+<p style="text-align: center;"><span class="fr-badge fr-badge--new">à venir</span></p>
 
 Pour les producteurs et responsables de données, le service permettra de gérer une communauté autour de votre base de données et d’ouvrir celle-ci à la collaboration via des signalements ou des contributions directes.
 
