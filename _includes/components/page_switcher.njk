@@ -1,23 +1,38 @@
 {% if navLinks %}
   {% set flatNav = navLinks | flattenNav %}
+  {% set activeUrl = eleventyNavigation.sidemenuActive or page.url %}
+  {% set activeKey = activeUrl | replace('/', '') %}
   {% set currentIndex = -1 %}
   {% for item in flatNav %}
-    {% if item.url == page.url %}
-      {% set currentIndex = loop.index0 %}
+    {% if currentIndex == -1 %}
+      {% set itemKey = (item.url or '') | replace('/', '') %}
+      {% if itemKey == activeKey %}
+        {% set currentIndex = loop.index0 %}
+      {% endif %}
     {% endif %}
   {% endfor %}
+  {% if currentIndex == -1 and activeUrl != page.url %}
+    {% set fallbackKey = page.url | replace('/', '') %}
+    {% for item in flatNav %}
+      {% if currentIndex == -1 %}
+        {% set itemKey = (item.url or '') | replace('/', '') %}
+        {% if itemKey == fallbackKey %}
+          {% set currentIndex = loop.index0 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
   {% if currentIndex > 0 %}
     {% set previousPage = flatNav[currentIndex - 1] %}
   {% else %}
     {% set previousPage = null %}
   {% endif %}
-  {% if currentIndex < (flatNav | length) - 1 %}
+  {% if currentIndex != -1 and currentIndex < (flatNav | length) - 1 %}
     {% set nextPage = flatNav[currentIndex + 1] %}
   {% else %}
     {% set nextPage = null %}
   {% endif %}
-  {% if (previousPage or nextPage) 
-    and eleventyNavigation.nav != "main" %}
+  {% if (previousPage or nextPage) and eleventyNavigation.nav != "main" %}
     <div class="page-switcher fr-pt-6w fr-mt-14v" data-pagefind-ignore>
       {% if previousPage %}
         <p class="fr-mb-0 previous-page">

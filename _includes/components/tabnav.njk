@@ -1,0 +1,35 @@
+{% if not tabnav %}
+    {% set tabnav = params %}
+{% endif %}
+<div class="dsfr-doc-tab-navigation">
+  <div class="fr-sidemenu" data-fr-js-sidemenu-actionee="true">
+    <div class="fr-sidemenu__inner">
+      <button aria-expanded="false" aria-controls="dsfr-doc-tab-navigation--collapse" type="button" class="fr-sidemenu__btn" data-fr-js-collapse-button="true">
+        {# Affiche le titre de l'onglet actif, sinon le premier onglet #}
+        {% if tabnav.items and (tabnav.items | length) > 0 %}
+          {% set activeTab = tabnav.items | selectattr('active') | first %}
+          {{ activeTab.title if activeTab else tabnav.items[0].title }}
+        {% else %}
+          Dans cette rubrique
+        {% endif %}
+      </button>
+      <div class="fr-collapse" id="dsfr-doc-tab-navigation--collapse" data-fr-js-collapse="true">
+        <ul>
+          {% for item in tabnav.items %}
+            <li>
+              {% if item.active %}
+                <div aria-current="page" class="dsfr-doc-tab-navigation__tab">
+                  {{ item.title }}
+                </div>
+              {% else %}
+                <a class="dsfr-doc-tab-navigation__tab" href="{{ item.url }}">
+                  {{ item.title }}
+                </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/component.njk" import component with context %}
+
+<div class="fr-container">
+  <div class="fr-grid-row">
+    <div id="contenu" class="fr-col-12 fr-pt-12v">
+      <div class="fr-grid-row">
+        <div class="fr-col-12 fr-col-md-9">
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          <h1>{{ title }}</h1>
+        </div>
+      </div>
+      {% if description %}
+        <p class="fr-text--lead">{{ description }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{{ content | safe }}

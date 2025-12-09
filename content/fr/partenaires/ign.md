@@ -1,12 +1,17 @@
 ---
-title: Institut national de l'information géographique et forestière
-layout: layouts/accueil.njk
+title: Institut national de l’information géographique et forestière
+partnerName: l’Institut national de l’information géographique et forestière
+description: L’IGN est l’opérateur public de référence pour l’information géographique et forestière
+hintText: Toute la documentation des produits et services de l’Institut national de l’information géographique et forestière
+layout: layouts/partenaire/home.njk
 tags:
     - IGNF
 image:
-    path: ../../public/img/partenaires/ign.png
+    path: /img/partenaires/ign/ign.png
     alt: Logo IGN
+pictogram: custom/logo/ign.png
+tileTag:
+    label: Service public
+    icon: fr-icon-government-line
 sidemenuNav: ign
 ---
-
-Liste des documentations spécifiques à l'IGN

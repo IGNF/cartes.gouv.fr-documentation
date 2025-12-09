@@ -205,7 +205,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
     "updated": "2024-09-17",
     "author":
     {
-        "name": "Institut National de l'Information Géographique et Forestière",
+        "name": "Institut national de l'information géographique et forestière",
         "email": "geoplateforme@ign.fr"
     },
     "link":

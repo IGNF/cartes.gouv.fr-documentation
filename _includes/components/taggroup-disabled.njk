@@ -1,7 +1,7 @@
 <ul class="fr-tags-group" data-pagefind-ignore>
     {% for tag in tags | filterTagList %}
         <li>
-            <p class="fr-tag">{{ tag }}</p>
+            <p class="fr-tag {% if small_tags %} fr-tag--sm {% endif %}">{{ tag }}</p>
         </li>
     {% endfor %}
 </ul>

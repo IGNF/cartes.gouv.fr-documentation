@@ -1,0 +1,23 @@
+---
+title: Carhab
+description: Carhab est une cartographie nationale des habitats naturels et semi-naturels terrestres de métropole et d’outre-mer, à l’échelle du 1:25 000e
+tags:
+    - Biodiversité
+    - Environnement
+    - Végétation
+    - IA
+edition: dernière
+eleventyNavigation:
+    key: Carhab
+    order: 3
+image:
+    src: /img/partenaires/ign/referentiels-description-territoire/vegetation-agriculture/carhab.png
+    alt: Carhab
+lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS
+---
+
+Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS - ouvre une nouvelle fenêtre">CARHAB - Habitats</a>
+
+Initié dans le cadre de la stratégie nationale pour la biodiversité 2011-2020, ce programme porté par le Ministère en charge de l’écologie vise à répondre aux enjeux de conservation de la biodiversité, d’aménagement du territoire et de gestion durable des ressources naturelles.
+
+Les résultats doivent permettre de connaître la localisation des habitats et viendront en appui aux politiques publiques nationales et territoriales en lien avec l’aménagement du territoire et la connaissance de la biodiversité. Ils permettront aussi de mieux répondre aux engagements communautaires liés à la Directive Habitat-Faune-Flore, notamment pour la répartition des habitats d’intérêt communautaire.

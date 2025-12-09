@@ -1,11 +1,9 @@
 module.exports = {
-    tags: ["Documentation partenaire"],
-    layout: "layouts/page.njk",
+    layout: "layouts/partenaire/article.njk",
     segments: [
         {
             url: "/partenaires",
             title: "Documentations partenaires",
         },
     ],
-    layout: "layouts/article.njk",
 };
