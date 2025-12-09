@@ -1,6 +1,6 @@
 ---
 title: Actualités
-description: Toute l'actualité de l'offre IGN
+description: Toute l’actualité de l’offre IGN
 eleventyNavigation:
     key: Actualités
     order: 2

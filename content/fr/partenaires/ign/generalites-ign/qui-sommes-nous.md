@@ -25,7 +25,7 @@ L’IGN produit en continu des bases de données souveraines accessibles à tous
 - données statistiques de l’inventaire forestier
 - référentiels géodésiques et de positionnement
 
-Ces données constituent un socle commun d'information géographique utile pour vos diagnostics territoriaux, vos politiques publiques et outils numériques.
+Ces données constituent un socle commun d’information géographique utile pour vos diagnostics territoriaux, vos politiques publiques et outils numériques.
 
 ### Faites produire des référentiels cartographiques sur mesure pour vos politiques publique
 
@@ -38,7 +38,7 @@ Ces productions à façon sont construites en partenariat avec les acteurs publi
 
 ### Utilisez la carte dans vos politiques publiques
 
-La carte est un outil puissant pour partager une vision, faciliter le dialogue ou rendre l’information accessible aux citoyens. Pour vous permettre d’en exploiter tout le potentiel, l’IGN met à votre disposition des données cartographiques ( comme PLAN IGN et des SCAN) et des outils et applicatifs pour produire vos cartes comme macarte.ign.fr ou pour explorer le territoire comme l'application Cartes IGN.
+La carte est un outil puissant pour partager une vision, faciliter le dialogue ou rendre l’information accessible aux citoyens. Pour vous permettre d’en exploiter tout le potentiel, l’IGN met à votre disposition des données cartographiques ( comme PLAN IGN et des SCAN) et des outils et applicatifs pour produire vos cartes comme macarte.ign.fr ou pour explorer le territoire comme l’application Cartes IGN.
 
 ### Nos partis-pris
 

@@ -117,6 +117,7 @@ layout: layouts/base.njk
           {% include "components/card.njk" %}
         </div>
       {% endif %}
+      <h2>Offre produit et services</h2>
       {{ component("card_list", {
           items: otherPages | sort(attribute = "data.eleventyNavigation.order"),
           columns: 4,
