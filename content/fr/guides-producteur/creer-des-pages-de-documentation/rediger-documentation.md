@@ -219,6 +219,11 @@ summary:
 ---
 ```
 
+:::info
+Notez l’absence de la ligne **« layout: layouts/parent.njk »**.
+:::
+
+
 Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après l’en-tête :
 
 ```njk

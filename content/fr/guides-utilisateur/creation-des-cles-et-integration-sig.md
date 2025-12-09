@@ -11,6 +11,7 @@ tags:
     - Géoplateforme
 eleventyNavigation:
     key: Création et intégration des clés cartes.gouv.fr dans un SIG
-    order: 6
+    order: 4
     nav: guides-utilisateur
+pictogram: system/padlock.svg
 ---
