@@ -9,7 +9,12 @@ eleventyNavigation:
     nav: guides-utilisateur
 pictogram: "digital/internet.svg"
 description: Tous les détails sur les « Web Feature Service » de la Géoplateforme
+summary:
+    visible: true
+    depth: 1
 ---
+
+## Généralité
 
 Ce service s’appuie sur le protocole WFS en version 2.0.0.
 
@@ -24,11 +29,15 @@ Il propose les méthodes suivantes :
 - **GetFeature** (hits) pour obtenir le nombre d’objets associés à une demande
 - **GetFeature** (results) pour obtenir les objets associés à une demande
 
+---
+
 ## Requête GetCapabilities
 
 ```plain
 https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
 ```
+
+---
 
 ## Requête DescribeFeatureType
 
@@ -36,11 +45,15 @@ https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
 https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=DescribeFeatureType&TYPENAMES={classes}&OUTPUTFORMAT={format_de_sortie}
 ```
 
+---
+
 ## Requête GetFeature (hits)
 
 ```plain
 https://data.geopf.fr/wfs/ows?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES={classes}&RESULTTYPE=hits
 ```
+
+---
 
 ## Requête GetFeature (results)
 

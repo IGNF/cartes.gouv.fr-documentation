@@ -12,6 +12,7 @@ eleventyNavigation:
     nav: guides-utilisateur
 summary:
     visible: true
+    depth: 3
 pictogram: "system/system.svg"
 description: Tous les détails sur le service de calcul d’itinéraire de la Géoplateforme
 ---
@@ -37,6 +38,8 @@ L’API est interrogeable en méthodes GET et POST.
 
 Son swagger est accessible ici : [swagger du calcul d’itinéraire](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html).
 
+---
+
 ## Capacités de l’API (getCapabilities)
 
 La requête getCapabilities permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
@@ -48,6 +51,8 @@ https://data.geopf.fr/navigation/getCapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
+
+---
 
 ## Calculer un itinéraire
 
@@ -131,6 +136,8 @@ curl -X 'POST' \
 }'
 ```
 
+---
+
 ## Caractéristiques des règles de calcul pour les itinéraires
 
 Les données de navigation sont issues de la BD TOPO® (réseau routier et table de non communications).
@@ -141,8 +148,10 @@ Le graphe est dérivé de la BD TOPO®, apparié sur la BD CARTO® pour certains
 
 Le nouveau mode de calcul des vitesses (septembre 2023) s’inspire très largement de l’algorithme élaboré par le SDIS44. Il est décomposé en deux étapes :
 
-    le calcul de vitesses brutes en fonction des attributs propres à l’objet Tronçon de route (nature, importance, urbain…),
-    ensuite, pour une partie d’entre eux, des pénalités liées au réseau ou à l’environnement (bâti, sinuosité…) sont appliquées.
+- le calcul de vitesses brutes en fonction des attributs propres à l’objet Tronçon de route (nature, importance, urbain…),
+- ensuite, pour une partie d’entre eux, des pénalités liées au réseau ou à l’environnement (bâti, sinuosité…) sont appliquées.
+
+#### Vitesses brutes
 
 {{ component("table", {
     title: "Vitesses moyennes par ordre de traitement",
@@ -226,8 +235,6 @@ Le centroïde de chaque objet est ensuite pondéré par la hauteur du bâti (en 
 La vitesse brute est diminuée de cette pénalité : vitesse moyenne = vitesse brute * (1 - pénalité).
 
 La valeur est enfin arrondie à 5 km/h supérieur pour les objets d’importance 1 à 4, et à 5 km/h inférieur pour les objets d’importance 5.
-
-**Calcul des pénalités cumulées**
 
 {{ component("table", {
     title: "Calcul des pénalités cumulées",

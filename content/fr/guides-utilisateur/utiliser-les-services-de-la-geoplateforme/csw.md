@@ -12,6 +12,9 @@ eleventyNavigation:
     nav: guides-utilisateur
 pictogram: "digital/search.svg"
 description: Tous les détails sur le service de recherche de métadonnées de la Géoplateforme
+summary:
+    visible: true
+    depth: 1
 ---
 
 ## Présentation
@@ -24,6 +27,8 @@ Il s’appuie sur la norme [CSW ISO AP 2.0.2](https://www.ogc.org/standard/cat/)
 - **GetRecords** pour lister les métadonnées
 - **GetRecordByID** pour consulter une métadonnée
 
+---
+
 ## GetCapabilities
 
 La méthode GetCapabilities permet d'obtenir les capacités du service.
@@ -35,6 +40,8 @@ https://data.geopf.fr/csw?SERVICE=CSW&REQUEST=GetCapabilities&VERSION=2.0.2
 ```
 
 Cette méthode permet notamment de consulter les types de métadonnées (`TYPENAMES`) disponibles.
+
+---
 
 ## GetRecords
 
@@ -62,6 +69,8 @@ Par exemple, pour le `TYPENAMES` `gmd:MD_Metadata`, en affichant 50 résultats �
 ```plain
 https://data.geopf.fr/csw?SERVICE=CSW&REQUEST=GetRecords&VERSION=2.0.2&TYPENAMES=gmd:MD_Metadata&RESULTTYPE=results&MAXRECORDS=50&STARTPOSITION=1
 ```
+
+---
 
 ## GetRecordByID
 
