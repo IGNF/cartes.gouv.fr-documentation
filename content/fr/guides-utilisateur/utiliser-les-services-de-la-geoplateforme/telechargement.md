@@ -15,6 +15,9 @@ eleventyNavigation:
     nav: guides-utilisateur
 pictogram: "document/document-download.svg"
 description: Tous les détails sur le service de téléchargement de la Géoplateforme
+summary:
+    visible: true
+    depth: 1
 ---
 
 ## Présentation
@@ -37,6 +40,8 @@ Attention, **les résultats des requêtes sont paginés**. Pour parcourir les r�
 - **limit** : 50 résultats au maximum (10 par défaut)
 
 **N.B.** : le nombre total de résultats pour une requête est indiqué dans la valeur **gpf_dl:totalentries** présente dans l’en-tête de la réponse.
+
+---
 
 ## Lister les ressources (GetCapabilities)
 
@@ -72,6 +77,8 @@ Exemple de requête filtrée :
 ```plain
 https://data.geopf.fr/telechargement/capabilities?lang=fre&zone=FRA&page=1&limit=50
 ```
+
+---
 
 ## Lister les dossiers d’une ressource (GetResource)
 
@@ -111,6 +118,8 @@ Exemple de requête filtrée :
 https://data.geopf.fr/telechargement/resource/ADMIN-EXPRESS-COG?lang=fre&zone=FRA&format=SHP&page=1&limit=50
 ```
 
+---
+
 ## Lister les fichiers d’un sous-dossier d’une ressource (GetSubResource)
 
 La méthode GetSubResource permet de lister les fichiers du dossier de la ressource interrogée.
@@ -126,6 +135,8 @@ Exemple de requête :
 ```plain
 https://data.geopf.fr/telechargement/resource/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-1__SHP_WGS84G_FRA_2023-05-03?page=1&limit=50
 ```
+
+---
 
 ## Télécharger un fichier (Download)
 

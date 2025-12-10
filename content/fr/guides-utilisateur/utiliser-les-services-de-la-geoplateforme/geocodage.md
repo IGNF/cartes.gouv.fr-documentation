@@ -15,6 +15,7 @@ eleventyNavigation:
     nav: guides-utilisateur
 summary:
     visible: true
+    depth: 1
 pictogram: "system/system.svg"
 description: Tous les détails sur le service de géocodage de la Géoplateforme
 ---
@@ -29,6 +30,8 @@ Elle s’appuie sur des données BAN, BD TOPO® et Parcellaire Express (PCI).
 
 Son swagger est accessible ici : [swagger du géocodage](https://data.geopf.fr/geocodage/openapi).
 
+---
+
 ## Capacités de l’API (getCapabilities)
 
 La requête **getCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
@@ -40,6 +43,8 @@ https://data.geopf.fr/geocodage/getCapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
+
+---
 
 ## Géocodage direct (search) et inverse (reverse)
 
@@ -69,6 +74,8 @@ https://data.geopf.fr/geocodage/reverse
 ```
 
 Ces deux types de géocodage se déclinent sous la forme d’appels unitaires en méthode GET ou regroupés par fichiers (géocodage en masse de fichiers CSV) en méthode POST.
+
+---
 
 ## Géocodage par lot synchrone (batch) et asynchrone (batch-async)
 

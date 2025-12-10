@@ -12,9 +12,12 @@ eleventyNavigation:
     nav: guides-utilisateur
 pictogram: "system/system.svg"
 description: Tous les détails sur le service de calcul altimétrique de la Géoplateforme
+summary:
+    visible: true
+    depth: 2
 ---
 
-## 1 - Présentation
+## Présentation
 
 L’API de calcul altimétrique de la Géoplateforme permet d’obtenir l’altitude d’un ou de plusieurs points et un profil altimétrique le long d’une courbe.
 
@@ -26,7 +29,9 @@ L’API est interrogeable en méthodes GET et POST.
 
 Son swagger est accessible ici : [swagger du calcul altimétrique](https://data.geopf.fr/altimetrie/swagger-ui/index.html).
 
-## 2 - Consulter la liste des ressources
+---
+
+## Consulter la liste des ressources
 
 La liste des ressources disponibles via l’API est consultable via la requête :
 
@@ -46,7 +51,9 @@ https://data.geopf.fr/altimetrie/resources?keywords=Altitude
 https://data.geopf.fr/altimetrie/resources?keywords=Altitude&keywords=Exemple
 ```
 
-## 3 - Consulter le détail d’une ressource
+---
+
+## Consulter le détail d’une ressource
 
 Les informations détaillées (emprise des données, sources, etc.) d’une ressource sont consultables via la requête :
 
@@ -60,9 +67,11 @@ Exemple d’interrogation sur la ressource d’identifiant « ign_rge_alti_wld�
 https://data.geopf.fr/altimetrie/resources/ign_rge_alti_wld
 ```
 
-## 4 - Calculer des altitudes
+---
 
-### 4.1 - Déterminer l’altitude d’un ou plusieurs points via la méthode GET
+## Calculer des altitudes
+
+### Déterminer l’altitude d’un ou plusieurs points via la méthode GET
 
 Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir de leurs coordonnées géographiques. Il est accessible via l’URL suivante :
 
@@ -221,7 +230,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48;1.
 }
 ```
 
-### 4.2 - Déterminer l’altitude d’un ou plusieurs points via la méthode POST
+### Déterminer l’altitude d’un ou plusieurs points via la méthode POST
 
 Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir de leurs coordonnées géographiques. Il est accessible via l’URL suivante :
 
@@ -249,7 +258,7 @@ curl -X 'POST' \
 }'
 ```
 
-### 4.3 - Déterminer le profil altimétrique d’une courbe via la méthode GET
+### Déterminer le profil altimétrique d’une courbe via la méthode GET
 
 Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL suivante :
 
@@ -378,7 +387,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json?lon=1.4
 }
 ```
 
-### 4.4 - Déterminer le profil altimétrique d’une courbe via la méthode POST
+### Déterminer le profil altimétrique d’une courbe via la méthode POST
 
 Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL suivante :
 

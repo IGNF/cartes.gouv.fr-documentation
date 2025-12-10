@@ -9,10 +9,11 @@ eleventyNavigation:
     parent: Utiliser les services de la Géoplateforme
     order: 5
     nav: guides-utilisateur
-summary:
-    visible: true
 pictogram: "system/system.svg"
 description: Tous les détails sur le service d’autocomplétion de la Géoplateforme
+summary:
+    visible: true
+    depth: 1
 ---
 
 ## Présentation
@@ -27,6 +28,8 @@ L’API est interrogeable en méthode GET.
 
 Son swagger est accessible ici : [swagger de l’autocomplétion](https://data.geopf.fr/geocodage/completion/openapi).
 
+---
+
 ## Capacités de l’API (getCapabilities)
 
 La requête **getCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
@@ -38,6 +41,8 @@ https://data.geopf.fr/geocodage/completion/getCapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
+
+---
 
 ## Obtenir des suggestions (completion)
 
