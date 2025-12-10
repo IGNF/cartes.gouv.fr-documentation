@@ -31,14 +31,14 @@
     {% if tile.pictogram %}
         <div class="fr-tile__header">
             <div class="fr-tile__pictogram">
-                {% set pictogramUrl = "/artwork/pictograms/" + tile.pictogram %}
-                {% if tile.pictogram.slice(-4) == ".png" %}
-                    <img src="{{ pictogramUrl | htmlBaseUrl }}"
+                {% if tile.pictogram.path %}
+                    <img src="{{ tile.pictogram.path | htmlBaseUrl }}"
                         alt=""
                         width="80"
                         height="80"
                         class="fr-artwork" />
                 {% else %}
+                    {% set pictogramUrl = "/artwork/pictograms/" + tile.pictogram %}
                     <svg aria-hidden="true"
                         class="fr-artwork"
                         viewBox="0 0 80 80"

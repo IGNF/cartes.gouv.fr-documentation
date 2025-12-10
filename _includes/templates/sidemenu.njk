@@ -83,8 +83,8 @@
         const links = [...document.querySelectorAll(".fr-sidemenu__link")];
         const buttons = [...document.querySelectorAll(".fr-sidemenu__btn[data-url]")];
 
-        const activeParentBtn = buttons.find(btn => 
-            normalize(btn.dataset.url) === currentPath
+        const activeParentBtn = buttons.find(btn =>
+            currentPath.endsWith(normalize(btn.dataset.url))
         );
 
         let activeLink = null;
@@ -94,7 +94,7 @@
         }
 
         if (!activeLink) {
-            activeLink = links.find(a => hrefPath(a) === currentPath);
+            activeLink = links.find(a => currentPath.endsWith(hrefPath(a)));
         }
 
         if (activeParentBtn) {
