@@ -26,9 +26,113 @@ layout: layouts/home.njk
     </div>
 </div>
 
-<div class="fr-container fr-my-15v">
+<div class="fr-container fr-mt-16v fr-mb-20v">
+    <h2 class="fr-mb-16v">Questions fréquentes</h2>
+    {% set tabnavLinks = [
+        { 
+            title: "Quel est le lien entre cartes.gouv.fr et geoportail.gouv.fr ?",
+            content: "
+                Le service Explorer les cartes de cartes.gouv.fr est le successeur de Géoportail. Vous y retrouverez toutes les fonctionnalités du Géoportail et plus encore.
+            "
+        },
+        {
+            title: "Comment trouver une carte de référence ou une couche spécifique dans le catalogue de cartes ?",
+            content: "
+                <p>Découvrez les cartes de référence dans notre catalogue accessible via le bouton bleu en haut à droite. Parcourez une vingtaine de couches de référence et sélectionnez celles que vous souhaitez ajouter à votre carte.</p>
+                <p>Pour explorer toutes les données, cliquez à nouveau sur le bouton bleu. Dans l’onglet « Toutes les cartes », vous pouvez naviguer par thématique ou par producteur, ou utiliser la barre de recherche pour trouver une carte spécifique.</p>
+            "
+        },
+        { 
+            title: "Comment annoter ma carte et ajouter des points / lignes / surfaces ?",
+            content: "
+                Pour dessiner sur la carte et ajouter des annotations, activez l’outil « Annoter la carte » dans le catalogue d’outils, situé en haut à droite (troisième bouton). Un nouveau bouton apparaîtra sur l’interface. Cliquez sur ce bouton pour commencer à dessiner. Pour plus d’informations sur l’outil, consultez notre guide ici : <a href='https://cartes.gouv.fr/aide/fr/guides-utilisateur/visualiseur-cartographique/les-outils-autour-de-la-carte/annoter-la-carte/'>Annoter la carte</a>.
+            "
+        },
+        { 
+            title: "Quels styles est-il possible d’appliquer aux cartes que je consulte ?",
+            content: "
+                Certaines couches proposent des styles pré-calculés. Pour les utiliser, ajoutez une couche à votre carte, puis accédez au gestionnaire de couches en cliquant sur le deuxième bouton en haut à droite. Ensuite, ouvrez les détails de la couche en cliquant sur le petit chevron à droite, puis cliquez sur le bouton « Style » pour choisir celui qui vous convient.
+            "
+        },
+        { 
+            title: "Comment importer ma propre donnée dans la carte ?",
+            content: "
+                Connectez-vous à votre compte cartes.gouv.fr en utilisant le lien en haut à droite de votre écran. Ensuite, ouvrez le menu de la carte en cliquant sur le bouton en haut à gauche. Vous aurez alors la possibilité d’importer un fichier depuis votre ordinateur ou un lien distant dans votre espace personnel.
+            "
+        },
+        { 
+            title: "Comment partager ma carte ou l’intégrer dans un document ?",
+            content: "
+                Pour partager votre carte, ouvrez le menu en haut à gauche et cliquez sur « Partager ». Ensuite, il vous suffit d’envoyer le lien à la personne souhaitée. Attention, pour partager des croquis ou des données importées, vous devez être connecté et avoir enregistré les objets dans votre espace. Vous pouvez également imprimer ou télécharger une image de votre carte à tout moment en retournant dans le menu et en cliquant sur « Imprimer ».
+            "
+        },
+        { 
+            title: "Comment utiliser le visualiseur sur smartphone ou tablette ?",
+            content: "
+                Accédez à cartes.gouv.fr depuis votre smartphone ou votre tablette ! Ouvrez votre navigateur favori et entrez l’URL https://cartes.gouv.fr/cartes/ pour profiter d’une version mobile du site.
+            "
+        },
+        { 
+            title: "Comment télécharger une donnée (ex : BD TOPO®) ?",
+            content: "
+                <p>Tapez « BD TOPO » dans la barre de recherche et cliquez sur « BD TOPO® » dans la liste des résultats. Ensuite, allez à la section « Ressources et liens » de la fiche produit et cliquez sur le bouton pour télécharger « Ouvrir le panneau de personnalisation » lié à la ressource de la BD TOPO® V3.</p>
+                <p>Pour obtenir la dernière version, utilisez le formulaire pour choisir votre zone géographique et indiquez une date de début récente, comme 2025. Ensuite, choisissez le dernier paquet proposé.</p>
+            "
+        },
+        { 
+            title: "Comment utiliser un flux indiqué sur une fiche produit dans mon SIG ?",
+            content: "
+                Si un flux est disponible sur la fiche du produit, récupérez l’URL du service (par exemple : <a href='https://data.geopf.fr/wms-v'>https://data.geopf.fr/wms-v</a>) en cliquant sur le bouton « Copier » ainsi que le nom technique du service en le sélectionnant dans l’encart. Renseignez ensuite ces informations dans votre outil SIG pour y accéder.
+            "
+        },
+        { 
+            title: "Comment demander l’accès à une donnée restreinte ?",
+            content: "
+                Si une donnée est en accès restreint, remplissez le formulaire de demande auprès du producteur ou contactez-le directement depuis la fiche de données. Une fois votre demande approuvée, vous recevrez un email de confirmation. Retrouvez les données auxquelles vous avez accès et leurs conditions directement dans <a href='https://cartes.gouv.fr/tableau-de-bord/mes-cles-d-acces'>votre espace</a>.
+            "
+        },
+        { 
+            title: "Comment signaler une erreur dans une fiche produit ?",
+            content: "
+                Chaque producteur de données est responsable de ce qu’il dépose sur la Géoplateforme et cartes.gouv.fr. Si vous constatez une erreur dans la donnée ou sur la fiche produit, contactez la personne responsable indiquée dans l’encart « Contact » en haut à droite de la fiche.
+            "
+        },
+        { 
+            title: "Qu’est-ce que la Géoplateforme et à quoi sert-elle ?",
+            content: "
+                <p>La Géoplateforme est l’infrastructure nationale qui héberge, organise, traite et diffuse les données géographiques publiques. Elle soutient des services comme cartes.gouv.fr, afin par exemple d’afficher des cartes et de consulter des données. En résumé : cartes.gouv.fr est la vitrine ; la Géoplateforme en est le moteur.</p>
+                <p>Pour aller plus loin :</p>
+                <ul>
+                    <li>Découvrez comment accéder et utiliser les géodonnées via la Géoplateforme depuis <a href='https://cartes.gouv.fr/aide/fr/guides-utilisateur/acceder-aux-geodonnees/'>ce lien</a>.</li>
+                    <li>Publiez vos propres données ou utilisez les services techniques de l’entrepôt depuis <a href='https://cartes.gouv.fr/aide/fr/guides-developpeur/entrepot/'>ce lien</a>.</li>
+                </ul>
+            "
+        },
+        { 
+            title: "Comment faire apparaître mes données sur cartes.gouv.fr une fois déposées dans la Géoplateforme ?",
+            content: "
+                Il vous suffit d’ajouter un tag « datasheet_name » sur la donnée stockée (stored_data) ou la configuration. Cet identifiant devra être identique pour toutes les ressources concernant une même fiche produit. Nous vous conseillons d’utiliser un identifiant court et compréhensible (par exemple : IGNF_BD-TOPO pour la donnée <a href='https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO'>https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO</a>).
+            "
+        },
+        { 
+            title: "Quelles API sont disponibles sur la Géoplateforme ?",
+            content: "
+                La Géoplateforme propose un certain nombre de services de calcul et de diffusion mobilisables par API comme le géocodage ou le calcul d’itinéraire. Retrouvez tout le détail dans notre <a href='https://cartes.gouv.fr/aide/fr/guides-utilisateur/acceder-aux-geodonnees/'>guide utilisateur</a>.
+            "
+        },
+        { 
+            title: "Quelles sont les limites d’usage des services de la Géoplateforme (fair-use, quotas, nombre de requêtes) ?",
+            content: "
+                Pour des raisons de performances et d’équité envers les utilisateurs, la Géoplateforme limite le nombre de requêtes par seconde qu’un utilisateur peut envoyer. Retrouvez les limites de chaque service dans notre <a href='https://cartes.mut-dev.ign.fr/aide/fr/guides-utilisateur/acceder-aux-geodonnees/limites-d-usage/'>guide utilisateur</a>.
+            "
+        }
+    ] %}
+    {{ component("accordionsgroup", { items: tabnavLinks }) }}
+</div>
+
+<div class="fr-container fr-mt-16v fr-mb-20v">
     <div class="fr-col-12">
-        <h2 class="fr-mb-15v" id="guides">Découvrir les guides</h2>
+        <h2 class="fr-mb-16v" id="guides">Découvrir les guides</h2>
         <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
             <div class="fr-col-12 fr-col-md-4 fr-col-lg-3 fr-mx-4v">
                 {{ component("tile", {
@@ -61,9 +165,9 @@ layout: layouts/home.njk
     </div>
 </div>
 
-<div class="fr-background-alt--grey">
-    <div class="fr-container fr-col-12 fr-py-15v">
-        <h2 class="fr-mb-15v">Rechercher par services</h2>
+<div class="fr-background-alt--beige-gris-galet">
+    <div class="fr-container fr-col-12 fr-pt-16v fr-pb-20v">
+        <h2 class="fr-mb-16v">Rechercher par services</h2>
         <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center five-cols">
             <div class="fr-col-12 fr-col-sm-4 fr-col-md-3 fr-col">
                 {{ component("tile", {
@@ -117,8 +221,8 @@ layout: layouts/home.njk
     </div>
 </div>
 
-<div class="fr-container fr-col-12 fr-py-15v">
-    <h2 class="fr-mb-15v">Découvrir la documentation des partenaires</h2>
+<div class="fr-container fr-col-12 fr-mt-16v fr-mb-20v">
+    <h2 class="fr-mb-16v">Découvrir la documentation des partenaires</h2>
     <div class="fr-grid-row fr-grid-row--gutters">
         <div class="fr-col-6 fr-col-sm-4 fr-col-md-3 fr-col-lg-2">
             <svg class="fr-artwork" aria-hidden="true" viewBox="0 0 80 80" width="100%">
@@ -138,8 +242,8 @@ layout: layouts/home.njk
 </div>
 
 <div class="fr-background-alt--beige-gris-galet">
-    <div class="fr-container fr-col-12 fr-py-15v">
-        <h2 class="fr-mb-15v">Consulter les sujets populaires</h2>
+    <div class="fr-container fr-col-12 fr-pt-16v fr-pb-20v">
+        <h2 class="fr-mb-16v">Sujets populaires</h2>
         {% set items = collections.all %}
         {% set filteredItems = [] %}
         {% for item in items %}
