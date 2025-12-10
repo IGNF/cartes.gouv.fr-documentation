@@ -1,6 +1,6 @@
 ---
 title: Admin Express DGF
-description: Le découpage administatif de la France en continu
+description: Le découpage administratif de la France en continu
 tags:
     - BD France
     - HDV
