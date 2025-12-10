@@ -31,9 +31,8 @@
     {% if tile.pictogram %}
         <div class="fr-tile__header">
             <div class="fr-tile__pictogram">
-                {% set pictogramUrl = "/artwork/pictograms/" + tile.pictogram %}
-                {% if tile.pictogram.slice(-4) == ".png" %}
-                    <img src="{{ pictogramUrl }}"
+                {% if tile.pictogram.path %}
+                    <img src="{{ tile.pictogram.path }}"
                         alt=""
                         width="80"
                         height="80"
