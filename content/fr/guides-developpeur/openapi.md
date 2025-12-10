@@ -6,7 +6,7 @@ tags:
     - Spécifications OpenAPI
 eleventyNavigation:
     key: Spécifications OpenAPI de l'API Entrepôt
-    order: 7
+    order: 3
     nav: guides-developpeur
 pictogram: custom/swagger.svg
 ---

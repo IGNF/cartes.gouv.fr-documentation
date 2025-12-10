@@ -10,7 +10,7 @@ tags:
     - Workflow d'alimentation
 eleventyNavigation:
     key: Concepts de l'Entrepôt
-    order: 5
+    order: 2
     nav: guides-developpeur
 pictogram: system/system.svg
 ---
