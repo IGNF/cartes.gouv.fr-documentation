@@ -9,7 +9,8 @@ tags:
 image:
     path: /img/partenaires/ign/ign.png
     alt: Logo IGN
-pictogram: custom/logo/ign.png
+pictogram:
+    path: /img/partenaires/ign/ign-icon.png
 tileTag:
     label: Service public
     icon: fr-icon-government-line
