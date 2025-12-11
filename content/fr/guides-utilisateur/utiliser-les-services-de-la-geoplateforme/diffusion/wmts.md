@@ -9,7 +9,12 @@ eleventyNavigation:
     nav: guides-utilisateur
 pictogram: "digital/internet.svg"
 description: Tous les détails sur les « Web Map Tile Service » de la Géoplateforme
+summary:
+    visible: true
+    depth: 1
 ---
+
+## Généralités
 
 Ce service s’appuie sur le protocole WMTS en version 1.0.0.
 
@@ -20,6 +25,8 @@ Il propose les méthodes suivantes :
 - **GetCapabilities** pour obtenir les métadonnées du service
 - **GetTile** pour obtenir une tuile
 - **GetFeatureInfo** pour obtenir les métadonnées d’une tuile
+
+---
 
 ## Requête GetCapabilities
 
@@ -36,6 +43,8 @@ La requête a pour caractéristiques :
 - Méthode possible : GET
 - Format de réponse : XML
 
+---
+
 ## Requête GetTile
 
 ```plain
@@ -48,8 +57,8 @@ La requête a pour caractéristiques :
     - SERVICE=WMTS
     - REQUEST=GetTile
     - VERSION=1.0.0
-    - LAYER : la donnée consultée)
-    - STYLE : le style de rendu à appliquer)
+    - LAYER : la donnée consultée
+    - STYLE : le style de rendu à appliquer
     - FORMAT
     - TILEMATRIXSET : le nom de la pyramide d’images
     - TILEMATRIX : le nom de la matrice qui contient la tuile
@@ -57,6 +66,8 @@ La requête a pour caractéristiques :
     - TILECOL : le numéro de colonne du coin supérieur gauche de la tuile
 - Méthode possible : GET
 - Format de réponse : dépend du format de la donnée (PNG, JPEG, TIFF, BIL...)
+
+---
 
 ## Requête GetFeatureInfo
 

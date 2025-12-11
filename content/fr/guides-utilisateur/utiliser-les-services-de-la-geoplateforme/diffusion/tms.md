@@ -9,7 +9,12 @@ eleventyNavigation:
     nav: guides-utilisateur
 pictogram: "digital/internet.svg"
 description: Tous les détails sur les « Tile Map Service » de la Géoplateforme
+summary:
+    visible: true
+    depth: 1
 ---
+
+## Généralités
 
 Ce service s’appuie sur le protocole TMS en version 1.0.0.
 
@@ -21,11 +26,15 @@ Il propose les méthodes suivantes :
 - Accès aux métadonnées d’une donnée
 - Accès à une tuile
 
+---
+
 ## Accès aux métadonnées du service
 
 ```plain
 https://data.geopf.fr/tms/1.0.0
 ```
+
+---
 
 ## Accès aux métadonnées d'une donnée
 
@@ -33,11 +42,15 @@ https://data.geopf.fr/tms/1.0.0
 https://data.geopf.fr/tms/1.0.0/{Layer}/metadata.json
 ```
 
+---
+
 ## Accès à une tuile
 
 ```plain
 https://data.geopf.fr/tms/1.0.0/{Layer}/{z}/{x}/{y}.pbf
 ```
+
+---
 
 ## Accès aux styles vectoriels
 

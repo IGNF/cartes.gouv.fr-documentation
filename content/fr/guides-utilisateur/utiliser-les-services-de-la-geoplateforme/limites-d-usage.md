@@ -10,6 +10,7 @@ eleventyNavigation:
     nav: guides-utilisateur
 summary:
     visible: true
+    depth: 1
 pictogram: "system/information.svg"
 description: Nombre de requêtes par seconde autorisées
 ---
@@ -27,6 +28,8 @@ Lorsqu’une IP sollicite une API au-delà de la limite d’usage fixée :
  * Une erreur HTML 429 (Too Many Requests) est envoyée en réponse à toute requête ;
  * Ce blocage intervient pour une durée de 5 secondes et il ne concerne que l’API dont la limite d’usage a été franchie (à titre d’exemple, si la limite du calcul altimétrique est dépassée, le WMS reste accessible) ;
  * La durée du blocage est indiquée dans un header "retry-after", avec une durée initialisée à 5 secondes et qui décroît à partir du moment où la sur-sollicitation cesse.
+
+---
 
 ## Valeur de la limite d’usage pour chaque API concernée
 
@@ -54,6 +57,8 @@ Les limites d’usage fixées sont les suivantes :
         ["LiDAR téléchargement COPC"," 10 requêtes/s"]
     ]
 }) }}
+
+---
 
 ## Exemple de fonctionnement
 

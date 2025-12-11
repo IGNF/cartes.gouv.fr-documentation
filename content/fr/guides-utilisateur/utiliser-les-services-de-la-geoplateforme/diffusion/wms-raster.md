@@ -9,7 +9,12 @@ eleventyNavigation:
     nav: guides-utilisateur
 pictogram: "digital/internet.svg"
 description: Tous les détails sur les « Web Map Service Raster » de la Géoplateforme
+summary:
+    visible: true
+    depth: 1
 ---
+
+## Généralités
 
 Ce service s’appuie sur le protocole WMS en version 1.3.0
 
@@ -23,17 +28,23 @@ Il propose les méthodes suivantes :
 - **GetMap** pour obtenir une carte
 - **GetFeatureInfo** pour obtenir les métadonnées d’une carte
 
+---
+
 ## Requête GetCapabilities
 
 ```plain
 https://data.geopf.fr/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 ```
 
+---
+
 ## Requête GetMap
 
 ```plain
 https://data.geopf.fr/wms-r?LAYERS={couche}&FORMAT={format}&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&STYLES=&CRS={crs}&BBOX={Xmin,Ymin,Xmax,Ymax}&WIDTH={largeur}&HEIGHT={hauteur}
 ```
+
+---
 
 ## Requête GetFeatureInfo
 

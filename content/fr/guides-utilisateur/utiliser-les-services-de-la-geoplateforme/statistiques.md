@@ -28,6 +28,8 @@ Elle est interrogeable en méthode GET en étant authentifié via son compte <sp
 
 Son swagger est accessible ici : [swagger des statistiques d'utilisation](https://data.geopf.fr/api/stats/swagger-ui/index.html).
 
+---
+
 ## En tant que producteur, consulter les statistiques d’utilisation de ses données
 
 L’API propose au producteur des requêtes, présentes dans les modules **Organismes**, **Communautés** et **Entrepôts** du Swagger, pour connaître la consommation des données associées à ces concepts.
@@ -59,6 +61,8 @@ Au grain d’un entrepôt, l’API propose les requêtes suivantes :
 - Statistiques des offres associées à une permission produite sur un entrepôt 
 - Statistiques d’une offre produite sur un entrepôt
 - Statistiques de l’ensemble des offres d’un endpoint pour un entrepôt
+
+---
 
 ## En tant qu'utilisateur des géoservices, consulter ses statistiques de consommation des données en accès restreint
 
