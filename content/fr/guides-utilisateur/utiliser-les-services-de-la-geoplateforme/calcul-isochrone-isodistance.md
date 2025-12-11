@@ -220,8 +220,6 @@ La vitesse brute est diminuée de cette pénalité : vitesse moyenne = vitesse 
 
 La valeur est enfin arrondie à 5 km/h supérieur pour les objets d’importance 1 à 4, et à 5 km/h inférieur pour les objets d’importance 5.
 
-**Calcul des pénalités cumulées**
-
 {{ component("table", {
     title: "Calcul des pénalités cumulées",
     headers: ["Dénomination", "Condition", "Pénalité"],
