@@ -13,9 +13,11 @@ eleventyNavigation:
     key: Plan IGN service web
     order: 3
 image:
-    src: /img/partenaires/ign/representations-cartographiques-souveraines/plan-ign/plan-ign-telechargeable.jpg
+    src: /img/partenaires/ign/representations-cartographiques-souveraines/plan-ign.jpg
     alt: Plan IGN
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_PLAN-IGN
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_PLAN-IGN
+    text: Plan IGN
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_PLAN-IGN - ouvre une nouvelle fenêtre">Plan IGN</a>

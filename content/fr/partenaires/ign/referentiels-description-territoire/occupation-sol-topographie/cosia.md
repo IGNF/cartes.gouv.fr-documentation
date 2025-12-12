@@ -13,7 +13,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie/cosia.jpg
     alt: CoSIA
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_COSIA
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_COSIA
+    text: CoSIA
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_COSIA" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_COSIA - ouvre une nouvelle fenêtre">CoSIA</a>

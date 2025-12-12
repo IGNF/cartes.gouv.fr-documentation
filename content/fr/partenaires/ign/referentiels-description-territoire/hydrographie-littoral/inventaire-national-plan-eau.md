@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/hydrographie-littoral/inpe.jpg
     alt: Inventaire national des plans d’eau
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_INPE
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_INPE
+    text: INPE
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_INPE" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_INPE - ouvre une nouvelle fenêtre">INPE</a>

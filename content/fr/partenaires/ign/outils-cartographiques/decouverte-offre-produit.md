@@ -47,7 +47,7 @@ eleventyNavigation:
       <p class="fr-mb-4v">{{ entry.data.description }}</p>
     {% endif %}
     {% if entry.data.lienCatalogue %}
-      Disponible en flux et en téléchargement <a href={{ entry.data.lienCatalogue }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ entry.data.lienCatalogue }} - ouvre une nouvelle fenêtre">{{ entry.data.title }}</a>
+      Disponible en flux et en téléchargement <a href={{ entry.data.lienCatalogue.url }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ entry.data.lienCatalogue }} - ouvre une nouvelle fenêtre">{{ entry.data.lienCatalogue.text }}</a>
     {% endif %}
   </div>
 {% endfor %}

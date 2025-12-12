@@ -15,7 +15,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/imagerie/ortho-express.png
     alt: Ortho-Express
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_ORTHO-EXPRESS
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_ORTHO-EXPRESS
+    text: Ortho-Express
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_ORTHO-EXPRESS - ouvre une nouvelle fenêtre">Ortho-Express</a>

@@ -17,7 +17,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/imagerie/bd-ortho.png
     alt: BD ORTHO®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO
+    text: BD ORTHO®
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO - ouvre une nouvelle fenêtre">BD ORTHO®</a>

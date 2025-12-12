@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/debroussaillement.png
     alt: Débroussaillement
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_DEBROUSSAILLEMENT
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_DEBROUSSAILLEMENT
+    text: Débroussaillement
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_DEBROUSSAILLEMENT" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_DEBROUSSAILLEMENT - ouvre une nouvelle fenêtre">Débroussaillement</a>

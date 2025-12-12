@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/forets-anciennes.png
     alt: Forêts anciennes
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORETS-ANCIENNES
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORETS-ANCIENNES
+    text: BD Forêts anciennes
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORETS-ANCIENNES" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORETS-ANCIENNES - ouvre une nouvelle fenêtre">BD Forêts anciennes</a>

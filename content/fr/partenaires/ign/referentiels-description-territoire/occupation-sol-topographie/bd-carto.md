@@ -13,7 +13,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie/bd-carto.jpg
     alt: BD CARTO®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-CARTO
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-CARTO
+    text: BD CARTO®
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-CARTO" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-CARTO - ouvre une nouvelle fenêtre">BD CARTO®</a>
