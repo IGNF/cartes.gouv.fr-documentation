@@ -86,7 +86,7 @@ let sendForm = function () {
     if (isFormValid) {
         document.getElementById("waiting-screen").classList.toggle("hidden");
 
-        fetch("https://cartes.gouv.fr/aide/fr/contact_us", {
+        fetch(window.location.origin + "/aide/fr/contact_us", {
             method: "POST",
             headers: {
                 "X-Requested-With": "XMLHttpRequest",
@@ -104,7 +104,7 @@ let sendForm = function () {
                     }
                 } else {
                     //si le requête s'est bien passée
-                    window.location.replace("https://cartes.gouv.fr/aide/fr/nous-ecrire/demande-envoyee");
+                    window.location.replace(window.location.origin + "/aide/fr/nous-ecrire/demande-envoyee");
                 }
             })
             .catch(function (error) {
