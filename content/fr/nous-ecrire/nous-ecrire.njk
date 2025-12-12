@@ -1,0 +1,95 @@
+---
+title: Nous écrire
+layout: layouts/page.njk
+eleventyNavigation:
+    key: Nous écrire
+    order: 5
+    nav: main
+---
+
+<div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-8">
+        <p>Vous n’avez pas trouvé la réponse à votre question dans <a href="/">l’aide en ligne</a> ? Vous souhaitez la configuration d’un espace de travail pour vos besoins ? Utilisez ce formulaire pour nous contacter.</p>
+        <p>Sauf mention contraire “(optionnel)” dans le label, tous les champs sont obligatoires.</p>
+        <div id="mail-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
+            <label class="fr-label" for="input-mail">Votre email<span class="fr-hint-text">Format attendu : nom@domaine.fr</span></label>
+            <input name="email_contact" autocomplete="email" class="fr-input" type="text" id="input-mail">
+            <div id="input-mail-messages-group" class="fr-messages-group" aria-live="polite"></div>
+        </div>
+        <div id="last-name-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
+            <label class="fr-label" for="input-last-name">Votre nom</label>
+            <input name="last_name" autocomplete="family-name" class="fr-input" type="text" id="input-last-name">
+            <div id="input-last-name-messages-group" class="fr-messages-group" aria-live="polite"></div>
+        </div>
+        <div id="first-name-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
+            <label class="fr-label" for="input-first-name">Votre prénom</label>
+            <input name="first_name" autocomplete="given-name" class="fr-input" type="text" id="input-first-name">
+            <div id="input-first-name-messages-group" class="fr-messages-group" aria-live="polite"></div>
+        </div>
+        <fieldset id="fr-fieldset-radio" class="fr-fieldset fr-fieldset--inline" aria-labelledby="fr-fieldset-radio-legend fr-fieldset-radio-messages" onchange="onCategoryChange()">
+            <legend id="fr-fieldset-radio-legend" class="fr-fieldset__legend fr-text--regular">Vous êtes ?</legend>
+            <div class="fr-fieldset__content">
+                <div class="fr-radio-group">
+                    <input type="radio" id="input-category-0" name="category" value="Particulier" data-fr-js-radio-actionee="true">
+                    <label class="fr-label" for="input-category-0">Particulier</label>
+                </div>
+                <div class="fr-radio-group">
+                    <input type="radio" id="input-category-1" name="category" value="Professionnel" checked data-fr-js-radio-actionee="true">
+                    <label class="fr-label" for="input-category-1">Professionnel</label>
+                </div>
+            </div>
+            <div class="fr-messages-group" id="input-category-messages-group"></div>
+        </fieldset>
+        <div id="organization-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
+            <label class="fr-label" for="input-organization">Votre organisme</label>
+            <input name="organization" autocomplete="organization" class="fr-input" type="text" id="input-organization">
+            <div id="input-organization-messages-group" class="fr-messages-group" aria-live="polite"></div>
+        </div>
+        <div id="message-input-group" class="fr-input-group fr-mb-0" data-fr-js-input-actionee="true">
+            <label class="fr-label" for="input-message:">Votre demande</label>
+            <textarea name="message" maxlength="8000" rows="8" placeholder="Décrivez votre demande en quelques lignes" class="fr-input" id="input-message"></textarea>
+            <div id="input-message-messages-group" class="fr-messages-group" aria-live="polite"></div>
+        </div>
+        <div class="fr-grid-row fr-grid-row--right fr-mb-2w fr-mt-1w">
+            <p id="remaining-characters" class="fr-m-0 fr-text--xs">8000 caractères restants</p>
+        </div>
+        <div id="fr-select-group" class="fr-select-group hidden">
+            <label class="fr-label" for="select-importance">importance</label>
+            <select name="importance" class="fr-select" id="select-importance" aria-describedby="" data-fr-js-select-actionee="true">
+                <option value="0" selected="">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <div id="select-importance-messages-group" class="fr-messages-group" aria-live="polite"></div>
+        </div>
+        <p>Les informations recueillies à partir de ce formulaire sont nécessaires à la gestion de votre demande par les services de l’IGN concernés. <a href="https://cartes.gouv.fr/donnees-personnelles">En savoir plus sur la gestion des données à caractère personnel</a>.</p>
+        <div class="fr-grid-row fr-grid-row--right">
+            <button id="fr-button-:r22:" class="fr-btn" data-fr-js-button-actionee="true" onclick="sendForm()">Envoyer</button>
+        </div>
+    </div>
+</div>
+<div id="contact-error" class="fr-alert fr-alert--error hidden" data-fr-js-alert-actionee="true">
+    <h3 class="fr-alert__title">Votre message n'a pas pu être envoyé</h3>
+    <p id="contact-error-content"></p>
+    <button class="fr-link--close fr-link" data-fr-js-link-actionee="true">Masquer le message</button>
+</div>
+<div id="waiting-screen" class="hidden">
+    <div style="justify-content: center; align-items: center; background-color: var(--background-default-grey); color: var(--text-default-grey);">
+        <div class="fr-container fr-p-2w">
+            <div class="fr-container">
+                <div class="fr-grid-row fr-grid-row--middle">
+                    <div class="fr-col-2">
+                        <span class="fr-icon-refresh-line fr-icon--lg frx-icon-spin"></span>
+                    </div>
+                    <div class="fr-col-10">
+                        <h6 class="fr-h6 fr-m-0">Votre message est en cours d’envoi</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% js "body" %}
+<script type="text/javascript" src="/js/contact.js"></script>
+{% endjs %}
