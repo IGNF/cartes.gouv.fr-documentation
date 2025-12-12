@@ -14,7 +14,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/imagerie/ortho-histo.png
     alt: BD ORTHO® Historique
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO-HISTO
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO-HISTO
+    text: BD ORTHO® Historique
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO-HISTO" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO-HISTO - ouvre une nouvelle fenêtre">BD ORTHO® Historique</a>

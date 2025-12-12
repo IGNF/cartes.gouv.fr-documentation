@@ -11,7 +11,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/rge-alti.jpg
     alt: RGE ALTI®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_RGE-ALTI
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_RGE-ALTI
+    text: RGE ALTI®
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_RGE-ALTI" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_RGE-ALTI - ouvre une nouvelle fenêtre">RGE ALTI®</a>

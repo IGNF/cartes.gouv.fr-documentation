@@ -14,7 +14,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/cartes-scan/scan-50-mayotte.jpg
     alt: SCAN 50® Mayotte
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-50-MAYOTTE
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-50-MAYOTTE
+    text: SCAN 50® Mayotte
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-50-MAYOTTE" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-50-MAYOTTE - ouvre une nouvelle fenêtre">SCAN 50® Mayotte</a>

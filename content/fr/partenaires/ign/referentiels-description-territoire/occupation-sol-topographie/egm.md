@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie/egm.jpg
     alt: EGM
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_EGM
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_EGM
+    text: EGM
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_EGM" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_EGM - ouvre une nouvelle fenêtre">EGM</a>

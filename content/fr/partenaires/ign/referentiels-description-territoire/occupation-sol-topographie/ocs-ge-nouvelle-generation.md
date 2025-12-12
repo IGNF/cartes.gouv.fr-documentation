@@ -14,7 +14,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie/ocs-ge-nouvelle-generation.jpg
     alt: OCS GE nouvelle génération
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_OCS-GE
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_OCS-GE
+    text: OCS GE
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_OCS-GE - ouvre une nouvelle fenêtre">OCS GE</a>

@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/mnt-lidar-hd.jpg
     alt: MNT LiDAR HD
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_MNT-LIDAR-HD
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_MNT-LIDAR-HD
+    text: MNT LiDAR HD
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_MNT-LIDAR-HD" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_MNT-LIDAR-HD - ouvre une nouvelle fenêtre">MNT LiDAR HD</a>

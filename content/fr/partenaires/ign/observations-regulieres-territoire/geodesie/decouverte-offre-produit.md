@@ -9,6 +9,7 @@ eleventyNavigation:
 {% set currentParent = eleventyNavigation.parent %}
 {% set dernieres = [] %}
 {% set patrimoines = [] %}
+{% set autres = [] %}
 {% set dejaVus = [] %}
 
 {% for entry in collections.all %}
@@ -20,6 +21,8 @@ eleventyNavigation:
         {% set _ = dernieres.push(entry) %}
       {% elseif entry.data.edition == "historique" %}
         {% set _ = patrimoines.push(entry) %}
+      {% else %}
+        {% set _ = autres.push(entry) %}
       {% endif %}
       {% set _ = dejaVus.push(entry.inputPath) %}
     {% endif %}
@@ -33,6 +36,8 @@ eleventyNavigation:
           {% set _ = dernieres.push(child) %}
         {% elseif child.data.edition == "historique" %}
           {% set _ = patrimoines.push(child) %}
+        {% else %}
+          {% set _ = autres.push(child) %}
         {% endif %}
         {% set _ = dejaVus.push(child.inputPath) %}
       {% endif %}
@@ -43,7 +48,7 @@ eleventyNavigation:
 {% if dernieres.length %}
   <h4 class="fr-text-action-high--blue-france">Dernières éditions</h4>
   <div class="fr-grid-row fr-grid-row--gutters">
-    {% for entry in dernieres | sort(attribute="data.title") %}
+    {% for entry in dernieres | sort(attribute="data.eleventyNavigation.order") %}
       <div class="fr-col-12 fr-col-md-6 fr-mb-8v">
         <a href="{{ entry.url }}" class="fr-text--lg">{{ entry.data.title }}</a>
         {% if entry.data.tags %}
@@ -62,9 +67,30 @@ eleventyNavigation:
 {% endif %}
 
 {% if patrimoines.length %}
-  <h4 class="fr-text-action-high--blue-france fr-mt-4v">Patrimoines</h4>
+  <h4 class="fr-text-action-high--blue-france fr-mt-4v">Éditions historiques</h4>
   <div class="fr-grid-row fr-grid-row--gutters">
-    {% for entry in patrimoines | sort(attribute="data.title") %}
+    {% for entry in patrimoines | sort(attribute="data.eleventyNavigation.order") %}
+      <div class="fr-col-12 fr-col-md-6 fr-mb-8v">
+        <a href="{{ entry.url }}" class="fr-text--lg">{{ entry.data.title }}</a>
+        {% if entry.data.tags %}
+          {% set small_tags = true %}
+          {% set tags = entry.data.tags %}
+          <div class="fr-mt-4v">
+            {% include "components/taggroup-disabled.njk" %}
+          </div>
+        {% endif %}
+        {% if entry.data.description %}
+          {{ entry.data.description }}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if autres.length %}
+  <h4 class="fr-text-action-high--blue-france fr-mt-4v">Autres éditions</h4>
+  <div class="fr-grid-row fr-grid-row--gutters">
+    {% for entry in autres | sort(attribute="data.eleventyNavigation.order") %}
       <div class="fr-col-12 fr-col-md-6 fr-mb-8v">
         <a href="{{ entry.url }}" class="fr-text--lg">{{ entry.data.title }}</a>
         {% if entry.data.tags %}

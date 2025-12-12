@@ -13,7 +13,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/cartes-scan/scan-reg.jpg
     alt: SCAN Régional®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-REGIONAL
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-REGIONAL
+    text: SCAN Régional®
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-REGIONAL" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-REGIONAL - ouvre une nouvelle fenêtre">SCAN Régional®</a>

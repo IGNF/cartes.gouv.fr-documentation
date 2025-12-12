@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/cartes-historiques/scan-em-10k.jpg
     alt: SCAN État-major® 10k
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-EM-10K
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-EM-10K
+    text: SCAN État-major® 10k
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-EM-10K" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-EM-10K - ouvre une nouvelle fenêtre">SCAN État-major® 10k</a>

@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/bd-foret-v1.png
     alt: BD Forêt v1
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORET
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORET
+    text: BD Forêt®
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORET" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORET - ouvre une nouvelle fenêtre">BD Forêt®</a>

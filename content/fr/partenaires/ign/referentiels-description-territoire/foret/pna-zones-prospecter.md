@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/pna-zones-prospecter.jpg
     alt: PNA Zones à prospecter
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_PNA-ZONES-A-PROSPECTER
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_PNA-ZONES-A-PROSPECTER
+    text: Zones à prospecter pour les forêts subnaturelles
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_PNA-ZONES-A-PROSPECTER" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_PNA-ZONES-A-PROSPECTER - ouvre une nouvelle fenêtre">Zones à prospecter pour les forêts subnaturelles</a>

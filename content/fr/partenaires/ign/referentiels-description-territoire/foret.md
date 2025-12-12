@@ -5,6 +5,6 @@ eleventyNavigation:
     key: Forêt
     order: 7
 image:
-    src: /img/partenaires/ign/referentiels-description-territoire/foret.png
+    src: /img/partenaires/ign/referentiels-description-territoire/foret.jpg
     alt: Forêt
 ---

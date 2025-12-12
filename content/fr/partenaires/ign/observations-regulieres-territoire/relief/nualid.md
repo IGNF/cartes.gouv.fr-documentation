@@ -11,7 +11,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/nualid.jpg
     alt: NUALID
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_NUALID
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_NUALID
+    text: NUALID
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_NUALID" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_NUALID - ouvre une nouvelle fenêtre">NUALID</a>

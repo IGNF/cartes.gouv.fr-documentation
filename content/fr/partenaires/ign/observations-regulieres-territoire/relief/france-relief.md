@@ -15,7 +15,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/courbes-niveau.jpg
     alt: France RELIEF
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_FRANCE-RELIEF
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_FRANCE-RELIEF
+    text: France RELIEF - beta
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_FRANCE-RELIEF" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_FRANCE-RELIEF - ouvre une nouvelle fenêtre">France RELIEF - beta</a>

@@ -11,7 +11,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/bd-alti.jpg
     alt: BD ALTI®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ALTI
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ALTI
+    text: BD ALTI®
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ALTI" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-ALTI - ouvre une nouvelle fenêtre">BD ALTI®</a>

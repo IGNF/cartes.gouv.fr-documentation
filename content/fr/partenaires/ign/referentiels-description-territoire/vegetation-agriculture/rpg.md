@@ -14,7 +14,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/vegetation-agriculture/rpg.jpg
     alt: RPG
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_RPG
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_RPG
+    text: RPG
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_RPG" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_RPG - ouvre une nouvelle fenêtre">RPG</a>

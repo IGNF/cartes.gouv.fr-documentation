@@ -14,7 +14,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/cartes-scan/scan-100.jpg
     alt: SCAN 100®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-100
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-100
+    text: SCAN 100®
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-100" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-100 - ouvre une nouvelle fenêtre">SCAN 100®</a>

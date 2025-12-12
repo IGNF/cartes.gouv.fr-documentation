@@ -13,7 +13,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/vegetation-agriculture/carhab.png
     alt: Carhab
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS
+lienCatalogue:
+    url: https://cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS
+    text: CARHAB - Habitats
 ---
 
 Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS - ouvre une nouvelle fenêtre">CARHAB - Habitats</a>
