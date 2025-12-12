@@ -1,0 +1,27 @@
+<svg width="80px" height="80px" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .fr-artwork-decorative {
+      fill: #ECECFF;
+    }
+    .fr-artwork-minor {
+      fill: #E1000F;
+    }
+    .fr-artwork-major {
+      fill: #000091;
+    }
+  </style>
+
+  <symbol id="artwork-decorative">
+    <path d="..."/>
+  </symbol>
+  <symbol id="artwork-minor">
+    <path d="..." />
+  </symbol>
+  <symbol id="artwork-major">
+    <path d="M13.3334 21.3335L32 13.3335L48 21.3335L64.808 14.13C65.4851 13.8399 66.2688 14.1535 66.559 14.8303C66.6299 14.9963 66.6667 15.175 66.6667 15.3555V58.6668L48 66.6668L32 58.6668L15.1919 65.8703C14.5151 66.1604 13.7313 65.8468 13.4412 65.17C13.37 65.0042 13.3334 64.8252 13.3334 64.6447V21.3335ZM50.6667 59.7215L61.3334 55.15V21.4217L50.6667 25.9931V59.7215ZM45.3334 59.3706V25.963L34.6667 20.6297V54.0372L45.3334 59.3706ZM29.3334 54.0071V20.2789L18.6667 24.8503V58.5786L29.3334 54.0071Z" />
+  </symbol>
+
+  <use class="fr-artwork-decorative" href="#artwork-decorative"/>
+  <use class="fr-artwork-minor" href="#artwork-minor"/>
+  <use class="fr-artwork-major" href="#artwork-major"/>
+</svg>

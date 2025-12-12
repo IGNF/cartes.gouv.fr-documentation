@@ -7,14 +7,14 @@ tags:
     - Premium
 eleventyNavigation:
     key: Présentation des offres
-    parent: Présentation de Cartes.gouv.fr
+    parent: Présentation de cartes.gouv.fr
     order: 2
     nav: guides-producteur
 pictogram: leisure/book.svg
 description: Présentation des différentes offres de la Géoplateforme
 ---
 
-L’interface Cartes.gouv.fr et son socle technique Géoplateforme vous permettent de charger, stocker, diffuser et visualiser de la donnée géoréférencées.
+L’interface cartes.gouv.fr et son socle technique Géoplateforme vous permettent de charger, stocker, diffuser et visualiser de la donnée géoréférencées.
 
 Pour les producteurs et diffuseurs de données, il existe trois offres disponibles proposées par la Géoplateforme :
 

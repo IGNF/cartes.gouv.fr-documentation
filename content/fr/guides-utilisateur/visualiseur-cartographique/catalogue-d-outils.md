@@ -8,7 +8,7 @@ tags:
     - Catalogue
 eleventyNavigation:
     key: Catalogue d’outils
-    order: 4
+    order: 5
     nav: guides-utilisateur
     parent: Explorer les cartes
 pictogram: "map/backpack.svg"

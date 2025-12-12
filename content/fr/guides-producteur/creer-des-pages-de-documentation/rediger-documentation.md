@@ -130,7 +130,7 @@ Cas n°1 : le sous-dossier correspondant se situe au premier niveau du menu lat
 ---
 title: Créer des pages de documentation
 layout: layouts/parent.njk
-description: Création, modification et publication de documentation partenaire sur le site de documentation de Cartes.gouv.fr
+description: Création, modification et publication de documentation partenaire sur le site de documentation de cartes.gouv.fr
 tags: - Documentation - Partenaire
 eleventyNavigation:
 key: Créer des pages de documentation
@@ -218,6 +218,11 @@ summary:
     depth: 2
 ---
 ```
+
+:::info
+Notez l’absence de la ligne **« layout: layouts/parent.njk »**.
+:::
+
 
 Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après l’en-tête :
 

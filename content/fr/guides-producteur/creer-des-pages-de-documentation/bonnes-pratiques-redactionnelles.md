@@ -165,7 +165,7 @@ Rendez les liens url explicites à la lecture. Ci-dessous plusieurs exemples :
 
 ---
 
-## Recommandations pour cohérence d’ensemble du site Cartes.gouv.fr
+## Recommandations pour cohérence d’ensemble du site cartes.gouv.fr
 
 ### Apostrophes spéciaux
 

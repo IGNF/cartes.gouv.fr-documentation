@@ -13,7 +13,7 @@ eleventyNavigation:
     order: 2
     nav: guides-utilisateur
     parent: Les outils autour de la carte
-pictogram: ""
+pictogram: "custom/mesurer-une-surface.svg"
 description: Tracez une zone pour connaître son aire
 ---
 

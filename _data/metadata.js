@@ -28,7 +28,7 @@ module.exports = {
         email: "geoplateforme@ign.fr",
         url: "https://cartes.gouv.fr/",
     },
-    service: "Institut National de l'Information Géographique et Forestière (IGN)",
+    service: "Institut national de l'information géographique et forestière (IGN)",
     analytics: {
         domain: "acwg.cartes.gouv.fr",
         site: {

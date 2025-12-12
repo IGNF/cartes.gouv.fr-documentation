@@ -8,7 +8,7 @@ tags:
     - Mes enregistrements
 eleventyNavigation:
     key: Menu cartes
-    order: 6
+    order: 4
     nav: guides-utilisateur
     parent: Explorer les cartes
 pictogram: "document/passport.svg"
@@ -41,7 +41,7 @@ Cliquez sur l’icône suivante pour partager la carte :
 ![Image décrivant l’icône pour partager une carte](/img/guides-utilisateur/visualiseur-cartographique/menu-cartes/03_Partager-la-carte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Il y a différents types de partage :
-- soit vous partagez un **lien url** qui renverra vers la carte partagée dans l’interface **Cartes.gouv.fr**,
+- soit vous partagez un **lien url** qui renverra vers la carte partagée dans l’interface **cartes.gouv.fr**,
 - soit vous intégrez la carte sous forme _<span lang="en">iframe</span>_ sur votre site internet grâce au code indiqué,
 - soit vous créez un poste sur un **réseau social** grâce aux liens rapides proposés.
 
@@ -69,7 +69,7 @@ Vous pouvez vous déplacer sur la carte durant le choix de ces options afin de c
 
 ## Mes enregistrements
 
-Cette option est accessible si vous êtes connecté à **Cartes.gouv.fr** (voir [Connexion à Cartes.gouv.fr](../../presentation-utilisateur/connexion/)).
+Cette option est accessible si vous êtes connecté à **cartes.gouv.fr** (voir [Connexion à cartes.gouv.fr](../../presentation-utilisateur/connexion/)).
 
 :::info
 Cliquer sur **« Mes enregistrements »** sans être connecté vous emmènera sur l’écran de connexion.

@@ -1,12 +1,12 @@
 ---
-title: Déposer ses données sur Cartes.gouv.fr
+title: Déposer ses données sur cartes.gouv.fr
 tags:
     - Entrepôt
     - Stockage
     - Dépôt
 eleventyNavigation:
-    key: Déposer ses données sur Cartes.gouv.fr
-    parent: Publier des données via Cartes.gouv.fr
+    key: Déposer ses données sur cartes.gouv.fr
+    parent: Publier des données via cartes.gouv.fr
     order: 1
     nav: guides-producteur
 pictogram: document/document-add.svg
@@ -45,7 +45,7 @@ La fiche de données est désormais stockée et classée en **« Non publié �
 
 ![Image décrivant la fiche de données ainsi créée](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/deposer-donnees-sur-cartes-gouv/04_fiche-donnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-À partir de ce moment, si vous quittez Cartes.gouv.fr, vous pourrez éventuellement revenir à votre fiche de données et cliquer sur **« reprendre l’intégration »**.
+À partir de ce moment, si vous quittez cartes.gouv.fr, vous pourrez éventuellement revenir à votre fiche de données et cliquer sur **« reprendre l’intégration »**.
 
 Vos données sont stockées avec d’autres données de test dans le *bac à sable* :
 

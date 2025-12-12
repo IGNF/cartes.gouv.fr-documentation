@@ -1,7 +1,7 @@
 {% if not table %}
     {% set table = params %}
 {% endif %}
-<div class="fr-table fr-table--layout-fixed">
+<div class="fr-table {{ table.class | default('fr-table--layout-fixed') }}">
     <table>
         <caption>{{ table.title }}</caption>
         <thead>

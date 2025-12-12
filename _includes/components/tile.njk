@@ -1,7 +1,7 @@
 {% if not tile %}
     {% set tile = params %}
 {% endif %}
-<div class="fr-tile {% if tile.small %} fr-tile--sm {% endif %} fr-enlarge-link">
+<div class="fr-tile {% if tile.small %} fr-tile--sm {% endif %} {% if tile.black %} tile--black{% endif %} fr-enlarge-link">
     <div class="fr-tile__body">
         <div class="fr-tile__content">
             {% if tile.url is string %}
@@ -21,21 +21,34 @@
                    {% if tile.externalUrl %}target="_blank" rel="noopener"{% endif %}>{{ tile.title }}</a>
             </{{- title_tag -}}>
             <p class="fr-tile__desc">{{ tile.description }}</p>
+            {% if tile.tileTag %}
+                <div class="fr-tile__start">
+                    <p class="fr-tag {{ tile.tileTag.icon }} fr-tag--icon-left">{{ tile.tileTag.label }}</p>
+                </div>
+            {% endif %}
         </div>
     </div>
     {% if tile.pictogram %}
         <div class="fr-tile__header">
             <div class="fr-tile__pictogram">
-                {% set pictogramUrl = "/artwork/pictograms/" + tile.pictogram %}
-                <svg aria-hidden="true"
-                     class="fr-artwork"
-                     viewBox="0 0 80 80"
-                     width="80px"
-                     height="80px">
-                    <use class="fr-artwork-decorative" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-decorative"></use>
-                    <use class="fr-artwork-minor" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-minor"></use>
-                    <use class="fr-artwork-major" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-major"></use>
-                </svg>
+                {% if tile.pictogram.path %}
+                    <img src="{{ tile.pictogram.path }}"
+                        alt=""
+                        width="80"
+                        height="80"
+                        class="fr-artwork" />
+                {% else %}
+                    {% set pictogramUrl = "/artwork/pictograms/" + tile.pictogram %}
+                    <svg aria-hidden="true"
+                        class="fr-artwork"
+                        viewBox="0 0 80 80"
+                        width="80px"
+                        height="80px">
+                        <use class="fr-artwork-decorative" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-decorative"></use>
+                        <use class="fr-artwork-minor" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-minor"></use>
+                        <use class="fr-artwork-major" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-major"></use>
+                    </svg>
+                {% endif %}
             </div>
         </div>
     {% endif %}
