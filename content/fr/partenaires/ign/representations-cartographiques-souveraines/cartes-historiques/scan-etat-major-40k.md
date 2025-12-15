@@ -13,8 +13,8 @@ image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/cartes-historiques.jpg
     alt: Cartes historiques
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-EM-40K
+    url: /dataset/IGNF_SCAN-EM-40K
     text: SCAN État-major® 40k
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-EM-40K" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-EM-40K - ouvre une nouvelle fenêtre">SCAN État-major® 40k</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_SCAN-EM-40K" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_SCAN-EM-40K - ouvre une nouvelle fenêtre">SCAN État-major® 40k</a>

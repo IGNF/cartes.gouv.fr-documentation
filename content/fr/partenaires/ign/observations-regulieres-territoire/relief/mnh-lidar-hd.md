@@ -13,11 +13,11 @@ image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/mnh-lidar-hd.jpg
     alt: MNH LiDAR HD
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_MNH-LIDAR-HD
+    url: /dataset/IGNF_MNH-LIDAR-HD
     text: MNH LiDAR HD
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_MNH-LIDAR-HD" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_MNH-LIDAR-HD - ouvre une nouvelle fenêtre">MNH LiDAR HD</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_MNH-LIDAR-HD" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_MNH-LIDAR-HD - ouvre une nouvelle fenêtre">MNH LiDAR HD</a>
 
 Le produit MNH LiDAR HD est le modèle numérique de hauteur résultant de la différence d’altitude entre le MNT LiDAR HD et le MNS LiDAR HD. Ces produits sont dérivés du nuage de points LiDAR HD issus de l’acquisition réalisée dans cadre du programme national LiDAR HD avec une densité d’au moins 10 impulsions au m² et 5 impulsions au m² au-dessus de 3200 m d’altitude.
 

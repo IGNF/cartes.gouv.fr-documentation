@@ -78,6 +78,7 @@
     {% include "templates/header.njk" %}
     {% include "components/pagefind_filters.njk" %}
     <main id="content" data-pagefind-body>
+        <span data-pagefind-meta="title" style="display: none;" data-pagefind-ignore>{{ title }}</span>
         {{ content | safe }}
     </main>
     <!-- {% include "templates/newsletter_and_follow_us.njk" %} -->

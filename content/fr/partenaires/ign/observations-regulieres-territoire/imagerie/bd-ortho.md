@@ -18,10 +18,10 @@ image:
     src: /img/partenaires/ign/obs-reguliere-territoire/imagerie/bd-ortho.png
     alt: BD ORTHO®
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO
+    url: /dataset/IGNF_BD-ORTHO
     text: BD ORTHO®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-ORTHO - ouvre une nouvelle fenêtre">BD ORTHO®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-ORTHO - ouvre une nouvelle fenêtre">BD ORTHO®</a>
 
 Fond de plan d’images aériennes de référence à haute résolution 20 cm.

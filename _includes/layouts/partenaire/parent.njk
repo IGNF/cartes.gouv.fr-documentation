@@ -33,7 +33,7 @@ layout: layouts/base.njk
           {% endif %}
           {% include "components/published_on.njk" %}
           {% if parentInfo %}
-            <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v">
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v" data-pagefind-ignore>
               {% if parentInfo.image %}
                 <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
                   <img src="{{ parentInfo.image.src }}"
@@ -54,7 +54,7 @@ layout: layouts/base.njk
               </div>
             </div>
             {% if parentInfo.quote %}
-              <div class="fr-grid-row fr-grid-row--gutters">
+              <div class="fr-grid-row fr-grid-row--gutters" data-pagefind-ignore>
                 <span class="fr-col-auto fr-icon-quote-fill fr-icon--lg fr-text-title--blue-france" aria-hidden="true"></span>
                 <p class="fr-col">{{ parentInfo.quote }}</p>
               </div>
@@ -105,7 +105,7 @@ layout: layouts/base.njk
         {% endif %}
       {% endfor %}
       {% if decouvertePage %}
-        <div class="fr-col-12 fr-my-10v">
+        <div class="fr-col-12 fr-my-10v" data-pagefind-ignore>
           {% set card = {
             title: decouvertePage.data.title,
             url: decouvertePage.url,
@@ -117,7 +117,7 @@ layout: layouts/base.njk
           {% include "components/card.njk" %}
         </div>
       {% endif %}
-      <h2>Offre produit et services</h2>
+      <h2 data-pagefind-ignore>Offre produit et services</h2>
       {{ component("card_list", {
           items: otherPages | sort(attribute = "data.eleventyNavigation.order"),
           columns: 4,

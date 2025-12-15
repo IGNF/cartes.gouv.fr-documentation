@@ -13,11 +13,11 @@ image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/nuages-points-lidar-hd.jpg
     alt: Nuages de points LiDAR HD
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_NUAGES-DE-POINTS-LIDAR-HD
+    url: /dataset/IGNF_NUAGES-DE-POINTS-LIDAR-HD
     text: Nuages de points LiDAR HD
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_NUAGES-DE-POINTS-LIDAR-HD" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_NUAGES-DE-POINTS-LIDAR-HD - ouvre une nouvelle fenêtre">Nuages de points LiDAR HD</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_NUAGES-DE-POINTS-LIDAR-HD" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_NUAGES-DE-POINTS-LIDAR-HD - ouvre une nouvelle fenêtre">Nuages de points LiDAR HD</a>
 
 La base de données Nuages de points LiDAR HD est issue de l’acquisition réalisée dans cadre du programme national LiDAR HD (exclusivement) avec une densité d’au moins 10 impulsions au m² et 5 impulsions au m² au-dessus de 3200m d’altitude. C’est une représentation 3D de l’intégralité du sol et du sursol de la France en données LiDAR sous forme de nuage de point classés.
 

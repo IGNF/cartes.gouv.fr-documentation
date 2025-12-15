@@ -15,8 +15,8 @@ image:
     src: /img/partenaires/ign/referentiels-description-territoire/limites-administratives-reglementaires/iris-ge.jpg
     alt: IRIS... GE
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_IRIS-GE
+    url: /dataset/IGNF_IRIS-GE
     text: IRIS... GE
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_IRIS-GE" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_IRIS-GE - ouvre une nouvelle fenêtre">IRIS... GE</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_IRIS-GE" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_IRIS-GE - ouvre une nouvelle fenêtre">IRIS... GE</a>

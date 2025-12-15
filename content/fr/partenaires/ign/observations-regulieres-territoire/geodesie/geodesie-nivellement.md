@@ -11,8 +11,8 @@ image:
     src: /img/partenaires/ign/obs-reguliere-territoire/geodesie/geodesie-nivellement.jpg
     alt: Géodésie et nivellement
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_GEODESIE-ET-NIVELLEMENT
+    url: /dataset/IGNF_GEODESIE-ET-NIVELLEMENT
     text: Géodésie et nivellement
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_GEODESIE-ET-NIVELLEMENT" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_GEODESIE-ET-NIVELLEMENT - ouvre une nouvelle fenêtre">Géodésie et nivellement</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_GEODESIE-ET-NIVELLEMENT" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_GEODESIE-ET-NIVELLEMENT - ouvre une nouvelle fenêtre">Géodésie et nivellement</a>

@@ -15,8 +15,8 @@ image:
     src: /img/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie/bd-topo.jpg
     alt: BD TOPO®
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO
+    url: /dataset/IGNF_BD-TOPO
     text: BD TOPO®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO - ouvre une nouvelle fenêtre">BD TOPO®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-TOPO - ouvre une nouvelle fenêtre">BD TOPO®</a>

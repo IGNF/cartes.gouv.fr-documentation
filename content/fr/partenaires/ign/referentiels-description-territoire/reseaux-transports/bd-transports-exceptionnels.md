@@ -13,8 +13,8 @@ image:
     src: /img/partenaires/ign/referentiels-description-territoire/reseaux-transports/transports-exceptionnels.jpg
     alt: BD Transports exceptionnels
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS
+    url: /dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS
     text: Transports exceptionnels
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS - ouvre une nouvelle fenêtre">Transports exceptionnels</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS - ouvre une nouvelle fenêtre">Transports exceptionnels</a>

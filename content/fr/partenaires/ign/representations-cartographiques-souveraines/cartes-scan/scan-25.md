@@ -15,11 +15,11 @@ image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/cartes-scan.jpg
     alt: Cartes SCAN
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-25
+    url: /dataset/IGNF_SCAN-25
     text: SCAN 25®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-25 - ouvre une nouvelle fenêtre">SCAN 25®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_SCAN-25 - ouvre une nouvelle fenêtre">SCAN 25®</a>
 
 Le SCAN 25® est une carte numérique obtenue par l’assemblage géoréférencé et dallé des cartes topographiques IGN au 1:25 000 Type 2010.
 

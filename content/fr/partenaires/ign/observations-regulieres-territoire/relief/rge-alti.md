@@ -12,11 +12,11 @@ image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/rge-alti.jpg
     alt: RGE ALTI®
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_RGE-ALTI
+    url: /dataset/IGNF_RGE-ALTI
     text: RGE ALTI®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_RGE-ALTI" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_RGE-ALTI - ouvre une nouvelle fenêtre">RGE ALTI®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_RGE-ALTI" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_RGE-ALTI - ouvre une nouvelle fenêtre">RGE ALTI®</a>
 
 Cette donnée est utile pour des applications nécessitant une modélisation fine du terrain : prevention des risques (inondations, éboulements, avalanches), modélisation en zone forestière ou urbaine, archéologie, profil altimétrique…
 

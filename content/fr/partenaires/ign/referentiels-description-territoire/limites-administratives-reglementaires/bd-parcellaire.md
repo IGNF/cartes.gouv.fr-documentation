@@ -13,8 +13,8 @@ image:
     src: /img/partenaires/ign/referentiels-description-territoire/limites-administratives-reglementaires/bd-parcellaire.jpg
     alt: BD PARCELLAIRE®
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-PARCELLAIRE
+    url: /dataset/IGNF_BD-PARCELLAIRE
     text: BD PARCELLAIRE®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-PARCELLAIRE" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-PARCELLAIRE - ouvre une nouvelle fenêtre">BD PARCELLAIRE®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-PARCELLAIRE" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-PARCELLAIRE - ouvre une nouvelle fenêtre">BD PARCELLAIRE®</a>

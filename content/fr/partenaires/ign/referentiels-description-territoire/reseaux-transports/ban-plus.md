@@ -13,8 +13,8 @@ image:
     src: /img/partenaires/ign/referentiels-description-territoire/reseaux-transports/ban-plus.jpg
     alt: BAN PLUS
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_BAN-PLUS
+    url: /dataset/IGNF_BAN-PLUS
     text: BAN PLUS
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BAN-PLUS" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BAN-PLUS - ouvre une nouvelle fenêtre">BAN PLUS</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BAN-PLUS" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BAN-PLUS - ouvre une nouvelle fenêtre">BAN PLUS</a>

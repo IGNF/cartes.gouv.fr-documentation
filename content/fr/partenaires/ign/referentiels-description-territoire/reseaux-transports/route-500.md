@@ -12,8 +12,8 @@ image:
     src: /img/partenaires/ign/referentiels-description-territoire/reseaux-transports/route-500.jpg
     alt: Route 500®
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_ROUTE-500
+    url: /dataset/IGNF_ROUTE-500
     text: Route 500®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_ROUTE-500" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_ROUTE-500 - ouvre une nouvelle fenêtre">Route 500®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_ROUTE-500" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_ROUTE-500 - ouvre une nouvelle fenêtre">Route 500®</a>

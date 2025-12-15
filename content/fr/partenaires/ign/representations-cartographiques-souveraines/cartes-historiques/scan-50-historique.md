@@ -13,8 +13,8 @@ image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/cartes-historiques/scan-50-histo.jpg
     alt: SCAN 50® Historique 1950
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-50-HISTO
+    url: /dataset/IGNF_SCAN-50-HISTO
     text: SCAN 50® Historique 1950
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-50-HISTO" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_SCAN-50-HISTO - ouvre une nouvelle fenêtre">SCAN 50® Historique 1950</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_SCAN-50-HISTO" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_SCAN-50-HISTO - ouvre une nouvelle fenêtre">SCAN 50® Historique 1950</a>

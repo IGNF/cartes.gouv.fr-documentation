@@ -15,8 +15,8 @@ image:
     src: /img/partenaires/ign/obs-reguliere-territoire/imagerie/pcrs.png
     alt: Ortho PCRS
 lienCatalogue:
-    url: https://cartes.gouv.fr/catalogue/dataset/IGNF_PCRS
+    url: /dataset/IGNF_PCRS
     text: PCRS
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_PCRS" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_PCRS - ouvre une nouvelle fenêtre">PCRS</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PCRS" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PCRS - ouvre une nouvelle fenêtre">PCRS</a>

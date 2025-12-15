@@ -17,7 +17,7 @@ summary:
     depth: 2
 ---
 
-La <a href="https://cartes.gouv.fr/catalogue/search/" target="_blank" rel="noopener noreferrer" title="cartes.gouv - page d’accueil catalogue">page d’accueil du catalogue</a> de données et de services est composée d’une barre de recherche, de différentes options de filtrages et de tris et de briques de données ou services.
+La <a href="{{ urls.rechercher_une_donnee }}/search" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/search - ouvre une nouvelle fenêtre">page d’accueil du catalogue</a> de données et de services est composée d’une barre de recherche, de différentes options de filtrages et de tris et de briques de données ou services.
 
 ![Image décrivant la page d’accueil du catalogue](/img/guides-utilisateur/rechercher-une-donnee/01_accueil-catalogue.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
