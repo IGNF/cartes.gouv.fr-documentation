@@ -14,10 +14,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/vegetation-agriculture/rpg.jpg
     alt: RPG
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_RPG
+lienCatalogue:
+    url: /dataset/IGNF_RPG
+    text: RPG
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_RPG" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_RPG - ouvre une nouvelle fenêtre">RPG</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_RPG" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_RPG - ouvre une nouvelle fenêtre">RPG</a>
 
 Le RPG permet de connaître la localisation et certaines caractéristiques des parcelles des exploitants agricoles ayant déposé une déclaration en vue d’une aide de la PAC (Politique Agricole Commune).
 

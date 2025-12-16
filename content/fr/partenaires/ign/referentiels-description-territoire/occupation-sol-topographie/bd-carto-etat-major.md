@@ -14,7 +14,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie/bd-carto-em.jpg
     alt: BD CARTO® État-major
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-CARTO-EM
+lienCatalogue:
+    url: /dataset/IGNF_BD-CARTO-EM
+    text: BD CARTO® État-major
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-CARTO-EM" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-CARTO-EM - ouvre une nouvelle fenêtre">BD CARTO® État-major</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-CARTO-EM" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-CARTO-EM - ouvre une nouvelle fenêtre">BD CARTO® État-major</a>

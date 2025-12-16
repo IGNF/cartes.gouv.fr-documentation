@@ -12,10 +12,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/pna-zones-prospecter.jpg
     alt: PNA Zones à prospecter
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_PNA-ZONES-A-PROSPECTER
+lienCatalogue:
+    url: /dataset/IGNF_PNA-ZONES-A-PROSPECTER
+    text: Zones à prospecter pour les forêts subnaturelles
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_PNA-ZONES-A-PROSPECTER" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_PNA-ZONES-A-PROSPECTER - ouvre une nouvelle fenêtre">Zones à prospecter pour les forêts subnaturelles</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PNA-ZONES-A-PROSPECTER" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PNA-ZONES-A-PROSPECTER - ouvre une nouvelle fenêtre">Zones à prospecter pour les forêts subnaturelles</a>
 
 Dans l’objectif de préserver et restaurer les habitats forestiers riches en bois mort, en très vieux arbres et en micro-habitats arborés, qui sont essentiels à la biodiversité forestière, la Stratégie nationale pour la biodiversité 2030 affiche l’objectif d’une mise sous protection forte de 100% des forêts subnaturelles françaises à l’horizon 2030. Dans ce cadre, un Plan National d’Action (PNA) « Vieux bois et Forêts subnaturelles » a été lancé en 2022 et a pour mission (entre autres) d’identifier sur le terrain et de cartographier les forêts subnaturelles afin de mettre ces surfaces sous protection forte.
 

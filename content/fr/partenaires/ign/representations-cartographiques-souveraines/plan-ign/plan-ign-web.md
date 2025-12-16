@@ -13,12 +13,14 @@ eleventyNavigation:
     key: Plan IGN service web
     order: 3
 image:
-    src: /img/partenaires/ign/representations-cartographiques-souveraines/plan-ign/plan-ign-telechargeable.jpg
+    src: /img/partenaires/ign/representations-cartographiques-souveraines/plan-ign.jpg
     alt: Plan IGN
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_PLAN-IGN
+lienCatalogue:
+    url: /dataset/IGNF_PLAN-IGN
+    text: Plan IGN
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_PLAN-IGN - ouvre une nouvelle fenêtre">Plan IGN</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PLAN-IGN - ouvre une nouvelle fenêtre">Plan IGN</a>
 
 Plan IGN est une carte numérique multi échelle, mise à jour en continu et déclinée en plusieurs styles pour se localiser, explorer et comprendre le territoire.
 

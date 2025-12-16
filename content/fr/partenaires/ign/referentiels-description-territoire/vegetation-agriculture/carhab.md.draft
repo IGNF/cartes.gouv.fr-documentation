@@ -13,10 +13,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/vegetation-agriculture/carhab.png
     alt: Carhab
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS
+lienCatalogue:
+    url: /dataset/INPN-CARHAB_HABITATS
+    text: CARHAB - Habitats
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/INPN-CARHAB_HABITATS - ouvre une nouvelle fenêtre">CARHAB - Habitats</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/INPN-CARHAB_HABITATS" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/INPN-CARHAB_HABITATS - ouvre une nouvelle fenêtre">CARHAB - Habitats</a>
 
 Initié dans le cadre de la stratégie nationale pour la biodiversité 2011-2020, ce programme porté par le Ministère en charge de l’écologie vise à répondre aux enjeux de conservation de la biodiversité, d’aménagement du territoire et de gestion durable des ressources naturelles.
 

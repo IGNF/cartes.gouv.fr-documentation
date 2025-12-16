@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/reseaux-transports/voirie-dgf.png
     alt: Voirie DGF
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_VOIRIE-DGF
+lienCatalogue:
+    url: /dataset/IGNF_VOIRIE-DGF
+    text: Voirie DGF
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_VOIRIE-DGF - ouvre une nouvelle fenêtre">Voirie DGF</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_VOIRIE-DGF - ouvre une nouvelle fenêtre">Voirie DGF</a>

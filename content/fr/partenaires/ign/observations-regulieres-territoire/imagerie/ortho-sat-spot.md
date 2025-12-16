@@ -14,7 +14,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/imagerie/ortho-sat-spot.png
     alt: ORTHO-SAT® SPOT
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_ORTHO-SAT
+lienCatalogue:
+    url: /dataset/IGNF_ORTHO-SAT
+    text: ORTHO SAT
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_ORTHO-SAT" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_ORTHO-SAT - ouvre une nouvelle fenêtre">ORTHO SAT</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_ORTHO-SAT" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_ORTHO-SAT - ouvre une nouvelle fenêtre">ORTHO SAT</a>

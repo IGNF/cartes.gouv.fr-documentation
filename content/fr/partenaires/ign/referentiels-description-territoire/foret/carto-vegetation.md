@@ -13,10 +13,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/carto-vegetation.jpg
     alt: Carto Végétation
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_CARTO-VEGETATION
+lienCatalogue:
+    url: /dataset/IGNF_CARTO-VEGETATION
+    text: Carto Végétation
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_CARTO-VEGETATION" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_CARTO-VEGETATION - ouvre une nouvelle fenêtre">Carto Végétation</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION - ouvre une nouvelle fenêtre">Carto Végétation</a>
 
 Ces cartographies sont produites principalement soit par photo-interprétation de la BD ORTHO®, soit par intelligence artificielles (IA), à partir de la BD ORTHO®, d’images Sentinel et de données auxiliaires. Le seuil de saisie est de 0,5 ha.
 

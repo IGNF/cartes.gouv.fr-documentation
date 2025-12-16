@@ -40,40 +40,46 @@ eleventyNavigation:
   {% endif %}
 {% endfor %}
 
-### Dernières éditions
-
-{% for entry in dernieres | sort(attribute="data.title") %}
-  <div class="fr-mb-10v">
-    <h4 class="fr-mb-4v"><a href="{{ entry.url }}" class="fr-text-action-high--blue-france no-underline">{{ entry.data.title }}</a></h4>
-    {% if entry.data.tags %}
-      {% set small_tags = true %}
-      {% set tags = entry.data.tags %}
-      {% include "components/taggroup-disabled.njk" %}
-    {% endif %}
-    {% if entry.data.description %}
-      <p class="fr-mb-4v">{{ entry.data.description }}</p>
-    {% endif %}
-    {% if entry.data.lienCatalogue %}
-      Disponible en flux et en téléchargement <a href={{ entry.data.lienCatalogue }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ entry.data.lienCatalogue }} - ouvre une nouvelle fenêtre">{{ entry.data.title }}</a>
-    {% endif %}
+{% if dernieres.length %}
+  <div data-pagefind-ignore>
+    <h3>Dernières éditions</h3>
+    {% for entry in dernieres | sort(attribute="data.title") %}
+      <div class="fr-mb-10v">
+        <h4 class="fr-mb-4v"><a href="{{ entry.url }}" class="fr-text-action-high--blue-france no-underline">{{ entry.data.title }}</a></h4>
+        {% if entry.data.tags %}
+          {% set small_tags = true %}
+          {% set tags = entry.data.tags %}
+          {% include "components/taggroup-disabled.njk" %}
+        {% endif %}
+        {% if entry.data.description %}
+          <p class="fr-mb-4v">{{ entry.data.description }}</p>
+        {% endif %}
+        {% if entry.data.lienCatalogue %}
+          Disponible en flux et en téléchargement <a href={{ urls.rechercher_une_donnee }}{{ entry.data.lienCatalogue.url }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}{{ entry.data.lienCatalogue.url }} - ouvre une nouvelle fenêtre">{{ entry.data.lienCatalogue.text }}</a>
+        {% endif %}
+      </div>
+    {% endfor %}
   </div>
-{% endfor %}
+{% endif %}
 
-### Patrimoines
-
-{% for entry in patrimoines | sort(attribute="data.title") %}
-  <div class="fr-mb-10v">
-    <h4 class="fr-mb-4v"><a href="{{ entry.url }}" class="fr-text-action-high--blue-france no-underline">{{ entry.data.title }}</a></h4>
-    {% if entry.data.tags %}
-      {% set small_tags = true %}
-      {% set tags = entry.data.tags %}
-      {% include "components/taggroup-disabled.njk" %}
-    {% endif %}
-    {% if entry.data.description %}
-      <p class="fr-mb-4v">{{ entry.data.description }}</p>
-    {% endif %}
-    {% if entry.data.lienCatalogue %}
-      Disponible en flux et en téléchargement <a href={{ entry.data.lienCatalogue }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ entry.data.lienCatalogue }} - ouvre une nouvelle fenêtre">{{ entry.data.title }}</a>
-    {% endif %}
+{% if patrimoines.length %}
+  <div data-pagefind-ignore>
+    <h3>Éditions historiques</h3>
+    {% for entry in patrimoines | sort(attribute="data.title") %}
+      <div class="fr-mb-10v">
+        <h4 class="fr-mb-4v"><a href="{{ entry.url }}" class="fr-text-action-high--blue-france no-underline">{{ entry.data.title }}</a></h4>
+        {% if entry.data.tags %}
+          {% set small_tags = true %}
+          {% set tags = entry.data.tags %}
+          {% include "components/taggroup-disabled.njk" %}
+        {% endif %}
+        {% if entry.data.description %}
+          <p class="fr-mb-4v">{{ entry.data.description }}</p>
+        {% endif %}
+        {% if entry.data.lienCatalogue %}
+          Disponible en flux et en téléchargement <a href={{ urls.rechercher_une_donnee }}{{ entry.data.lienCatalogue.url }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}{{ entry.data.lienCatalogue.url }} - ouvre une nouvelle fenêtre">{{ entry.data.lienCatalogue.text }}</a>
+        {% endif %}
+      </div>
+    {% endfor %}
   </div>
-{% endfor %}
+{% endif %}

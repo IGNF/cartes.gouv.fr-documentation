@@ -12,10 +12,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/forets-anciennes.png
     alt: Forêts anciennes
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORETS-ANCIENNES
+lienCatalogue:
+    url: /dataset/IGNF_BD-FORETS-ANCIENNES
+    text: BD Forêts anciennes
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORETS-ANCIENNES" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORETS-ANCIENNES - ouvre une nouvelle fenêtre">BD Forêts anciennes</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-FORETS-ANCIENNES" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-FORETS-ANCIENNES - ouvre une nouvelle fenêtre">BD Forêts anciennes</a>
 
 La production de cette cartographie repose sur un croisement spatial entre deux bases de données géographiques : la BD CARTO® État-major (vers 1850) et la BD Forêt® version 2.0 (2007–2018), toutes deux produites par l’IGN.
 

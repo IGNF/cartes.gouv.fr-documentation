@@ -5,6 +5,7 @@ module.exports = {
         api_entrepot: "https://data.geopf.fr/api",
         swagger: "https://data.geopf.fr/api/swagger-ui/index.html",
         annexes: "https://data.geopf.fr/annexes",
+        rechercher_une_donnee: "https://cartes.gouv.fr/rechercher-une-donnee",
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
             wmsv: "https://data.geopf.fr/private/wms-v",

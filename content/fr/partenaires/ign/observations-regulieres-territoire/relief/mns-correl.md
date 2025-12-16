@@ -10,10 +10,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/mns-correl.jpg
     alt: MNS Correl
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_MNS-CORREL
+lienCatalogue:
+    url: /dataset/IGNF_MNS-CORREL
+    text: MNS Correl
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_MNS-CORREL - ouvre une nouvelle fenêtre">MNS Correl</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_MNS-CORREL - ouvre une nouvelle fenêtre">MNS Correl</a>
 
 Le MNS Correl est un Modèle Numérique de Surface (MNS) au pas de 50cm, décrivant la forme du sol et et du sursol, tels que la végétation et les bâtiments, et est issu de la BD ORTHO.
 

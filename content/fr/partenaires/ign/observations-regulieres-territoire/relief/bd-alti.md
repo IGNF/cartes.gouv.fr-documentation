@@ -11,9 +11,11 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/obs-reguliere-territoire/relief/bd-alti.jpg
     alt: BD ALTI®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ALTI
+lienCatalogue:
+    url: /dataset/IGNF_BD-ALTI
+    text: BD ALTI®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-ALTI" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-ALTI - ouvre une nouvelle fenêtre">BD ALTI®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-ALTI" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-ALTI - ouvre une nouvelle fenêtre">BD ALTI®</a>
 
 Cette donnée est conçue pour une utilisation cartographique (estompages, carte du relief…) pour des applications nécessitant une compréhension générale du terrain (plan de situation, cartes nationales régionales, départementales, locales…). Le produit couvre l’ensemble du territoire français métropolitain et ultramarin (sauf la Polynésie Française, la Nouvelle-Calédonie et Wallis et Futuna).

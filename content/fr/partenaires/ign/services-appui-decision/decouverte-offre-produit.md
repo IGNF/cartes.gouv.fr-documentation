@@ -11,8 +11,6 @@ eleventyNavigation:
 {% set patrimoines = [] %}
 {% set dejaVus = [] %}
 
-### Services disponibles
-
 {% for entry in collections.all %}
   {% if entry.data.eleventyNavigation
     and entry.data.eleventyNavigation.parent == currentParent
@@ -35,19 +33,22 @@ eleventyNavigation:
   {% endif %}
 {% endfor %}
 
-{% for entry in onglets | sort(attribute="data.title") %}
-  <div class="fr-mb-10v">
-    <h4 class="fr-mb-4v"><a href="{{ entry.url }}" class="fr-text-action-high--blue-france no-underline">{{ entry.data.title }}</a></h4>
-    {% if entry.data.tags %}
-      {% set small_tags = true %}
-      {% set tags = entry.data.tags %}
-      {% include "components/taggroup-disabled.njk" %}
-    {% endif %}
-    {% if entry.data.description %}
-      <p class="fr-mb-4v">{{ entry.data.description }}</p>
-    {% endif %}
-    {% if entry.data.lienCatalogue %}
-      Disponible en flux et en téléchargement <a href={{ entry.data.lienCatalogue }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ entry.data.lienCatalogue }} - ouvre une nouvelle fenêtre">{{ entry.data.title }}</a>
-    {% endif %}
-  </div>
-{% endfor %}
+<div data-pagefind-ignore>
+  <h3>Services disponibles</h3>
+  {% for entry in onglets | sort(attribute="data.title") %}
+    <div class="fr-mb-10v" data-pagefind-ignore>
+      <h4 class="fr-mb-4v"><a href="{{ entry.url }}" class="fr-text-action-high--blue-france no-underline">{{ entry.data.title }}</a></h4>
+      {% if entry.data.tags %}
+        {% set small_tags = true %}
+        {% set tags = entry.data.tags %}
+        {% include "components/taggroup-disabled.njk" %}
+      {% endif %}
+      {% if entry.data.description %}
+        <p class="fr-mb-4v">{{ entry.data.description }}</p>
+      {% endif %}
+      {% if entry.data.lienCatalogue %}
+        Disponible en flux et en téléchargement <a href={{ urls.rechercher_une_donnee }}{{ entry.data.lienCatalogue.url }} class="fr-link fr-ml-6v" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}{{ entry.data.lienCatalogue.url }} - ouvre une nouvelle fenêtre">{{ entry.data.lienCatalogue.text }}</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

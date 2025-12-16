@@ -50,10 +50,9 @@ Pour faciliter la saisie, un service d’autocomplétion est intégré par défa
 Le géocodage **inverse** a pour but de retourner, à partir d’un ou plusieurs points géographiques indiqués en latitude/longitude, la ou les entités géolocalisées les plus proches correspondantes, parmi les adresses, toponymes, parcelles cadastrales, et/ou unités administratives.
 
 Le géocodage s’appuie sur plusieurs sources de données :
-
- * L’index des adresses est actualisé chaque semaine à partir des adresses de la [Base Adresse Nationale (BAN)](https://adresse.data.gouv.fr/decouvrir-la-BAN).
- * Les lieux nommés proviennent de la couche des « points d’intérêt » (POI) de la [BD TOPO®](https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-TOPO), qui est actualisée tous les trimestres.
- * Les parcelles cadastrales proviennent du [Parcellaire Express (PCI)](https://cartes.gouv.fr/catalogue/dataset/IGNF_PARCELLAIRE-EXPRESS-PCI), actualisé tous les trimestres.
+* L’index des adresses est actualisé chaque semaine à partir des adresses de la [Base Adresse Nationale (BAN)](https://adresse.data.gouv.fr/decouvrir-la-BAN).
+* Les lieux nommés proviennent de la couche des « points d’intérêt » (POI) de la [BD TOPO®]({{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-TOPO), qui est actualisée tous les trimestres.
+* Les parcelles cadastrales proviennent du [Parcellaire Express (PCI)]({{ urls.rechercher_une_donnee }}/dataset/IGNF_PARCELLAIRE-EXPRESS-PCI), actualisé tous les trimestres.
 
 Le service de géocodage est disponible au travers des URLs suivantes :
 

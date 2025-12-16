@@ -12,7 +12,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/limites-administratives-reglementaires/geofla.jpg
     alt: GEOFLA®
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_GEOFLA
+lienCatalogue:
+    url: /dataset/IGNF_GEOFLA
+    text: GEOFLA®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_GEOFLA" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_GEOFLA - ouvre une nouvelle fenêtre">GEOFLA®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_GEOFLA" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_GEOFLA - ouvre une nouvelle fenêtre">GEOFLA®</a>

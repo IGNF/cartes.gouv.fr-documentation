@@ -12,10 +12,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/bd-foret-v2.jpg
     alt: BD Forêt v2
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORET
+lienCatalogue:
+    url: /dataset/IGNF_BD-FORET
+    text: BD Forêt®
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORET" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-FORET - ouvre une nouvelle fenêtre">BD Forêt®</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-FORET" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-FORET - ouvre une nouvelle fenêtre">BD Forêt®</a>
 
 La BD Forêt® v2 est une base de données de référence pour l’espace forestier et les milieux semi-naturels. Elle constitue le référentiel géographique de description des essences forestières.
 

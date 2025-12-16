@@ -12,10 +12,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/vegetation-agriculture/parcs-jardins.jpg
     alt: Parcs et jardins ouverts au public
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_PARCS-JARDINS-PUBLICS-OUVERTS-PUBLIC
+lienCatalogue:
+    url: /dataset/IGNF_PARCS-JARDINS-PUBLICS-OUVERTS-PUBLIC
+    text: Parcs et jardins ouverts au public
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_PARCS-JARDINS-PUBLICS-OUVERTS-PUBLIC" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_PARCS-JARDINS-PUBLICS-OUVERTS-PUBLIC - ouvre une nouvelle fenêtre">Parcs et jardins ouverts au public</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PARCS-JARDINS-PUBLICS-OUVERTS-PUBLIC" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_PARCS-JARDINS-PUBLICS-OUVERTS-PUBLIC - ouvre une nouvelle fenêtre">Parcs et jardins ouverts au public</a>
 
 La production de cette base de données est commanditée et financée par le ministère de la transition écologique dans le cadre du programme d’OCS GE Nouvelle génération.
 

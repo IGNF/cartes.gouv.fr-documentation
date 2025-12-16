@@ -13,7 +13,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/vegetation-agriculture/bd-haie.png
     alt: BD Haie
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-HAIE
+lienCatalogue:
+    url: /dataset/IGNF_BD-HAIE
+    text: BD Haie
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_BD-HAIE" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_BD-HAIE - ouvre une nouvelle fenêtre">BD Haie</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-HAIE" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-HAIE - ouvre une nouvelle fenêtre">BD Haie</a>

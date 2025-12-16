@@ -11,7 +11,9 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/limites-administratives-reglementaires/ebm.jpg
     alt: EBM
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_EBM
+lienCatalogue:
+    url: /dataset/IGNF_EBM
+    text: EBM
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_EBM" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_EBM - ouvre une nouvelle fenêtre">EBM</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_EBM" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_EBM - ouvre une nouvelle fenêtre">EBM</a>

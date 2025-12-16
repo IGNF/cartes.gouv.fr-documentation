@@ -12,10 +12,12 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/referentiels-description-territoire/foret/debroussaillement.png
     alt: Débroussaillement
-lienCatalogue: https://cartes.gouv.fr/catalogue/dataset/IGNF_DEBROUSSAILLEMENT
+lienCatalogue:
+    url: /dataset/IGNF_DEBROUSSAILLEMENT
+    text: Débroussaillement
 ---
 
-Consulter le catalogue : <a href="https://cartes.gouv.fr/catalogue/dataset/IGNF_DEBROUSSAILLEMENT" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/catalogue/dataset/IGNF_DEBROUSSAILLEMENT - ouvre une nouvelle fenêtre">Débroussaillement</a>
+Consulter le catalogue : <a href="{{ urls.rechercher_une_donnee }}/dataset/IGNF_DEBROUSSAILLEMENT" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_DEBROUSSAILLEMENT - ouvre une nouvelle fenêtre">Débroussaillement</a>
 
 La base de données Débroussaillement permet de pouvoir localiser les terrains et savoir s’ils sont soumis à la réglementation sur les OLD (Obligations Légales de Débroussaillement). Elle ne précise pas les règles à appliquer pour débroussailler correctement (profondeur de débroussaillement depuis l’habitation, distance entre les arbres, hauteur d’élagage, etc.). Les règles de mise en œuvre des OLD peuvent être différentes d’un département à l’autre, car elles tiennent compte du contexte local.
 

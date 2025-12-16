@@ -26,7 +26,7 @@ layout: layouts/base.njk
       {% include "templates/sidemenu.njk" %}
     </div>
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
-      <div class="fr-grid-row">
+      <div class="fr-grid-row" data-pagefind-ignore>
         <div class="fr-col-12">
           {% if showBreadcrumb %}
             {% include "components/breadcrumb.njk" %}
@@ -61,10 +61,10 @@ layout: layouts/base.njk
         </div>
       </div>
       {% if eleventyNavigation.parent and eleventyNavigation.parent != parentInfo.title %}
-        <h2 class="fr-mt-2v">{{ eleventyNavigation.parent }}</h2>
-        <h3 class="fr-mt-2v">{{ title }}</h3>
+        <h2 class="fr-mt-2v" data-pagefind-ignore>{{ eleventyNavigation.parent }}</h2>
+        <h3 class="fr-mt-2v"{% if title == "Découverte de l’offre produit"%} data-pagefind-ignore{% endif %}>{{ title }}</h3>
       {% else %}
-        <h2 class="fr-mt-2v">{{ title }}</h2>
+        <h2 class="fr-mt-2v"{% if title == "Découverte de l’offre produit"%} data-pagefind-ignore{% endif %}>{{ title }}</h2>
       {% endif %}
       {{ content | safe }}
       {% include "components/page_switcher.njk" %}
