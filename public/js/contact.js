@@ -86,7 +86,7 @@ let sendForm = function () {
     if (isFormValid) {
         document.getElementById("waiting-screen").classList.toggle("hidden");
 
-        fetch(window.location.origin + "/aide/fr/contact_us", {
+        fetch(window.location.origin + "/contact_us", {
             method: "POST",
             headers: {
                 "X-Requested-With": "XMLHttpRequest",
