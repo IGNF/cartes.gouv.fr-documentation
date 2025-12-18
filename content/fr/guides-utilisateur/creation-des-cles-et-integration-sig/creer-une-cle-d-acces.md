@@ -53,14 +53,14 @@ Le nom d’utilisateur doit être unique à l’échelle de cartes.gouv.fr et vo
 
 ### HASH
 
-Une **chaîne de hachage** est générée automatiquement. Elle devra être transmise comme paramètre supplémentaire dans vos requêtes (sous la forme ` apikey={votre hash}`). Ce mode est bien adapté aux **intégrations sur un site web** :
+Une **chaîne de hachage** est générée automatiquement. Elle devra être transmise comme paramètre supplémentaire dans vos requêtes (sous la forme **_<span lang="en">`apikey={votre hash}`</span>_**). Ce mode est bien adapté aux **intégrations sur un site web** :
 
 ![Option HASH sans champ de formulaire à renseigner](/img/guides-utilisateur/creation-des-cles-et-integration-sig/creer-une-cle-d-acces/05_securisation-hash.png){.fr-responsive-img .frx-img-contained}
 
 ### OAuth2
 
 :::info
-Pour le protocole **OAuth2**, votre SIG ou application doit accepter une **URL de redirection personnalisée** (`redirect_url`). Cette URL est obligatoire pour recevoir le code d’autorisation après l’authentification.
+Pour la clé **OAuth2**, votre SIG ou application doit accepter une **URL de redirection personnalisée** (**_<span lang="en">`redirect_url`</span>_**). Cette URL est obligatoire pour recevoir le code d’autorisation après l’authentification.
 :::
 
 Ce type de sécurisation utilise votre **compte Géoplateforme**. Il convient aux usages nécessitant une **authentification forte** (SIG ou outils tiers). Il est aussi nécessaire d’utiliser cette clé si la permission qui vous a été accordé vous y contraint.

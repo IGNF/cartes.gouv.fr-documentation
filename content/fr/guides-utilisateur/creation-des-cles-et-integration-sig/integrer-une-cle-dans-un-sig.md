@@ -63,11 +63,11 @@ Dans **QGIS** :
 
 2. Dans **QGIS**, ouvrez l’onglet **« Authentification »** et cliquez sur **« + »** pour créer une nouvelle configuration.
 
-3. Récupérez la valeur située après `apikey=` dans l’URL copiée.
+3. Récupérez la valeur située après **_<span lang="en">`apikey=</span>_** dans l’URL copiée.
 
 4. Complétez les champs :
-    - **Clé d’en-tête :** `apikey`
-    - **Valeur d’en-tête :** collez la valeur du hash
+    - **Clé d’en-tête :** **_<span lang="en">`apikey={votre hash}`</span>_**
+    - **Valeur d’en-tête :** collez la valeur du HASH
 
 5. Cliquez sur **« Enregistrer »**.
 ![Formulaire de configuration d’une authentification de type API Header dans QGIS, rempli avec une clé nommée apikey.](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/10_api-header.png){.fr-responsive-img .frx-img-contained}
@@ -80,16 +80,16 @@ Dans **QGIS** :
 ## FME (connexion avec OAuth2)
 
 :::info
-L’authentification **OAuth2** nécessite une **URL de redirection** (`redirect_url`) pour recevoir le code d’autorisation après la connexion.
+L’authentification **OAuth2** nécessite une **URL de redirection** (**_<span lang="en">`redirect_url`</span>_**) pour recevoir le code d’autorisation après la connexion.
 Comme **QGIS** ou **ArcGIS** ne permettent pas de la configurer, l’utilisation de **FME** est recommandée.
 :::
 
 Dans **FME Workbench** :
 
-1. Dans **« Tools »**, cliquez sur **« FME Options... »**.
+1. Dans **_<span lang="en">« Tools »</span>_**, cliquez sur **_<span lang="en">« FME Options... »</span>_**.
 ![Ouverture du menu Tools > FME Options](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/12_fme-options.png){.fr-responsive-img .frx-img-contained}
 
-2. Puis dans **« Web Connections »**, cliquez sur **« Manage Services… »**.
+2. Puis dans   **_<span lang="en">« Web Connections »</span>_**, cliquez sur  **_<span lang="en">« Manage Services... »</span>_**.
 ![Localisation du bouton Manage services...](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/13_manage-services.png){.fr-responsive-img .frx-img-contained}
 
 3. Dans la fenêtre qui s’affiche, cliquez sur le **« + »** en bas à gauche, puis sélectionnez **« OAuth 2.0 Service »**.
@@ -103,14 +103,16 @@ Dans **FME Workbench** :
      `https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/auth?response_type=code`
    - **URL de récupération et de rafraîchissement du token :**
      `https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/token`
-![Formulaire Manage Web Services](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/15_manage-web-services-1.png){.fr-responsive-img .frx-img-contained}
-![Formulaire Retrieve Token Parameters](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/16_manage-web-services-2.png){.fr-responsive-img .frx-img-contained}
+   - **Format de la requête :**
+     `redirect_uri=https://data.geopf.fr/swagger-ui/oauth2-redirect.html&client_id=[CLIENT_ID]&client_secret=[CLIENT_SECRET]&grant_type=authorization_code&code=[responseCode]&refresh_token=[REFRESH_TOKEN]&response_type=refresh_token`
+     
+![Formulaire Manage Web Services](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/15_manage-web-services.png){.fr-responsive-img .frx-img-contained}
 
 5. Cliquez sur **« + »**, sélectionnez le service créé, attribuez un nom, puis validez.
-![Localisation du bouton Add connection](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/17_add-connection.png){.fr-responsive-img .frx-img-contained}
+![Localisation du bouton Add connection](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/16_add-connection.png){.fr-responsive-img .frx-img-contained}
 
 6. Attribuez un nom de votre choix, puis cliquez sur **« OK »**.
-![Formulaire de modification de la Web connection](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/18_edit-web-connection.png){.fr-responsive-img .frx-img-contained}
+![Formulaire de modification de la Web connection](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/17_edit-web-connection.png){.fr-responsive-img .frx-img-contained}
 
 Votre connexion **OAuth2** dans **FME** est désormais opérationnelle.
 
