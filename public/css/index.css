@@ -364,3 +364,39 @@ div.fr-callout__text p {
     --underline-idle-width: 0;
     --underline-max-width: 0;
 }
+.importance {
+    display: none;
+}
+
+#waiting-screen {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    inset: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frx-icon-spin::before {
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#contact-success {
+    margin: 0;
+}
+
+#waiting-screen.hidden,
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
