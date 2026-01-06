@@ -1,3 +1,18 @@
+//remplissage automatique des champs si l'utilisateur est connecté
+fetch(window.location.origin + "/api/users/me", {
+    method: "GET",
+    headers: {
+        "X-Requested-With": "XMLHttpRequest",
+    },
+}).then(async function (res) {
+    if (res.ok) {
+        let result = await res.json();
+        result.email ? (document.getElementsByName("email_contact")[0].value = result.email) : null;
+        result.first_name ? (document.getElementsByName("first_name")[0].value = result.first_name) : null;
+        result.last_name ? (document.getElementsByName("last_name")[0].value = result.last_name) : null;
+    }
+});
+
 //booléen pour la validation du formulaire
 let isFormValid = true;
 
