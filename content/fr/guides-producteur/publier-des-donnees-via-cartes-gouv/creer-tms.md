@@ -122,9 +122,7 @@ Pour visualiser cartographiquement les données du service TMS ainsi créé, cli
 ![Visualisation d’un service WMS](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/15_visualiser-service.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 L’affichage est alors optimisé pour être plus performant qu’un service WFS ou WMS puisqu’il ne chargera que les tuiles nécessaires selon l’emprise et la plage de visibilité.
 
-
 ---
-
 
 ## Ajouter un style au service TMS
 
@@ -134,9 +132,7 @@ Vous pouvez soit téléverser votre propre fichier _SLD_, soit créer ou modifie
 La gestion des styles pour le service TMS se fait en aval de la publication dans l'onglet **« Gérer les styles »** lors de la visualisation du flux.
 :::
 
-
 ![Ajouter les styles](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/16_ajouter-styles.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
 
 :::callout Ajouter des styles
 S’agissant d’un flux de données vecteur, l’application d’un style est optionnelle car elle se fait côté client.

@@ -8,7 +8,7 @@ tags:
     - API
 eleventyNavigation:
     key: Service Carte Facile
-    order: 5
+    order: 6
 image:
     src: /img/partenaires/ign/representations-cartographiques-souveraines/carte-facile.jpg
     alt: Carte Facile

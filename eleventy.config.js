@@ -222,7 +222,7 @@ module.exports = function (eleventyConfig) {
                 symbol: "#",
                 ariaHidden: false,
             }),
-            level: [1, 2, 3, 4],
+            level: [1, 2, 3, 4, 5],
             slugify: eleventyConfig.getFilter("slugify"),
         });
     });

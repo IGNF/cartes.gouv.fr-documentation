@@ -57,8 +57,11 @@ const getSummaryItems = (content, depth = 1) => {
         case 2:
             querySelector = "h2, h3";
             break;
-        default: // depth 3 or more always equals 3 levels of summary
+        case 3:
             querySelector = "h2, h3, h4";
+            break;
+        default:
+            querySelector = "h2, h3, h4, h5";
     }
 
     const headings = Array.from(document.querySelectorAll(querySelector)).filter(

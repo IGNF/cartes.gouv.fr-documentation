@@ -39,24 +39,19 @@ Sélectionnez une ou plusieurs tables pour créer le service :
 
 Étape obligatoire, un style doit être associé au service WMS-Vecteur. Vous pouvez soit téléverser votre propre fichier _SLD_, soit créer ou modifier un style directement depuis l’interface de gestion des styles de cartes.gouv.fr
 
-
 ![Choix de fichier de style SLD](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/03_fichier-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
 
 :::info
 Pour chaque couche, il est possible de définir les règles de représentation (symbole, filtre, échelles) et de paramétrer finement la symbolisation (remplissage, contour, couleurs, opacité) via l’éditeur dédié, sans dépôt préalable d’un fichier SLD externe.
 :::
 
-
-![Éditeur de symbolisation](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/03_editeur-symbolisation.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
+![Éditeur de symbolisation](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/04_editeur-symbolisation.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### Importer directement vos métadonnées
 
 Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en cours de construction.
 
-![Source des metadonnées](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/04_source-metadonnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
+![Source des metadonnées](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/05_source-metadonnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### Décrire la ressource
 
