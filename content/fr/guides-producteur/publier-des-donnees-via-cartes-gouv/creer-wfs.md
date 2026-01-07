@@ -89,15 +89,15 @@ Bonne pratique : choisir un niveau de zoom approprié au volume de vos données
 
 ## Ajouter un style au service WFS
 
-Il n’existe pas d’interface graphique avancée à ce jour sur cartes.gouv.fr. Il faut donc préparer des fichiers _QML_ (_QGIS Markup Language_) ou _SLD_ (_Styled Layer Descriptor_) avec le logiciel de votre choix, par exemple le SIG _QGIS_, puis les charger en cliquant sur **« Ajouter un style »** dans l’onglet **« Gérer les styles »** lors de la visualisation du flux :
-
-![Gérer les styles](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/13_gerer-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-![Ajouter un style](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/14_ajout-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+Vous pouvez soit téléverser votre propre fichier _SLD_, soit créer ou modifier un style directement depuis l’interface de gestion des styles de cartes.gouv.fr. Le producteur de données peut créer et modifier directement les styles associés à ses flux sans avoir à préparer de fichiers externes.
 
 :::info
-La création d’un fichier SLD fait l’objet d’un autre tutoriel.
+La gestion des styles pour le service WFS se fait en aval de la publication dans l'onglet **« Gérer les styles »** lors de la visualisation du flux.
 :::
+
+
+![Ajouter les styles](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/13_ajouter-styles.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 
 :::callout Ajouter des styles
 S’agissant d’un flux de données vecteur, l’application d’un style est optionnelle car elle se fait côté client.

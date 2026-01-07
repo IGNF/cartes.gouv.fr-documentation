@@ -35,22 +35,23 @@ Sélectionnez une ou plusieurs tables pour créer le service :
 
 ![Sélectionner les tables nécessaires au service](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/02_selection-tables.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
+### Ajouter ou créer un fichier de style
+
+Étape obligatoire, un style doit être associé au service WMS-Vecteur. Vous pouvez soit téléverser votre propre fichier _SLD_, soit créer ou modifier un style directement depuis l’interface de gestion des styles de cartes.gouv.fr
+
+![Choix de fichier de style SLD](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/03_fichier-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+:::info
+Pour chaque couche, il est possible de définir les règles de représentation (symbole, filtre, échelles) et de paramétrer finement la symbolisation (remplissage, contour, couleurs, opacité) via l’éditeur dédié, sans dépôt préalable d’un fichier SLD externe.
+:::
+
+![Éditeur de symbolisation](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/04_editeur-symbolisation.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 ### Importer directement vos métadonnées
 
 Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en cours de construction.
 
-![Source des metadonnées](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/03_source-metadonnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-### Déposer un fichier de style SLD
-
-Étape obligatoire, il faut déposer un fichier de style _SLD_ (_Styled Layer Descriptor_). Les messages d’erreur vous guident pour modifier votre _SLD_ (seul format possible pour le WMS). Ce fichier sera déposé sur la Géoplateforme comme fichier statique.
-
-![Choix de fichier de style SLD](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/04_fichier-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-L’erreur ci-dessus est systématique, elle indique que le champ _name_ du style _SLD_ ne correspond pas au nom exact de la couche _GeoPackage_. Un fichier _SLD_ est un document _XML_ qui définit la symbolisation et le style de rendu des couches cartographiques dans les services web géographiques comme WMS. Vous pouvez donc facilement l’éditer avec un éditeur de texte.
-
-:::info
-La création d’un fichier _SLD_ fait l’objet d’un autre tutoriel.
-:::
+![Source des metadonnées](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/05_source-metadonnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### Décrire la ressource
 

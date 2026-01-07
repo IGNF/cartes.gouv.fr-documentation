@@ -2,7 +2,7 @@
 title: Surcouches thématiques
 eleventyNavigation:
     key: Surcouches thématiques
-    order: 6
+    order: 7
 ---
 
 :::info Page en cours de rédaction
