@@ -1,5 +1,6 @@
 ---
 title: Espace de travail « Découverte »
+description: Un espace commun pour faire vos test
 tags:
     - Découverte
     - Entrepôt
@@ -9,10 +10,10 @@ eleventyNavigation:
     order: 3
     nav: guides-producteur
 pictogram: digital/search.svg
-description: Un espace commun pour faire vos test
 summary:
     visible: true
     depth: 1
+popularTopic: true
 ---
 
 :::info

@@ -1,5 +1,6 @@
 ---
 title: Créer et publier un service WMTS
+description: Procédure pour publier un flux WMTS
 tags:
     - WMTS
     - Raster
@@ -13,10 +14,10 @@ eleventyNavigation:
     order: 7
     nav: guides-producteur
 pictogram: digital/internet.svg
-description: Procédure pour publier un flux WMTS
 summary:
     visible: true
     depth: 2
+popularTopic: true
 ---
 
 :::warning
