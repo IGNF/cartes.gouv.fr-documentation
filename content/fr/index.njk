@@ -247,15 +247,12 @@ layout: layouts/home.njk
         {% set items = collections.all %}
         {% set filteredItems = [] %}
         {% for item in items %}
-            {% if item.data.title != "Home" and item.data.title != "Accueil" %}
+            {% if item.data.popularTopic == true %}
                 {% set _ = filteredItems.push(item) %}
             {% endif %}
         {% endfor %}
         {{ component("card_list", {
-            items: filteredItems | selectattr("url")
-            | sort(true, 'date')
-            | head(-9)
-            | reverse,
+            items: filteredItems | sort(true, 'date') | reverse,
             small_cards: true,
             show_images: false,
             show_tags: false

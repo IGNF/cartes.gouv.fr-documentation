@@ -7,4 +7,5 @@ eleventyNavigation:
     nav: guides-utilisateur
 description: Le visualiseur cartographique de cartes.gouv.fr
 pictogram: custom/viewer.svg
+popularTopic: true
 ---

@@ -1,15 +1,16 @@
 ---
 title: Généralités producteur
+description: Présentation générale de cartes.gouv.fr
 eleventyNavigation:
     key: Généralités producteur
     parent: Présentation de cartes.gouv.fr
     order: 1
     nav: guides-producteur
 pictogram: map/location-france.svg
-description: Présentation générale de cartes.gouv.fr
 summary:
     visible: true
     depth: 1
+popularTopic: true
 ---
 
 ## Le profil producteur

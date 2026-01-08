@@ -1,5 +1,6 @@
 ---
 title: Choisir le flux à publier
+description: La nature, les avantages et les inconvénients de chaque type de flux
 tags:
     - Flux
     - Service
@@ -9,7 +10,7 @@ eleventyNavigation:
     order: 2
     nav: guides-producteur
 pictogram: digital/internet.svg
-description: La nature, les avantages et les inconvénients de chaque type de flux
+popularTopic: true
 ---
 
 {% from "components/component.njk" import component with context %}

@@ -1,5 +1,6 @@
 ---
 title: Créer des cartes personnalisées
+description: L’éditeur cartographique de cartes.gouv.fr
 tags:
     - Symbologie
     - Carte
@@ -8,7 +9,7 @@ eleventyNavigation:
     order: 6
     nav: guides-utilisateur
 pictogram: custom/editor.svg
-description: L’éditeur cartographique de cartes.gouv.fr
+popularTopic: true
 ---
 
 Mobilisez les données de cartes.gouv.fr et créez des cartes personnalisées, interactives et prêtes à être partagées.
