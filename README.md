@@ -15,6 +15,8 @@ Il est construit sur la base des templates de [codegouvfr/eleventy-dsfr](https:/
 
 La branche `main` est automatiquement déployée sur github pages en quelques minutes à l'adresse : [https://ignf.github.io/cartes.gouv.fr-documentation](https://ignf.github.io/cartes.gouv.fr-documentation)
 
+(NB: le formulaire de contact n'est pas utilisable sur github pages, faute de back-office associé)
+
 Il faut ensuite un tag respectant le versioning sémantique (`vX.Y.Z`) pour qu'une image prête pour la production soit générée sur le registre ghcr.io avec une url de la forme :
 
 ```
