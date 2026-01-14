@@ -25,6 +25,8 @@ ghcr.io/ignf/cartes.gouv.fr-documentation:vX.Y.Z
 
 Le déploiement de cette image n'est ensuite plus du ressort de ce dépôt.
 
+En production le déploiement est à l'adresse : https://cartes.gouv.fr/aide
+
 ## Licence
 
 Le dépôt est publié sous licence MIT pour le code et sous licence Etalab 2.0 pour les autres contenus.
