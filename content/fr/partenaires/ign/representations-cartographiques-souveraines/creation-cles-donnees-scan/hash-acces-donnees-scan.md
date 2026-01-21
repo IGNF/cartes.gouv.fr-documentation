@@ -1,8 +1,8 @@
 ---
-title: Accès aux données par la création d’une clé HASH
-description: Accès aux données par la création d’une clé HASH
+title: Accès aux données SCAN par la création d’une clé HASH
+description: Accès aux données SCAN par la création d’une clé HASH
 eleventyNavigation:
-    key: Accès aux données par la création d’une clé HASH
+    key: Accès aux données SCAN par la création d’une clé HASH
     order: 4
 summary:
     visible: true
