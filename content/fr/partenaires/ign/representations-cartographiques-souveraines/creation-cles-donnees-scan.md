@@ -11,4 +11,5 @@ tags:
 eleventyNavigation:
     key: Création de clés adaptées aux données SCAN
     order: 4
+    pictogram: system/padlock.svg
 ---
