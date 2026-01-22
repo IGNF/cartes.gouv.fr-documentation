@@ -7,7 +7,7 @@ eleventyNavigation:
 summary:
     visible: true
     depth: 6
-    pictogram: "document/success.svg"
+pictogram: system/success.svg
 ---
 
 #### Création d’une clé HASH

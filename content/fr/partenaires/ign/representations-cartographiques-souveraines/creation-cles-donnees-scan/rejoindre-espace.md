@@ -1,10 +1,10 @@
 ---
 title: Rejoindre l’espace de travail existant
-description: Guide pour rejoindre la Communauté d’usage des données SCAN 25/100 et la Communauté d’usage des données SCAN OACI.
+description: Guide pour rejoindre la Communauté d’usage des données SCAN 25/100 et la Communauté d’usage des données SCAN OACI
 eleventyNavigation:
     key: Rejoindre l’espace de travail existant
     order: 3
-    pictogram: "system/archive.svg"
+pictogram: document/archive.svg
 ---
 
 Depuis votre **tableau de bord**, cliquez sur **« Mes données »**.
