@@ -156,6 +156,11 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).minute;
     });
 
+    eleventyConfig.addFilter("endsWith", (str, suffix) => {
+        if (typeof str !== "string") return false;
+        return str.endsWith(suffix);
+    });
+
     // Get the first `n` elements of a collection.
     eleventyConfig.addFilter("head", (array, n) => {
         if (!Array.isArray(array) || array.length === 0) {

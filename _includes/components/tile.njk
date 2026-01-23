@@ -28,12 +28,12 @@
             {% endif %}
         </div>
     </div>
-    {% if tile.pictogram %}
+    {% if tile.pictogram or tile.image %}
         <div class="fr-tile__header">
             <div class="fr-tile__pictogram">
-                {% if tile.pictogram.path %}
-                    <img src="{{ tile.pictogram.path }}"
-                        alt=""
+                {% if tile.image %}
+                    <img src="{{ tile.image.src }}"
+                        alt="{{ tile.image.alt }}"
                         width="80"
                         height="80"
                         class="fr-artwork" />

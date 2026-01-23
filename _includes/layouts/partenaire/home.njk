@@ -35,8 +35,8 @@ layout: layouts/base.njk
           {% if showBreadcrumb %}
             {% include "components/breadcrumb.njk" %}
           {% endif %}
-          <img src="{{ image.path }}"
-            alt="{{ image.alt }}"
+          <img src="{{ logo.src }}"
+            alt="{{ logo.alt }}"
             height="80"
             class="fr-artwork" />
           {% include "components/published_on.njk" %}

@@ -48,7 +48,7 @@
             {% endif %}
         </div>
     </div>
-    {% if card.badges or card.image %}
+    {% if card.badges or card.image or card.pictogram %}
         <div class="fr-card__header">
             {% if card.badges %}
                 <ul class="fr-badges-group">
@@ -59,7 +59,22 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-            {% if card.image and (card.show_image is not defined or card.show_image) %}
+            {% if card.pictogram %}
+                <div class="fr-card__img">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; padding-top: 1rem;">
+                        {% set pictogramUrl = "/artwork/pictograms/" + card.pictogram %}
+                        <svg aria-hidden="true"
+                            class="fr-artwork"
+                            viewBox="0 0 80 80"
+                            width="80px"
+                            height="80px">
+                            <use class="fr-artwork-decorative" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-decorative"></use>
+                            <use class="fr-artwork-minor" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-minor"></use>
+                            <use class="fr-artwork-major" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-major"></use>
+                        </svg>
+                    </div>
+                </div>
+            {% elif card.image and (card.show_image is not defined or card.show_image) %}
                 {% if card.image.path %}
                     <div class="fr-card__img">{% imageSync card.image.path, card.image.alt %}</div>
                 {% elif card.image.src %}
