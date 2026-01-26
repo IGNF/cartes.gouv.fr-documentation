@@ -5,5 +5,5 @@ description: Tutoriel pour créer un compte, rejoindre la communauté SCAN et g�
 eleventyNavigation:
     key: Création de clés adaptées aux données SCAN
     order: 4
-    pictogram: system/padlock.svg
+pictogram: system/padlock.svg
 ---
