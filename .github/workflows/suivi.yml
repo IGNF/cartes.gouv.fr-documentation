@@ -1,4 +1,6 @@
 name: Ajouter au projet "Suivi global Cartes.gouv" si label "suivi" est ajouté
+permissions:
+    contents: read
 
 on:
     issues:
