@@ -59,30 +59,32 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-            {% if card.pictogram %}
-                <div class="fr-card__img">
-                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; padding-top: 1rem;">
-                        {% set pictogramUrl = "/artwork/pictograms/" + card.pictogram %}
-                        <svg aria-hidden="true"
-                            class="fr-artwork"
-                            viewBox="0 0 80 80"
-                            width="80px"
-                            height="80px">
-                            <use class="fr-artwork-decorative" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-decorative"></use>
-                            <use class="fr-artwork-minor" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-minor"></use>
-                            <use class="fr-artwork-major" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-major"></use>
-                        </svg>
-                    </div>
-                </div>
-            {% elif card.image and (card.show_image is not defined or card.show_image) %}
-                {% if card.image.path %}
-                    <div class="fr-card__img">{% imageSync card.image.path, card.image.alt %}</div>
-                {% elif card.image.src %}
+            {% if (card.show_image is not defined or card.show_image) %}
+                {% if card.pictogram %}
                     <div class="fr-card__img">
-                        <img class="fr-responsive-img {% if card.addClass == "fr-card--horizontal-tier" %} fr-responsive-img--16x9{% else %} {% if card.ratio %} fr-responsive-img--{{ card.ratio }}{% else %}fr-responsive-img--1x1{% endif %}{% endif %}"
-                            src="{{ card.image.src }}"
-                            alt="{{ card.image.alt }}">
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; padding-top: 1rem;">
+                            {% set pictogramUrl = "/artwork/pictograms/" + card.pictogram %}
+                            <svg aria-hidden="true"
+                                class="fr-artwork"
+                                viewBox="0 0 80 80"
+                                width="80px"
+                                height="80px">
+                                <use class="fr-artwork-decorative" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-decorative"></use>
+                                <use class="fr-artwork-minor" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-minor"></use>
+                                <use class="fr-artwork-major" href="{{ pictogramUrl | htmlBaseUrl }}#artwork-major"></use>
+                            </svg>
+                        </div>
                     </div>
+                {% elif card.image %}
+                    {% if card.image.path %}
+                        <div class="fr-card__img">{% imageSync card.image.path, card.image.alt %}</div>
+                    {% elif card.image.src %}
+                        <div class="fr-card__img">
+                            <img class="fr-responsive-img {% if card.addClass == "fr-card--horizontal-tier" %} fr-responsive-img--16x9{% else %} {% if card.ratio %} fr-responsive-img--{{ card.ratio }}{% else %}fr-responsive-img--1x1{% endif %}{% endif %}"
+                                src="{{ card.image.src }}"
+                                alt="{{ card.image.alt }}">
+                        </div>
+                    {% endif %}
                 {% endif %}
             {% endif %}
         </div>
