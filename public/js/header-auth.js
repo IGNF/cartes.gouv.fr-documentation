@@ -5,38 +5,75 @@ import Keycloak from "/js/keycloak.js";
     if (!authContainer) return;
 
     const renderLoggedOut = () => {
-        authContainer.innerHTML = `
-            <button id="login-button" class="fr-icon-account-circle-fill fr-btn" type="button" title="Se connecter">Se connecter</button>
-        `;
-        document.getElementById("login-button")?.addEventListener("click", () => {
-            keycloak.login({ redirectUri: window.location.href });
+        document.querySelectorAll(".login-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                keycloak.login({ redirectUri: window.location.href });
+            });
         });
     };
 
     const renderLoggedIn = async () => {
         const claims = keycloak.idTokenParsed || keycloak.tokenParsed || {};
 
-        let displayName =
+        const displayName =
             (typeof claims.name === "string" && claims.name) ||
             [claims.given_name, claims.family_name].filter(Boolean).join(" ") ||
             (typeof claims.preferred_username === "string" && claims.preferred_username) ||
             (typeof claims.email === "string" && claims.email) ||
             "Compte";
 
-        authContainer.innerHTML = `
-            <span class="fr-icon-account-circle-fill fr-btn fr-mr-1w" aria-label="Utilisateur">${displayName}</span>
-            <button id="logout-button" class="fr-btn fr-btn--tertiary fr-btn--sm" type="button">Se déconnecter</button>
-        `;
+        const generateUserMenuHTML = (collapseId) => {
+            return `
+                <li>
+                    <div class="fr-translate fr-nav">
+                        <div class="fr-nav__item">
+                            <button aria-controls="${collapseId}" aria-expanded="false" title="Mon espace" class="fr-translate__btn fr-btn fr-px-2w">
+                                <span class="fr-icon-account-circle-fill fr-icon--sm fr-mr-1w" aria-hidden="true"></span>Mon espace</button>
+                            <div class="fr-collapse fr-translate__menu fr-menu" id="${collapseId}">
+                                <ul class="fr-menu__list">
+                                    <li style="pointer-events: none;">
+                                        <div class="fr-text--sm">
+                                            <p class="custom-center-btn fr-text--bold fr-mx-2w fr-text--sm fr-mt-3v fr-mb-2v">${displayName}</p>
+                                            <p class="fr-text--xs fr-mb-3v fr-mx-2w fr-text-mention--grey" style="text-align: left;">${claims.email}</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/tableau-de-bord">
+                                            <span class="fr-icon-dashboard-3-line fr-icon--sm">&emsp;Tableau de bord</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="fr-nav__link fr-mr-3w" href="https://cartes.gouv.fr/mon-compte">
+                                            <span class="fr-icon-user-line fr-icon--sm">&emsp;Mon compte</span></a>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="https://cartes.gouv.fr/logout"
+                                                class="fr-icon-logout-box-r-line fr-icon--sm custom-center-btn fr-btn fr-btn--tertiary fr-btn--sm fr-mt-3v fr-mx-2w"
+                                                style="display: flex; align-items: center; justify-content: center;">
+                                                Se déconnecter
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            `;
+        };
 
-        document.getElementById("logout-button")?.addEventListener("click", () => {
-            keycloak.logout({ redirectUri: window.location.origin });
-        });
+        authContainer.innerHTML = generateUserMenuHTML("espace-collapse");
+
+        const authContainerMobile = document.getElementById("header-auth-mobile");
+        if (authContainerMobile) {
+            authContainerMobile.innerHTML = generateUserMenuHTML("espace-collapse-mobile");
+        }
     };
 
     const keycloak = new Keycloak({
-        url: "",
-        realm: "",
-        clientId: "",
+        url: "https://sso.geopf.fr",
+        realm: "geoplateforme",
+        clientId: "cartes-gouv-public",
     });
 
     // "Authorization Code" flow avec PKCE (type de client Keycloak : Public).

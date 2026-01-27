@@ -249,6 +249,10 @@ div.fr-callout__text p {
     justify-content: center;
 }
 
+.fr-menu__list {
+    min-width: 288px;
+}
+
 @media (min-width: 62em) {
     .fr-menu .fr-nav__link {
         box-shadow: inset 0 1px 0 0 var(--border-default-grey);
