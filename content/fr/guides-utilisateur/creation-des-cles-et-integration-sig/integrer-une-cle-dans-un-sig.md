@@ -105,7 +105,6 @@ Dans **FME Workbench** :
      `https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/token`
    - **Format de la requête :**
      `redirect_uri=https://data.geopf.fr/swagger-ui/oauth2-redirect.html&client_id=[CLIENT_ID]&client_secret=[CLIENT_SECRET]&grant_type=authorization_code&code=[responseCode]&refresh_token=[REFRESH_TOKEN]&response_type=refresh_token`
-     
 ![Formulaire Manage Web Services](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/15_manage-web-services.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 5. Cliquez sur **« + »**, sélectionnez le service créé, attribuez un nom, puis validez.
