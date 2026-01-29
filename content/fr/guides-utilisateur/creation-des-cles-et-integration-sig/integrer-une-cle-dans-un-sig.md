@@ -66,8 +66,8 @@ Dans **QGIS** :
 3. Récupérez la valeur située après **_<span lang="en">`apikey=</span>_** dans l’URL copiée.
 
 4. Complétez les champs :
-  - **Clé d’en-tête :** **_<span lang="en">`apikey={votre hash}`</span>_**
-  - **Valeur d’en-tête :** collez la valeur du HASH
+    - **Clé d’en-tête :** **_<span lang="en">`apikey={votre hash}`</span>_**
+    - **Valeur d’en-tête :** collez la valeur du HASH
 
 5. Cliquez sur **« Enregistrer »**.
 ![Formulaire de configuration d’une authentification de type API Header dans QGIS, rempli avec une clé nommée apikey.](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/10_api-header.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -105,7 +105,6 @@ Dans **FME Workbench** :
      `https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/token`
    - **Format de la requête :**
      `redirect_uri=https://data.geopf.fr/swagger-ui/oauth2-redirect.html&client_id=[CLIENT_ID]&client_secret=[CLIENT_SECRET]&grant_type=authorization_code&code=[responseCode]&refresh_token=[REFRESH_TOKEN]&response_type=refresh_token`
-     
 ![Formulaire Manage Web Services](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/15_manage-web-services.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 5. Cliquez sur **« + »**, sélectionnez le service créé, attribuez un nom, puis validez.
