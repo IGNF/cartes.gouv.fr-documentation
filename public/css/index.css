@@ -247,6 +247,14 @@ div.fr-callout__text p {
 .custom-center-btn {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+/* Force le centrage pour les boutons aussi */
+a.custom-center-btn.fr-btn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .fr-menu__list {

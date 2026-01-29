@@ -49,8 +49,7 @@ import Keycloak from "/js/keycloak.js";
                                     <li>
                                         <div>
                                             <a href="https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/logout?post_logout_redirect_uri=${currentUrl}&client_id=cartes-gouv-public"
-                                                class="fr-icon-logout-box-r-line fr-icon--sm custom-center-btn fr-btn fr-btn--tertiary fr-btn--sm fr-mt-3v fr-mx-2w"
-                                                style="display: flex; align-items: center; justify-content: center;">
+                                                class="fr-icon-logout-box-r-line fr-icon--sm custom-center-btn fr-btn fr-btn--tertiary fr-btn--sm fr-mt-3v fr-mx-2w">
                                                 Se déconnecter
                                             </a>
                                         </div>
