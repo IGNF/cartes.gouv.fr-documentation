@@ -58,7 +58,7 @@ Dans **QGIS** :
 
 ### Connexion avec une clé HASH
 
-1.  Copiez l’URL de la clé **HASH** depuis **« Mes clés d’accès »**.
+1. Copiez l’URL de la clé **HASH** depuis **« Mes clés d’accès »**.
 ![Localisation de l’URL à copier dans l’interface de cartes.gouv.fr](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/09_cle-hash-gpf.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 2. Dans **QGIS**, ouvrez l’onglet **« Gestionnaire des sources de données »** et cliquez sur **« Nouveau »** pour créer une nouvelle configuration.
