@@ -1,6 +1,6 @@
 ---
 title: Intégrer une clé dans son SIG
-description: Exemples avec QGIS ou FME
+description: Exemples avec QGIS et FME
 tags:
     - SIG
     - QGIS
@@ -58,22 +58,22 @@ Dans **QGIS** :
 
 ### Connexion avec une clé HASH
 
-1. Copiez l’URL de la clé **HASH** depuis **« Mes clés d’accès »**.
+1.  Copiez l’URL de la clé **HASH** depuis **« Mes clés d’accès »**.
 ![Localisation de l’URL à copier dans l’interface de cartes.gouv.fr](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/09_cle-hash-gpf.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-2. Dans **QGIS**, ouvrez l’onglet **« Authentification »** et cliquez sur **« + »** pour créer une nouvelle configuration.
+2. Dans **QGIS**, ouvrez l’onglet **« Gestionnaire des sources de données »** et cliquez sur **« Nouveau »** pour créer une nouvelle configuration.
+![Formulaire de configuration d’une nouvelle connexion dans QGIS, rempli avec une clé nommée apikey.](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/10_nouvelle-connexion.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-3. Récupérez la valeur située après **_<span lang="en">`apikey=</span>_** dans l’URL copiée.
+3. Dans la boîte de dialogue **« Créer une nouvelle connexion WMS/WMTS »**, renseignez les champs :
+    - **Nom :** (nom que vous souhaitez donner à la connexion au serveur)
+    - **URL :** (l’URL de la clé **HASH** copiez-ci dessus à l'étape une)
 
-4. Complétez les champs :
-  - **Clé d’en-tête :** **_<span lang="en">`apikey={votre hash}`</span>_**
-  - **Valeur d’en-tête :** collez la valeur du HASH
+4. Cochez la case **Ignorez les _<span lang="en">URI GetMap/GetTile/GetLegendGraphic</span>_ signalés dans les capacités** pour établir la connexion à une donnée restreinte.
 
-5. Cliquez sur **« Enregistrer »**.
-![Formulaire de configuration d’une authentification de type API Header dans QGIS, rempli avec une clé nommée apikey.](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/10_api-header.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+5. Validez par **« OK »**.
 
 6. Puis, cliquez sur **« Connexion »** et sélectionnez les couches filtrées par votre clé **HASH** et cliquez sur **« Ajouter »**.
-![Liste des couches disponibles à l’ajout](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/11_ajout-couche-api-header.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Liste des couches disponibles à l’ajout](/img/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-dans-sig/11_ajout-couche-qgis.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ---
 

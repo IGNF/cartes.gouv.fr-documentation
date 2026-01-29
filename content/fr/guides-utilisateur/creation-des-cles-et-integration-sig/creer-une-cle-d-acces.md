@@ -53,7 +53,7 @@ Le nom d’utilisateur doit être unique à l’échelle de cartes.gouv.fr et vo
 
 ### HASH
 
-Une **chaîne de hachage** est générée automatiquement. Elle devra être transmise comme paramètre supplémentaire dans vos requêtes (sous la forme **_<span lang="en">`apikey={votre hash}`</span>_**). Ce mode est bien adapté aux **intégrations sur un site web** :
+Une valeur de **_<span lang="en">HASH</span>_** (chaine de caractère) est calculée automatiquement et devra être fournie comme paramètre supplémentaire dans les requêtes de consultation et de téléchargement. Ce type d'authentification est adapté en particulier pour une utilisation sur un site internet.
 
 ![Option HASH sans champ de formulaire à renseigner](/img/guides-utilisateur/creation-des-cles-et-integration-sig/creer-une-cle-d-acces/05_securisation-hash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

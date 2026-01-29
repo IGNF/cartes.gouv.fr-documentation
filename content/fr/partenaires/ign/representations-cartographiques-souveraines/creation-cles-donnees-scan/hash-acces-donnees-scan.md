@@ -22,7 +22,7 @@ Cochez ensuite la case correspondant à la ressource que vous souhaitez rendre a
 ![Services accessibles](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/02_services-accessibles.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Dans la seconde étape, sélectionnez **HASH**.
-Ce mécanisme génère une **chaîne de caractères** à intégrer dans l’en-tête (*Header*) de l’appel, pour un usage en **application web** ou dans un **SIG**.
+Ce mécanisme génère une **chaîne de caractères** à intégrer dans l’en-tête de l’appel, pour un usage en **application web** ou dans un **SIG**.
 Cliquez enfin sur **« Ajouter »**.
 
 ![Options de sécurisation](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/03_options-securisation.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -31,10 +31,15 @@ Cliquez enfin sur **« Ajouter »**.
 Consultez la page dédiée à la clé <a href="https://ignf.github.io/cartes.gouv.fr-documentation/fr/guides-utilisateur/creation-des-cles-et-integration-sig/creer-une-cle-d-acces/#hash" target="_blank" rel="noopener noreferrer" title="Clé HASH">HASH</a> pour en comprendre le fonctionnement. Pour en savoir plus sur les autres types de sécurisation proposés sur cartes.gouv.fr, vous pouvez également consulter ce <a href="https://ignf.github.io/cartes.gouv.fr-documentation/fr/guides-utilisateur/creation-des-cles-et-integration-sig/" target="_blank" rel="noopener noreferrer" title="Tutoriel création des clés">tutoriel</a>.
 :::
 
+Une fois le tutoriel terminé, votre connexion aux données SCAN sera établie. Pour visualiser la donnée SCAN, il vous suffira de zoomer sur la couche correspondante.
+
+![SCAN 25 Touristique sur QGIS](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/04_scan25-touristique.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+
 #### Services accessibles avec la clé HASH
 
 :::warning
-Une fois votre clé HASH générée, vous accédez à quatre types d’options : trois services de consultation de flux OGC (WMS-R, WMTS, TMS) et un service de téléchargement. La même clé HASH est utilisée pour l’ensemble de ces services. Pour utiliser les URLs ci-dessous, remplacez [VOTRE CLÉ] par le HASH généré automatiquement dans cartes.gouv.fr. Cette valeur doit simplement être copiée puis collée à la suite de **« apikey= »**.
+Une fois votre clé HASH générée, vous accédez à quatre types d’options : trois services de consultation de flux OGC (WMS-R, WMTS, TMS) et un service de téléchargement. La même clé HASH est utilisée pour l’ensemble de ces services.
 :::
 
 ![apikey](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/04_apikey.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -61,14 +66,9 @@ https://data.geopf.fr/private/tms/1.0.0/?apikey=[VOTRE CLÉ]
 
 Une fois la clé HASH créée, l’URL fournie correspond à un **_<span lang="en">GetCapabilities</span>_**, qui sert uniquement à lister les ressources disponibles. Elle ne permet pas de télécharger des données. Pour en savoir plus sur les méthodes de l’API de téléchargement, <a href="https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/telechargement/" target="_blank" rel="noopener noreferrer" title="API de téléchargement">consultez la documentation dédiée</a>.
 
-```plain
-https://data.geopf.fr/private/telechargement/resource/SCANOACI?service=null&version=null&request=GetCapabilities&apikey=[VOTRE CLÉ]
-```
-
 Pour télécharger les données, veuillez consulter ce <a href="https://data.geopf.fr/annexes/ressources/documentation/SCANs.csv" target="_blank" rel="noopener noreferrer" title="Méthode Download (TXT)">fichier CSV</a>.
 
 Exemple de requête :
-
 ```plain
 https://data.geopf.fr/private/telechargement/download/SCAN100/SCAN100_2-0__TIFF_LAMB93_D094_2021-11-01/SCAN100_2-0__TIFF_LAMB93_D094_2021-11-01.7z?apikey=[VOTRE CLÉ]
 ```
