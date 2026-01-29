@@ -23,6 +23,7 @@ import Keycloak from "/js/keycloak.js";
             "Compte";
 
         const generateUserMenuHTML = (collapseId) => {
+            const currentUrl = encodeURIComponent(window.location.href);
             return `
                 <li>
                     <div class="fr-translate fr-nav">
@@ -47,7 +48,7 @@ import Keycloak from "/js/keycloak.js";
                                     </li>
                                     <li>
                                         <div>
-                                            <a href="https://cartes.gouv.fr/logout"
+                                            <a href="https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/logout?post_logout_redirect_uri=${currentUrl}&client_id=cartes-gouv-public"
                                                 class="fr-icon-logout-box-r-line fr-icon--sm custom-center-btn fr-btn fr-btn--tertiary fr-btn--sm fr-mt-3v fr-mx-2w"
                                                 style="display: flex; align-items: center; justify-content: center;">
                                                 Se déconnecter
