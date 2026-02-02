@@ -8,12 +8,18 @@
             <li class="fr-nav__item">
                 {% if not link.children | length %}
                     {% set linkUrl = link.url | locale_url(lang) or link.externalUrl %}
+                    {% set isCurrentSection = false %}
+                    {% if linkUrl == page.url %}
+                        {% set isCurrentSection = true %}
+                    {% elif link.url and page.url.startsWith(link.url) %}
+                        {% set isCurrentSection = true %}
+                    {% endif %}
                     <a
                         class="fr-nav__link"
                         href="{{ linkUrl }}"
                         {% if link.externalUrl %}target="_blank" rel="noopener"{% endif %}
                         title="{{ link.tooltip }}"
-                        {% if linkUrl == page.url %}aria-current="page"{% endif %}
+                        {% if isCurrentSection %}aria-current="page"{% endif %}
                     >
                         {{ link.title }}
                     </a>
