@@ -42,7 +42,7 @@ Une fois le tutoriel terminé, votre connexion aux données SCAN sera établie. 
 Une fois votre clé HASH générée, vous accédez à quatre types d’options : trois services de consultation de flux OGC (WMS-R, WMTS, TMS) et un service de téléchargement. La même clé HASH est utilisée pour l’ensemble de ces services.
 :::
 
-![apikey](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/04_apikey.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![apikey](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/05_apikey.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 
 ##### Données en consultation (flux OGC)
@@ -73,7 +73,7 @@ Exemple de requête :
 https://data.geopf.fr/private/telechargement/download/SCAN100/SCAN100_2-0__TIFF_LAMB93_D094_2021-11-01/SCAN100_2-0__TIFF_LAMB93_D094_2021-11-01.7z?apikey=[VOTRE CLÉ]
 ```
 
-![Clé HASH](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/05_cle-hash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Clé HASH](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/06_cle-hash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::callout
 Pour vous connecter correctement à un SIG (QGIS), consultez la page dédiée à l’intégration d’une clé <a href="https://ignf.github.io/cartes.gouv.fr-documentation/fr/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-une-cle-dans-un-sig/#connexion-avec-une-cle-hash" target="_blank" rel="noopener noreferrer" title="Clé HASH">HASH</a>.
