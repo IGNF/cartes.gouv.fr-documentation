@@ -39,6 +39,7 @@ module.exports = function (eleventyConfig) {
         "./node_modules/mermaid/dist/mermaid.min.js": "/js/mermaid.min.js",
         "./node_modules/swagger-ui/dist/swagger-ui.css": "/css/swagger-ui.css",
         "./node_modules/swagger-ui/dist/swagger-ui-bundle.js": "/js/swagger-ui.js",
+        "./node_modules/keycloak-js/lib/keycloak.js": "/js/keycloak.js",
     });
 
     // Run Eleventy when these files change:
