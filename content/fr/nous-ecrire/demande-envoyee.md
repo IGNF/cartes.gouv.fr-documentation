@@ -1,8 +1,10 @@
 ---
 title: Demande envoyée
 layout: layouts/page.njk
+segments:
+    - url: /nous-ecrire
+      title: Nous écrire
 ---
-
 
 <div id="contact-success" class="fr-alert fr-alert--success" data-fr-js-alert-actionee="true">
     <h3 class="fr-alert__title">Votre message a bien été envoyé</h3>
