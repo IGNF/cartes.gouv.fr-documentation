@@ -33,9 +33,9 @@ import Keycloak from "./keycloak.js";
                             <div class="fr-collapse fr-translate__menu fr-menu" id="${collapseId}">
                                 <ul class="fr-menu__list">
                                     <li style="pointer-events: none;">
-                                        <div class="fr-text--sm">
-                                            <p class="custom-center-btn fr-text--bold fr-mx-2w fr-text--sm fr-mt-3v fr-mb-2v">${displayName}</p>
-                                            <p class="fr-text--xs fr-mb-3v fr-mx-2w fr-text-mention--grey" style="text-align: left;">${claims.email}</p>
+                                        <div style="text-align: left;">
+                                            <p class="fr-text--bold fr-mx-2w fr-text--sm fr-mt-3v fr-mb-2v">${displayName}</p>
+                                            <p class="fr-text--xs fr-mb-3v fr-mx-2w fr-text-mention--grey">${claims.email}</p>
                                         </div>
                                     </li>
                                     <li>
@@ -84,6 +84,7 @@ import Keycloak from "./keycloak.js";
             pkceMethod: "S256",
             checkLoginIframe: false,
             silentCheckSsoRedirectUri: `${window.location.origin}/aide/silent-check-sso.html`,
+            responseMode: "query",
         })
         .then(async (authenticated) => {
             if (!authenticated) {

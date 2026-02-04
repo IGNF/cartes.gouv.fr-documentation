@@ -240,10 +240,6 @@ div.fr-callout__text p {
     content: none !important;
 }
 
-.fr-translate__menu {
-    width: max-content !important;
-}
-
 .custom-center-btn {
     display: flex;
     justify-content: center;
