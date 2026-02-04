@@ -117,7 +117,7 @@ _N.B. : Ces commandes sont exécutables quelle que soit la branche sur laquelle
 npm start
 ```
 
-Cette commande rend le site disponible à l'adresse `http://localhost:8080/fr/` et reste active, à l'écoute des changements que vous effectuez dans le projet.
+Cette commande rend le site disponible à l'adresse `http://localhost:8080/aide/fr/` et reste active, à l'écoute des changements que vous effectuez dans le projet.
 
 **:sparkles: Vous avez maintenant réussi à déployer le site en local :sparkles:**
 

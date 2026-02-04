@@ -114,7 +114,7 @@ Les commandes peuvent se lancer depuis n’importe quel sous-dossier mais il est
 
 ## Exécuter _Eleventy_ pour construire le site
 
-Cette procédure permet de prévisualiser votre clone local et toutes les modifications que vous y apportez dans votre navigateur, avant d’en demander la fusion finale au dépôt principal. La prévisualisation est disponible sous l’adresse <a href="http://localhost:8080/fr" target="_blank" rel="noopener noreferrer" title="http://localhost:8080/fr - ouvre une nouvelle fenêtre">http://localhost:8080/fr</a>.
+Cette procédure permet de prévisualiser votre clone local et toutes les modifications que vous y apportez dans votre navigateur, avant d’en demander la fusion finale au dépôt principal. La prévisualisation est disponible sous l’adresse <a href="http://localhost:8080/aide/fr" target="_blank" rel="noopener noreferrer" title="http://localhost:8080/aide/fr - ouvre une nouvelle fenêtre">http://localhost:8080/aide/fr</a>.
 
 _Eleventy_ est le logiciel utilisé pour construire le site. Il transforme les fichiers _markdown_ ou _nunjucks_ du dossier **« content »** en pages _html_ à l’aide des gabarits du dossier **« _includes »**. Ensuite _Pagefind_ indexe le contenu de ces pages pour que le moteur de recherche du site soit fonctionnel.
 
@@ -126,13 +126,9 @@ Lancez la commande suivante :
 npm start
 ```
 
-Cette commande rend le site disponible à l’adresse <a href="http://localhost:8080/fr" target="_blank" rel="noopener noreferrer" title="http://localhost:8080/fr - ouvre une nouvelle fenêtre">http://localhost:8080/fr</a> et reste active, à l’écoute des changements que vous effectuez dans le projet. Normalement cette commande lance automatiquement la commande _npm run build_.
+Cette commande rend le site disponible à l’adresse <a href="http://localhost:8080/aide/fr" target="_blank" rel="noopener noreferrer" title="http://localhost:8080/aide/fr - ouvre une nouvelle fenêtre">http://localhost:8080/aide/fr</a> et reste active, à l’écoute des changements que vous effectuez dans le projet. Normalement cette commande lance automatiquement la commande _npm run build_.
 
 Le site est ainsi maintenu à jour en même temps que vous modifiez des fichiers. Mais les contenus modifiés ne sont pas indexés pour la recherche et il peut arriver que certaines modifications ne soient pas immédiatement prises en compte. Dans ce cas, arrêtez le site (**« Ctrl+C »** dans l’invite de commande _Git Bash_) et relancez les 2 commandes précédentes : _npm run build_ puis _npm start_.
-
-:::info
-Il est normal que la page d’accueil soit une erreur 404. La page d’accueil réelle et correctement fléchée lors des déploiements en production est **« /fr »**.
-:::
 
 ---
 
