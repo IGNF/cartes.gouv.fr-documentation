@@ -1,4 +1,4 @@
-import Keycloak from "/js/keycloak.js";
+import Keycloak from "./keycloak.js";
 
 (() => {
     const authContainer = document.getElementById("header-auth");
