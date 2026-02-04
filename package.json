@@ -6,7 +6,7 @@
         "build": "npx @11ty/eleventy",
         "build-ghpages": "npx @11ty/eleventy --pathprefix=/cartes.gouv.fr-documentation/",
         "postbuild": "npx pagefind --site _site/ --output-subdir \"_pagefind\"",
-        "start": "npx @11ty/eleventy --serve --quiet",
+        "start": "npx @11ty/eleventy --serve --quiet --pathprefix=/aide",
         "prestart": "npm run build",
         "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
         "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
