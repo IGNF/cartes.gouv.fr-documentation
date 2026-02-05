@@ -7,5 +7,5 @@
         iamClientId: "cartes-gouv-public",
     };
     Object.freeze(window.__CARTESGOUVFR_DOCS_ENV__);
-    Object.defineProperty(window, __CARTESGOUVFR_DOCS_ENV__, { configurable: false, writable: false });
+    Object.defineProperty(window, '__CARTESGOUVFR_DOCS_ENV__', { configurable: false, writable: false });
 })();
