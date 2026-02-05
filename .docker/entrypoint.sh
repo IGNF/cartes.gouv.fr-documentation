@@ -29,7 +29,7 @@ cat > /tmp/env.js <<EOF
         iamClientId: "${iam_client_id_escaped}",
     };
     Object.freeze(window.__CARTESGOUVFR_DOCS_ENV__);
-    Object.defineProperty(window,__CARTESGOUVFR_DOCS_ENV__,{configurable:false,writable:false,});
+    Object.defineProperty(window, '__CARTESGOUVFR_DOCS_ENV__', { configurable: false, writable: false });
 })();
 EOF
 
