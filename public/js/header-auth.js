@@ -1,6 +1,8 @@
 import Keycloak from "./keycloak.js";
 
 (() => {
+    const env = (typeof window !== "undefined" && window.__CARTESGOUVFR_DOCS_ENV__) ?? {};
+
     const authContainer = document.getElementById("header-auth");
     if (!authContainer) return;
 
@@ -24,6 +26,7 @@ import Keycloak from "./keycloak.js";
 
         const generateUserMenuHTML = (collapseId) => {
             const currentUrl = encodeURIComponent(window.location.href);
+            const logoutUrl = `${env.iamUrl}/realms/${encodeURIComponent(env.iamRealm)}/protocol/openid-connect/logout?post_logout_redirect_uri=${currentUrl}&client_id=${encodeURIComponent(env.iamClientId)}`;
             return `
                 <li>
                     <div class="fr-translate fr-nav">
@@ -48,7 +51,7 @@ import Keycloak from "./keycloak.js";
                                     </li>
                                     <li>
                                         <div>
-                                            <a href="https://sso.geopf.fr/realms/geoplateforme/protocol/openid-connect/logout?post_logout_redirect_uri=${currentUrl}&client_id=cartes-gouv-public"
+                                            <a href="${logoutUrl}"
                                                 class="fr-icon-logout-box-r-line fr-icon--sm custom-center-btn fr-btn fr-btn--tertiary fr-btn--sm fr-mt-3v fr-mx-2w">
                                                 Se déconnecter
                                             </a>
@@ -71,9 +74,9 @@ import Keycloak from "./keycloak.js";
     };
 
     const keycloak = new Keycloak({
-        url: "https://sso.geopf.fr",
-        realm: "geoplateforme",
-        clientId: "cartes-gouv-public",
+        url: env.iamUrl,
+        realm: env.iamRealm,
+        clientId: env.iamClientId,
     });
 
     // "Authorization Code" flow avec PKCE (type de client Keycloak : Public).
