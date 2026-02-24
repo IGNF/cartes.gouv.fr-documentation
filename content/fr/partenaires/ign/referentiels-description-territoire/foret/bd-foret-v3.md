@@ -14,7 +14,7 @@ image:
 ---
 
 #### La BD Forêt v3 arrive ! Testez-la dès aujourd'hui, et faites un retour ! 
-Vous avez besoin d'en connaitre plus sur les forêts et ses essences ? 
+Vous avez besoin d'en connaitre plus sur les forêts et ses essences ?
 Vous êtes un acteur de la filière forêt-bois, de l'aménagement du territoire, de la préservation de l'environnement ou intéressé par les forêts françaises ?  
 L’équipe projet BD Forêt v3 de l’IGN met à votre disposition un nouveau jeu de données disponible via le lien suivant : <>
 Vous allez être rebasculé sur le catalogue cartes.gouv, dans lequel vous retrouverez une prévisualisation des données ainsi qu'un lien de téléchargement.
