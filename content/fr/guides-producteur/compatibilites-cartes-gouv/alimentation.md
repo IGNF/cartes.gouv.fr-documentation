@@ -10,7 +10,7 @@ eleventyNavigation:
     order: 1
     nav: guides-producteur
 pictogram: document/contract.svg
-description: Petit guide pour des pages bien écrites
+description: Construction de la métadonnée compatible avec cartes.gouv.fr
 summary:
     visible: true
     depth: 2
