@@ -1,11 +1,11 @@
 ---
-title: Présence de vos données sur le catalogue de Cartes.gouv
+title: Présence de vos données sur le catalogue de cartes.gouv
 mermaid: true
 tags:
     - Compatibilité
     - Diffusion
 eleventyNavigation:
-    key: Présence de vos données sur le catalogue de Cartes.gouv
+    key: Présence de vos données sur le catalogue de cartes.gouv
     parent: Compatibilités cartes.gouv
     order: 2
     nav: guides-producteur
