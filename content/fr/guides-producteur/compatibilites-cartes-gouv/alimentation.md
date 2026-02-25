@@ -90,7 +90,6 @@ flowchart LR
 
 Une fois cet étiquetage réalisé, on peut retrouver notre fiche de données dans la liste des données de l'entrepôt à l'URL `https://cartes.gouv.fr/entrepot/{datastore}/donnees` :
 
-![Liste des fiches de données de l'entrepôt](../../../assets/images/cartes-gouv/fdds.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 ![Liste des fiches de données de l'entrepôt](/img/guides-producteur/compatibilites-cartes-gouv/alimentation/fdds.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Et la fiche elle même à l'adresse `https://cartes.gouv.fr/entrepot/{datastore}/donnees/Mon%20jeu%20de%20donn%C3%A9es`, ou le nom de la fiche est rendu compatible avec une utilisation dans une URL.
