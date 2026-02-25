@@ -4,13 +4,18 @@ mermaid: true
 tags:
     - Compatibilité
     - Alimentation
+    - Publier une donnée
+    - Géoplateforme
+    - Styles
+    - Annexes
+    - Métadonnées
 eleventyNavigation:
     key: Compatibilité de l'alimentation avec cartes.gouv.fr
-    parent: Compatibilités Cartes.gouv
+    parent: Compatibilités cartes.gouv
     order: 1
     nav: guides-producteur
 pictogram: document/contract.svg
-description: Construction de la métadonnée compatible avec cartes.gouv.fr
+description: Retrouver sur cartes.gouv.fr ses données de la Géoplateforme
 summary:
     visible: true
     depth: 2
@@ -24,7 +29,7 @@ Afin de retrouver vos données sur les différents tableaux de bord de [cartes.g
 
 Le concept principal sur cartes.gouv.fr est la fiche de données. Elle regroupe la livraison, les données stockées construites à partir d'elle (directement comme l'intégration ou indirectement comme une pyramide), ainsi que les configurations de ses différentes diffusions et une métadonnée.
 
-Afin de matérialiser cette notion dans l'entrepôt, les entités suivantes vont porter le tag `datasheet_name`, dont la valeur est un nom humain (accents et espaces acceptés) :
+Afin de matérialiser cette notion dans l'entrepôt, les entités suivantes vont porter le tag `datasheet_name`, dont la valeur est un nom humain (accents et espaces acceptés) : 
 
 * La livraison
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tags"
@@ -332,7 +337,7 @@ Si vous souhaitez que vos documents annexes aux données soient associés à une
 ```
 ???
 
-Il faut ensuite tenir à jour l'annexe qui liste ces documents. Une annexe avec les labels `type=document-list` et `datasheet_name=Mon jeu de données` a été automatiquement ajouté par cartes.gouv.fr lors de la détection de la fiche de données. Nous allons devoir la remplacer ave cle nouveau contenu.
+Il faut ensuite tenir à jour l'annexe qui liste ces documents. Une annexe avec les labels `type=document-list` et `datasheet_name=Mon jeu de données` a été automatiquement ajouté par cartes.gouv.fr lors de la détection de la fiche de données. Nous allons devoir la remplacer avec le nouveau contenu.
 
 Cette annexe est un tableau JSON au contenu suivant (vide pour le moment) :
 

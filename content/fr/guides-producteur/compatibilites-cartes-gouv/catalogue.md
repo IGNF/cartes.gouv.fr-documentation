@@ -6,7 +6,7 @@ tags:
     - Diffusion
 eleventyNavigation:
     key: Présence de vos données sur le catalogue de Cartes.gouv
-    parent: Compatibilités Cartes.gouv
+    parent: Compatibilités cartes.gouv
     order: 2
     nav: guides-producteur
 pictogram: digital/self-training.svg
