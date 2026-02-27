@@ -148,7 +148,7 @@ let checkMail = function (mail) {
     document.getElementById("input-mail-messages-group").innerHTML = "";
     if (!mail || !mail.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/)) {
         document.getElementById("mail-input-group").classList.toggle("fr-input-group--error");
-        document.getElementById("input-mail-messages-group").innerHTML = "<p class='fr-error-text'> Veuillez saisir une adresse email valide </p>";
+        document.getElementById("input-mail-messages-group").innerHTML = "<p class='fr-error-text'> Veuillez saisir une adresse électronique valide </p>";
         isFormValid = false;
     }
 };
