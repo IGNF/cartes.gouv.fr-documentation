@@ -15,7 +15,7 @@ eleventyNavigation:
     order: 1
     nav: guides-producteur
 pictogram: document/contract.svg
-description: Retrouver sur cartes.gouv.fr ses données de la Géoplateforme
+description: Retrouvez vos données de la Géoplateforme sur cartes.gouv.fr
 summary:
     visible: true
     depth: 2
@@ -426,8 +426,9 @@ Dans l'onglet `Services` de la page de la fiche de données, nous allons pouvoir
 
 De nombreux champs sont pré-remplis avec les informations de la donnée utilisée par le service, mais il est possible de le modifier. Il y a 5 étapes à suivre. Lors de l'étape 3, il faut renseigner "Identificateur de ressource unique". Cet identifiant permettra d'accéder à la métadonnée sur le catalogue public.
 
-Lors de la validation, une métadonnée est téléversée dans l'entrepôt et publiée sur le catalogue public. Avec l'identifiant unique, vous pouvez consulter la métadonnée sur le service CSW avec la requête [GetRecordById]({{ urls.open.csw }}?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&ID={identifiant unique}) ou sur le [catalogue de cartes.gouv.fr](https://cartes.gouv.fr/catalogue/dataset/{identifiant unique}).
+Lors de la validation, une métadonnée est téléversée dans l'entrepôt et publiée sur le catalogue public. Avec l'identifiant unique, vous pouvez consulter la métadonnée sur le service CSW avec la requête [GetRecordById]({{ urls.public.csw }}?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&ID={identifiant-unique}) ou sur le [catalogue de cartes.gouv.fr](https://cartes.gouv.fr/catalogue/dataset/{identifiant-unique}).
 
 ### Via des outils en ligne de commande
 
-:construction: À venir :construction:
+:::info À venir 
+:::

@@ -25,14 +25,6 @@ Cette métadonnée permet à l'interface graphique du catalogue de présenter au
 ![Exemple de fiche de données sur le catalogue](/img/guides-producteur/compatibilites-cartes-gouv/catalogue/fiche-catalogue.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Le back-office de cartes.gouv.fr permet de construire une métadonnée associée au 
-<a
-id="link-1"
-href="../alimentation#la-fiche-de-donnees"
-target="\_self"
-class="fr-link fr-icon-arrow-right-line fr-link--icon-right"> concept de fiche de données</a>
+[concept de fiche de données.](../alimentation#la-fiche-de-donnees){.fr-icon-arrow-right-line .fr-link--icon-right}
 
-<a
-id="link-1"
-href="../alimentation#la-metadonnee"
-target="\_self"
-class="fr-link fr-icon-arrow-right-line fr-link--icon-right"> La métadonnée</a>
+[La métadonnée](../alimentation#la-metadonnee){.fr-icon-arrow-right-line .fr-link--icon-right}
