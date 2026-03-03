@@ -19,7 +19,7 @@ Testez dès aujourd’hui un nouveau jeu de données forestières plus précis, 
 Partagez votre retour pour co-construire la future donnée de référence. Les réponses que vous apporterez nous aideront à mesurer votre degré de satisfaction vis-à-vis des différentes versions des jeux test produits.
 
 :::callout
-**Tester la BD Forêt v3 (lien à venir)**<br>
+<a href="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3 - ouvre une nouvelle fenêtre">**Tester la BD Forêt v3**</a> <br>
 <a href="https://tally.so/r/OD5zQa" target="_blank" rel="noopener noreferrer" title="Questionnaire utilisateurs du jeu de données test BD Forêt v3- ouvre une nouvelle fenêtre">
     **Donner mon avis**
 </a>
@@ -40,15 +40,14 @@ L’équipe projet BD Forêt v3 de l’IGN met à votre disposition un jeu de do
 
 **En cliquant sur Tester la BD Forêt v3** : 
 - vous serez redirigé vers le catalogue cartes.gouv.fr
-- vous pourrez prévisualiser les données
 - vous disposerez d’un lien de téléchargement<br>
 
 **En cliquant sur Donner mon avis** :
 - vous serez rebasculez sur le questionnaire de satisfaction
-- vos retour sont attendu jusqu’au 20 avril 2026
+- vos retour sont attendu jusqu’au 10 avril 2026
 
 :::callout
-**Tester la BD Forêt v3 (lien à venir)**<br>
+<a href="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3 - ouvre une nouvelle fenêtre">**Tester la BD Forêt v3**</a> <br>
 <a href="https://tally.so/r/OD5zQa" target="_blank" rel="noopener noreferrer" title="Questionnaire utilisateurs du jeu de données test BD Forêt v3- ouvre une nouvelle fenêtre">
     **Donner mon avis**
 </a>
@@ -68,8 +67,7 @@ C'est dans ce contexte que le projet de production de la BD Forêt v3, en cours,
 #### BD Forêt v3 : un tournant technologique : 
 Dans la continuité de la BD Forêt v1 et v2, la BD Forêt v3 marque un renouveau majeur dans la cartographie forestière. Elle apportera à ses utilisateurs des informations actualisées sur les occupations forestières dans l’Hexagone.<br>
 ##### Les apports clés de la v3 : 
-- Actualisation rapide
-Objectif : <br>
+- Actualisation rapide : <br>
 Couvrir l’ensemble du territoire métropolitain en un an
 - Finesse géométrique accrue : <br>
 Distinction des essences dès 0,5 hectare
@@ -82,7 +80,7 @@ L’intelligence artificielle
 ??? Pour en savoir plus 
 
 ##### La BD Forêt v3 marque un tournant dans la cartographie forestière : 
-L’actualisation rapide des données (l’objectif étant de couvrir tout le territoire hexagonal en un an seulement), sa finesse géométrique et sémantique, fait de cette base de données un outil inégalé pour la localisation des essences forestières. La BD Forêt v3 se caractérise en effet par une nomenclature cible en 35 postes dans lesquelles plusieurs essences et mélanges d'essences ont été distingués par rapport à la v2 (8 essences supplémentaires ont été distinguées par rapport à la v2).<br> 
+L’actualisation rapide des données (l’objectif étant de couvrir tout le territoire hexagonal en un an seulement), sa finesse géométrique et sémantique, fait de cette base de données un outil inégalé pour la localisation des essences forestières. La BD Forêt v3 se caractérise en effet par une nomenclature cible en 35 classes dans lesquelles plusieurs essences et mélanges d'essences ont été distingués par rapport à la v2 (8 essences supplémentaires ont été distinguées par rapport à la v2).<br> 
 Sa résolution géométrique a également été affinée : désormais, les différentes essences cartographiées sont distinguées les unes des autres dès 0,5 hectares contre 2 hectares pour la BD Forêt v2.<br>
 Cette donnée sera construite en s’appuyant sur le <a href="{{ urls.aide}}/fr/partenaires/ign/referentiels-description-territoire/foret/masque-foret/" target="_blank" rel="noopener noreferrer" title="{{ urls.aide }}/fr/partenaires/ign/referentiels-description-territoire/foret/masque-foret/ - ouvre une nouvelle fenêtre">Masque Forêt v1</a>. Le Masque Forêt v1 permet de visualiser l’occupation forestière de l’hexagone et apporte une information sur l’usage spécifique de certaines forêts : les forêts avec un usage agricole déclaré ainsi que les forêts urbaines. Il constitue le périmètre de travail de la BD Forêt v3.
 
@@ -122,7 +120,7 @@ Un premier jeu test diffusé en juin 2025 a permis d’ajuster la chaîne de pro
 Un second jeu de données test, plus complet, est prévu pour mars 2026. 
 
 :::callout
-**Tester la BD Forêt v3 (lien à venir)**<br>
+<a href="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3" target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3 - ouvre une nouvelle fenêtre">**Tester la BD Forêt v3**</a> <br>
 <a href="https://tally.so/r/OD5zQa" target="_blank" rel="noopener noreferrer" title="Questionnaire utilisateurs du jeu de données test BD Forêt v3- ouvre une nouvelle fenêtre">
     **Donner mon avis**
 </a>
