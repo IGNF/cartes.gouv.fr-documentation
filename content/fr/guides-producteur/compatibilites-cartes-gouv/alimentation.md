@@ -21,7 +21,7 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
-Afin de retrouver vos données sur les différents tableaux de bord de [cartes.gouv.fr](https://cartes.gouv.fr/tableau-de-bord), il est nécessaire d'ajouter des étiquettes spécifiques sur vos entités entrepôt.
+Afin de retrouver vos données sur les différents [tableaux de bord de cartes.gouv.fr](https://cartes.gouv.fr/tableau-de-bord){target="_blank" rel="noopener noreferrer" title="https://cartes.gouv.fr/tableau-de-bord - ouvre une nouvelle fenêtre"}, il est nécessaire d'ajouter des étiquettes spécifiques sur vos entités entrepôt.
 
 ## La fiche de données
 
