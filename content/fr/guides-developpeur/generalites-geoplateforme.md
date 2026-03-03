@@ -5,6 +5,7 @@ layout: layouts/parent.njk
 eleventyNavigation:
     key: Généralités Géoplateforme
     order: 1
+    nav: guides-developpeur
 pictogram: digital/in-progress.svg
 ---
 
