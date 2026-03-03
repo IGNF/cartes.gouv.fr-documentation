@@ -1,7 +1,7 @@
 ---
 title: Concepts de l'Entrepôt
-layout: layouts/parent.njk
 description: Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation
+layout: layouts/parent.njk
 tags:
     - Géoplateforme
     - Entrepôt
@@ -10,7 +10,7 @@ tags:
     - Workflow d'alimentation
 eleventyNavigation:
     key: Concepts de l'Entrepôt
-    order: 2
+    order: 3
     nav: guides-developpeur
 pictogram: system/system.svg
 ---

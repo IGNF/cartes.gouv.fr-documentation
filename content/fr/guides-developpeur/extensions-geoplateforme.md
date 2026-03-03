@@ -1,11 +1,11 @@
 ---
 title: Extensions Géoplateforme
+description: Extensions facilitant l’accès aux ressources de la Géoplateforme pour les bibliothèques cartographiques Leaflet, OpenLayers et iTowns
 eleventyNavigation:
     key: Extensions Géoplateforme
-    order: 1
+    order: 2
     nav: guides-developpeur
 pictogram: digital/coding.svg
-description: Extensions facilitant l’accès aux ressources de la Géoplateforme pour les bibliothèques cartographiques Leaflet, OpenLayers et iTowns.
 ---
 
 

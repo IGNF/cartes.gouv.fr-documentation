@@ -1,5 +1,6 @@
 ---
 title: Compatibilité de l'alimentation avec cartes.gouv.fr
+description: Retrouvez vos données de la Géoplateforme sur cartes.gouv.fr
 mermaid: true
 tags:
     - Compatibilité
@@ -11,11 +12,8 @@ tags:
     - Métadonnées
 eleventyNavigation:
     key: Compatibilité de l'alimentation avec cartes.gouv.fr
-    parent: Compatibilités cartes.gouv
     order: 1
-    nav: guides-producteur
 pictogram: document/contract.svg
-description: Retrouvez vos données de la Géoplateforme sur cartes.gouv.fr
 summary:
     visible: true
     depth: 2
@@ -29,7 +27,7 @@ Afin de retrouver vos données sur les différents tableaux de bord de [cartes.g
 
 Le concept principal sur cartes.gouv.fr est la fiche de données. Elle regroupe la livraison, les données stockées construites à partir d'elle (directement comme l'intégration ou indirectement comme une pyramide), ainsi que les configurations de ses différentes diffusions et une métadonnée.
 
-Afin de matérialiser cette notion dans l'entrepôt, les entités suivantes vont porter le tag `datasheet_name`, dont la valeur est un nom humain (accents et espaces acceptés) : 
+Afin de matérialiser cette notion dans l'entrepôt, les entités suivantes vont porter le tag `datasheet_name`, dont la valeur est un nom humain (accents et espaces acceptés) : 
 
 * La livraison
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tags"
@@ -43,6 +41,7 @@ Afin de matérialiser cette notion dans l'entrepôt, les entités suivantes vont
 }
 ```
 ???
+<br>
 
 * La donnée stockée
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}/tags"
@@ -56,6 +55,7 @@ Afin de matérialiser cette notion dans l'entrepôt, les entités suivantes vont
 }
 ```
 ???
+<br>
 
 * Les configurations
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/tags"
@@ -69,6 +69,7 @@ Afin de matérialiser cette notion dans l'entrepôt, les entités suivantes vont
 }
 ```
 ???
+<br>
 
 ```mermaid
 ---
@@ -93,7 +94,7 @@ flowchart LR
     WFS --- tagf>datasheet_name = 'Mon jeu de données']
 ```
 
-Une fois cet étiquetage réalisé, on peut retrouver notre fiche de données dans la liste des données de l'entrepôt à l'URL `https://cartes.gouv.fr/entrepot/{datastore}/donnees` :
+Une fois cet étiquetage réalisé, on peut retrouver notre fiche de données dans la liste des données de l'entrepôt à l'URL `https://cartes.gouv.fr/entrepot/{datastore}/donnees` :
 
 ![Liste des fiches de données de l'entrepôt](/img/guides-producteur/compatibilites-cartes-gouv/alimentation/fdds.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -113,8 +114,8 @@ Il est possible d'avoir une vignette associée à la fiche de données, sous for
     data: [
         ["file = `<vignette.png>`"],
         ["paths = vignettes/jeu-de-donnees.png"],
-        ["file = `true`"],
-        ["file = `type=thumbnail,datasheet_name=Mon jeu de données`"]
+        ["published = `true`"],
+        ["labels = `type=thumbnail,datasheet_name=Mon jeu de données`"]
     ]
 }) }}  
 
@@ -135,6 +136,7 @@ Il est possible d'avoir une vignette associée à la fiche de données, sous for
 }
 ```
 ???
+<br>
 
 ![Liste des fiches de données de l'entrepôt](/img/guides-producteur/compatibilites-cartes-gouv/alimentation/fddsv.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -148,7 +150,7 @@ L'interface cartes.gouv.fr permet de visualiser vos données dès lors qu'elles 
 
 ![Visualisation d'un jeu de données publié en WMS](/img/guides-producteur/compatibilites-cartes-gouv/alimentation/wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Mais pour une donnée vecteur publiée en WFS, la représentation de base peut ne pas être satisfaisante :
+Mais pour une donnée vecteur publiée en WFS, la représentation de base peut ne pas être satisfaisante :
 
 ![Visualisation d'un jeu de données publié en WFS, sans style](/img/guides-producteur/compatibilites-cartes-gouv/alimentation/wfs-sansstyle.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -181,8 +183,9 @@ Pour améliorer ce rendu, il est possible de préciser quel style appliquer côt
 }
 ```
 ???
+<br>
 
-Nous allons maintenant décrire les styles à associer à chaque table de notre configuration WFS. Il est possible de préciser plusieurs styles pour une même table, pour donner le choix. C'est une donnée au format JSON qui a le format suivant :
+Nous allons maintenant décrire les styles à associer à chaque table de notre configuration WFS. Il est possible de préciser plusieurs styles pour une même table, pour donner le choix. C'est une donnée au format JSON qui a le format suivant :
 
 ```json
 [
@@ -197,7 +200,7 @@ Nous allons maintenant décrire les styles à associer à chaque table de notre 
             },
             {
                 "name": "nom de la table 2",
-                "annexe_id": "identifant de l'annexe",
+                "annexe_id": "identifiant de l'annexe",
                 "url": "url complète de l'annexe"
             }
         ]
@@ -209,7 +212,7 @@ Nous allons maintenant décrire les styles à associer à chaque table de notre 
 ]
 ```
 
-Dans cet exemple, nous avons un seul style pour une seule table. On aura donc la donnée JSON suivante :
+Dans cet exemple, nous avons un seul style pour une seule table. On aura donc la donnée JSON suivante :
 
 ```json
 [
@@ -228,10 +231,10 @@ Dans cet exemple, nous avons un seul style pour une seule table. On aura donc la
 ```
 
 :::warning
-    Il faut bien préciser le layer_name et le nom de la table dans le nom de la couche : `<layer_name>:<table name>`
+    Il faut bien préciser le layer_name et le nom de la table dans le nom de la couche : `<layer_name>:<table name>`
 :::
 
-Il suffit manitenant de stocker cette information dans la propriété `extra` de la configuration sous la clé `styles` et elle sera détectée et utilisée par cartes.gouv.fr.
+Il suffit maintenant de stocker cette information dans la propriété `extra` de la configuration sous la clé `styles` et elle sera détectée et utilisée par cartes.gouv.fr.
 
 ??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/configuration/{configuration}"
 ```title="Contenu"
@@ -258,6 +261,7 @@ Il suffit manitenant de stocker cette information dans la propriété `extra` de
 }
 ```
 ???
+<br>
 
 On retrouve désormais une visualisation plus personnalisée, avec la possibilité de gérer les styles dans le panneau à droite.
 
@@ -265,7 +269,7 @@ On retrouve désormais une visualisation plus personnalisée, avec la possibilit
 
 ## L'historique de génération
 
-Pour avoir des informations sur les exécutions qui ont calculé les données stockées, il est nécessaire d'ajouter des étiquettes supplémentaires :
+Pour avoir des informations sur les exécutions qui ont calculé les données stockées, il est nécessaire d'ajouter des étiquettes supplémentaires :
 
 * Sur la livraison
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tags"
@@ -275,11 +279,12 @@ Pour avoir des informations sur les exécutions qui ont calculé les données st
 
 ```json
 {
-    "proc_int_id": "{execution}"
+    "proc_int_id": "{execution}",
     "vectordb_id": "{stored data}"
 }
 ```
 ???
+<br>
 
 * Sur la donnée stockée
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}/tags"
@@ -289,11 +294,12 @@ Pour avoir des informations sur les exécutions qui ont calculé les données st
 
 ```json
 {
-    "upload_id": "{upload}"
+    "upload_id": "{upload}",
     "proc_int_id": "{execution}"
 }
 ```
 ???
+<br>
 
 Cela va avoir comme effet d'avoir un onglet pour le rapport de génération dans les détails de la donnée stockée.
 
@@ -336,10 +342,11 @@ Si vous souhaitez que vos documents annexes aux données soient associés à une
 }
 ```
 ???
+<br>
 
 Il faut ensuite tenir à jour l'annexe qui liste ces documents. Une annexe avec les labels `type=document-list` et `datasheet_name=Mon jeu de données` a été automatiquement ajouté par cartes.gouv.fr lors de la détection de la fiche de données. Nous allons devoir la remplacer avec le nouveau contenu.
 
-Cette annexe est un tableau JSON au contenu suivant (vide pour le moment) :
+Cette annexe est un tableau JSON au contenu suivant (vide pour le moment) :
 
 ```json
 [
@@ -360,7 +367,7 @@ Cette annexe est un tableau JSON au contenu suivant (vide pour le moment) :
 ]
 ```
 
-Ici, nous avons un document, ce qui donne le fichier suivant à téléverser en tant qu'annexe :
+Ici, nous avons un document, ce qui donne le fichier suivant à téléverser en tant qu'annexe :
 
 ```json
 [
@@ -401,6 +408,7 @@ Ici, nous avons un document, ce qui donne le fichier suivant à téléverser en 
 }
 ```
 ???
+<br>
 
 Notre document est maintenant bien visible dans le tableau de bord de la fiche de données.
 
@@ -412,7 +420,7 @@ Notre document est maintenant bien visible dans le tableau de bord de la fiche d
 
 ## La métadonnée
 
-La métadonnée associée à cette fiche de données est générée automatiquement par cartes.gouv.fr, à partir des informations des entités entrepôt mais aussi d'informations demandées par formulaire. Pour que la métadonnée soit construite comme cartes.gouv.fr l'attend, deux possibilités : utiliser l'interface de cartes.gouv.fr ou utiliser le moteur de génération de ce dernier.
+La métadonnée associée à cette fiche de données est générée automatiquement par cartes.gouv.fr, à partir des informations des entités entrepôt mais aussi d'informations demandées par formulaire. Pour que la métadonnée soit construite comme cartes.gouv.fr l'attend, deux possibilités : utiliser l'interface de cartes.gouv.fr ou utiliser le moteur de génération de ce dernier.
 
 L'unique métadonnée va contenir toutes les informations sur l'ensemble des services présents sur la fiche de données, les documents associés et la vignette.
 

@@ -6,4 +6,7 @@ module.exports = {
             title: "Compatibilité de l'alimentation avec cartes.gouv.fr",
         },
     ],
+    eleventyNavigation: {
+        parent: "Compatibilités cartes.gouv.fr",
+    },
 };

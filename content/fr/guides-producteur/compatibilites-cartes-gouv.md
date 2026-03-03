@@ -1,13 +1,12 @@
 ---
-title: Compatibilités cartes.gouv
+title: Compatibilités cartes.gouv.fr
 description: Construction de la métadonnée compatible avec cartes.gouv.fr
 layout: layouts/parent.njk
 tags:
     - Documentation
     - Partenaire
 eleventyNavigation:
-    key: Compatibilités cartes.gouv
+    key: Compatibilités cartes.gouv.fr
     order: 4
-    nav: guides-producteur
 pictogram: "map/compass.svg"
 ---
