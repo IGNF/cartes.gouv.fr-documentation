@@ -4,9 +4,7 @@ description: Téléversement de fichier statique, modification ou création d'un
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Dérivation d'une donnée vecteur en base
-    parent: Gestion des données vecteurs
     order: 3
-    nav: guides-developpeur
 pictogram: leisure/digital-art.svg
 ---
 

@@ -4,9 +4,7 @@ description: Téléversement d'images géoréférencées, mise à jour de pyrami
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Alimentation par mise à jour raster
-    parent: Gestion des données raster
     order: 2
-    nav: guides-developpeur
 pictogram: digital/data-visualization.svg
 ---
 

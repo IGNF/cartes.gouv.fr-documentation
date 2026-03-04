@@ -5,9 +5,7 @@ tags:
     - Modification
 eleventyNavigation:
     key: Bonnes pratiques rédactionnelles
-    parent: Créer des pages de documentation
     order: 4
-    nav: guides-producteur
 pictogram: document/contract.svg
 description: Petit guide pour des pages bien écrites
 summary:

@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion des données raster",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion des données raster",
+    },
 };

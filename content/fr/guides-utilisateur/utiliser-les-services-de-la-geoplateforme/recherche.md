@@ -1,16 +1,14 @@
 ---
 title: Service Géoplateforme de recherche
+description: Tous les détails sur le service de recherche de la Géoplateforme
 tags:
     - Recherche
     - API
     - Géoplateforme
 eleventyNavigation:
     key: Service Géoplateforme de recherche
-    parent: Utiliser les services de la Géoplateforme
     order: 9
-    nav: guides-utilisateur
-pictogram: "digital/search.svg"
-description: Tous les détails sur le service de recherche de la Géoplateforme
+pictogram: digital/search.svg
 summary:
     visible: true
     depth: 1

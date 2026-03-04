@@ -1,5 +1,6 @@
 ---
 title: Calcul altimétrique
+description: Tous les détails sur le service de calcul altimétrique de la Géoplateforme
 tags:
     - Altimétrie
     - API
@@ -7,11 +8,8 @@ tags:
     - Calcul
 eleventyNavigation:
     key: Calcul altimétrique
-    parent: Utiliser les services de la Géoplateforme
     order: 6
-    nav: guides-utilisateur
-pictogram: "system/system.svg"
-description: Tous les détails sur le service de calcul altimétrique de la Géoplateforme
+pictogram: system/system.svg
 summary:
     visible: true
     depth: 2

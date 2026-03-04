@@ -3,9 +3,7 @@ title: Partage d'un document personnel
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Partage d'un document personnel
-    parent: Gestion des documents personnels
-    order: 1
-    nav: guides-developpeur
+    order: 2
 pictogram: digital/data-visualization.svg
 ---
 

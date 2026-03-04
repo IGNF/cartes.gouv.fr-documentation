@@ -4,7 +4,6 @@ description: Extensions facilitant l’accès aux ressources de la Géoplateform
 eleventyNavigation:
     key: Extensions Géoplateforme
     order: 2
-    nav: guides-developpeur
 pictogram: digital/coding.svg
 ---
 

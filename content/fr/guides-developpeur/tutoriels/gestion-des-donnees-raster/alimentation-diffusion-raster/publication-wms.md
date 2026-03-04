@@ -2,9 +2,7 @@
 title: Publication en WMS
 eleventyNavigation:
     key: Publication en WMS
-    parent: Alimentation et diffusion simple raster
     order: 4
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

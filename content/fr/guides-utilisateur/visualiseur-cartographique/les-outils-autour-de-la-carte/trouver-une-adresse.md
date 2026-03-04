@@ -1,5 +1,6 @@
 ---
 title: Trouver une adresse
+description: Trouvez l’adresse, le toponyme ou la parcelle d’un lieu sur la carte
 tags:
     - Cartes
     - Géoportail
@@ -12,10 +13,7 @@ tags:
 eleventyNavigation:
     key: Trouver une adresse
     order: 7
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/trouver-une-adresse.svg"
-description: Trouvez l’adresse, le toponyme ou la parcelle d’un lieu sur la carte
+pictogram: custom/trouver-une-adresse.svg
 summary:
     visible: true
     depth: 1

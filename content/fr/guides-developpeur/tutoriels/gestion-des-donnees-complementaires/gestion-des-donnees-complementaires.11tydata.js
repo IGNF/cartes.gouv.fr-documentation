@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion des données complementaires",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion des données complementaires",
+    },
 };

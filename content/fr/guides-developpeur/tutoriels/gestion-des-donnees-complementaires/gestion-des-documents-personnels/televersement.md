@@ -3,9 +3,7 @@ title: Téléversement d'un document personnel
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Téléversement d'un document personnel
-    parent: Gestion des documents personnels
     order: 1
-    nav: guides-developpeur
 pictogram: digital/data-visualization.svg
 ---
 {% from "components/component.njk" import component with context %}

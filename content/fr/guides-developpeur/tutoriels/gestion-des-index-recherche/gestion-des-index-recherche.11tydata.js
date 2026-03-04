@@ -5,4 +5,7 @@ module.exports = {
             title: "Index de recherche",
         },
     ],
+    eleventyNavigation: {
+        parent: "Index de recherche",
+    },
 };

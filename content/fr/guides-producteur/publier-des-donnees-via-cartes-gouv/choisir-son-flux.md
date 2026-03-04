@@ -6,9 +6,7 @@ tags:
     - Service
 eleventyNavigation:
     key: Choisir le flux à publier
-    parent: Publier des données via cartes.gouv.fr
     order: 2
-    nav: guides-producteur
 pictogram: digital/internet.svg
 popularTopic: true
 ---

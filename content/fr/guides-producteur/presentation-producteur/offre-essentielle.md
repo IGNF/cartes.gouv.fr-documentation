@@ -5,9 +5,7 @@ tags:
     - Entrepôt
 eleventyNavigation:
     key: Espace de travail dédié
-    parent: Présentation de cartes.gouv.fr
     order: 4
-    nav: guides-producteur
 pictogram: digital/search.svg
 description: Un espace dédié pour votre communauté
 summary:

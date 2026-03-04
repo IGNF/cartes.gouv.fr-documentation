@@ -1,5 +1,6 @@
 ---
 title: Mesurer une surface
+description: Tracez une zone pour connaître son aire
 tags:
     - Cartes
     - Géoportail
@@ -11,10 +12,7 @@ tags:
 eleventyNavigation:
     key: Mesurer une surface
     order: 2
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/mesurer-une-surface.svg"
-description: Tracez une zone pour connaître son aire
+pictogram: custom/mesurer-une-surface.svg
 ---
 
 L’outil **« Mesurer une surface »** permet de dessiner une zone sur la carte et d’en connaître en temps réel la surface.

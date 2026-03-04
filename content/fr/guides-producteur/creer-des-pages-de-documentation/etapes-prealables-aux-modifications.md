@@ -8,9 +8,7 @@ tags:
     - Clone
 eleventyNavigation:
     key: Étapes préalables aux modifications
-    parent: Créer des pages de documentation
     order: 2
-    nav: guides-producteur
 pictogram: digital/in-progress.svg
 description: Ce qu’il faut faire avant toute modification
 summary:

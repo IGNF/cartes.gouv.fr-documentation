@@ -2,9 +2,7 @@
 title: Configuration de la diffusion en téléchargement
 eleventyNavigation:
     key: Configuration de la diffusion en téléchargement
-    parent: Alimentation et diffusion simple d'archives
     order: 3
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

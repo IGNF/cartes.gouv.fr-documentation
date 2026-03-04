@@ -1,5 +1,6 @@
 ---
 title: API de téléchargement
+description: Tous les détails sur le service de téléchargement de la Géoplateforme
 tags:
     - Téléchargement
     - API
@@ -10,11 +11,8 @@ tags:
     - Géoplateforme
 eleventyNavigation:
     key: API de téléchargement
-    parent: Utiliser les services de la Géoplateforme
     order: 2
-    nav: guides-utilisateur
-pictogram: "document/document-download.svg"
-description: Tous les détails sur le service de téléchargement de la Géoplateforme
+pictogram: document/document-download.svg
 summary:
     visible: true
     depth: 1

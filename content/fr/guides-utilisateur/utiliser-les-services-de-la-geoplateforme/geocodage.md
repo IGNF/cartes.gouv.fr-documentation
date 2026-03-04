@@ -1,5 +1,6 @@
 ---
 title: Géocodage
+description: Tous les détails sur le service de géocodage de la Géoplateforme
 tags:
     - Géocodage
     - API
@@ -10,14 +11,11 @@ tags:
     - Calcul
 eleventyNavigation:
     key: Géocodage
-    parent: Utiliser les services de la Géoplateforme
     order: 4
-    nav: guides-utilisateur
+pictogram: system/system.svg
 summary:
     visible: true
     depth: 1
-pictogram: "system/system.svg"
-description: Tous les détails sur le service de géocodage de la Géoplateforme
 ---
 
 ## Présentation

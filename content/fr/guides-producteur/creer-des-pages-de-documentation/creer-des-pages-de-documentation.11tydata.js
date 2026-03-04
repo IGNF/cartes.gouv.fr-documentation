@@ -6,4 +6,7 @@ module.exports = {
             title: "Créer des pages de documentation",
         },
     ],
+    eleventyNavigation: {
+        parent: "Créer des pages de documentation",
+    },
 };

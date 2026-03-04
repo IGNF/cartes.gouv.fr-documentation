@@ -5,4 +5,7 @@ module.exports = {
             title: "Création et intégration des clés cartes.gouv.fr dans un SIG",
         },
     ],
+    eleventyNavigation: {
+        parent: "Création et intégration des clés cartes.gouv.fr dans un SIG",
+    },
 };

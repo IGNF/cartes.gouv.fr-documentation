@@ -5,4 +5,7 @@ module.exports = {
             title: "Alimentation et diffusion simple d'archives",
         },
     ],
+    eleventyNavigation: {
+        parent: "Alimentation et diffusion simple d'archives",
+    },
 };

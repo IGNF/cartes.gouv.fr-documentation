@@ -5,4 +5,7 @@ module.exports = {
             title: "Utilisations diverses",
         },
     ],
+    eleventyNavigation: {
+        parent: "Utilisations diverses",
+    },
 };

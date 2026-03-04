@@ -6,9 +6,7 @@ tags:
     - Dépôt
 eleventyNavigation:
     key: Déposer ses données sur cartes.gouv.fr
-    parent: Publier des données via cartes.gouv.fr
     order: 1
-    nav: guides-producteur
 pictogram: document/document-add.svg
 description: Étape préalable à la publication de tout flux
 ---

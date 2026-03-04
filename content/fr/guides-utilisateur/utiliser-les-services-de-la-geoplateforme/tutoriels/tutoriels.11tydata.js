@@ -6,4 +6,7 @@ module.exports = {
             title: "Tutoriels API",
         },
     ],
+    eleventyNavigation: {
+        parent: "Tutoriels API",
+    },
 };

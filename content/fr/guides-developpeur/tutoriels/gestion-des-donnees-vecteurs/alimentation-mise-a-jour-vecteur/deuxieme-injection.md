@@ -2,9 +2,7 @@
 title: Injection d'un deuxième lot de données
 eleventyNavigation:
     key: Injection d'un deuxième lot de données
-    parent: Alimentation par mise à jour vecteur
     order: 3
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

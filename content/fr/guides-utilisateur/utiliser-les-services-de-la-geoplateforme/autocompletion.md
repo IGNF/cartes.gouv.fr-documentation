@@ -1,16 +1,14 @@
 ---
 title: Autocomplétion
+description: Tous les détails sur le service d’autocomplétion de la Géoplateforme
 tags:
     - Autocomplétion
     - API
     - Géoplateforme
 eleventyNavigation:
     key: Autocomplétion
-    parent: Utiliser les services de la Géoplateforme
     order: 5
-    nav: guides-utilisateur
-pictogram: "system/system.svg"
-description: Tous les détails sur le service d’autocomplétion de la Géoplateforme
+pictogram: system/system.svg
 summary:
     visible: true
     depth: 1

@@ -2,9 +2,7 @@
 title: Détail des différentes entités manipulées
 eleventyNavigation:
     key: Détail des différentes entités manipulées
-    parent: Concepts de l'Entrepôt
     order: 2
-    nav: guides-developpeur
 pictogram: digital/data-visualization.svg
 ---
 

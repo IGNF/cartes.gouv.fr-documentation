@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion des données vecteurs",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion des données vecteurs",
+    },
 };

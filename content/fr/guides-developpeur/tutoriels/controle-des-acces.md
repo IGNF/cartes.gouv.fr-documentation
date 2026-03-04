@@ -4,8 +4,6 @@ description: Authentification et accès à l'Entrepôt et aux services de diffus
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Contrôle des accès à l'Entrepôt et aux services de diffusion
-    parent: Tutoriels d'utilisation de l'Entrepôt
     order: 7
-    nav: guides-developpeur
 pictogram: system/padlock.svg
 ---

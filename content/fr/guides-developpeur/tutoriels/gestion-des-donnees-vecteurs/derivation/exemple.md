@@ -2,9 +2,7 @@
 title: Exemple d'ajout de colonne avec valeur paramétrable
 eleventyNavigation:
     key: Exemple d'ajout de colonne avec valeur paramétrable
-    parent: Dérivation d'une donnée vecteur en base
     order: 1
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

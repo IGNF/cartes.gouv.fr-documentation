@@ -10,13 +10,11 @@ tags:
     - Clé
 eleventyNavigation:
     key: Options de filtrage supplémentaires
-    parent: Création et intégration des clés cartes.gouv.fr dans un SIG
     order: 3
-    nav: guides-utilisateur
+pictogram: digital/in-progress.svg
 summary:
     visible: true
     depth: 1
-pictogram: "digital/in-progress.svg"
 ---
 
 ## Types de filtrages

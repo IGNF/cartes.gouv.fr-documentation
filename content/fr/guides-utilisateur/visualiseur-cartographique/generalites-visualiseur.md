@@ -1,5 +1,6 @@
 ---
 title: Généralités
+description: Explorez la richesse des cartes de cartes.gouv.fr
 layout: layouts/parent.njk
 tags:
     - Cartes
@@ -8,10 +9,7 @@ tags:
 eleventyNavigation:
     key: Généralités
     order: 1
-    nav: guides-utilisateur
-    parent: Explorer les cartes
-pictogram: "map/location-france.svg"
-description: Explorez la richesse des cartes de cartes.gouv.fr
+pictogram: map/location-france.svg
 ---
 
 Le service **« Explorer les cartes »** de **cartes.gouv.fr** permet de visualiser les données cartographiques de la Géoplateforme.

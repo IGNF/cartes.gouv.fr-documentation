@@ -3,9 +3,7 @@ title: Gestion des espaces de travail
 description: Création des espaces de travail, affectation des ressources et définition des quotas
 eleventyNavigation:
     key: Gestion des espaces de travail
-    parent: Espaces de travail
     order: 3
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

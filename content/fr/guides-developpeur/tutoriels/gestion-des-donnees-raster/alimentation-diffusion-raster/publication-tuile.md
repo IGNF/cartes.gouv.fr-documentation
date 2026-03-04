@@ -2,9 +2,7 @@
 title: Publication en WMTS/TMS
 eleventyNavigation:
     key: Publication en WMTS/TMS
-    parent: Alimentation et diffusion simple raster
     order: 3
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

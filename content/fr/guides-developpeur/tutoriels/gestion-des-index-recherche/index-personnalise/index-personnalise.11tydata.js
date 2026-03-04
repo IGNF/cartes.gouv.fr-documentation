@@ -5,4 +5,7 @@ module.exports = {
             title: "Mise en place d'un index de recherche personnalisé",
         },
     ],
+    eleventyNavigation: {
+        parent: "Mise en place d'un index de recherche personnalisé",
+    },
 };

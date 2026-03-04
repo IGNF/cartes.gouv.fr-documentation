@@ -1,5 +1,6 @@
 ---
 title: Ajouter une carte depuis le cartalogue
+description: Accédez à la richesse des cartes stockées sur la Géoplateforme
 tags:
     - Cartes
     - Géoportail
@@ -9,10 +10,7 @@ tags:
 eleventyNavigation:
     key: Ajouter une carte depuis le cartalogue
     order: 2
-    nav: guides-utilisateur
-    parent: Explorer les cartes
-pictogram: "leisure/book.svg"
-description: Accédez à la richesse des cartes stockées sur la Géoplateforme
+pictogram: leisure/book.svg
 summary:
     visible: true
     depth: 1

@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion des métadonnées",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion des métadonnées",
+    },
 };

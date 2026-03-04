@@ -8,5 +8,5 @@ tags:
 eleventyNavigation:
     key: Compatibilités cartes.gouv.fr
     order: 4
-pictogram: "map/compass.svg"
+pictogram: map/compass.svg
 ---

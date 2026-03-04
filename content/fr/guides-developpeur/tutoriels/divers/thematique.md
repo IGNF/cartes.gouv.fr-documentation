@@ -4,9 +4,7 @@ description: Sélection d'un sous-partie des capacités d'un service et mise à 
 mermaid: true
 eleventyNavigation:
     key: Mise en place d'un groupe thématique de couches
-    parent: Utilisations diverses
     order: 1
-    nav: guides-developpeur
 ---
 
 {% from "components/component.njk" import component with context %}

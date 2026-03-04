@@ -4,8 +4,6 @@ description: Chargement de données vecteur, mise à jour, tuilage, publication 
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Gestion des données vecteurs
-    parent: Tutoriels d'utilisation de l'Entrepôt
     order: 1
-    nav: guides-developpeur
 pictogram: map/map.svg
 ---

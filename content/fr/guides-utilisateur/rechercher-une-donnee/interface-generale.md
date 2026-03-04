@@ -1,17 +1,15 @@
 ---
-title: Lancer une recherche 
+title: Lancer une recherche
+description: La page d’accueil du catalogue de cartes.gouv.fr
 tags:
     - Catalogue
     - Filtre
     - Tri
     - Données
-description: La page d’accueil du catalogue de cartes.gouv.fr
 eleventyNavigation:
-    key: Lancer une recherche 
-    parent: Rechercher une donnée
+    key: Lancer une recherche
     order: 2
-    nav: guides-utilisateur
-pictogram: "digital/search.svg"
+pictogram: digital/search.svg
 summary:
     visible: true
     depth: 2

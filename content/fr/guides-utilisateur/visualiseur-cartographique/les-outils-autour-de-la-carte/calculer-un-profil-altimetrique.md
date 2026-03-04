@@ -1,5 +1,6 @@
 ---
 title: Calculer un profil altimétrique
+description: Affichez l’altitude le long d’un trajet
 tags:
     - Cartes
     - Géoportail
@@ -12,10 +13,7 @@ tags:
 eleventyNavigation:
     key: Calculer un profil altimétrique
     order: 5
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/profil-altimetrique.svg"
-description: Affichez l’altitude le long d’un trajet
+pictogram: custom/profil-altimetrique.svg
 summary:
     visible: true
     depth: 1

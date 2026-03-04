@@ -3,9 +3,7 @@ title: Gestion des clés de consommation des services de diffusion
 mermaid: true
 eleventyNavigation:
     key: Gestion des clés de consommation des services de diffusion
-    parent: Contrôle des accès aux services de diffusion
     order: 3
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

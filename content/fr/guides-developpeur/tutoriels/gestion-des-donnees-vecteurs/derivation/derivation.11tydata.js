@@ -5,4 +5,7 @@ module.exports = {
             title: "Dérivation d'une donnée vecteur en base",
         },
     ],
+    eleventyNavigation: {
+        parent: "Dérivation d'une donnée vecteur en base",
+    },
 };

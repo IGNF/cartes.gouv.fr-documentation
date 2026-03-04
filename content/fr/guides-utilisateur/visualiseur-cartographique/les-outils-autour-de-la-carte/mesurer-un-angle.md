@@ -1,5 +1,6 @@
 ---
 title: Mesurer un angle
+description: Tracez une ligne pour connaître son angle par rapport au Nord
 tags:
     - Cartes
     - Géoportail
@@ -11,10 +12,7 @@ tags:
 eleventyNavigation:
     key: Mesurer un angle
     order: 8
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/mesurer-un-angle.svg"
-description: Tracez une ligne pour connaître son angle par rapport au Nord
+pictogram: custom/mesurer-un-angle.svg
 ---
 
 L’outil **« Mesurer un angle »** permet de dessiner une ligne sur la carte et de connaître son angle par rapport au Nord géographique.

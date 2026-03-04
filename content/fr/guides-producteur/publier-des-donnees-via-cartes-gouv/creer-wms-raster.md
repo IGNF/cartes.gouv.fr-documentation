@@ -10,9 +10,7 @@ tags:
     - SLD
 eleventyNavigation:
     key: Créer et publier un service WMS-Raster
-    parent: Publier des données via cartes.gouv.fr
     order: 6
-    nav: guides-producteur
 pictogram: digital/internet.svg
 description: Procédure pour publier un flux WMS-r
 summary:

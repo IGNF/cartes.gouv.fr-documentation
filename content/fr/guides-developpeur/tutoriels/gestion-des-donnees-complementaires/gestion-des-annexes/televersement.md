@@ -3,9 +3,7 @@ title: Téléversement d'une annexe
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Téléversement d'une annexe
-    parent: Gestion des annexes
     order: 1
-    nav: guides-developpeur
 pictogram: digital/data-visualization.svg
 ---
 

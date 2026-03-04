@@ -2,9 +2,7 @@
 title: Configuration de la diffusion de données vecteur en WFS
 eleventyNavigation:
     key: Configuration de la diffusion de données vecteur en WFS
-    parent: Alimentation et diffusion simple vecteur
     order: 3
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

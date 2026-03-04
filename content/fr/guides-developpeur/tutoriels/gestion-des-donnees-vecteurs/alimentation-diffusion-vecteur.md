@@ -5,9 +5,7 @@ mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Alimentation et diffusion simple vecteur
-    parent: Gestion des données vecteurs
     order: 1
-    nav: guides-developpeur
 pictogram: digital/data-visualization.svg
 ---
 

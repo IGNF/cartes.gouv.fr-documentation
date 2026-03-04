@@ -1,5 +1,6 @@
 ---
 title: Calculer un itinéraire
+description: Trouvez le meilleur trajet à pied ou en voiture
 tags:
     - Cartes
     - Géoportail
@@ -9,10 +10,7 @@ tags:
 eleventyNavigation:
     key: Calculer un itinéraire
     order: 4
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/calculer-un-itineraire.svg"
-description: Trouvez le meilleur trajet à pied ou en voiture
+pictogram: custom/calculer-un-itineraire.svg
 summary:
     visible: true
     depth: 1

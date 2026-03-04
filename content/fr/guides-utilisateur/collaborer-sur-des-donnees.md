@@ -8,7 +8,6 @@ tags:
 eleventyNavigation:
     key: Collaborer sur des données
     order: 7
-    nav: guides-utilisateur
 pictogram: custom/contributor.svg
 description: Co-construire une base de données via signalements et contributions
 ---

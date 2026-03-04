@@ -1,5 +1,6 @@
 ---
 title: Gestionnaire de couches
+description: Manipulez les cartes importées
 tags:
     - Cartes
     - Géoportail
@@ -11,10 +12,7 @@ tags:
 eleventyNavigation:
     key: Gestionnaire de couches
     order: 3
-    nav: guides-utilisateur
-    parent: Explorer les cartes
-pictogram: "leisure/pictures.svg"
-description: Manipulez les cartes importées
+pictogram: leisure/pictures.svg
 summary:
     visible: true
     depth: 2

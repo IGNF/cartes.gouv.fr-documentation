@@ -1,5 +1,6 @@
 ---
 title: Les outils autour de la carte
+description: Découvrez tous les outils à votre disposition
 layout: layouts/parent.njk
 tags:
     - Géoportail
@@ -10,8 +11,5 @@ tags:
 eleventyNavigation:
     key: Les outils autour de la carte
     order: 6
-    nav: guides-utilisateur
-    parent: Explorer les cartes
-description: Découvrez tous les outils à votre disposition
-pictogram: "map/backpack.svg"
+pictogram: map/backpack.svg
 ---
