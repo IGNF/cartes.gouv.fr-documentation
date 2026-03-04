@@ -1,5 +1,5 @@
 ---
-title: Lancer une recherche 
+title: Lancer une recherche
 description: La page d’accueil du catalogue de cartes.gouv.fr
 tags:
     - Catalogue
