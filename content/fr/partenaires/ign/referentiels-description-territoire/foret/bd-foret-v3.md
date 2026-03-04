@@ -17,8 +17,6 @@ image:
 La BD Forêt v3 est le référentiel géographique national décrivant les essences forestières. La BD Forêt v3 apportera une information actualisée, homogène et fiable.<br> 
 Un jeu test sur 40 zones réparties sur le territoire hexagonal est mis à disposition le 10 mars, dans le cadre d’une phase de retours d’usages.
 
-<br>
-
 #### La BD Forêt v3 arrive : 
 Testez dès aujourd’hui un nouveau jeu de données forestières plus précis, fondé sur des méthodes de production innovantes et répondant aux besoins que vous avez exprimés.<br> 
 Partagez votre retour pour co-construire la future donnée de référence. Les réponses que vous apporterez nous aideront à mesurer votre degré de satisfaction vis-à-vis des différentes versions des jeux test produits.
@@ -74,34 +72,35 @@ Produite par l’IGN, la BD Forêt est le référentiel géographique national d
 C'est dans ce contexte que le projet de production de la BD Forêt v3, en cours, a vu le jour. Il représente un véritable tournant dans la cartographie forestière, en termes de connaissances mais aussi d’innovation technique.
 
 #### BD Forêt v3 : un tournant technologique : 
-Dans la continuité de la BD Forêt v1 et v2, la BD Forêt v3 marque un renouveau majeur dans la cartographie forestière. Elle apportera à ses utilisateurs des informations actualisées sur les occupations forestières dans l’Hexagone.<br>
+Dans la continuité de la BD Forêt v1 et v2, la BD Forêt v3 marque un renouveau majeur dans la cartographie forestière. Elle apportera à ses utilisateurs des informations actualisées sur les occupations forestières dans l’Hexagone.
+
 ##### Les apports clés de la v3 : 
-- Actualisation rapide : <br>
+- Actualisation rapide :<br>
 Couvrir l’ensemble du territoire métropolitain en un an
-- Finesse géométrique accrue : <br>
+- Finesse géométrique accrue :<br>
 Distinction des essences dès 0,5 hectare
-- Finesse sémantique renforcée : <br>
+- Finesse sémantique renforcée :<br>
 Nomenclature enrichie à 35 postes
-- Processus de production innovant, mobilisant : <br>
+- Processus de production innovant, mobilisant :<br>
 L’intelligence artificielle
 
 <br>
 
 ??? Pour en savoir plus 
 ##### La BD Forêt v3 marque un tournant dans la cartographie forestière : 
-L’actualisation rapide des données (l’objectif étant de couvrir tout le territoire hexagonal en un an seulement), sa finesse géométrique et sémantique, fait de cette base de données un outil inégalé pour la localisation des essences forestières. La BD Forêt v3 se caractérise en effet par une nomenclature cible en 35 classes dans lesquelles plusieurs essences et mélanges d'essences ont été distingués par rapport à la v2 (8 essences supplémentaires ont été distinguées par rapport à la v2).<br> 
+L’actualisation rapide des données (l’objectif étant de couvrir tout le territoire hexagonal en un an seulement), sa finesse géométrique et sémantique, font de cette base de données un outil inégalé pour la localisation des essences forestières. La BD Forêt v3 se caractérise en effet par une nomenclature cible en 35 classes dans lesquelles plusieurs essences et mélanges d'essences ont été distingués par rapport à la v2 (8 essences supplémentaires ont été distinguées par rapport à la v2).<br> 
 Sa résolution géométrique a également été affinée : désormais, les différentes essences cartographiées sont distinguées les unes des autres dès 0,5 hectares contre 2 hectares pour la BD Forêt v2.<br>
 Cette donnée sera construite en s’appuyant sur le [Masque Forêt v1]({{ urls.aide }}/fr/partenaires/ign/referentiels-description-territoire/foret/masque-foret){target="_blank" rel="noopener noreferrer" title="Masque Forêt - ouvre une nouvelle fenêtre"}. Le Masque Forêt v1 permet de visualiser l’occupation forestière de l’hexagone et apporte une information sur l’usage spécifique de certaines forêts : les forêts avec un usage agricole déclaré ainsi que les forêts urbaines. Il constitue le périmètre de travail de la BD Forêt v3.
 
 ##### Mobilisation de l'IA : 
-La BD Forêt v3 marque un tournant décisif dans l'élaboration des bases de données de l’IGN. L’IA est un nouvel outil central mobilisé afin de mieux répondre à la nécessité d'une production de données rapide (l'objectif est de couvrir toute la métropole en un an seulement), et de pouvoir l'actualiser plus fréquemment grâce à des coûts de mise-à-jour réduit. En cela, la construction de la BD Forêt v3 se distingue des méthodes plus traditionnelles et augmente de façon significative la précision géométrique et sémantique. L’objectif est de créer un processus de production très automatisé tout en conservant une part d'intervention humaine en fin de production afin de garantir la fiabilité des données diffusées.<br> 
+La BD Forêt v3 marque un tournant décisif dans l'élaboration des bases de données de l’IGN. L’IA est un nouvel outil central mobilisé afin de mieux répondre à la nécessité d'une production de données rapide (l'objectif est de couvrir toute la métropole en un an seulement), et de pouvoir l'actualiser plus fréquemment grâce à des coûts de mise-à-jour réduits. En cela, la construction de la BD Forêt v3 se distingue des méthodes plus traditionnelles et augmente de façon significative la précision géométrique et sémantique. L’objectif est de créer un processus de production très automatisé tout en conservant une part d'intervention humaine en fin de production afin de garantir la fiabilité des données diffusées.<br> 
 La BD Forêt v3 se distingue de la BD Forêt v1 et v2 par sa finesse géométrique et sémantique. L’automatisation accrue de son processus de production, et sa capacité à être actualisée à un coût réduit témoigne d'un changement significatif dans la production de données géographiques.
 ???
 <br>
 
 #### Caractéristiques de la BD Forêt v3 : 
 ##### Rythme de mise à jour : 
-Le recours à l’intelligence artificielle permet d’envisager une mise à jour tous les six ans, en adéquation avec les besoins exprimés par les utilisateurs. Le recours à l’IA pour produire la donnée permet de réduire de façon significative les délais et les coûts futurs des mises-à-jours.
+Le recours à l’intelligence artificielle permet d’envisager une mise à jour tous les six ans, en adéquation avec les besoins exprimés par les utilisateurs. Le recours à l’IA pour produire la donnée permet de réduire de façon significative les délais et les coûts futurs des mises-à-jour.
 
 ##### Millésimes : 
 La BD Forêt v3 est construite à partir de la BD ORTHO.
@@ -111,13 +110,13 @@ Le millésime diffusé correspondra au millésime de la BD ORTHO utilisée pour 
 - France hexagonale et Corse
 - Les DROM ne sont pas couverts, mais des produits équivalents sont en cours de production : [CARTO VEGETATION DROM]({{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION - ouvre une nouvelle fenêtre"}
 
+<br>
+
 ##### Commanditaire de la donnée :
 La production de la BD Forêt v3 est commanditée et financée par le Ministère de l’Agriculture et de la Souveraineté Alimentaire (MASA). 
 
 ##### Un Grand Projet Numérique de l’État :
 Le projet BD Forêt v3 fait partie des grands projets numérique de l’État, et l’IGN a reçu le feu vert de la Direction Interministérielle (DINUM) afin de la mener à bien.
-
-<br>
 
 ##### Usages identifiés : 
 *Connaître la forêt, c’est pouvoir la préserver*. Telle est la vision de l’équipe projet de la BD Forêt v3.
