@@ -14,6 +14,11 @@ image:
 ---
 
 #### La nouvelle référence pour la cartographie forestière française
+La BD Forêt v3 est le référentiel géographique national décrivant les essences forestières. La BD Forêt v3 apportera une information actualisée, homogène et fiable.<br> 
+Un jeu test sur 40 zones réparties sur le territoire hexagonal est mis à disposition le 10 mars, dans le cadre d’une phase de retours d’usages.
+
+<br>
+
 #### La BD Forêt v3 arrive : 
 Testez dès aujourd’hui un nouveau jeu de données forestières plus précis, fondé sur des méthodes de production innovantes et répondant aux besoins que vous avez exprimés.<br> 
 Partagez votre retour pour co-construire la future donnée de référence. Les réponses que vous apporterez nous aideront à mesurer votre degré de satisfaction vis-à-vis des différentes versions des jeux test produits.
@@ -40,6 +45,7 @@ L’équipe projet BD Forêt v3 de l’IGN met à votre disposition un jeu de do
 **En cliquant sur Tester la BD Forêt v3** : 
 - vous serez redirigé vers le catalogue cartes.gouv.fr
 - vous disposerez d’un lien de téléchargement
+- le jeu de données se compose de 40 zones tests, réparties sur le territoire hexagonal
 
 <br>
 
@@ -104,6 +110,12 @@ Le millésime diffusé correspondra au millésime de la BD ORTHO utilisée pour 
 ##### Couverture géographique : 
 - France hexagonale et Corse
 - Les DROM ne sont pas couverts, mais des produits équivalents sont en cours de production : [CARTO VEGETATION DROM]({{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION - ouvre une nouvelle fenêtre"}
+
+##### Commanditaire de la donnée :
+La production de la BD Forêt v3 est commanditée et financée par le Ministère de l’Agriculture et de la Souveraineté Alimentaire (MASA). 
+
+##### Un Grand Projet Numérique de l’État :
+Le projet BD Forêt v3 fait partie des grands projets numérique de l’État, et l’IGN a reçu le feu vert de la Direction Interministérielle (DINUM) afin de la mener à bien.
 
 <br>
 
