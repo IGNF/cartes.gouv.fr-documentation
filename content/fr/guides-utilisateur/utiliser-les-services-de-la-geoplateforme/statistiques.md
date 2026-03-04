@@ -1,19 +1,17 @@
 ---
 title: Statistiques d’utilisation
+description: Tous les détails sur le service de statistiques de la Géoplateforme
 tags:
     - Statistiques
     - API
     - Géoplateforme
 eleventyNavigation:
     key: Statistiques d’utilisation
-    parent: Utiliser les services de la Géoplateforme
     order: 10
-    nav: guides-utilisateur
+pictogram: digital/data-visualization.svg
 summary:
     visible: true
     depth: 2
-pictogram: "digital/data-visualization.svg"
-description: Tous les détails sur le service de statistiques de la Géoplateforme
 ---
 
 ## Présentation

@@ -2,9 +2,7 @@
 title: Gestion des styles pour la diffusion WMS de données vecteur
 eleventyNavigation:
     key: Gestion des styles pour la diffusion WMS de données vecteur
-    parent: Alimentation et diffusion simple vecteur
     order: 4
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

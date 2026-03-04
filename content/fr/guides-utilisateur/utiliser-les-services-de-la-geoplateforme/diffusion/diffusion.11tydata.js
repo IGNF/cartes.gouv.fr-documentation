@@ -5,4 +5,7 @@ module.exports = {
             title: "API de diffusion",
         },
     ],
+    eleventyNavigation: {
+        parent: "API de diffusion",
+    },
 };

@@ -2,9 +2,7 @@
 title: Livraison des données archives
 eleventyNavigation:
     key: Livraison des données archives
-    parent: Alimentation et diffusion simple vecteur
     order: 1
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

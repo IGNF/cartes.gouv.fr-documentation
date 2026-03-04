@@ -2,9 +2,7 @@
 title: Suppression et modification de données
 eleventyNavigation:
     key: Suppression et modification de données
-    parent: Alimentation par mise à jour vecteur
     order: 4
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

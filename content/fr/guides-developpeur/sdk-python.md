@@ -4,7 +4,6 @@ description: Pour consommer l'API Entrepôt plus facilement avec des scripts dé
 eleventyNavigation:
     key: SDK Python pour l'Entrepôt
     order: 6
-    nav: guides-developpeur
 pictogram: digital/coding.svg
 ---
 

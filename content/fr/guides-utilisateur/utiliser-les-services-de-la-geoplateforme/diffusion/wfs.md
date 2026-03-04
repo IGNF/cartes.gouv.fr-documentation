@@ -1,14 +1,12 @@
 ---
 title: Sélection d’objets WFS
+description: Tous les détails sur les « Web Feature Service » de la Géoplateforme
 tags:
     - WFS
 eleventyNavigation:
     key: Sélection d’objets WFS
-    parent: API de diffusion
     order: 5
-    nav: guides-utilisateur
-pictogram: "digital/internet.svg"
-description: Tous les détails sur les « Web Feature Service » de la Géoplateforme
+pictogram: digital/internet.svg
 summary:
     visible: true
     depth: 1

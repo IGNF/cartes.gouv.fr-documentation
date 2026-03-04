@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion des annexes",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion des annexes",
+    },
 };

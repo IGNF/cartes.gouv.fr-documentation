@@ -1,14 +1,12 @@
 ---
 title: Tuiles vectorielles TMS
+description: Tous les détails sur les « Tile Map Service » de la Géoplateforme
 tags:
     - TMS
 eleventyNavigation:
     key: Tuiles vectorielles TMS
-    parent: API de diffusion
     order: 2
-    nav: guides-utilisateur
-pictogram: "digital/internet.svg"
-description: Tous les détails sur les « Tile Map Service » de la Géoplateforme
+pictogram: digital/internet.svg
 summary:
     visible: true
     depth: 1

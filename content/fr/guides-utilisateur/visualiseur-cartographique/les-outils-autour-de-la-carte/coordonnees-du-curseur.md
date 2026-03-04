@@ -1,5 +1,6 @@
 ---
 title: Coordonnées du curseur
+description: Trouvez les coordonnées d’un point ou trouver un point avec ses coordonnées
 tags:
     - Cartes
     - Géoportail
@@ -11,10 +12,7 @@ tags:
 eleventyNavigation:
     key: Coordonnées du curseur
     order: 9
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/coordonnees.svg"
-description: Trouvez les coordonnées d’un point ou trouver un point avec ses coordonnées
+pictogram: custom/coordonnees.svg
 summary:
     visible: true
     depth: 1

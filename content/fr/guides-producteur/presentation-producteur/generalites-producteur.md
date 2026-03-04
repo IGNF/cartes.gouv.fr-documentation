@@ -3,9 +3,7 @@ title: Généralités producteur
 description: Présentation générale de cartes.gouv.fr
 eleventyNavigation:
     key: Généralités producteur
-    parent: Présentation de cartes.gouv.fr
     order: 1
-    nav: guides-producteur
 pictogram: map/location-france.svg
 summary:
     visible: true

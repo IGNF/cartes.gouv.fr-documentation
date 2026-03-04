@@ -11,9 +11,7 @@ tags:
     - SLD
 eleventyNavigation:
     key: Créer et publier un service WMS-Vecteur
-    parent: Publier des données via cartes.gouv.fr
     order: 4
-    nav: guides-producteur
 pictogram: digital/internet.svg
 description: Procédure pour publier un flux WMS-v
 summary:

@@ -2,9 +2,7 @@
 title: Publication en WMS
 eleventyNavigation:
     key: Publication en WMS
-    parent: Gestion de données MNT
     order: 3
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

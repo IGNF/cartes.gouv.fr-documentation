@@ -7,9 +7,7 @@ tags:
     - Clone
 eleventyNavigation:
     key: Demander la fusion au dépôt principal
-    parent: Créer des pages de documentation
     order: 5
-    nav: guides-producteur
 pictogram: custom/document-upload.svg
 description: La dernière étape pour modifier une page
 summary:

@@ -11,6 +11,5 @@ tags:
 eleventyNavigation:
     key: Concepts de l'Entrepôt
     order: 3
-    nav: guides-developpeur
 pictogram: system/system.svg
 ---

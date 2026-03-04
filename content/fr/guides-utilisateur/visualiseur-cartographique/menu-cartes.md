@@ -1,5 +1,6 @@
 ---
 title: Menu cartes
+description: Ce que vous pouvez faire de plus avec la carte
 tags:
     - Cartes
     - Géoportail
@@ -9,10 +10,7 @@ tags:
 eleventyNavigation:
     key: Menu cartes
     order: 4
-    nav: guides-utilisateur
-    parent: Explorer les cartes
-pictogram: "document/passport.svg"
-description: Ce que vous pouvez faire de plus avec la carte
+pictogram: document/passport.svg
 summary:
     visible: true
     depth: 3

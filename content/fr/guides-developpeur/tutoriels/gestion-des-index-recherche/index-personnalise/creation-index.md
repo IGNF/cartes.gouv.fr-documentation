@@ -6,9 +6,7 @@ summary:
     depth: 2
 eleventyNavigation:
     key: Création et publication de l'index
-    parent: Mise en place d'un index de recherche personnalisé
     order: 1
-    nav: guides-developpeur
 ---
 
 {% from "components/component.njk" import component with context %}

@@ -1,14 +1,12 @@
 ---
 title: Images WMS-Raster
+description: Tous les détails sur les « Web Map Service Raster » de la Géoplateforme
 tags:
     - WMS-Raster
 eleventyNavigation:
     key: Images WMS-Raster
-    parent: API de diffusion
     order: 3
-    nav: guides-utilisateur
-pictogram: "digital/internet.svg"
-description: Tous les détails sur les « Web Map Service Raster » de la Géoplateforme
+pictogram: digital/internet.svg
 summary:
     visible: true
     depth: 1

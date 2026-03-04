@@ -6,4 +6,7 @@ module.exports = {
             title: "Utiliser les services de la Géoplateforme",
         },
     ],
+    eleventyNavigation: {
+        parent: "Utiliser les services de la Géoplateforme",
+    },
 };

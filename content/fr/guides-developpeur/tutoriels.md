@@ -9,6 +9,5 @@ tags:
 eleventyNavigation:
     key: Tutoriels d'utilisation de l'Entrepôt
     order: 5
-    nav: guides-developpeur
 pictogram: leisure/digital-art.svg
 ---

@@ -10,7 +10,6 @@ tags:
 eleventyNavigation:
     key: Utiliser les services de la Géoplateforme
     order: 5
-    nav: guides-utilisateur
 pictogram: custom/swagger.svg
 popularTopic: true
 ---

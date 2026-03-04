@@ -2,9 +2,7 @@
 title: Publication d'une métadonnée
 eleventyNavigation:
     key: Publication d'une métadonnée
-    parent: Gestion des métadonnées
     order: 2
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

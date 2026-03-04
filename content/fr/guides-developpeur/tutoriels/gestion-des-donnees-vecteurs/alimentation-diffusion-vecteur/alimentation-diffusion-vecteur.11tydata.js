@@ -5,4 +5,7 @@ module.exports = {
             title: "Alimentation et diffusion simple vecteur",
         },
     ],
+    eleventyNavigation: {
+        parent: "Alimentation et diffusion simple vecteur",
+    },
 };

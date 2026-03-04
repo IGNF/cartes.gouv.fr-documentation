@@ -7,9 +7,7 @@ tags:
     - Clone
 eleventyNavigation:
     key: Installation de la documentation
-    parent: Créer des pages de documentation
     order: 1
-    nav: guides-producteur
 pictogram: document/document-download.svg
 description: Les prérequis techniques pour modifier des pages
 summary:

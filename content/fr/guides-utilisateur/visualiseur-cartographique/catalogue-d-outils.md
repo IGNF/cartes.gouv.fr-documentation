@@ -1,5 +1,6 @@
 ---
 title: Catalogue d’outils
+description: Personnalisez votre interface avec les outils de votre choix
 tags:
     - Cartes
     - Géoportail
@@ -9,10 +10,7 @@ tags:
 eleventyNavigation:
     key: Catalogue d’outils
     order: 5
-    nav: guides-utilisateur
-    parent: Explorer les cartes
-pictogram: "map/backpack.svg"
-description: Personnalisez votre interface avec les outils de votre choix
+pictogram: map/backpack.svg
 summary:
     visible: true
     depth: 1

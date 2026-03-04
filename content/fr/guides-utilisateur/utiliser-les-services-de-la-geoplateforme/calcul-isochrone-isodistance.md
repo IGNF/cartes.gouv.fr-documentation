@@ -1,5 +1,6 @@
 ---
 title: Calcul d’isochrone/isodistance
+description: Tous les détails sur le service de calcul d’isochrone/isodistance de la Géoplateforme
 tags:
     - Isochrone
     - Isodistance
@@ -8,14 +9,11 @@ tags:
     - Calcul
 eleventyNavigation:
     key: Calcul d’isochrone/isodistance
-    parent: Utiliser les services de la Géoplateforme
     order: 8
-    nav: guides-utilisateur
 summary:
     visible: true
     depth: 3
-pictogram: "system/system.svg"
-description: Tous les détails sur le service de calcul d’isochrone/isodistance de la Géoplateforme
+pictogram: system/system.svg
 ---
 
 {% from "components/component.njk" import component with context %}

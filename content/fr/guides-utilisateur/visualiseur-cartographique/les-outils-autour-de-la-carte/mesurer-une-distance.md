@@ -1,5 +1,6 @@
 ---
 title: Mesurer une distance
+description: Tracez un trajet pour connaître sa longueur
 tags:
     - Cartes
     - Géoportail
@@ -11,10 +12,7 @@ tags:
 eleventyNavigation:
     key: Mesurer une distance
     order: 1
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/mesurer-une-distance.svg"
-description: Tracez un trajet pour connaître sa longueur
+pictogram: custom/mesurer-une-distance.svg
 ---
 
 L’outil **« Mesurer une distance »** permet de dessiner une ligne sur la carte et d’en connaître en temps réel la longueur.

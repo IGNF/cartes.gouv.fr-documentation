@@ -3,9 +3,7 @@ title: Intégration des données archives
 mermaid: true
 eleventyNavigation:
     key: Intégration des données archives
-    parent: Alimentation et diffusion simple d'archives
     order: 2
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

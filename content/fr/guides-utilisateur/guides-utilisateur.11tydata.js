@@ -7,4 +7,7 @@ module.exports = {
             title: "Guides utilisateur",
         },
     ],
+    eleventyNavigation: {
+        nav: "guides-utilisateur",
+    },
 };

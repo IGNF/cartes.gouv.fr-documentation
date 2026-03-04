@@ -3,9 +3,7 @@ title: Calcul des données
 mermaid: true
 eleventyNavigation:
     key: Calcul des données
-    parent: Gestion de données MNT
     order: 2
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

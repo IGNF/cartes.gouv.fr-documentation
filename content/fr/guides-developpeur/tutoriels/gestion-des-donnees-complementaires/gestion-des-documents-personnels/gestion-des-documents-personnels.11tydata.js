@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion des documents personnels",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion des documents personnels",
+    },
 };

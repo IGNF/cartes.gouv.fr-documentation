@@ -8,9 +8,7 @@ tags:
     - Clone
 eleventyNavigation:
     key: Rédiger sa documentation
-    parent: Créer des pages de documentation
     order: 3
-    nav: guides-producteur
 pictogram: document/document.svg
 description: Créer, modifier ou supprimer des pages
 summary:
@@ -129,14 +127,16 @@ Cas n°1 : le sous-dossier correspondant se situe au premier niveau du menu lat
 ```yaml
 ---
 title: Créer des pages de documentation
-layout: layouts/parent.njk
 description: Création, modification et publication de documentation partenaire sur le site de documentation de cartes.gouv.fr
-tags: - Documentation - Partenaire
+layout: layouts/parent.njk
+tags:
+    - Documentation
+    - Partenaire
 eleventyNavigation:
-key: Créer des pages de documentation
-order: 3
-nav: guides-producteur
-pictogram: "document/document-add.svg"
+    key: Créer des pages de documentation
+    order: 3
+    nav: guides-producteur
+pictogram: document/document-add.svg
 ---
 ```
 
@@ -145,15 +145,17 @@ Cas n°2 : le sous-dossier correspondant se situe au deuxième ou au troisième
 ```yaml
 ---
 title: Sous-dossier de niveau 2
-layout: layouts/parent.njk
 description: Description du sous-dossier de niveau 2
-tags: - Documentation - Partenaire
+layout: layouts/parent.njk
+tags:
+    - Documentation
+    - Partenaire
 eleventyNavigation:
-key: Sous-dossier de niveau 2
-order: 1
-nav: guides-producteur
-parent: Créer des pages de documentation
-pictogram: "document/document-add.svg"
+    key: Sous-dossier de niveau 2
+    order: 1
+    parent: Créer des pages de documentation
+    nav: guides-producteur
+pictogram: document/document-add.svg
 ---
 ```
 
@@ -200,6 +202,7 @@ Le texte est découpé en 2 parties : un en-tête (ou cartouche) qui contient l
 ```yaml
 ---
 title: Rédiger sa documentation
+description: Créer, modifier ou supprimer des pages
 tags:
     - Rédaction
     - Modification
@@ -210,9 +213,7 @@ eleventyNavigation:
     key: Rédiger sa documentation
     parent: Créer des pages de documentation
     order: 3
-    nav: guides-producteur
 pictogram: document/document.svg
-description: Créer, modifier ou supprimer des pages
 summary:
     visible: true
     depth: 2

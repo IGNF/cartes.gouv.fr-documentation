@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion des données archives",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion des données archives",
+    },
 };

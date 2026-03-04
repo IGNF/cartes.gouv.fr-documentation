@@ -6,4 +6,7 @@ module.exports = {
             title: "Publier des données via cartes.gouv.fr",
         },
     ],
+    eleventyNavigation: {
+        parent: "Publier des données via cartes.gouv.fr",
+    },
 };

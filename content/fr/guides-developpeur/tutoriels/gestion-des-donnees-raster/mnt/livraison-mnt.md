@@ -2,9 +2,7 @@
 title: Téléversement des données
 eleventyNavigation:
     key: Téléversement des données
-    parent: Gestion de données MNT
     order: 1
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

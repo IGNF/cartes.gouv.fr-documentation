@@ -9,9 +9,7 @@ tags:
     - Communauté
 eleventyNavigation:
     key: Octroyer des permissions sur mon flux
-    parent: Publier des données via cartes.gouv.fr
     order: 8
-    nav: guides-producteur
 pictogram: system/padlock.svg
 description: Donner des droits d’accès sur ses flux
 summary:

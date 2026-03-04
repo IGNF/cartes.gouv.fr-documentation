@@ -1,5 +1,6 @@
 ---
 title: Calculer une isochrone
+description: Calculer une zone selon un temps de trajet ou une distance
 tags:
     - Cartes
     - Géoportail
@@ -10,10 +11,7 @@ tags:
 eleventyNavigation:
     key: Calculer une isochrone
     order: 6
-    nav: guides-utilisateur
-    parent: Les outils autour de la carte
-pictogram: "custom/calculer-une-isochrone.svg"
-description: Calculer une zone selon un temps de trajet ou une distance
+pictogram: custom/calculer-une-isochrone.svg
 summary:
     visible: true
     depth: 1

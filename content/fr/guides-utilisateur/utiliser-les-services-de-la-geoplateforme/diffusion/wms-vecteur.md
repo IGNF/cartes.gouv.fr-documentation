@@ -1,14 +1,12 @@
 ---
 title: Images WMS-Vecteur
+description: Tous les détails sur les « Web Map Service Vecteur » de la Géoplateforme
 tags:
     - WMS-Vecteur
 eleventyNavigation:
     key: Images WMS-Vecteur
-    parent: API de diffusion
     order: 4
-    nav: guides-utilisateur
-pictogram: "digital/internet.svg"
-description: Tous les détails sur les « Web Map Service Vecteur » de la Géoplateforme
+pictogram: digital/internet.svg
 summary:
     visible: true
     depth: 1

@@ -6,4 +6,7 @@ module.exports = {
             title: "Explorer les cartes",
         },
     ],
+    eleventyNavigation: {
+        parent: "Explorer les cartes",
+    },
 };

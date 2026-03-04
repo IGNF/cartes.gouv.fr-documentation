@@ -1,5 +1,6 @@
 ---
 title: Découverte des métadonnées CSW
+description: Tous les détails sur le service de recherche de métadonnées de la Géoplateforme
 tags:
     - Métadonnées
     - CSW
@@ -7,11 +8,8 @@ tags:
     - Géoplateforme
 eleventyNavigation:
     key: Découverte des métadonnées CSW
-    parent: Utiliser les services de la Géoplateforme
     order: 3
-    nav: guides-utilisateur
-pictogram: "digital/search.svg"
-description: Tous les détails sur le service de recherche de métadonnées de la Géoplateforme
+pictogram: digital/search.svg
 summary:
     visible: true
     depth: 1

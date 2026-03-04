@@ -1,5 +1,6 @@
 ---
 title: Généralités
+description: Explorez le catalogue de données et services de cartes.gouv.fr
 tags:
     - Catalogue
     - Géoservices
@@ -8,10 +9,7 @@ tags:
 eleventyNavigation:
     key: Généralités
     order: 1
-    nav: guides-utilisateur
-    parent: Rechercher une donnée
-pictogram: "map/location-france.svg"
-description: Explorez le catalogue de données et services de cartes.gouv.fr
+pictogram: map/location-france.svg
 ---
 
 Le service **« Rechecher une donnée »** de **cartes.gouv.fr** offre une recherche et un accès aux données et services de la Géoplateforme.

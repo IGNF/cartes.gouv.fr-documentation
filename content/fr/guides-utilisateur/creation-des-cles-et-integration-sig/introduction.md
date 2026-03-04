@@ -10,10 +10,8 @@ tags:
     - Géoplateforme
 eleventyNavigation:
     key: Introduction
-    parent: Création et intégration des clés cartes.gouv.fr dans un SIG
     order: 1
-    nav: guides-utilisateur
-pictogram: "system/padlock.svg"
+pictogram: system/padlock.svg
 ---
 
 L’API **Entrepôt** de la **Géoplateforme** structure l’accès aux données autour de trois composantes : **permissions**, **accès** et **clés**.

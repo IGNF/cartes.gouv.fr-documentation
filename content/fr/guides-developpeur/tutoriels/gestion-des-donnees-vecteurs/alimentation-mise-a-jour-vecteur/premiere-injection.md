@@ -2,9 +2,7 @@
 title: Injection d'un premier lot de données
 eleventyNavigation:
     key: Injection d'un premier lot de données
-    parent: Alimentation par mise à jour vecteur
     order: 2
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

@@ -5,4 +5,7 @@ module.exports = {
             title: "Contrôle des accès aux services de diffusion",
         },
     ],
+    eleventyNavigation: {
+        parent: "Contrôle des accès aux services de diffusion",
+    },
 };

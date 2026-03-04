@@ -8,7 +8,6 @@ tags:
 eleventyNavigation:
     key: Créer des pages de documentation
     order: 3
-    nav: guides-producteur
 pictogram: document/document-add.svg
 popularTopic: true
 ---

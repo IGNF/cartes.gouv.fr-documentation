@@ -7,9 +7,7 @@ tags:
     - Premium
 eleventyNavigation:
     key: Présentation des offres
-    parent: Présentation de cartes.gouv.fr
     order: 2
-    nav: guides-producteur
 pictogram: leisure/book.svg
 description: Présentation des différentes offres de la Géoplateforme
 ---

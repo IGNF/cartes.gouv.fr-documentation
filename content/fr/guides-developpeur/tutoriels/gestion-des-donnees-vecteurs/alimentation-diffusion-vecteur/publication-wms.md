@@ -2,9 +2,7 @@
 title: Configuration de la diffusion de données vecteur en WMS
 eleventyNavigation:
     key: Configuration de la diffusion de données vecteur en WMS
-    parent: Alimentation et diffusion simple vecteur
     order: 5
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

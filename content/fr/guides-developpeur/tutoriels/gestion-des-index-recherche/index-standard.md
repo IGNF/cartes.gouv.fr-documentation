@@ -7,9 +7,7 @@ summary:
     depth: 2
 eleventyNavigation:
     key: Recherche dans l'index standard
-    parent: Index de recherche
     order: 1
-    nav: guides-developpeur
 ---
 
 {% from "components/component.njk" import component with context %}

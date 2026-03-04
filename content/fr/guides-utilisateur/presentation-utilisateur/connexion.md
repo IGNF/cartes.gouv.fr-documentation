@@ -1,15 +1,13 @@
 ---
 title: Connexion
+description: La procédure pour créer un compte Géoplateforme/cartes.gouv.fr et se connecter
 tags:
     - Connexion
     - Inscription
 eleventyNavigation:
     key: Connexion
-    parent: Présentation de cartes.gouv.fr
     order: 2
-    nav: guides-utilisateur
 pictogram: digital/avatar.svg
-description: La procédure pour créer un compte Géoplateforme/cartes.gouv.fr et se connecter
 ---
 
 :::info

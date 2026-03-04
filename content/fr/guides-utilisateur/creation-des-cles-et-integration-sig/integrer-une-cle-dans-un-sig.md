@@ -11,13 +11,11 @@ tags:
     - OAuth2
 eleventyNavigation:
     key: Intégrer une clé dans son SIG
-    parent: Création et intégration des clés cartes.gouv.fr dans un SIG
     order: 4
-    nav: guides-utilisateur
+pictogram: system/success.svg
 summary:
     visible: true
     depth: 2
-pictogram: "system/success.svg"
 ---
 
 ## Définitions utiles

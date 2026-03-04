@@ -9,7 +9,6 @@ tags:
 eleventyNavigation:
     key: Rechercher une donnée
     order: 3
-    nav: guides-utilisateur
 pictogram: custom/catalogue.svg
 popularTopic: true
 ---

@@ -1,18 +1,16 @@
 ---
 title: Limites d’usage des API
+description: Nombre de requêtes par seconde autorisées
 tags:
     - Fair use
     - API
 eleventyNavigation:
     key: Limites d’usage des API
-    parent: Utiliser les services de la Géoplateforme
     order: 11
-    nav: guides-utilisateur
+pictogram: system/information.svg
 summary:
     visible: true
     depth: 1
-pictogram: "system/information.svg"
-description: Nombre de requêtes par seconde autorisées
 ---
 
 {% from "components/component.njk" import component with context %}

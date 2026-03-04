@@ -5,4 +5,7 @@ module.exports = {
             title: "Contrôle des accès à l'API Entrepôt",
         },
     ],
+    eleventyNavigation: {
+        parent: "Contrôle des accès à l'API Entrepôt",
+    },
 };

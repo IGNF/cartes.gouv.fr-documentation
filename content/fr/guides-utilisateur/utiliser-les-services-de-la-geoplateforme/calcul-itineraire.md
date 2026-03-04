@@ -1,5 +1,6 @@
 ---
 title: Calcul d’itinéraire
+description: Tous les détails sur le service de calcul d’itinéraire de la Géoplateforme
 tags:
     - Itinéraire
     - API
@@ -7,14 +8,11 @@ tags:
     - Calcul
 eleventyNavigation:
     key: Calcul d’itinéraire
-    parent: Utiliser les services de la Géoplateforme
     order: 7
-    nav: guides-utilisateur
 summary:
     visible: true
     depth: 3
-pictogram: "system/system.svg"
-description: Tous les détails sur le service de calcul d’itinéraire de la Géoplateforme
+pictogram: system/system.svg
 ---
 
 {% from "components/component.njk" import component with context %}

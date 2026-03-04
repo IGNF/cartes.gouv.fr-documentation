@@ -6,9 +6,7 @@ tags:
     - Entrepôt
 eleventyNavigation:
     key: Espace de travail « Découverte »
-    parent: Présentation de cartes.gouv.fr
     order: 3
-    nav: guides-producteur
 pictogram: digital/search.svg
 summary:
     visible: true

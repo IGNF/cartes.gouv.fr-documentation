@@ -1,12 +1,10 @@
 ---
 title: Généralités utilisateur
+description: Présentation générale de cartes.gouv.fr
 eleventyNavigation:
     key: Généralités utilisateur
-    parent: Présentation de cartes.gouv.fr
     order: 1
-    nav: guides-utilisateur
 pictogram: map/location-france.svg
-description: Présentation générale de cartes.gouv.fr
 ---
 
 ## Le profil utilisateur

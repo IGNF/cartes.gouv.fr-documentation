@@ -10,13 +10,11 @@ tags:
     - Clé
 eleventyNavigation:
     key: Créer une clé d’accès
-    parent: Création et intégration des clés cartes.gouv.fr dans un SIG
     order: 2
-    nav: guides-utilisateur
+pictogram: document/conclusion.svg
 summary:
     visible: true
     depth: 2
-pictogram: "document/conclusion.svg"
 ---
 
 ## Initier la création de clé et définir les services accessibles 

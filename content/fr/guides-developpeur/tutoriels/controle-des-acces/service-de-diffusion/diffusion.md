@@ -3,9 +3,7 @@ title: Contrôle des accès
 mermaid: true
 eleventyNavigation:
     key: Contrôle des accès
-    parent: Contrôle des accès aux services de diffusion
     order: 1
-    nav: guides-developpeur
 ---
 
 Les fonctionnalités de contrôle des accès permettent de restreindre l'accès aux données via les services de diffusion.

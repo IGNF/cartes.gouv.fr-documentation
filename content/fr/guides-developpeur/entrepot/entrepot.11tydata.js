@@ -6,4 +6,7 @@ module.exports = {
             title: "Concepts de l'Entrepôt",
         },
     ],
+    eleventyNavigation: {
+        parent: "Concepts de l'Entrepôt",
+    },
 };

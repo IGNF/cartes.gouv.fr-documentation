@@ -1,20 +1,17 @@
 ---
 title: Détail d’une métadonnée catalogue
+description: Le détail d’une métadonnée catalogue de cartes.gouv.fr
 tags:
     - Catalogue
     - Métadonnées
     - Données
-description: Le détail d’une métadonnée catalogue de cartes.gouv.fr
 eleventyNavigation:
     key: Détail d’une métadonnée catalogue
-    parent: Rechercher une donnée
     order: 3
-    nav: guides-utilisateur
-pictogram: "document/document.svg"
+pictogram: document/document.svg
 summary:
     visible: true
     depth: 2
-       
 ---
 
 Pour illustrer une métadonnée catalogue, nous allons nous appuyer sur la donnée Plan IGN. 

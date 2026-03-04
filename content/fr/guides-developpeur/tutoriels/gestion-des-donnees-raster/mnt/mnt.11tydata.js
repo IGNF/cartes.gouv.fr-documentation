@@ -5,4 +5,7 @@ module.exports = {
             title: "Gestion de données MNT",
         },
     ],
+    eleventyNavigation: {
+        parent: "Gestion de données MNT",
+    },
 };

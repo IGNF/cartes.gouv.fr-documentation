@@ -3,9 +3,7 @@ title: Publication d'une annexe
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Publication d'une annexe
-    parent: Gestion des annexes
     order: 2
-    nav: guides-developpeur
 pictogram: digital/data-visualization.svg
 ---
 

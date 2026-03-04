@@ -2,9 +2,7 @@
 title: Alimentation avec FME
 eleventyNavigation:
     key: Alimentation avec FME
-    parent: Alimentation et diffusion simple vecteur
     order: 8
-    nav: guides-developpeur
 ---
 
 Cette vidéo reprend les différentes étapes pour publier une donnée vecteur et la mettre à disposition du public en utilisant l'outil FME : téléversement, mise en base et mise à disposition sur le service de diffusion.

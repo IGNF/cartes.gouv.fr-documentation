@@ -6,9 +6,7 @@ summary:
     depth: 2
 eleventyNavigation:
     key: Recherche dans un index personnalisé
-    parent: Mise en place d'un index de recherche personnalisé
     order: 2
-    nav: guides-developpeur
 ---
 
 {% from "components/component.njk" import component with context %}

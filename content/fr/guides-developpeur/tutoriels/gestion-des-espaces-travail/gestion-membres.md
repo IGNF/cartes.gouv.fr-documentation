@@ -3,9 +3,7 @@ title: Gestion des membres d’une communauté
 description: Ajout ou suppression de membres, définition des droits
 eleventyNavigation:
     key: Gestion des membres d’une communauté
-    parent: Espaces de travail
     order: 1
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

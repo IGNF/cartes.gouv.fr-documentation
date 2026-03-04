@@ -4,9 +4,7 @@ mermaid: true
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Alimentation et diffusion simple d'archives
-    parent: Gestion des données archives
     order: 1
-    nav: guides-developpeur
 ---
 
 {% from "components/component.njk" import component with context %}

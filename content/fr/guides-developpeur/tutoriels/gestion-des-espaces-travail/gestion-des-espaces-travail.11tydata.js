@@ -5,4 +5,7 @@ module.exports = {
             title: "Espaces de travail",
         },
     ],
+    eleventyNavigation: {
+        parent: "Espaces de travail",
+    },
 };

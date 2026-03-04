@@ -5,4 +5,7 @@ module.exports = {
             title: "Alimentation par mise à jour vecteur",
         },
     ],
+    eleventyNavigation: {
+        parent: "Alimentation par mise à jour vecteur",
+    },
 };

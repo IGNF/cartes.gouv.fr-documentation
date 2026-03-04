@@ -2,9 +2,7 @@
 title: Initialisation d'une donnée vecteur pour des mises à jour postérieures
 eleventyNavigation:
     key: Initialisation d'une donnée vecteur pour des mises à jour postérieures
-    parent: Alimentation par mise à jour vecteur
     order: 1
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

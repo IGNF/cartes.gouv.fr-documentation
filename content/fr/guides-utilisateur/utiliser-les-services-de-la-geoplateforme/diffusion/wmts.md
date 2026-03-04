@@ -1,14 +1,12 @@
 ---
 title: Images tuilées WMTS
+description: Tous les détails sur les « Web Map Tile Service » de la Géoplateforme
 tags:
     - WMTS
 eleventyNavigation:
     key: Images tuilées WMTS
-    parent: API de diffusion
     order: 1
-    nav: guides-utilisateur
-pictogram: "digital/internet.svg"
-description: Tous les détails sur les « Web Map Tile Service » de la Géoplateforme
+pictogram: digital/internet.svg
 summary:
     visible: true
     depth: 1

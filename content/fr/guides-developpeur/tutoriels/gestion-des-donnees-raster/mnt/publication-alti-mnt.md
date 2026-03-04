@@ -2,9 +2,7 @@
 title: Publication sur le service d'altimétrie
 eleventyNavigation:
     key: Publication sur le service d'altimétrie
-    parent: Gestion de données MNT
     order: 4
-    nav: guides-developpeur
 summary:
     visible: true
     depth: 2

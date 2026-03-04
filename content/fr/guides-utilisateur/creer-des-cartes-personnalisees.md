@@ -7,7 +7,6 @@ tags:
 eleventyNavigation:
     key: Créer des cartes personnalisées
     order: 6
-    nav: guides-utilisateur
 pictogram: custom/editor.svg
 popularTopic: true
 ---

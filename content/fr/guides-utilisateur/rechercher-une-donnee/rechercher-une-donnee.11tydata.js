@@ -6,4 +6,7 @@ module.exports = {
             title: "Rechercher une donnée",
         },
     ],
+    eleventyNavigation: {
+        parent: "Rechercher une donnée",
+    },
 };
