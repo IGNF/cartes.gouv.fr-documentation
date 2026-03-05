@@ -34,12 +34,12 @@ layout: layouts/base.njk
           {% endif %}
           <h1>{{ title }}</h1>
           {% include "components/published_on.njk" %}
-          {% if description %}
+          {% if description and showDescription != false %}
             <p class="fr-text--lead">{{ description }}</p>
           {% endif %}
         </div>
       </div>
-      {% if description %}
+      {% if description and showDescription != false %}
         <hr>
       {% endif %}
       {{ content | safe }}
