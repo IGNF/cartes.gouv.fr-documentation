@@ -17,12 +17,10 @@ summary:
 
 
 <figure role="group" class="fr-content-media">
-    <video src="/video/guides-utilisateur/rechercher-une-donnee/interface-generale/01_demo1_lancer-une-recherche.mp4" controls>
-        <p>Voir la transcription ci-dessous</p>
-    </video>
+    <iframe title="Lancer une recherche" class="fr-responsive-vid" src="https://data.geopf.fr/annexes/ressources/aide/01_demo1_lancer-une-recherche.mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <figcaption class="fr-content-media__caption">
         Lancer une recherche
-        <a id="link-lancer-une-recherche" href="#" class="fr-link">Libellé lien</a>
+        <a id="link-lancer-une-recherche" href="#" class="fr-link"></a>
     </figcaption>
 </figure>
 
