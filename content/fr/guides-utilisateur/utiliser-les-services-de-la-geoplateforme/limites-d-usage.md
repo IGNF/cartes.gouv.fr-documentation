@@ -6,8 +6,9 @@ tags:
     - API
 eleventyNavigation:
     key: Limites d’usage des API
-    order: 11
-pictogram: system/information.svg
+    parent: Utiliser les services de la Géoplateforme
+    order: 12
+    nav: guides-utilisateur
 summary:
     visible: true
     depth: 1
