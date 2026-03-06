@@ -5,4 +5,7 @@ module.exports = {
             title: "Changements & évolutions de la Géoplateforme",
         },
     ],
+    eleventyNavigation: {
+        parent: "Changements & évolutions de la Géoplateforme",
+    },
 };
