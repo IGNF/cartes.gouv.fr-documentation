@@ -16,4 +16,4 @@ Le service **« Rechecher une donnée »** de **cartes.gouv.fr** offre une rec
 
 Successeur de **Géoservices**, le catalogue permet d’explorer librement les données et services : nous pouvons y naviguer dans l’ensemble des métadonnées disponibles, filtrer par producteur ou par thématique, ou rechercher une métadonnée précise par son nom.
 
-Les métadonnées décrivent chaque donnée (titre, emprise, thème, conditions d’usage, documentation...) et permettent de disposer d’une grande variétés de données et de web services.
+Les métadonnées décrivent chaque donnée (titre, emprise, thème, conditions d’usage, documentation...) et permettent de disposer d’une grande variété de données et de web services.
