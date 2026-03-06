@@ -2,11 +2,13 @@
 title: Modification de l'interface Keycloak
 eleventyNavigation:
     key: Modification de l'interface Keycloak
-    parent: Changements & évolutions
+    parent: Changements & évolutions de la Géoplateforme
     order: 2
     nav: guides-utilisateur
-pictogram: "digital/coding.svg"
-description: Des modifications sur l'interface du Keycloak sont prévues le 25 février 2026
+description: Des modifications sur l'interface du Keycloak sont prévues le 25 février 2026.
+tags:
+    - Keycloak
+    - Itinéraire
 ---
 
 ## Changements
