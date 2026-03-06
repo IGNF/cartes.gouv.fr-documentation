@@ -1,14 +1,10 @@
 ---
-title: Changements & évolutions
-layout: layouts/parent.njk
+title: Changements & évolutions de la Géoplateforme
 eleventyNavigation:
-    key: Changements & évolutions
+    key: Changements & évolutions de la Géoplateforme
     parent: Utiliser les services de la Géoplateforme
     order: 11
     nav: guides-utilisateur
-summary:
-    visible: true
-    depth: 1
 pictogram: "digital/innovation.svg"
 description: Retrouver les dernières évolutions de la Géoplateforme
 ---
@@ -230,11 +226,7 @@ description: Retrouver les dernières évolutions de la Géoplateforme
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Changement de l'API de téléversement de fichiers dans une livraison",
-    description: "Afin d'améliorer les performances du téléversement de données, des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.
-
-    Cette modification est actuellement déployée sur l'environnement de qualification. Elle sera déployée le 20 février sur l'environnement de production.
-
-    Les téléversements en dehors des données dans une livraison (métadonnées, annexes, statiques, fichiers MD5 dans une livraison) restent inchangés. ",
+    description: "Afin d'améliorer les performances du téléversement de données, des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.",
     tags: ["Changement","Publication"],
     date: "2024-02-20" | jsDateObject
 }) }}

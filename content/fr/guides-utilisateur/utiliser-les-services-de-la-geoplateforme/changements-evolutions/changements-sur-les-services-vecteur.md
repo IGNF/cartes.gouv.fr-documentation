@@ -1,13 +1,12 @@
 ---
 title: Changements sur les services Vecteur
-date: "2026-03-04"
 eleventyNavigation:
     key: Changements sur les services Vecteur
-    parent: Changements & évolutions
+    parent: Changements & évolutions de la Géoplateforme
     order: 1
     nav: guides-utilisateur
 pictogram: "digital/coding.svg"
-description: Des changements sur les services Vecteur (entre autres) sont prévus le 4 mars 2026
+description: Des changements sur les services Vecteur (entre autres) sont prévus le 4 mars 2026.
 tags:
     - WFS
     - WMS Vecteur

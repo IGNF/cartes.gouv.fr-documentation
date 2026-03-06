@@ -2,7 +2,7 @@
 title: Correction de bugs et modification d'informations dans les GetCaps
 eleventyNavigation:
     key: Correction de bugs et modification d'informations dans les GetCaps
-    parent: Changements & évolutions
+    parent: Changements & évolutions de la Géoplateforme
     order: 3
     nav: guides-utilisateur
 pictogram: "digital/coding.svg"

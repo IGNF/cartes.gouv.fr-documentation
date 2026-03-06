@@ -2,11 +2,11 @@
 title: Changements dans l'entrepot
 eleventyNavigation:
     key: Changements dans l'entrepot
-    parent: Changements & évolutions
+    parent: Changements & évolutions de la Géoplateforme
     order: 4
     nav: guides-utilisateur
 pictogram: "digital/coding.svg"
-description: Service WMTS
+description: Des changements dans l'entrepot sont prévus le 28 janvier 2026.
 tags:
     - Entrepot
     - Geocodage
