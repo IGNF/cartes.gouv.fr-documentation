@@ -1,6 +1,5 @@
 ---
 title: Contrôle des accès 
-mermaid: true
 eleventyNavigation:
     key: Contrôle des accès
     order: 1

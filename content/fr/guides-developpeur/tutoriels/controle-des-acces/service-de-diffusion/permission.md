@@ -1,6 +1,5 @@
 ---
 title: Gestion des permissions d'accès aux services de diffusion
-mermaid: true
 eleventyNavigation:
     key: Gestion des permissions d'accès aux services de diffusion
     order: 2

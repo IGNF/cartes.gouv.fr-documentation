@@ -1,7 +1,6 @@
 ---
 title: Mise en place d'un groupe thématique de couches
 description: Sélection d'un sous-partie des capacités d'un service et mise à disposition pour une utilisation dans un logiciel SIG
-mermaid: true
 eleventyNavigation:
     key: Mise en place d'un groupe thématique de couches
     order: 1

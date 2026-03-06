@@ -1,6 +1,5 @@
 ---
 title: Recherche dans un index personnalisé
-mermaid: true
 summary:
     visible: true
     depth: 2

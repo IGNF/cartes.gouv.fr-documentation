@@ -1,6 +1,5 @@
 ---
 title: Création et publication de l'index
-mermaid: true
 summary:
     visible: true
     depth: 2
