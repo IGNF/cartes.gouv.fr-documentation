@@ -227,6 +227,7 @@ description: Retrouver les dernières évolutions de la Géoplateforme
 {{ component("card", {
     title: "Changement de l'API de téléversement de fichiers dans une livraison",
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: "Afin d'améliorer les performances du téléversement de données, des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.",
 =======
     description: "Afin d'améliorer les performances du téléversement de données, des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.
@@ -235,6 +236,9 @@ description: Retrouver les dernières évolutions de la Géoplateforme
 
     Les téléversements en dehors des données dans une livraison (métadonnées, annexes, statiques, fichiers MD5 dans une livraison) restent inchangés. ",
 >>>>>>> 679b769 (add changements-evolutions)
+=======
+    description: "Afin d'améliorer les performances du téléversement de données, des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.",
+>>>>>>> a8f8048 (small fixes)
     tags: ["Changement","Publication"],
     date: "2024-02-20" | jsDateObject
 }) }}
