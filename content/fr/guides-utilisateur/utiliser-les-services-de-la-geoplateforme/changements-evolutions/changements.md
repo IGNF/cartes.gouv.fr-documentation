@@ -5,7 +5,6 @@ eleventyNavigation:
     parent: Changements & évolutions de la Géoplateforme
     order: 4
     nav: guides-utilisateur
-pictogram: "digital/coding.svg"
 description: Des changements dans l'entrepot sont prévus le 28 janvier 2026.
 tags:
     - Entrepot

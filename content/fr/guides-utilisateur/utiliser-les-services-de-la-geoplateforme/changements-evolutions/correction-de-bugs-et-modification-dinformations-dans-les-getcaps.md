@@ -5,7 +5,6 @@ eleventyNavigation:
     parent: Changements & évolutions de la Géoplateforme
     order: 3
     nav: guides-utilisateur
-pictogram: "digital/coding.svg"
 description: Des correction de bugs et modification d'informations dans les GetCaps sont prévus le 11 février 2026
 tags:
     - Extraction
