@@ -1,6 +1,5 @@
 ---
 title: Gestion des clés de consommation des services de diffusion
-mermaid: true
 eleventyNavigation:
     key: Gestion des clés de consommation des services de diffusion
     order: 3

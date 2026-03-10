@@ -1,6 +1,5 @@
 ---
 title: Connexion avec FME
-mermaid: true
 eleventyNavigation:
     key: Connexion avec FME
     order: 2

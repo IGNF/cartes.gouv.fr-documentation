@@ -1,7 +1,6 @@
 ---
 title: Recherche dans l'index standard
 description: Consultation du service de recherche de couche, identification des ressources publiées
-mermaid: true
 summary:
     visible: true
     depth: 2

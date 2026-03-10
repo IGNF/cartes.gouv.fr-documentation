@@ -1,6 +1,5 @@
 ---
 title: Connexion à l'API Entrepôt
-mermaid: true
 eleventyNavigation:
     key: Connexion à l'API Entrepôt
     order: 1
