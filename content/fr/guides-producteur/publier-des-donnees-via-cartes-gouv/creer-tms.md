@@ -9,13 +9,11 @@ eleventyNavigation:
     key: Créer et publier un service TMS
     order: 5
 pictogram: digital/internet.svg
-description: Procédure pour publier un flux TMS
 summary:
     visible: true
     depth: 2
 ---
 
-## Créer un service TMS
 
 ### Lancer la création d’un service 
 

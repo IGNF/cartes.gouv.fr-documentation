@@ -1,6 +1,5 @@
 ---
 title: Créer et publier un service WMTS
-description: Procédure pour publier un flux WMTS
 tags:
     - WMTS
     - Raster

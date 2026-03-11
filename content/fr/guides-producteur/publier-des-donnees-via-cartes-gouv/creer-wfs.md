@@ -12,13 +12,11 @@ eleventyNavigation:
     key: Créer et publier un service WFS
     order: 3
 pictogram: digital/internet.svg
-description: Procédure pour publier un flux WFS
 summary:
     visible: true
     depth: 2
 ---
 
-## Créer un service WFS
 
 ### Lancer la création d’un service
 

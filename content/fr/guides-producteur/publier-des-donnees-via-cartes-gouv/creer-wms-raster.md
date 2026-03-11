@@ -12,7 +12,6 @@ eleventyNavigation:
     key: Créer et publier un service WMS-Raster
     order: 6
 pictogram: digital/internet.svg
-description: Procédure pour publier un flux WMS-r
 summary:
     visible: true
     depth: 2
