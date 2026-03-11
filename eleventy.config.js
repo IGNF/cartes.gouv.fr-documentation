@@ -100,27 +100,18 @@ module.exports = function (eleventyConfig) {
         });
     });
 
-    eleventyConfig.addCollection("utilisateurNavigation", function (collectionApi) {
-        return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "guides-utilisateur";
-        });
-    });
+    const sidemenuNavigations = {
+        utilisateurNavigation: { navKey: "guides-utilisateur", title: "Guides utilisateur" },
+        developpeurNavigation: { navKey: "guides-developpeur", title: "Guides développeur" },
+        producteurNavigation: { navKey: "guides-producteur", title: "Guides producteur" },
+        ignNavigation: { navKey: "ign", title: "Institut national de l’information géographique et forestière" },
+    };
 
-    eleventyConfig.addCollection("developpeurNavigation", function (collectionApi) {
-        return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "guides-developpeur";
-        });
-    });
-
-    eleventyConfig.addCollection("producteurNavigation", function (collectionApi) {
-        return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "guides-producteur";
-        });
-    });
-
-    eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
-        return collectionApi.getAll().filter((item) => {
-            return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
+    Object.entries(sidemenuNavigations).forEach(([collectionName, config]) => {
+        eleventyConfig.addCollection(collectionName, function (collectionApi) {
+            return collectionApi.getAll().filter((item) => {
+                return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === config.navKey;
+            });
         });
     });
 
@@ -212,6 +203,18 @@ module.exports = function (eleventyConfig) {
 
     // Get summary items (headers) from a content string
     eleventyConfig.addFilter("getSummaryItems", getSummaryItems);
+
+    // Get navigation context based on nav key
+    eleventyConfig.addFilter("getNavigationContext", function (navKey) {
+        const navConfig = {};
+        Object.entries(sidemenuNavigations).forEach(([collectionName, config]) => {
+            navConfig[config.navKey] = {
+                collectionName: collectionName,
+                title: config.title,
+            };
+        });
+        return navConfig[navKey];
+    });
 
     eleventyConfig.addPairedShortcode("testpaired", async function (content = "", param1) {
         console.log(content);
