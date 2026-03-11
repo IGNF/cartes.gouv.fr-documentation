@@ -9,7 +9,7 @@ eleventyNavigation:
     order: 4
 ---
 
-## Changements
+# Changements
 Ajout du paramètre _fields_ pour la liste des documents personnels.
 
 Sur la route GET /⁠users/me/documents, ajout du paramètre de requête _fields_ qui permettra de ne renvoyer que les champs d’un document souhaités parmi la liste suivante (à l’exception de l’_id_ qui est retourné dans tous les cas) :
@@ -21,7 +21,6 @@ Sur la route GET /⁠users/me/documents, ajout du paramètre de requête _fields
 - labels
 - public_url
 
-<br>
 
 Par défaut (si _fields_ est vide), on retourne les valeurs suivantes :
 - id
@@ -29,7 +28,6 @@ Par défaut (si _fields_ est vide), on retourne les valeurs suivantes :
 - size
 - mime_type
 
-<br>
 
 Ajout du type de métadonnée Stylesheet dans la configuration pour les styles.
 
@@ -37,6 +35,6 @@ Ce style n’est utilisable que pour les configurations WMS Raster.
 
 Limitation à 99 caractères du nom des organismes dans l’entrepôt.
 
-## Correction de bugs
+# Correction de bugs
 - [Geocodage] Sur le Swagger, suppression du remplissage automatique de tous les champs des routes /⁠search/csv et /⁠reverse/csv.
 - [Entrepôt] Retour en erreur 422 quand on tente de pousser une métadonnée mal formée par la route POST /⁠datastores/{datastores}/metadata.

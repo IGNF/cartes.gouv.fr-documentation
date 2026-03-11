@@ -11,7 +11,7 @@ eleventyNavigation:
     order: 1
 ---
 
-## Changements
+# Changements
 Ajout du format de sortie application/geo+json en WFS.
 
 Contrôle des noms des tables des uploads Vector.
@@ -20,9 +20,7 @@ Lorsque l’on souhaite livrer une donnée Vecteur, le check-vector va contrôle
 - doit commencer par un caractère de [a-z_]
 - ne doit contenir que des caractères de [a-z0-9_]
 
-<br>
-
 Changements d’informations dans le GetCap CSW.
 
-## Correction de bugs
+# Correction de bugs
 - [WMTS] Avoir un code d’erreur 400 au lieu de 404 lorsqu’il y a des paramètres manquants dans la requête.

@@ -53,6 +53,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Correction de bugs sur la génération de graph itinéraire",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/correction-de-bugs-sur-la-generation-de-graph-itineraire",
     description: "Des corrections de bugs sur la génération de graph itinéraire sont prévues le 21 janvier 2026",
     tags: ["Itinéraire"],
     date: "2026-01-21" | jsDateObject
@@ -62,6 +63,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Montée de version Géocodage",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/montee-de-version-geocodage",
     description: "Une montée de version du service Géocodage est prévue le mercredi 14 janvier 2026 à partir de 15h. Jusqu’à la fin de journée, des perturbations pourront être observés sur le service Géocodage suite à cette montée de version",
     tags: ["Geocage","WFS"],
     date: "2026-01-14" | jsDateObject
@@ -71,6 +73,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Modification descriptif service",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/modification-descriptif-service",
     description: "Des modifications des descriptions des services sont prévus le 7 janvier 2026",
     tags: ["WFS","WMS-V","Géocodage","Téléchargement","WMTS"],
     date: "2026-01-07" | jsDateObject
@@ -80,6 +83,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Correction du HTML du GetFeatureInfo WMS Vecteur",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/correction-du-html-du-getfeatureinfo-wms-vecteur",
     description: "La correction du HTML du GetFeatureInfo WMS Vecteur est prévue le 27 novembre 2025. Celui-ci n’était pas valide dans sa construction",
     tags: ["WMS-V"],
     date: "2025-11-27" | jsDateObject
@@ -89,6 +93,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Montée de version ROK4 + autres changements/corrections de bugs",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/montee-de-version-rok4-autres-changementscorrections-de-bugs",
     description: "Des corrections de bugs et changements sont prévues le 20 novembre 2025",
     tags: ["ROK4","Orchestrateur","Document","Offre","Entrepôt"],
     date: "2025-11-20" | jsDateObject
@@ -98,6 +103,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Livraison 30/10",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/redis-geocodage",
     description: "Des corrections de bugs sont prévues le 30 octobre 2025",
     tags: ["Keycloak","Orchestrateur","Entrepôt","Géocodage"],
     date: "2025-10-30" | jsDateObject
@@ -107,6 +113,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Nouveau service Validateurs + changements sur l’API Entrepot",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/nouveau-service-validateurs-changements-sur-lapi-entrepot",
     description: "Divers modifications sont prévues sur l’API entrepot. Ces changements auront lieu le 9 octobre 2025.",
     tags: ["Changement","Entrepôt","Validateur"],
     date: "2025-10-09" | jsDateObject
@@ -116,8 +123,9 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Passage à France Connect V2 + correction de bugs",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/passage-a-france-connect-v2--correction-de-bugs",
     description: "Des corrections de bugs sont aussi prévues. Ces changements auront lieu le 25 septembre 2025.",
-    tags: ["Changement","Correction bugs","IAM","Keycloak","Statistiques"],
+    tags: ["Changement","Correction bugs","IAM","Keycloak","Statistiques","Altimétrie","Orchestrateur","Itineraire","Entrepot"],
     date: "2025-09-25" | jsDateObject
 }) }}
 </div>
@@ -125,8 +133,9 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Correction de bugs + ajout de TMS",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/correction-de-bugs-ajout-de-tms",
     description: "Des corrections de bugs sont aussi prévues. Ces changements auront lieu le 12 août 2025.",
-    tags: ["Changement","Correction bugs","IAM","Keycloak","Statistiques"],
+    tags: ["Changement","Entrepot","Correction bugs","WFS","Authentification","LIDAR"],
     date: "2025-08-12" | jsDateObject
 }) }}
 </div>
@@ -134,6 +143,7 @@ pictogram: digital/innovation.svg
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
     title: "Divers changements sur l’API Entrepôt",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/divers-changements-sur-lapi-entrepot",
     description: "Divers modifications ont été faites sur l’API entrepot. Ces changements ont eu lieu le 24 juillet 2025",
     tags: ["Changement","Entrepôt"],
     date: "2025-07-24" | jsDateObject

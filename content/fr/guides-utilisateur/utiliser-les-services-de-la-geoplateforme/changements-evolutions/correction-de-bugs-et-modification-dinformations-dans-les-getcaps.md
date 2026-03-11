@@ -10,9 +10,9 @@ eleventyNavigation:
     order: 3
 ---
 
-## Changements
+# Changements
 Modification des informations dans les GetCap extraction et TMS.
 
-## Correction de bugs
+# Correction de bugs
 - [Keycloak] La déconnexion d’une application liée à la GPF doit entraîner la déconnexion de toutes les applications liées à la GPF.
 - [Extraction] Correction de l’apparition d’une erreur 500 sur le service extraction lorsqu’aucun process n’était disponible pour l’utilisateur.

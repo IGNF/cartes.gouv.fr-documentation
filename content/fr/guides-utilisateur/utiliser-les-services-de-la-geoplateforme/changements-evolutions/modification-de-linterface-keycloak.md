@@ -9,17 +9,16 @@ eleventyNavigation:
     order: 2
 ---
 
-## Changements
+# Changements
 Modification de l’interface de compte Keycloak.
 - Suppression de l’onglet Application (remplacé par l’onglet session)
 - Personnalisation DSFR du bouton "Déconnexion de toutes les sessions"
 - Dans "Session", renommage de "Session" en "Sessions actives"
 
-<br>
 
 Modification des pages de login et création de compte pour le Keycloak.
 
 Utilisation du terme adresse électronique quand on parle de l’adresse et de courriel quand on parle du contenu du message.
 
-## Correction de bugs
+# Correction de bugs
 - [Itinéraire] Correction de problèmes observés lors de la génération d’un graph itinéraire PGRouting.
