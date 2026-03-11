@@ -155,7 +155,7 @@ module.exports = {
 - **« eleventyNavigation/parent »** indique le parent commun de tous les fichiers adjacents. Ce qui permet que ces pages apparaissent sous ce parent dans le menu latéral.
 
 :::info
-Comme vu précédemment dans [Nouveau partenaire](#nouveau-partenaire), le fichier _.11tydata.js_ à la racine du dossier principal défini quant à lui le paramètre **« nav »** indiquant que tout ce qui est contenu dans ce dossier doit apparaitre dans le même menu latéral.
+Comme vu précédemment dans [Nouveau partenaire](#nouveau-partenaire), le fichier _.11tydata.js_ à la racine du dossier principal définit quant à lui le paramètre **« nav »** indiquant que tout ce qui est contenu dans ce dossier doit apparaitre dans le même menu latéral.
 :::
 
 ---
