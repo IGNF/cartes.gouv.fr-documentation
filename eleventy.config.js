@@ -205,14 +205,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("getSummaryItems", getSummaryItems);
 
     // Get navigation context based on nav key
+    const navConfig = {};
+    Object.entries(sidemenuNavigations).forEach(([collectionName, config]) => {
+        navConfig[config.navKey] = {
+            collectionName: collectionName,
+            title: config.title,
+        };
+    });
+
     eleventyConfig.addFilter("getNavigationContext", function (navKey) {
-        const navConfig = {};
-        Object.entries(sidemenuNavigations).forEach(([collectionName, config]) => {
-            navConfig[config.navKey] = {
-                collectionName: collectionName,
-                title: config.title,
-            };
-        });
         return navConfig[navKey];
     });
 
