@@ -67,7 +67,7 @@ sidemenuNav: ign
 
 - **« title »** correspond au titre de votre documentation partenaire.
 - **« layout »** est un terme technique à mettre systématiquement.
-- **« image/src »** indique le chemin de l’image à ajouter à la _card_ partenaire. L’image doit être déposée dans **« cartes/gouv.fr-documentation/public/img/partenaires/ »**.
+- **« image/src »** indique le chemin de l’image à ajouter à la _card_ partenaire. L’image doit être déposée dans **« cartes.gouv.fr-documentation/public/img/partenaires/ »**.
 - **« image/alt »** indique la description alternative de l’image.
 - **« sidemenuNav »** correspond à l’identifiant de navigation au sein de cette documentation partenaire.
 
