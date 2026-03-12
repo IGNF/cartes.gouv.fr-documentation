@@ -22,7 +22,6 @@ showDescription: false
     </video>
     <figcaption class="fr-content-media__caption">
         Lancer une recherche
-        <a id="link-lancer-une-recherche" href="#" class="fr-link"></a>
     </figcaption>
 </figure>
 

@@ -20,8 +20,7 @@ showDescription: false
         <p>Voir la transcription ci-dessous</p>
     </video>
     <figcaption class="fr-content-media__caption">
-        Détail d'une métadonnée catalogue
-        <a id="link-bdtopo-metadonnee" href="#" class="fr-link"></a>
+        Détail d’une métadonnée catalogue
     </figcaption>
 </figure>
 
@@ -98,7 +97,6 @@ La partie **Téléchargements et flux** se compose également de deux **vignette
     </video>
     <figcaption class="fr-content-media__caption">
         Panneau de personnalisation
-        <a id="link-bdtopo-telechargement" href="#" class="fr-link"></a>
     </figcaption>
 </figure>
 
