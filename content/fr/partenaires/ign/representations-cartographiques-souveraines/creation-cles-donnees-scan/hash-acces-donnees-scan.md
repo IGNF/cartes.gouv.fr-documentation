@@ -28,7 +28,7 @@ Cliquez enfin sur **« Ajouter »**.
 ![Options de sécurisation](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/03_options-securisation.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-Consultez la page dédiée à la clé <a href="https://ignf.github.io/cartes.gouv.fr-documentation/fr/guides-utilisateur/creation-des-cles-et-integration-sig/creer-une-cle-d-acces/#hash" target="_blank" rel="noopener noreferrer" title="Clé HASH">HASH</a> pour en comprendre le fonctionnement. Pour en savoir plus sur les autres types de sécurisation proposés sur cartes.gouv.fr, vous pouvez également consulter ce <a href="https://ignf.github.io/cartes.gouv.fr-documentation/fr/guides-utilisateur/creation-des-cles-et-integration-sig/" target="_blank" rel="noopener noreferrer" title="Tutoriel création des clés">tutoriel</a>.
+Consultez la page dédiée à la [clé HASH](/fr/guides-utilisateur/creation-des-cles-et-integration-sig/creer-une-cle-d-acces/#hash){target="_blank" rel="noopener noreferrer" title="HASH - ouvre une nouvelle fenêtre"} pour en comprendre le fonctionnement. Pour en savoir plus sur les autres types de sécurisation proposés sur cartes.gouv.fr, vous pouvez également consulter ce [tutoriel](/fr/guides-utilisateur/creation-des-cles-et-integration-sig){target="_blank" rel="noopener noreferrer" title="Création et intégration des clés cartes.gouv.fr dans un SIG - ouvre une nouvelle fenêtre"}.
 :::
 
 Une fois le tutoriel terminé, votre connexion aux données SCAN sera établie. Pour visualiser la donnée SCAN, il vous suffira de zoomer sur la couche correspondante.
@@ -39,7 +39,7 @@ Une fois le tutoriel terminé, votre connexion aux données SCAN sera établie. 
 #### Services accessibles avec la clé HASH
 
 :::warning
-Une fois votre clé HASH générée, vous accédez à quatre types d’options : trois services de consultation de flux OGC (WMS-R, WMTS, TMS) et un service de téléchargement. La même clé HASH est utilisée pour l’ensemble de ces services.
+Une fois votre clé HASH générée, vous accédez à quatre types d’options : trois services de consultation de flux OGC (WMS-R, WMTS, TMS) et un service de téléchargement. La même clé HASH est utilisée pour l’ensemble de ces services.
 :::
 
 ![apikey](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/05_apikey.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -64,9 +64,9 @@ https://data.geopf.fr/private/tms/1.0.0/?apikey=[VOTRE CLÉ]
 
 ##### Données en téléchargement
 
-Une fois la clé HASH créée, l’URL fournie correspond à un **_<span lang="en">GetCapabilities</span>_**, qui sert uniquement à lister les ressources disponibles. Elle ne permet pas de télécharger des données. Pour en savoir plus sur les méthodes de l’API de téléchargement, <a href="https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/telechargement/" target="_blank" rel="noopener noreferrer" title="API de téléchargement">consultez la documentation dédiée</a>.
+Une fois la clé HASH créée, l’URL fournie correspond à un **_<span lang="en">GetCapabilities</span>_**, qui sert uniquement à lister les ressources disponibles. Elle ne permet pas de télécharger des données. Pour en savoir plus sur les méthodes de l’API de téléchargement, consultez la [documentation dédiée](/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/telechargement){target="_blank" rel="noopener noreferrer" title="API de téléchargement - ouvre une nouvelle fenêtre"}.
 
-Pour télécharger les données, veuillez consulter ce <a href="https://data.geopf.fr/annexes/ressources/documentation/SCANs.csv" target="_blank" rel="noopener noreferrer" title="Méthode Download (TXT)">fichier CSV</a>.
+Pour télécharger les données, veuillez consulter ce [fichier CSV](https://data.geopf.fr/annexes/ressources/documentation/SCANs.csv){target="_blank" rel="noopener noreferrer" title="Méthode Download (TXT) - ouvre une nouvelle fenêtre"}.
 
 Exemple de requête :
 ```plain
@@ -76,5 +76,5 @@ https://data.geopf.fr/private/telechargement/download/SCAN100/SCAN100_2-0__TIFF_
 ![Clé HASH](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/hash-acces-donnees-scan/06_cle-hash.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::callout
-Pour vous connecter correctement à un SIG (QGIS), consultez la page dédiée à l’intégration d’une clé <a href="https://ignf.github.io/cartes.gouv.fr-documentation/fr/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-une-cle-dans-un-sig/#connexion-avec-une-cle-hash" target="_blank" rel="noopener noreferrer" title="Clé HASH">HASH</a>.
+Pour vous connecter correctement à un SIG (QGIS), consultez la page dédiée à l’[intégration d’une clé HASH](/fr/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-une-cle-dans-un-sig/#connexion-avec-une-cle-hash){target="_blank" rel="noopener noreferrer" title="Connexion avec une clé HASH - ouvre une nouvelle fenêtre"}.
 :::
