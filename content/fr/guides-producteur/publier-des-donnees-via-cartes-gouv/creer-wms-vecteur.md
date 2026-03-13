@@ -1,5 +1,6 @@
 ---
 title: Créer et publier un service WMS-Vecteur
+description: Procédure pour publier un flux WMS-Vecteur
 tags:
     - WMS
     - WMS-Vecteur
@@ -16,7 +17,10 @@ pictogram: digital/internet.svg
 summary:
     visible: true
     depth: 2
+showDescription: false
 ---
+
+## Création et publication
 
 ### Lancer la création d’un service
 
@@ -44,7 +48,7 @@ Pour chaque couche, il est possible de définir les règles de représentation (
 
 ### Importer directement vos métadonnées
 
-Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en cours de construction.
+Ignorez cette étape en cliquant sur **« Continuer »**, car la fonctionnalité est en cours de construction.
 
 ![Source des metadonnées](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-vecteur/05_source-metadonnees.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -74,7 +78,7 @@ Cliquez sur **« Publier le service maintenant »**. À la suite d’un écran
 
 ---
 
-### Visualiser le service WMS
+## Visualiser le service WMS
 
 Pour visualiser cartographiquement les données du service WMS ainsi créé, cliquez sur **« Visualiser »** afin d’accéder à l’écran suivant :
 
