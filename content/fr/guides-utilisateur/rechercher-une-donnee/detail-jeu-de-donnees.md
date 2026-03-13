@@ -16,7 +16,9 @@ showDescription: false
 ---
 
 <figure role="group" class="fr-content-media">
-    <iframe title="Détail d’une métadonnée catalogue" class="fr-responsive-vid" src="https://data.geopf.fr/annexes/ressources/aide/01_demo2_bdtopo-metadonnee.mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <video src="https://data.geopf.fr/annexes/ressources/aide/01_demo2_bdtopo-metadonnee.mp4" class="fr-responsive-vid" controls>
+        <p>Voir la transcription ci-dessous</p>
+    </video>
     <figcaption class="fr-content-media__caption">
         Détail d’une métadonnée catalogue
     </figcaption>
@@ -90,7 +92,9 @@ La partie **Téléchargements et flux** se compose également de deux **vignette
 ### Données en téléchargement
 
 <figure role="group" class="fr-content-media">
-    <iframe title="Panneau de personnalisation" class="fr-responsive-vid" src="https://data.geopf.fr/annexes/ressources/aide/02_demo3_bdtopo-telechargement.mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <video src="https://data.geopf.fr/annexes/ressources/aide/02_demo3_bdtopo-telechargement.mp4" class="fr-responsive-vid" controls>
+        <p>Voir la transcription ci-dessous</p>
+    </video>
     <figcaption class="fr-content-media__caption">
         Panneau de personnalisation
     </figcaption>

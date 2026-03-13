@@ -17,7 +17,9 @@ showDescription: false
 ---
 
 <figure role="group" class="fr-content-media">
-    <iframe title="Lancer une recherche" class="fr-responsive-vid" src="https://data.geopf.fr/annexes/ressources/aide/01_demo1_lancer-une-recherche.mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <video src="https://data.geopf.fr/annexes/ressources/aide/01_demo1_lancer-une-recherche.mp4" class="fr-responsive-vid" controls>
+        <p>Voir la transcription ci-dessous</p>
+    </video>
     <figcaption class="fr-content-media__caption">
         Lancer une recherche
     </figcaption>
