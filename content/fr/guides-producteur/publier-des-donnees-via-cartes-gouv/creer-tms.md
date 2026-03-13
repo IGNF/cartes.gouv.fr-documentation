@@ -1,5 +1,6 @@
 ---
 title: Créer et publier un service TMS
+description: Procédure pour publier un flux TMS
 tags:
     - TMS
     - Vecteur
@@ -9,15 +10,15 @@ eleventyNavigation:
     key: Créer et publier un service TMS
     order: 5
 pictogram: digital/internet.svg
-description: Procédure pour publier un flux TMS
 summary:
     visible: true
     depth: 2
+showDescription: false
 ---
 
-## Créer un service TMS
+## Création
 
-### Lancer la création d’un service 
+### Lancer la création d’un service
 
 Dans la fiche de votre donnée, cliquez sur **« Créer un service »** afin d’ouvrir une fenêtre permettant de **« Choisir le service à configurer »** : sélectionnez **« Service de tuiles vectorielles (Tile Map Service - TMS) »**.
 
@@ -127,7 +128,7 @@ L’affichage est alors optimisé pour être plus performant qu’un service WFS
 Vous pouvez soit téléverser votre propre fichier _SLD_, soit créer ou modifier un style directement depuis l’interface de gestion des styles de cartes.gouv.fr. Le producteur de données peut créer et modifier directement les styles associés à ses flux sans avoir à préparer de fichiers externes.
 
 :::info
-La gestion des styles pour le service TMS se fait en aval de la publication dans l'onglet **« Gérer les styles »** lors de la visualisation du flux.
+La gestion des styles pour le service TMS se fait en aval de la publication dans l’onglet **« Gérer les styles »** lors de la visualisation du flux.
 :::
 
 ![Ajouter les styles](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/tms/16_ajouter-styles.png){.fr-responsive-img .frx-border-img .frx-img-contained}

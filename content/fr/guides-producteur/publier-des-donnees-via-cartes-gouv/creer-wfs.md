@@ -1,5 +1,6 @@
 ---
 title: Créer et publier un service WFS
+description: Procédure pour publier un flux WFS
 tags:
     - WFS
     - Vecteur
@@ -12,13 +13,13 @@ eleventyNavigation:
     key: Créer et publier un service WFS
     order: 3
 pictogram: digital/internet.svg
-description: Procédure pour publier un flux WFS
 summary:
     visible: true
     depth: 2
+showDescription: false
 ---
 
-## Créer un service WFS
+## Création et publication
 
 ### Lancer la création d’un service
 
@@ -32,7 +33,7 @@ Dans la fiche de votre donnée, cliquez sur **« Créer un service »** afin d
 
 Sélectionnez une ou plusieurs tables pour créer le service :
 
-![Sélection des tables nécessaires au services](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/03_selection-tables.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Sélection des tables nécessaires au service](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/03_selection-tables.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Le formulaire suivant se déplie, remplissez les champs et cliquez sur **« Continuer »**.
 
 ![Créer et publier un service WFS](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/04_creer-wfs.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -57,7 +58,7 @@ Remplissez les informations complémentaires suivantes :
 
 Ces métadonnées sont à remplir uniquement pour le premier service de votre fiche de données. Vous retrouverez la plupart des champs déjà remplis lors de la publication d’autres services (WFS/WMS/TMS).
 
-### Restricitons d’accès
+### Restrictions d’accès
 
 La publication du service est obligatoirement **« Tout public »** lorsque les données sont dans le bac à sable. Dans votre entrepôt, il est possible de restreindre le service ou de le laisser en **« Tout public »** :
 
@@ -90,12 +91,10 @@ Bonne pratique : choisir un niveau de zoom approprié au volume de vos données
 Vous pouvez soit téléverser votre propre fichier _SLD_, soit créer ou modifier un style directement depuis l’interface de gestion des styles de cartes.gouv.fr. Le producteur de données peut créer et modifier directement les styles associés à ses flux sans avoir à préparer de fichiers externes.
 
 :::info
-La gestion des styles pour le service WFS se fait en aval de la publication dans l'onglet **« Gérer les styles »** lors de la visualisation du flux.
+La gestion des styles pour le service WFS se fait en aval de la publication dans l’onglet **« Gérer les styles »** lors de la visualisation du flux.
 :::
 
-
 ![Ajouter les styles](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wfs/13_ajouter-styles.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
 
 :::callout Ajouter des styles
 S’agissant d’un flux de données vecteur, l’application d’un style est optionnelle car elle se fait côté client.
