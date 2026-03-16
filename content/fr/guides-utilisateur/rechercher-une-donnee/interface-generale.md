@@ -21,7 +21,7 @@ showDescription: false
         <p>Voir la transcription ci-dessous</p>
     </video>
     <figcaption class="fr-content-media__caption">
-        Lancer une recherche
+        Lancer une recherche : activez le son pour suivre ce tutoriel.
     </figcaption>
 </figure>
 
