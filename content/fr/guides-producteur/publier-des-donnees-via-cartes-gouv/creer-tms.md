@@ -16,7 +16,7 @@ summary:
 showDescription: false
 ---
 
-La création et la publication d’un service TMS se passe en deux étapes successives :
+La création et la publication d’un service TMS se passent en deux étapes successives :
 
 - la **création** de la pyramide de tuiles vectorielles à partir de la base de données
 - la **publication** du service à partir de cette pyramide
