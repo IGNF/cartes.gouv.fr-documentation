@@ -15,11 +15,12 @@ pictogram: digital/internet.svg
 summary:
     visible: true
     depth: 2
+showDescription: false
 popularTopic: true
 ---
 
 :::warning
-Pour publier un service WMTS il est nécessaire d'avoir au préalable créé un service WMS-Vecteur
+Pour publier un service WMTS, il est nécessaire d’avoir au préalable créé un service WMS-Vecteur.
 :::
 
 ## Créer une pyramide raster
@@ -28,9 +29,9 @@ Dans la fiche de votre donnée, cliquez sur l’onglet **« Jeux de données �
 
 ### Lancer la création d’une pyramide raster
 
-Dans la fiche de votre donnée, cliquez sur l’onglet **« Services »**. puis sur le bouton menu à droite du service WMS-V que vous souhaitez, et enfin sur **« Créer un service raster WMS/WMTS »** :
+Dans la fiche de votre donnée, cliquez sur l’onglet **« Services »**, puis sur le bouton menu à droite du service WMS-V que vous souhaitez, et enfin sur **« Créer un service raster WMS/WMTS »** :
 
-![Image décrivant comment lancer la création d'un service WMS-V](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wmts/01_creer-service-raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant comment lancer la création d’un service WMS-V](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wmts/01_creer-service-raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### Générer une pyramide de tuiles raster
 
@@ -62,7 +63,7 @@ Choisissez le type de service à configurer (ici **« Web Map Tile Service - WM
 
 ### Importer directement vos métadonnées
 
-Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en cours de construction.
+Ignorez cette étape en cliquant sur **« Continuer »**, car la fonctionnalité est en cours de construction.
 
 ![Image décrivant la possibilité de tester sur un échantillon](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wmts/07_source-metadonnees-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
