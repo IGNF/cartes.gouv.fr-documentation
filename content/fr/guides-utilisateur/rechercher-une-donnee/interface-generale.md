@@ -2,10 +2,8 @@
 title: Lancer une recherche
 description: La page d’accueil du catalogue de cartes.gouv.fr
 tags:
-    - Catalogue
     - Filtre
     - Tri
-    - Données
 eleventyNavigation:
     key: Lancer une recherche
     order: 2
@@ -21,7 +19,7 @@ showDescription: false
         <p>Voir la transcription ci-dessous</p>
     </video>
     <figcaption class="fr-content-media__caption">
-        Lancer une recherche
+        Lancer une recherche : activez le son pour suivre ce tutoriel.
     </figcaption>
 </figure>
 
@@ -32,7 +30,7 @@ La [page d’accueil du catalogue]({{ urls.rechercher_une_donnee }}/search){targ
 ---
 
 ## Barre de recherche
-La barre de recherche permet de trouver une donnée ou un service en y entrant des mots clés. Cette recherche est basée sur le titre et le résumé d’une métadonnée catalogue.
+La barre de recherche permet de trouver une donnée ou un service en y entrant des mots-clés. Cette recherche est basée sur le titre et le résumé d’une métadonnée catalogue.
 
 ![Barre de recherche](/img/guides-utilisateur/rechercher-une-donnee/interface-generale/02_recherche-catalogue.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -49,7 +47,7 @@ Dans **la première partie**, deux filtrages sont mis en avant :
 
 <br>
 
-Ainsi qu’un système de tri de la donnée selon **5 critères :**
+Ainsi qu’un système de tri de la donnée selon **5 critères** :
 - Popularité : Tri sur la fréquentation d’une métadonnée catalogue
 - Dernière modification : Tri sur la date de dernière modification
 - Indicateur de qualité : Tri sur le pourcentage de qualité de la métadonnée catalogue
@@ -78,7 +76,6 @@ La **seconde partie** permet de filtrer les métadonnées catalogue selon leur c
 ---
 
 ## Les données et services
-
 Sous la barre d’outils, vous retrouverez une liste limitée à 10 résultats qu’il est possible d’étendre en cliquant en bas de page sur le bouton « PLUS DE RÉSULTATS... ». Une brique se compose de 5 éléments :
 - Le titre
 - Le résumé

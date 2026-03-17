@@ -1,5 +1,5 @@
 module.exports = {
-    tags: ["Présentation"],
+    tags: ["Catalogue", "Données"],
     segments: [
         {
             url: "/guides-utilisateur/rechercher-une-donnee",
