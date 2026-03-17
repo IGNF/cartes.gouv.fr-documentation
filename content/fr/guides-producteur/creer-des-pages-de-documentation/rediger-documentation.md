@@ -57,9 +57,9 @@ Pour ajouter un nouveau partenaire à la documentation, il faut ajouter un fichi
 ```yaml
 ---
 title: Institut national de l’information géographique et forestière
-layout: layouts/accueil.njk
+layout: layouts/partenaire/home.njk
 image:
-    path: ../../../cartes.gouv.fr-documentation/public/img/partenaires/ign.png
+    src: /img/partenaires/ign/ign-icon.png
     alt: Logo IGN
 sidemenuNav: ign
 ---
@@ -67,50 +67,29 @@ sidemenuNav: ign
 
 - **« title »** correspond au titre de votre documentation partenaire.
 - **« layout »** est un terme technique à mettre systématiquement.
-- **« image/path »** indique le chemin de l’image à ajouter à la _card_ partenaire. L’image doit être déposée dans **« cartes/gouv.fr-documentation/public/img/partenaires/ »**.
+- **« image/src »** indique le chemin de l’image à ajouter à la _card_ partenaire. L’image doit être déposée dans **« cartes.gouv.fr-documentation/public/img/partenaires/ »**.
 - **« image/alt »** indique la description alternative de l’image.
-- **« sidemenuNav »** correspond à l’identifiant de navigation au sein de cette documentation partenaire. Cet identifiant devra être indiqué dans les en-têtes des pages filles (voir paragraphe ......) et dans les fichiers _.js_ décrits ci-après.
+- **« sidemenuNav »** correspond à l’identifiant de navigation au sein de cette documentation partenaire.
 
-Dans le fichier _eleventy.config.js_ situé à la racine du projet, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé :
+<br>
+
+Dans le fichier _eleventy.config.js_ situé à la racine du projet, créez votre identifiant de navigation dans l’objet **« sidemenuNavigations »** à la suite des navigations préexistantes en vous basant sur le modèle de ces dernières :
 
 ```js
-eleventyConfig.addCollection("ignNavigation", function (collectionApi) {
-    return collectionApi.getAll().filter((item) => {
-        return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === "ign";
-    });
-});
+const sidemenuNavigations = {
+    "utilisateurNavigation": { navKey: "guides-utilisateur", title: "Guides utilisateur" },
+    "developpeurNavigation": { navKey: "guides-developpeur", title: "Guides développeur" },
+    "producteurNavigation": { navKey: "guides-producteur", title: "Guides producteur" },
+    "ignNavigation": { navKey: "ign", title: "Institut national de l’information géographique et forestière" }
+};
 ```
 
-Dans le fichier _accueil.njk_ situé dans **« _includes/layouts »**, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé et en indiquant le titre de la documentation partenaire :
+Vous pouvez ensuite créer un dossier du même nom que votre fichier _.md_ dans le dossier **« partenaires »**. À la racine de ce dossier, créez un fichier _.11tydata.js_ du même nom que le dossier. Dans ce fichier vous pourrez alors définir le paramètre **« nav »** sur la valeur de l’identifiant de navigation que vous avez créé, cela permet d’attribuer ce paramètre à toutes les pages de votre dossier afin qu’elles apparaissent toutes dans le même menu latéral. Par exemple dans le fichier _ign.11tydata.js_, on a :
 
-```njk
-{% raw %}
-{% elif effectiveNav == "ign" %}
-    {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-    {% set navCollection = collections.ignNavigation %}
-    {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
-{% endraw %}
-```
-
-Dans le fichier _article.njk_ situé dans **« _includes/layouts »**, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé et en indiquant le titre de la documentation partenaire :
-
-```njk
-{% raw %}
-{% elif eleventyNavigation.nav == "ign" %}
-    {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-    {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
-{% endraw %}
-```
-
-Dans le fichier _parent.njk_ situé dans **« _includes/layouts »**, en remplaçant **« ign »** par l’identifiant de navigation partenaire déterminé et en indiquant le titre de la documentation partenaire :
-
-```njk
-{% raw %}
-{% elif eleventyNavigation.nav == "ign" %}
-    {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-    {% set navCollection = collections.ignNavigation %}
-    {% set sidemenuTitle = "Institut national de l’information géographique et forestière" %}
-{% endraw %}
+```js
+eleventyNavigation: {
+    nav: "ign",
+},
 ```
 
 ---
@@ -120,9 +99,7 @@ Dans le fichier _parent.njk_ situé dans **« _includes/layouts »**, en rempl
 Chaque dossier doit contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
 
 ![Image décrivant la présence du fichier d’index .md dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/04_Fichiers-index-en-markdown.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit via son en-tête l’arborescence du dossier dans la navigation. L’en-tête de ce fichier peut être différent suivant deux cas :
-
-Cas n°1 : le sous-dossier correspondant se situe au premier niveau du menu latéral. Dans ce cas il faut écrire l’en-tête comme suit :
+Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit via son en-tête l’arborescence du dossier dans la navigation :
 
 ```yaml
 ---
@@ -135,37 +112,12 @@ tags:
 eleventyNavigation:
     key: Créer des pages de documentation
     order: 3
-    nav: guides-producteur
 pictogram: document/document-add.svg
 ---
 ```
-
-Cas n°2 : le sous-dossier correspondant se situe au deuxième ou au troisième niveau du menu latéral. Dans cas il faut ajouter un élément **« parent »** dans la partie **« eleventyNavigation »** :
-
-```yaml
----
-title: Sous-dossier de niveau 2
-description: Description du sous-dossier de niveau 2
-layout: layouts/parent.njk
-tags:
-    - Documentation
-    - Partenaire
-eleventyNavigation:
-    key: Sous-dossier de niveau 2
-    order: 1
-    parent: Créer des pages de documentation
-    nav: guides-producteur
-pictogram: document/document-add.svg
----
-```
-
-Enfin, l’élément **« nav »** dépend de l’emplacement du sous-dossier :
-
-- Au sein d’un des trois guides utilisateur, producteur, développeur : **« guides-utilisateur »**, **« guides-producteur »** ou **« guides-développeur »**.
-- Au sein d’une documentation partenaire : indiquez le même identifiant que l’élément **« sidemenuNav »** indiqué dans l’en-tête de la page d’accueil partenaire.
 
 :::info
-Voir paragraphe 2.4 pour plus de détails sur les pictogrammes.
+Voir [Images et pictogrammes](#images-et-pictogrammes) pour plus de détails sur les pictogrammes.
 :::
 
 :::warning
@@ -176,10 +128,11 @@ Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 
 ## Fichier .11tydata.js
 
-Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer l’arborescence des fichiers adjacents.
+Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer les paramètres communs des fichiers adjacents.
 
 ![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichier-11tydata.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-Ce fichier contient les informations suivantes (modifiez les **« tags »**, **« url »** et **« title »** pour correspondre à votre page) :
+
+Ce fichier contient par exemple les informations suivantes (modifiez les **« tags »**, **« url »**, **« title »** et **« parent »** pour correspondre à votre page) :
 
 ```js
 module.exports = {
@@ -190,8 +143,20 @@ module.exports = {
             title: "Créer des pages de documentation",
         },
     ],
+    eleventyNavigation: {
+        parent: "Créer des pages de documentation",
+    },
 };
 ```
+
+- **« tags »** correspond aux tags communs à tous les fichiers adjacents.
+- **« segments/url »** définit l’url de la page parent pour créer le lien vers cette dernière dans le fil d’arianne.
+- **« segments/title »** indique le titre du lien de la page parent dans le fil d’arianne.
+- **« eleventyNavigation/parent »** indique le parent commun de tous les fichiers adjacents. Ce qui permet que ces pages apparaissent sous ce parent dans le menu latéral.
+
+:::info
+Comme vu précédemment dans [Nouveau partenaire](#nouveau-partenaire), le fichier _.11tydata.js_ à la racine du dossier principal définit quant à lui le paramètre **« nav »** indiquant que tout ce qui est contenu dans ce dossier doit apparaitre dans le même menu latéral.
+:::
 
 ---
 
@@ -211,7 +176,6 @@ tags:
     - Clone
 eleventyNavigation:
     key: Rédiger sa documentation
-    parent: Créer des pages de documentation
     order: 3
 pictogram: document/document.svg
 summary:
@@ -295,7 +259,7 @@ Pour afficher un extrait de code :
 {% endraw %}
 ````
 
-Pour afficher un tableau :
+Pour afficher un tableau :
 
 ```njk
 {% raw %}
@@ -324,7 +288,7 @@ Il existe une liste de pictogrammes réutilisables dans le dossier **« cartes.
 
 ![Image décrivant l’en-tête du fichier de la page index](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/06_En-tete-et-pictogramme.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Il est possible de créer ses propres pictogrammes customisés. Il faut alors respecter les recommandations du DSFR : <a href="https://www.systeme-de-design.gouv.fr/fondamentaux/pictogramme/" target="_blank" rel="noopener noreferrer" title="Pictogramme Système de Design de l'État - ouvre une nouvelle fenêtre">Pictogramme - Système de Design de l'État </a>
+Il est possible de créer ses propres pictogrammes customisés. Il faut alors respecter les recommandations du DSFR : <a href="https://www.systeme-de-design.gouv.fr/fondamentaux/pictogramme/" target="_blank" rel="noopener noreferrer" title="Pictogramme Système de Design de l’État - ouvre une nouvelle fenêtre">Pictogramme - Système de Design de l’État </a>
 
 Placez votre pictogramme .svg dans le dossier **« cartes.gouv.fr-documentation\public\artwork\pictograms\custom »**, et appelez le pictogramme dans l’en-tête avec **« custom/nomDuPictogramme.svg »**.
 
