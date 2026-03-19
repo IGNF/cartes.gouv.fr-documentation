@@ -2,16 +2,16 @@
 title: Portail ENR
 description: Un portail cartographique permettant de visualiser et d’analyser les divers enjeux des territoires à prendre en compte dans le développement des énergies renouvelables
 tags:
-  - Énergies renouvelables
+    - Énergies renouvelables
 eleventyNavigation:
-  key: Portail ENR
-  order: 2
-  image:
-src: /img/partenaires/ign/services-appui-decision/portail-enr.jpg
-alt: Portail ENR
+    key: Portail ENR
+    order: 2
+image:
+    src: /img/partenaires/ign/services-appui-decision/portail-enr.jpg
+    alt: Portail ENR
 ---
 
-<a href="https://planification.climat-energie.gouv.fr/" target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr - ouvre une nouvelle fenêtre">Énergies renouvelables</a>
+<a href="https://planification.climat-energie.gouv.fr/" target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr - ouvre une nouvelle fenêtre">Accéder au portail des Énergies renouvelables</a>
 
 {% from "components/component.njk" import component with context %}
 
@@ -21,11 +21,11 @@ Cet outil met à disposition des données objectives, compilables sur le territo
 
 Les ressources en ligne du portail sont diffusées librement et peuvent être intégrées dans d'autres outils de visualisation en utilisant la <a href="https://geoservices.ign.fr/services-web-experts-energies-renouvelables" target="_blank" rel="noopener noreferrer" title="geoservices.ign.fr/services-web-experts-energies-renouvelables - ouvre une nouvelle fenêtre">clé partagée "enr"</a>.
 
-<a href="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public" target="_blank" rel="noopener noreferrer" title="macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public - ouvre une nouvelle fenêtre">Cliquez ici pour consulter la carte en plein écran</a>.
+<a href="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public" target="_blank" rel="noopener noreferrer" title="macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public - ouvre une nouvelle fenêtre">**Cliquez ici pour consulter la carte en plein écran**</a>.
 
 <iframe height="700" id="Avancement-PCRS" src="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public" width="800"></iframe>
 
-Succédant à la version bêta publiée le 10 mai dernier, cette nouvelle version a été mise en ligne avec succès le 11 décembre 2023. Plus ergonomique, elle présente de nouvelles fonctionnalités permettant aux communes d’identifier et de saisir les zones d’accélération d’énergies renouvelables (ZAER) sur leur territoire, de demander des avis sur ces zones aux acteurs locaux de la planification énergétique et de les soumettre pour arrêt aux référents préfectoraux. Des vidéos et fiches de documentation sont disponibles ci-contre.
+Succédant à la version bêta publiée le 10 mai 2023, cette nouvelle version a été mise en ligne avec succès le 11 décembre 2023. Plus ergonomique, elle présente de nouvelles fonctionnalités permettant aux communes d’identifier et de saisir les zones d’accélération d’énergies renouvelables (ZAER) sur leur territoire, de demander des avis sur ces zones aux acteurs locaux de la planification énergétique et de les soumettre pour arrêt aux référents préfectoraux. Des vidéos et fiches de documentation sont disponibles ci-contre.
 
 Le gestionnaire de couches a également été enrichi par de nouvelles données et des données mises à jour depuis l’été dernier.
 
@@ -44,6 +44,7 @@ Deux ateliers de standardisation d’une ZAER ont eu lieu en septembre dernier a
 }) }}
 
 Vous pouvez poser toutes vos questions via notre <a href="https://planification.climat-energie.gouv.fr/nous-contacter/" target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr/nous-contacter/ - ouvre une nouvelle fenêtre">formulaire de contact</a>.
+
 
 ### Téléchargement
 
