@@ -416,8 +416,8 @@ Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extr
         "logo": {
             "format": "image/jpeg",
             "url": "https://data.geopf.fr/annexes/ressources/logos/ign.jpg",
-            "width": 220,
-            "height": 110
+            "width": 400,
+            "height": 400
         }
     },
     "metadata": [
