@@ -7,7 +7,7 @@ tags:
     - Géoplateforme
 eleventyNavigation:
     key: Statistiques d’utilisation
-    order: 10
+    order: 11
 pictogram: digital/data-visualization.svg
 summary:
     visible: true
