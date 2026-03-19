@@ -35,7 +35,7 @@ Les données de référence utilisées au sein du service de calcul d’isochron
 
 L’API est interrogeable en méthodes GET et POST.
 
-Son swagger est accessible ici : [swagger du calcul d’isochrone/isodistance](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html).
+Son swagger est accessible ici : [swagger du calcul d’isochrone/isodistance](https://data.geopf.fr/navigation/openapi/).
 
 ---
 
@@ -61,7 +61,7 @@ Le calcul d’isochrone/isodistance est accessible via l’URL suivante :
 https://data.geopf.fr/navigation/isochrone
 ```
 
-Les paramètres également précisés dans le [swagger du calcul d’isochrone/isodistance](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html) sont les suivants :
+Les paramètres également précisés dans le [swagger du calcul d’isochrone/isodistance](https://data.geopf.fr/navigation/openapi/) sont les suivants :
 
 ### Calculer une isochrone ou une isodistance via la méthode GET
 
