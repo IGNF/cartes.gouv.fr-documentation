@@ -415,15 +415,15 @@ Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extr
         "url": "https://www.ign.fr/",
         "logo": {
             "format": "image/jpeg",
-            "url": "https://www.geoportail.gouv.fr/depot/producers/ign.jpg",
-            "width": 220,
-            "height": 110
+            "url": "https://data.geopf.fr/annexes/ressources/logos/ign.jpg",
+            "width": 400,
+            "height": 400
         }
     },
     "metadata": [
         {
             "format": "application/xml",
-            "url": "https://geoservices.ign.fr/sites/default/files/2021-07/IGNF_BDORTHOr_2-0.xml",
+            "url": "https://data.geopf.fr/csw?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://standards.iso.org/iso/19115/-3/mdb/2.0&elementSetName=full&ID=IGNF_BD-ORTHO",
             "type": "ISO19115:2003"
         }
     ],
