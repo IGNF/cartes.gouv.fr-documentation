@@ -34,7 +34,7 @@ Les données de référence utilisées au sein du service de calcul d’itinéra
 
 L’API est interrogeable en méthodes GET et POST.
 
-Son swagger est accessible ici : [swagger du calcul d’itinéraire](https://www.geoportail.gouv.fr/depot/swagger/itineraire.html).
+Son swagger est accessible ici : [swagger du calcul d’itinéraire](https://data.geopf.fr/navigation/openapi/).
 
 ---
 
