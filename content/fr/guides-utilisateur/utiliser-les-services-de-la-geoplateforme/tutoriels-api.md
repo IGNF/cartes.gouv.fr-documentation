@@ -1,6 +1,6 @@
 ---
 title: Tutoriels API
-description: Utilisez les APIs de la Géoplateforme avec le bon logiciel
+description: Utilisez les API de la Géoplateforme avec le bon logiciel
 layout: layouts/parent.njk
 tags:
     - Tutoriels
