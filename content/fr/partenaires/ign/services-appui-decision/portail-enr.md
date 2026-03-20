@@ -38,7 +38,7 @@ La communauté Expertises-Territoires est l’endroit privilégié pour retrouve
 ##### Ateliers de standardisation d’une ZAER
 
 Deux ateliers de standardisation d’une ZAER ont eu lieu en septembre dernier afin d’en définir une liste attributaire qui répond à la fois à la commande publique et aux utilisateurs du portail. Vous pouvez en retrouver les conclusions ici : {{ component("download", {
-    title: "Conclusion",
+    title: "Télécharger les conclusions",
     href: "https://geoservices.ign.fr/sites/default/files/2023-10/Restitution_standard_ZAER_24102023%20%282%29.pdf",
     detail: "PDF - 1Mo"
 }) }}
@@ -57,7 +57,7 @@ Vous pouvez poser toutes vos questions via notre <a href="https://planification.
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ZAER_ARRET_GPKG/ZAER_ARRET_GPKG/ENR_ZAER_ARRETEES_GPKG_WGS84_FRA.gpkg",
+    title: "Télécharger ENR_ZAER_ARRETEES_GPKG_WGS84_FRA.gpkg",
     href: "https://data.geopf.fr/telechargement/download/ZAER_ARRET_GPKG/ZAER_ARRET_GPKG/ENR_ZAER_ARRETEES_GPKG_WGS84_FRA.gpkg",
     detail: "Geopackage - 1026Mo"
 }) }}
@@ -70,7 +70,7 @@ France entière
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01/ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01/ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01.7z",
     detail: "7-Zip - 14.9Mo"
 }) }}
@@ -80,7 +80,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_POT-SOL-SOL_GPKG_WGS84_WLD_2025-11-01/cadcastres_solaires_detailles.gpkg",
+    title: "Télécharger cadcastres_solaires_detailles.gpkg",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_POT-SOL-SOL_GPKG_WGS84_WLD_2025-11-01/cadcastres_solaires_detailles.gpkg",
     detail: "Geopackage - 2.4Go"
 }) }}
@@ -90,7 +90,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01/ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01.7z",
+    title: "Télécharger ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01/ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01.7z",
     detail: "7-Zip - 1Mo"
 }) }}
@@ -100,7 +100,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01/ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01.7z",
+    title: "Télécharger ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01/ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01.7z",
     detail: "7-Zip - 1236Mo"
 }) }}
@@ -110,7 +110,7 @@ France métropolitaine
 Région Île-de-France - R 11 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01.7z",
     detail: "7-Zip - 332.3Mo"
 }) }}
@@ -118,7 +118,7 @@ Région Île-de-France - R 11 :
 Région Centre-Val de Loire - R 24 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01.7z",
     detail: "7-Zip - 235.3Mo"
 }) }}
@@ -126,7 +126,7 @@ Région Centre-Val de Loire - R 24 :
 Région Bourgogne-Franche-Comté - R 27 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01.7z",
     detail: "7-Zip - 248.6Mo"
 }) }}
@@ -134,7 +134,7 @@ Région Bourgogne-Franche-Comté - R 27 :
 Région Normandie - R 28 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01.7z",
     detail: "7-Zip - 288Mo"
 }) }}
@@ -142,7 +142,7 @@ Région Normandie - R 28 :
 Région Hauts-de-France - R 32 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01.7z",
     detail: "7-Zip - 432.7Mo"
 }) }}
@@ -150,7 +150,7 @@ Région Hauts-de-France - R 32 :
 Région Grand Est - R 44 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01.7z",
     detail: "7-Zip - 424.6Mo"
 }) }}
@@ -158,7 +158,7 @@ Région Grand Est - R 44 :
 Région Pays de la Loire - R 52 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01.7z",
     detail: "7-Zip - 363Mo"
 }) }}
@@ -166,7 +166,7 @@ Région Pays de la Loire - R 52 :
 Région Bretagne - R 53 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01.7z",
     detail: "7-Zip - 315Mo"
 }) }}
@@ -174,7 +174,7 @@ Région Bretagne - R 53 :
 Région Nouvelle-Aquitaine - R 75 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01.7z",
     detail: "7-Zip - 669Mo"
 }) }}
@@ -182,7 +182,7 @@ Région Nouvelle-Aquitaine - R 75 :
 Région Occitanie - R 76 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01.7z",
     detail: "7-Zip - 558Mo"
 }) }}
@@ -190,7 +190,7 @@ Région Occitanie - R 76 :
 Région Auvergne-Rhône-Alpes - R 84 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01.7z",
     detail: "7-Zip - 553Mo"
 }) }}
@@ -198,7 +198,7 @@ Région Auvergne-Rhône-Alpes - R 84 :
 Région Provence-Alpes-Côte d’Azur - R 93 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01.7z",
     detail: "7-Zip - 73.8Mo"
 }) }}
@@ -206,7 +206,7 @@ Région Provence-Alpes-Côte d’Azur - R 93 :
 Région Corse - R 94 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01.7z",
     detail: "7-Zip - 28Mo"
 }) }}
@@ -216,7 +216,7 @@ Région Corse - R 94 :
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 1.3Mo"
 }) }}
@@ -226,7 +226,7 @@ France métropolitaine
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01/ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01.7z",
+    title: "Télécharger ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01/ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01.7z",
     detail: "7-Zip - 54.7Mo"
 }) }}
@@ -236,7 +236,7 @@ France entière
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01/ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01.7z",
+    title: "Télécharger ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01/ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01.7z",
     detail: "7-Zip - 32.6Mo"
 }) }}
@@ -246,7 +246,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01/ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01.7z",
+    title: "Télécharger ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01/ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01.7z",
     detail: "7-Zip - 1.8Mo"
 }) }}
@@ -259,7 +259,7 @@ France métropolitaine
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01.7z",
     detail: "7-Zip - 133Mo"
 }) }}
@@ -269,7 +269,7 @@ France entière
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01/ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01.7z",
+    title: "Télécharger ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01/ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01.7z",
     detail: "7-Zip - 3.5Go"
 }) }}
@@ -279,7 +279,7 @@ France entière
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01/ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01.7z",
+    title: "Télécharger ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01/ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01.7z",
     detail: "7-Zip - 7.8Mo"
 }) }}
@@ -289,7 +289,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01/ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01.7z",
+    title: "Télécharger ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01/ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01.7z",
     detail: "7-Zip - 7.8Mo"
 }) }}
@@ -299,7 +299,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L31-ENR-PERIM-PENT_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L31-ENR-PERIM-PENT_GPKG_LAMB93_FXX_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L31-ENR-PERIM-PENT_GPKG_LAMB93_FXX_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L31-ENR-PERIM-PENT_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L31-ENR-PERIM-PENT_GPKG_LAMB93_FXX_2023-07-01.7z",
     detail: "7-Zip - 250Mo"
 }) }}
@@ -309,7 +309,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01/ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01/ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01.7z",
     detail: "7-Zip - 1553Mo"
 }) }}
@@ -322,7 +322,7 @@ France métropolitaine
 Région Provence-Alpes-Côte d'Azur
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01/ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01.7z",
+    title: "Télécharger ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01/ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01.7z",
     detail: "7-Zip - 3.4Mo"
 }) }}
@@ -335,7 +335,7 @@ Région Provence-Alpes-Côte d'Azur
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 3.7Mo"
 }) }}
@@ -348,7 +348,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01/ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01.7z",
+    title: "Télécharger ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01/ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01.7z",
     detail: "7-Zip - 2.3Mo"
 }) }}
@@ -361,7 +361,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 234Mo"
 }) }}
@@ -371,7 +371,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 234.6Mo"
 }) }}
@@ -381,7 +381,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 2Mo"
 }) }}
@@ -391,7 +391,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 5.5Mo"
 }) }}
@@ -401,7 +401,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 1.8Mo"
 }) }}
@@ -411,7 +411,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 0.5Mo"
 }) }}
@@ -424,7 +424,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 0.7Mo"
 }) }}
@@ -434,7 +434,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 0.9Mo"
 }) }}
@@ -444,7 +444,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 0.2Mo"
 }) }}
@@ -454,7 +454,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01.7z",
     detail: "7-Zip - 1.5Mo"
 }) }}
@@ -464,7 +464,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01.7z",
     detail: "7-Zip - 1.5Mo"
 }) }}
@@ -474,7 +474,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01.7z",
     detail: "7-Zip - 1.5Mo"
 }) }}
@@ -484,7 +484,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01.7z",
     detail: "7-Zip - 1.5Mo"
 }) }}
@@ -494,7 +494,7 @@ France métropolitaine
 Région Bretagne - R 53 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01.7z",
     detail: "7-Zip - 22Ko"
 }) }}
@@ -502,7 +502,7 @@ Région Bretagne - R 53 :
 Région Provence-Alpes-Côte d'Azur - R 93 :
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01.7z",
     detail: "7-Zip - 46Ko"
 }) }}
@@ -512,7 +512,7 @@ Région Provence-Alpes-Côte d'Azur - R 93 :
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
+    title: "hTélécharger ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
     detail: "7-Zip - 0.3Mo"
 }) }}
@@ -522,7 +522,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01.7z",
     detail: "7-Zip - 26.7Mo"
 }) }}
@@ -532,7 +532,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 0.5Mo"
 }) }}
@@ -542,7 +542,7 @@ France métropolitaine
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01.7z",
     detail: "7-Zip - 0.3Mo"
 }) }}
@@ -552,7 +552,7 @@ France entière
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 0.3Mo"
 }) }}
@@ -565,7 +565,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01/ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01.7z",
+    title: "Télécharger ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01/ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01.7z",
     detail: "7-Zip - 489Mo"
 }) }}
@@ -575,7 +575,7 @@ France métropolitaine
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01/ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01/ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01.7z",
     detail: "7-Zip - 2Mo"
 }) }}
@@ -588,7 +588,7 @@ France entière
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01/ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01/ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
     detail: "7-Zip - 95Ko"
 }) }}
@@ -598,7 +598,7 @@ France entière
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01.7z",
+    title: "Télécharger ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01.7z",
     detail: "7-Zip - 90Ko"
 }) }}
@@ -611,7 +611,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 469Mo"
 }) }}
@@ -621,7 +621,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 1Mo"
 }) }}
@@ -634,7 +634,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01.7z",
     detail: "7-Zip - 1Mo"
 }) }}
@@ -647,7 +647,7 @@ France métropolitaine
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01/ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01/ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01.7z",
     detail: "7-Zip - 109Mo"
 }) }}
@@ -657,7 +657,7 @@ France métropolitaine
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01.7z",
     detail: "7-Zip - 18Mo"
 }) }}
@@ -667,7 +667,7 @@ France entière
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01.7z",
+    title: "Télécharger ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01.7z",
     detail: "7-Zip - 230Mo"
 }) }}
@@ -677,7 +677,7 @@ France entière
 France entière
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01/ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01/ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
     detail: "7-Zip - 239Mo"
 }) }}
@@ -687,7 +687,7 @@ France entière
 France métropolitaine
 
 {{ component("download", {
-    title: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01.7z",
     detail: "7-Zip - 22.4Mo"
 }) }}
@@ -696,31 +696,31 @@ France métropolitaine
 ### Guides utilisateurs
 
 {{ component("download", {
-    title: "Guide pas-à-pas sur la thématique EnR 'Thermique'",
+    title: "Télécharger le guide pas-à-pas sur la thématique EnR 'Thermique'",
     href: "https://geoservices.ign.fr/sites/default/files/2024-05/Portail%20EnR%20Guide%20Pas%20a%20Pas%20EnR-thermiques.pdf",
     detail: "PDF - 8.5Mo"
 }) }}
 
 {{ component("download", {
-    title: "Guide pas-à-pas sur les thématiques EnR 'Eolien et Solaire'",
+    title: "Télécharger le guide pas-à-pas sur les thématiques EnR 'Eolien et Solaire'",
     href: "https://geoservices.ign.fr/sites/default/files/2024-05/Portail%20EnR%20Guide%20Pas%20a%20Pas%20Eolien-Solaire.pdf",
     detail: "PDF - 10.4Mo"
 }) }}
 
 {{ component("download", {
-    title: "Importer une zone",
+    title: "Télécharger le guide pour importer une zone",
     href: "https://geoservices.ign.fr/sites/default/files/2023-12/Comment%20faire%20pour%20Importer%20une%20zone.pdf",
     detail: "PDF - 0.5Mo"
 }) }}
 
 {{ component("download", {
-    title: "Saisir et modifier une ZAER",
+    title: "Télécharger le guide pour saisir et modifier une ZAER",
     href: "https://geoservices.ign.fr/sites/default/files/2023-12/Comment%20faire%20pour%20saisir%20et%20modifier%20une%20ZAER.pdf",
     detail: "PDF - 0.4Mo"
 }) }}
 
 {{ component("download", {
-    title: "Soumettre une ZAER",
+    title: "Télécharger le guide pour soumettre une ZAER",
     href: "https://geoservices.ign.fr/sites/default/files/2023-12/Comment%20faire%20pour%20soumettre%20une%20ZAER.pdf",
     detail: "PDF - 0.2Mo"
 }) }}
