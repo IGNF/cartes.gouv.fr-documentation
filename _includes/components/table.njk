@@ -12,7 +12,7 @@
         <tbody>
             {% for row in table.data %}
                 <tr>
-                    {% for col in row %}<td>{{ col }}</td>{% endfor %}
+                    {% for col in row %}<td>{{ col | safe }}</td>{% endfor %}
                 </tr>
             {% endfor %}
         </tbody>
