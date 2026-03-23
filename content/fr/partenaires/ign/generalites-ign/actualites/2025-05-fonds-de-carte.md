@@ -68,7 +68,7 @@ Le plan est disponible en tuiles vectorielles. Pour l’utiliser vous avez 2 URL
 
 Il est conseillé d’utiliser le fond de carte Plan IGN (Plan IGN v2 en WMS/WMTS ou PLAN IGN en tuiles vectorielles) en complément de ce fond de carte en zone frontalière.
 
-[Plus d’informations sur le service de tuiles vectorielles](/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/tms/)
+[Plus d’informations sur le service de tuiles vectorielles](/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/tms/)
 
 #### Exemple Avant/Après à Strasbourg
 
