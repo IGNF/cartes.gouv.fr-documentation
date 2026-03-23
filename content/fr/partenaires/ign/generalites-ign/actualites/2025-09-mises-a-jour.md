@@ -11,6 +11,9 @@ date: 2025-09-02
 
 {% from "components/component.njk" import component with context %}
 
+
+![RPG et BD Ortho](/img/partenaires/ign/generalites/actualites/2025-09-bandeau-rpg.png){fr-responsive-img .frx-border-img .frx-img-contained}
+
 #### Services web
 
 ##### Ajout de flux en accès libre
