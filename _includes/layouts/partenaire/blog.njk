@@ -80,37 +80,16 @@ layout: layouts/base.njk
       {% endif %}
       {{ content | safe }}
       {% set currentKey = eleventyNavigation.key %}
-      {% set decouvertePage = null %}
-      {% set otherPages = [] %}
+      {% set allPages = [] %}
       {% for entry in navCollection %}
         {% if entry.data.eleventyNavigation.parent == currentKey %}
-          {% if entry.data.title == "Découverte de l’offre produit" %}
-            {% set decouvertePage = entry %}
-          {% else %}
-            {% set _ = otherPages.push(entry) %}
-          {% endif %}
+          {% set _ = allPages.push(entry) %}
         {% endif %}
       {% endfor %}
-      {% if decouvertePage %}
-        <div class="fr-col-12 fr-my-10v" data-pagefind-ignore>
-          {% set card = {
-            title: decouvertePage.data.title,
-            url: decouvertePage.url,
-            description: decouvertePage.data.description,
-            horizontal: true,
-            small: true,
-            black: true
-          } %}
-          {% include "components/card.njk" %}
-        </div>
-      {% endif %}
-      <h2 data-pagefind-ignore>Offre produit et services</h2>
       {{ component("card_list", {
-          items: otherPages | sort(attribute = "data.eleventyNavigation.order"),
-          columns: 4,
-          small_cards: true,
-          ratio_cards: "16x9",
-          black_cards: true
+          items: allPages | sort(attribute = "data.eleventyNavigation.order"),
+          columns: 6,
+          show_dates: true
       }) }}
     </div>
   </div>

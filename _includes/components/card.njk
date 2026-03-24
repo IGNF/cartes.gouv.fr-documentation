@@ -22,7 +22,7 @@
                     {% set tags = card.tags %}
                     {% include "components/taggroup-disabled.njk" %}
                 {% endif %}
-                {% if card.date %}
+                {% if card.date and card.show_date %}
                     <p class="fr-card__detail fr-icon-time-fill">
                         <time class="postlist-date" datetime="{{ card.date | htmlDateString }}">
                             {{ card.date | readableDate }}
