@@ -39,12 +39,74 @@ La communauté Expertises-Territoires est l’endroit privilégié pour retrouve
 
 Deux ateliers de standardisation d’une ZAER ont eu lieu en septembre dernier afin d’en définir une liste attributaire qui répond à la fois à la commande publique et aux utilisateurs du portail. Vous pouvez en retrouver les conclusions ici : {{ component("download", {
     title: "Télécharger les conclusions",
-    href: "https://geoservices.ign.fr/sites/default/files/2023-10/Restitution_standard_ZAER_24102023%20%282%29.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/zaer/Standard_v1.pdf",
     detail: "PDF - 1Mo"
 }) }}
 
 Vous pouvez poser toutes vos questions via notre <a href="https://planification.climat-energie.gouv.fr/nous-contacter/" target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr/nous-contacter/ - ouvre une nouvelle fenêtre">formulaire de contact</a>.
 
+## Ressources
+
+### Flux de données
+
+<a href="https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/ - ouvre une nouvelle fenêtre">Voir les services web</a>
+
+#### Données ENR en WMTS
+
+Les caractéristiques du service sont accessibles via l'URL suivante :
+```njk
+{% raw %}
+    https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
+{% endraw %}
+```
+
+Nous proposons également une URL d'accès aux données filtrés sur la thématique enr (attention cette URL ne fonctionne pas avec toutes les applications) :
+```njk
+{% raw %}
+    https://data.geopf.fr/annexes/ressources/wmts/enr.xml
+{% endraw %}
+```
+
+#### Données ENR en WMS Raster
+
+Les caractéristiques du service sont accessibles via l'URL suivante :
+```njk
+{% raw %}
+    https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+{% endraw %}
+```
+
+Nous proposons également une URL d'accès aux données filtrés sur la thématique enr (attention cette URL ne fonctionne pas avec toutes les applications) :
+```njk
+{% raw %}
+    https://data.geopf.fr/annexes/ressources/wms-r/enr.xml
+{% endraw %}
+```
+
+#### Données ENR en WMS Vecteur
+
+Les caractéristiques du service sont accessibles via l'URL suivante :
+```njk
+{% raw %}
+    https://data.geopf.fr/wms-v/ows?service=WMS&version=1.3.0&request=GetCapabilities
+{% endraw %}
+```
+
+Nous proposons également une URL d'accès aux données filtrés sur la thématique enr (attention cette URL ne fonctionne pas avec toutes les applications) :
+```njk
+{% raw %}
+    https://data.geopf.fr/annexes/ressources/wms-v/enr.xml
+{% endraw %}
+```
+
+#### Données ENR en WFS
+
+Les caractéristiques du service sont accessibles via l'URL suivante :
+```njk
+{% raw %}
+    https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
+{% endraw %}
+```
 
 ### Téléchargement
 
@@ -697,31 +759,31 @@ France métropolitaine
 
 {{ component("download", {
     title: "Télécharger le guide pas-à-pas sur la thématique EnR 'Thermique'",
-    href: "https://geoservices.ign.fr/sites/default/files/2024-05/Portail%20EnR%20Guide%20Pas%20a%20Pas%20EnR-thermiques.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/guide/Pas_a_pas_EnR_thermique.pdf",
     detail: "PDF - 8.5Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pas-à-pas sur les thématiques EnR 'Eolien et Solaire'",
-    href: "https://geoservices.ign.fr/sites/default/files/2024-05/Portail%20EnR%20Guide%20Pas%20a%20Pas%20Eolien-Solaire.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/guide/Pas_a_pas_EnR_eolien_solaire.pdf",
     detail: "PDF - 10.4Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pour importer une zone",
-    href: "https://geoservices.ign.fr/sites/default/files/2023-12/Comment%20faire%20pour%20Importer%20une%20zone.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/guide/Importer_une_zone.pdf",
     detail: "PDF - 0.5Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pour saisir et modifier une ZAER",
-    href: "https://geoservices.ign.fr/sites/default/files/2023-12/Comment%20faire%20pour%20saisir%20et%20modifier%20une%20ZAER.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/guide/Saisir_et_modifier_une_zone.pdf",
     detail: "PDF - 0.4Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pour soumettre une ZAER",
-    href: "https://geoservices.ign.fr/sites/default/files/2023-12/Comment%20faire%20pour%20soumettre%20une%20ZAER.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/guide/Soumettre_une_zone.pdf",
     detail: "PDF - 0.2Mo"
 }) }}
 
@@ -748,19 +810,19 @@ France métropolitaine
 
 {{ component("download", {
     title: "Standardisation ZAER",
-    href: "https://geoservices.ign.fr/sites/default/files/2024-08/Restitution_Standard_ZAER.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/zaer/Standard_v1.pdf",
     detail: "PDG - 1Mo"
 }) }}
 
 {{ component("download", {
     title: "Exemple ZAER GeoJSON",
-    href: "https://geoservices.ign.fr/sites/default/files/2024-04/exemple_pour_commune.zip",
+    href: "http://data.geopf.fr/annexes/enr/document/zaer/Exemple_v1.zip",
     detail: "Zip - 1Ko"
 }) }}
 
 {{ component("download", {
     title: "Gabarit - cadastre solaire sur toiture local",
-    href: "https://geoservices.ign.fr/sites/default/files/2023-12/Integration_cadastres_solaires_locaux.pdf",
+    href: "http://data.geopf.fr/annexes/enr/document/zaer/Cadastres_solaires_locaux.pdf",
     detail: "PDF - 0.2Mo"
 }) }}
 
