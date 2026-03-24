@@ -33,7 +33,7 @@ Les flux IGNF_LIDAR-HD_TA:nuage-bloc et IGNF_LIDAR-HD_TA:nuage-dalle sont rempla
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
-        ['ADMIN EXPRESS mises a jour en continu', 'LIMITES_ADMINISTRATIVES_EXPRESS.LATEST', 'WFS, WMS Raster et WMTS', 'administratif', 'FXX+DOM - 2025-10'],
+        ['ADMIN EXPRESS mises à jour en continu', 'LIMITES_ADMINISTRATIVES_EXPRESS.LATEST', 'WFS, WMS Raster et WMTS', 'administratif', 'FXX+DOM - 2025-10'],
         ['MNH issu de LiDAR HD', 'IGNF_LIDAR-HD_MNH_ELEVATION.ELEVATIONGRIDCOVERAGE.SHADOW', 'WMS Raster et WMTS', 'altimetrie', 'FO (Sabres), FQ (Pau), GF (Alençon), HE (l’Aigle), KB (Arras), LC (Saint-Quentin), LK (Vichy), MD (Reims), ME (Epernay), ML (Ambert), PF (Neufchâteau)'],
         ['MNS issu de LiDAR HD', 'IGNF_LIDAR-HD_MNS_ELEVATION.ELEVATIONGRIDCOVERAGE.SHADOW', 'WMS Raster et WMTS', 'altimetrie', ''],
         ['MNT issu de LiDAR HD', 'IGNF_LIDAR-HD_MNT_ELEVATION.ELEVATIONGRIDCOVERAGE.SHADOW', 'WMS Raster et WMTS', 'altimetrie', ''],
@@ -63,7 +63,7 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS 
 
 #### Téléchargement
 
-##### Liste des mises à jour de donnée en téléchargement
+##### Liste des mises à jour de données en téléchargement
 
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],

@@ -68,7 +68,7 @@ date: 2025-09-02
         ['OCSGE Usage 2017-2020', 'OCSGE.USAGE.2017-2020', 'WMS Raster et WMTS', 'ocsge', 'Correctif D022,Correctif D033, D074'],
         ['OCSGE Usage 2021-2023', 'OCSGE.USAGE.2021-2023', 'WMS Raster et WMTS', 'ocsge', 'Correctif D022,Correctif D033, D074'],
         ['SCAN Regional®', 'SCANREG_PYR-JPEG_WLD_WM', 'WMS Raster', 'cartes', 'France entière'],
-        ['ADMIN EXPRESS mises a jour en continu', 'LIMITES_ADMINISTRATIVES_EXPRESS.LATEST', 'WFS, WMS Raster et WMTS', 'administratif', 'FXX+DOM'],
+        ['ADMIN EXPRESS mises à jour en continu', 'LIMITES_ADMINISTRATIVES_EXPRESS.LATEST', 'WFS, WMS Raster et WMTS', 'administratif', 'FXX+DOM'],
         ['Réseau de transports exceptionnels', 'SECUROUTE.TE', 'WFS, WMTS', 'transports', 'FXX']
     ]
 }) }}
@@ -81,7 +81,7 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS 
 
 #### Téléchargement
 
-##### Liste des mises à jour de donnée en téléchargement
+##### Liste des mises à jour de données en téléchargement
 
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],

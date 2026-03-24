@@ -28,8 +28,8 @@ date: 2026-02-03
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
-        ["ADMIN EXPRESS mises a jour en continu", "ADMIN_EXPRESS", "TMS", "administratif", "FXX + DROM - 2026-02"],
-        ["ADMIN EXPRESS mises a jour en continu", "LIMITES_ADMINISTRATIVES_EXPRESS.LATEST", "WFS, WMS-Raster et WMTS", "administratif", "FXX + DROM - 2026-02"],
+        ["ADMIN EXPRESS mises à jour en continu", "ADMIN_EXPRESS", "TMS", "administratif", "FXX + DROM - 2026-02"],
+        ["ADMIN EXPRESS mises à jour en continu", "LIMITES_ADMINISTRATIVES_EXPRESS.LATEST", "WFS, WMS-Raster et WMTS", "administratif", "FXX + DROM - 2026-02"],
         ["PLAN IGN", "PLAN.IGN", "TMS (tuiles vectorielles)", "cartes", "FXX + DROM (niveaux de zoom 14-19) - 2026-02"],
         ["PLAN IGN", "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2", "WMS-Raster et WMTS", "cartes", "FXX + DROM (niveaux de zoom 14-19) - 2026-02"],
         ["Parcellaire Express (PCI) L93", "CADASTRALPARCELS.PARCELLAIRE_EXPRESS.L93", "WMTS", "lambert93", "FXX + DROM - 2025-12"],
@@ -61,7 +61,7 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS 
 
 #### Téléchargement
 
-##### Liste des mises à jour de donnée en téléchargement
+##### Liste des mises à jour de données en téléchargement
 
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],

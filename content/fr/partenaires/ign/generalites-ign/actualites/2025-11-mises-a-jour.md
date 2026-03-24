@@ -37,7 +37,7 @@ date: 2025-11-03
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
-        ['ADMIN EXPRESS mises a jour en continu', 'LIMITES_ADMINISTRATIVES_EXPRESS.LATEST', 'WFS, WMS Raster et WMTS', 'administratif', 'FXX+DROM - 2025-11'],
+        ['ADMIN EXPRESS mises à jour en continu', 'LIMITES_ADMINISTRATIVES_EXPRESS.LATEST', 'WFS, WMS Raster et WMTS', 'administratif', 'FXX+DROM - 2025-11'],
         ['Prairies sensibles BCAE 9', 'PRAIRIES.SENSIBLES.BCAE', 'WFS, WMS Raster et WMTS', 'agriculture', 'France métropolitaine'],
         ['RPG dernière édition', 'LANDUSE.AGRICULTURE.LATEST', 'WFS, WMS Raster et WMTS', 'agriculture', 'FXX+DROM - 2024'],
         ['Tableau d’assemblage des blocs de nuages de points LiDAR HD', 'IGNF_NUAGES-DE-POINTS-LIDAR-HD:bloc', 'WFS', 'altimétrie', 'FE (Vire-Normandie), FQ (Pau), GO (Marmande), KL (Ussel), KM (Salers), MH (Vezelay), ML (Ambert)'],
@@ -91,7 +91,7 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS 
 
 #### Téléchargement
 
-##### Liste des mises à jour de donnée en téléchargement
+##### Liste des mises à jour de données en téléchargement
 
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],
