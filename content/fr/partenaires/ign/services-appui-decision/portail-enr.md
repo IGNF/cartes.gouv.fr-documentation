@@ -19,7 +19,7 @@ Le présent portail est un système de cartographie permettant de visualiser et 
 
 Cet outil met à disposition des données objectives, compilables sur le territoire ainsi que des pré-traitements de ces données, pouvant servir d'outils d'aide à la décision pour les collectivités.
 
-Les ressources en ligne du portail sont diffusées librement et peuvent être intégrées dans d'autres outils de visualisation en utilisant la <a href="https://geoservices.ign.fr/services-web-experts-energies-renouvelables" target="_blank" rel="noopener noreferrer" title="geoservices.ign.fr/services-web-experts-energies-renouvelables - ouvre une nouvelle fenêtre">clé partagée "enr"</a>.
+Les ressources en ligne du portail sont diffusées librement et peuvent être intégrées dans d'autres outils de visualisation en utilisant la clé partagée "enr".
 
 <a href="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public" target="_blank" rel="noopener noreferrer" title="macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public - ouvre une nouvelle fenêtre">**Cliquez ici pour consulter la carte en plein écran**</a>.
 
@@ -110,9 +110,7 @@ Les caractéristiques du service sont accessibles via l'URL suivante :
 
 ### Téléchargement
 
-<a href="https://geoservices.ign.fr/telechargement-api/ENR" target="_blank" rel="noopener noreferrer" title="geoservices.ign.fr/telechargement-api/ENR - ouvre une nouvelle fenêtre">Tous les téléchargements</a>
-
-#### Zone d'accélération
+#### Zones d'accélération
 
 ##### Zones d’accélération arrêtées
 
