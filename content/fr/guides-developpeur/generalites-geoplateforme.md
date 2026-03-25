@@ -1,7 +1,6 @@
 ---
 title: Généralités Géoplateforme
 description: Tout ce qu’il faut savoir pour suivre les changements et les évolutions de tous les services de la Géoplateforme
-layout: layouts/parent.njk
 eleventyNavigation:
     key: Généralités Géoplateforme
     order: 1
