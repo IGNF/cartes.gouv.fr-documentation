@@ -13,7 +13,7 @@ image:
 
 {% from "components/component.njk" import component with context %}
 
-[Accéder au portail des Énergies renouvelables](https://planification.climat-energie.gouv.fr){target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr - ouvre une nouvelle fenêtre"}
+[Accéder au portail des Énergies renouvelables](https://planification.climat-energie.gouv.fr){class="fr-btn" target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr - ouvre une nouvelle fenêtre"}
 
 Le présent portail est un système de cartographie permettant de visualiser et d’analyser les divers enjeux des territoires à prendre en compte dans le développement des énergies renouvelables. Il permet d’appuyer les communes dans l’identification de zones potentiellement propices à l’implantation d’énergies renouvelables sur leur territoire, notamment pour définir les zones d’accélération prévues par l’[article 15 de la loi relative à l’accélération de la production d’énergies renouvelables](https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000047294266){target="_blank" rel="noopener noreferrer" title="legifrance.gouv.fr/jorf/article_jo/JORFARTI000047294266 - ouvre une nouvelle fenêtre"}. 
 
@@ -21,7 +21,7 @@ Cet outil met à disposition des données objectives, compilables sur le territo
 
 Les ressources en ligne du portail sont diffusées librement et peuvent être intégrées dans d’autres outils de visualisation en utilisant la clé partagée « enr ».
 
-[**Cliquez ici pour consulter la carte en plein écran**](https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public){target="_blank" rel="noopener noreferrer" title="macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public - ouvre une nouvelle fenêtre"}
+[Cliquez ici pour consulter la carte en plein écran](https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public){class="fr-btn fr-btn--secondary" target="_blank" rel="noopener noreferrer" title="macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public - ouvre une nouvelle fenêtre"}
 
 <iframe class="fr-mb-6v" width="100%" height="700" src="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public"></iframe>
 
