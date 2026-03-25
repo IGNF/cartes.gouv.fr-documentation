@@ -11,108 +11,101 @@ image:
     alt: Portail ENR
 ---
 
-<a href="https://planification.climat-energie.gouv.fr/" target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr - ouvre une nouvelle fenêtre">Accéder au portail des Énergies renouvelables</a>
-
 {% from "components/component.njk" import component with context %}
 
-Le présent portail est un système de cartographie permettant de visualiser et d'analyser les divers enjeux des territoires à prendre en compte dans le développement des énergies renouvelables. Il permet d’appuyer les communes dans l’identification de zones potentiellement propices à l’implantation d’énergies renouvelables sur leur territoire, notamment pour définir les zones d’accélération prévues par <a href="https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000047294266" target="_blank" rel="noopener noreferrer" title="legifrance.gouv.fr/jorf/article_jo/JORFARTI000047294266 - ouvre une nouvelle fenêtre">l’article 15 de la loi relative à l’accélération de la production d’énergies renouvelables</a>. 
+[Accéder au portail des Énergies renouvelables](https://planification.climat-energie.gouv.fr){target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr - ouvre une nouvelle fenêtre"}
 
-Cet outil met à disposition des données objectives, compilables sur le territoire ainsi que des pré-traitements de ces données, pouvant servir d'outils d'aide à la décision pour les collectivités.
+Le présent portail est un système de cartographie permettant de visualiser et d’analyser les divers enjeux des territoires à prendre en compte dans le développement des énergies renouvelables. Il permet d’appuyer les communes dans l’identification de zones potentiellement propices à l’implantation d’énergies renouvelables sur leur territoire, notamment pour définir les zones d’accélération prévues par l’[article 15 de la loi relative à l’accélération de la production d’énergies renouvelables](https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000047294266){target="_blank" rel="noopener noreferrer" title="legifrance.gouv.fr/jorf/article_jo/JORFARTI000047294266 - ouvre une nouvelle fenêtre"}. 
 
-Les ressources en ligne du portail sont diffusées librement et peuvent être intégrées dans d'autres outils de visualisation en utilisant la clé partagée "enr".
+Cet outil met à disposition des données objectives, compilables sur le territoire ainsi que des pré-traitements de ces données, pouvant servir d’outils d’aide à la décision pour les collectivités.
 
-<a href="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public" target="_blank" rel="noopener noreferrer" title="macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public - ouvre une nouvelle fenêtre">**Cliquez ici pour consulter la carte en plein écran**</a>.
+Les ressources en ligne du portail sont diffusées librement et peuvent être intégrées dans d’autres outils de visualisation en utilisant la clé partagée « enr ».
 
-<iframe height="700" id="Avancement-PCRS" src="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public" width="800"></iframe>
+[**Cliquez ici pour consulter la carte en plein écran**](https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public){target="_blank" rel="noopener noreferrer" title="macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public - ouvre une nouvelle fenêtre"}
+
+<iframe class="fr-mb-6v" width="100%" height="700" src="https://macarte.ign.fr/carte/1X3jxe/Carte-EnR-Grand-public"></iframe>
 
 Succédant à la version bêta publiée le 10 mai 2023, cette nouvelle version a été mise en ligne avec succès le 11 décembre 2023. Plus ergonomique, elle présente de nouvelles fonctionnalités permettant aux communes d’identifier et de saisir les zones d’accélération d’énergies renouvelables (ZAER) sur leur territoire, de demander des avis sur ces zones aux acteurs locaux de la planification énergétique et de les soumettre pour arrêt aux référents préfectoraux. Des vidéos et fiches de documentation sont disponibles ci-contre.
 
 Le gestionnaire de couches a également été enrichi par de nouvelles données et des données mises à jour depuis l’été dernier.
 
-Les informations concernant les départements et régions d’Outre-Mer sont en cours de constitution. Vous pouvez d’ores et déjà retrouver les études existantes <a href="https://www.ecologie.gouv.fr/donnees-sur-developpement-des-energies-renouvelables" target="_blank" rel="noopener noreferrer" title="ecologie.gouv.fr/donnees-sur-developpement-des-energies-renouvelables - ouvre une nouvelle fenêtre">ici</a>.
+Les informations concernant les départements et régions d’Outre-Mer sont en cours de constitution. Vous pouvez d’ores et déjà retrouver les études existantes [ici](https://www.ecologie.gouv.fr/donnees-sur-developpement-des-energies-renouvelables){target="_blank" rel="noopener noreferrer" title="ecologie.gouv.fr/donnees-sur-developpement-des-energies-renouvelables - ouvre une nouvelle fenêtre"}.
 
-##### Communauté 
+### Communauté
 
-La communauté Expertises-Territoires est l’endroit privilégié pour retrouver toutes les informations et retours d’expériences sur la loi, les fonctionnalités du portail et les données qui le composent. Pour vous y inscrire, suivez <a href="https://www.expertises-territoires.fr/jcms/pl1_141479/fr/portail-cartographique-des-energies-renouvelables" target="_blank" rel="noopener noreferrer" title="expertises-territoires.fr/jcms/pl1_141479/fr/portail-cartographique-des-energies-renouvelables - ouvre une nouvelle fenêtre">ce lien</a>.
+La communauté Expertises-Territoires est l’endroit privilégié pour retrouver toutes les informations et retours d’expérience sur la loi, les fonctionnalités du portail et les données qui le composent. Pour vous y inscrire, suivez [ce lien](https://www.expertises-territoires.fr/jcms/pl1_141479/fr/portail-cartographique-des-energies-renouvelables){target="_blank" rel="noopener noreferrer" title="expertises-territoires.fr/jcms/pl1_141479/fr/portail-cartographique-des-energies-renouvelables - ouvre une nouvelle fenêtre"}.
 
-##### Ateliers de standardisation d’une ZAER
+### Ateliers de standardisation d’une ZAER
 
-Deux ateliers de standardisation d’une ZAER ont eu lieu en septembre dernier afin d’en définir une liste attributaire qui répond à la fois à la commande publique et aux utilisateurs du portail. Vous pouvez en retrouver les conclusions ici : {{ component("download", {
+Deux ateliers de standardisation d’une ZAER ont eu lieu en septembre dernier afin d’en définir une liste attributaire qui répond à la fois à la commande publique et aux utilisateurs du portail. Vous pouvez en retrouver les conclusions ici :
+
+{{ component("download", {
     title: "Télécharger les conclusions",
     href: "http://data.geopf.fr/annexes/enr/document/zaer/Standard_v1.pdf",
     detail: "PDF - 1Mo"
 }) }}
 
-Vous pouvez poser toutes vos questions via notre <a href="https://planification.climat-energie.gouv.fr/nous-contacter/" target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr/nous-contacter/ - ouvre une nouvelle fenêtre">formulaire de contact</a>.
+Vous pouvez poser toutes vos questions via notre [formulaire de contact](https://planification.climat-energie.gouv.fr/nous-contacter){target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr/nous-contacter - ouvre une nouvelle fenêtre"}.
 
-## Ressources
+### Ressources
 
-### Flux de données
+#### Flux de données
 
-<a href="https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/" target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/ - ouvre une nouvelle fenêtre">Voir les services web</a>
+[Voir les services web](https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion){target="_blank" rel="noopener noreferrer" title="cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion - ouvre une nouvelle fenêtre"}
 
-#### Données ENR en WMTS
+##### Données ENR en WMTS
 
-Les caractéristiques du service sont accessibles via l'URL suivante :
-```njk
-{% raw %}
-    https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
-{% endraw %}
+Les caractéristiques du service sont accessibles via l’<span lang="en">_URL_</span> suivante :
+
+```plain
+https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
 ```
 
-Nous proposons également une URL d'accès aux données filtrés sur la thématique enr (attention cette URL ne fonctionne pas avec toutes les applications) :
-```njk
-{% raw %}
-    https://data.geopf.fr/annexes/ressources/wmts/enr.xml
-{% endraw %}
+Nous proposons également une <span lang="en">_URL_</span> d’accès aux données filtrées sur la thématique enr (attention cette <span lang="en">_URL_</span> ne fonctionne pas avec toutes les applications) :
+```plain
+https://data.geopf.fr/annexes/ressources/wmts/enr.xml
 ```
 
-#### Données ENR en WMS Raster
+##### Données ENR en WMS-Raster
 
-Les caractéristiques du service sont accessibles via l'URL suivante :
-```njk
-{% raw %}
-    https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
-{% endraw %}
+Les caractéristiques du service sont accessibles via l’<span lang="en">_URL_</span> suivante :
+```plain
+https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 ```
 
-Nous proposons également une URL d'accès aux données filtrés sur la thématique enr (attention cette URL ne fonctionne pas avec toutes les applications) :
-```njk
-{% raw %}
-    https://data.geopf.fr/annexes/ressources/wms-r/enr.xml
-{% endraw %}
+Nous proposons également une <span lang="en">_URL_</span> d’accès aux données filtrées sur la thématique enr (attention cette <span lang="en">_URL_</span> ne fonctionne pas avec toutes les applications) :
+
+```plain
+https://data.geopf.fr/annexes/ressources/wms-r/enr.xml
 ```
 
-#### Données ENR en WMS Vecteur
+##### Données ENR en WMS-Vecteur
 
-Les caractéristiques du service sont accessibles via l'URL suivante :
-```njk
-{% raw %}
-    https://data.geopf.fr/wms-v/ows?service=WMS&version=1.3.0&request=GetCapabilities
-{% endraw %}
+Les caractéristiques du service sont accessibles via l’<span lang="en">_URL_</span> suivante :
+
+```plain
+https://data.geopf.fr/wms-v/ows?service=WMS&version=1.3.0&request=GetCapabilities
 ```
 
-Nous proposons également une URL d'accès aux données filtrés sur la thématique enr (attention cette URL ne fonctionne pas avec toutes les applications) :
-```njk
-{% raw %}
-    https://data.geopf.fr/annexes/ressources/wms-v/enr.xml
-{% endraw %}
+Nous proposons également une <span lang="en">_URL_</span> d’accès aux données filtrées sur la thématique enr (attention cette <span lang="en">_URL_</span> ne fonctionne pas avec toutes les applications) :
+
+```plain
+https://data.geopf.fr/annexes/ressources/wms-v/enr.xml
 ```
 
-#### Données ENR en WFS
+##### Données ENR en WFS
 
-Les caractéristiques du service sont accessibles via l'URL suivante :
-```njk
-{% raw %}
-    https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
-{% endraw %}
+Les caractéristiques du service sont accessibles via l’<span lang="en">_URL_</span> suivante :
+
+```plain
+https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
 ```
 
-### Téléchargement
+#### Téléchargement
 
-#### Zones d'accélération
+##### Zones d’accélération
 
-##### Zones d’accélération arrêtées
+###### Zones d’accélération arrêtées
 
 France entière
 
@@ -122,10 +115,9 @@ France entière
     detail: "Geopackage - 1026Mo"
 }) }}
 
- 
-#### Potentiel solaire électrique et thermique
+##### Potentiel solaire électrique et thermique
 
-##### Irradiation solaire horizontale annuelle moyenne
+###### Irradiation solaire horizontale annuelle moyenne
 
 France métropolitaine
 
@@ -135,7 +127,7 @@ France métropolitaine
     detail: "7-Zip - 14.9Mo"
 }) }}
 
-##### Potentiel solaire au sol – couche "clé en main"
+###### Potentiel solaire au sol - couche « clé en main »
 
 France métropolitaine
 
@@ -145,7 +137,7 @@ France métropolitaine
     detail: "Geopackage - 2.4Go"
 }) }}
 
-##### Potentiel solaire au sol - friches susceptibles d’accueillir des installations photovoltaïques
+###### Potentiel solaire au sol - friches susceptibles d’accueillir des installations photovoltaïques
 
 France métropolitaine
 
@@ -155,7 +147,7 @@ France métropolitaine
     detail: "7-Zip - 1Mo"
 }) }}
 
-##### Cadastres solaires locaux
+###### Cadastres solaires locaux
 
 France métropolitaine
 
@@ -165,9 +157,9 @@ France métropolitaine
     detail: "7-Zip - 1236Mo"
 }) }}
 
-##### Potentiel solaire sur toiture (méthode simplifiée)
+###### Potentiel solaire sur toiture (méthode simplifiée)
 
-Région Île-de-France - R 11 :
+Région Île-de-France - R 11 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01.7z",
@@ -175,7 +167,7 @@ Région Île-de-France - R 11 :
     detail: "7-Zip - 332.3Mo"
 }) }}
 
-Région Centre-Val de Loire - R 24 :
+Région Centre-Val de Loire - R 24 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01.7z",
@@ -183,7 +175,7 @@ Région Centre-Val de Loire - R 24 :
     detail: "7-Zip - 235.3Mo"
 }) }}
 
-Région Bourgogne-Franche-Comté - R 27 :
+Région Bourgogne-Franche-Comté - R 27 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01.7z",
@@ -191,7 +183,7 @@ Région Bourgogne-Franche-Comté - R 27 :
     detail: "7-Zip - 248.6Mo"
 }) }}
 
-Région Normandie - R 28 :
+Région Normandie - R 28 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01.7z",
@@ -199,7 +191,7 @@ Région Normandie - R 28 :
     detail: "7-Zip - 288Mo"
 }) }}
 
-Région Hauts-de-France - R 32 :
+Région Hauts-de-France - R 32 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01.7z",
@@ -207,7 +199,7 @@ Région Hauts-de-France - R 32 :
     detail: "7-Zip - 432.7Mo"
 }) }}
 
-Région Grand Est - R 44 :
+Région Grand Est - R 44 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01.7z",
@@ -215,7 +207,7 @@ Région Grand Est - R 44 :
     detail: "7-Zip - 424.6Mo"
 }) }}
 
-Région Pays de la Loire - R 52 :
+Région Pays de la Loire - R 52 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01.7z",
@@ -223,7 +215,7 @@ Région Pays de la Loire - R 52 :
     detail: "7-Zip - 363Mo"
 }) }}
 
-Région Bretagne - R 53 :
+Région Bretagne - R 53 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01.7z",
@@ -231,7 +223,7 @@ Région Bretagne - R 53 :
     detail: "7-Zip - 315Mo"
 }) }}
 
-Région Nouvelle-Aquitaine - R 75 :
+Région Nouvelle-Aquitaine - R 75 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01.7z",
@@ -239,7 +231,7 @@ Région Nouvelle-Aquitaine - R 75 :
     detail: "7-Zip - 669Mo"
 }) }}
 
-Région Occitanie - R 76 :
+Région Occitanie - R 76 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01.7z",
@@ -247,7 +239,7 @@ Région Occitanie - R 76 :
     detail: "7-Zip - 558Mo"
 }) }}
 
-Région Auvergne-Rhône-Alpes - R 84 :
+Région Auvergne-Rhône-Alpes - R 84 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01.7z",
@@ -255,7 +247,7 @@ Région Auvergne-Rhône-Alpes - R 84 :
     detail: "7-Zip - 553Mo"
 }) }}
 
-Région Provence-Alpes-Côte d’Azur - R 93 :
+Région Provence-Alpes-Côte d’Azur - R 93 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01.7z",
@@ -263,7 +255,7 @@ Région Provence-Alpes-Côte d’Azur - R 93 :
     detail: "7-Zip - 73.8Mo"
 }) }}
 
-Région Corse - R 94 :
+Région Corse - R 94 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01.7z",
@@ -271,7 +263,7 @@ Région Corse - R 94 :
     detail: "7-Zip - 28Mo"
 }) }}
 
-##### Potentiel solaire sur le réseau routier national (DIR)
+###### Potentiel solaire sur le réseau routier national (DIR)
 
 France métropolitaine
 
@@ -281,7 +273,7 @@ France métropolitaine
     detail: "7-Zip - 1.3Mo"
 }) }}
 
-##### Unités foncières contenant des surfaces de stationnement non couvertes de plus de 500 m² (données déclaratives)
+###### Unités foncières contenant des surfaces de stationnement non couvertes de plus de 500 m² (données déclaratives)
 
 France entière
 
@@ -291,7 +283,7 @@ France entière
     detail: "7-Zip - 54.7Mo"
 }) }}
 
-##### Surfaces de parking supérieures à 500m²
+###### Surfaces de parking supérieures à 500 m²
 
 France métropolitaine
 
@@ -301,7 +293,7 @@ France métropolitaine
     detail: "7-Zip - 32.6Mo"
 }) }}
 
-##### Délaissés autoroutiers
+###### Délaissés autoroutiers
 
 France métropolitaine
 
@@ -311,10 +303,9 @@ France métropolitaine
     detail: "7-Zip - 1.8Mo"
 }) }}
 
- 
-#### Potentiel éolien terrestre
+##### Potentiel éolien terrestre
 
-##### Contraintes réglementaires liées à l’habitat
+###### Contraintes réglementaires liées à l’habitat
 
 France entière
 
@@ -324,7 +315,7 @@ France entière
     detail: "7-Zip - 133Mo"
 }) }}
 
-##### Potentiel éolien terrestre - couche "clé en main"
+###### Potentiel éolien terrestre - couche « clé en main »
 
 France entière
 
@@ -334,7 +325,7 @@ France entière
     detail: "7-Zip - 3.5Go"
 }) }}
 
-##### Potentiel éolien terrestre - gisement de vent à 140m
+###### Potentiel éolien terrestre - gisement de vent à 140 m
 
 France métropolitaine
 
@@ -344,7 +335,7 @@ France métropolitaine
     detail: "7-Zip - 7.8Mo"
 }) }}
 
-##### Potentiel éolien terrestre - gisement de vent à 160m
+###### Potentiel éolien terrestre - gisement de vent à 160 m
 
 France métropolitaine
 
@@ -354,7 +345,7 @@ France métropolitaine
     detail: "7-Zip - 7.8Mo"
 }) }}
 
-##### Potentiel éolien terrestre - Contraintes réglementaires liées aux pentes
+###### Potentiel éolien terrestre - Contraintes réglementaires liées aux pentes
 
 France métropolitaine
 
@@ -364,7 +355,7 @@ France métropolitaine
     detail: "7-Zip - 250Mo"
 }) }}
 
-##### Potentiel éolien terrestre - Contraintes réglementaires liées aux routes
+###### Potentiel éolien terrestre - Contraintes réglementaires liées aux routes
 
 France métropolitaine
 
@@ -374,12 +365,11 @@ France métropolitaine
     detail: "7-Zip - 1553Mo"
 }) }}
 
- 
-#### Potentiel géothermique
+##### Potentiel géothermique
 
-##### Potentiel géothermique en PACA
+###### Potentiel géothermique en PACA
 
-Région Provence-Alpes-Côte d'Azur
+Région Provence-Alpes-Côte d’Azur
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01.7z",
@@ -387,10 +377,9 @@ Région Provence-Alpes-Côte d'Azur
     detail: "7-Zip - 3.4Mo"
 }) }}
 
- 
-#### Potentiel hydroélectrique
+##### Potentiel hydroélectrique
 
-##### Potentiel hydroélectrique sur nouveaux ouvrages
+###### Potentiel hydroélectrique sur nouveaux ouvrages
 
 France métropolitaine
 
@@ -400,10 +389,9 @@ France métropolitaine
     detail: "7-Zip - 3.7Mo"
 }) }}
 
- 
-#### Potentiel de méthanisation et biogaz
+##### Potentiel de méthanisation et biogaz
 
-##### Potentiel méthanisable par cantons
+###### Potentiel méthanisable par cantons
 
 France métropolitaine
 
@@ -413,10 +401,9 @@ France métropolitaine
     detail: "7-Zip - 2.3Mo"
 }) }}
 
- 
-#### Potentiel de développement de réseaux de chaleur et de froid
+##### Potentiel de développement de réseaux de chaleur et de froid
 
-##### Estimation des besoins de chaleur des bâtiments des secteurs résidentiels et tertiaires
+###### Estimation des besoins de chaleur des bâtiments des secteurs résidentiels et tertiaires
 
 France métropolitaine
 
@@ -426,7 +413,7 @@ France métropolitaine
     detail: "7-Zip - 234Mo"
 }) }}
 
-##### Estimation des besoins de froid des bâtiments des secteurs résidentiels et tertiaires
+###### Estimation des besoins de froid des bâtiments des secteurs résidentiels et tertiaires
 
 France métropolitaine
 
@@ -436,7 +423,7 @@ France métropolitaine
     detail: "7-Zip - 234.6Mo"
 }) }}
 
-##### Zones d’opportunité « à potentiel » pour la création ou l’extension de réseaux de chaleur - couche "clé en main"
+###### Zones d’opportunité « à potentiel » pour la création ou l’extension de réseaux de chaleur - couche « clé en main »
 
 France métropolitaine
 
@@ -446,7 +433,7 @@ France métropolitaine
     detail: "7-Zip - 2Mo"
 }) }}
 
-##### Zones d’opportunité « à fort potentiel » pour la création ou l’extension de réseaux de chaleur - couche "clé en main"
+###### Zones d’opportunité « à fort potentiel » pour la création ou l’extension de réseaux de chaleur - couche « clé en main »
 
 France métropolitaine
 
@@ -456,7 +443,7 @@ France métropolitaine
     detail: "7-Zip - 5.5Mo"
 }) }}
 
-##### Zones d’opportunité « à potentiel » pour la création ou l’extension de réseaux de froid - couche "clé en main"
+###### Zones d’opportunité « à potentiel » pour la création ou l’extension de réseaux de froid - couche « clé en main »
 
 France métropolitaine
 
@@ -466,7 +453,7 @@ France métropolitaine
     detail: "7-Zip - 1.8Mo"
 }) }}
 
-##### Zones d’opportunité « à fort potentiel » pour la création ou l’extension de réseaux de froid - couche "clé en main"
+###### Zones d’opportunité « à fort potentiel » pour la création ou l’extension de réseaux de froid - couche « clé en main »
 
 France métropolitaine
 
@@ -476,10 +463,9 @@ France métropolitaine
     detail: "7-Zip - 0.5Mo"
 }) }}
 
- 
-#### Localisation des installations de production énergétique
+##### Localisation des installations de production énergétique
 
-##### Localisation des mâts éoliens
+###### Localisation des mâts éoliens
 
 France métropolitaine
 
@@ -489,7 +475,7 @@ France métropolitaine
     detail: "7-Zip - 0.7Mo"
 }) }}
 
-##### Cartographie des accès biométhane
+###### Cartographie des accès biométhane
 
 France métropolitaine
 
@@ -499,7 +485,7 @@ France métropolitaine
     detail: "7-Zip - 0.9Mo"
 }) }}
 
-##### Points d'injection de biométhane
+###### Points d’injection de biométhane
 
 France métropolitaine
 
@@ -509,7 +495,7 @@ France métropolitaine
     detail: "7-Zip - 0.2Mo"
 }) }}
 
-##### Localisation des installations de production de chaleur par Biogaz
+###### Localisation des installations de production de chaleur par Biogaz
 
 France métropolitaine
 
@@ -519,7 +505,7 @@ France métropolitaine
     detail: "7-Zip - 1.5Mo"
 }) }}
 
-##### Localisation des installations de production d'électricité pouvant valoriser de la chaleur
+###### Localisation des installations de production d’électricité pouvant valoriser de la chaleur
 
 France métropolitaine
 
@@ -529,7 +515,7 @@ France métropolitaine
     detail: "7-Zip - 1.5Mo"
 }) }}
 
-##### Localisation des installations de production de chaleur par incinération des déchets
+###### Localisation des installations de production de chaleur par incinération des déchets
 
 France métropolitaine
 
@@ -539,7 +525,7 @@ France métropolitaine
     detail: "7-Zip - 1.5Mo"
 }) }}
 
-##### Localisation des installations de production de chaleur par méthanisation
+###### Localisation des installations de production de chaleur par méthanisation
 
 France métropolitaine
 
@@ -549,9 +535,9 @@ France métropolitaine
     detail: "7-Zip - 1.5Mo"
 }) }}
 
-##### Localisation des sites de production de chaleur et froid
+###### Localisation des sites de production de chaleur et froid
 
-Région Bretagne - R 53 :
+Région Bretagne - R 53 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01.7z",
@@ -559,7 +545,7 @@ Région Bretagne - R 53 :
     detail: "7-Zip - 22Ko"
 }) }}
 
-Région Provence-Alpes-Côte d'Azur - R 93 :
+Région Provence-Alpes-Côte d’Azur - R 93 :
 
 {{ component("download", {
     title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01.7z",
@@ -567,17 +553,17 @@ Région Provence-Alpes-Côte d'Azur - R 93 :
     detail: "7-Zip - 46Ko"
 }) }}
 
-##### Localisation des réseaux de chaleur et de froid en France
+###### Localisation des réseaux de chaleur et de froid en France
 
 France métropolitaine
 
 {{ component("download", {
-    title: "hTélécharger ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
+    title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
     detail: "7-Zip - 0.3Mo"
 }) }}
 
-##### Localisation des linéaires de réseaux de chaleur et de froid en France
+###### Localisation des linéaires de réseaux de chaleur et de froid en France
 
 France métropolitaine
 
@@ -587,7 +573,7 @@ France métropolitaine
     detail: "7-Zip - 26.7Mo"
 }) }}
 
-##### Localisation et estimation du gisement de chaleur fatale des STEP en France
+###### Localisation et estimation du gisement de chaleur fatale des STEP en France
 
 France métropolitaine
 
@@ -597,7 +583,7 @@ France métropolitaine
     detail: "7-Zip - 0.5Mo"
 }) }}
 
-##### Localisation et estimation du gisement de chaleur fatale des 500 plus gros sites industriels de France
+###### Localisation et estimation du gisement de chaleur fatale des 500 plus gros sites industriels de France
 
 France entière
 
@@ -607,7 +593,7 @@ France entière
     detail: "7-Zip - 0.3Mo"
 }) }}
 
-##### Localisation et caractérisation des datacenters en France
+###### Localisation et caractérisation des datacenters en France
 
 France métropolitaine
 
@@ -617,10 +603,9 @@ France métropolitaine
     detail: "7-Zip - 0.3Mo"
 }) }}
 
- 
-#### Productibles annuels
+##### Productibles annuels
 
-##### Productible annuel par filière énergétique
+###### Productible annuel par filière énergétique
 
 France métropolitaine
 
@@ -630,7 +615,7 @@ France métropolitaine
     detail: "7-Zip - 489Mo"
 }) }}
 
-##### Productible annuel photovoltaïque par commune
+###### Productible annuel photovoltaïque par commune
 
 France entière
 
@@ -640,10 +625,9 @@ France entière
     detail: "7-Zip - 2Mo"
 }) }}
 
- 
-#### Puissances cumulées électriques installées
+##### Puissances cumulées électriques installées
 
-##### Puissance cumulée électrique installée par filière renouvelable par commune
+###### Puissance cumulée électrique installée par filière renouvelable par commune
 
 France entière
 
@@ -653,7 +637,7 @@ France entière
     detail: "7-Zip - 95Ko"
 }) }}
 
-##### Puissance cumulée d'injection de biométhane et de la puissance cumulée d'injection de méthanisation électrique
+###### Puissance cumulée d’injection de biométhane et de la puissance cumulée d’injection de méthanisation électrique
 
 France métropolitaine
 
@@ -663,10 +647,9 @@ France métropolitaine
     detail: "7-Zip - 90Ko"
 }) }}
 
- 
-#### Réseaux et capacités d'accueil
+##### Réseaux et capacités d’accueil
 
-##### Réseau de distribution de gaz
+###### Réseau de distribution de gaz
 
 France métropolitaine
 
@@ -676,7 +659,7 @@ France métropolitaine
     detail: "7-Zip - 469Mo"
 }) }}
 
-##### Réseau de transport de gaz
+###### Réseau de transport de gaz
 
 France métropolitaine
 
@@ -686,10 +669,9 @@ France métropolitaine
     detail: "7-Zip - 1Mo"
 }) }}
 
- 
-#### Enjeux du territoire
+##### Enjeux du territoire
 
-##### Grands sites de France
+###### Grands sites de France
 
 France métropolitaine
 
@@ -699,10 +681,9 @@ France métropolitaine
     detail: "7-Zip - 1Mo"
 }) }}
 
- 
-#### Eléments de connaissance sur le territoire
+##### Eléments de connaissance sur le territoire
 
-##### Zones d'exclusion des ZAER - éolien terrestre (loi APER)
+###### Zones d’exclusion des ZAER - éolien terrestre (loi APER)
 
 France métropolitaine
 
@@ -712,7 +693,7 @@ France métropolitaine
     detail: "7-Zip - 109Mo"
 }) }}
 
-##### Zones d'exclusion des ZAER - toutes EnR sauf toitures (loi APER)
+###### Zones d’exclusion des ZAER - toutes ENR sauf toitures (loi APER)
 
 France entière
 
@@ -722,7 +703,7 @@ France entière
     detail: "7-Zip - 18Mo"
 }) }}
 
-##### Zonages environnementaux EnR - aires nécessitant l'avis du gestionnaire (loi APER)
+###### Zonages environnementaux ENR - aires nécessitant l’avis du gestionnaire (loi APER)
 
 France entière
 
@@ -732,7 +713,7 @@ France entière
     detail: "7-Zip - 230Mo"
 }) }}
 
-##### Consommation annuelle d’électricité par commune (en MWh)
+###### Consommation annuelle d’électricité par commune (en MWh)
 
 France entière
 
@@ -742,7 +723,7 @@ France entière
     detail: "7-Zip - 239Mo"
 }) }}
 
-##### Consommation annuelle de gaz par commune (en MWh)
+###### Consommation annuelle de gaz par commune (en MWh)
 
 France métropolitaine
 
@@ -752,17 +733,16 @@ France métropolitaine
     detail: "7-Zip - 22.4Mo"
 }) }}
 
-
-### Guides utilisateurs
+#### Guides utilisateurs
 
 {{ component("download", {
-    title: "Télécharger le guide pas-à-pas sur la thématique EnR 'Thermique'",
+    title: "Télécharger le guide pas-à-pas sur la thématique ENR « Thermique »",
     href: "http://data.geopf.fr/annexes/enr/document/guide/Pas_a_pas_EnR_thermique.pdf",
     detail: "PDF - 8.5Mo"
 }) }}
 
 {{ component("download", {
-    title: "Télécharger le guide pas-à-pas sur les thématiques EnR 'Eolien et Solaire'",
+    title: "Télécharger le guide pas-à-pas sur les thématiques ENR « Éolien et Solaire »",
     href: "http://data.geopf.fr/annexes/enr/document/guide/Pas_a_pas_EnR_eolien_solaire.pdf",
     detail: "PDF - 10.4Mo"
 }) }}
@@ -785,31 +765,30 @@ France métropolitaine
     detail: "PDF - 0.2Mo"
 }) }}
 
+#### Tutoriels vidéo
 
-### Tutoriels vidéo
+<a href="https://youtu.be/e70qb_-BtJ0" target="_blank" rel="noopener noreferrer" title="youtu.be/e70qb_-BtJ0 - ouvre une nouvelle fenêtre">Découverte du nouveau portail cartographique ENR</a>
 
-<a href="https://youtu.be/e70qb_-BtJ0" target="_blank" rel="noopener noreferrer" title="https://youtu.be/e70qb_-BtJ0 - ouvre une nouvelle fenêtre">Découverte du nouveau portail cartographique EnR</a>
+[Comment saisir et modifier une ZAER ?](https://youtu.be/zfMwESemjDs){target="_blank" rel="noopener noreferrer" title="youtu.be/zfMwESemjDs - ouvre une nouvelle fenêtre"}
 
-<a href="https://youtu.be/zfMwESemjDs" target="_blank" rel="noopener noreferrer" title="https://youtu.be/zfMwESemjDs - ouvre une nouvelle fenêtre">Comment saisir et modifier une ZAER ?</a>
+[Comment importer une ZAER ?](https://youtu.be/cHEKNBnS_RE){target="_blank" rel="noopener noreferrer" title="youtu.be/cHEKNBnS_RE - ouvre une nouvelle fenêtre"}
 
-<a href="https://youtu.be/cHEKNBnS_RE" target="_blank" rel="noopener noreferrer" title="youtu.be/cHEKNBnS_RE - ouvre une nouvelle fenêtre">Comment importer une ZAER ?</a>
+[Comment soumettre une ZAER ?](https://youtu.be/z1aptJsgLXg){target="_blank" rel="noopener noreferrer" title="youtu.be/z1aptJsgLXg - ouvre une nouvelle fenêtre"}
 
-<a href="https://youtu.be/z1aptJsgLXg" target="_blank" rel="noopener noreferrer" title="youtu.be/z1aptJsgLXg - ouvre une nouvelle fenêtre">Comment soumettre une ZAER ?</a>
+[Comment suivre l’avancement d’une ZAER grâce au tableau de bord ?](https://youtu.be/BFojxDuZ3uE){target="_blank" rel="noopener noreferrer" title="youtu.be/BFojxDuZ3uE - ouvre une nouvelle fenêtre"}
 
-<a href="https://youtu.be/BFojxDuZ3uE" target="_blank" rel="noopener noreferrer" title="youtu.be/BFojxDuZ3uE - ouvre une nouvelle fenêtre">Comment suivre l’avancement d’une ZAER grâce au tableau de bord ?</a>
+[Cas d’usage « éolien terrestre »](https://youtu.be/YP86vI0lH5U?si=7yq2vFwGyFRWka8T){target="_blank" rel="noopener noreferrer" title="youtu.be/YP86vI0lH5U?si=7yq2vFwGyFRWka8T - ouvre une nouvelle fenêtre"}
 
-<a href="https://youtu.be/zfMwESemjDs" target="_blank" rel="noopener noreferrer" title="youtu.be/zfMwESemjDs - ouvre une nouvelle fenêtre">Cas d’usage "éolien terrestre"</a>
+[Cas d’usage « réseau chaleur »](https://youtu.be/cM532dClmU4){target="_blank" rel="noopener noreferrer" title="youtu.be/cM532dClmU4 - ouvre une nouvelle fenêtre"}
 
-<a href="https://youtu.be/cM532dClmU4" target="_blank" rel="noopener noreferrer" title="youtu.be/cM532dClmU4 - ouvre une nouvelle fenêtre">Cas d’usage "réseau chaleur"</a>
+[Cas d’usage « solaire électrique »](https://youtu.be/Cp8HoOCOtu8){target="_blank" rel="noopener noreferrer" title="youtu.be/Cp8HoOCOtu8 - ouvre une nouvelle fenêtre"}
 
-<a href="https://youtu.be/Cp8HoOCOtu8" target="_blank" rel="noopener noreferrer" title="youtu.be/Cp8HoOCOtu8 - ouvre une nouvelle fenêtre">Cas d’usage "solaire électrique"</a>
-
-### Documents
+#### Documents
 
 {{ component("download", {
     title: "Standardisation ZAER",
     href: "http://data.geopf.fr/annexes/enr/document/zaer/Standard_v1.pdf",
-    detail: "PDG - 1Mo"
+    detail: "PDF - 1Mo"
 }) }}
 
 {{ component("download", {
@@ -824,9 +803,6 @@ France métropolitaine
     detail: "PDF - 0.2Mo"
 }) }}
 
+#### Webinaires
 
-### Webinaires
-
-<a href="https://www.expertises-territoires.fr/jcms/pl1_245594/fr/webinaire-national-3?eventStartDate=1698220800000" target="_blank" rel="noopener noreferrer" title="expertises-territoires.fr/jcms/pl1_245594/fr/webinaire-national-3 - ouvre une nouvelle fenêtre">25 Octobre 2023</a>
-
-
+[25 Octobre 2023](https://www.expertises-territoires.fr/jcms/pl1_245594/fr/webinaire-national-3?eventStartDate=1698220800000){target="_blank" rel="noopener noreferrer" title="expertises-territoires.fr/jcms/pl1_245594/fr/webinaire-national-3 - ouvre une nouvelle fenêtre"}
