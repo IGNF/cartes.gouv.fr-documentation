@@ -32,6 +32,7 @@ Consultez la page dédiée à la [clé <span lang="en">_HASH_</span>](/fr/guides
 
 #### Services accessibles avec la clé HASH
 
+
 :::warning
 Une fois votre clé <span lang="en">_HASH_</span> générée, vous accédez à quatre types d’options : trois services de consultation de flux OGC (<span lang="en">_WMS-Raster_</span>, <span lang="en">_WMTS_</span>, <span lang="en">_TMS_</span>) et un service de téléchargement. La même clé HASH est utilisée pour l’ensemble de ces services.
 :::
@@ -59,6 +60,11 @@ Une fois votre clé <span lang="en">_HASH_</span> générée, vous accédez à q
 :::info
 Dans le cadre de l’accès aux **données en consultation** (flux <span lang="en">_OGC WMS-Raster_</span>, <span lang="en">_WMTS_</span> et <span lang="en">_TMS_</span>) depuis un SIG (QGIS), reportez-vous à la page dédiée à l’[intégration d’une clé <span lang="en">_HASH_</span>](/fr/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-une-cle-dans-un-sig/#connexion-avec-une-cle-hash){target="_blank" rel="noopener noreferrer" title="Connexion avec une clé HASH - ouvre une nouvelle fenêtre"}.
 :::
+
+:::info
+Dans le cadre de l’accès aux **données en consultation** (flux OGC WMS-R, WMTS et TMS) depuis un SIG (QGIS), reportez-vous à la page dédiée à l’[intégration d’une clé HASH](/fr/guides-utilisateur/creation-des-cles-et-integration-sig/integrer-une-cle-dans-un-sig/#connexion-avec-une-cle-hash){target="_blank" rel="noopener noreferrer" title="Connexion avec une clé HASH - ouvre une nouvelle fenêtre"}.
+:::
+
 
 ##### Données en téléchargement
 
