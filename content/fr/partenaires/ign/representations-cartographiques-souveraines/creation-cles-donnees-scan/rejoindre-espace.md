@@ -19,11 +19,11 @@ Cliquez ensuite sur **« Rejoindre un entrepôt existant »**.
 
 ![Rejoindre un entrepôt existant](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/rejoindre-espace/03_entrepot-existant.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Dans la liste, repérez **Communauté d’usage des données SCAN 25/100 sous licence** et/ou **Communauté d’usage des données SCAN OACI sous licence**, puis cliquez sur le bouton **« Rejoindre »**.
+Dans la liste, repérez **« Communauté d’usage des données SCAN 25/100 sous licence »** et/ou **« Communauté d’usage des données SCAN OACI sous licence »**, puis cliquez sur le bouton **« Rejoindre »**.
 
 ![Rejoindre la communauté](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/rejoindre-espace/04_rejoindre-communaute.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Ci-dessous, nous nous concentrerons sur la **Communauté d’usage des données SCAN 25/100 sous licence**. La démarche est identique pour la **Communauté d’usage des données SCAN OACI sous licence**.
+Ci-dessous, nous nous concentrerons sur la **« Communauté d’usage des données SCAN 25/100 sous licence »**. La démarche est identique pour la **« Communauté d’usage des données SCAN OACI sous licence »**.
 
 ![Message optionnel](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/rejoindre-espace/05_message-optionnel.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -37,6 +37,6 @@ Pour afficher l’ensemble des données de la **« Communauté d’usage des do
 
 ![Mes clés d’accès](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/rejoindre-espace/07_mes-cles-acces.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Rendez-vous ensuite dans **Mes permissions**. La liste des ressources pour un usage **professionnel** ou **associatif** des données **SCAN 25®** et **SCAN 100®** s’affiche.
+Rendez-vous ensuite dans **« Mes permissions »**. La liste des ressources pour un usage **professionnel** ou **associatif** des données **SCAN 25®** et **SCAN 100®** s’affiche.
 
 ![Permissions actives](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/rejoindre-espace/08_permissions-actives.png){.fr-responsive-img .frx-border-img .frx-img-contained}
