@@ -8,7 +8,7 @@ numberOfLatestPostsToShow: 10
 <title>{{ metadata.subtitle ~ " | " ~ metadata.title }}</title>
 <subtitle>{{ metadata.description }}</subtitle>
 <link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self" />
-<link href="{{ metadata.url | addPathPrefixToFullUrl }}" />
+<link href="{{ metadata.url }}" />
 <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 <id>{{ metadata.url }}</id>
 <author>
@@ -17,7 +17,7 @@ numberOfLatestPostsToShow: 10
 </author>
 {% for post in collections.all | selectattr("url") | head(-1 * numberOfLatestPostsToShow) | reverse %}
     {% set absolutePostUrl %}
-        {{ metadata.site_url ~ post.url }}
+        {{ metadata.url ~ post.url }}
     {% endset %}
     <entry>
     <title>{{ post.data.title }}</title>

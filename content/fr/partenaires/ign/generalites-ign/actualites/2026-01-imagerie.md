@@ -5,7 +5,6 @@ tags:
     - Imagerie
 eleventyNavigation:
     key: Recueil des besoins et usages en imagerie
-    order: 7
 date: 2026-01-26
 ---
 

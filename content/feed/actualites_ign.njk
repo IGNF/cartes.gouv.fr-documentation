@@ -1,0 +1,36 @@
+---
+permalink: /feed/actualites-ign.xml
+title: Actualités IGN
+description: Toute l’actualité de l’offre IGN
+path: /fr/partenaires/ign/generalites-ign/actualites
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.language }}">
+<title>{{ title }}</title>
+<subtitle>{{ description }}</subtitle>
+<link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self" />
+<link href="{{ metadata.url }}" />
+{% set allPages = [] %}
+{% for entry in collections.all %}
+  {% if entry.inputPath.startsWith('./content' ~ path ~ '/') and not entry.inputPath.endsWith('11tydata.js') %}
+    {% set _ = allPages.push(entry) %}
+  {% endif %}
+{% endfor %}
+<updated>{{ (allPages | reverse)[0].date | dateToRfc3339 }}</updated>
+<id>{{ metadata.url }}{{ path }}</id>
+<author>
+<name>{{ metadata.author.name }}</name>
+<email>{{ metadata.author.email }}</email>
+</author>
+{% for post in allPages | reverse %}
+    {% set absolutePostUrl = metadata.url ~ post.url %}
+    <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
+    </entry>
+{% endfor %}
+</feed>

@@ -12,7 +12,7 @@
                     {% set parentIdx = loop.index0 %}
                     {% set level2Id = 'sidemenu-2-' ~ parentIdx %}
                     <li class="fr-sidemenu__item">
-                        {% if not link.children | length %}
+                        {% if (not link.children | length) or link.clickableParent %}
                         <a class="fr-sidemenu__link" href={{ link.url | locale_url(lang) }} {% if link.url == page.url %} aria-current="page"{% endif %}>
                             {{ link.title }}
                         </a>
@@ -25,7 +25,7 @@
                             {% for sublink in link.children %}
                                 {% set level3Id = 'sidemenu-3-' ~ parentIdx ~ '-' ~ loop.index0 %}
                                 <li class="fr-sidemenu__item">
-                                {% if not sublink.children | length %}
+                                {% if (not sublink.children | length) or sublink.clickableParent %}
                                     <a class="fr-sidemenu__link"
                                     href="{{ sublink.url | locale_url(lang) or sublink.externalUrl }}"
                                     {% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}

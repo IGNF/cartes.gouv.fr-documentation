@@ -5,7 +5,6 @@ tags:
     - Détection de changement
 eleventyNavigation:
     key: Investigation produit autour de la détection de changement
-    order: 4
 date: 2026-01-26
 ---
 

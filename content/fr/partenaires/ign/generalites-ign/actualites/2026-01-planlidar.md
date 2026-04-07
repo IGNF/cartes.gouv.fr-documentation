@@ -5,7 +5,6 @@ tags:
     - LiDAR
 eleventyNavigation:
     key: Un nouveau territoire test pour les cartographies LiDAR à grande échelle
-    order: 5
 date: 2026-01-26
 ---
 

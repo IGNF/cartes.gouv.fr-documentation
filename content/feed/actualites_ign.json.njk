@@ -1,0 +1,38 @@
+---
+permalink: /feed/actualites-ign.json
+title: Actualités IGN
+description: Toute l’actualité de l’offre IGN
+path: /fr/partenaires/ign/generalites-ign/actualites
+eleventyExcludeFromCollections: true
+---
+
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "{{ title }}",
+  "language": "{{ metadata.language }}",
+  "home_page_url": "{{ metadata.url }}",
+  "feed_url": "{{ permalink | htmlBaseUrl(metadata.url) }}",
+  "description": "{{ description }}",
+  "author": {
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  },
+  "items": [
+    {% set allPages = [] %}
+    {% for entry in collections.all %}
+      {% if entry.inputPath.startsWith('./content' ~ path ~ '/') and not entry.inputPath.endsWith('11tydata.js') %}
+        {% set _ = allPages.push(entry) %}
+      {% endif %}
+    {% endfor %}
+    {% for post in allPages | reverse %}
+      {% set absolutePostUrl = metadata.url ~ post.url %}
+      {
+        "id": "{{ absolutePostUrl }}",
+        "url": "{{ absolutePostUrl }}",
+        "title": "{{ post.data.title }}",
+        "content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}{% else %}""{% endif %},
+        "date_published": "{{ post.date | dateToRfc3339 }}"
+      }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
