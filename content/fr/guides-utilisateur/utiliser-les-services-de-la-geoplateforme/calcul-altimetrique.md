@@ -246,9 +246,9 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "lon": "1.48",
-  "lat": "43.54",
-  "resource": "string",
+  "lon": "1.48|1.49",
+  "lat": "43.54|43.55",
+  "resource": "ign_rge_alti_wld",
   "delimiter": "|",
   "indent": "false",
   "measures": "false",
@@ -403,9 +403,9 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "lon": "1.48",
-  "lat": "43.54",
-  "resource": "string",
+  "lon": "1.48|1.49",
+  "lat": "43.54|43.55",
+  "resource": "ign_rge_alti_wld",
   "delimiter": "|",
   "indent": "false",
   "measures": "false",
