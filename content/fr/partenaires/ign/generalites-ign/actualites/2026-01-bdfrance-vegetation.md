@@ -4,8 +4,6 @@ description: De la BD TOPO® à la BD France, une première diffusion de jeux de
 tags:
     - BD France
     - BD TOPO®
-eleventyNavigation:
-    key: BD France - Thème Végétation
 date: 2026-01-26
 ---
 

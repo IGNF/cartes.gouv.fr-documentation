@@ -3,8 +3,6 @@ title: Les vignes et les vergers ont été mis à jour dans le thème végétati
 description: Les vignes et les vergers constituent des composantes structurantes des paysages agricoles français
 tags:
     - BD TOPO®
-eleventyNavigation:
-    key: Les vignes et les vergers ont été mis à jour dans le thème végétation de la BD TOPO®
 date: 2026-01-26
 ---
 

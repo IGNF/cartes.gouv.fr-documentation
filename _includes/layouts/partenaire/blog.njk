@@ -101,14 +101,14 @@ layout: layouts/base.njk
       <script>
         window.__BLOG_PAGES__ = [
           {% for item in allPages | sort(true, false, "data.date") %}
-            {
-              title: {{ item.data.title | dump | safe }},
-              url: {{ item.url | dump | safe }},
-              description: {{ item.data.description | dump | safe }},
-              tags: {{ item.data.tags | filterTagList | dump | safe }},
-              date: {{ item.data.date | htmlDateString | dump | safe }},
-              readableDate: {{ item.data.date | readableDate | dump | safe }},
-            },
+            {{ {
+              title: item.data.title,
+              url: '/aide' ~ item.url,
+              description: item.data.description,
+              tags: item.data.tags | filterTagList,
+              date: item.data.date | htmlDateString,
+              readableDate: item.data.date | readableDate
+            } | dump | safe }},
           {% endfor %}
         ];
       </script>

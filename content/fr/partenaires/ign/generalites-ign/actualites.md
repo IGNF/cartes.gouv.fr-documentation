@@ -9,5 +9,5 @@ eleventyNavigation:
 image:
     src: /img/partenaires/ign/generalites/actualites.jpg
     alt: IGN
-fluxRssPath: /feed/actualites-ign.json
+fluxRssPath: /feed/actualites/ign.json
 ---
