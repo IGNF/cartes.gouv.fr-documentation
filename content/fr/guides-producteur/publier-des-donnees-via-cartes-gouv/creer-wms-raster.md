@@ -1,5 +1,6 @@
 ---
 title: Créer et publier un service WMS-Raster
+description: Procédure pour publier un flux WMS-Raster
 tags:
     - WMS
     - WMS-Raster
@@ -12,14 +13,14 @@ eleventyNavigation:
     key: Créer et publier un service WMS-Raster
     order: 6
 pictogram: digital/internet.svg
-description: Procédure pour publier un flux WMS-r
 summary:
     visible: true
     depth: 2
+showDescription: false
 ---
 
 :::warning
-Pour publier un service WMS-Raster il est nécessaire d'avoir au préalable créé un service WMS-Vecteur
+Pour publier un service WMS-Raster, il est nécessaire d’avoir au préalable créé un service WMS-Vecteur.
 :::
 
 ## Créer une pyramide raster
@@ -30,7 +31,7 @@ Dans la fiche de votre donnée, cliquez sur l’onglet **« Jeux de données �
 
 Dans la fiche de votre donnée, cliquez sur l’onglet **« Services »**, puis sur le bouton menu à droite du service WMS-V que vous souhaitez, et enfin sur **« Créer un service raster WMS/WMTS »** :
 
-![Image décrivant comment lancer la création d'un service WMS-V](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/01_creer-service-raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Image décrivant comment lancer la création d’un service WMS-V](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/01_creer-service-raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### Générer une pyramide de tuiles raster
 
@@ -62,7 +63,7 @@ Choisissez le type de service à configurer (ici **« Web Map Service - WMS »
 
 ### Importer directement vos métadonnées
 
-Ignorez cette étape en cliquant sur continuer, car la fonctionnalité est en cours de construction.
+Ignorez cette étape en cliquant sur **« Continuer »**, car la fonctionnalité est en cours de construction.
 
 ![Image décrivant la possibilité de tester sur un échantillon](/img/guides-producteur/publier-des-donnees-via-cartes-gouv/wms-raster/07_source-metadonnees-wms-r.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

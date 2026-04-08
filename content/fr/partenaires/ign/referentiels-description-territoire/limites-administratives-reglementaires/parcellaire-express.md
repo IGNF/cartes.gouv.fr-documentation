@@ -13,6 +13,6 @@ image:
     alt: Parcellaire Express
 ---
 
-<a href="https://geoservices.ign.fr/parcellaire-express-pci" target="_blank" rel="noopener noreferrer" title="geoservices.ign.fr/parcellaire-express-pci - ouvre une nouvelle fenêtre">Parcellaire Express (PCI)</a>
+[Parcellaire Express (PCI)](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PARCELLAIRE-EXPRESS-PCI){target="_blank" rel="noopener noreferrer" title="Parcellaire Express (PCI) - ouvre une nouvelle fenêtre"}
 
 Parcellaire Express (PCI) fournit l’information cadastrale numérique, géoréférencée et continue sur l’ensemble du territoire français : parcelles, localisants, feuilles, bornes… Le produit Parcellaire Express (PCI) ne contient que les informations relatives au parcellaire cadastral du PCI.

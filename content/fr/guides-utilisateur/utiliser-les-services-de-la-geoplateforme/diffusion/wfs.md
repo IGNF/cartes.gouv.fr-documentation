@@ -58,5 +58,3 @@ https://data.geopf.fr/wfs/ows?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPEN
 ```plain
 https://data.geopf.fr/wfs/ows?SERVICE=WFS&TYPENAMES={classes}&REQUEST=GetFeature&VERSION=2.0.0
 ```
-
-La bascule entre le Géoportail et la Géoplateforme entraîne des différences dans les réponses WFS. Certains éléments de vos requêtes peuvent être impactés. [Plus d’informations](https://geoservices.ign.fr/documentation/flux-wfs-les-changements-entre-geoservices-et-geoplateforme).

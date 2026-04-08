@@ -6,23 +6,10 @@ layout: layouts/base.njk
 <div class="fr-container">
   <div class="fr-grid-row">
     <div class="fr-col-12 fr-col-md-4">
-      {% if eleventyNavigation.nav == "guides-utilisateur" %}
-        {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.utilisateurNavigation %}
-        {% set sidemenuTitle = "Guides utilisateur" %}
-      {% elif eleventyNavigation.nav == "guides-producteur" %}
-        {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.producteurNavigation %}
-        {% set sidemenuTitle = "Guides producteur" %}
-      {% elif eleventyNavigation.nav == "guides-developpeur" %}
-        {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.developpeurNavigation %}
-        {% set sidemenuTitle = "Guides développeur" %}
-      {% elif eleventyNavigation.nav == "ign" %}
-        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.ignNavigation %}
-        {% set sidemenuTitle = "Institut national de l'information géographique et forestière" %}
-      {% endif %}
+      {% set navContext = eleventyNavigation.nav | getNavigationContext %}
+      {% set navCollection = collections[navContext.collectionName] %}
+      {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
+      {% set sidemenuTitle = navContext.title %}
       {% include "templates/sidemenu.njk" %}
     </div>
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
@@ -121,7 +108,6 @@ layout: layouts/base.njk
       {{ component("card_list", {
           items: otherPages | sort(attribute = "data.eleventyNavigation.order"),
           columns: 4,
-          title_tag: "h2",
           small_cards: true,
           ratio_cards: "16x9",
           black_cards: true

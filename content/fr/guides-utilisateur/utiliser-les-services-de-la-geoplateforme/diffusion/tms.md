@@ -34,7 +34,7 @@ https://data.geopf.fr/tms/1.0.0
 
 ---
 
-## Accès aux métadonnées d'une donnée
+## Accès aux métadonnées d’une donnée
 
 ```plain
 https://data.geopf.fr/tms/1.0.0/{Layer}/metadata.json
@@ -56,4 +56,4 @@ https://data.geopf.fr/tms/1.0.0/{Layer}/{z}/{x}/{y}.pbf
 https://data.geopf.fr/annexes/ressources/vectorTiles/styles/{Layer}/{style}.json
 ```
 
-L’IGN propose une [bibliothèque de styles disponible ici](https://geoservices.ign.fr/documentation/services/api-et-services-ogc/tuiles-vectorielles-tmswmts/styles).
+Retrouvez dans l’aperçu cartographique des fiches produits les flux TMS et les différents styles associés : [Accéder au catalogue](https://cartes.gouv.fr/rechercher-une-donnee/search).

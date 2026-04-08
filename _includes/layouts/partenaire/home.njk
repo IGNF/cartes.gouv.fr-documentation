@@ -6,27 +6,11 @@ layout: layouts/base.njk
 <div class="fr-container">
   <div class="fr-grid-row">
     <div class="fr-col-12 fr-col-md-4">
-      {% set effectiveNav = eleventyNavigation.nav %}
-      {% if sidemenuNav %}
-        {% set effectiveNav = sidemenuNav %}
-      {% endif %}
-      {% if effectiveNav == "guides-utilisateur" %}
-        {% set navLinks = collections.utilisateurNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.utilisateurNavigation %}
-        {% set sidemenuTitle = "Guides utilisateur" %}
-      {% elif effectiveNav == "guides-producteur" %}
-        {% set navLinks = collections.producteurNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.producteurNavigation %}
-        {% set sidemenuTitle = "Guides producteur" %}
-      {% elif effectiveNav == "guides-developpeur" %}
-        {% set navLinks = collections.developpeurNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.developpeurNavigation %}
-        {% set sidemenuTitle = "Guides développeur" %}
-      {% elif effectiveNav == "ign" %}
-        {% set navLinks = collections.ignNavigation | filterCollectionLang | eleventyNavigation %}
-        {% set navCollection = collections.ignNavigation %}
-        {% set sidemenuTitle = "Institut national de l'information géographique et forestière" %}
-      {% endif %}
+      {% set effectiveNav = sidemenuNav or eleventyNavigation.nav %}
+      {% set navContext = effectiveNav | getNavigationContext %}
+      {% set navCollection = collections[navContext.collectionName] %}
+      {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
+      {% set sidemenuTitle = navContext.title %}
       {% include "templates/sidemenu.njk" %}
     </div>
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">

@@ -1,0 +1,96 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/component.njk" import component with context %}
+<div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      {% set navContext = eleventyNavigation.nav | getNavigationContext %}
+      {% set navCollection = collections[navContext.collectionName] %}
+      {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
+      {% set sidemenuTitle = navContext.title %}
+      {% include "templates/sidemenu.njk" %}
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row">
+        <div class="fr-col-12">
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          {% include "components/published_on.njk" %}
+          {% if parentInfo %}
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v" data-pagefind-ignore>
+              {% if parentInfo.image %}
+                <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
+                  <img src="{{ parentInfo.image.src }}"
+                      alt="{{ parentInfo.image.alt }}"
+                      style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
+                </div>
+              {% endif %}
+              <div class="fr-col">
+                <h1 class="fr-mb-2v">{{ parentInfo.title }}</h1>
+                {% if parentInfo.tags %}
+                  {% set tags = parentInfo.tags %}
+                  {% set small_tags = true %}
+                  {% include "components/taggroup-disabled.njk" %}
+                {% endif %}
+                {% if parentInfo.description %}
+                  <p class="fr-text--bold">{{ parentInfo.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+            {% if parentInfo.quote %}
+              <div class="fr-grid-row fr-grid-row--gutters" data-pagefind-ignore>
+                <span class="fr-col-auto fr-icon-quote-fill fr-icon--lg fr-text-title--blue-france" aria-hidden="true"></span>
+                <p class="fr-col">{{ parentInfo.quote }}</p>
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v">
+              {% if image %}
+                <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
+                  <img src="{{ image.src }}"
+                      alt="{{ image.alt }}"
+                      style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
+                </div>
+              {% endif %}
+              <div class="fr-col">
+                <h1 class="fr-mb-2v">{{ title }}</h1>
+                {% if tags %}
+                  {% set small_tags = true %}
+                  {% include "components/taggroup-disabled.njk" %}
+                {% endif %}
+                {% if description %}
+                  <p class="fr-text--bold">{{ description }}</p>
+                {% endif %}
+              </div>
+            </div>
+            {% if quote %}
+              <div class="fr-grid-row fr-grid-row--gutters">
+                <span class="fr-col-auto fr-icon-quote-fill fr-icon--lg fr-text-title--blue-france" aria-hidden="true"></span>
+                <p class="fr-col">{{ quote }}</p>
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+      {% if parentInfo %}
+        <h2 class="fr-mt-2v">{{ title }}</h2>
+      {% endif %}
+      {{ content | safe }}
+      {% set currentKey = eleventyNavigation.key %}
+      {% set allPages = [] %}
+      {% for entry in navCollection %}
+        {% if entry.data.eleventyNavigation.parent == currentKey %}
+          {% set _ = allPages.push(entry) %}
+        {% endif %}
+      {% endfor %}
+      {{ component("card_list", {
+          items: allPages | sort(attribute = "data.eleventyNavigation.order"),
+          columns: 6,
+          show_dates: true
+      }) }}
+    </div>
+  </div>
+</div>
