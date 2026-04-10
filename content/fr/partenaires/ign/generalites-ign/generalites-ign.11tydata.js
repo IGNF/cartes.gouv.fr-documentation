@@ -2,15 +2,15 @@ module.exports = {
     segments: [
         {
             url: "/partenaires/ign/generalites-ign",
-            title: "Généralités",
+            title: "Généralités et actualités",
         },
     ],
     parentInfo: {
-        title: "Généralités",
+        title: "Généralités et actualités",
         description:
             "Tout ce qu’il faut savoir pour comprendre l’offre de données et services de l’Institut national de l’information géographique et forestière",
     },
     eleventyNavigation: {
-        parent: "Généralités",
+        parent: "Généralités et actualités",
     },
 };

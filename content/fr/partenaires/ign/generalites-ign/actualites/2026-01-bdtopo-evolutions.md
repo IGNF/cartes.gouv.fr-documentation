@@ -5,7 +5,7 @@ tags:
     - BD TOPO®
 eleventyNavigation:
     key: Les évolutions de la BD TOPO® de l’édition de décembre 2025
-    order: 9
+    order: -20260122
 date: 2026-01-22
 ---
 

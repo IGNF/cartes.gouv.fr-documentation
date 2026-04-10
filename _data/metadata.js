@@ -2,7 +2,6 @@ module.exports = {
     title: "cartes.gouv.fr",
     url: "https://cartes.gouv.fr/aide",
     contact_form_url: "https://cartes.gouv.fr/nous-ecrire",
-    site_url: "https://cartes.gouv.fr/aide",
     newsletter: [
         {
             url: "",

@@ -1,0 +1,29 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "{{ title }}",
+  "language": "{{ metadata.language }}",
+  "home_page_url": "{{ metadata.url }}",
+  "feed_url": "{{ permalink | htmlBaseUrl(metadata.url) }}",
+  "description": "{{ description }}",
+  "author": {
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  },
+  "items": [
+    {% if numberOfLatestPostsToShow %}
+      {% set posts = fluxRssList | selectattr("url") | head(-1 * numberOfLatestPostsToShow) | reverse %}
+    {% else %}
+      {% set posts = fluxRssList | selectattr("url") | reverse %}
+    {% endif %}
+    {% for post in posts %}
+      {% set absolutePostUrl = metadata.url ~ post.url %}
+      {
+        "id": "{{ absolutePostUrl }}",
+        "url": "{{ absolutePostUrl }}",
+        "title": "{{ post.data.title }}",
+        "content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}{% else %}""{% endif %},
+        "date_published": "{{ post.date | dateToRfc3339 }}"
+      }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}

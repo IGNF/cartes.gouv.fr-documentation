@@ -10,6 +10,7 @@ layout: layouts/base.njk
       {% set navCollection = collections[navContext.collectionName] %}
       {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
       {% set sidemenuTitle = navContext.title %}
+      {% set sidemenuActive = eleventyNavigation.sidemenuActive %}
       {% include "templates/sidemenu.njk" %}
     </div>
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
@@ -59,6 +60,9 @@ layout: layouts/base.njk
         {% include "components/summary.njk" %}
       {% endif %}
       {{ content | safe }}
+      {% if showPageSwitcher %}
+        {% include "components/page_switcher.njk" %}
+      {% endif %}
     </div>
   </div>
 </div>

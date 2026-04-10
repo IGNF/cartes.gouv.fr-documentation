@@ -240,8 +240,8 @@ class PageFinder {
             const li = document.createElement("li");
             const a = document.createElement("a");
             a.className = "fr-pagination__link";
-            if (label === "Page précédente") a.classList.add("fr-pagination__link--prev", "fr-pagination__link--lg-label");
-            if (label === "Page suivante") a.classList.add("fr-pagination__link--next", "fr-pagination__link--lg-label");
+            if (label === "Précédent") a.classList.add("fr-pagination__link--prev", "fr-pagination__link--lg-label");
+            if (label === "Suivant") a.classList.add("fr-pagination__link--next", "fr-pagination__link--lg-label");
 
             a.setAttribute("role", "link");
             if (isDisabled) a.setAttribute("aria-disabled", "true");
@@ -262,7 +262,7 @@ class PageFinder {
             return li;
         };
 
-        ul.appendChild(createPageLink(currentPage - 1, "Page précédente", currentPage === 0));
+        ul.appendChild(createPageLink(currentPage - 1, "Précédent", currentPage === 0));
 
         for (let i = 0; i < totalPages; i++) {
             if (Math.abs(i - currentPage) <= 2 || i === 0 || i === totalPages - 1) {
@@ -274,7 +274,7 @@ class PageFinder {
             }
         }
 
-        ul.appendChild(createPageLink(currentPage + 1, "Page suivante", currentPage >= totalPages - 1));
+        ul.appendChild(createPageLink(currentPage + 1, "Suivant", currentPage >= totalPages - 1));
 
         container.appendChild(ul);
     }

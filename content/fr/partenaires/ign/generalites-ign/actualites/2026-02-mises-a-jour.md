@@ -5,7 +5,7 @@ tags:
     - Mises à jour
 eleventyNavigation:
     key: Mises à jour février 2026
-    order: 2
+    order: -20260203
 date: 2026-02-03
 ---
 

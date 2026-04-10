@@ -5,7 +5,7 @@ tags:
     - Forêt
 eleventyNavigation:
     key: De nouvelles bases de données au service de la détection des forêts subnaturelles
-    order: 16
+    order: -20250930
 date: 2025-09-30
 ---
 

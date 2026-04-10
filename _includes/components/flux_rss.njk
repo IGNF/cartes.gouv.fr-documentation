@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.language }}">
+    <title>{{ title }}</title>
+    <subtitle>{{ description }}</subtitle>
+    <link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self" />
+    <link href="{{ metadata.url }}" />
+    <updated>{{ updatedDate }}</updated>
+    <id>{{ metadata.url }}{{ path }}</id>
+    <author>
+        <name>{{ metadata.author.name }}</name>
+        <email>{{ metadata.author.email }}</email>
+    </author>
+    {% if numberOfLatestPostsToShow %}
+        {% set posts = fluxRssList | selectattr("url") | head(-1 * numberOfLatestPostsToShow) | reverse %}
+    {% else %}
+        {% set posts = fluxRssList | selectattr("url") | reverse %}
+    {% endif %}
+    {% for post in posts %}
+        {% set absolutePostUrl = metadata.url ~ post.url %}
+        <entry>
+            <title>{{ post.data.title }}</title>
+            <link href="{{ absolutePostUrl }}" />
+            <updated>{{ post.date | dateToRfc3339 }}</updated>
+            <id>{{ absolutePostUrl }}</id>
+            <content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
+        </entry>
+    {% endfor %}
+</feed>
