@@ -3,6 +3,9 @@ title: Mises à jour septembre 2025
 description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois de septembre 2025
 tags:
     - Mises à jour
+eleventyNavigation:
+    key: Mises à jour septembre 2025
+    order: -20250902
 date: 2025-09-02
 ---
 

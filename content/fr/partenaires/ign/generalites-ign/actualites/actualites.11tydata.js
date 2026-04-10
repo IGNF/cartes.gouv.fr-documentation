@@ -8,5 +8,7 @@ module.exports = {
     eleventyNavigation: {
         parent: "Actualités",
         sidemenuActive: "/fr/partenaires/ign/generalites-ign/actualites",
+        blog: true,
     },
+    showPageSwitcher: true,
 };

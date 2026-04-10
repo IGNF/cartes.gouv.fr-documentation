@@ -3,6 +3,9 @@ title: Mises à jour octobre 2025
 description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois d’octobre 2025
 tags:
     - Mises à jour
+eleventyNavigation:
+    key: Mises à jour octobre 2025
+    order: -20250901
 date: 2025-09-01
 ---
 

@@ -3,6 +3,9 @@ title: Les premiers modèles numériques issus du programme LiDAR HD sont dispon
 description: Les données issues du programme LiDAR HD révolutionnent l’offre produit altimétrique de l’IGN
 tags:
     - LiDAR
+eleventyNavigation:
+    key: Les premiers modèles numériques issus du programme LiDAR HD sont 
+    order: -20250327
 date: 2025-03-27
 ---
 
