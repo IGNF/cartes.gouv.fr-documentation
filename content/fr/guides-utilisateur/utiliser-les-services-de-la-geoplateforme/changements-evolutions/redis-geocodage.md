@@ -1,6 +1,6 @@
 ---
 title: Montée de version du REDIS Géocodage
-description: Des corrections de bugs sont prévues le 30 octobre 2025
+description: Des corrections de bugs du REDIS Géocodage.
 tags:
     - Keycloak
     - Publication
@@ -13,14 +13,14 @@ eleventyNavigation:
     order: 10
 ---
 
-# Changements
+## Changements
 
 Montée de version du REDIS Géocodage (suite alerte de vulnérabilité)
 Harmonisation des informations des swaggers
 
 Pour les services : altimétrie, géocodage, autocomplétion, itinéraire ,recherche, API entrepôt, API statistiques, extraction
 
-# Correction de bugs
+## Correction de bugs
 
 - [Keycloak] Remise en fonction des sondes Uptrends sur l'IAM
 - [Publication] Si l'API k8s est indisponible, les publications passent en UNSTABLE (au lieu de rester bloqué)

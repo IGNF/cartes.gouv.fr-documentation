@@ -1,4 +1,5 @@
 module.exports = {
+    tags: ["Changements et évolutions"],
     segments: [
         {
             url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions",

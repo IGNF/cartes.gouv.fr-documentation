@@ -1,15 +1,15 @@
 ---
 title: Notion d'organisme
-description: L'organisme permet de regrouper des communautés et de permettre la consultation de leurs contenu via un point d'entrée unique. Ces changements ont eu lieu le 15 février 2025 
+description: L'organisme permet de regrouper des communautés et de permettre la consultation de leurs contenu via un point d'entrée unique.
 tags:
-    - Evolution
+    - Évolution
     - Publication
 eleventyNavigation:
     key: Notion d'organisme
     order: 19
 ---
 
-# Changements
+## Changements
 
 L'objectif est de faciliter le travail des personnes gérant plusieurs communautés, en permettant une lecture des entités des datastores via un point d'entrée unique. Cela permet également de définir des quotas de livraison globaux. Pour pouvoir accéder à ce contenu via l'organisme, il faut être un membre officiel de celui ci. Être un membre d'une des communautés ne donnent pas automatiquement d'accès aux API Organisme.
 

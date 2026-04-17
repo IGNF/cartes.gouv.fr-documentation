@@ -1,8 +1,8 @@
 ---
 title: Publication du champ extra sur le service de recherche de couche
-description: Il est possible d'ajouter des informations personnalisées au niveau du document de la couche sur le service de recherche via le champ extra de la configuration. Ces changements ont eu lieu le 25 mars 2025 
+description: Il est possible d'ajouter des informations personnalisées au niveau du document de la couche sur le service de recherche via le champ extra de la configuration.
 tags:
-    - Evolution
+    - Évolution
     - Diffusion
     - Recherche
 eleventyNavigation:
@@ -10,12 +10,13 @@ eleventyNavigation:
     order: 18
 ---
 
-# Changements
+## Changements
 
 Pour avoir un champ extra personnalisé sur le service de recherche de couche, il suffit d'ajouter ces informations au niveau de la configuration
 
 Avec le valeur extra suivante sur la configuration :
 
+??? champ extra personnalisé
 ```json
 {
     ...
@@ -28,16 +29,20 @@ Avec le valeur extra suivante sur la configuration :
     ...
 }
 ```
+???
+
 On retrouvera la valeur suivante sur le service de recherche :
 
+??? champ extra
 ```json
 {
     ...
     "extra" : {
-        "toto": "titi
+        "toto": "titi"
     },
     ...
 } 
 ```
+???
 
 Seule la sous partie _search est publiée pour pouvoir utiliser le champ extra de la configuration pour des informations internes.

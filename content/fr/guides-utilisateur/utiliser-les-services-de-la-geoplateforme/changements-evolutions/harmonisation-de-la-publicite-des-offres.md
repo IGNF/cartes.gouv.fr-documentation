@@ -1,15 +1,15 @@
 ---
 title: Harmonisation de la publicité des offres
-description: Une offre n'a plus d'attribut visibility mais un champ open. Ces changements ont eu lieu le 06 mars 2024 
+description: Une offre n'a plus d'attribut visibility mais un champ open.
 tags:
-    - Changement
+    - Évolution
     - Publication
 eleventyNavigation:
     key: Harmonisation de la publicité des offres
     order: 23
 ---
 
-# Changements
+## Changements
 
 Une offre n'a plus d'attribut visibility mais un champ open.
 

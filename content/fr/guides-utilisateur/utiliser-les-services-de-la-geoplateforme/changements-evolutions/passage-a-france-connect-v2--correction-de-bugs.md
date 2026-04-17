@@ -1,6 +1,6 @@
 ---
 title: Passage à France Connect V2 + correction de bugs
-description: Des corrections de bugs sont aussi prévues. Ces changements auront lieu le 25 septembre 2025. 
+description: Des corrections de bugs sont aussi prévues.
 tags:
     - Changement
     - Correction bugs
@@ -15,7 +15,7 @@ eleventyNavigation:
     order: 12
 ---
 
-# Changements
+## Changements
 
 Montée de version du DependencyTarck en 4.12.7
 
@@ -29,7 +29,7 @@ Ajout d'un endpoint geocodage dans l'entrepot
 
 A ne pas utiliser, utile uniquement pour les statistiques
 
-# Correction de bugs
+## Correction de bugs
 
 - [Statistiques] Ajout de l'endpoint dans logs des requêtes en 429.
 - [Alti] Les API de POST/PUT/DELETE utilisées par l'agent alti sont bloquées.

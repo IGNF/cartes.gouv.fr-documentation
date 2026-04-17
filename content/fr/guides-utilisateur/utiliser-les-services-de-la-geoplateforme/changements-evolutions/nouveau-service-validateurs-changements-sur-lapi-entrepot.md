@@ -1,6 +1,6 @@
 ---
 title: Nouveau service Validateurs + changements sur l'API Entrepot
-description: Divers modifications sont prévues sur l'API entrepot. Ces changements auront lieu le 9 octobre 2025.
+description: Divers modifications sont prévues sur l'API entrepot.
 tags:
     - Keycloak
     - Publication
@@ -13,13 +13,13 @@ eleventyNavigation:
     order: 11
 ---
 
-# Changements
+## Changements
 
-## Nouveau service de Validateur
+### Nouveau service de Validateur
 
 Ajout d'un service de validation de données qui permet de vérifier si la donnée est conforme à un modèle de validation. Le Swagger du service sera disponible après la livraison : https://data.geopf.fr/validation/swagger-ui/index.html
 
-## Définition d'un callback au niveau des exécutions
+### Définition d'un callback au niveau des exécutions
 
 Les exécutions, qu'elles soient de vérification ou de traitement, sont les actions sur l'entrepôt qui peuvent prendre du temps et dont la fin est attendue pour passer à la suite du workflow. Pour éviter à une personne de devoir consulter régulièrement un portail, ou un outil de devoir régulièrement interroger l'API, un système de callback est mis en place.
 
@@ -30,11 +30,9 @@ Il peut être défini au niveau de l'exécution, dans le nouveau champ callback 
 * pour les traitements : POST /datastores/{id}/processings/executions
 * pour les vérifications : POST /datastores/{id}/uploads/{id}/close
 
-
-
-    à la modification, si l'exécution n'a pas déjà un statut final : SUCCESS, ABORTED, FAILURE.
-        pour les traitements : PATCH /datastores/{id}/processings/executions/{id}
-        pour les vérifications : PATCH /datastores/{id}/checks/executions/{id}
+À la modification, si l'exécution n'a pas déjà un statut final : SUCCESS, ABORTED, FAILURE.
+    pour les traitements : PATCH /datastores/{id}/processings/executions/{id}
+    pour les vérifications : PATCH /datastores/{id}/checks/executions/{id}
 
 Plusieurs types de callback ont été identifié :
 
@@ -104,7 +102,7 @@ Plusieurs types de callback ont été identifié :
 }
 ```
 
-## Ajout de routes d'activités des éléments d'un entrepôt
+### Ajout de routes d'activités des éléments d'un entrepôt
 
 Des routes permettant de récupérer le flux d'évènements de 3 entités d'un entrepôt ont été ajoutées. Les entités concernées sont les données stockées, livraisons et configurations : - GET /datastores/{datastore}/stored_data/activity - GET /datastores/{datastore}/uploads/activity - GET /datastores/{datastore}/configurations/activity
 
@@ -169,7 +167,7 @@ Exemple :
 ```
 ???
 
-## Ajout de routes d'activités d'une communauté
+### Ajout de routes d'activités d'une communauté
 
 Des routes permettant de récupérer le flux d'évènements d'une communauté ont été ajoutées : - GET /communities/{community}/users/activity - GET /communities/{community}/permissions/activity
 
@@ -234,7 +232,7 @@ Exemple :
 ```
 ???
 
-## Ajout de la date de rattachement d'un utilisateur à une communauté
+### Ajout de la date de rattachement d'un utilisateur à une communauté
 
 Dans la route de listage des utilisateurs d'une commuanuté (GET /communities/{community}/users), des dates creation et update sont ajoutés pour chaque utilisateur.
 
@@ -246,13 +244,16 @@ Les champs creation et upadate sont actualisés lors d'un appel PUT /communities
 
 Le champ update est actualisé lors de l'appel PUT /communities/{community}/users/{user} pour une modification de droits d'un utilisateur.
 
-## Ajout de la notion de "publicité" d'un évènement
+### Ajout de la notion de "publicité" d'un évènement
 
 Ajout de la notion de "publicité" d'un évènement pour déterminer si ceux-ci doivent être publics dans la nouvelle route présenté ci-dessous.
 
 Cette notion est représenté par le champ public_activity ajoutés aux données stockées et offres. Par défaut et pour l'existant, sa valeur est à false.
 
-La valeur de ce champ peut être modifié grâce à ses routes : - PATCH /datastores/{datastore}/stored_data/{stored_data} - POST /datastores/{datastore}/configurations/{configuration}/offerings - PATCH /datastores/{datastore}/offerings/{offering}
+La valeur de ce champ peut être modifié grâce à ses routes : 
+- PATCH /datastores/{datastore}/stored_data/{stored_data} 
+- POST /datastores/{datastore}/configurations/{configuration}/offerings 
+- PATCH /datastores/{datastore}/offerings/{offering}
 
 ??? POST "/datastores/{datastore}/stored_data/{stored_data}"
 
@@ -276,11 +277,13 @@ La valeur de ce champ peut être modifié grâce à ses routes : - PATCH /datast
 ```
 ???
 
-## Ajout d'une route d'activité publique d'une communauté
+### Ajout d'une route d'activité publique d'une communauté
 
 Une route permet de récupérer le flux d'évènements publics d'une communauté : GET /communities/{technical_name}/activity
 
-Les paramètres possibles de la requêtes sont : - before (type date , par defaut=NOW) : permet de filtrer sur les entitées crées avant la date indiquée - after (type date , par defaut=NOW-15jours) : permet de filtrer sur les entitées crées après la date indiquée.
+Les paramètres possibles de la requêtes sont : 
+- before (type date , par defaut=NOW) : permet de filtrer sur les entitées crées avant la date indiquée 
+- after (type date , par defaut=NOW-15jours) : permet de filtrer sur les entitées crées après la date indiquée.
 
 Seuls la création et la modification des données stockées et des offerings qui ont un champ public_activity à true sont affichées dans le flux.
 
@@ -341,7 +344,7 @@ Seuls la création et la modification des données stockées et des offerings qu
 ```
 ???
 
-## Permission de la suppression d'une livraison au statut UNSTABLE
+### Permission de la suppression d'une livraison au statut UNSTABLE
 
 La suppression d'une livraison au statut UNSTABLE est maintenant possible avec la route :
 ??? DELETE "/datastores/{datastore}/uploads/{upload}"
@@ -351,7 +354,7 @@ La suppression d'une livraison au statut UNSTABLE est maintenant possible avec l
 ```
 ???
 
-## API de téléchargelent d'un fichier d'une livraison
+### API de téléchargelent d'un fichier d'une livraison
 
 Mise en place d’une API permettant de récupérer un fichier contenu dans une livraison.
 
@@ -365,15 +368,15 @@ Le paramètres à préciser dans la requête : - path : Le "chemin" relatif du f
 ???
 
 En sortie, le fichier demandé est téléchargé.
-## Changement API modification d'une livraison
+### Changement API modification d'une livraison
 
 Pour la route API PATCH /datastores/{datastore}/uploads/{upload}, il est maintenant possible de modifier le srs de la livraison dans le request body de l'API.
 
-## Ignorer les fichiers préfixés par le double underscore __ lors des vérifications et traitements
+### Ignorer les fichiers préfixés par le double underscore __ lors des vérifications et traitements
 
 Afin d'améliorer la maintenabilité du système, les fichiers préfixés par le double underscore __ sont ignorés lors des vérifications de la livraison et lors des traitements. En conséquence, par exemple, pour la génération d’une donnée stockée ARCHIVE depuis une livraison ARCHIVE, les fichiers « ignorés » présents dans la livraison ne se retrouvent pas dans la donnée stockée.
 
-# Correction de bugs
+### Correction de bugs
 
 - [ENTREPOT] Correction de mauvais filtrage sur les noms de livraison lorsque le nom contenait un underscore _ 
 - [ENTREPOT] Correction d'un bug où le nombre de résultat était différent sur la route /api/datastores/{datastore}/permissions selon l'utilisation ou non du paramètre sort.

@@ -1,17 +1,17 @@
 ---
 title: Champ extra sur les entités
-description: Un nouveau champ extra est disponible sur les entités d'un entrepôt. Celui ci est un objet JSON libre et permet de stocker des informations complexes adaptées à vos usages. Ces changements ont eu lieu le 10 novembre 2024 
+description: Un nouveau champ extra est disponible sur les entités d'un entrepôt. Celui ci est un objet JSON libre et permet de stocker des informations complexes adaptées à vos usages.
 tags:
-    - Evolution
+    - Évolution
     - Global
 eleventyNavigation:
     key: Champ extra sur les entités
     order: 22
 ---
 
-# Changements
+## Changements
 
-Les entités suivantes sont concernées :
+Les entités suivantes sont concernées :
 
    - upload
    - annexe

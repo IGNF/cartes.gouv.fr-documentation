@@ -1,8 +1,8 @@
 ---
 title: Paramètre fields dans la lecture de collection
-description: Il est désormais possible de préciser les champs à retourner pour chaque entité de la collection demandée. L'identifiant est toujours retourné. Ces changements ont eu lieu le 25 novembre 2024 
+description: Il est désormais possible de préciser les champs à retourner pour chaque entité de la collection demandée. L'identifiant est toujours retourné.
 tags:
-    - Evolution
+    - Évolution
     - Global
 eleventyNavigation:
     key: Paramètre fields dans la lecture de collection
@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 {% from "components/component.njk" import component with context %}
 
-# Changements
+## Changements
 
 Les entités suivantes sont concernées :
 

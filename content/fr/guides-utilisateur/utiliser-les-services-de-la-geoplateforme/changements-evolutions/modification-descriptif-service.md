@@ -1,6 +1,6 @@
 ---
 title: Modification descriptif service
-description: Des modifications des descriptions des services sont prévus le 7 janvier 2026
+description: Des modifications des descriptions des services.
 tags:
     - WFS
     - WMS-V
@@ -12,7 +12,7 @@ eleventyNavigation:
     order: 7
 ---
 
-# Changements
+## Changements
 
 Modification des informations dans les Get Cap WFS, WMS-V et Téléchargement
 Modification de la description du champ terr dans le GetCap Geocodage
@@ -30,6 +30,6 @@ Passage de :
 
 WMTS, WMS, WFS : envoi d'une erreur si un paramètre présent X fois avec une valeur différente
 
-# Correction de bugs
+## Correction de bugs
 
 - [Téléchargement privés] : nombre de résultats affichés par défaut incorrects corrigés

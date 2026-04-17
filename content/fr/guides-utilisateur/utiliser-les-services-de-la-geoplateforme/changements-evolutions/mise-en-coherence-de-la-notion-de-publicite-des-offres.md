@@ -1,15 +1,15 @@
 ---
 title: Mise en cohérence de la notion de publicité des offres
-description: Afin de mettre en cohérence la notion de publicité des offres, des modifications ont été apportées sur les champs des offres et sur le fonctionnement du contrôle des accès. Ces changements ont eu lieu le 14 janvier 2025 
+description: Afin de mettre en cohérence la notion de publicité des offres, des modifications ont été apportées sur les champs des offres et sur le fonctionnement du contrôle des accès.
 tags:
-    - Changement
+    - Évolution
     - Publication
 eleventyNavigation:
     key: Mise en cohérence de la notion de publicité des offres
     order: 20
 ---
 
-# Changements
+## Changements
 
 - Le champ visibility des offres a été supprimé
 - Le champ open est forcément à true lorsque l'offre est sur un point d'accès ouvert (open = true)

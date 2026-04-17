@@ -1,20 +1,20 @@
 ---
 title: Divers changements sur l'API Entrepôt
-description: Divers modifications ont été faites sur l'API entrepot. Ces changements ont eu lieu le 24 juillet 2025 
+description: Divers modifications ont été faites sur l'API entrepot.
 tags:
-    - Changement
+    - Évolution
     - Entrepot
 eleventyNavigation:
     key: Divers changements sur l'API Entrepôt
     order: 14
 ---
-# Changements
+## Changements
 
-## Suppression de l'API de catalogue des uploads
+### Suppression de l'API de catalogue des uploads
 
 Afin d’harmoniser les livraisons avec les données stockées, la ligne de catalogage des livraisons est supprimée : GET /catalogs/uploads
 
-## API d'ajout, de création et suppression de visibilité d'une donnée stockée
+### API d'ajout, de création et suppression de visibilité d'une donnée stockée
 
 Ajout d’une API permettant à un utilisateur d’un datastore d’accorder la visibilité d’une de ses données stockées à une ou plusieurs communautés pour leur permettre d'utiliser la donnée en lecture.
 
@@ -73,7 +73,7 @@ Il est aussi possible de supprimer la visibilité d'une donnée stockée :
 ```
 ???
 
-## Amélioriation des évènements sur les livraisons, les données stockées et les configurations
+### Amélioriation des évènements sur les livraisons, les données stockées et les configurations
 
 Les titres des évènements sont améliorés pour être plus parlant pour les utilisateurs. Les évènements sont accessibles à ces URls :
 
@@ -98,19 +98,19 @@ Les titres des évènements sont améliorés pour être plus parlant pour les ut
 ```
 ???
 
-## Ajout d'un filtrage sur les clés utilisateurs
+### Ajout d'un filtrage sur les clés utilisateurs
 
 Ajout d'un filtrage sur la recherche des clés utilisateur : GET /users/me/keys
 
 Les champs sur lesquels il est possible de filtrer sont : * type (valeurs possibles : HASH, HEADER, BASIC, OAUTH2) * user_agent (possibilité de joker "%") * referer (possibilité de joker "%") * whitelist (possibilité de joker "%") * blacklist (possibilité de joker "%") * name (possibilité de joker "%")
 
-## Ajout du champ "creation" pour toutes les entités
+### Ajout du champ "creation" pour toutes les entités
 
 Les exécutions de traitement et de vérification possède un champ "creation" de type date. Ce champ est généraliser à toutes les entités : * upload * annex * stored data * configuration * static file * metadata * offering * document * datastore * community * permission * processing
 
 Dans le cas des exécutions de traitement, les champs suivant sont renommés pour l'occasion : * creationDate -> creation * lauchDate -> lauch * startDate -> start * finishDate -> finish
 
-## Généralisation de la date de mise à jour sur les entités
+### Généralisation de la date de mise à jour sur les entités
 
 Ce nouveau permet de connaitre facilement la date de dernière modification "importante" sur les entités. Le nouveau champ est appelé "update" et est ajouté à ces entités : * annex * configuration * static file * metadata * offering * document
 
@@ -196,7 +196,7 @@ Et, pour les API suivantes, ajout uniquement de la possibilité de trier par dat
    * GET /administrator/processings
    * GET /administrator/processings/executions
 
-## Nouvelle route de listage des stockages
+### Nouvelle route de listage des stockages
 
 Liste les stockages disponibles pour le datastore. Les paramètres disponibles pour la route sont : * type : type de stockage (valeurs disponibles : POSTGRESQL, S3, FILESYSTEM, OPENSEARCH, POSTGRESQL-ROUTING) * use_ratio : Pourcentage minimum d'utilisation du quota
 
@@ -255,7 +255,7 @@ Liste les stockages disponibles pour le datastore. Les paramètres disponibles p
 ```
 ???
 
-## Suppression de la visibilité associée aux livraisons et données stockées et ajout d'une notion de publicité
+### Suppression de la visibilité associée aux livraisons et données stockées et ajout d'une notion de publicité
 
 Une harmonisation est réalisée en supprimant la visibilité associée aux entités et en ajoutant une notion de publicité.
 
@@ -267,7 +267,7 @@ Les livraisons et données stockées en "open=true" pourront donc être utilisé
 
 Cette modification impacte la création de la livraison et il faut bien remplacé le champ "visibility" par "open" pour que la création fonctionne.
 
-## API de récupération des données stockées visibles d'un utilisateur
+### API de récupération des données stockées visibles d'un utilisateur
 
 Ajout d’une API permettant à un utilisateur de connaitre les données stockées qui lui sont visibles.
 
@@ -377,7 +377,7 @@ De plus, une route supplémentaire permet de récupérer les informations d'une 
 ```
 ???
 
-## Ajout du champ "fields" pour l'API de récupération de la liste des traitements disponibles
+### Ajout du champ "fields" pour l'API de récupération de la liste des traitements disponibles
 
 Pour l'API, GET /datastores/{datastore}/processings, le champ d'énumération "fields" a été ajouté pour préciser les champs souhaités dans la réponse. Les valeurs disponibles sont : * creation * name * descritption * priority * input_types * output_types
 

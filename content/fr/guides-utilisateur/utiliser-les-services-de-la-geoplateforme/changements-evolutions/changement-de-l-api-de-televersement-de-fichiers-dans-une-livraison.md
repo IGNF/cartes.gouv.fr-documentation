@@ -1,8 +1,8 @@
 ---
 title: Changement de l'API de téléversement de fichiers dans une livraison
-description: Des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.. Ces changements ont eu lieu le 20 février 2024 
+description: Des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.
 tags:
-    - Changement
+    - Évolution
     - Alimentation
     - Rupture
 eleventyNavigation:
@@ -12,7 +12,7 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-# Changements
+## Changements
 
 Afin d'améliorer les performances du téléversement de données, des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.
 
@@ -20,7 +20,7 @@ Cette modification est actuellement déployée sur l'environnement de qualificat
 
 Les téléversements en dehors des données dans une livraison (métadonnées, annexes, statiques, fichiers MD5 dans une livraison) restent inchangés.
 
-## Ancien usage de l'API
+### Ancien usage de l'API
 
 ??? POST "/datastores/{datastore}/uploads/{upload}/data"
 
@@ -38,7 +38,7 @@ Les téléversements en dehors des données dans une livraison (métadonnées, a
 
 ???
 
-## Nouvel usage de l'API
+### Nouvel usage de l'API
 
 L'information du chemin où écrire le fichier dans la livraison (path) devientun paramètre de requête et doit préciser le nom du fichier. Cela permet de changer de nom de fichier par rapport à celui en local.
 

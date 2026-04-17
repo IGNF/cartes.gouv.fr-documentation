@@ -1,6 +1,6 @@
 ---
 title: Montée de version ROK4 + autres changements/corrections de bugs
-description: Des corrections de bugs et changements sont prévues le 20 novembre 2025
+description: Montée de version de rok4/fullgeneration en 5.0.3
 tags:
     - ROK4
     - Orchestrateur
@@ -13,9 +13,7 @@ eleventyNavigation:
     order: 9
 ---
 
-# Changements
-
-Montée de version de rok4/fullgeneration en 5.0.3
+## Changements
 
 Cette montée de version va améliorer la robustesse du calcul des pyramides vecteurs. Les changements de comportement sont :
 
@@ -37,7 +35,7 @@ Ajout du format application/atom+xml pour les routes d'activités
 
 Les routes concernées sont : - /communities/{technical_name}/activity - /communities/{community}/permissions/activity - /communities/{community}/users/activity - /datastores/{datastore}/stored_data/activity - /datastores/{datastore}/configurations/activity - /datastores/{datastore}/uploads/activity
 
-# Correction de bugs
+## Correction de bugs
 
 - [Offre] Correction de l'impossibilité de dépublier une offre lorsqu'une permission et un accès sont définis pour cette offre
 - [Orchestrateur] Correction d'une erreur de connexion avec la base de donnée pour le calcul de données itinéraires

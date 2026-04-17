@@ -1,8 +1,8 @@
 ---
 title: Liste des point d'accès d'un entrepôt
-description: Nouvelle route d'API avec des filtrages sur les noms, types et quotas. Ces changements ont eu lieu le 30 juin 2025 
+description: Nouvelle route d'API avec des filtrages sur les noms, types et quotas.
 tags:
-    - Evolution
+    - Évolution
     - Entrepot
 eleventyNavigation:
     key: Liste des point d'accès d'un entrepôt
@@ -11,7 +11,7 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-# Changements
+## Changements
 
 Il est possible de consulter les points d'accès disponible pour un entrepôt avec la nouvelle route d'API GET /datastores/{datastore}/endpoints, avec des filtrages sur les noms, types et quotas.
 

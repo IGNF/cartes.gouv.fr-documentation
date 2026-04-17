@@ -7,6 +7,7 @@ tags:
 eleventyNavigation:
     key: Limites d’usage des API
     order: 12
+pictogram: system/information.svg
 summary:
     visible: true
     depth: 1

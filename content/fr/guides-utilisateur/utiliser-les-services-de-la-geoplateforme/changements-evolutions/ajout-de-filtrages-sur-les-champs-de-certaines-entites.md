@@ -1,9 +1,10 @@
 ---
 title: Ajout de filtrages sur les champs de certaines entités
-description: Il est possible de filtrer certaines entités sur leur nom, leur nom de couche ou encore leur type mime selon les disponibilités des attributs, avec des caractères joker. Ces changements ont eu lieu le 30 juin 2025 
+description: Il est possible de filtrer certaines entités sur leur nom, leur nom de couche ou encore leur type mime selon les disponibilités des attributs, avec des caractères joker.
 tags:
-    - Evolution
-    - Global
+    - Géoplateforme
+    - Actualités
+    - Évolution
 eleventyNavigation:
     key: Ajout de filtrages sur les champs de certaines entités
     order: 16
@@ -11,11 +12,11 @@ eleventyNavigation:
 
 {% from "components/component.njk" import component with context %}
 
-# Changements
+## Changements
 
-Le joker est le caractère %. Attention de bien mettre %25 pour qu'il soit correctement encodé dans les requêtes. Il remplace 0 à plusieurs caractères. Le filtre est insensible à la casse.
+Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit correctement encodé dans les requêtes. Il remplace 0 à plusieurs caractères. Le filtre est insensible à la casse.
 
-## Routes d'entrepôt
+### Routes d'entrepôt
 
 ??? GET "/datastores/{datastore}/checks"
 
@@ -79,7 +80,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu'il soit corre
 ???
 
 
-## Routes personnelles
+### Routes personnelles
 
 ??? GET "/users/me/documents"
 
@@ -134,7 +135,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu'il soit corre
 
 ???
 
-## Routes globales
+### Routes globales
 
 ??? GET "/statics/tms"
 
