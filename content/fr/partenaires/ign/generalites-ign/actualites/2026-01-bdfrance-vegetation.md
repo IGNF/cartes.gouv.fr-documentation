@@ -77,4 +77,6 @@ Cette première diffusion constitue une étape clé dans la construction progres
 
 Les jeux de données tests de la BD France - Thème Végétation sont disponibles en téléchargement, accompagnés de leur document de description (DC), qui précise le contenu, les sources mobilisées, les règles de production et les seuils de représentation sur la [métadonnée catalogue cartes.gouv.fr](https://cartes.gouv.fr/rechercher-une-donnee/dataset/BETA-IGN_BD-FRANCE-TOPO-VEGETATION){target="_blank" rel="noopener noreferrer" title="BD France - Thème Végétation - bêta - ouvre une nouvelle fenêtre"}.
 
-Appel à commentaires directement à <contact.geoservices@ign.fr> (objet : « jeux tests BD France - Thème Végétation »)
+:::callout
+**Accéder au questionnaire pour partager vos retours :** [Recueil des usages des jeux test du thème végétation BD France](https://analytics-eu.clickdimensions.com/ignfr-agj1s/pages/toqamcawefgdqganotf1pa.html?PageId=3080eab49626f1118342000d3ad7f53c){target="_blank" rel="noopener noreferrer" title="Recueil des usages des jeux test du thème végétation BD France - ouvre une nouvelle fenêtre"}
+:::
