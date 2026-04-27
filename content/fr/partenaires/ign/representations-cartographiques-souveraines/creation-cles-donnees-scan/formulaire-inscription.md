@@ -7,9 +7,9 @@ eleventyNavigation:
 pictogram: digital/avatar.svg
 ---
 
-### 1. Première visite ? Création de votre compte et accès aux données SCAN
+#### 1. Première visite ? Création de votre compte et accès aux données SCAN
 
-## Procédure d’inscription 
+##### Procédure d’inscription 
 
 Si vous ne possédez pas encore d’identifiants, vous devez suivre la procédure pour créer un compte et se connecter sur **cartes.gouv.fr**, afin d’accéder aux **données SCAN**.
 
@@ -22,11 +22,11 @@ Ces informations peuvent être fournies à l’étape 4/5 de l’inscription sur
 
 ---
 
-### 2. Vous avez déjà un compte ? Comment mettre à jour votre SIRET dans votre profil
+#### 2. Vous avez déjà un compte ? Comment mettre à jour votre SIRET dans votre profil
 
 Si vous disposez déjà d’un compte sur **cartes.gouv.fr**, il est impératif que votre SIRET et l’adresse de votre entreprise ou association soient à jour pour accéder aux données SCAN.
 
-## Étape 1 : Accéder à la gestion du compte
+##### Étape 1 : Accéder à la gestion du compte
 
 Pour commencer, connectez-vous à votre espace personnel, puis suivez ce chemin de navigation :
 
@@ -40,14 +40,14 @@ Pour commencer, connectez-vous à votre espace personnel, puis suivez ce chemin 
 
 - 3. Dans la section « Compte », cliquez sur le bouton **« Mettre à jour le profil »**.
 
-![Mise à jour du profil](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/formulaire-inscription/03.maj-profil.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Mise à jour du profil](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/formulaire-inscription/03_maj-profil.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 
-## Étape 2 : Configuration du SIRET et de l’adresse
+##### Étape 2 : Configuration du SIRET et de l’adresse
 
 Une fois sur la page **« Mettre à jour le profil »**, procédez aux modifications suivantes :
 
-![Mise à jour du compte](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/formulaire-inscription/04.maj-compte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Mise à jour du compte](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/formulaire-inscription/04_maj-compte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 
 - 1. Cochez l’option **« Professionnel »** dans la section **« Vous êtes »**.
@@ -57,4 +57,4 @@ Une fois sur la page **« Mettre à jour le profil »**, procédez aux modific
     - Poste occupé est conseillé.
     - L’Adresse complète (Numéro, rue, localité et code postal) est conseillé.
 
-![Mise à jour du compte](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/formulaire-inscription/05.maj-siret.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Mise à jour du compte](/img/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan/formulaire-inscription/05_maj-siret.png){.fr-responsive-img .frx-border-img .frx-img-contained}
