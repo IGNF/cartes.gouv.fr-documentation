@@ -11,6 +11,56 @@ pictogram: digital/innovation.svg
 
 <div class="fr-grid-row fr-grid-row--gutters fr-mb-6v" data-pagefind-ignore>
 <div class="fr-col-12 fr-col-md-6">
+{{ component("card", {
+    title: "Des changements sur le Téléchargement",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/changements-sur-le-téléchargement",
+    description: "Ajout d'agrégat d'informations dans la description d'une ressource de téléchargement, des nouveaux paramètres de tri des entrées d'une ressource et du bon content type pour les fichiers Géoparquet téléchargés.",
+    tags: ["Téléchargement"],
+    date: "2026-04-29" | jsDateObject
+}) }}
+</div>
+
+<div class="fr-col-12 fr-col-md-6">
+{{ component("card", {
+    title: "Changement sur le Géocodage",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/changement-sur-le-geocodage",
+    description: "Ajout de nouveaux paramètres de filtrage et du support des valeurs multiples pour certains paramètres de filtrage du service géocodage",
+    tags: ["Géocodage"],
+    date: "2026-04-22" | jsDateObject
+}) }}
+</div>
+
+<div class="fr-col-12 fr-col-md-6">
+{{ component("card", {
+    title: "Des changements dans Keycloak et corrections de bugs",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/changement-et-correction-de-bugs",
+    description: "Changement des e-mails automatiques envoyés par le Keycloak et correction de problèmes itinéraire et orchestrateur",
+    tags: ["Keycloak","Orchestrateur","Itinéraire"],
+    date: "2026-04-15" | jsDateObject
+}) }}
+</div>
+
+<div class="fr-col-12 fr-col-md-6">
+{{ component("card", {
+    title: "Optimisation des services pg_tileserv et ROK4",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/optimisation-des-services-pg_tileserv-et-rok4",
+    description: "Optimisation du service pg_tileserv et montée de version ROK4 (WMTS et WMS Raster)",
+    tags: ["pg_tileserv","Keycloak","WMTS","WMS-Raster"],
+    date: "2026-04-01" | jsDateObject
+}) }}
+</div>
+
+<div class="fr-col-12 fr-col-md-6">
+{{ component("card", {
+    title: "Modification GetCap CSW",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/modification-getcap-csw",
+    description: "Changements d'informations dans le GetCap CSW.",
+    tags: ["CSW"],
+    date: "2026-03-11" | jsDateObject
+}) }}
+</div>
+
+<div class="fr-col-12 fr-col-md-6">
     {{ component("card", {
         title: "Changements sur les services Vecteur",
         url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/changements-sur-les-services-vecteur",
