@@ -13,18 +13,15 @@ image:
     alt: BD Forêt v3
 ---
 
-#### La nouvelle référence pour la cartographie forestière française
-La BD Forêt v3 est le référentiel géographique national décrivant les essences forestières. La BD Forêt v3 apportera une information actualisée, homogène et fiable.<br> 
-Un jeu test sur 40 zones réparties sur le territoire hexagonal est mis à disposition le 10 mars, dans le cadre d’une phase de retours d’usages.
+#### La BD Forêt v3 arrive
+La BD Forêt v3 est le nouveau référentiel géographique décrivant les essences forestières. Cette base de données est fondée sur une méthode de production innovante, répondant aux besoins utilisateurs exprimés.<br>
+Un jeu test de 40 zones réparties sur l'ensemble du territoire hexagonal a été mis à disposition le 10 mars, dans le cadre d’une phase d’échange avec les utilisateurs. Les retours concernant cette phase de test sont à présent clos.<br>
+Un nouveau jeu de données test est cependant à venir. Il sera mis à dispostion à partir du 9 juin, et présenté le même jour au quatrième comité des utilisateurs de la BD Forêt v3.<br>
+Vos retours concernant ce nouveau jeu test permettront d’améliorer le processus de production et d’orienter le travail de reprise manuelles par photo-interprétation. D’ici là, les données test de mars 2026 restent téléchargeables à titre d'information.<br>
+Cliquez sur le lien suivant pour accéder à la donnée test de mars 2026 :[**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3 - ouvre une nouvelle fenêtre"}<br>
+Pour en savoir plus sur le comité utilisateur rendez-vous en bas de page.
 
-#### La BD Forêt v3 arrive : 
-Testez dès aujourd’hui un nouveau jeu de données forestières plus précis, fondé sur des méthodes de production innovantes et répondant aux besoins que vous avez exprimés.<br> 
-Partagez votre retour pour co-construire la future donnée de référence. Les réponses que vous apporterez nous aideront à mesurer votre degré de satisfaction vis-à-vis des différentes versions des jeux test produits.
-
-:::callout
-[**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3 - ouvre une nouvelle fenêtre"}<br>
-[**Donner mon avis**](https://tally.so/r/OD5zQa){target="_blank" rel="noopener noreferrer" title="Questionnaire utilisateurs du jeu de données test BD Forêt v3 - ouvre une nouvelle fenêtre"}
-:::
+<br>
 
 #### À qui s'adresse la BD Forêt v3 ? 
 Vous souhaitez mieux connaître les forêts françaises et leurs essences ? La BD Forêt v3 s’adresse notamment :
@@ -37,29 +34,8 @@ Vous souhaitez mieux connaître les forêts françaises et leurs essences ? La 
 
 <br>
 
-#### Tester la BD Forêt v3 : 
-L’équipe projet BD Forêt v3 de l’IGN met à votre disposition un jeu de données test.
-
-**En cliquant sur Tester la BD Forêt v3** : 
-- vous serez redirigé vers le catalogue cartes.gouv.fr
-- vous disposerez d’un lien de téléchargement
-- le jeu de données se compose de 40 zones tests, réparties sur le territoire hexagonal
-
-<br>
-
-**En cliquant sur Donner mon avis** :
-- vous serez rebasculé sur le questionnaire de satisfaction
-- vos retours sont attendus jusqu’au 10 avril 2026
-
-<br>
-
-:::callout
-[**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3 - ouvre une nouvelle fenêtre"}<br>
-[**Donner mon avis**](https://tally.so/r/OD5zQa){target="_blank" rel="noopener noreferrer" title="Questionnaire utilisateurs du jeu de données test BD Forêt v3 - ouvre une nouvelle fenêtre"}
-:::
-
 #### Pourquoi une BD Forêt ? 
-Les forêts sont devenues un enjeu central dans nos sociétés, à la croisée : 
+Les forêts occupent 17,6 millions d'hectares du territoire hexagonal et sont devenues des enjeux centraux dans nos sociétés à la croisée :
 - de la gestion durable
 - de la prévention des risques naturels
 - des services environnementaux
@@ -76,12 +52,12 @@ Dans la continuité de la BD Forêt v1 et v2, la BD Forêt v3 marque un renouvea
 
 ##### Les apports clés de la v3 : 
 - Actualisation rapide :<br>
-Couvrir l’ensemble du territoire métropolitain en un an
+Couverture de l’ensemble du territoire métropolitain en un an seulement
 - Finesse géométrique accrue :<br>
 Distinction des essences dès 0,5 hectare
 - Finesse sémantique renforcée :<br>
 Nomenclature enrichie à 35 postes
-- Processus de production innovant, mobilisant :<br>
+- Processus de production innovant mobilisant :<br>
 L’intelligence artificielle
 
 <br>
@@ -94,7 +70,8 @@ Cette donnée sera construite en s’appuyant sur le [Masque Forêt v1]({{ urls.
 
 ##### Mobilisation de l'IA : 
 La BD Forêt v3 marque un tournant décisif dans l'élaboration des bases de données de l’IGN. L’IA est un nouvel outil central mobilisé afin de mieux répondre à la nécessité d'une production de données rapide (l'objectif est de couvrir toute la métropole en un an seulement), et de pouvoir l'actualiser plus fréquemment grâce à des coûts de mise-à-jour réduits. En cela, la construction de la BD Forêt v3 se distingue des méthodes plus traditionnelles et augmente de façon significative la précision géométrique et sémantique. L’objectif est de créer un processus de production très automatisé tout en conservant une part d'intervention humaine en fin de production afin de garantir la fiabilité des données diffusées.<br> 
-La BD Forêt v3 se distingue de la BD Forêt v1 et v2 par sa finesse géométrique et sémantique. L’automatisation accrue de son processus de production, et sa capacité à être actualisée à un coût réduit témoigne d'un changement significatif dans la production de données géographiques.
+La BD Forêt v3 se distingue de la BD Forêt v1 et v2 par sa finesse géométrique et sémantique. L’automatisation accrue de son processus de production, et sa capacité à être actualisée à un coût réduit témoigne d'un changement significatif dans la production de données géographiques.<br>
+Ces travaux ont bénéficié d’un accès aux moyens de calcul de l’IDRIS au travers de l'allocation de ressources AD010114597R2 attribuée par GENCI.
 ???
 <br>
 
@@ -107,8 +84,8 @@ La BD Forêt v3 est construite à partir de la BD ORTHO.
 Le millésime diffusé correspondra au millésime de la BD ORTHO utilisée pour chaque département.
 
 ##### Couverture géographique : 
-- France hexagonale et Corse
-- Les DROM ne sont pas couverts, mais des produits équivalents sont en cours de production : [CARTO VEGETATION DROM]({{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION - ouvre une nouvelle fenêtre"}
+La BD Forêt v3 sera disponible sur l'ensemble de la France hexagonale et la Corse courant 2027.<br>
+Elle ne couvre pas les DROM, mais des produits équivalent, adaptés à ces territoires sont en cours de production : les cartographies des formations végétales, disponible avec le lien suivant : [CARTO VEGETATION DROM]({{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION - ouvre une nouvelle fenêtre"}
 
 <br>
 
@@ -119,7 +96,8 @@ La production de la BD Forêt v3 est commanditée et financée par le Ministère
 Le projet BD Forêt v3 fait partie des grands projets numérique de l’État, et l’IGN a reçu le feu vert de la Direction Interministérielle (DINUM) afin de la mener à bien.
 
 ##### Usages identifiés : 
-*Connaître la forêt, c’est pouvoir la préserver*. Telle est la vision de l’équipe projet de la BD Forêt v3.
+*Connaître la forêt, c’est pouvoir la préserver*. Telle est la vision de l’équipe projet de la BD Forêt v3.<br>
+Les études de besoins et les discussions avec les utilisateurs ont permis de faire ressortir de nombreux usages tel que :
 - Suivi des opérations forestières et de la ressource en bois
 - Études d’impact et planification urbaine
 - Optimisation des chaînes d’approvisionnement
@@ -132,12 +110,11 @@ Le projet BD Forêt v3 fait partie des grands projets numérique de l’État, e
 
 #### Jeux de données test et comité utilisateurs : 
 Un comité utilisateurs a été mis en place afin de co-construire la BD Forêt v3 avec ses futurs utilisateurs. Les retours émis permettent aux équipes de l’IGN d’ajuster la chaine de traitement en conséquence, afin de mieux répondre aux attentes exprimées.<br>
-Un premier jeu test diffusé en juin 2025 a permis d’ajuster la chaîne de production. Un second jeu de données test, plus complet, est prévu pour mars 2026. 
+Les deux premiers jeux de données test de juin 2025 et mars 2026 ont permis d'ajuster la chaine de production.<br>
+La diffusion du jeu de données test de juin 2026 constitue une étape clé avant le lancement de la production de la base de données. L’équipe projet BD Forêt v3 invite l’ensemble des utilisateurs du domaine forestier à faire un retour au sujet de ces nouvelles données. Un nouveau questionnaire de satisfaction vous sera mis à disposition.<br>
+Si vous souhaitez participer activement à la co-construction de la BD Forêt v3 et intégrer le comité utilisateur vous pouvez nous contacter via l'adresse :<carto.forestiere@ign.fr>
 
-:::callout
-[**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="{{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3 - ouvre une nouvelle fenêtre"}<br>
-[**Donner mon avis**](https://tally.so/r/OD5zQa){target="_blank" rel="noopener noreferrer" title="Questionnaire utilisateurs du jeu de données test BD Forêt v3 - ouvre une nouvelle fenêtre"}
-:::
+<br>
 
 #### Contact : 
 Une question sur le projet BD Forêt v3 ? Contactez l’équipe projet : <carto.forestiere@ign.fr>
