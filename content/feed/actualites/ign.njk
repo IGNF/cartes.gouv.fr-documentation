@@ -1,0 +1,14 @@
+---
+permalink: /feed/actualites/ign.xml
+title: Actualités IGN
+description: Toute l’actualité de l’offre IGN
+path: /fr/partenaires/ign/generalites-ign/actualites
+---
+{% set fluxRssList = [] %}
+{% for entry in collections.all %}
+  {% if entry.inputPath.startsWith('./content' ~ path ~ '/') and not entry.inputPath.endsWith('11tydata.js') %}
+    {% set _ = fluxRssList.push(entry) %}
+  {% endif %}
+{% endfor %}
+{% set updatedDate = (fluxRssList | reverse)[0].date | dateToRfc3339 %}
+{% include "components/flux_rss.njk" %}

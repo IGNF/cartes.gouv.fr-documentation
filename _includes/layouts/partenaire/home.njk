@@ -37,7 +37,7 @@ layout: layouts/base.njk
       {% set topLevelPages = [] %}
       {% for entry in navCollection %}
         {% if not entry.data.eleventyNavigation.parent %}
-          {% if entry.data.title == "Généralités" %}
+          {% if entry.data.title == "Généralités et actualités" %}
             {% set generalitesPage = entry %}
           {% else %}
             {% set _ = topLevelPages.push(entry) %}
