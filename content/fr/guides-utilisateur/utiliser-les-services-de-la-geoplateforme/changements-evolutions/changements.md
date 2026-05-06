@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 
 ## Changements
-Ajout du paramètre _fields_ pour la liste des documents personnels.
+**Ajout du paramètre _fields_ pour la liste des documents personnels.**
 
 Sur la route GET /⁠users/me/documents, ajout du paramètre de requête _fields_ qui permettra de ne renvoyer que les champs d’un document souhaités parmi la liste suivante (à l’exception de l’_id_ qui est retourné dans tous les cas) :
 - id
@@ -29,7 +29,7 @@ Par défaut (si _fields_ est vide), on retourne les valeurs suivantes :
 - mime_type
 
 
-Ajout du type de métadonnée Stylesheet dans la configuration pour les styles.
+**Ajout du type de métadonnée Stylesheet dans la configuration pour les styles.**
 
 Ce style n’est utilisable que pour les configurations WMS Raster.
 

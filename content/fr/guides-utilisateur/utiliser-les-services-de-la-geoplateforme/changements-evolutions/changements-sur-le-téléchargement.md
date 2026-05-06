@@ -10,11 +10,11 @@ eleventyNavigation:
 
 ## Changements
 
-Ajout d'agrégat d'informations dans la description d'une ressource de téléchargement :
+**Ajout d'agrégat d'informations dans la description d'une ressource de téléchargement**
 
 Dans un GET resource, dans la description de la ressource, est ajouté un agrégat des zones, formats et srs ainsi que les dates min et max de l'édition (comme cela est fait pour chaque ressource dans le Get Capabilities)
 
-Ajout des paramètres de tri des entrées d'une ressource pour le téléchargement :
+**Ajout des paramètres de tri des entrées d'une ressource pour le téléchargement**
 
 Actuellement, la liste des sous-ressources d'une ressource donnée est triée par ordre alphabétique.
 
@@ -29,6 +29,6 @@ Il sera possible de trier de façon croissante et décroissante avec le paramèt
    - desc : décroissant
 
 
-Ajout du bon content type pour les fichiers Géoparquet téléchargés :
+**Ajout du bon content type pour les fichiers Géoparquet téléchargés**
 
 Lorsque l'on télécharge un fichier Géoparquet, le content type sera application/vnd.apache.parquet (au lieu de application/octet-stream actuellement)

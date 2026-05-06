@@ -12,7 +12,7 @@ eleventyNavigation:
 
 ## Changements
 
-Changement des e-mails automatiques envoyés par le Keycloak
+**Changement des e-mails automatiques envoyés par le Keycloak**
 
    - Changement du contenu et de l'objet de tous les e-mails automatiques
    - Changement de l'adresse d'envoi en "geoplateforme@ign.fr" et nom d'envoi en "Support Géoplateforme"

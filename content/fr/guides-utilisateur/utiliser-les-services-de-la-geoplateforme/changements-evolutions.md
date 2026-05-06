@@ -12,6 +12,16 @@ pictogram: digital/innovation.svg
 <div class="fr-grid-row fr-grid-row--gutters fr-mb-6v" data-pagefind-ignore>
 <div class="fr-col-12 fr-col-md-6">
 {{ component("card", {
+    title: "Des changements sur Annexe, Téléchargement et Géocodage",
+    url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/changements-sur-annexe-telechargement-et-geoodage",
+    description: "Amélioration de la gestion des fichiers et des API avec ajout du header ETag, ajout des types MIME pour les fichiers Géoparquet, optimisation des filtres de géocodage et d’autocomplétion, ajout du filtre city-code pour l'autocomplétion et augmentation du rate limiting pour l’itinéraire.",
+    tags: ["Téléchargement","Annexe","Géocodage","Itinéraire"],
+    date: "2026-05-06" | jsDateObject
+}) }}
+</div>
+
+<div class="fr-col-12 fr-col-md-6">
+{{ component("card", {
     title: "Des changements sur le Téléchargement",
     url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/changements-sur-le-téléchargement",
     description: "Ajout d'agrégat d'informations dans la description d'une ressource de téléchargement, des nouveaux paramètres de tri des entrées d'une ressource et du bon content type pour les fichiers Géoparquet téléchargés.",
