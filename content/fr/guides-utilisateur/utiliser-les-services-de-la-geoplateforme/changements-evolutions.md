@@ -185,7 +185,7 @@ pictogram: digital/innovation.svg
     title: "Passage à France Connect V2 + correction de bugs",
     url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/passage-a-france-connect-v2--correction-de-bugs",
     description: "Des corrections de bugs sont aussi prévues. Ces changements auront lieu le 25 septembre 2025.",
-    tags: ["Géoplateforme","Actualités","Correction bugs","IAM","Keycloak","Statistiques","Altimétrie","Orchestrateur","Itineraire","Entrepot"],
+    tags: ["Géoplateforme","Actualités","IAM","Keycloak","Statistiques","Altimétrie","Orchestrateur","Itineraire","Entrepot"],
     date: "2025-09-25" | jsDateObject
 }) }}
 </div>
@@ -195,7 +195,7 @@ pictogram: digital/innovation.svg
     title: "Correction de bugs + ajout de TMS",
     url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions/correction-de-bugs-ajout-de-tms",
     description: "Des corrections de bugs sont aussi prévues. Ces changements auront lieu le 12 août 2025.",
-    tags: ["Géoplateforme","Actualités","Entrepot","Correction bugs","WFS","Authentification","LIDAR"],
+    tags: ["Géoplateforme","Actualités","Entrepot","WFS","Authentification","LIDAR"],
     date: "2025-08-12" | jsDateObject
 }) }}
 </div>
