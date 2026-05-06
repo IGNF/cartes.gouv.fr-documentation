@@ -1,9 +1,7 @@
 ---
 title: Correction de bugs et modification d’informations dans les GetCaps
-description: Des corrections de bugs et modifications d’informations dans les GetCaps.
+description: Corrections de bugs et modifications d’informations dans les GetCaps
 tags:
-    - Géoplateforme
-    - Actualités
     - Extraction
     - Keycloak
     - TMS
@@ -13,8 +11,10 @@ eleventyNavigation:
 ---
 
 ## Changements
-Modification des informations dans les GetCap extraction et TMS.
+
+Modification des informations dans les GetCap extraction et <span lang="en">_TMS_</span>.
 
 ## Correction de bugs
+
 - [Keycloak] La déconnexion d’une application liée à la GPF doit entraîner la déconnexion de toutes les applications liées à la GPF.
 - [Extraction] Correction de l’apparition d’une erreur 500 sur le service extraction lorsqu’aucun process n’était disponible pour l’utilisateur.

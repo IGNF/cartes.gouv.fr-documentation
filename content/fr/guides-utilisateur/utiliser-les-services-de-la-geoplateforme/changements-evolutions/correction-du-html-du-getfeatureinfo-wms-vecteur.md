@@ -1,9 +1,7 @@
 ---
 title: Correction du HTML du GetFeatureInfo WMS Vecteur
-description: La correction du HTML du GetFeatureInfo WMS Vecteur. Celui-ci n'était pas valide dans sa construction
+description: Correction du HTML du GetFeatureInfo WMS Vecteur. Celui-ci n’était pas valide dans sa construction
 tags:
-    - Géoplateforme
-    - Actualités
     - WMS-V
 eleventyNavigation:
     key: Correction du HTML du GetFeatureInfo WMS Vecteur

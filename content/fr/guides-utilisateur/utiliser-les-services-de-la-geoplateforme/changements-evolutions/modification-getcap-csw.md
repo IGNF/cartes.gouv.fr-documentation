@@ -1,9 +1,7 @@
 ---
 title: Modification GetCap CSW
-description: Des modifications sur le GetCap CSW.
+description: Modifications sur le GetCap CSW
 tags:
-    - Géoplateforme
-    - Actualités
     - CSW
 eleventyNavigation:
     key: Modification GetCap CSW
@@ -12,4 +10,4 @@ eleventyNavigation:
 
 ## Changements
 
-Changements d'informations dans le GetCap CSW
+Changements d’informations dans le <span lang="en">_GetCap CSW_</span>.

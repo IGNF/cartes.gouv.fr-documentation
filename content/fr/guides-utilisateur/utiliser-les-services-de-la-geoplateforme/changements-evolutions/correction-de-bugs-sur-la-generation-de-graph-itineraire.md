@@ -1,9 +1,7 @@
 ---
 title: Correction de bugs sur la génération de graph itinéraire
-description: Des corrections de bugs sur la génération de graph itinéraire.
+description: Corrections de bugs sur la génération de graph itinéraire
 tags:
-    - Géoplateforme
-    - Actualités
     - Itinéraire
 eleventyNavigation:
     key: Correction de bugs sur la génération de graph itinéraire
@@ -12,5 +10,5 @@ eleventyNavigation:
 
 ## Correction de bugs
 
-- [Itineraire] Correction d'un bug lors de la création des graphs PGR où le graph était vide
-- [Itineraire] Correction d'un bug lors de la création du pivot qui était en erreur lors d'un calcul sur la France entière
+- [Itineraire] Correction d’un bug lors de la création des graphs PGR où le graph était vide
+- [Itineraire] Correction d’un bug lors de la création du pivot qui était en erreur lors d’un calcul sur la France entière

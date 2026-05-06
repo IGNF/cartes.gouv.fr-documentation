@@ -1,5 +1,5 @@
 module.exports = {
-    tags: ["Changements et évolutions"],
+    tags: ["Changements et évolutions", "Géoplateforme", "Actualités"],
     segments: [
         {
             url: "/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions",

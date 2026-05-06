@@ -1,9 +1,6 @@
 ---
 title: Ajout de filtrages sur les champs de certaines entités
-description: Il est possible de filtrer certaines entités sur leur nom, leur nom de couche ou encore leur type mime selon les disponibilités des attributs, avec des caractères joker.
-tags:
-    - Géoplateforme
-    - Actualités
+description: Il est possible de filtrer certaines entités sur leur nom, leur nom de couche ou encore leur type mime selon les disponibilités des attributs, avec des caractères joker
 eleventyNavigation:
     key: Ajout de filtrages sur les champs de certaines entités
     order: 16
@@ -13,13 +10,13 @@ eleventyNavigation:
 
 ## Changements
 
-Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit correctement encodé dans les requêtes. Il remplace 0 à plusieurs caractères. Le filtre est insensible à la casse.
+Le joker est le caractère « % ». Attention de bien mettre « %25 » pour qu’il soit correctement encodé dans les requêtes. Il remplace zéro à plusieurs caractères. Le filtre est insensible à la casse.
 
-### Routes d'entrepôt
+### Routes d’entrepôt
 
 ??? GET "/datastores/{datastore}/checks"
 
-``` title="Contenu" 
+```plain
 /datastores/{datastore}/checks
 ```
 
@@ -34,7 +31,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
 
 ??? GET "/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```plain
 /datastores/{datastore}/configurations
 ```
 
@@ -50,7 +47,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
 
 ??? GET "/datastores/{datastore}/offerings"
 
-``` title="Contenu" 
+```plain
 /datastores/{datastore}/offerings
 ```
 
@@ -65,7 +62,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
 
 ??? GET "/datastores/{datastore}/annexes"
 
-``` title="Contenu" 
+```plain
 /datastores/{datastore}/annexes
 ```
 
@@ -78,12 +75,13 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
 
 ???
 
+<br>
 
 ### Routes personnelles
 
 ??? GET "/users/me/documents"
 
-``` title="Contenu" 
+```plain
 /users/me/documents
 ```
 
@@ -99,7 +97,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
 
 ??? GET "/users/me/permissions"
 
-``` title="Contenu" 
+```plain
 /users/me/permissions
 ```
 
@@ -108,7 +106,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
     data: [
         ["license = `%25string%25`"],
         ["only_oauth  = `true`"],
-        ["layer_name = `%25string%25 : ne retourne que les permissions qui contiennent au moins une couche correspondant à cette chaîne`"]
+        ["layer_name = `%25string%25 : ne retourne que les permissions qui contiennent au moins une couche correspondant à cette chaîne`"]
     ]
 }) }}
 
@@ -116,7 +114,7 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
 
 ??? GET "/users/me/keys"
 
-``` title="Contenu" 
+```plain
 /users/me/keys
 ```
 
@@ -134,20 +132,22 @@ Le joker est le caractère %. Attention de bien mettre %25 pour qu’il soit cor
 
 ???
 
+<br>
+
 ### Routes globales
 
 ??? GET "/statics/tms"
 
-``` title="Contenu" 
+```plain
 /statics/tms
 ```
 
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
-        ["type = `%25string%25 : filtre sur l'identifiant du TMS`"],
+        ["type = `%25string%25 : filtre sur l’identifiant du TMS`"],
         ["srs  = `%25string%25`"],
-        ["resolution = `0.1 : ne retourne que les TMS incluant la résolution donnée entre le plus haut niveau et le plus bas`"]
+        ["resolution = `0.1 : ne retourne que les TMS incluant la résolution donnée entre le plus haut niveau et le plus bas`"]
     ]
 }) }}
 

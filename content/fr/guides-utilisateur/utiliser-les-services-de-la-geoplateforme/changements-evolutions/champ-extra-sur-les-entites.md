@@ -1,9 +1,7 @@
 ---
 title: Champ extra sur les entités
-description: Un nouveau champ extra est disponible sur les entités d'un entrepôt. Celui ci est un objet JSON libre et permet de stocker des informations complexes adaptées à vos usages.
+description: Un nouveau champ extra est disponible sur les entités d’un entrepôt. Celui-ci est un objet JSON libre et permet de stocker des informations complexes adaptées à vos usages.
 tags:
-    - Géoplateforme
-    - Actualités
     - Global
 eleventyNavigation:
     key: Champ extra sur les entités
@@ -13,22 +11,24 @@ eleventyNavigation:
 ## Changements
 
 Les entités suivantes sont concernées :
+- upload
+- annexe
+- document
+- stored data
+- configuration
+- static
+- metadata
+- offering
 
-   - upload
-   - annexe
-   - document
-   - stored data
-   - configuration
-   - static
-   - metadata
-   - offering
+<br>
 
-Il peut être ajouté et mis à jour via la route PATCH/datastores/{datastore}/{entity}/{id}. Ce champ n'est pas interprété par l'entrepôt, c'est-à-dire qu'il n'est pas possible de filtrer sur sa valeur dans les routes de liste des entités. Il permet en revanche à une application de stocker des informations structurées propres à son fonctionnement sans avoir besoin de stockage persistent de son côté.
-Exemple d'utilisation pour une livraison
+Il peut être ajouté et mis à jour via la route « PATCH/datastores/{datastore}/{entity}/{id} ». Ce champ n’est pas interprété par l’entrepôt, c’est-à-dire qu’il n’est pas possible de filtrer sur sa valeur dans les routes de liste des entités. Il permet en revanche à une application de stocker des informations structurées propres à son fonctionnement sans avoir besoin de stockage persistant de son côté.
+
+Exemple d’utilisation pour une livraison :
 
 ??? PATCH "/datastores/{datastore}/uploads/{upload}"
 
-``` title="Contenu" 
+```plain
 /datastores/{datastore}/uploads/{upload}
 ```
 
@@ -65,4 +65,5 @@ Exemple d'utilisation pour une livraison
     "type_infos": {}
 }
 ```
+
 ???

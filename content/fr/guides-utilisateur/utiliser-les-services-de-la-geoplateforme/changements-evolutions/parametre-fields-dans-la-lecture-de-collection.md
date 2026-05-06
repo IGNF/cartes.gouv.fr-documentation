@@ -1,97 +1,95 @@
 ---
 title: Paramètre fields dans la lecture de collection
-description: Il est désormais possible de préciser les champs à retourner pour chaque entité de la collection demandée. L'identifiant est toujours retourné.
+description: Il est désormais possible de préciser les champs à retourner pour chaque entité de la collection demandée. L’identifiant est toujours retourné.
 tags:
-    - Géoplateforme
-    - Actualités
     - Global
 eleventyNavigation:
     key: Paramètre fields dans la lecture de collection
     order: 21
 ---
+
 {% from "components/component.njk" import component with context %}
 
 ## Changements
 
-Les entités suivantes sont concernées :
+Les entités suivantes sont concernées :
+- Livraisons
+    - Champs de base
+        - type
+        - name
+        - visibility
+        - srs
+        - description
+        - status
+    - Champs disponibles
+        - name
+        - description
+        - type
+        - visibility
+        - status
+        - srs
+        - contact
+        - size
+        - last_event
+        - tags
+        - bbox (calculée à partir du champ extent)
+- Données stockées
+    - Champs de base
+        - name
+        - type
+        - visibility
+        - srs
+    - Champs disponibles
+        - name
+        - description
+        - type
+        - visibility
+        - status
+        - srs
+        - contact
+        - edition
+        - size
+        - last_event
+        - tags
+        - bbox
+- Configurations
+    - Champs de base
+        - name
+        - layer_name
+        - type
+        - status
+    - Champs disponibles
+        - name
+        - layer_name
+        - type
+        - status
+        - attribution
+        - metadata
+        - tags
+        - last_event
+- Offres
+    - Champs de base
+        - open
+        - available
+        - layer_name
+        - type
+        - status
+    - Champs disponibles
+        - open
+        - available
+        - layer_name
+        - type
+        - status
+        - endpoint
+        - configuration
+        - urls
+        - extra
 
-  - Livraisons
-      - Champs de base
-          - type
-          - name
-          - visibility
-          - srs
-          - description
-          - status
-      - Champs disponibles
-          - name
-          - description
-          - type
-          - visibility
-          - status
-          - srs
-          - contact
-          - size
-          - last_event
-          - tags
-          - bbox (calculée à partir du champ extent)
-  - Données stockées
-      - Champs de base
-          - name
-          - type
-          - visibility
-          - srs
-      - Champs disponibles
-          - name
-          - description
-          - type
-          - visibility
-          - status
-          - srs
-          - contact
-          - edition
-          - size
-          - last_event
-          - tags
-          - bbox
-  - Configurations
-      - Champs de base
-          - name
-          - layer_name
-          - type
-          - status
-      - Champs disponibles
-          - name
-          - layer_name
-          - type
-          - status
-          - attribution
-          - metadata
-          - tags
-          - last_event
-  - Offres
-      - Champs de base
-          - open
-          - available
-          - layer_name
-          - type
-          - status
-      - Champs disponibles
-          - open
-          - available
-          - layer_name
-          - type
-          - status
-          - endpoint
-          - configuration
-          - urls
-          - extra
+Exemple d’utilisation pour des données stockées
 
-Exemple d'utilisation pour des données stockées
+??? GET "/datastores/{datastore}/stored_data"
 
-??? GET "/datatores/{datastore}/stored_data"
-
-``` title="Contenu" 
+```plain
 /datatores/{datastore}/stored_data
 ```
 
@@ -106,10 +104,10 @@ Exemple d'utilisation pour des données stockées
 [
     {
         "bbox": {
-        "west": 4.716841851,
-        "south": 45.597425194,
-        "east": 6.17889785,
-        "north": 46.527234038
+            "west": 4.716841851,
+            "south": 45.597425194,
+            "east": 6.17889785,
+            "north": 46.527234038
         },
         "last_event": {
             "title": "Création",

@@ -1,9 +1,7 @@
 ---
 title: Modification descriptif service
-description: Des modifications des descriptions des services.
+description: Modifications des descriptions des services
 tags:
-    - Géoplateforme
-    - Actualités
     - WFS
     - WMS-V
     - Géocodage
@@ -16,22 +14,24 @@ eleventyNavigation:
 
 ## Changements
 
-Modification des informations dans les Get Cap WFS, WMS-V et Téléchargement
-Modification de la description du champ terr dans le GetCap Geocodage
+Modification des informations dans les <span lang="en">_GetCap WFS_</span>, <span lang="en">_WMS-V_</span> et « Téléchargement ».
 
-Passage de :
+Modification de la description du champ « terr » dans le <span lang="en">_GetCap_</span> Géocodage.
 
-```title="Contenu"
-"une limitation de la zone de recherche de localisants. Les valeurs acceptés sont METROPOLE, DOMTOM, les codes département et les codes communes (INSEE)."
+Passage de :
+
+```plain
+"une limitation de la zone de recherche de localisants. Les valeurs acceptées sont METROPOLE, DOMTOM, les codes département et les codes communes (INSEE)."
 ```
 
-à :
-```title="Contenu"
-"une limitation de la zone de recherche de localisants. Les valeurs acceptés sont METROPOLE, DOMTOM, code(s) INSEE de département, code(s) postaux de commune"
+à :
+
+```plain
+"une limitation de la zone de recherche de localisants. Les valeurs acceptées sont METROPOLE, DOMTOM, code(s) INSEE de département, code(s) postaux de commune"
 ```
 
-WMTS, WMS, WFS : envoi d'une erreur si un paramètre présent X fois avec une valeur différente
+<span lang="en">_WMTS_</span>, <span lang="en">_WMS_</span>, <span lang="en">_WFS_</span> : envoi d’une erreur si un paramètre présent X fois avec une valeur différente.
 
 ## Correction de bugs
 
-- [Téléchargement privés] : nombre de résultats affichés par défaut incorrects corrigés
+- [Téléchargement privés] : nombre de résultats affichés par défaut incorrect corrigé

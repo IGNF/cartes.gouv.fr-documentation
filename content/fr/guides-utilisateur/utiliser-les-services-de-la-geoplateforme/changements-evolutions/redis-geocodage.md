@@ -1,9 +1,7 @@
 ---
 title: Montée de version du REDIS Géocodage
-description: Des corrections de bugs du REDIS Géocodage.
+description: Corrections de bugs du REDIS Géocodage
 tags:
-    - Géoplateforme
-    - Actualités
     - Keycloak
     - Publication
     - Orchestrateur
@@ -17,17 +15,26 @@ eleventyNavigation:
 
 ## Changements
 
-Montée de version du REDIS Géocodage (suite alerte de vulnérabilité)
-Harmonisation des informations des swaggers
+- Montée de version du REDIS Géocodage (suite à une alerte de vulnérabilité)
+- Harmonisation des informations des swaggers
+- Pour les services :
+    - altimétrie
+    - géocodage
+    - autocomplétion
+    - itinéraire
+    - recherche
+    - <span lang="en">_API_</span> Entrepôt
+    - <span lang="en">_API_</span> statistiques
+    - extraction
 
-Pour les services : altimétrie, géocodage, autocomplétion, itinéraire ,recherche, API entrepôt, API statistiques, extraction
+<br>
 
 ## Correction de bugs
 
-- [Keycloak] Remise en fonction des sondes Uptrends sur l'IAM
-- [Publication] Si l'API k8s est indisponible, les publications passent en UNSTABLE (au lieu de rester bloqué)
-- [Orchestrateur] Ajout d'une ligne de log dans le cas d'une exécution pas lancée
-- [Entrepôt] Pouvoir changer le stockage des livraisons une fois toutes les livraisons suprimées
-- [Entrepôt] Uniformisation de la sensibilité à la casse pour le filtrage sur chaîne
-- [Geocodage] Correction d'un bug où le résultat retourné par le Géocodage pour une même requête n'était pas constant
-- [Recherche] Possibilité de créer un index custom avec des champs de type "object"
+- [Keycloak] Remise en fonction des sondes Uptrends sur l’IAM
+- [Publication] Si l’<span lang="en">_API_</span> k8s est indisponible, les publications passent en « UNSTABLE » (au lieu de rester bloquées)
+- [Orchestrateur] Ajout d’une ligne de log dans le cas d’une exécution pas lancée
+- [Entrepôt] Pouvoir changer le stockage des livraisons une fois toutes les livraisons supprimées
+- [Entrepôt] Uniformisation de la sensibilité à la casse pour le filtrage sur chaînes
+- [Geocodage] Correction d’un bug où le résultat retourné par le Géocodage pour une même requête n’était pas constant
+- [Recherche] Possibilité de créer un index <span lang="en">custom</span> avec des champs de type « object »

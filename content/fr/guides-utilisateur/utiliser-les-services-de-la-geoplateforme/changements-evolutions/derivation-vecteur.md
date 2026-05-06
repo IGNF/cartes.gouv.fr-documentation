@@ -1,9 +1,7 @@
 ---
 title: Dérivation vecteur
-description: Dérivation d'une donnée vecteur en base.
+description: Dérivation d’une donnée vecteur en base
 tags:
-    - Géoplateforme
-    - Actualités
     - Alimentation
     - Vecteur
 eleventyNavigation:
@@ -12,13 +10,5 @@ eleventyNavigation:
 ---
 
 ## Changements
- 
-Un nouveau traitement permet de modifier le contenu et même la structure d'une donnée stockée de type VECTOR-DB via des templates SQL. Un tutoriel décrit la démarche 
-<a title="ici" 
-   id="link-10" 
-   href="../../../../guides-developpeur/tutoriels/gestion-des-donnees-vecteurs/derivation" 
-   target="\_self"
-   rel="noopener external" 
-   class="fr-link fr-icon-arrow-right-line fr-link--icon-right">
-ici.
-</a>
+
+Un nouveau traitement permet de modifier le contenu et même la structure d’une donnée stockée de type VECTOR-DB via des templates SQL. Un tutoriel décrit la démarche [ici](../../../../guides-developpeur/tutoriels/gestion-des-donnees-vecteurs/derivation){target="_blank" rel="noopener noreferrer" title="Dérivation d’une donnée vecteur en base - ouvre une nouvelle fenêtre"}.

@@ -5,7 +5,7 @@
     <div class="fr-card__body">
         <div class="fr-card__content">
             {% if card.url is string %}
-                {% set cardUrl = card.url | locale_url %}
+                {% set cardUrl = card.url %} {# | locale_url #}
             {% else %}
                 {% set cardUrl = card.externalUrl %}
             {% endif %}
