@@ -76,7 +76,14 @@ layout: layouts/base.njk
         </div>
       </div>
       {% if parentInfo %}
-        <h2 class="fr-mt-2v">{{ title }}</h2>
+        <div class="fr-grid-row fr-grid-row--middle fr-mt-2v fr-mb-4v">
+          <div class="fr-col">
+            <h2 class="fr-m-0">{{ title }}</h2>
+          </div>
+          <div class="fr-col-auto" style="text-align: right;">
+            <a type="button" class="fr-btn fr-btn--sm fr-icon-rss-line fr-btn--icon-left fr-btn--tertiary" href="{{ fluxRssPath }}">Flux RSS</a>
+          </div>
+        </div>
       {% endif %}
       {{ content | safe }}
       {% set currentKey = eleventyNavigation.key %}
@@ -86,11 +93,26 @@ layout: layouts/base.njk
           {% set _ = allPages.push(entry) %}
         {% endif %}
       {% endfor %}
-      {{ component("card_list", {
-          items: allPages | sort(attribute = "data.eleventyNavigation.order"),
-          columns: 6,
-          show_dates: true
-      }) }}
+      <p>Filtrer par catégorie :</p>
+      <div id="blog-filter-tags" data-pagefind-ignore></div>
+      <div class="fr-grid-row fr-grid-row--gutters fr-mt-3v" id="blog-card-list" data-pagefind-ignore></div>
+      <nav id="blog-pagination" role="navigation" class="fr-pagination fr-mt-4w" aria-label="Pagination"></nav>
+      {# Le bouton RSS est maintenant en haut à droite du titre #}
+      <script>
+        window.__BLOG_PAGES__ = [
+          {% for item in allPages | sort(true, false, "data.date") %}
+            {{ {
+              title: item.data.title,
+              url: '/aide' ~ item.url,
+              description: item.data.description,
+              tags: item.data.tags | filterTagList,
+              date: item.data.date | htmlDateString,
+              readableDate: item.data.date | readableDate
+            } | dump | safe }},
+          {% endfor %}
+        ];
+      </script>
+      <script type="text/javascript" src="/js/blog.js"></script>
     </div>
   </div>
 </div>

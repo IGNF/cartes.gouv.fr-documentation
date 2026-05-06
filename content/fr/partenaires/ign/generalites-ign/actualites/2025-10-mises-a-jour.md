@@ -5,7 +5,7 @@ tags:
     - Mises à jour
 eleventyNavigation:
     key: Mises à jour octobre 2025
-    order: 15
+    order: -20250901
 date: 2025-09-01
 ---
 

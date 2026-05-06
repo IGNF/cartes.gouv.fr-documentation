@@ -5,7 +5,7 @@ tags:
     - Plan IGN
 eleventyNavigation:
     key: Nouveaux plans transfrontaliers à très grande échelle en Europe et en outre-mer
-    order: 17
+    order: -20250930
 date: 2025-09-30
 ---
 
