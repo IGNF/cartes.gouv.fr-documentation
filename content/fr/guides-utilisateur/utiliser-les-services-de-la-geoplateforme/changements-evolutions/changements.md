@@ -2,10 +2,12 @@
 title: Des changements dans l’entrepôt et le géocodage
 description: Correction de bugs dans l’entrepôt et suppression du remplissage automatique de tous les champs sur le swagger de Géocodage
 tags:
+    - Géoplateforme
+    - Actualités
     - Entrepôt
     - Geocodage
 eleventyNavigation:
-    key: Correction de bugs dans l’entrepôt et suppression du remplissage automatique de tous les champs sur le swagger de Géocodage
+    key: Des changements dans l’entrepôt et le géocodage
     order: 4
 ---
 

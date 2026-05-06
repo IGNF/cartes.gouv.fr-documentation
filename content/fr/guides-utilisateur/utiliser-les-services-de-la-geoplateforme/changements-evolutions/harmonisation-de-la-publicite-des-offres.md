@@ -2,7 +2,8 @@
 title: Harmonisation de la publicité des offres
 description: Une offre n'a plus d'attribut visibility mais un champ open.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Publication
 eleventyNavigation:
     key: Harmonisation de la publicité des offres

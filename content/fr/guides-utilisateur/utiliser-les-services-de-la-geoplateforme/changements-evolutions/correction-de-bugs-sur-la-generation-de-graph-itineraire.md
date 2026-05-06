@@ -2,6 +2,8 @@
 title: Correction de bugs sur la génération de graph itinéraire
 description: Des corrections de bugs sur la génération de graph itinéraire.
 tags:
+    - Géoplateforme
+    - Actualités
     - Itinéraire
 eleventyNavigation:
     key: Correction de bugs sur la génération de graph itinéraire

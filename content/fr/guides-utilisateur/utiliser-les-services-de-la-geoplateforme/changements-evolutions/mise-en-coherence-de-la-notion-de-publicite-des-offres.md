@@ -2,7 +2,8 @@
 title: Mise en cohérence de la notion de publicité des offres
 description: Afin de mettre en cohérence la notion de publicité des offres, des modifications ont été apportées sur les champs des offres et sur le fonctionnement du contrôle des accès.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Publication
 eleventyNavigation:
     key: Mise en cohérence de la notion de publicité des offres

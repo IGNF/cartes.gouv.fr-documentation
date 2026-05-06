@@ -2,7 +2,8 @@
 title: Paramètre fields dans la lecture de collection
 description: Il est désormais possible de préciser les champs à retourner pour chaque entité de la collection demandée. L'identifiant est toujours retourné.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Global
 eleventyNavigation:
     key: Paramètre fields dans la lecture de collection

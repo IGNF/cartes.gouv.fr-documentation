@@ -2,7 +2,8 @@
 title: Champ extra sur les entités
 description: Un nouveau champ extra est disponible sur les entités d'un entrepôt. Celui ci est un objet JSON libre et permet de stocker des informations complexes adaptées à vos usages.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Global
 eleventyNavigation:
     key: Champ extra sur les entités

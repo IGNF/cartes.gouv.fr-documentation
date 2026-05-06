@@ -2,7 +2,8 @@
 title: Liste des point d'accès d'un entrepôt
 description: Nouvelle route d'API avec des filtrages sur les noms, types et quotas.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Entrepot
 eleventyNavigation:
     key: Liste des point d'accès d'un entrepôt

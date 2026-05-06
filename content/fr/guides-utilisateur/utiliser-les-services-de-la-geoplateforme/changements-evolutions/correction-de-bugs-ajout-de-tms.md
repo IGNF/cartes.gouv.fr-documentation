@@ -2,7 +2,8 @@
 title: Correction de bugs + ajout de TMS
 description: Des corrections de bugs sont aussi prévues.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Entrepot
     - Correction bugs
     - WFS

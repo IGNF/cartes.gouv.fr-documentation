@@ -2,6 +2,8 @@
 title: Montée de version Géocodage
 description: Montée de version du service Geocodage (amélioration du moteur addock).
 tags:
+    - Géoplateforme
+    - Actualités
     - Géocodage
     - WFS
 eleventyNavigation:

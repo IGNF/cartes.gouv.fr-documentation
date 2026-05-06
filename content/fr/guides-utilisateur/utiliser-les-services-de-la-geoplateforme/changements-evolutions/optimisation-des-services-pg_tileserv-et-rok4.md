@@ -2,6 +2,8 @@
 title: Optimisation des services pg_tileserv et ROK4
 description: Optimisation du service pg_tileserv et montée de version ROK4 (WMTS et WMS Raster)
 tags:
+    - Géoplateforme
+    - Actualités
     - pg_tileserv
     - Keycloak
     - WMTS

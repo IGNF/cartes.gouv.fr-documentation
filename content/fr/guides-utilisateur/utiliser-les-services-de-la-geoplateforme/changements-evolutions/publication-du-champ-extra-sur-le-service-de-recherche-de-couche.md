@@ -2,7 +2,8 @@
 title: Publication du champ extra sur le service de recherche de couche
 description: Il est possible d'ajouter des informations personnalisées au niveau du document de la couche sur le service de recherche via le champ extra de la configuration.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Diffusion
     - Recherche
 eleventyNavigation:

@@ -2,6 +2,8 @@
 title: Modification de l’interface Keycloak
 description: Des modifications sur l’interface du Keycloak.
 tags:
+    - Géoplateforme
+    - Actualités
     - Keycloak
     - Itinéraire
 eleventyNavigation:

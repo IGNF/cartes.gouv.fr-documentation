@@ -2,6 +2,8 @@
 title: Correction de bugs et modification d’informations dans les GetCaps
 description: Des corrections de bugs et modifications d’informations dans les GetCaps.
 tags:
+    - Géoplateforme
+    - Actualités
     - Extraction
     - Keycloak
     - TMS

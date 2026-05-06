@@ -2,6 +2,8 @@
 title: Montée de version du REDIS Géocodage
 description: Des corrections de bugs du REDIS Géocodage.
 tags:
+    - Géoplateforme
+    - Actualités
     - Keycloak
     - Publication
     - Orchestrateur

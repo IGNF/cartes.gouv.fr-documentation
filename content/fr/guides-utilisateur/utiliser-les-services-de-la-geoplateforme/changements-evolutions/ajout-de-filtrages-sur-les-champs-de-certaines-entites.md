@@ -4,7 +4,6 @@ description: Il est possible de filtrer certaines entités sur leur nom, leur no
 tags:
     - Géoplateforme
     - Actualités
-    - Évolution
 eleventyNavigation:
     key: Ajout de filtrages sur les champs de certaines entités
     order: 16

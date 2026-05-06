@@ -2,6 +2,8 @@
 title: Changement sur le Géocodage
 description: Ajout de nouveaux paramètres de filtrage et du support des valeurs multiples pour certains paramètres de filtrage du service géocodage
 tags:
+    - Géoplateforme
+    - Actualités
     - Géocodage
 eleventyNavigation:
     key: Changement sur le Géocodage

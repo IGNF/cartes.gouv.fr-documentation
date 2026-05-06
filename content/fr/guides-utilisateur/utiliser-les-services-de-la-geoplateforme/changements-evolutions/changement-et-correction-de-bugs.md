@@ -2,6 +2,8 @@
 title: Des changements dans Keycloak et corrections de bugs
 description: Changement des e-mails automatiques envoyés par le Keycloak et correction de problèmes itinéraire et orchestrateur
 tags:
+    - Géoplateforme
+    - Actualités
     - Keycloak
     - itinéraire
     - Orchestrateur

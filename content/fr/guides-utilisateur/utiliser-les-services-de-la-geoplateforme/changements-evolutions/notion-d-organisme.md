@@ -2,7 +2,8 @@
 title: Notion d'organisme
 description: L'organisme permet de regrouper des communautés et de permettre la consultation de leurs contenu via un point d'entrée unique.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Publication
 eleventyNavigation:
     key: Notion d'organisme

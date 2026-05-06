@@ -2,6 +2,8 @@
 title: Nouveau service Validateurs + changements sur l'API Entrepot
 description: Divers modifications sont prévues sur l'API entrepot.
 tags:
+    - Géoplateforme
+    - Actualités
     - Keycloak
     - Publication
     - Orchestrateur

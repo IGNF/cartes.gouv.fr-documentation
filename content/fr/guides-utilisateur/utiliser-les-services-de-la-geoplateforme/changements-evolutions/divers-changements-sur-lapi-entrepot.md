@@ -2,7 +2,8 @@
 title: Divers changements sur l'API Entrepôt
 description: Divers modifications ont été faites sur l'API entrepot.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Entrepot
 eleventyNavigation:
     key: Divers changements sur l'API Entrepôt

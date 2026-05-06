@@ -2,6 +2,8 @@
 title: Des changements sur le Téléchargement
 description: Ajout d'agrégat d'informations dans la description d'une ressource de téléchargement, des nouveaux paramètres de tri des entrées d'une ressource et du bon content type pour les fichiers Géoparquet téléchargés.
 tags:
+    - Géoplateforme
+    - Actualités
     - Téléchargement
 eleventyNavigation:
     key: Des changements sur le Téléchargement

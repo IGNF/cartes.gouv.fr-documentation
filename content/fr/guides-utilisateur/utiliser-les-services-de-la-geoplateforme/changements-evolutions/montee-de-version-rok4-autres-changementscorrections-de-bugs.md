@@ -2,6 +2,8 @@
 title: Montée de version ROK4 + autres changements/corrections de bugs
 description: Montée de version de rok4/fullgeneration en 5.0.3
 tags:
+    - Géoplateforme
+    - Actualités
     - ROK4
     - Orchestrateur
     - Document

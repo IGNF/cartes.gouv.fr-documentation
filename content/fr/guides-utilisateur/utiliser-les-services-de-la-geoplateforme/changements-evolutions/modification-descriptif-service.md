@@ -2,6 +2,8 @@
 title: Modification descriptif service
 description: Des modifications des descriptions des services.
 tags:
+    - Géoplateforme
+    - Actualités
     - WFS
     - WMS-V
     - Géocodage

@@ -2,7 +2,8 @@
 title: Changement de l'API de téléversement de fichiers dans une livraison
 description: Des changements sur l'infrastructure ont été faits impliquant une modification de l'interface de téléversement.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Alimentation
     - Rupture
 eleventyNavigation:

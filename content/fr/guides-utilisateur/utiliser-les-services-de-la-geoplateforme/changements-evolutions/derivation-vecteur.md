@@ -2,7 +2,8 @@
 title: Dérivation vecteur
 description: Dérivation d'une donnée vecteur en base.
 tags:
-    - Évolution
+    - Géoplateforme
+    - Actualités
     - Alimentation
     - Vecteur
 eleventyNavigation:

@@ -2,7 +2,8 @@
 title: Passage à France Connect V2 + correction de bugs
 description: Des corrections de bugs sont aussi prévues.
 tags:
-    - Changement
+    - Géoplateforme
+    - Actualités
     - Correction bugs
     - IAM, Keycloak
     - Statistiques
