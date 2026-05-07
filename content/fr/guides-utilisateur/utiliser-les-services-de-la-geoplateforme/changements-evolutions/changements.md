@@ -6,7 +6,8 @@ tags:
     - Géocodage
 eleventyNavigation:
     key: Changements dans l’entrepôt et le géocodage
-    order: 4
+    order: -20260128
+date: 2026-01-28
 ---
 
 ## Changements

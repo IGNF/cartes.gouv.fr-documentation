@@ -6,7 +6,8 @@ tags:
     - Itinéraire
 eleventyNavigation:
     key: Modification de l’interface Keycloak
-    order: 2
+    order: -20260225
+date: 2026-02-25
 ---
 
 ## Changements

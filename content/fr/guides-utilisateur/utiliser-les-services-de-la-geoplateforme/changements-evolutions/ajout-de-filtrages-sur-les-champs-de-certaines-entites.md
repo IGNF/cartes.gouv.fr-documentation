@@ -3,7 +3,8 @@ title: Ajout de filtrages sur les champs de certaines entités
 description: Il est possible de filtrer certaines entités sur leur nom, leur nom de couche ou encore leur type mime selon les disponibilités des attributs, avec des caractères joker
 eleventyNavigation:
     key: Ajout de filtrages sur les champs de certaines entités
-    order: 16
+    order: -20250630
+date: 2025-06-30
 ---
 
 {% from "components/component.njk" import component with context %}

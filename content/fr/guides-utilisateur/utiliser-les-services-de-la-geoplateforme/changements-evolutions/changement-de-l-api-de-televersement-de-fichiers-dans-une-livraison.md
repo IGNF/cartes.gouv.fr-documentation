@@ -6,7 +6,8 @@ tags:
     - Rupture
 eleventyNavigation:
     key: Changement de l’API de téléversement de fichiers dans une livraison
-    order: 24
+    order: -20240220
+date: 2024-02-20
 ---
 
 {% from "components/component.njk" import component with context %}

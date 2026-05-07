@@ -6,7 +6,8 @@ tags:
     - Recherche
 eleventyNavigation:
     key: Publication du champ « extra » sur le service de recherche de couche
-    order: 18
+    order: -20250325
+date: 2025-03-25
 ---
 
 ## Changements

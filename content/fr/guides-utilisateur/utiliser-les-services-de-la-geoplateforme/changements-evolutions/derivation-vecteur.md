@@ -6,7 +6,8 @@ tags:
     - Vecteur
 eleventyNavigation:
     key: Dérivation vecteur
-    order: 17
+    order: -20250325
+date: 2025-03-25
 ---
 
 ## Changements

@@ -10,7 +10,8 @@ tags:
     - Recherche
 eleventyNavigation:
     key: Montée de version ROK4 + autres changements/corrections de bugs
-    order: 9
+    order: -20251120
+date: 2025-11-20
 ---
 
 ## Changements

@@ -1,5 +1,5 @@
 ---
-title: Des changements sur Annexe, Téléchargement et Géocodage
+title: Changements sur Annexe, Téléchargement et Géocodage
 description: Amélioration de la gestion des fichiers et des API avec ajout du header ETag, ajout des types MIME pour les fichiers Géoparquet, optimisation des filtres de géocodage et d’autocomplétion, ajout du filtre « city-code » pour l’autocomplétion et augmentation du rate limiting pour l’itinéraire
 tags:
     - Téléchargement
@@ -7,8 +7,9 @@ tags:
     - Géocodage
     - itinéraire
 eleventyNavigation:
-    key: Des changements sur Annexe, Téléchargement et Géocodage
-    order: 30
+    key: Changements sur Annexe, Téléchargement et Géocodage
+    order: -20260506
+date: 2026-05-06
 ---
 
 ## Changements

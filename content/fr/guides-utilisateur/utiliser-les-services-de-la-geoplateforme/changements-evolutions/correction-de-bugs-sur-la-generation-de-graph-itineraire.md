@@ -5,7 +5,8 @@ tags:
     - Itinéraire
 eleventyNavigation:
     key: Correction de bugs sur la génération de graph itinéraire
-    order: 5
+    order: -20260121
+date: 2026-01-21
 ---
 
 ## Correction de bugs

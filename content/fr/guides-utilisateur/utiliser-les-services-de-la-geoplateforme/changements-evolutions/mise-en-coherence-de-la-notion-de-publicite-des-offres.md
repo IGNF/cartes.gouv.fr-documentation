@@ -5,7 +5,8 @@ tags:
     - Publication
 eleventyNavigation:
     key: Mise en cohérence de la notion de publicité des offres
-    order: 20
+    order: -20250114
+date: 2025-01-14
 ---
 
 ## Changements

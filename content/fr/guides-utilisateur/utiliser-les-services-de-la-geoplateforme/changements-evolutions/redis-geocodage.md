@@ -10,7 +10,8 @@ tags:
     - Recherche
 eleventyNavigation:
     key: Montée de version du REDIS Géocodage
-    order: 10
+    order: -20260114
+date: 2026-01-14
 ---
 
 ## Changements

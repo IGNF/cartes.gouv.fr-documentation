@@ -7,7 +7,8 @@ tags:
     - Orchestrateur
 eleventyNavigation:
     key: Changements dans Keycloak et corrections de bugs
-    order: 27
+    order: -20260415
+date: 2026-04-15
 ---
 
 ## Changements

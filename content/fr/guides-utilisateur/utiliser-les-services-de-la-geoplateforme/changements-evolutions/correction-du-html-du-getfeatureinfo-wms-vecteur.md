@@ -5,5 +5,6 @@ tags:
     - WMS-V
 eleventyNavigation:
     key: Correction du HTML du GetFeatureInfo WMS Vecteur
-    order: 8
+    order: -20251127
+date: 2025-11-27
 ---

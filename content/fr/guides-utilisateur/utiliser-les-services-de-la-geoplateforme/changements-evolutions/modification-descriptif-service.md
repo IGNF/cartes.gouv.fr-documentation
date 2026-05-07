@@ -9,7 +9,8 @@ tags:
     - WMTS
 eleventyNavigation:
     key: Modification descriptif service
-    order: 7
+    order: -20260107
+date: 2026-01-07
 ---
 
 ## Changements

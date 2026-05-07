@@ -5,7 +5,8 @@ tags:
     - Entrepôt
 eleventyNavigation:
     key: Divers changements sur l’API Entrepôt
-    order: 14
+    order: -20250724
+date: 2025-07-24
 ---
 
 ## Changements

@@ -5,7 +5,8 @@ tags:
     - Global
 eleventyNavigation:
     key: Paramètre fields dans la lecture de collection
-    order: 21
+    order: -20241125
+date: 2024-11-25
 ---
 
 {% from "components/component.njk" import component with context %}

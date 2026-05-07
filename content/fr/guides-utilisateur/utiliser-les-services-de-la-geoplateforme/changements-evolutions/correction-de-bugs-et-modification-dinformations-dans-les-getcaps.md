@@ -7,7 +7,8 @@ tags:
     - TMS
 eleventyNavigation:
     key: Correction de bugs et modification d’informations dans les GetCaps
-    order: 3
+    order: -20260211
+date: 2026-02-11
 ---
 
 ## Changements

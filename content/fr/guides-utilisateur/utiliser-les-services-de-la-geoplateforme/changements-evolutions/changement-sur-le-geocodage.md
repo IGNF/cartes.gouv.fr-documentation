@@ -5,7 +5,8 @@ tags:
     - Géocodage
 eleventyNavigation:
     key: Changement sur le Géocodage
-    order: 28
+    order: -20260422
+date: 2026-04-22
 ---
 
 ## Changements

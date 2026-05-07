@@ -8,5 +8,6 @@ module.exports = {
     ],
     eleventyNavigation: {
         parent: "Changements & évolutions de la Géoplateforme",
+        sidemenuActive: "/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions",
     },
 };

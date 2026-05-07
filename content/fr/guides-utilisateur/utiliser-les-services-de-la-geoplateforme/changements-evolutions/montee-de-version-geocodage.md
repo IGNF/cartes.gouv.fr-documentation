@@ -6,7 +6,8 @@ tags:
     - WFS
 eleventyNavigation:
     key: Montée de version Géocodage
-    order: 6
+    order: -20260114
+date: 2026-01-14
 ---
 
 ## Changements

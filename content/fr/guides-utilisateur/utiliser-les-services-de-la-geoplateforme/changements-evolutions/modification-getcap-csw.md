@@ -5,7 +5,8 @@ tags:
     - CSW
 eleventyNavigation:
     key: Modification GetCap CSW
-    order: 25
+    order: -20260311
+date: 2026-03-11
 ---
 
 ## Changements

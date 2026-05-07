@@ -65,10 +65,6 @@
         const start = currentPage * ITEMS_PER_PAGE;
         const paginated = pages.slice(start, start + ITEMS_PER_PAGE);
         cardListEl.innerHTML = paginated.map(renderCard).join("");
-        // Scroll en haut de la page après affichage des cartes (comme search-results.js)
-        requestAnimationFrame(() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
     }
 
     function renderFilters() {
@@ -98,7 +94,7 @@
                     activeFilters.push(tag);
                 }
                 currentPage = 0;
-                render();
+                render(true);
             });
 
             li.appendChild(button);
@@ -133,7 +129,7 @@
                 a.addEventListener("click", (e) => {
                     e.preventDefault();
                     currentPage = page;
-                    render();
+                    render(true);
                 });
             }
 
@@ -161,11 +157,14 @@
         paginationEl.appendChild(ul);
     }
 
-    function render() {
+    function render(scroll = false) {
         const filtered = getFilteredPages();
         renderFilters();
         renderCards(filtered);
         renderPagination(filtered.length);
+        if (scroll) {
+            document.documentElement.scrollIntoView({ behavior: "smooth" });
+        }
     }
 
     render();

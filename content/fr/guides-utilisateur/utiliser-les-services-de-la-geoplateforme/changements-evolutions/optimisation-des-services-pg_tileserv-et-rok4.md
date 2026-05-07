@@ -8,7 +8,8 @@ tags:
     - WMS-Raster
 eleventyNavigation:
     key: Optimisation des services pg_tileserv et ROK4
-    order: 26
+    order: -20260401
+date: 2026-04-01
 ---
 
 ## Changements

@@ -10,7 +10,8 @@ tags:
     - Recherche
 eleventyNavigation:
     key: Nouveau service Validateurs + changements sur l’API Entrepôt
-    order: 11
+    order: -20251009
+date: 2025-10-09
 ---
 
 ## Changements

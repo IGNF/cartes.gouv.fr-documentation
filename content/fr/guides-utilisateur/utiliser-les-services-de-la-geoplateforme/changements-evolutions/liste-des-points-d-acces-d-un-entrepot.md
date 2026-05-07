@@ -5,7 +5,8 @@ tags:
     - Entrepôt
 eleventyNavigation:
     key: Liste des points d’accès d’un entrepôt
-    order: 15
+    order: -20250630
+date: 2025-06-30
 ---
 
 {% from "components/component.njk" import component with context %}

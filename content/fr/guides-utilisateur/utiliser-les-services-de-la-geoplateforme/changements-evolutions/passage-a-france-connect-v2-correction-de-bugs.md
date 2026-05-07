@@ -12,7 +12,8 @@ tags:
     - Entrepôt
 eleventyNavigation:
     key: Passage à FranceConnect V2 + correction de bugs
-    order: 12
+    order: -20250925
+date: 2025-09-25
 ---
 
 ## Changements
