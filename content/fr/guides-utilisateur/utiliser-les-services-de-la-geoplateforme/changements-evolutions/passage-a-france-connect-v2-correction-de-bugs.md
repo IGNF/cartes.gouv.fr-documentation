@@ -8,7 +8,7 @@ tags:
     - Statistiques
     - Altimétrie
     - Orchestrateur
-    - Itineraire
+    - Itinéraire
     - Entrepôt
 eleventyNavigation:
     key: Passage à FranceConnect V2 + correction de bugs

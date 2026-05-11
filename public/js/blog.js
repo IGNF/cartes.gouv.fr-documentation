@@ -6,6 +6,14 @@
     const filterTagsEl = document.getElementById("blog-filter-tags");
     const paginationEl = document.getElementById("blog-pagination");
 
+    const universalTags =
+        allPages.length === 0
+            ? new Set()
+            : (() => {
+                  const allTags = allPages[0].tags || [];
+                  return new Set(allTags.filter((tag) => allPages.every((page) => (page.tags || []).includes(tag))));
+              })();
+
     let activeFilters = [];
     let currentPage = 0;
 
@@ -17,9 +25,11 @@
     function collectTags(pages) {
         const tagCounts = {};
         pages.forEach((page) => {
-            (page.tags || []).forEach((tag) => {
-                tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-            });
+            (page.tags || [])
+                .filter((tag) => !universalTags.has(tag))
+                .forEach((tag) => {
+                    tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+                });
         });
         return Object.entries(tagCounts).sort((a, b) => {
             const diff = b[1] - a[1];
@@ -36,7 +46,10 @@
     }
 
     function renderCard(page) {
-        const tagsHtml = (page.tags || []).map((tag) => `<li><p class="fr-tag">${escapeHtml(tag)}</p></li>`).join("");
+        const tagsHtml = (page.tags || [])
+            .filter((tag) => !universalTags.has(tag))
+            .map((tag) => `<li><p class="fr-tag">${escapeHtml(tag)}</p></li>`)
+            .join("");
 
         const dateHtml = page.date
             ? `<p class="fr-card__detail fr-icon-time-fill"><time class="postlist-date" datetime="${escapeHtml(page.date)}">${escapeHtml(page.readableDate)}</time></p>`

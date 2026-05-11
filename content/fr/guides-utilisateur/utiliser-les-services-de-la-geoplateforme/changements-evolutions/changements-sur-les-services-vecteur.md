@@ -3,7 +3,7 @@ title: Changements sur les services Vecteur
 description: Ajout du format de sortie « application/geo+json » en WFS et contrôle des noms des tables des uploads Vector
 tags:
     - WFS
-    - WMS Vecteur
+    - WMS-Vecteur
     - CSW
     - WMTS
 eleventyNavigation:

@@ -5,7 +5,7 @@ tags:
     - Téléchargement
     - Annexe
     - Géocodage
-    - itinéraire
+    - Itinéraire
 eleventyNavigation:
     key: Changements sur Annexe, Téléchargement et Géocodage
     order: -20260506

@@ -3,7 +3,7 @@ title: Modification descriptif service
 description: Modifications des descriptions des services
 tags:
     - WFS
-    - WMS-V
+    - WMS-Vecteur
     - Géocodage
     - Téléchargement
     - WMTS

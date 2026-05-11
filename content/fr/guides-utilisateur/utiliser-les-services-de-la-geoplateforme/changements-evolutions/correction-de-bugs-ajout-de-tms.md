@@ -3,10 +3,10 @@ title: Correction de bugs + ajout de TMS
 description: Des corrections de bugs sont aussi prévues
 tags:
     - Entrepôt
-    - Correction bugs
+    - Correction de bugs
     - WFS
     - Authentification
-    - LIDAR
+    - LiDAR
 eleventyNavigation:
     key: Correction de bugs + ajout de TMS
     order: -20250812

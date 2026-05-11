@@ -3,7 +3,7 @@ title: Changements dans Keycloak et corrections de bugs
 description: Changement des courriels automatiques envoyés par le Keycloak et correction de problèmes d’itinéraire et d’orchestrateur
 tags:
     - Keycloak
-    - itinéraire
+    - Itinéraire
     - Orchestrateur
 eleventyNavigation:
     key: Changements dans Keycloak et corrections de bugs
