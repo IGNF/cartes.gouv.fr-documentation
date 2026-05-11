@@ -1,0 +1,10 @@
+---
+title: Correction du HTML du GetFeatureInfo WMS Vecteur
+description: Correction du HTML du GetFeatureInfo WMS Vecteur. Celui-ci n’était pas valide dans sa construction
+tags:
+    - WMS-Vecteur
+eleventyNavigation:
+    key: Correction du HTML du GetFeatureInfo WMS Vecteur
+    order: -20251127
+date: 2025-11-27
+---

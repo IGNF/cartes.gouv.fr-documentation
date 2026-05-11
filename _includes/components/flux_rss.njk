@@ -22,7 +22,8 @@
             <link href="{{ absolutePostUrl }}" />
             <updated>{{ post.date | dateToRfc3339 }}</updated>
             <id>{{ absolutePostUrl }}</id>
-            <content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
+            {% set postContent = post | safeTemplateContent %}
+            <content type="html">{% if postContent %}{{ postContent | transformWithHtmlBase(absolutePostUrl, post.url) }}{% endif %}</content>
         </entry>
     {% endfor %}
 </feed>

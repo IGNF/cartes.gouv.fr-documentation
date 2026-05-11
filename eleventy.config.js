@@ -115,6 +115,15 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    // Accès sécurisé à templateContent pour éviter TemplateContentPrematureUseError
+    eleventyConfig.addFilter("safeTemplateContent", function (item) {
+        try {
+            return item.templateContent || null;
+        } catch (e) {
+            return null;
+        }
+    });
+
     // Filters
     eleventyConfig.addFilter("jsDateObject", function jsDateObject(dateStr, format, zone) {
         return DateTime.fromFormat(dateStr, format || "yyyy-LL-dd", { zone: zone || "utc" }).toJSDate();

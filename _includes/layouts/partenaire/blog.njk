@@ -80,7 +80,7 @@ layout: layouts/base.njk
           <div class="fr-col">
             <h2 class="fr-m-0">{{ title }}</h2>
           </div>
-          <div class="fr-col-auto" style="text-align: right;">
+          <div class="fr-col-auto">
             <a type="button" class="fr-btn fr-btn--sm fr-icon-rss-line fr-btn--icon-left fr-btn--tertiary" href="{{ fluxRssPath }}">Flux RSS</a>
           </div>
         </div>
@@ -97,7 +97,6 @@ layout: layouts/base.njk
       <div id="blog-filter-tags" data-pagefind-ignore></div>
       <div class="fr-grid-row fr-grid-row--gutters fr-mt-3v" id="blog-card-list" data-pagefind-ignore></div>
       <nav id="blog-pagination" role="navigation" class="fr-pagination fr-mt-4w" aria-label="Pagination"></nav>
-      {# Le bouton RSS est maintenant en haut à droite du titre #}
       <script>
         window.__BLOG_PAGES__ = [
           {% for item in allPages | sort(true, false, "data.date") %}

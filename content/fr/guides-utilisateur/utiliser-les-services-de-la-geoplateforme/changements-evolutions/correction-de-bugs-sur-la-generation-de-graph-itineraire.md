@@ -1,0 +1,15 @@
+---
+title: Correction de bugs sur la génération de graph itinéraire
+description: Corrections de bugs sur la génération de graph itinéraire
+tags:
+    - Itinéraire
+eleventyNavigation:
+    key: Correction de bugs sur la génération de graph itinéraire
+    order: -20260121
+date: 2026-01-21
+---
+
+## Correction de bugs
+
+- [Itineraire] Correction d’un bug lors de la création des graphs PGR où le graph était vide
+- [Itineraire] Correction d’un bug lors de la création du pivot qui était en erreur lors d’un calcul sur la France entière
