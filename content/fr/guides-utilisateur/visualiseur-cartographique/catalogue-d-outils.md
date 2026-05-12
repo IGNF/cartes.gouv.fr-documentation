@@ -9,7 +9,7 @@ tags:
     - Catalogue
 eleventyNavigation:
     key: Catalogue d’outils
-    order: 5
+    order: 2
 pictogram: map/backpack.svg
 summary:
     visible: true
