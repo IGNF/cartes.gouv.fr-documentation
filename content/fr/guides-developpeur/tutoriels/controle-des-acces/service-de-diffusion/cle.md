@@ -211,6 +211,10 @@ Quel que soit le type de clé, il est possible de préciser des conditions d'uti
 
 Il est maintenant possible [d'interroger le service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle). Cependant, aucune couche ne semble disponible, car nous n'avons pas encore donné de droits à cette clé.
 
+:::warning Attention
+    Les caractères ( ) . % + - * ? [ ^ $ doivent être échappé avec un % (notamment lorsqu'un referer est forcé). Donc pour défénir un referer tata-toto.fr, il faut préciser "referer" : "tata%-toto.fr"
+:::
+
 ### Gérer les accès à la clé
 
 Les permissions ouvrent des droits a priori sur des offres, mais c'est à la charge du propriétaire de la clé de définir les accès aux offres. Un accès est un lien entre une clé et une offre, en exploitant une permission. On peut ajouter plusieurs accès à des offres en un appel, tant que c'est la même permission qui permet les accès.
