@@ -23,7 +23,11 @@ layout: layouts/base.njk
                     {% if showBreadcrumb %}
                         {% include "components/breadcrumb.njk" %}
                     {% endif %}
-                    <h1>{{ title }}</h1>
+                    {% if hasLoader %}
+                        <h1>{{ title }} <span id="loader" class="fr-icon-refresh-line fr-icon--lg frx-icon-spin"></span></h1>
+                    {% else %}
+                        <h1>{{ title }}</h1>
+                    {% endif %}
                     {% if title != "Nous écrire" and title != "Demande envoyée"%}
                         {% include "components/published_on.njk" %}
                     {% endif %}
