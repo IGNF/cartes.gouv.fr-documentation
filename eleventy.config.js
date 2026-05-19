@@ -40,6 +40,7 @@ module.exports = function (eleventyConfig) {
         "./node_modules/swagger-ui/dist/swagger-ui.css": "/css/swagger-ui.css",
         "./node_modules/swagger-ui/dist/swagger-ui-bundle.js": "/js/swagger-ui.js",
         "./node_modules/keycloak-js/lib/keycloak.js": "/js/keycloak.js",
+        "./node_modules/markdown-it/dist/markdown-it.min.js": "js/markdown-it.min.js",
     });
 
     // Run Eleventy when these files change:
