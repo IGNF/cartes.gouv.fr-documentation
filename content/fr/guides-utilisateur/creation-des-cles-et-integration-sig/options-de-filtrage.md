@@ -49,6 +49,10 @@ Le **« _<span lang="en">Referer</span>_ »** permet d’identifier la page ou
 
 ![Exemple de filtrage par Referer avec une domaine fictif](/img/guides-utilisateur/creation-des-cles-et-integration-sig/filtrage-par-ip/02_filtrage-referer.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
+:::warning Caractères spéciaux
+    Les caractères ( ) . % + - * ? [ ^ $ doivent être échappés avec un %. Donc pour définir le referer www.geoportail-urbanisme.gouv.fr, il faut préciser "referer" : "www.geoportail%-urbanisme.gouv.fr".
+:::
+
 ---
 
 ## Filtrer par _<span lang="en">User-Agent</span>_
@@ -57,7 +61,7 @@ Un **« _<span lang="en">User-Agent</span>_ »** permet d’indiquer le naviga
 
 ![Exemple de filtrage par User-agent avec un nom d’application fictif](/img/guides-utilisateur/creation-des-cles-et-integration-sig/filtrage-par-ip/03_filtrage-user-agent.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Pour configurer le **_<span lang="en">User-Agent</span>_** dans **QGIS** :  
+Pour configurer le **_<span lang="en">User-Agent</span>_** dans **QGIS** :  
 
 1. Ouvrez le menu **« Options »**, puis l’onglet **« Réseau »**.  
 2. Renseignez votre **_<span lang="en">User-Agent</span>_** dans le champ **« _<span lang="en">User-Agent prefix</span>_ »**.
