@@ -10,7 +10,6 @@ layout: layouts/base.njk
       {% set navCollection = collections[navContext.collectionName] %}
       {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
       {% set sidemenuTitle = navContext.title %}
-      {% set sidemenuActive = eleventyNavigation.sidemenuActive %}
       {% include "templates/sidemenu.njk" %}
     </div>
     <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
@@ -19,7 +18,7 @@ layout: layouts/base.njk
           {% if showBreadcrumb %}
             {% include "components/breadcrumb.njk" %}
           {% endif %}
-          <h1>{{ title }}</h1>
+          <h1>{{ eleventyNavigation.parent }}</h1>
           {% include "components/published_on.njk" %}
           {% if description and showDescription != false %}
             <p class="fr-text--lead">{{ description }}</p>
