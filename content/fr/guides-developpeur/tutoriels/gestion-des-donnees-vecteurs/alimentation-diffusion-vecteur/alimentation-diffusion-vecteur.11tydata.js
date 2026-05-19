@@ -1,11 +1,8 @@
 module.exports = {
-    segments: [
-        {
-            url: "/guides-developpeur/tutoriels/gestion-des-donnees-vecteurs/alimentation-diffusion-vecteur",
-            title: "Alimentation et diffusion simple vecteur",
-        },
-    ],
+    title: "Alimentation et diffusion simple vecteur",
+    description: "Téléversement de fichiers vecteurs, intégration en base de données, diffusion en WMS et WFS",
     eleventyNavigation: {
-        parent: "Alimentation et diffusion simple vecteur",
+        sidemenuActive: "/fr/guides-developpeur/tutoriels/gestion-des-donnees-vecteurs/alimentation-diffusion-vecteur",
     },
+    hideDescriptionSeparator: true,
 };

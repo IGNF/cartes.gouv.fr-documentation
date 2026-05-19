@@ -1,8 +1,5 @@
 ---
-title: Livraison des données archives
-eleventyNavigation:
-    key: Livraison des données archives
-    order: 1
+subTitle: Livraison des données archives
 summary:
     visible: true
     depth: 2
@@ -10,13 +7,31 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
-## Livrer les données
+{% set tabnavLinks = [
+  { title: "Présentation", url: "../" },
+  { title: "Livraison", active: true },
+  { title: "Intégration", url: "./integration" },
+  { title: "WFS", url: "./publication-wfs" },
+  { title: "Gestion statistique", url: "./gestion-statistique" },
+  { title: "WMS", url: "./publication-wms" },
+  { title: "TMS", url: "./publication-tmsv" },
+  { title: "Tuilage", url: "./tuilage" },
+  { title: "Alimentation", url: "./alimentation-fme" }
+] %}
 
-La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l'entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
+{{ component("tabnav", { items: tabnavLinks, forceMobile: true }) }}
 
-La livraison n'a qu'un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
+## Livraison des données archives
 
-### Déclarer la livraison
+{% include "components/summary.njk" %}
+
+### Livrer les données
+
+La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l’entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
+
+La livraison n’a qu’un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
+
+#### Déclarer la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
@@ -58,19 +73,19 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 ???
 <br>
 
-### Téléverser un fichier
+#### Téléverser un fichier
 
-Les formats de fichier vecteur gérés sont :
+Les formats de fichier vecteur gérés sont :
 
 - Geopackage
 - GeoJSON
 - Shapefile
-- CSV :
+- CSV :
     - si la géométrie est dans un colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
-    - si la donnée est ponctuelle et que les coordonnées sont dans deux colonnes, elles doivent avoir comme nom :
+    - si la donnée est ponctuelle et que les coordonnées sont dans deux colonnes, elles doivent avoir comme nom :
         - `lon`, `x`, `longitude`
         - `lat`, `y`, `latitude`
-- SQL. Les instructions autorisées sont les suivantes, sans préciser de nom de schéma :
+- SQL. Les instructions autorisées sont les suivantes, sans préciser de nom de schéma :
     - CREATE TABLE
     - CREATE VIEW
     - CREATE INDEX
@@ -94,9 +109,9 @@ Les formats de fichier vecteur gérés sont :
 ???
 <br>
 
-### Contrôler le contenu
+#### Contrôler le contenu
 
-Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
+Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
@@ -124,11 +139,11 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
 ???
 <br>
 
-## Terminer la livraison
+### Terminer la livraison
 
-Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu'elles puissent être traitées sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problèmes qui auraient mis en échec les traitements à suivre.
+Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu’elles puissent être traitées sans conflit. Des vérifications vont s’exécuter, lire les données livrées et détecter d’éventuels problèmes qui auraient mis en échec les traitements à suivre.
 
-### Fermeture
+#### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
 
@@ -139,7 +154,7 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 ???
 <br>
 
-### Consultation des vérifications sur ma livraison
+#### Consultation des vérifications sur ma livraison
 
 Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne faisant que lire les données déposées.
 
@@ -176,7 +191,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne f
 ???
 <br>
 
-Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l'appel précédent sera :
+Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l’appel précédent sera :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
