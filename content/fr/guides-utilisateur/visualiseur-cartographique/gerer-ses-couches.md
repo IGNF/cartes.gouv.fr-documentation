@@ -20,25 +20,27 @@ summary:
 
 ## Ouvrir le gestionnaire de couches
 
-Une fois votre carte sélectionnée depuis le catalogue de cartes, elle apparaitra dans le **« Gestionnaire de couches »**. Il s’agit de l’outil permettant de manipuler les données sélectionnées, de les organiser, les superposer et de gérer leur appararence.
+Une fois votre carte sélectionnée depuis le catalogue de cartes, elle apparaitra dans le **« Gestionnaire de couches »**. Il s’agit de l’outil permettant de manipuler les données sélectionnées, de les organiser, les superposer et de gérer leur apparence.
 
-![Image décrivant l’icône Gestionnaire de couches](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/01_gestionnaire-de-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Icône de l’outil « Gestionnaire de couches »](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/01_gestionnaire-de-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Le chiffre indiqué sur l’icône vous indique combien de couches contient le gestionnaire de couches. Une fois ouvert, il ressemble à ceci :
 
-![Image décrivant l’outil Gestionnaire de couches](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/02_gestionnaire-de-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Panneau de l’outil « Gestionnaire de couches »](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/02_gestionnaire-de-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Chaque couche dispose d’outils qui auront une action sur celle-ci.
+
+---
 
 ## Réorganiser les couches
 
 Vous pouvez changer l’ordre des couches dans le gestionnaire. Pour ce faire, cliquez sur l’icône suivante :
 
-![Image décrivant l’icône pour déplacer la couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/03_reorganiser-les-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Icône pour déplacer la couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/03_reorganiser-les-couches.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 et déplacez la couche en restant appuyé.
 
-Les éléments d’une couche située au-dessus d’une autre dans le **« Gestionnaire de couche »** apparaitront également au-dessus sur la carte.
+Les éléments d’une couche située au-dessus d’une autre dans le **« Gestionnaire de couches »** apparaitront également au-dessus sur la carte.
 
 ---
 
@@ -46,19 +48,19 @@ Les éléments d’une couche située au-dessus d’une autre dans le **« Gest
 
 Pour supprimer une couche du gestionnaire, il suffit de cliquer sur l’icône suivante :
 
-![Image décrivant l’icône pour supprimer la couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/04_supprimer-une-couche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Icône pour supprimer la couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/03_supprimer-une-couche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Ainsi elle n’apparaitra plus dans le gestionnaire ni dans la carte.
 
 ---
 
-## Afficher / cacher une couche
+## Afficher/cacher une couche
 
-Vous pouvez choisir quelles couches afficher ou cacher sans avoir besoin de les supprimer / ajouter du gestionnaire à chaque fois.
+Vous pouvez choisir quelles couches afficher ou cacher sans avoir besoin de les supprimer/ajouter du gestionnaire à chaque fois.
 
 Pour cela, il suffit de cliquer sur l’icône suivante :
 
-![Image décrivant l’icône pour cacher ou afficher une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/04_cacher-afficher-une-couche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Icône pour cacher ou afficher une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/04_cacher-afficher-une-couche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 La forme de l’œil indique le statut de la couche :
 - si l’œil est **barré** cela signifie que la couche est **cachée** ;
@@ -70,13 +72,13 @@ La forme de l’œil indique le statut de la couche :
 
 D’autres options sont disponibles pour chaque couche, et sont accessibles en cliquant sur le chevron :
 
-![Image décrivant l’icône pour cacher ou afficher une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/05_plus-d-options.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Options supplémentaires d’une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/05_plus-d-options.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ### Informations sur la couche
 
 L’icône suivante :
 
-![Image décrivant l’icône pour afficher les informations d’une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/06_informations-d-une-couche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Icône pour afficher les informations d’une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/06_informations-d-une-couche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 vous permet d’afficher des informations plus détaillées sur la couche.
 
@@ -84,11 +86,11 @@ vous permet d’afficher des informations plus détaillées sur la couche.
 
 Certaines couches sont publiées avec plusieurs styles associés. Il est possible de choisir entre ces styles avec l’icône suivante :
 
-![Image décrivant l’icône pour modifier le style d’une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/07_changer-de-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Icône pour modifier le style d’une couche](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/07_changer-de-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Par exemple, le plan IGN personnalisable propose un ensemble de styles pensés pour différentes utilisations :
 
-![Image décrivant les styles du plan IGN personnalisables](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/08_styles-plan-ign.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Styles du plan IGN personnalisables](/img/guides-utilisateur/visualiseur-cartographique/gerer-ses-couches/08_styles-plan-ign.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ---
 
