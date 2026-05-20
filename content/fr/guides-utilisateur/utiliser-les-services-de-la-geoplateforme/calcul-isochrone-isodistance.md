@@ -39,14 +39,14 @@ Son swagger est accessible ici : [swagger du calcul d’isochrone/isodistance](
 
 ---
 
-## Capacités de l’API (getCapabilities)
+## Capacités de l’API (getcapabilities)
 
-La requête **getCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête **getcapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante : 
 
 ```plain
-https://data.geopf.fr/navigation/getCapabilities
+https://data.geopf.fr/navigation/getcapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
