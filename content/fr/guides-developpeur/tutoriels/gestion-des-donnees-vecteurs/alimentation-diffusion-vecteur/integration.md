@@ -6,14 +6,15 @@ eleventyNavigation:
     order: 2
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Intégration
 ---
 
-## Intégration en base
+### Intégration en base
 
-Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données vecteur, ce stockage est un schéma sur des serveurs PostgreSQL. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
+Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données vecteur, ce stockage est un schéma sur des serveurs PostgreSQL. L’entité qui correspond à cette donnée pérenne est une donnée stockée.
 
-Pour transformer la donnée livrée en donnée stockée, des traitements sont mis à disposition de l'entrepôt.
+Pour transformer la donnée livrée en donnée stockée, des traitements sont mis à disposition de l’entrepôt.
 
 ```mermaid
 flowchart LR
@@ -26,7 +27,7 @@ flowchart LR
         fic3[/Fichier vecteur 3/]
     end
 
-    subgraph tra[Traitement d'intégration]
+    subgraph tra[Traitement d’intégration]
         exe[Exécution du traitement]
     end
 
@@ -39,11 +40,10 @@ flowchart LR
     class tra global
 ```
 
-### Consultation des traitements disponibles
+#### Consultation des traitements disponibles
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 ??? Corps de réponse JSON
@@ -54,20 +54,19 @@ flowchart LR
 ????
 <br>
 
-### Consultation du traitement qui nous intéresse
+#### Consultation du traitement qui nous intéresse
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector_to_db'] }}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector_to_db'] }}
 ```
 ??? Corps de réponse JSON
 ```json
 {
     "name": "Intégration de données vecteur livrées en base",
-    "description": "Ce traitement permet de stocker dans les bases de données PostgreSQL de la plateforme des données vecteurs livrées. Les formats pris en charge sont le CSV, le Shapefile, le Geopackage et le GeoJSON. Il est également possible de préciser un autre système afin de réaliser une reprojection à l'intégration",
+    "description": "Ce traitement permet de stocker dans les bases de données PostgreSQL de la plateforme des données vecteur livrées. Les formats pris en charge sont le CSV, le Shapefile, le Geopackage et le GeoJSON. Il est également possible de préciser un autre système afin de réaliser une reprojection à l’intégration",
     "input_types": {
         "upload": ["VECTOR"],
         "stored_data": []
@@ -87,7 +86,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
     "required_checks": [
         {
             "name": "Vérification vecteur",
-            "description": "La vérification vecteur contrôle que les fichiers sont bien lisibles et en extraie l'étendue",
+            "description": "La vérification vecteur contrôle que les fichiers sont bien lisibles et en extraie l’étendue",
             "_id": "{{ ids.checks.vector }}"
         },
         {
@@ -102,13 +101,12 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
 ????
 <br>
 
-### Configuration d'une exécution de ce traitement
+#### Configuration d’une exécution de ce traitement
 
-On distingue le traitement, ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
+On distingue le traitement, ressource de la plateforme mise à disposition de l’entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 ??? Corps de requête JSON
@@ -172,33 +170,31 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 ????
 <br>
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch
 ```
-
 ???
 <br>
 
-:::warning Attention
-    Les noms des tables et des champs sont "standardisés" lors de l'intégration en base pour éviter tout souci d'utilisation par les applications : pas de majuscules, pas d'accent, pas de tirets.
+:::warning
+Les noms des tables et des champs sont « standardisés » lors de l’intégration en base pour éviter tout souci d’utilisation par les applications : pas de majuscules, pas d’accent, pas de tirets.
 :::
 
-### Consultation de l'état de l'exécution
+#### Consultation de l’état de l’exécution
 
-Une exécution va avoir les statuts dans l'ordre suivant :
+Une exécution va avoir les statuts dans l’ordre suivant :
+- CREATED : créée mais non lancée
+- WAITING : lancée mais pas encore prise en charge par le <span lang="en">_cluster_</span> de calcul
+- PROGRESS : en cours d’exécution sur le <span lang="en">_cluster_</span> de calcul
+- SUCCESS ou FAILURE : terminé
 
-- CREATED : créée mais non lancée
-- WAITING : lancée mais pas encore pris en charge par le cluster de calcul
-- PROGRESS : en cours d'exécution sur le cluster de calcul
-- SUCCESS ou FAILURE : terminé
+<br>
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}
 ```
 ??? Corps de réponse JSON
@@ -244,13 +240,12 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 ????
 <br>
 
-## Consultation de la donnée stockée en sortie
+### Consultation de la donnée stockée en sortie
 
-À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées, tables et attributs).
+À la fin du traitement, des informations concernant la donnée finale sont remontées afin d’apparaître au niveau de l’API (taille, étendue, système de coordonnées, tables et attributs).
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 ??? Corps de réponse JSON
@@ -303,15 +298,12 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 ????
 <br>
 
-## Nettoyage de la livraison
+### Nettoyage de la livraison
 
-Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
+Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}
 ```
-
 ???
-<br>

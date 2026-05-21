@@ -5,24 +5,26 @@ eleventyNavigation:
     order: 3
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: WFS
 ---
 
-## Configuration de la diffusion
+### Configuration de la diffusion
 
-La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
-
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
 - nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WFS de la plateforme)
 - table absente de la donnée stockée
 
-Dans le cas du WFS, une configuration va donner plusieurs couches finales, le layername défini va servir de préfixe au nom des tables. On aura dans notre exemple les couches WFS :
+<br>
 
+Dans le cas du WFS, une configuration va donner plusieurs couches finales, le `layer_name` défini va servir de préfixe au nom des tables. On aura dans notre exemple les couches WFS :
 - `pays_ecoregions:regions_ecologiques`
 - `pays_ecoregions:pays`
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+<br>
 
-```title="Contenu"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 ??? Corps de requête JSON
@@ -65,17 +67,16 @@ Dans le cas du WFS, une configuration va donner plusieurs couches finales, le la
 ????
 <br>
 
-Si on ne précise pas de public_name, c'est le nom natif de stockage qui est utilisé.
+Si on ne précise pas de `public_name`, c’est le nom natif de stockage qui est utilisé.
 
-## Envoi sur les services de diffusion
+### Envoi sur les services de diffusion
 
-À ce stade, aucune information n'a été envoyée aux serveurs Geoserver assurant la diffusion. Cette synchronisation de la configuration sur les serveurs de diffusion, représentés par le point d'accès, se fait via la création d'une offre: la publication. Elle matérialise la présence d'une configuration sur un point d'accès.
+À ce stade, aucune information n’a été envoyée aux serveurs GeoServer assurant la diffusion. Cette synchronisation de la configuration sur les serveurs de diffusion, représentés par le point d’accès, se fait via la création d’une offre : la publication. Elle matérialise la présence d’une configuration sur un point d’accès.
 
-### Consultation des points de diffusion disponibles
+#### Consultation des points de diffusion disponibles
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 ??? Corps de réponse JSON (champ endpoints)
@@ -86,11 +87,10 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 ????
 <br>
 
-### Publication
+#### Publication
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings
 ```
 ??? Corps de requête JSON
@@ -106,6 +106,6 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 
 On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiques` et `pays_ecoregions:pays` dans le [GetCapabilities du service]({{ urls.public.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0)
 
-On peut également récupérer nos données dans QGis. Pour les régions écologiques, le service se limite à 1000 objets, ils ne seront donc pas tous téléchargés en une fois.
+On peut également récupérer nos données dans QGIS. Pour les régions écologiques, le service se limite à 1000 objets, ils ne seront donc pas tous téléchargés en une fois.
 
-![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/donnees_wfs.png){.fr-responsive-img .frx-img-contained}
+![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/alimentation-diffusion/donnees_wfs.png){.fr-responsive-img .frx-border-img .frx-img-contained}

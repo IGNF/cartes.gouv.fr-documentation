@@ -5,18 +5,16 @@ eleventyNavigation:
     order: 4
 summary:
     visible: true
-    depth: 2
+tertiaryTitle: Gestion des styles
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Gestion des styles
+Pour certains types de diffusion, le serveur de diffusion peut avoir besoin de fichiers de configuration. Dans le cas de la diffusion WMS à partir de données vecteur, assurée par GeoServer, ce sont des styles au format SLD et des FTL qui sont utilisés. Afin de les déposer au sein de l’entrepôt, le concept de fichier statique (<span lang="en">_static_</span>) est exploité.
 
-Pour certains types de diffusion, le serveur de diffusion peut avoir besoin de fichiers de configuration. Dans le cas de la diffusion WMS à partir de données vecteur, assurée par Geoserver, ce sont des styles au format SLD et des FTL qui sont utilisés. Afin de les déposer au sein de l'entrepôt, le concept de fichier statique (static) est exploité.
+### Génération d’un SLD
 
-### Génération d'un SLD
-
-Après l'export des styles depuis QGis dans son format, il est nécessaire d'utiliser l'outil geostyler en ligne de commande pour les convertir :
+Après l’export des styles depuis QGIS dans son format, il est nécessaire d’utiliser l’outil GeoStyler en ligne de commande pour les convertir :
 
 ```bash
 $  geostyler-cli -o ecoregions.sld -t sld -s qgis ecoregions.qml
@@ -25,8 +23,8 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ✔ File "pays.qml" translated successfully. Output written to pays.sld
 ```
 
-:::warning Attention
-    Chaque outil d'export peut entraîner des comportements différents. Au final, le SLD sera interprété par Geoserver sur la Géoplateforme. Le plug-in [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) peut également être utilisé.
+:::warning
+Chaque outil d’export peut entraîner des comportements différents. Au final, le SLD sera interprété par GeoServer sur la Géoplateforme. Le plugin [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) peut également être utilisé.
 :::
 
 {{ component("download", {
@@ -43,7 +41,7 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 
 ### Écriture de FTL
 
-Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarker.html) permettent de mettre en forme la réponse HTML lors des appels au GetFeatureInfo
+Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarker.html) permettent de mettre en forme la réponse HTML lors des appels au GetFeatureInfo.
 
 {{ component("download", {
     title: "ecoregions.ftl",
@@ -51,7 +49,7 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
     detail: "FTL - 118o"
 }) }}
 
-```html title="Contenu"
+```plain
 /data/tutoriels/alimentation-diffusion-simple/ecoregions.ftl
 ```
 
@@ -61,24 +59,24 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
     detail: "FTL - 75o"
 }) }}
 
-```html title="Contenu"
+```plain
 /data/tutoriels/alimentation-diffusion-simple/pays.ftl
 ```
 
-### Téléversement dans l'entrepôt
+### Téléversement dans l’entrepôt
 
 On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 
-📄 `ecoregions.sld`
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+📄 `<ecoregions.sld>`
 
-```title="Contenu"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<monde.gpkg>`"],
+        ["file = &lt;ecoregions.sld&gt;"],
         ["type = GEOSERVER-STYLE"],
         ["name = Style pour les écorégions"]
     ]
@@ -98,17 +96,16 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 ????
 <br>
 
-📄 `pays.sld`
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+📄 `<pays.sld>`
 
-```title="Contenu"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<pays.sld>`"],
+        ["file = &lt;pays.sld&gt;"],
         ["type = GEOSERVER-STYLE"],
         ["name = Style pour les pays"]
     ]
@@ -126,21 +123,20 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 ????
 <br>
 
-📄 `ecoregions.ftl`
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+📄 `<ecoregions.ftl>`
 
-```title="Contenu"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<GEOSERVER-FTL>`"],
+        ["file = &lt;ecoregions.ftl&gt;"],
         ["type = GEOSERVER-FTL"],
         ["name = FTL pour les écorégions"]
     ]
 }) }}
-
 ??? Corps de réponse JSON
 ```json
 {
@@ -156,17 +152,16 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 ????
 <br>
 
-📄 `pays.ftl`
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+📄 `<pays.ftl>`
 
-```title="Contenu"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<pays.ftl>`"],
+        ["file = &lt;pays.ftl&gt;"],
         ["type = GEOSERVER-FTL"],
         ["name = FTL pour les pays"]
     ]
@@ -185,4 +180,3 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 ```
 ???
 ????
-<br>

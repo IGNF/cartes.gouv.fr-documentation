@@ -1,29 +1,15 @@
 ---
-subTitle: Livraison des données archives
+title: Livraison des données archives
+eleventyNavigation:
+    key: Livraison des données archives
+    order: 1
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Livraison
 ---
 
 {% from "components/component.njk" import component with context %}
-
-{% set tabnavLinks = [
-  { title: "Présentation", url: "../" },
-  { title: "Livraison", active: true },
-  { title: "Intégration", url: "./integration" },
-  { title: "WFS", url: "./publication-wfs" },
-  { title: "Gestion statistique", url: "./gestion-statistique" },
-  { title: "WMS", url: "./publication-wms" },
-  { title: "TMS", url: "./publication-tmsv" },
-  { title: "Tuilage", url: "./tuilage" },
-  { title: "Alimentation", url: "./alimentation-fme" }
-] %}
-
-{{ component("tabnav", { items: tabnavLinks, forceMobile: true }) }}
-
-## Livraison des données archives
-
-{% include "components/summary.njk" %}
 
 ### Livrer les données
 
@@ -34,14 +20,13 @@ La livraison n’a qu’un rôle temporaire, le temps que les données soient tr
 #### Déclarer la livraison
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 ??? Corps de requête JSON
 ```json
 {
-    "description": "Données mondiales : pays et éco-régions",
+    "description": "Données mondiales : pays et éco-régions",
     "name": "Données mondiales",
     "type": "VECTOR",
     "srs": "EPSG:4326"
@@ -52,7 +37,7 @@ La livraison n’a qu’un rôle temporaire, le temps que les données soient tr
 ```json
 {
     "name": "Données mondiales",
-    "description": "Données mondiales : pays et éco-régions",
+    "description": "Données mondiales : pays et éco-régions",
     "type": "VECTOR",
     "status": "OPEN",
     "srs": "EPSG:4326",
@@ -77,12 +62,11 @@ La livraison n’a qu’un rôle temporaire, le temps que les données soient tr
 #### Téléverser un fichier
 
 Les formats de fichier vecteur gérés sont :
-
 - Geopackage
 - GeoJSON
 - Shapefile
 - CSV :
-    - si la géométrie est dans un colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
+    - si la géométrie est dans une colonne, cette dernière doit avoir comme nom `json`, `geom`, `the_geom`, `wkb` ou `wkt`
     - si la donnée est ponctuelle et que les coordonnées sont dans deux colonnes, elles doivent avoir comme nom :
         - `lon`, `x`, `longitude`
         - `lat`, `y`, `latitude`
@@ -95,15 +79,15 @@ Les formats de fichier vecteur gérés sont :
     - ALTER SEQUENCE
 
 📄 `<monde.gpkg>`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg"
 
-```title="Contenu"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
 ```
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<monde.gpkg>`"]
+        ["file = &lt;monde.gpkg&gt;"]
     ]
 }) }}
 ???
@@ -114,8 +98,7 @@ Les formats de fichier vecteur gérés sont :
 Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
 ??? Corps de réponse JSON
@@ -146,21 +129,18 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 #### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close
 ```
-
 ???
 <br>
 
 #### Consultation des vérifications sur ma livraison
 
-Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne faisant que lire les données déposées.
+Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne faisant que lire les données déposées.
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 ??? Corps de réponse JSON
@@ -194,8 +174,7 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne f
 Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l’appel précédent sera :
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 ??? Corps de réponse JSON
@@ -224,4 +203,3 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 ```
 ???
 ????
-<br>

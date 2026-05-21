@@ -1,29 +1,16 @@
 ---
 title: Alimentation et diffusion simple vecteur
 description: Téléversement de fichiers vecteurs, intégration en base de données, diffusion en WMS et WFS
+layout: layouts/parent_nav_tertiaire.njk
 mermaid: true
 eleventyNavigation:
     key: Alimentation et diffusion simple vecteur
     order: 1
 pictogram: digital/data-visualization.svg
-hideDescriptionSeparator: true
+tertiaryTitle: Présentation
 ---
 
 {% from "components/component.njk" import component with context %}
-
-{% set tabnavLinks = [
-  { title: "Présentation", active: true },
-  { title: "Livraison", url: "./livraison" },
-  { title: "Intégration", url: "./integration" },
-  { title: "WFS", url: "./publication-wfs" },
-  { title: "Gestion statistique", url: "./gestion-statistique" },
-  { title: "WMS", url: "./publication-wms" },
-  { title: "TMS", url: "./publication-tmsv" },
-  { title: "Tuilage", url: "./tuilage" },
-  { title: "Alimentation", url: "./alimentation-fme" }
-] %}
-
-{{ component("tabnav", { items: tabnavLinks, forceMobile: true }) }}
 
 Le but de ce tutoriel va être de diffuser des données vecteur en WFS et WMS. Les concepts de l’entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèse.
 
