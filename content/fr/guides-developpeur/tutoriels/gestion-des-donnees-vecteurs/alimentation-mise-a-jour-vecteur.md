@@ -1,5 +1,5 @@
 ---
-title: Alimentation par mise à jour
+title: Alimentation par mise à jour vecteur
 description: Téléversement de fichiers vecteurs, intégration en base de données déjà existante et diffusée
 mermaid: true
 layout: layouts/parent.njk

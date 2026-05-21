@@ -5,22 +5,24 @@ eleventyNavigation:
     order: 5
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: WMS
 ---
 
-## Configuration de la diffusion WMS
+### Configuration de la diffusion
 
-Contrairement au WFS, une configuration WMS va définir une seule couche finale. Il est possible d'utiliser plusieurs tables, mais seul l'agrégat sera consultable, avec les styles définis.
+Contrairement au WFS, une configuration WMS va définir une seule couche finale. Il est possible d’utiliser plusieurs tables, mais seul l’agrégat sera consultable, avec les styles définis.
 
-La création de la configuration WMS va permettre de vérifier de nombreuses informations :
-
+La création de la configuration WMS va permettre de vérifier de nombreuses informations :
 - nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMS Vecteur de la plateforme)
 - table absente de la donnée stockée
 - style ou FTL exploitant des attributs absents de la table utilisée
 
+<br>
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -61,21 +63,22 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
 ```
 
 ???
+
 <br>
 
-:::warning Attention
-    Une configuration WMS-VECTOR donnera une unique couche. Même si elle utilise plusieurs tables, ces dernières ne seront pas consultables individuellement en WMS. Si c'est votre besoin, faites une configuration (et donc une couche) par table.
+:::warning
+Une configuration WMS-VECTOR donnera une unique couche. Même si elle utilise plusieurs tables, ces dernières ne seront pas consultables individuellement en WMS. Si c’est votre besoin, faites une configuration (et donc une couche) par table.
 :::
 
-## Envoi sur les services de diffusion
+### Envoi sur les services de diffusion
 
-Comme pour le WFS, seule la création d'une offre sur un point d'accès (publication) permet d'envoyer les informations de configuration aux serveurs de diffusion.
+Comme pour le WFS, seule la création d’une offre sur un point d’accès (publication) permet d’envoyer les informations de configuration aux serveurs de diffusion.
 
-### Consultation des points de diffusion disponibles
+#### Consultation des points de diffusion disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
@@ -84,13 +87,14 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 ```
 
 ???
+
 <br>
 
-### Publication
+#### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings
 ```
 
@@ -102,6 +106,11 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 ```
 
 ???
+
 <br>
 
+<<<<<<< HEAD
 On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+=======
+On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [getCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
+>>>>>>> a51c3fc (commit intermediaire 2)

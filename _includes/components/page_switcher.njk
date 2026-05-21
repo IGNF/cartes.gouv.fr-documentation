@@ -11,8 +11,8 @@
       {% endif %}
     {% endif %}
   {% endfor %}
-  {% if currentIndex == -1 and activeUrl != page.url %}
-    {% set fallbackKey = page.url | replace('/', '') %}
+  {% if currentIndex == -1 and sidemenuActive %}
+    {% set fallbackKey = sidemenuActive | replace('/', '') %}
     {% for item in flatNav %}
       {% if currentIndex == -1 %}
         {% set itemKey = (item.url or '') | replace('/', '') %}

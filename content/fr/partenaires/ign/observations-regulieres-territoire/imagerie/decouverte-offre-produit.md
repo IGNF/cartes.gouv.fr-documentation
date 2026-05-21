@@ -6,7 +6,7 @@ eleventyNavigation:
     order: 1
 ---
 
-{# {% from "components/component.njk" import component with context %}
+{% from "components/component.njk" import component with context %}
 
 {% set tabnavLinks = [
   { title: "Présentation", active: true },
@@ -14,7 +14,7 @@ eleventyNavigation:
   { title: "Services web thématique", url: "./service-web-thematique" }
 ] %}
 
-{{ component("tabnav", { items: tabnavLinks }) }} #}
+{{ component("tabnav", { items: tabnavLinks }) }}
 
 {% set currentParent = eleventyNavigation.parent %}
 {% set dernieres = [] %}
