@@ -40,6 +40,7 @@ module.exports = function (eleventyConfig) {
         "./node_modules/swagger-ui/dist/swagger-ui.css": "/css/swagger-ui.css",
         "./node_modules/swagger-ui/dist/swagger-ui-bundle.js": "/js/swagger-ui.js",
         "./node_modules/keycloak-js/lib/keycloak.js": "/js/keycloak.js",
+        "./node_modules/markdown-it/dist/markdown-it.min.js": "js/markdown-it.min.js",
     });
 
     // Run Eleventy when these files change:
@@ -113,6 +114,15 @@ module.exports = function (eleventyConfig) {
                 return item.data.eleventyNavigation && item.data.eleventyNavigation.nav === config.navKey;
             });
         });
+    });
+
+    // Accès sécurisé à templateContent pour éviter TemplateContentPrematureUseError
+    eleventyConfig.addFilter("safeTemplateContent", function (item) {
+        try {
+            return item.templateContent || null;
+        } catch (e) {
+            return null;
+        }
     });
 
     // Filters

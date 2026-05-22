@@ -8,6 +8,6 @@ tags:
     - Géoplateforme
 eleventyNavigation:
     key: Tutoriels API
-    order: 13
+    order: 14
 pictogram: map/compass.svg
 ---

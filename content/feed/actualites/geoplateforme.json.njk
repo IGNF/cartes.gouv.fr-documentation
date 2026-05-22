@@ -1,0 +1,13 @@
+---
+permalink: /feed/actualites/geoplateforme.json
+title: Changements et évolutions de la Géoplateforme
+description: Retrouver les dernières évolutions de la Géoplateforme
+path: /fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/changements-evolutions
+---
+{% set fluxRssList = [] %}
+{% for entry in collections.all %}
+  {% if entry.inputPath.startsWith('./content' ~ path ~ '/') and not entry.inputPath.endsWith('11tydata.js') %}
+    {% set _ = fluxRssList.push(entry) %}
+  {% endif %}
+{% endfor %}
+{% include "components/flux_rss_json.njk" %}

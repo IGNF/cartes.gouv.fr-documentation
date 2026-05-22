@@ -1,0 +1,34 @@
+---
+title: Niveau de service
+layout: layouts/page.njk
+showBreadcrumb: true
+hasLoader: true
+eleventyNavigation:
+    key: Niveau de service
+    order: 5
+    permalink: "/niveau-de-service"
+    nav: main
+---
+
+<div class="fr-mb-4v"></div>
+<div class="fr-grid-row">
+  <div class="fr-col-12 fr-col-xl-8">
+    <h2>Alertes, incidents et maintenances programmées</h2>
+  </div>
+<div class="fr-col-12 fr-col-xl-4 text-right-xl">
+  <a href="/rss/alertes" target="_blank" rel="noreferrer" title="Suivre les alertes par RSS - ouvre une nouvelle fenêtre" id="fr-button-:r2m:" class="fr-btn fr-btn--secondary fr-btn--icon-left fr-mb-2w" data-fr-js-button-actionee="true">Suivre par RSS</a>
+</div>
+</div>
+<div id="service-alert" class="fr-mb-2w">
+</div>
+<h2>Disponibilité des services</h2>
+<p>Le tableau de ci-après, basé sur l’outil Uptimerobot, indique la disponibilité de tous les services de la Géoplateforme sur les 90 derniers jours.</p>
+<div class="fr-grid-row">
+  <div class="fr-col-12">
+    <iframe src="https://status.geopf.fr/" height="800px" width="100%" onLoad="{document.getElementById('loader').style.display = 'none'}"></iframe>
+  </div>
+</div>
+{% js "body" %}
+<script type="text/javascript" src="/js/markdown-it.min.js"></script>
+<script type="text/javascript" src="/js/niveau-de-service.js"></script>
+{% endjs %}

@@ -10,11 +10,11 @@ summary:
 
 {% from "components/component.njk" import component with context %}
 
-En tant que consommateur de données, c'est également via l'API que l'on va pouvoir configurer ses clés d'accès. Cela n'implique pas d'avoir accès à un entrepôt, ni même d'être membre d'une communauté.
+En tant que consommateur de données, c'est également via l’API que l’on va pouvoir configurer ses clés d’accès. Cela n'implique pas d’avoir accès à un entrepôt, ni même d’être membre d’une communauté.
 
 ## Consultation des permissions
 
-L'ensemble des permissions qui m'ont été personnellement données ou qui ont été données à une communauté à laquelle l'utilisateur appartient constitue une sorte de catalogue de données qu'il va être possible de consommer.
+L’ensemble des permissions qui m'ont été personnellement données ou qui ont été données à une communauté à laquelle l’utilisateur appartient constitue une sorte de catalogue de données qu'il va être possible de consommer.
 
 ### Récupérer ses permissions personnelles
 
@@ -95,11 +95,11 @@ En tant que bénéficiaire de cette permission personnelle, je peux la supprimer
 ???
 <br>
 
-Les deux permissions donnent accès à la même offre. Lors de la configuration de la clé, il sera important de préciser quelle permission exploiter, en gardant à l'esprit qu'il est possible de perdre le droit de consommer des données si la permission est modifiée par le diffuseur de la donnée.
+Les deux permissions donnent accès à la même offre. Lors de la configuration de la clé, il sera important de préciser quelle permission exploiter, en gardant à l’esprit qu'il est possible de perdre le droit de consommer des données si la permission est modifiée par le diffuseur de la donnée.
 
 ### Consulter une permission
 
-Dans la suite, nous allons exploiter la permission personnelle. Il est possible d'avoir plus d'informations sur celle-ci.
+Dans la suite, nous allons exploiter la permission personnelle. Il est possible d’avoir plus d’informations sur celle-ci.
 
 ??? GET "{{ urls.api_entrepot }}/users/me/permissions/{permission utilisateur}"
 
@@ -130,9 +130,9 @@ Dans la suite, nous allons exploiter la permission personnelle. Il est possible 
 ???
 <br>
 
-## Gérer une clé d'accès
+## Gérer une clé d’accès
 
-Sans clé d'accès, il n'est pas possible de consulter le service de diffusion, même pour une [requête de capacités du service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0).
+Sans clé d’accès, il n'est pas possible de consulter le service de diffusion, même pour une [requête de capacités du service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0).
 
 ??? GET "{{ urls.private.wfs }}"
 
@@ -160,15 +160,15 @@ Sans clé d'accès, il n'est pas possible de consulter le service de diffusion, 
 ???
 <br>
 
-La clé d'accès est un moyen de s'identifier lors de l'utilisation des services de diffusion. Il existe trois types d'identification :
+La clé d’accès est un moyen de s'identifier lors de l’utilisation des services de diffusion. Il existe trois types d’identification :
 
 * Un hash en paramètre de requête `api_key` ou en header `X-Key`
 * Une authentification `Basic`
-* Une authentification `Bearer` (jeton généré par le gestionnaire d'identité). C'est l'authentification forte, qui peut être nécessaire pour exploiter les permissions dont le champ `only_oauth` est à vrai.
+* Une authentification `Bearer` (jeton généré par le gestionnaire d’identité). C'est l’authentification forte, qui peut être nécessaire pour exploiter les permissions dont le champ `only_oauth` est à vrai.
 
-### Créer une clé d'accès simple
+### Créer une clé d’accès simple
 
-Nous allons ici voir un exemple de mise en place d'une clé de type HASH.
+Nous allons ici voir un exemple de mise en place d’une clé de type HASH.
 
 ??? POST "{{ urls.api_entrepot }}/users/me/keys"
 
@@ -202,14 +202,18 @@ Nous allons ici voir un exemple de mise en place d'une clé de type HASH.
 ???
 <br>
 
-Quel que soit le type de clé, il est possible de préciser des conditions d'utilisation de la clé :
+Quel que soit le type de clé, il est possible de préciser des conditions d’utilisation de la clé :
 
-* Limiter les IP pouvant l'utiliser (whitelist)
+* Limiter les IP pouvant l’utiliser (whitelist)
 * Bloquer des IP (blacklist)
 * Forcer le referer
 * Forcer le user agent
 
-Il est maintenant possible [d'interroger le service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle). Cependant, aucune couche ne semble disponible, car nous n'avons pas encore donné de droits à cette clé.
+Il est maintenant possible [d’interroger le service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle). Cependant, aucune couche ne semble disponible, car nous n'avons pas encore donné de droits à cette clé.
+
+:::warning Caractères spéciaux
+    Les caractères ( ) . % + - * ? [ ^ $ doivent être échappés avec un % (notamment lorsqu’un referer est forcé). Donc pour définir le referer www.geoportail-urbanisme.gouv.fr, il faut préciser "referer" : "www.geoportail%-urbanisme.gouv.fr".
+:::
 
 ### Gérer les accès à la clé
 
@@ -232,7 +236,7 @@ Les permissions ouvrent des droits a priori sur des offres, mais c'est à la cha
 ???
 <br>
 
-On peut connaître toutes les offres que la clé peut consommer avec l'appel suivant.
+On peut connaître toutes les offres que la clé peut consommer avec l’appel suivant.
 
 ??? GET "{{ urls.api_entrepot }}/users/me/keys/{key HASH}/accesses"
 
@@ -261,7 +265,7 @@ On peut connaître toutes les offres que la clé peut consommer avec l'appel sui
 ???
 <br>
 
-On peut maintenant voir les couches correspondantes à l'offre dans les [capacités du serveur]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle).
+On peut maintenant voir les couches correspondantes à l’offre dans les [capacités du serveur]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle).
 
 ??? GET "{{ urls.private.wfs }}"
 
@@ -325,7 +329,7 @@ Clé HASH dans QGis
 
 ### Créer une clé de type BASIC
 
-Nous allons ajouter à cette clé des limites d'utilisation et un user agent particulier qui limite l'usage de la clé au client QGis. À noter que l'ajout d'un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
+Nous allons ajouter à cette clé des limites d’utilisation et un user agent particulier qui limite l’usage de la clé au client QGis. À noter que l’ajout d’un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
 
 
 ??? POST "{{ urls.api_entrepot }}/users/me/keys"
@@ -364,9 +368,9 @@ Nous allons ajouter à cette clé des limites d'utilisation et un user agent par
 ???
 <br>
 
-L'affectation d'accès sur cette clé se fait exactement comme pour la première clé.
+L’affectation d’accès sur cette clé se fait exactement comme pour la première clé.
 
-Afin que les requêtes passent, il est maintenant nécessaire que le header "Referer" contienne une valeur avec QGIS (cela permet par exemple d'accepter toutes les requêtes venant de QGis, quelle que soit la version et le système d'exploitation).
+Afin que les requêtes passent, il est maintenant nécessaire que le header "Referer" contienne une valeur avec QGIS (cela permet par exemple d’accepter toutes les requêtes venant de QGis, quelle que soit la version et le système d’exploitation).
 
 
 ![Clé BASIC dans QGis](/img/guides-developpeur/controle-acces/qgis_cle_basic.png){.fr-responsive-img .frx-img-contained} 
@@ -374,7 +378,7 @@ Clé BASIC dans QGis
 
 ### Créer une clé de type OAUTH2
 
-Cette clé est un moyen de préciser que l'on va consommer les services de diffusion en utilisant son compte. Ce mode d'identification de la consommation est considéré comme la seule sécurisation forte. C'est pourquoi certaines permissions peuvent n'autoriser leur usage qu'avec de telles clés. Comme chaque utilisateur n'a qu'un compte, il ne peut se créer qu'une seule clé de ce type.
+Cette clé est un moyen de préciser que l’on va consommer les services de diffusion en utilisant son compte. Ce mode d’identification de la consommation est considéré comme la seule sécurisation forte. C'est pourquoi certaines permissions peuvent n'autoriser leur usage qu'avec de telles clés. Comme chaque utilisateur n'a qu'un compte, il ne peut se créer qu'une seule clé de ce type.
 
 ??? POST "{{ urls.api_entrepot }}/users/me/keys"
 
@@ -404,13 +408,13 @@ Cette clé est un moyen de préciser que l'on va consommer les services de diffu
 ???
 <br>
 
-L'affectation d'accès sur cette clé se fait exactement comme pour la première clé.
+l’affectation d’accès sur cette clé se fait exactement comme pour la première clé.
 
 
 ![Clé OAUTH2 dans QGis](/img/guides-developpeur/controle-acces/qgis_cle_oauth2.png){.fr-responsive-img .frx-img-contained} 
 Clé OAUTH2 dans QGis
 
-* URL de requête : `{{ urls.iam }}/protocol/openid-connect/auth`
-* URL du jeton : `{{ urls.iam }}/protocol/openid-connect/token`
-* Client ID : `qgis`
-* Secret client : `{{ secrets.qgis }}`
+* URL de requête : `{{ urls.iam }}/protocol/openid-connect/auth`
+* URL du jeton : `{{ urls.iam }}/protocol/openid-connect/token`
+* Client ID : `qgis`
+* Secret client : `{{ secrets.qgis }}`
