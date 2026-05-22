@@ -472,11 +472,11 @@ Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extr
 ???
 <br>
 
-On peut vérifier la présence de notre couche `ortho` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `ortho` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
 
 ### Visualisation des données
 
-On peut visualiser nos données dans QGis en WMS.
+On peut visualiser nos données dans QGIS en WMS.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_wms_harvest.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

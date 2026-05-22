@@ -1,40 +1,39 @@
 ---
-title: Injection d'un deuxième lot de données
+title: Injection d’un deuxième lot de données
 eleventyNavigation:
-    key: Injection d'un deuxième lot de données
+    key: Injection d’un deuxième lot de données
     order: 3
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Deuxième injection
 ---
 
 {% from "components/component.njk" import component with context %}
 
+### Ajout du deuxième lot de données
 
-## Ajout du deuxième lot de données
-
-### Déclarer la livraison
+#### Déclarer la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
 ```json
 {
     "description": "Données sur le Doubs",
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR",
     "srs": "EPSG:4326"
 }
 ```
 
-
 ```json
 {
     "description": "Données sur le Doubs",
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR",
     "status": "OPEN",
     "srs": "EPSG:4326",
@@ -52,52 +51,58 @@ summary:
     "_id": "{upload injection 2}"
 }
 ```
+
 ???
+
 <br>
 
-### Téléverser les fichiers CSV et CSVT
+#### Téléverser les fichiers CSV et CSVT
 
 📄 `<installation.csv>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/data?path=data/installation.csv"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/data?path=data/installation.csv
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<installation.csv>`"]
+        ["file = &lt;installation.csv&gt;"]
     ]
 }) }}
 
 ???
+
 <br>
 
 📄 `<installation.csvt>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/data?path=data/installation.csvt"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/data?path=data/installation.csvt
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<installation.csvt>`"]
+        ["file = &lt;installation.csvt&gt;"]
     ]
 }) }}
 
 ???
+
 <br>
 
-### Contrôler le contenu
+#### Contrôler le contenu
 
-Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
+Afin de vérifier que tous les fichiers ont bien été déposés, et l’éventuelle arborescence :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/tree"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/tree
 ```
 
@@ -124,26 +129,28 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 ```
 
 ???
+
 <br>
 
-## Finalisation de la livraison
+### Finalisation de la livraison
 
-### Fermeture
+#### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/close"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/close
 ```
 
 ???
+
 <br>
 
-### Consultation des vérifications sur ma livraison
+#### Consultation des vérifications sur ma livraison
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/checks"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/checks
 ```
 
@@ -170,22 +177,24 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
     "failed": []
 }
 ```
+
 ???
+
 <br>
 
-## Injection des données
+### Injection des données
 
-### Configuration de l'exécution de traitement
+#### Configuration de l’exécution de traitement
 
-On utilise à nouveau le traitement d'intégration de données vecteur.
+On utilise à nouveau le traitement d’intégration de données vecteur.
 
-:::warning Points d'attention
-    Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu'en créer une nouvelle.
+:::warning
+Pour la donnée en sortie, on ne précise pas un nom, mais l’identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu’en créer une nouvelle.
 :::
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -217,7 +226,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
         "upload": [
             {
                 "type": "VECTOR",
-                "name": "Installations classées pour la protection de l'environnement",
+                "name": "Installations classées pour la protection de l’environnement",
                 "status": "CLOSED",
                 "srs": "EPSG:4326",
                 "_id": "{upload injection 2}"
@@ -227,7 +236,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     },
     "output": {
         "stored_data": {
-            "name": "Installations classées pour la protection de l'environnement",
+            "name": "Installations classées pour la protection de l’environnement",
             "type": "VECTOR-DB",
             "status": "GENERATED",
             "srs": "EPSG:4326",
@@ -238,31 +247,34 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     "_id": "{execution injection 2}"
 }
 ```
+
 ???
+
 <br>
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution injection 2}/launch"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution injection 2}/launch
 ```
 
 ???
+
 <br>
 
-## Consultation de la donnée
+### Consultation de la donnée
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
 ```json
 {
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR-DB",
     "srs": "EPSG:4326",
     "contact": "contact@ign.fr",
@@ -346,26 +358,29 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     }
 }
 ```
+
 ???
+
 <br>
 
-L'étendue a été mise à jour ainsi que la taille (de 270 336 octets à 1 073 152).
+L’étendue a été mise à jour ainsi que la taille (de 270 336 à 1 073 152 octets).
 
-## Nettoyage de la livraison
+### Nettoyage de la livraison
 
-Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
+Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}
 ```
 
 ???
+
 <br>
 
-## Consultation du flux WMS
+### Consultation du flux WMS
 
 Notre flux WMS retourne désormais de la donnée sur les Ardennes et le Doubs.
 
-![Visualisation du premier lot de données](/img/guides-developpeur/vecteur/donnees_wms_inj2.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Visualisation du deuxième lot de données](/img/guides-developpeur/vecteur/donnees_wms_inj2.png){.fr-responsive-img .frx-border-img .frx-img-contained}

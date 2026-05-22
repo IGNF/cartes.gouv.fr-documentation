@@ -1,39 +1,39 @@
 ---
-title: Initialisation d'une donnée vecteur pour des mises à jour postérieures
+title: Initialisation d’une donnée vecteur pour des mises à jour postérieures
 eleventyNavigation:
-    key: Initialisation d'une donnée vecteur pour des mises à jour postérieures
+    key: Initialisation d’une donnée vecteur pour des mises à jour postérieures
     order: 1
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Initialisation
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Livraison des informations d'initialisation
+### Livraison des informations d’initialisation
 
-### Déclarer la livraison
+#### Déclarer la livraison
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
 ```json
 {
-    "description": "Seule la structure est définie : une table et une vue",
-    "name": "Installations classées pour la protection de l'environnement",
+    "description": "Seule la structure est définie : une table et une vue",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR",
     "srs": "EPSG:4326"
 }
 ```
 
-
 ```json
 {
-    "name": "Installations classées pour la protection de l'environnement",
-    "description": "Seule la structure est définie : une table et une vue",
+    "name": "Installations classées pour la protection de l’environnement",
+    "description": "Seule la structure est définie : une table et une vue",
     "type": "VECTOR",
     "status": "OPEN",
     "srs": "EPSG:4326",
@@ -51,39 +51,43 @@ summary:
     "_id": "{upload initialisation}"
 }
 ```
+
 ???
+
 <br>
 
-### Téléverser le fichier SQL
+#### Téléverser le fichier SQL
 
 ```sql
 {{ "public/data/tutoriels/alimentation-maj/installation-init.sql" | readFILE | safe }}
 ```
 
 📄 `<installation-init.sql>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/data?path=data/installation-init.sql"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/data?path=data/installation-init.sql
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<installation-init.sql>`"]
+        ["file = &lt;installation-init.sql&gt;"]
     ]
 }) }}
 
 ???
+
 <br>
 
-### Contrôler le contenu
+#### Contrôler le contenu
 
-Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
+Afin de vérifier que tous les fichiers ont bien été déposés, et l’éventuelle arborescence :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/tree"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/tree
 ```
 
@@ -103,27 +107,30 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
     }
 ]
 ```
+
 ???
+
 <br>
 
-## Finalisation de la livraison
+### Finalisation de la livraison
 
-### Fermeture
+#### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/close"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/close
 ```
 
 ???
+
 <br>
 
-### Consultation des vérifications sur ma livraison
+#### Consultation des vérifications sur ma livraison
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/checks"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/checks
 ```
 
@@ -150,18 +157,20 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
     "failed": []
 }
 ```
+
 ???
+
 <br>
 
-## Création de la donnée vide
+### Création de la donnée vide
 
-### Configuration de l'exécution de traitement
+#### Configuration de l’exécution de traitement
 
-On utilise le traitement d'intégration de données vecteur.
+On utilise le traitement d’intégration de données vecteur.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -175,7 +184,7 @@ On utilise le traitement d'intégration de données vecteur.
     },
     "output": {
         "stored_data": {
-            "name": "Installations classées pour la protection de l'environnement",
+            "name": "Installations classées pour la protection de l’environnement",
             "storage_tags": ["VECTEUR"]
         }
     }
@@ -194,7 +203,7 @@ On utilise le traitement d'intégration de données vecteur.
         "upload": [
             {
                 "type": "VECTOR",
-                "name": "Installations classées pour la protection de l'environnement",
+                "name": "Installations classées pour la protection de l’environnement",
                 "status": "CLOSED",
                 "srs": "EPSG:4326",
                 "_id": "{upload initialisation}"
@@ -204,7 +213,7 @@ On utilise le traitement d'intégration de données vecteur.
     },
     "output": {
         "stored_data": {
-            "name": "Installations classées pour la protection de l'environnement",
+            "name": "Installations classées pour la protection de l’environnement",
             "type": "VECTOR-DB",
             "status": "CREATED",
             "_id": "{stored data}"
@@ -214,31 +223,34 @@ On utilise le traitement d'intégration de données vecteur.
     "_id": "{execution initialisation}"
 }
 ```
+
 ???
+
 <br>
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution initialisation}/launch"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution initialisation}/launch
 ```
 
 ???
+
 <br>
 
-## Consultation de la donnée
+### Consultation de la donnée
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
 ```json
 {
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR-DB",
     "srs": "EPSG:4326",
     "contact": "contact@ign.fr",
@@ -295,27 +307,30 @@ On utilise le traitement d'intégration de données vecteur.
     }
 }
 ```
+
 ???
+
 <br>
 
-On retrouve bien notre table et notre vue, qu'on distingue grâce au champ `type`.
+On retrouve bien notre table et notre vue, que l’on distingue grâce au champ `type`.
 
-## Nettoyage de la livraison
+### Nettoyage de la livraison
 
-Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
+Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}
 ```
 
 ???
+
 <br>
 
-## Publication du flux
+### Publication du flux
 
-### Téléversement du style
+#### Téléversement du style
 
 {{ component("download", {
     title: "installation.sld",
@@ -324,21 +339,21 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 }) }}
 
 📄 `<installation.sld>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<installation.sld>`"],
+        ["file = &lt;installation.sld&gt;"],
         ["type = GEOSERVER-STYLE"],
         ["name = Style pour les installations"]
     ]
 }) }}
-  
 
 ```json
 {
@@ -352,39 +367,41 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
     }
 }
 ```
+
 ???
+
 <br>
 
-### Téléversement du template d'info-bulle
+#### Téléversement du template d’info-bulle
 
 {{ component("download", {
     title: "installation.ftl",
-    href: "/data/tutoriels/alimentation-maj/installation.delete",
+    href: "/data/tutoriels/alimentation-maj/installation.ftl",
     detail: "Ftl - 45 octets"
 }) }}
 
 📄 `<installation.ftl>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<installation.ftl>`"],
+        ["file = &lt;installation.ftl&gt;"],
         ["type = GEOSERVER-FTL"],
         ["name = FTL pour les installations"]
     ]
 }) }}
-  
 
 ```json
 {
     "name": "FTL pour les installations",
     "type": "GEOSERVER-FTL",
-    "_id": "{sld}",
+    "_id": "{ftl}",
     "type_infos": {
         "used_attributes": [
             "nom_ets",
@@ -396,25 +413,27 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
     }
 }
 ```
+
 ???
+
 <br>
 
-### Création de la configuration WMS
+#### Création de la configuration WMS
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
 ```json
 {
     "type": "WMS-VECTOR",
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "layer_name": "installations_classees",
     "type_infos": {
-        "title": "Installations classées pour la protection de l'environnement",
-        "abstract": "Ce jeu de données correspond aux Installations classées pour la protection de l'environnement (ICPE) soumises à autorisation ou à enregistrement (en fonctionnement ou en cessation d'activité).",
+        "title": "Installations classées pour la protection de l’environnement",
+        "abstract": "Ce jeu de données correspond aux Installations classées pour la protection de l’environnement (ICPE) soumises à autorisation ou à enregistrement (en fonctionnement ou en cessation d’activité).",
         "keywords": [
             "Tutoriel", "Géorisques", "Installations classées"
         ],
@@ -425,36 +444,37 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
             "north": 85
         },
         "used_data": [
-        {
-            "relations": [
-                {
-                    "name": "installation_autorisation",
-                    "style": "{sld}",
-                    "ftl": "{ftl}"
-                }
-            ],
-            "stored_data": "{stored data}"
-        }
+            {
+                "relations": [
+                    {
+                        "name": "installation_autorisation",
+                        "style": "{sld}",
+                        "ftl": "{ftl}"
+                    }
+                ],
+                "stored_data": "{stored data}"
+            }
         ]
     }
 }
 ```
+
 ???
+
 <br>
 
-:::warning Points d'attention
-    - Comme les tables sont vides, il est indispensable de surcharger le rectangle englobant, en mettant la couverture cible des données (ici une bbox mondiale)
-    - On publie bien la vue et non la table
+:::warning
+- Comme les tables sont vides, il est indispensable de surcharger le rectangle englobant, en mettant la couverture cible des données (ici une bbox mondiale)
+- On publie bien la vue et non la table
 :::
 
-### Publication
+#### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings
 ```
-
 
 ```json
 {
@@ -462,9 +482,15 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
     "open": true
 }
 ```
+
 ???
+
 <br>
 
+<<<<<<< HEAD
 On peut vérifier la présence de notre couche `installations_classees` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+=======
+On peut vérifier la présence de notre couche `installations_classees` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
+>>>>>>> 9e45dac (integration a 'Alimentation par mise à jour vecteur')
 
-Si on consulte la donnée sur QGis, on ne verra pour le moment aucune donnée.
+Si on consulte la donnée sur QGIS, on ne verra pour le moment aucune donnée.

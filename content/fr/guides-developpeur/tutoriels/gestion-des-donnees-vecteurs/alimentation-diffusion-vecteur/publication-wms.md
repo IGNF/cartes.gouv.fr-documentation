@@ -109,8 +109,4 @@ Comme pour le WFS, seule la création d’une offre sur un point d’accès (pub
 
 <br>
 
-<<<<<<< HEAD
-On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
-=======
-On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [getCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
->>>>>>> a51c3fc (commit intermediaire 2)
+On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
