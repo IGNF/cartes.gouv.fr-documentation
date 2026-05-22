@@ -1,29 +1,29 @@
 ---
-title: Injection d'un premier lot de données
+title: Injection d’un premier lot de données
 eleventyNavigation:
-    key: Injection d'un premier lot de données
+    key: Injection d’un premier lot de données
     order: 2
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Première injection
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Ajout du premier lot de données
+### Ajout du premier lot de données
 
-### Déclarer la livraison
+#### Déclarer la livraison
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 ??? Corps de requête JSON
 ```json
 {
     "description": "Données sur les Ardennes",
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR",
     "srs": "EPSG:4326"
 }
@@ -33,7 +33,7 @@ summary:
 ```json
 {
     "description": "Données sur les Ardennes",
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR",
     "status": "OPEN",
     "srs": "EPSG:4326",
@@ -55,32 +55,29 @@ summary:
 ????
 <br>
 
-### Téléverser le fichier Geopackage
+#### Téléverser le fichier GeoPackage
 
 📄 `<installation.gpkg>`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/data?path=data/installation.gpkg"
 
-```title="Contenu"
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/data?path=data/installation.gpkg"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/data?path=data/installation.gpkg
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<installation.gpkg>`"]
+        ["file = &lt;installation.gpkg&gt;"]
     ]
 }) }}
-
 ???
 <br>
 
-### Contrôler le contenu
+#### Contrôler le contenu
 
-Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
+Afin de vérifier que tous les fichiers ont bien été déposés, et l’éventuelle arborescence :
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/tree"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/tree
 ```
 ??? Corps de réponse JSON
@@ -104,24 +101,21 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 ????
 <br>
 
-## Finalisation de la livraison
+### Finalisation de la livraison
 
-### Fermeture
+#### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/close"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/close
 ```
-
 ???
 <br>
 
-### Consultation des vérifications sur ma livraison
+#### Consultation des vérifications sur ma livraison
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/checks"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}/checks
 ```
 ??? Corps de réponse JSON
@@ -152,19 +146,18 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 ????
 <br>
 
-## Injection des données
+### Injection des données
 
-### Configuration de l'exécution de traitement
+#### Configuration de l’exécution de traitement
 
-On utilise à nouveau le traitement d'intégration de données vecteur.
+On utilise à nouveau le traitement d’intégration de données vecteur.
 
-:::warning Points d'attention
-    Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu'en créer une nouvelle.
+:::warning
+Pour la donnée en sortie, on ne précise pas un nom, mais l’identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu’en créer une nouvelle.
 :::
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 ??? Corps de requête JSON
@@ -197,7 +190,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
         "upload": [
             {
                 "type": "VECTOR",
-                "name": "Installations classées pour la protection de l'environnement",
+                "name": "Installations classées pour la protection de l’environnement",
                 "status": "CLOSED",
                 "srs": "EPSG:4326",
                 "_id": "{upload injection 1}"
@@ -207,7 +200,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     },
     "output": {
         "stored_data": {
-            "name": "Installations classées pour la protection de l'environnement",
+            "name": "Installations classées pour la protection de l’environnement",
             "type": "VECTOR-DB",
             "status": "GENERATED",
             "srs": "EPSG:4326",
@@ -222,28 +215,25 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 ????
 <br>
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution injection 1}/launch"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution injection 1}/launch
 ```
-
 ???
 <br>
 
-## Consultation de la donnée
+### Consultation de la donnée
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 ??? Corps de réponse JSON
 ```json
 {
-    "name": "Installations classées pour la protection de l'environnement",
+    "name": "Installations classées pour la protection de l’environnement",
     "type": "VECTOR-DB",
     "srs": "EPSG:4326",
     "contact": "contact@ign.fr",
@@ -331,24 +321,22 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 ????
 <br>
 
-On note qu'une étendue a pu être calculée, et que la taille est passée de 16 384 octets à 270 336. Le dernier événement est une modification et plus une génération.
+On note qu’une étendue a pu être calculée, et que la taille est passée de 16 384 à 270 336 octets. Le dernier événement est une modification et plus une génération.
 
-## Nettoyage de la livraison
+### Nettoyage de la livraison
 
-Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
+Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 1}
 ```
-
 ???
 <br>
 
-## Consultation du flux WMS
+### Consultation du flux WMS
 
-Sans avoir à modifier la configuration de la diffusion, notre flux WMS retourne désormais de la donnée sur les Ardennes
+Sans avoir à modifier la configuration de la diffusion, notre flux WMS retourne désormais de la donnée sur les Ardennes.
 
 ![Visualisation du premier lot de données](/img/guides-developpeur/vecteur/donnees_wms_inj1.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
