@@ -91,4 +91,4 @@ Collectivités, gestionnaires d’infrastructures, producteurs de données méti
 - Vous souhaitez participer à l’amélioration des données diffusées par l’IGN sur votre territoire ?
 
 
-Vous pouvez, vous aussi, rejoindre la communauté BD France et contribuer à construire le référentiel géographique national de demain. En attendant l’ouverture de la communauté dédiée, vous pouvez déjà nous écrire pour le faire savoir, vous serez ainsi informés dès sa mise en ligne 👉 [contact.geoservices@ign.fr](mailto:contact.geoservices@ign.fr)
+Vous pouvez, vous aussi, rejoindre la communauté BD France et contribuer à construire le référentiel géographique national de demain. En attendant l’ouverture de la communauté dédiée, vous pouvez déjà nous écrire pour le faire savoir, vous serez ainsi informés dès sa mise en ligne 👉 [contact.geoservices@ign.fr](mailto:contact.geoservices@ign.fr)

@@ -31,7 +31,7 @@ _Disponible depuis 2026 :_
 _Offre CARTO-PLUS enrichie avec 2 couches :_ 
 _Sans et avec conservation d’échelle des DROM :_ ADE-COG-CARTOPLUS-AVEC-ECHELLE_4-0_GPKG_LAMB93_FRA-ED2026-01-01.gpkg
 
-<span style="color:orange">**2**</span>   Ajout de 2 nouveaux formats en téléchargement pour ADMIN EXPRESS COG : GeoParquet et FlatGeoBuf (disponibles uniquement à l’échelle France entière « FRA » en WGS84)
+<span style="color:orange">**2**</span>   Ajout de 2 nouveaux formats en téléchargement pour ADMIN EXPRESS COG : GeoParquet et FlatGeobuf (disponibles uniquement à l’échelle France entière « FRA » en WGS84)
 
 ![ADMIN EXPRESS COG](/img/partenaires/ign/generalites/actualites/2026-05-admin-express-cog/03-admin-express-cog.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -55,4 +55,4 @@ _Sans et avec conservation d’échelle des DROM :_ ADE-COG-CARTOPLUS-AVEC-ECHE
 
 ![Offre IRIS](/img/partenaires/ign/generalites/actualites/2026-05-admin-express-cog/04-admin-express-cog.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-L’ajout des nouveaux formats GeoParquet et FlatGeoBuf sur le produit [IRIS GE](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_IRIS-GE) est en cours. 
+L’ajout des nouveaux formats GeoParquet et FlatGeobuf sur le produit [IRIS... GE](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_IRIS-GE) est en cours. 
