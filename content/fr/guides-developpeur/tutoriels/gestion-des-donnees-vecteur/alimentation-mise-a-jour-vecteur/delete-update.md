@@ -17,7 +17,7 @@ On peut également réaliser des suppressions et des modifications dans les tabl
 
 <br>
 
-Les suppressions sont jouées en premier, puis les modifications et enfin les insertions via des fichiers vecteurs comme vu précédemment.
+Les suppressions sont jouées en premier, puis les modifications et enfin les insertions via des fichiers vecteur comme vu précédemment.
 
 ### Livraison des modifications
 

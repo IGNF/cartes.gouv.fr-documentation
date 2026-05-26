@@ -1,6 +1,6 @@
 ---
 title: Alimentation et diffusion simple vecteur
-description: Téléversement de fichiers vecteurs, intégration en base de données, diffusion en WMS et WFS
+description: Téléversement de fichiers vecteur, intégration en base de données, diffusion en WMS et WFS
 layout: layouts/parent_nav_tertiaire.njk
 mermaid: true
 eleventyNavigation:

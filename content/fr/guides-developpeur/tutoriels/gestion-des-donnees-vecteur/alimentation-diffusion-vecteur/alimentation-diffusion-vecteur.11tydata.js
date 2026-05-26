@@ -2,7 +2,7 @@ module.exports = {
     layout: "layouts/article_nav_tertiaire.njk",
     segments: [
         {
-            url: "/guides-developpeur/tutoriels/gestion-des-donnees-vecteurs/alimentation-diffusion-vecteur/",
+            url: "/guides-developpeur/tutoriels/gestion-des-donnees-vecteur/alimentation-diffusion-vecteur/",
             title: "Alimentation et diffusion simple vecteur",
         },
     ],

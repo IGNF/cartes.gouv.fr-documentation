@@ -5,19 +5,21 @@ eleventyNavigation:
     order: 3
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: WMTS/TMS
 ---
 
-## Configuration de la diffusion tuilée
+### Configuration de la diffusion tuilée
 
-La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. On va contrôler à ce moment les paramètres et détecter les erreurs ou conflits potentiels :
-
-- nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMTS-TMS de la plateforme)
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. On va contrôler à ce moment les paramètres et détecter les erreurs ou conflits potentiels :
+- Nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMTS/TMS de la plateforme)
 - Niveau absent de la donnée stockée
+
+<br>
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -52,21 +54,22 @@ La configuration centralise toutes les informations nécessaires à la diffusion
 ```
 
 ???
+
 <br>
 
-Si les niveaux d'utilisation ne sont pas cohérents avec ce que contient la pyramide, une erreur est retournée.
+Si les niveaux d’utilisation ne sont pas cohérents avec ce que contient la pyramide, une erreur est retournée.
 
-On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du service. On configure également le GetFeatureInfo : il retournera ici la valeur du pixel dans la donnée.
+On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du service. On configure également le GetFeatureInfo : il retournera ici la valeur du pixel dans la donnée.
 
-## Envoi sur les services de diffusion
+### Envoi sur les services de diffusion
 
-À ce stade, aucune information n'a été envoyée aux serveurs ROK4 assurant la diffusion. Cette synchronisation de la configuration sur les serveurs de diffusion, représentés par le point d'accès, se fait via la création d'une offre, la publication. Elle matérialise la présence d'une configuration sur un point d'accès.
+À ce stade, aucune information n’a été envoyée aux serveurs ROK4 assurant la diffusion. Cette synchronisation de la configuration sur les serveurs de diffusion, représentés par le point d’accès, se fait via la création d’une offre, la publication. Elle matérialise la présence d’une configuration sur un point d’accès.
 
-### Consultation des points de diffusion disponibles
+#### Consultation des points de diffusion disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
@@ -75,13 +78,14 @@ On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du serv
 ```
 
 ???
+
 <br>
 
-### Publication
+#### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings
 ```
 
@@ -93,13 +97,15 @@ On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du serv
 ```
 
 ???
+
 <br>
 
-On peut vérifier la présence de nos couches `scan1000` dans :
-
+On peut vérifier la présence de nos couches `scan1000` dans :
 - le [GetCapabilities du service WMTS]({{ urls.public.wmts }}?REQUEST=GetCapabilities&SERVICE=WMTS&VERSION=1.0.0)
 - le [GetCapabilities du service TMS]({{ urls.public.tms }}/1.0.0)
 
-On peut visualiser nos données dans QGis en WMTS.
+<br>
+
+On peut visualiser nos données dans QGIS en WMTS.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}

@@ -1,15 +1,16 @@
 ---
 title: Alimentation et diffusion simple
-description: Téléversement d'images géoréférencées, calcul de pyramide raster, diffusion en WMS, WMTS et TMS
+description: Téléversement d’images géoréférencées, calcul de pyramide raster, diffusion en WMS, WMTS et TMS
 mermaid: true
-layout: layouts/parent.njk
+layout: layouts/parent_nav_tertiaire.njk
 eleventyNavigation:
     key: Alimentation et diffusion simple raster
     order: 1
 pictogram: digital/data-visualization.svg
+tertiaryTitle: Présentation
 ---
 
-Le but de ce tutoriel est de diffuser des données raster (images géoréférencées) en WMTS/TMS et WMS. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
+Le but de ce tutoriel est de diffuser des données raster (images géoréférencées) en WMTS/TMS et WMS. Les concepts de l’entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
 
 ```mermaid
 ---
@@ -24,7 +25,7 @@ stateDiagram
         Vérification (check)
     end note
 
-    PYR: Calcul de la pyramide d'image
+    PYR: Calcul de la pyramide d’image
     note left of PYR
         Traitement (processing)
         Exécution de traitement (processing execution)
@@ -34,14 +35,14 @@ stateDiagram
     PUB_TILED: Publication en WMTS/TMS
     note right of PUB_TILED
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
     PUB_WMS: Publication en WMS
     note right of PUB_WMS
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
         Fichier statique (static)
     end note
@@ -72,7 +73,7 @@ flowchart LR
         sto["Stockage (storage)"]
         chec["Vérification (check)"]
         proc["Traitement (processing)"]
-        endp["Point d'accès (endpoint)"]
+        endp["Point d’accès (endpoint)"]
     end
 
 	subgraph dat[Entrepôt]
@@ -83,7 +84,7 @@ flowchart LR
         off["Offre (offering)"]
 	end
 
-    dat -- à accès à une partie, avec quota ----> glo
+    dat -- a accès à une partie, avec quota ----> glo
 
     exe -- utilise en entrée --> upl
     exe -- génère en sortie --> sd
@@ -109,6 +110,6 @@ flowchart LR
 
 ## Données du tutoriel
 
-Les données de l'exemple sont constituées d'une image SCAN 1000 sur la Corse, au format [TIFF](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tif) avec un [TFW](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tfw) pour le géoréférencement.
+Les données de l’exemple sont constituées d’une image SCAN 1000 sur la Corse, au format [TIFF](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tif) avec un [TFW](/data/tutoriels/raster/alimentation-diffusion-simple/scan1000_corse.tfw) pour le géoréférencement.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_presentation_raster.png){.fr-responsive-img .frx-border-img .frx-img-contained}

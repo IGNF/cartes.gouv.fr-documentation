@@ -1,60 +1,63 @@
 ---
-title: Exemple d'ajout de colonne avec valeur paramétrable
+title: Exemple d’ajout de colonne avec valeur paramétrable
 eleventyNavigation:
-    key: Exemple d'ajout de colonne avec valeur paramétrable
+    key: Exemple d’ajout de colonne avec valeur paramétrable
     order: 1
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Exemple d’ajout de colonne
 ---
 
 {% from "components/component.njk" import component with context %}
 
-Dans cet exemple, on part de la donnée des écorégions du tutoriel de base, publiée en WFS, que l'on va modifier en ajoutant une colonne.
+Dans cet exemple, on part de la donnée des écorégions du tutoriel de base, publiée en WFS, que l’on va modifier en ajoutant une colonne.
 
-## Téléversement d'un fichier SQL de dérivation
+### Téléversement d’un fichier SQL de dérivation
 
-Toutes ces actions vont être définies au format SQL, dans un fichier statique. Ce fichier n'a pas vocation à contenir de la donnée, mais simplement des instructions de modification
+Toutes ces actions vont être définies au format SQL, dans un fichier statique. Ce fichier n’a pas vocation à contenir de la donnée, mais simplement des instructions de modification.
 
-Exemple :
+Exemple :
+
 {{ component("download", {
     title: "derivation.sql",
     href: "/data/tutoriels/alimentation-maj/derivation.sql",
-    detail: "SQL - 133Ko"
+    detail: "SQL - 133 Ko"
 }) }}
 
-```sql title="Contenu"
+```sql
 ALTER TABLE ecoregions ADD COLUMN test_add_column integer;
 
 UPDATE ecoregions
    SET test_add_column = nnh * {{ params.multiply }};
 ```
 
-Ce fichier va permettre :
+Ce fichier va permettre :
+- D’ajouter une colonne à la table `ecoregions`
+- De remplir avec pour valeur celle de l’attribut `nnh` multipliée par un nombre fourni en paramètre de l’exécution de traitement. La syntaxe {% raw %}`{{ params.<x> }}`{% endraw %} permet de rendre dynamique ces scripts de dérivation.
 
-- D'ajouter une colonne à la table `ecoregions`
-- De remplir avec pour valeur celle de l'attribut `nnh` multipliée par un nombre fourni en paramètre de l'exécution de traitement. La syntaxe {% raw %}`{{ params.<x> }}`{% endraw %} permet de rendre dynamique ces scripts de dérivation.
+<br>
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-```title="Contenu"
+```plain
 https://data.geopf.fr/api/datastores/{datastore}/statics
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<derivation.sql>`"],
+        ["file = &lt;derivation.sql&gt;"],
         ["type = DERIVATION-SQL"],
-        ["name = Ajout d'une colonne et calcul par multiplication"]
+        ["name = Ajout d’une colonne et calcul par multiplication"]
     ]
 }) }}
 
-### Corps de réponse JSON
+**Corps de réponse JSON**
 
 ```json
 {
-    "name": "Ajout d'une colonne et calcul par multiplication",
+    "name": "Ajout d’une colonne et calcul par multiplication",
     "type": "DERIVATION-SQL",
     "_id": "{sql derivation}",
     "type_infos": {
@@ -64,31 +67,32 @@ https://data.geopf.fr/api/datastores/{datastore}/statics
 ```
 
 ???
+
 <br>
 
-## Contrôle des données avant dérivation
+### Contrôle des données avant dérivation
 
 En consultant la donnée en WFS, notamment sa table attributaire, on retrouve le contenu suivant.
 
 ![Table attributaire avant dérivation](/img/guides-developpeur/vecteur/derivation_avant.png){.fr-responsive-img .frx-img-contained}
 
-## Jeu de la dérivation sur une donnée
+### Jeu de la dérivation sur une donnée
 
-### Configuration de l'exécution de traitement
+#### Configuration de l’exécution de traitement
 
 On utilise le traitement de dérivation vecteur.
 
-:::warning Points d'attentions
-Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On précise également cette donnée comme étant en entrée de notre exécution. On va donc modifier une donnée plutôt qu'en créer une nouvelle.
+:::warning
+Pour la donnée en sortie, on ne précise pas un nom, mais l’identifiant de notre donnée stockée initialisée juste avant. On précise également cette donnée comme étant en entrée de notre exécution. On va donc modifier une donnée plutôt qu’en créer une nouvelle.
 :::
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
-### Corps de réponse JSON
+**Corps de réponse JSON**
 
 ```json
 {
@@ -110,7 +114,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 }
 ```
 
-### Corps de réponse JSON
+**Corps de réponse JSON**
 
 ```json
 {
@@ -121,7 +125,7 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
     "status": "CREATED",
     "creation": "2024-02-16T14:51:24.152451997Z",
     "inputs": {
-        "upload": []
+        "upload": [],
         "stored_data": [
             {
                 "name": "Pays et éco-régions",
@@ -154,36 +158,38 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 ```
 
 ???
+
 <br>
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution dérivation}/launch"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution dérivation}/launch
 ```
 
 ???
+
 <br>
 
-## Consultation de la donnée
+### Consultation de la donnée
 
 On peut voir le nouveau champ apparaître dans la description de la donnée
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
-### Corps de réponse JSON
+**Corps de réponse JSON**
 
 ```json
 {
     "name": "Pays et écorégions",
     "type": "VECTOR-DB",
-    ....
+    …
     "_id": "{stored data}",
     "type_infos": {
         "relations": [
@@ -237,21 +243,23 @@ On peut voir le nouveau champ apparaître dans la description de la donnée
 ```
 
 ???
+
 <br>
 
-## Contrôle des données après dérivation
+### Contrôle des données après dérivation
 
-Comme la structure a changé (ajout d'une colonne), il faut resynchroniser l'offre pour que le serveur de diffusion prenne connaissance de ce changement. Dans le cas d'un ajout, la consultation fonctionne mais la nouvelle colonne n'apparaît pas. Dans le cas d'une suppression, on aura des erreurs car le serveur de diffusion aura des échecs de lecture sur la colonne disparue. De manière générale, quand la structure est modifiée avec ce traitement, il est préférable de resynchroniser toutes les offres utilisant la donnée stockée modifiée.
+Comme la structure a changé (ajout d’une colonne), il faut resynchroniser l’offre pour que le serveur de diffusion prenne connaissance de ce changement. Dans le cas d’un ajout, la consultation fonctionne mais la nouvelle colonne n’apparaît pas. Dans le cas d’une suppression, on aura des erreurs car le serveur de diffusion aura des échecs de lecture sur la colonne disparue. De manière générale, quand la structure est modifiée avec ce traitement, il est préférable de resynchroniser toutes les offres utilisant la donnée stockée modifiée.
 
 ??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering wfs}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering wfs}
 ```
 
 ???
+
 <br>
 
-Si vous utilisez QGis, il peut être nécessaire de vider le cache pour qu'il ne garde pas l'ancienne description de la couche WFS. On retrouve désormais le contenu suivant.
+Si vous utilisez QGIS, il peut être nécessaire de vider le cache pour qu’il ne garde pas l’ancienne description de la couche WFS. On retrouve désormais le contenu suivant.
 
 ![Table attributaire après dérivation](/img/guides-developpeur/vecteur/derivation_apres.png){.fr-responsive-img .frx-img-contained}
