@@ -3,10 +3,10 @@ module.exports = {
     segments: [
         {
             url: "/guides-developpeur/tutoriels",
-            title: "Tutoriels d'utilisation de l'Entrepôt",
+            title: "Tutoriels d’utilisation de l’Entrepôt",
         },
     ],
     eleventyNavigation: {
-        parent: "Tutoriels d'utilisation de l'Entrepôt",
+        parent: "Tutoriels d’utilisation de l’Entrepôt",
     },
 };

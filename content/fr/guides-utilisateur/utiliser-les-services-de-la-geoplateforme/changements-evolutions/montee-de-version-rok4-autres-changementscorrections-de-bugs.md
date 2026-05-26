@@ -16,7 +16,7 @@ date: 2025-11-20
 
 ## Changements
 
-Cette montée de version va améliorer la robustesse du calcul des pyramides vecteurs. Les changements de comportement sont :
+Cette montée de version va améliorer la robustesse du calcul des pyramides vecteur. Les changements de comportement sont :
 
 - Limitation des données à l’étendue fournie (et pas aux dalles contenant l’étendue fournie)
 - Forçage des géométries en 2D et en multi si une l’est

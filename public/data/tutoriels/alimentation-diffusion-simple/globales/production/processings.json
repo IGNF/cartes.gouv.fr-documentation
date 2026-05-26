@@ -1,7 +1,7 @@
 [
     {
         "name": "Intégration de données vecteur livrées en base",
-        "description": "Ce traitement permet de stocker dans les bases de données PostgreSQL de la plateforme des données vecteurs livrées. Les formats pris en charge sont le CSV, le Shapefile, le Geopackage et le GeoJSON. Il est également possible de préciser un autre système afin de réaliser une reprojection à l'intégration",
+        "description": "Ce traitement permet de stocker dans les bases de données PostgreSQL de la plateforme des données vecteur livrées. Les formats pris en charge sont le CSV, le Shapefile, le Geopackage et le GeoJSON. Il est également possible de préciser un autre système afin de réaliser une reprojection à l'intégration",
         "_id": "0de8c60b-9938-4be9-aa36-9026b77c3c96"
     },
     {

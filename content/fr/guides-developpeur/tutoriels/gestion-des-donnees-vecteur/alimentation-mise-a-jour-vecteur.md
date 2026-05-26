@@ -1,6 +1,6 @@
 ---
 title: Alimentation par mise à jour vecteur
-description: Téléversement de fichiers vecteurs, intégration en base de données déjà existante et diffusée
+description: Téléversement de fichiers vecteur, intégration en base de données déjà existante et diffusée
 layout: layouts/parent_nav_tertiaire.njk
 mermaid: true
 eleventyNavigation:

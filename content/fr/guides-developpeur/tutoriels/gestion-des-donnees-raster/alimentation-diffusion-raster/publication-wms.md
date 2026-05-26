@@ -5,16 +5,16 @@ eleventyNavigation:
     order: 4
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: WMS
 ---
 
-## Configuration de la diffusion
+### Configuration de la diffusion
 
-La pyramide calculée va également pouvoir être diffusée en WMS
+La pyramide calculée va également pouvoir être diffusée en WMS.
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 ??? Corps de requête JSON
@@ -52,15 +52,14 @@ La pyramide calculée va également pouvoir être diffusée en WMS
 ????
 <br>
 
-## Envoi sur les services de diffusion
+### Envoi sur les services de diffusion
 
-Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (publication) permet d'envoyer les informations de configuration aux serveurs de diffusion.
+Comme pour le WMTS/TMS, seule la création d’une offre sur un point d’accès (publication) permet d’envoyer les informations de configuration aux serveurs de diffusion.
 
-### Consultation des points de diffusion disponibles
+#### Consultation des points de diffusion disponibles
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 ??? Corps de réponse JSON (champ endpoints)
@@ -71,11 +70,10 @@ Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (pu
 ????
 <br>
 
-### Publication
+#### Publication
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings
 ```
 ??? Corps de requête JSON
@@ -89,4 +87,4 @@ Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (pu
 ????
 <br>
 
-On peut vérifier la présence de notre couche `scan1000` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `scan1000` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
