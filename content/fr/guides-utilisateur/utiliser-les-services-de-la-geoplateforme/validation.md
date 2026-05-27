@@ -67,7 +67,7 @@ Choisir ensuite le modèle de standard visé et pointer sur la racine de ce stan
 
 Par exemple : [https://github.com/IGNF/validator-config-gpu/blob/master/config/cnig_PLU_2025/files.json](https://github.com/IGNF/validator-config-gpu/blob/master/config/cnig_PLU_2025/files.json){target="_blank" rel="noopener noreferrer" title="https://github.com/IGNF/validator-config-gpu/blob/master/config/cnig_PLU_2025/files.json - ouvre une nouvelle fenêtre"}
 
-Pour les autres standards implémentés, se rendre sur : [https://github.com/IGNF/validator/tree/master](https://github.com/IGNF/validator/tree/master){target="_blank" rel="noopener noreferrer" title="https://github.com/IGNF/validator/tree/master - ouvre une nouvelle fenêtre"} et pointer vers les différents <span lang="en">_plugins_</span> disponibles.
+Pour les autres standards implémentés, se rendre sur : [https://github.com/IGNF/validator/tree/master](https://github.com/IGNF/validator/tree/master){target="_blank" rel="noopener noreferrer" title="https://github.com/IGNF/validator/tree/master - ouvre une nouvelle fenêtre"} et pointer vers les différents plug-ins disponibles.
 
 ## L’API Validation
 
@@ -127,7 +127,7 @@ Où :
     - **`normalize`** est un booléen prenant :
         - soit vrai : dans ce cas, la normalisation produira en plus du rapport, un jeu de données normalisé (ajoutant à la structure fournie les champs manquants vides)
         - soit faux : dans ce cas, seul le rapport CSV de validation est produit et la donnée source n’est pas dupliquée par un jeu normalisé
-    - **`plugins`** : tous les standards urbanisme doivent s’accompagner de l’appel au _<span lang="en">plugin</span>_ CNIG, pour les autres standards, se référer au _<span lang="en">plugin</span>_ dans lequel ils sont stockés
+    - **`plugins`** : tous les standards urbanisme doivent s’accompagner de l’appel au plug-in CNIG, pour les autres standards, se référer au plug-in dans lequel ils sont stockés
     - **`encoding`** est une chaîne de caractères définissant l’encodage des données qui ont été livrées (généralement `UTF-8`)
 
 Au lancement de la requête, l’utilisateur récupère un corps de réponse du type :
