@@ -465,6 +465,6 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 ???
 <br>
 
-On peut vérifier la présence de notre couche `installations_classees` dans le [getCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `installations_classees` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
 
 Si on consulte la donnée sur QGis, on ne verra pour le moment aucune donnée.

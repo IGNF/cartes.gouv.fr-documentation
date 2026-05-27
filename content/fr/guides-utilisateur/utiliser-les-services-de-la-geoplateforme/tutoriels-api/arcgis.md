@@ -29,7 +29,7 @@ Et cliquez sur **« OK »**.
 
 ![Ajouter une connexion - WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/02_connexion-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Les couches issues du flux <span lang="en">_WMTS_</span> s’affichent dans l’onglet **« Serveurs »** du catalogue du projet.
+Les couches issues du flux WMTS s’affichent dans l’onglet **« Serveurs »** du catalogue du projet.
 
 ![Ajout Plan IGN v2 - WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/03_catalogue-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -44,13 +44,13 @@ Dans le menu **« Insérer »**, allez dans **« Connexions »** puis **« 
 ![Nouveau serveur WMS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/04_serveur-wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Dans la boîte de dialogue **« Ajouter une connexion au serveur WMS »**, renseignez le champ **« URL du serveur »** :
-- **<span lang="en">_WMS_</span>-Raster :**
+- **WMS-Raster :**
 
     ```plain
     https://data.geopf.fr/wms-r?
     ```
 
-- **<span lang="en">_WMS_</span>-Vecteur :**
+- **WMS-Vecteur :**
 
     ```plain
     https://data.geopf.fr/wms-v?
@@ -60,7 +60,7 @@ Et cliquez sur **« OK »**.
 
 ![Ajouter une connexion - WMS-r](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/05_connexion-wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Les couches issues du flux <span lang="en">_WMS_</span> s’affichent dans l’onglet **« Serveurs »** du catalogue du projet.
+Les couches issues du flux WMS s’affichent dans l’onglet **« Serveurs »** du catalogue du projet.
 
 ![Ajout Plan IGN v2 - WMS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/06_catalogue-wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -88,7 +88,7 @@ Et cliquez sur **« OK »**.
 
 ![Ajouter une connexion - WFS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wfs/02_connexion-wfs.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Dans la fenêtre **« Catalogue »**, vous retrouvez les couches disponibles du serveur <span lang="en">_WFS_</span> dans l’onglet **« Serveurs »**, puis **« WFS on data.geopf.fr.wfs »**.
+Dans la fenêtre **« Catalogue »**, vous retrouvez les couches disponibles du serveur WFS dans l’onglet **« Serveurs »**, puis **« WFS on data.geopf.fr.wfs »**.
 
 Ajoutez les couches que vous souhaitez sur votre carte.
 

@@ -30,14 +30,14 @@ Son swagger est accessible ici : [swagger du géocodage](https://data.geopf.fr/
 
 ---
 
-## Capacités de l’API (getCapabilities)
+## Capacités de l’API (GetCapabilities)
 
-La requête **getCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête **GetCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante : 
 
 ```plain
-https://data.geopf.fr/geocodage/getCapabilities
+https://data.geopf.fr/geocodage/getcapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
@@ -53,9 +53,11 @@ Pour faciliter la saisie, un service d’autocomplétion est intégré par défa
 Le géocodage **inverse** a pour but de retourner, à partir d’un ou plusieurs points géographiques indiqués en latitude/longitude, la ou les entités géolocalisées les plus proches correspondantes, parmi les adresses, toponymes, parcelles cadastrales, et/ou unités administratives.
 
 Le géocodage s’appuie sur plusieurs sources de données :
-* L’index des adresses est actualisé chaque semaine à partir des adresses de la [Base Adresse Nationale (BAN)](https://adresse.data.gouv.fr/decouvrir-la-BAN).
-* Les lieux nommés proviennent de la couche des « points d’intérêt » (POI) de la [BD TOPO®]({{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-TOPO), qui est actualisée tous les trimestres.
-* Les parcelles cadastrales proviennent du [Parcellaire Express (PCI)]({{ urls.rechercher_une_donnee }}/dataset/IGNF_PARCELLAIRE-EXPRESS-PCI), actualisé tous les trimestres.
+- L’index des adresses est actualisé chaque semaine à partir des adresses de la [Base Adresse Nationale (BAN)](https://adresse.data.gouv.fr/decouvrir-la-BAN).
+- Les lieux nommés proviennent de la couche des « points d’intérêt » (POI) de la [BD TOPO®]({{ urls.rechercher_une_donnee }}/dataset/IGNF_BD-TOPO), qui est actualisée tous les trimestres.
+- Les parcelles cadastrales proviennent du [Parcellaire Express (PCI)]({{ urls.rechercher_une_donnee }}/dataset/IGNF_PARCELLAIRE-EXPRESS-PCI), actualisé tous les trimestres.
+
+<br>
 
 Le service de géocodage est disponible au travers des URLs suivantes :
 
@@ -65,7 +67,7 @@ Le géocodage direct est accessible via l’URL suivante : (les paramètres son
 https://data.geopf.fr/geocodage/search
 ```
 
-Le géocodage inverse est accessible via l’URL suivante :  (les paramètres sont précisés dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
+Le géocodage inverse est accessible via l’URL suivante : (les paramètres sont précisés dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
 
 ```plain
 https://data.geopf.fr/geocodage/reverse
@@ -84,4 +86,3 @@ Les fichiers doivent être encodés en UTF-8 et faire moins de 50 Mo ou 200000 l
 Le site national de l’adresse propose une [interface intuitive](https://adresse.data.gouv.fr/outils/csv) pour la gestion des opérations de géocodage **direct** par fichiers.
 
 Enfin, pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (Cf. section « Géocodage par lot asynchrone » dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
-

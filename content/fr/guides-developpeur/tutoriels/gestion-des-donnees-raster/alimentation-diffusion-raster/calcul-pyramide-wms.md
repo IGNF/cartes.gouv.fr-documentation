@@ -472,7 +472,7 @@ Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extr
 ???
 <br>
 
-On peut vérifier la présence de notre couche `ortho` dans le [getCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `ortho` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
 
 ### Visualisation des données
 

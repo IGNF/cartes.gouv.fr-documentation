@@ -19,11 +19,11 @@ pictogram: digital/coding.svg
 
 ## Tutoriel
 
-[Géom@tique](http://www.geomatique.fr/){target="_blank" rel="noopener noreferrer" title="Géom@tique - ouvre une nouvelle fenêtre"} vous propose un [tutoriel Global Mapper](https://data.geopf.fr/annexes/ressources/documentation/Tutoriel_Global_Mapper.pdf){target="_blank" rel="noopener noreferrer" title="Tutoriel Global Mapper - ouvre une nouvelle fenêtre"} (version <span lang="en">_PDF_</span>) en trois volets :
+[Géom@tique](http://www.geomatique.fr/){target="_blank" rel="noopener noreferrer" title="Géom@tique - ouvre une nouvelle fenêtre"} vous propose un [tutoriel Global Mapper](https://data.geopf.fr/annexes/ressources/documentation/Tutoriel_Global_Mapper.pdf){target="_blank" rel="noopener noreferrer" title="Tutoriel Global Mapper - ouvre une nouvelle fenêtre"} (version PDF) en trois volets :
 - Importer les données IGN intégrées
 - Importer des données en ligne personnalisées
 - Importer des données LiDAR HD
 
 <br>
  
-En plus de la version <span lang="en">_PDF_</span>, vous pouvez également retrouver le tutoriel dans la rubrique FAQ du forum [Géom@tique](http://www.geomatique.fr/){target="_blank" rel="noopener noreferrer" title="Géom@tique - ouvre une nouvelle fenêtre"} (inscription nécessaire).
+En plus de la version PDF, vous pouvez également retrouver le tutoriel dans la rubrique FAQ du forum [Géom@tique](http://www.geomatique.fr/){target="_blank" rel="noopener noreferrer" title="Géom@tique - ouvre une nouvelle fenêtre"} (inscription nécessaire).

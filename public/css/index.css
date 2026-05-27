@@ -1,6 +1,7 @@
 /* Defaults */
 :root {
     --block-spacing: 1.5rem;
+    --font-family-monospace: Consolas, "Courier New", monospace;
 }
 
 /* Global stylesheet */
@@ -27,6 +28,7 @@ table th {
 pre,
 code {
     font-family: var(--font-family-monospace);
+    overflow-wrap: break-word;
 }
 
 pre[class*="language-"] {
@@ -47,10 +49,6 @@ pre:not([class*="language-"]) {
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
-}
-
-code {
-    word-break: break-all;
 }
 
 /* Direct Links / Markdown Headers */

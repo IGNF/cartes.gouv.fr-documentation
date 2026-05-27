@@ -19,20 +19,20 @@ Dans le menu **« Couche »**, allez sur **« Ajouter une couche »** puis *
 
 ![Ajouter une couche WMS/WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/qgis/wms-wmts/01_ajout-wmswmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Cliquez sur **« Nouveau »** pour ajouter un nouveau flux <span lang="en">_WMS_</span>.
+Cliquez sur **« Nouveau »** pour ajouter un nouveau flux WMS.
 
 ![Gestionnaire QGIS - WMS/WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/qgis/wms-wmts/02_gestionnaire-wmswmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Dans la boîte de dialogue **« Créer une nouvelle connexion WMS »**, renseignez les champs :
 - **« Nom »** : nom que vous souhaitez donner à la connexion au serveur
 - **« URL »** :
-    - Flux <span lang="en">_WMS_</span>-Raster :
+    - Flux WMS-Raster :
 
     ```plain
     https://data.geopf.fr/wms-r/wms?
     ```
 
-    - Flux <span lang="en">_WMS_</span>-Vecteur :
+    - Flux WMS-Vecteur :
 
     ```plain
     https://data.geopf.fr/wms-v/wms?
@@ -42,13 +42,13 @@ Validez en cliquant sur **« OK »**.
 
 ![Créer une Nouvelle Connexion - WMS-Raster](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/qgis/wms-wmts/03_nouvelle-connexion.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Puis cliquez sur **« Connexion »** pour vous connecter au flux <span lang="en">_WMS_</span> ainsi créé.
+Puis cliquez sur **« Connexion »** pour vous connecter au flux WMS ainsi créé.
 
 Sélectionnez les couches que vous souhaitez afficher.
 
-Choisissez l’**« Encodage de l’image »**. Le choix de l’encodage est facultatif (<span lang="en">_JPEG_</span> est sélectionné par défaut).
+Choisissez l’**« Encodage de l’image »**. Le choix de l’encodage est facultatif (JPEG est sélectionné par défaut).
 
-Une image en <span lang="en">_JPEG_</span> prendra moins de ressources mais ne gérera pas les transparences comme le <span lang="en">_PNG_</span>.
+Une image en JPEG prendra moins de ressources mais ne gérera pas les transparences comme le PNG.
 
 Cliquez sur **« Ajouter »**.
 
@@ -72,7 +72,7 @@ Validez en cliquant sur **« OK »**.
 
 ![Créer une Nouvelle Connexion - WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/qgis/wms-wmts/06_details-wmswmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Puis cliquez sur **« Connexion »** pour vous connecter au flux <span lang="en">_WMTS_</span> ainsi créé.
+Puis cliquez sur **« Connexion »** pour vous connecter au flux WMTS ainsi créé.
 
 Sélectionnez la couche que vous souhaitez afficher.
 
@@ -114,7 +114,7 @@ Dans le menu **« Couche »**, allez sur **« Ajouter une couche »** puis *
 
 ![Ajouter une couche WFS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/qgis/wfs/01_ajout-wfs.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Cliquez sur **« Nouveau »** pour ajouter un nouveau flux <span lang="en">_WFS_</span>.
+Cliquez sur **« Nouveau »** pour ajouter un nouveau flux WFS.
 
 ![Gestionnaire QGIS - WFS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/qgis/wfs/02_gestionnaire-wfs.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -130,10 +130,10 @@ Validez en cliquant sur **« OK »**.
 
 ![Détails connexion - WFS GPF](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/qgis/wfs/03_detail-connexion.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Puis cliquez sur **« Connexion »** pour vous connecter au flux <span lang="en">_WFS_</span> ainsi créé.
+Puis cliquez sur **« Connexion »** pour vous connecter au flux WFS ainsi créé.
 
 :::warning
-L’affichage des <span lang="en">_WFS_</span> du Géoportail est **limité à 5000 objets par requête**.
+L’affichage des WFS du Géoportail est **limité à 5000 objets par requête**.
 :::
 
 Cliquez sur **« Ajouter »**.

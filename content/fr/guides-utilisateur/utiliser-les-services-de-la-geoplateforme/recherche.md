@@ -17,16 +17,16 @@ summary:
 ## Description globale
 
 La Géoplateforme propose un service de recherche, qui permet d’effectuer des recherches sur les données. Ses recherches peuvent fonctionner avec plusieurs options (recherche approximative, autocomplétion, etc). Ce service est scindé en deux fonctionnements :
-
 - une **recherche standard** qui s’effectue sur les données publiées dans l’entrepôt de la Géoplateforme
 - une **recherche custom** qui fonctionne sur des données importées
+
+<br>
 
 ---
 
 ## Recherche standard
 
 Le service de recherche standard s’effectue sur l’index dit général de la Géoplateforme. Il permet d’obtenir des informations pour tout type d’offre entreposée de base dans la Géoplateforme. Toutes les données des grands producteurs (IGN, CEREMA, SHOM, MNHN, etc) pourront être recherchées à travers les services suivants :
-
 - Les données du Service d'images tuilées WMTS
 - Les données du Service de tuiles vectorielles TMS
 - Les données du Service d'images WMS-Raster
@@ -35,6 +35,8 @@ Le service de recherche standard s’effectue sur l’index dit général de la 
 - Les données du service de calcul d’itinéraires
 - Les données du service de calcul d’isochrone/isodistance
 - Les données du service d’altimétrie
+
+<br>
 
 <div>
 <script async src="//jsfiddle.net/ignfgeoportail/ck2pftgw/embed/"></script>

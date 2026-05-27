@@ -16,13 +16,14 @@ summary:
 
 Ce service s’appuie sur le protocole TMS en version 1.0.0.
 
-Il permet un affichage rapide d’images précalculées​, avec la possibilité de personnaliser l’affichage ​grâce à des légendes et à des filtres​.
+Il permet un affichage rapide d’images précalculées, avec la possibilité de personnaliser l’affichage grâce à des légendes et à des filtres.
 
 Il propose les méthodes suivantes :
-
 - Accès aux métadonnées du service
 - Accès aux métadonnées d’une donnée
 - Accès à une tuile
+
+<br>
 
 ---
 

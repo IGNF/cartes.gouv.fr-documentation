@@ -22,10 +22,11 @@ Pour certaines API, une limite d’usage fixée en nombre de requêtes par secon
 Ce mécanisme, dit de « rate limiting », concerne la plupart des API de la Géoplateforme à l’exception notable de l’API « Diffusion d’images tuilées WMTS » et son pendant « Diffusion de tuiles vectorielles TMS ». Il a pour objectif de garantir les engagements de disponibilité des API, en bloquant les usages individuels les plus massifs qui seraient susceptibles de mettre à mal l’infrastructure.
 
 Lorsqu’une IP sollicite une API au-delà de la limite d’usage fixée :
+- Une erreur HTML 429 (Too Many Requests) est envoyée en réponse à toute requête ;
+- Ce blocage intervient pour une durée de 5 secondes et il ne concerne que l’API dont la limite d’usage a été franchie (à titre d’exemple, si la limite du calcul altimétrique est dépassée, le WMS reste accessible) ;
+- La durée du blocage est indiquée dans un header « retry-after », avec une durée initialisée à 5 secondes et qui décroît à partir du moment où la sur-sollicitation cesse.
 
- * Une erreur HTML 429 (Too Many Requests) est envoyée en réponse à toute requête ;
- * Ce blocage intervient pour une durée de 5 secondes et il ne concerne que l’API dont la limite d’usage a été franchie (à titre d’exemple, si la limite du calcul altimétrique est dépassée, le WMS reste accessible) ;
- * La durée du blocage est indiquée dans un header "retry-after", avec une durée initialisée à 5 secondes et qui décroît à partir du moment où la sur-sollicitation cesse.
+<br>
 
 ---
 
@@ -63,9 +64,10 @@ Les limites d’usage fixées sont les suivantes :
 Prenons l’exemple du géocodage d’un fichier de 1000 lignes au moyen d’un script faisant appel à l’API de géocodage de la Géoplateforme.
 
 Si le script sollicite l’API de géocodage sans précaution particulière, avec une fréquence qui dépasse la limite d’usage de 50 requêtes par seconde et par IP, alors :
+- Les 50 premiers appels sont traités normalement ;
+- Le 51ème appel et les suivants sont bloqués tant que le script continue à solliciter l’API de géocodage au-delà de la limite de 50 requêtes par seconde et que le délai de 5 secondes qui s’en suit n’est pas écoulé.
 
-    Les 50 premiers appels sont traités normalement ;
-    Le 51ème appel et les suivants sont bloqués tant que le script continue à solliciter l’API de géocodage au-delà de la limite de 50 requêtes par seconde et que le délai de 5 secondes qui s’en suit n’est pas écoulé.
+<br>
 
 Solution : paramétrer le script de telle sorte que la fréquence d’appel à l’API de géocodage ne dépasse pas 50 requêtes par seconde, en instaurant par exemple un plafond à 40 ou 45 requêtes par seconde.
 

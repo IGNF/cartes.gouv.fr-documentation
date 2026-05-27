@@ -18,13 +18,14 @@ Ce service s’appuie sur le protocole WMS en version 1.3.0
 
 Il est limité à 40 requêtes/s.
 
-Il permet un affichage d’images avec des possibilités de ​personnalisation (style, système de référence, ​emprise, format et taille d’image)​.
+Il permet un affichage d’images avec des possibilités de personnalisation (style, système de référence, emprise, format et taille d’image).
 
 Il propose les méthodes suivantes :
-
 - **GetCapabilities** pour obtenir les métadonnées du service
 - **GetMap** pour obtenir une carte
 - **GetFeatureInfo** pour obtenir les métadonnées d’une carte
+
+<br>
 
 ---
 

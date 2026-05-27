@@ -28,14 +28,14 @@ Son swagger est accessible ici : [swagger de l’autocomplétion](https://data.
 
 ---
 
-## Capacités de l’API (getCapabilities)
+## Capacités de l’API (GetCapabilities)
 
-La requête **getCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête **GetCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante : 
 
 ```plain
-https://data.geopf.fr/geocodage/completion/getCapabilities
+https://data.geopf.fr/geocodage/completion/getcapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
@@ -54,29 +54,29 @@ https://data.geopf.fr/geocodage/completion/?text={text}&terr={terr}&poiType={poi
 
 Cette requête a pour caractéristiques :
 
- * Méthode : GET
- * Paramètre obligatoire : 
-    * **text**
-        * Description : le texte devant être complété
- * Paramètres facultatifs : 
-    * **terr**
-        * Description : une limitation de la zone de recherche de localisants (une liste peut être fournie en séparant les valeurs par des virgules)
-        * Valeurs possibles : METROPOLE, DOMTOM, code(s) INSEE de département, code(s) postaux de commune
-    * **poiType**
-        * Description : filtre sur le type de localisant pour le type POI
-        * Valeurs possibles : celles listées dans le getCapabilities (exemples : administratif, pont...) 
-    * **lonlat**
-        * Description : coordonnées (longitude,latitude) d’un localisant pour favoriser les candidats les plus proches
-        * Valeur possible de longitude : de -180 à +180
-        * Valeur possible de latitude : de -90 à +90
-    * **type**
-        * Description : le type de localisants recherchés (il est possible de spécifier plusieurs types séparés par une virgule)
-        * Valeurs possibles : PositionOfInterest, StreetAddress
-    * **maximumResponses**
-        * Description : le nombre maximum de réponses que l’on souhaite voir retournées
-        * Valeurs possibles : entre 1 et 15
-    * **bbox**
-        * Description : filtre avec une bbox suivant l’ordre Xmin, Ymin, Xmax, Ymax
+- Méthode : GET
+- Paramètre obligatoire : 
+    - **`text`**
+        - Description : le texte devant être complété
+- Paramètres facultatifs : 
+    - **`terr`**
+        - Description : une limitation de la zone de recherche de localisants (une liste peut être fournie en séparant les valeurs par des virgules)
+        - Valeurs possibles : `METROPOLE`, `DOMTOM`, code(s) INSEE de département, code(s) postaux de commune
+    - **`poiType`**
+        - Description : filtre sur le type de localisant pour le type POI
+        - Valeurs possibles : celles listées dans le GetCapabilities (exemples : `administratif`, `pont`…) 
+    - **`lonlat`**
+        - Description : coordonnées (longitude,latitude) d’un localisant pour favoriser les candidats les plus proches
+        - Valeur possible de longitude : de -180 à +180
+        - Valeur possible de latitude : de -90 à +90
+    - **`type`**
+        - Description : le type de localisants recherchés (il est possible de spécifier plusieurs types séparés par une virgule)
+        - Valeurs possibles : `PositionOfInterest`, `StreetAddress`
+    - **`maximumResponses`**
+        - Description : le nombre maximum de réponses que l’on souhaite voir retournées
+        - Valeurs possibles : entre 1 et 15
+    - **`bbox`**
+        - Description : filtre avec une bbox suivant l’ordre Xmin, Ymin, Xmax, Ymax
 
 Exemple de requête : 
 

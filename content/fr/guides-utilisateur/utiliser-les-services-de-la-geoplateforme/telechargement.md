@@ -25,17 +25,19 @@ L’API de téléchargement de la Géoplateforme permet de découvrir et téléc
 Elle est conforme au format Atom RFC 4287.
 
 Elle s’appuie sur 3 méthodes :
-
 - **GetCapabilites** pour lister les ressources disponibles
 - **GetResource** pour lister les fichiers téléchargeables de la ressource interrogée
 - **Download** pour télécharger un fichier
 
+<br>
+
 Son usage est limité à 10 requêtes par seconde depuis une même adresse IP.
 
 Attention, **les résultats des requêtes sont paginés**. Pour parcourir les résultats, les paramètres sont :
+- **`page`** : débute à 1 (valeur par défaut)
+- **`limit`** : 50 résultats au maximum (10 par défaut)
 
-- **page** : débute à 1 (valeur par défaut)
-- **limit** : 50 résultats au maximum (10 par défaut)
+<br>
 
 **N.B.** : le nombre total de résultats pour une requête est indiqué dans la valeur **gpf_dl:totalentries** présente dans l’en-tête de la réponse.
 
@@ -59,16 +61,18 @@ https://data.geopf.fr/telechargement/capabilities?page={page}&limit={limit}&poly
 
 Les champs du filtre doivent respecter le formalisme suivant :
 
-- **polygon** : x1,y1;x2,y2;… (en projection EPSG:4326)
-- **updatedFrom** : YYYY-MM-DD
-- **updatedTo** : YYYY-MM-DD
-- **editionDateFrom** : YYYY-MM-DD
-- **editionDateTo** : YYYY-MM-DD
-- **lang** : fre ou eng
-- **crs** : au format epsg
-- **thematic** : au format de la thématique INSPIRE recherchée
-- **zone** : FRA (pour France entière) ou D075 (pour Paris)...
-- **format** : SHP (pour Shapefile)...
+- **`polygon`** : x1,y1;x2,y2;… (en projection EPSG:4326)
+- **`updatedFrom`** : YYYY-MM-DD
+- **`updatedTo`** : YYYY-MM-DD
+- **`editionDateFrom`** : YYYY-MM-DD
+- **`editionDateTo`** : YYYY-MM-DD
+- **`lang`** : fre ou eng
+- **`crs`** : au format epsg
+- **`thematic`** : au format de la thématique INSPIRE recherchée
+- **`zone`** : FRA (pour France entière) ou D075 (pour Paris)…
+- **`format`** : SHP (pour Shapefile)…
+
+<br>
 
 Exemple de requête filtrée :
 
@@ -101,14 +105,15 @@ https://data.geopf.fr/telechargement/resource/{resourceName}?polygon={polygon}&e
 ```
 
 Les champs du filtre, tous optionnels, doivent respecter le formalisme suivant :
+- **`polygon`** : x1,y1;x2,y2;… (en projection EPSG:4326)
+- **`editionDateFrom`** : YYYY-MM-DD
+- **`editionDateTo`** : YYYY-MM-DD
+- **`lang`** : fre ou eng
+- **`crs`** : au format epsg
+- **`zone`** : FRA (pour France entière) ou D075 (pour Paris)…
+- **`format`** : SHP (pour Shapefile)…
 
-- **polygon** : x1,y1;x2,y2;… (en projection EPSG:4326)
-- **editionDateFrom** : YYYY-MM-DD
-- **editionDateTo** : YYYY-MM-DD
-- **lang** : fre ou eng
-- **crs** : au format epsg
-- **zone** : FRA (pour France entière) ou D075 (pour Paris)...
-- **format** : SHP (pour Shapefile)...
+<br>
 
 Exemple de requête filtrée :
 

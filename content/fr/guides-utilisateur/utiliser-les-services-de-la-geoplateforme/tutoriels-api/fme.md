@@ -25,29 +25,29 @@ Sélectionnez **« OGC WMS (Web Map Service) »** ou **« OGC WMTS (Web Map T
 
 Dans la partie **« URL »**, utilisez les services libres IGN :
 
-- **<span lang="en">_WMS_</span>-Raster :**
+- **WMS-Raster :**
 
     ```plain
     https://data.geopf.fr/wms-r/wms?
     ```
 
-- **<span lang="en">_WMTS_</span> :**
+- **WMTS :**
 
     ```plain
     https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
     ```
 
 :::warning
-La version est obligatoire pour les flux <span lang="en">_WMS_</span>, FME utilisant par défaut la version 1.1.1.
+La version est obligatoire pour les flux WMS, FME utilisant par défaut la version 1.1.1.
 :::
 
-- **Exemple <span lang="en">_WMS_</span>-Raster :**
+- **Exemple WMS-Raster :**
     
-    Choisissez la couche **« Layers »** à afficher et vous avez la possibilité de jouer sur les **« Map Options »** que vous pouvez trouver dans le <span lang="en">_GetCapabilities_</span>.
+    Choisissez la couche **« Layers »** à afficher et vous avez la possibilité de jouer sur les **« Map Options »** que vous pouvez trouver dans le GetCapabilities.
 
     ![Paramètres du WMS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/fme/03_wms-parameters.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-- **Exemple <span lang="en">_WMTS_</span> :**
+- **Exemple WMTS :**
     
     Choisissez la couche **« Layers »** à afficher et vous avez la possibilité de jouer sur les **« Layer Options »** ou de restreindre l’affichage selon une **« Bounding Box »** (emprise) que vous pouvez définir dans la projection de votre choix (qui n’est pas forcément celle du flux).
 
