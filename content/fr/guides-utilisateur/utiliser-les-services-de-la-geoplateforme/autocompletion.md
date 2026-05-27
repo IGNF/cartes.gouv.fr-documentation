@@ -64,7 +64,13 @@ Cette requête a pour caractéristiques :
         - Valeurs possibles : `METROPOLE`, `DOMTOM`, code(s) INSEE de département, code(s) postaux de commune
     - **`poiType`**
         - Description : filtre sur le type de localisant pour le type POI
-        - Valeurs possibles : celles listées dans le GetCapabilities (exemples : `administratif`, `pont`…) 
+        - Valeurs possibles : celles listées dans le GetCapabilities (exemples : `administratif`, `pont`…)
+    - **`depcode`**
+        - Description : filtre pour les index address et poi. Il permet de filtrer les résultats par code département. Accepte plusieurs valeurs séparées par des virgules (maximum 10).
+    - **`zipcode`**
+        - Description : filtre pour les index address et poi. Il permet de filtrer les résultats par code postal. Accepte plusieurs valeurs séparées par des virgules (maximum 50).
+    - **`citycode`**
+        - Description : filtre pour les index address et poi. Il permet de filtrer les résultats par code INSEE. Accepte plusieurs valeurs séparées par des virgules (maximum 200).
     - **`lonlat`**
         - Description : coordonnées (longitude,latitude) d’un localisant pour favoriser les candidats les plus proches
         - Valeur possible de longitude : de -180 à +180
