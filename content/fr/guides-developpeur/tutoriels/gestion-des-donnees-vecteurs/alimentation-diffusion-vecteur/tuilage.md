@@ -301,7 +301,7 @@ La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier 
 ???
 <br>
 
-On peut vérifier la présence de notre couche `pays_ecoregions` dans le [getCapabilities du service TMS]({{ urls.public.tms }}/1.0.0). On peut également avoir des [détails sur cette couche]({{ urls.public.tms }}/1.0.0/pays_ecoregions).
+On peut vérifier la présence de notre couche `pays_ecoregions` dans le [GetCapabilities du service TMS]({{ urls.public.tms }}/1.0.0). On peut également avoir des [détails sur cette couche]({{ urls.public.tms }}/1.0.0/pays_ecoregions).
 
 On peut également récupérer nos données dans QGis. Il faut ajouter une source de donnée "Tuile vectorielle" et préciser comme URL `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
 

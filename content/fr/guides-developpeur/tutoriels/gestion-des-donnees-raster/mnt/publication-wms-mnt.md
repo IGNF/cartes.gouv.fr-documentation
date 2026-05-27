@@ -246,7 +246,7 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
 ???
 <br>
 
-On peut vérifier la présence de notre couche `lidarhd` dans le [getCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0), avec la présence des deux styles.
+On peut vérifier la présence de notre couche `lidarhd` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0), avec la présence des deux styles.
 
 Dans QGis, on retrouve la légende déposée sous forme d'annexe.
 

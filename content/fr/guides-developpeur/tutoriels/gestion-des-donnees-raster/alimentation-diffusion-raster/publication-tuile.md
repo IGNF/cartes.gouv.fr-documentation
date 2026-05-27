@@ -97,8 +97,8 @@ On précise ici une métadonnée qui apparaîtra dans le GetCapabilities du serv
 
 On peut vérifier la présence de nos couches `scan1000` dans :
 
-- le [getCapabilities du service WMTS]({{ urls.public.wmts }}?REQUEST=GetCapabilities&SERVICE=WMTS&VERSION=1.0.0)
-- le [getCapabilities du service TMS]({{ urls.public.tms }}/1.0.0)
+- le [GetCapabilities du service WMTS]({{ urls.public.wmts }}?REQUEST=GetCapabilities&SERVICE=WMTS&VERSION=1.0.0)
+- le [GetCapabilities du service TMS]({{ urls.public.tms }}/1.0.0)
 
 On peut visualiser nos données dans QGis en WMTS.
 

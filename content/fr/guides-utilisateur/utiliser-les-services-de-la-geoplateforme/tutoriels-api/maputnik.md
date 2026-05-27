@@ -12,22 +12,22 @@ pictogram: digital/coding.svg
 ---
 
 Dans cet article nous allons apprendre à :
-- Modifier un fichier de styles avec l’éditeur <span lang="en">_Maputnik_</span>
+- Modifier un fichier de styles avec l’éditeur Maputnik
 - Afficher un fichier de styles modifié dans la Géoplateforme
 
 <br>
 
-La ressource visée dans cet exemple est « Plan IGN ». <span lang="en">_Maputnik_</span> est un éditeur <span lang="en">_open-source_</span> compatible avec la spécification [<span lang="en">_Mapbox GL style_</span>](https://docs.mapbox.com/style-spec/guides){target="_blank" rel="noopener noreferrer" title="Mapbox Style Specification - ouvre une nouvelle fenêtre"}. Il nous permet de modifier le style des cartes tuiles vectorielles en temps réel.
+La ressource visée dans cet exemple est « Plan IGN ». Maputnik est un éditeur <span lang="en">_open-source_</span> compatible avec la spécification [<span lang="en">_Mapbox GL style_</span>](https://docs.mapbox.com/style-spec/guides){target="_blank" rel="noopener noreferrer" title="Mapbox Style Specification - ouvre une nouvelle fenêtre"}. Il nous permet de modifier le style des cartes tuiles vectorielles en temps réel.
 
 ## Éditer un fichier de styles
 
 ### Ouvrir le fichier de style
 
-1. Ouvrez l’[éditeur <span lang="en">_Maputnik_</span>](https://maputnik.github.io/editor){target="_blank" rel="noopener noreferrer" title="Éditeur Maputnik - ouvre une nouvelle fenêtre"} dans un navigateur web. Par défaut, <span lang="en">_Maputnik_</span> affichera les données [<span lang="en">_open map tiles (OSM)_</span>](https://openmaptiles.org/schema){target="_blank" rel="noopener noreferrer" title="OpenMapTiles - ouvre une nouvelle fenêtre"}.
+1. Ouvrez l’[éditeur <span lang="en">_Maputnik_</span>](https://maputnik.github.io/editor){target="_blank" rel="noopener noreferrer" title="Éditeur Maputnik - ouvre une nouvelle fenêtre"} dans un navigateur web. Par défaut, Maputnik affichera les données [<span lang="en">_open map tiles (OSM)_</span>](https://openmaptiles.org/schema){target="_blank" rel="noopener noreferrer" title="OpenMapTiles - ouvre une nouvelle fenêtre"}.
 
     ![Éditeur Maputnik](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maputnik/01_editor.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-2. Ouvrez le fichier de style du « Plan IGN », cliquez sur le bouton **« Open »** (en haut à gauche) cela ouvrira une boite de dialogue. Dans la section **« Load from URL »**, collez l’<span lang="en">_URL_</span> du modèle à modifier. Ici nous prendrons [PLAN IGN option standard](https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json){target="_blank" rel="noopener noreferrer" title="Plan IGN - ouvre une nouvelle fenêtre"}. Ensuite, cliquez sur **« Open URL »**.
+2. Ouvrez le fichier de style du « Plan IGN », cliquez sur le bouton **« Open »** (en haut à gauche) cela ouvrira une boite de dialogue. Dans la section **« Load from URL »**, collez l’URL du modèle à modifier. Ici nous prendrons [PLAN IGN option standard](https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json){target="_blank" rel="noopener noreferrer" title="Plan IGN - ouvre une nouvelle fenêtre"}. Ensuite, cliquez sur **« Open URL »**.
 
     ![Import du style](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maputnik/02_upload-style.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -54,7 +54,7 @@ Le style chargé peut maintenant être modifié. À titre d’exemple, nous allo
 
     ![Filet extérieur](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maputnik/06_filet-exterieur.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-    Le menu **« Layer »** affiche plusieurs options pour modifier le style de ce <span lang="en">_layer_</span>. Tout en bas dans ce menu on peut voir le texte <span lang="en">_JSON_</span> qui correspond au style de ce <span lang="en">_layer_</span> dans le fichier de style. 
+    Le menu **« Layer »** affiche plusieurs options pour modifier le style de ce <span lang="en">_layer_</span>. Tout en bas dans ce menu on peut voir le texte JSON qui correspond au style de ce <span lang="en">_layer_</span> dans le fichier de style. 
 
     ![Éditeur JSON](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maputnik/07_json-editor.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -62,7 +62,7 @@ Le style chargé peut maintenant être modifié. À titre d’exemple, nous allo
 
     ![Propriétés de peinture](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maputnik/08_paint-properties.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-    Cette valeur peut être modifiée avec le menu colorimétrique comme visualisé ci-dessous ou en saisissant manuellement la valeur. Le texte <span lang="en">_JSON_</span> en bas du menu est modifié en conséquence. 
+    Cette valeur peut être modifiée avec le menu colorimétrique comme visualisé ci-dessous ou en saisissant manuellement la valeur. Le texte JSON en bas du menu est modifié en conséquence. 
 
     ![Peinture JSON](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maputnik/09_json-paint.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -74,4 +74,4 @@ Le style chargé peut maintenant être modifié. À titre d’exemple, nous allo
 
     ![Routes locales](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maputnik/11_routes-locales.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-4. Exportez le nouveau style vers un fichier <span lang="en">_JSON_</span> : cliquez sur le bouton **« Export »** (en haut de l’écran). Ne renseignez rien dans la boîte de dialogue qui s’ouvre et cliquez sur **« Download »**. Le nouveau fichier de style est alors enregistré en local.
+4. Exportez le nouveau style vers un fichier JSON : cliquez sur le bouton **« Export »** (en haut de l’écran). Ne renseignez rien dans la boîte de dialogue qui s’ouvre et cliquez sur **« Download »**. Le nouveau fichier de style est alors enregistré en local.

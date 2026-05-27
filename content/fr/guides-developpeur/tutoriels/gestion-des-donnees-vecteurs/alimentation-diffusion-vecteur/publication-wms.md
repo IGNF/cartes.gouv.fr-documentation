@@ -104,4 +104,4 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 ???
 <br>
 
-On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [getCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)

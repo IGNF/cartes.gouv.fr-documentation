@@ -24,7 +24,7 @@ L’API propose des requêtes destinées aux producteurs de données (qui diffus
 
 Elle est interrogeable en méthode GET en étant authentifié via son compte <span style="white-space:nowrap;">Géoplateforme/cartes.gouv.fr</span>.
 
-Son swagger est accessible ici : [swagger des statistiques d'utilisation](https://data.geopf.fr/api/stats/swagger-ui/index.html).
+Son swagger est accessible ici : [swagger des statistiques d’utilisation](https://data.geopf.fr/api/stats/swagger-ui/index.html).
 
 ---
 
@@ -43,6 +43,8 @@ Au grain d'un organisme, l’API propose les requêtes suivantes :
 - Statistiques d’un endpoint pour toutes les offres publiées sur ce endpoint par l’ensemble des communautés d’une organisation
 - Statistiques de l’ensemble des offres détenues par une des communauté d’une organisation
 
+<br>
+
 ### Statistiques par communauté
 
 Dans la Géoplateforme, une **communauté** est définie comme un groupe d'utilisateurs avec certains droits sur la communauté en elle-même et sur son éventuel entrepôt associé.
@@ -50,6 +52,8 @@ Dans la Géoplateforme, une **communauté** est définie comme un groupe d'utili
 Au grain d’une communauté, l’API propose les requêtes suivantes : 
 - Statistiques de l’ensemble des offres d’une communauté
 - Statistiques des offres associées à une permission produite par une communauté
+
+<br>
 
 ### Statistiques par entrepôt
 
@@ -59,6 +63,8 @@ Au grain d’un entrepôt, l’API propose les requêtes suivantes :
 - Statistiques des offres associées à une permission produite sur un entrepôt 
 - Statistiques d’une offre produite sur un entrepôt
 - Statistiques de l’ensemble des offres d’un endpoint pour un entrepôt
+
+<br>
 
 ---
 

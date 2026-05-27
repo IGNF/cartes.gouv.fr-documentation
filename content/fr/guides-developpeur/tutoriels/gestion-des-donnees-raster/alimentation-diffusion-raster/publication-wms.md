@@ -89,4 +89,4 @@ Comme pour le WMTS-TMS, seule la création d'une offre sur un point d'accès (pu
 ???
 <br>
 
-On peut vérifier la présence de notre couche `scan1000` dans le [getCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `scan1000` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)

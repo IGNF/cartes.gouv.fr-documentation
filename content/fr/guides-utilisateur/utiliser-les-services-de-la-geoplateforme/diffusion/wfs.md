@@ -18,14 +18,15 @@ Ce service s’appuie sur le protocole WFS en version 2.0.0.
 
 Il est limité à 30 requêtes/s.
 
-Il permet la récupération d’extraits de bases de données ​via des requêtes fondées sur des critères et valeurs​.
+Il permet la récupération d’extraits de bases de données via des requêtes fondées sur des critères et valeurs.
 
 Il propose les méthodes suivantes :
-
 - **GetCapabilities** pour obtenir les métadonnées du service
 - **DescribeFeatureType** pour obtenir la description de la structure d’une donnée
 - **GetFeature** (hits) pour obtenir le nombre d’objets associés à une demande
 - **GetFeature** (results) pour obtenir les objets associés à une demande
+
+<br>
 
 ---
 

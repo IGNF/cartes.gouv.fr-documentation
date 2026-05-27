@@ -104,7 +104,7 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 ???
 <br>
 
-On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiques` et `pays_ecoregions:pays` dans le [getCapabilities du service]({{ urls.public.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0)
+On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiques` et `pays_ecoregions:pays` dans le [GetCapabilities du service]({{ urls.public.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0)
 
 On peut également récupérer nos données dans QGis. Pour les régions écologiques, le service se limite à 1000 objets, ils ne seront donc pas tous téléchargés en une fois.
 
