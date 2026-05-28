@@ -37,6 +37,7 @@ layout: layouts/base.njk
         {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url }) %}
       {% endfor %}
       {{ component("tabnav", { items: tabnavItems, forceMobile: true }) }}
+      <h2>{{ subTitle }}</h2>
       {% if summary.visible %}
         {% set depth = summary.depth | default(2) %}
         {% set summaryItems = content | getSummaryItems(depth) %}

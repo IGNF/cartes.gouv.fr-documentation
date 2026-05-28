@@ -6,16 +6,17 @@ eleventyNavigation:
     order: 2
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Calcul des données
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Calcul de la pyramide raster MNT
+### Calcul de la pyramide raster MNT
 
-Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d'images (la donnée est calculée dans plusieurs résolutions) sur du stockage S3. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
+Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d’images (la donnée est calculée dans plusieurs résolutions) sur du stockage S3. L’entité qui correspond à cette donnée pérenne est une donnée stockée.
 
-Pour transformer la donnée livrée en donnée stockée, des traitements sont mis à disposition de l'entrepôt.
+Pour transformer la donnée livrée en donnée stockée, des traitements sont mis à disposition de l’entrepôt.
 
 ```mermaid
 flowchart LR
@@ -41,11 +42,10 @@ flowchart LR
     class tra global
 ```
 
-### Consultation des traitements disponibles
+#### Consultation des traitements disponibles
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 ??? Corps de réponse JSON
@@ -56,20 +56,19 @@ flowchart LR
 ????
 <br>
 
-### Consultation du traitement qui nous intéresse
+#### Consultation du traitement qui nous intéresse
 
 Le détail sur un traitement permet de voir les types de données attendus en entrée (livrées ou stockées), les types de données produits en sortie, ainsi que les paramètres et les vérifications requises pour les livraisons en entrée.
 
-???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster_to_pyramid'] }}"
+```plain
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster_to_pyramid'] }}
 ```
 ??? Corps de réponse JSON
 ```json
 {
     "name": "Calcul de pyramide raster",
-    "description": "Génération ou mise à jour d'une pyramide de tuiles raster à partir d'une livraison d'images géo-référencées",
+    "description": "Génération ou mise à jour d’une pyramide de tuiles raster à partir d’une livraison d’images géo-référencées",
     "input_types": {
         "upload": ["RASTER"],
         "stored_data": ["ROK4-PYRAMID-RASTER"]
@@ -81,7 +80,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
     "parameters": [
         {
             "name": "tms",
-            "description": "Tile Matrix Set, grille de définition des tuiles. Dans le cas d'une génération initiale, il est obligatoire",
+            "description": "Tile Matrix Set, grille de définition des tuiles. Dans le cas d’une génération initiale, il est obligatoire",
             "mandatory": false,
             "constraints": {
                 "enum": ["PM", "4326", "LAMB93_10cm", "LAMB93_50cm"],
@@ -101,7 +100,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
         },
         {
             "name": "parallelization",
-            "description": "Nombre de scripts d'écriture des dalles en parallèle",
+            "description": "Nombre de scripts d’écriture des dalles en parallèle",
             "mandatory": false,
             "default_value": 1,
             "constraints": {
@@ -141,7 +140,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
         },
         {
             "name": "bottom",
-            "description": "Niveau du bas de la pyramide. Attention à ne pas sur-échantillonner les données utilisées. En ne précisant pas de niveau, le traitement prendra le niveau de la grille dont lé résolution est la plus proche des images livrées",
+            "description": "Niveau du bas de la pyramide. Attention à ne pas sur-échantillonner les données utilisées. En ne précisant pas de niveau, le traitement prendra le niveau de la grille dont la résolution est la plus proche des images livrées",
             "mandatory": false,
             "constraints": {
                 "type": "string"
@@ -149,7 +148,7 @@ Le détail sur un traitement permet de voir les types de données attendus en en
         },
         {
             "name": "top",
-            "description": "Niveau du haut de la pyramide. Par défaut, on remonte jusqu'au niveau le plus haut de la grille",
+            "description": "Niveau du haut de la pyramide. Par défaut, on remonte jusqu’au niveau le plus haut de la grille",
             "mandatory": false,
             "constraints": {
                 "type": "string"
@@ -165,12 +164,12 @@ Le détail sur un traitement permet de voir les types de données attendus en en
             }
         }
     ],
-    "_id": "{{ ids.processings['raster-to-pyramid'] }}",
+    "_id": "{{ ids.processings['raster_to_pyramid'] }}",
     "required_checks": [
         {
             "name": "Vérification raster",
             "description": "La vérification raster contrôle que les fichiers sont bien lisibles et en extraie le géoréférencement",
-            "_id": "{{ ids.checks.vector }}"
+            "_id": "{{ ids.checks.raster }}"
         },
         {
             "name": "Vérification standard",
@@ -184,19 +183,18 @@ Le détail sur un traitement permet de voir les types de données attendus en en
 ????
 <br>
 
-### Configuration d'une exécution de ce traitement
+#### Configuration d’une exécution de ce traitement
 
-On distingue le traitement, qui est une ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et prend en entrée ainsi qu'en sortie des données spécifiques.
+On distingue le traitement, qui est une ressource de la plateforme mise à disposition de l’entrepôt, et son exécution. Une exécution appartient à un entrepôt et prend en entrée ainsi qu’en sortie des données spécifiques.
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 ??? Corps de requête JSON
 ```json
 {
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
+    "processing": "{{ ids.processings['raster_to_pyramid'] }}",
     "inputs": {
         "upload": ["{upload MNT}"]
     },
@@ -220,7 +218,7 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
 {
     "processing": {
         "name": "Calcul ou mise à jour de pyramide raster",
-        "_id": "{{ ids.processings['raster-to-pyramid'] }}"
+        "_id": "{{ ids.processings['raster_to_pyramid'] }}"
     },
     "status": "CREATED",
     "creation": "2023-05-22T09:15:50.353341276Z",
@@ -260,35 +258,32 @@ On distingue le traitement, qui est une ressource de la plateforme mise à dispo
 ????
 <br>
 
-:::warning Points d'attentions
-On précise une étiquette de stockage pour la donnée en sortie. Selon la configuration de votre entrepôt, il est possible que vous ayez accès à plusieurs stockages de type S3. Ce sont les étiquettes qui vont permettre de choisir le stockage S3 cible.
-
-    On utilise le TMS `LAMB93_50cm` qui a le même système de coordonnée que l'image livrée, ainsi qu'un niveau à la même résolution (50cm). En choisissant une interpolation `nn`, on s'assure d'avoir un niveau de pyramide parfaitement calé sur les données sources, sans réechantillonnage, donc avec des valeurs d'origine. Les niveaux supérieurs eux seront calculé en moyennant les pixels 4 par 4. En ajoutant les masques, on évite de prendre en compte le nodata dans cette moyenne.
+:::warning
+On précise une étiquette de stockage pour la donnée en sortie. Selon la configuration de votre entrepôt, il est possible que vous ayez accès à plusieurs stockages de type S3. Ce sont les étiquettes qui vont permettre de choisir le stockage S3 cible.\
+On utilise le TMS `LAMB93_50cm` qui a le même système de coordonnée que l’image livrée, ainsi qu’un niveau à la même résolution (50 cm). En choisissant une interpolation `nn`, on s’assure d’avoir un niveau de pyramide parfaitement calé sur les données sources, sans rééchantillonnage, donc avec des valeurs d’origine. Les niveaux supérieurs eux seront calculés en moyennant les pixels 4 par 4. En ajoutant les masques, on évite de prendre en compte le nodata dans cette moyenne.
 :::
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}/launch"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}/launch
 ```
-
 ???
 <br>
 
-### Consultation de l'état de l'exécution
+#### Consultation de l’état de l’exécution
 
-Une exécution va avoir les statuts dans l'ordre suivant :
+Une exécution va avoir les statuts dans l’ordre suivant :
+- `CREATED` : créée mais non lancée
+- `WAITING` : lancée mais pas encore pris en charge par le cluster de calcul
+- `PROGRESS` : en cours d’exécution sur le cluster de calcul
+- `SUCCESS` ou `FAILURE` : terminé
 
-- CREATED : créée mais non lancée
-- WAITING : lancée mais pas encore pris en charge par le cluster de calcul
-- PROGRESS : en cours d'exécution sur le cluster de calcul
-- SUCCESS ou FAILURE : terminé
+<br>
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution MNT}
 ```
 ??? Corps de réponse JSON
@@ -296,7 +291,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 {
     "processing": {
         "name": "Calcul ou mise à jour de pyramide raster",
-        "_id": "{{ ids.processings['raster-to-pyramid'] }}"
+        "_id": "{{ ids.processings['raster_to_pyramid'] }}"
     },
     "status": "PROGRESS",
     "creation": "2023-09-15T13:53:49.189608Z",
@@ -338,13 +333,12 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 ????
 <br>
 
-## Consultation de la donnée stockée en sortie
+### Consultation de la donnée stockée en sortie
 
-À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées et niveaux).
+À la fin du traitement, des informations concernant la donnée finale sont remontées afin d’apparaître au niveau de l’API (taille, étendue, système de coordonnées et niveaux).
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data MNT}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data MNT}
 ```
 ??? Corps de réponse JSON
@@ -395,26 +389,25 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 ????
 <br>
 
-## Nettoyage de la livraison
+### Nettoyage de la livraison
 
-Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
+Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}
 ```
-
 ???
 <br>
 
-## Calcul de la pyramide MNS
+### Calcul de la pyramide MNS
 
-Toutes ces étapes peuvent être répétées avec la dalle :
+Toutes ces étapes peuvent être répétées, dans une livraison à part, avec la dalle :
 
 {{ component("download", {
     title: "[GeoTIFF] LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
     href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
-    detail: "TIFF - 15.3 Mo"
+    detail: "TIFF - 15.3 Mo"
 }) }}
-, dans une livraison à part. Cela permettra d'exploiter les deux données pour enrichir les services.
+
+Cela permettra d’exploiter les deux données pour enrichir les services.

@@ -1,53 +1,53 @@
 ---
-title: Publication sur le service d'altimétrie
+title: Publication sur le service d’altimétrie
 eleventyNavigation:
-    key: Publication sur le service d'altimétrie
+    key: Publication sur le service d’altimétrie
     order: 4
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Publication sur le service d’altimétrie
 ---
 
 {% from "components/component.njk" import component with context %}
 
-La pyramide générée va être également utilisable par le service d'altimétrie. Ce dernier permet de récupérer les altitudes en un point, ainsi que demander un profil altimétrique. Nous allons ici utiliser la donnée MNT ainsi que le MNS.
+La pyramide générée va être également utilisable par le service d’altimétrie. Ce dernier permet de récupérer les altitudes en un point, ainsi que demander un profil altimétrique. Nous allons ici utiliser la donnée MNT ainsi que le MNS.
 
-## Configuration de la diffusion
+### Configuration de la diffusion
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 ??? Corps de requête JSON pour lidar
 ```json
 {
     "type": "ALTIMETRY",
-    "name": "LidarHD : MNT et MNS",
+    "name": "LidarHD : MNT et MNS",
     "layer_name": "lidarhd_test",
     "type_infos": {
-        "title": "LidarHD : MNT et MNS",
-        "abstract": "LidarHD : MNT et MNS, à 50 cm",
+        "title": "LidarHD : MNT et MNS",
+        "abstract": "LidarHD : MNT et MNS, à 50 cm",
         "keywords": ["LidarHD", "MNT", "MNS"],
         "used_data": [
             {
-                "title": "MNT à 50cm, issu du Lidar HD",
+                "title": "MNT à 50 cm, issu du Lidar HD",
                 "stored_data": "{stored data MNT}",
                 "source": {
                     "value": "Lidar HD"
                 },
                 "accuracy": {
-                    "value": "Moins de 1m"
+                    "value": "Moins de 1 m"
                 }
             },
             {
-                "title": "MNS à 50cm, issu du Lidar HD",
+                "title": "MNS à 50 cm, issu du Lidar HD",
                 "stored_data": "{stored data MNS}",
                 "source": {
                     "value": "Lidar HD"
                 },
                 "accuracy": {
-                    "value": "Moins de 1m"
+                    "value": "Moins de 1 m"
                 }
             }
         ]
@@ -58,17 +58,16 @@ La pyramide générée va être également utilisable par le service d'altimétr
 ????
 <br>
 
-Les informations pour la source et la précision de la donnée peuvent être définies de manière statiques, comme ici, ou bien s'appuyer sur des pyramides raster (1 canal entier). On précisera alors la correspondance entre la valeur entière du pixel et l'intitulé de l'information.
+Les informations pour la source et la précision de la donnée peuvent être définies de manière statique, comme ici, ou bien s’appuyer sur des pyramides raster (1 canal entier). On précisera alors la correspondance entre la valeur entière du pixel et l’intitulé de l’information.
 
-## Envoi sur les services de diffusion
+### Envoi sur les services de diffusion
 
-### Consultation des points de diffusion disponibles
+#### Consultation des points de diffusion disponibles
 
-Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
+Ce sont les points d’accès de type `ALTIMETRY` qui nous intéressent ici.
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 ??? Corps de réponse JSON (champ endpoints)
@@ -79,11 +78,10 @@ Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
 ????
 <br>
 
-### Publication
+#### Publication
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration altimétrie}/offerings"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration altimétrie}/offerings
 ```
 ??? Corps de requête JSON
@@ -97,21 +95,19 @@ Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
 ????
 <br>
 
-On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le [GetCapabilities du service]({{ urls.public.alti }}/resources). Voici un exemple de demande d'altitude en deux points :
+On peut vérifier la présence de notre couche `lidarhd_test` dans le [GetCapabilities du service]({{ urls.public.alti }}/resources). Voici un exemple de demande d’altitude en deux points :
 
 ???? GET "{{ urls.public.alti }}/calcul/alti/rest/elevation.json"
-
-```title="Contenu"
+```plain
 {{ urls.public.alti }}/calcul/alti/rest/elevation.json
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
-        ["resource = `lidarhd_test`"],
-        ["lon = `5.96|5.961`"],
-        ["lat = `45.13|45.131`"],
-        ["measures = `true`"]
+        ["resource = lidarhd_test"],
+        ["lon = 5.96|5.961"],
+        ["lat = 45.13|45.131"],
+        ["measures = true"]
     ]
 }) }}
 ??? Corps de réponse JSON
@@ -122,21 +118,21 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
             "lon": 5.96,
             "lat": 45.13,
             "z": 1995.53,
-            "acc": "Moins de 1m",
+            "acc": "Moins de 1 m",
             "measures": [
                 {
                     "z": 1995.53,
                     "source_name": "Lidar HD",
                     "source_measure": "Fixed value",
-                    "acc": "Moins de 1m",
-                    "title": "MNS \u00e0 50cm, issu du Lidar HD"
+                    "acc": "Moins de 1 m",
+                    "title": "MNS \u00e0 50 cm, issu du Lidar HD"
                 },
                 {
                     "z": 1989.14,
                     "source_name": "Lidar HD",
                     "source_measure": "Fixed value",
-                    "acc": "Moins de 1m",
-                    "title": "MNT \u00e0 50cm, issu du Lidar HD"
+                    "acc": "Moins de 1 m",
+                    "title": "MNT \u00e0 50 cm, issu du Lidar HD"
                 }
             ]
         },
@@ -144,21 +140,21 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
             "lon": 5.961,
             "lat": 45.131,
             "z": 2098.24,
-            "acc": "Moins de 1m",
+            "acc": "Moins de 1 m",
             "measures": [
                 {
                     "z": 2098.24,
                     "source_name": "Lidar HD",
                     "source_measure": "Fixed value",
-                    "acc": "Moins de 1m",
-                    "title": "MNT \u00e0 50cm, issu du Lidar HD"
+                    "acc": "Moins de 1 m",
+                    "title": "MNT \u00e0 50 cm, issu du Lidar HD"
                 },
                 {
                     "z": 2098.24,
                     "source_name": "Lidar HD",
                     "source_measure": "Fixed value",
-                    "acc": "Moins de 1m",
-                    "title": "MNS \u00e0 50cm, issu du Lidar HD"
+                    "acc": "Moins de 1 m",
+                    "title": "MNS \u00e0 50 cm, issu du Lidar HD"
                 }
             ]
         }
@@ -167,4 +163,3 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
 ```
 ???
 ????
-<br>

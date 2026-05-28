@@ -26,8 +26,8 @@ L’ensemble des permissions qui m'ont été personnellement données ou qui ont
     {{ component("table", {
         headers: ["Paramètres de requête"],
         data: [
-            ["personal = `true`"],
-            ["community = `false`"]
+            ["personal = true"],
+            ["community = false"]
         ]
     }) }}
 ??? Corps de réponse JSON
@@ -68,8 +68,8 @@ En tant que bénéficiaire de cette permission personnelle, je peux la supprimer
     {{ component("table", {
         headers: ["Paramètres de requête"],
         data: [
-            ["personal = `false`"],
-            ["community = `true`"]
+            ["personal = false"],
+            ["community = true"]
         ]
     }) }}
 
@@ -146,9 +146,9 @@ Sans clé d’accès, il n'est pas possible de consulter le service de diffusion
     {{ component("table", {
         headers: ["Paramètres de requête"],
         data: [
-            ["REQUEST = `GetCapabilities`"],
-            ["SERVICE = `WFS`"],
-            ["VERSION = `2.0.0`"]
+            ["REQUEST = GetCapabilities"],
+            ["SERVICE = WFS"],
+            ["VERSION = 2.0.0"]
         ]
     }) }}
 
@@ -283,10 +283,10 @@ On peut maintenant voir les couches correspondantes à l’offre dans les [capac
     {{ component("table", {
         headers: ["Paramètres de requête"],
         data: [
-            ["REQUEST = `GetCapabilities`"],
-            ["SERVICE = `WFS`"],
-            ["VERSION = `2.0.0`"],
-            ["apikey = `masupercle`"]
+            ["REQUEST = GetCapabilities"],
+            ["SERVICE = WFS"],
+            ["VERSION = 2.0.0"],
+            ["apikey = masupercle"]
         ]
     }) }}
 
@@ -332,13 +332,13 @@ On peut maintenant voir les couches correspondantes à l’offre dans les [capac
 Il est aussi possible de mettre la clé dans le header `apikey` plutôt qu'en paramètre de requête.
 
 
-![Clé HASH dans QGis](/img/guides-developpeur/controle-acces/qgis_cle_hash.png){.fr-responsive-img .frx-img-contained} 
-Clé HASH dans QGis
+![Clé HASH dans QGIS](/img/guides-developpeur/controle-acces/qgis_cle_hash.png){.fr-responsive-img .frx-img-contained} 
+Clé HASH dans QGIS
 
 
 ### Créer une clé de type BASIC
 
-Nous allons ajouter à cette clé des limites d’utilisation et un user agent particulier qui limite l’usage de la clé au client QGis. À noter que l’ajout d’un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
+Nous allons ajouter à cette clé des limites d’utilisation et un user agent particulier qui limite l’usage de la clé au client QGIS. À noter que l’ajout d’un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
 
 
 ???? POST "{{ urls.api_entrepot }}/users/me/keys"
@@ -380,11 +380,11 @@ Nous allons ajouter à cette clé des limites d’utilisation et un user agent p
 
 L’affectation d’accès sur cette clé se fait exactement comme pour la première clé.
 
-Afin que les requêtes passent, il est maintenant nécessaire que le header "Referer" contienne une valeur avec QGIS (cela permet par exemple d’accepter toutes les requêtes venant de QGis, quelle que soit la version et le système d’exploitation).
+Afin que les requêtes passent, il est maintenant nécessaire que le header "Referer" contienne une valeur avec QGIS (cela permet par exemple d’accepter toutes les requêtes venant de QGIS, quelle que soit la version et le système d’exploitation).
 
 
-![Clé BASIC dans QGis](/img/guides-developpeur/controle-acces/qgis_cle_basic.png){.fr-responsive-img .frx-img-contained} 
-Clé BASIC dans QGis
+![Clé BASIC dans QGIS](/img/guides-developpeur/controle-acces/qgis_cle_basic.png){.fr-responsive-img .frx-img-contained} 
+Clé BASIC dans QGIS
 
 ### Créer une clé de type OAUTH2
 
@@ -422,8 +422,8 @@ Cette clé est un moyen de préciser que l’on va consommer les services de dif
 l’affectation d’accès sur cette clé se fait exactement comme pour la première clé.
 
 
-![Clé OAUTH2 dans QGis](/img/guides-developpeur/controle-acces/qgis_cle_oauth2.png){.fr-responsive-img .frx-img-contained} 
-Clé OAUTH2 dans QGis
+![Clé OAUTH2 dans QGIS](/img/guides-developpeur/controle-acces/qgis_cle_oauth2.png){.fr-responsive-img .frx-img-contained} 
+Clé OAUTH2 dans QGIS
 
 * URL de requête : `{{ urls.iam }}/protocol/openid-connect/auth`
 * URL du jeton : `{{ urls.iam }}/protocol/openid-connect/token`
