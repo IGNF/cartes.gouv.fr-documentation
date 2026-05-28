@@ -1,6 +1,6 @@
 ---
 title: ORTHO-SAT® SPOT
-description: Fond de plan annuel d’images satellites SPOT à moyenne résolution 1 m 50
+description: Fond de plan annuel d’images satellites SPOT à moyenne résolution 1,50 m
 tags:
     - Imagerie satellite
     - Millésimes

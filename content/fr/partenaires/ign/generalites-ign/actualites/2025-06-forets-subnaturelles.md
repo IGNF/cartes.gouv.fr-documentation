@@ -54,7 +54,7 @@ Si la zone est en forêt ancienne, et conservé d’après la BD Forêt®  V1 et
 
 #### Pertinence de la cartographie obtenue
 
-Les forêts subnaturelles actuellement connues dans la région Occitanie ont été utilisées pour qualifier les résultats obtenus sur cette cartographie, elles montrent que 99 % des forêts subnaturelles identifiées sur le terrain se retrouvent dans les zones identifiées comme « à prospecter », ce qui confirme la pertinence du filtrage réalisé pour identifier la « zone à prospecter ». Par ailleurs, cette cartographie permet de définir une zone à prospecter de 54 811 km² à l’échelle de la France hexagonale, ce qui réduit de près de 70 % la surface forestière totale dans laquelle rechercher les forêts subnaturelles, ce qui représente un gain de temps considérable pour les inventaires terrain à venir.
+Les forêts subnaturelles actuellement connues dans la région Occitanie ont été utilisées pour qualifier les résultats obtenus sur cette cartographie, elles montrent que 99 % des forêts subnaturelles identifiées sur le terrain se retrouvent dans les zones identifiées comme « à prospecter », ce qui confirme la pertinence du filtrage réalisé pour identifier la « zone à prospecter ». Par ailleurs, cette cartographie permet de définir une zone à prospecter de 54 811 km² à l’échelle de la France hexagonale, ce qui réduit de près de 70 % la surface forestière totale dans laquelle rechercher les forêts subnaturelles, ce qui représente un gain de temps considérable pour les inventaires terrain à venir.
 
 ![Cartographie des zones à prospecter](/img/partenaires/ign/generalites/actualites/2025-06-forets-subnaturelles3.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

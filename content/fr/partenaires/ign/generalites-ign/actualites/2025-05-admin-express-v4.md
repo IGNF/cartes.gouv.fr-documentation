@@ -69,7 +69,7 @@ _NB :_
 
 #### 6. L’ajout de la superficie cadastrale de l’INSEE sur la classe commune
 
-Différente de la surface géométrique brute, l’IGN intègre dans son produit la superficie cadastrale publiée par l’INSEE qui a vocation à être la surface territoriale de référence pour le calcul par exemple des densités de population communale. Cette superficie exprimée en km² comprend, selon l’[observatoire des territoires de l’ANCT](https://www.observatoire-des-territoires.gouv.fr/), « toutes les surfaces du domaine public et privé, cadastrées ou non cadastrées, à l’exception des lacs, étangs et glaciers de plus d’un kilomètre carré ainsi que des estuaires ». Cette superficie date de 2021. 
+Différente de la surface géométrique brute, l’IGN intègre dans son produit la superficie cadastrale publiée par l’INSEE qui a vocation à être la surface territoriale de référence pour le calcul par exemple des densités de population communale. Cette superficie exprimée en km² comprend, selon l’[observatoire des territoires de l’ANCT](https://www.observatoire-des-territoires.gouv.fr/), « toutes les surfaces du domaine public et privé, cadastrées ou non cadastrées, à l’exception des lacs, étangs et glaciers de plus d’un kilomètre carré ainsi que des estuaires ». Cette superficie date de 2021. 
 
 #### 7. Mise à jour de la limite littorale suite à l’intégration de la limite terre-mer
 

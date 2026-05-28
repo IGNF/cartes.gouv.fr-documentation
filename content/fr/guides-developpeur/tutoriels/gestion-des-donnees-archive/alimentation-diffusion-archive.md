@@ -1,17 +1,18 @@
 ---
-title: Alimentation et diffusion simple d'archives
+title: Alimentation et diffusion simple d’archives
 mermaid: true
-layout: layouts/parent.njk
+layout: layouts/parent_nav_tertiaire.njk
 eleventyNavigation:
-    key: Alimentation et diffusion simple d'archives
+    key: Alimentation et diffusion simple d’archives
     order: 1
+tertiaryTitle: Présentation
 ---
 
 {% from "components/component.njk" import component with context %}
 
-Le but de ce tutoriel est de diffuser des données archive en téléchargement. Le type de données archive est le plus simple géré par la plateforme : les fichiers de cette donnée sont simplement hébergés pour une diffusion en l'état. Aucune contrainte n'est appliquée aux fichiers d'une telle donnée.
+Le but de ce tutoriel est de diffuser des données archive en téléchargement. Le type de données archive est le plus simple géré par la plateforme : les fichiers de cette donnée sont simplement hébergés pour une diffusion en l’état. Aucune contrainte n’est appliquée aux fichiers d’une telle donnée.
 
-Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
+Les concepts de l’entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
 
 ```mermaid
 ---
@@ -36,7 +37,7 @@ stateDiagram
     PUB: Publication en téléchargement
     note right of PUB
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
@@ -62,7 +63,7 @@ flowchart LR
         sto["Stockage (storage)"]
         chec["Vérification (check)"]
         proc["Traitement (processing)"]
-        endp["Point d'accès (endpoint)"]
+        endp["Point d’accès (endpoint)"]
     end
     
 	subgraph dat[Entrepôt]
@@ -99,7 +100,7 @@ flowchart LR
 
 ## Données du tutoriel
 
-Les données de l'exemple sont 10 fichiers, données brutes des limites départementales, en Shapefile :
+Les données de l’exemple sont 10 fichiers, données brutes des limites départementales, en Shapefile :
 
 {{ component("download", {
     title: "DEPARTEMENT.cpg",
@@ -109,7 +110,7 @@ Les données de l'exemple sont 10 fichiers, données brutes des limites départe
 {{ component("download", {
     title: "DEPARTEMENT.dbf",
     href: "/data/tutoriels/archives/DEPARTEMENT.dbf",
-    detail: "dbf - 16.8 Ko"
+    detail: "dbf - 16.8 Ko"
 }) }}
 {{ component("download", {
     title: "DEPARTEMENT.prj",
@@ -119,7 +120,7 @@ Les données de l'exemple sont 10 fichiers, données brutes des limites départe
 {{ component("download", {
     title: "DEPARTEMENT.shp",
     href: "/data/tutoriels/archives/DEPARTEMENT.shp",
-    detail: "shp - 3 Mo"
+    detail: "shp - 3 Mo"
 }) }}
 {{ component("download", {
     title: "DEPARTEMENT.shx",
@@ -135,7 +136,7 @@ Les données de l'exemple sont 10 fichiers, données brutes des limites départe
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.dbf",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.dbf",
-    detail: "dbf - 1.9 Mo"
+    detail: "dbf - 1.9 Mo"
 }) }}
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.prj",
@@ -145,16 +146,16 @@ Les données de l'exemple sont 10 fichiers, données brutes des limites départe
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.shp",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.shp",
-    detail: "shp - 2.4 Mo"
+    detail: "shp - 2.4 Mo"
 }) }}
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.shx",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.shx",
-    detail: "shx - 70.9 Ko"
+    detail: "shx - 70.9 Ko"
 }) }}
 
 ## Outil de requête
 
-Une [collection Bruno](https://github.com/Geoplateforme/clients-configurations/tree/master/bruno/entrepot/archive) est préconfigurée avec les requêtes de ce tutoriel. Vous pouvez lire [cette documentation](https://github.com/Geoplateforme/clients-configurations?tab=readme-ov-file#collections-bruno) pour voir comment l'utiliser.
+Une [collection Bruno](https://github.com/Geoplateforme/clients-configurations/tree/master/bruno/entrepot/archive) est préconfigurée avec les requêtes de ce tutoriel. Vous pouvez lire cette [documentation](https://github.com/Geoplateforme/clients-configurations?tab=readme-ov-file#collections-bruno) pour voir comment l’utiliser.
 
-Il y a également une [collection Bruno](https://github.com/Geoplateforme/clients-configurations/tree/master/bruno/diffusion/telechargement) pour faciliter l'utilisation du service de téléchargement.
+Il y a également une [collection Bruno](https://github.com/Geoplateforme/clients-configurations/tree/master/bruno/diffusion/telechargement) pour faciliter l’utilisation du service de téléchargement.

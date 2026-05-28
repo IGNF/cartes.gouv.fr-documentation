@@ -31,7 +31,7 @@ _article, avenue, baccalauréat, boulevard, exemple, Journal Officiel, Madame, 
 
 Exceptions répertoriées :
 
-_cf., etc., HT, NB, n°,_ les unités de mesure, de longueur et de temps (_20 kg, 200 km, 20h_).
+_cf., etc., HT, NB, n°,_ les unités de mesure, de longueur et de temps (_20 kg, 200 km, 20 h_).
 
 En cas de doute, préférez toujours la version non-abrégée.
 

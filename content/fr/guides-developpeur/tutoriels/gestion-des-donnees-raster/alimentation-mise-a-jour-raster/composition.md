@@ -1,17 +1,17 @@
 ---
-title: Par composition a posteriori
+title: Par composition à posteriori
 mermaid: true
 eleventyNavigation:
-    key: Par composition a posteriori
+    key: Par composition à posteriori
     order: 3
 summary:
     visible: true
-    depth: 2
+tertiaryTitle: Par composition à posteriori
 ---
 
 {% from "components/component.njk" import component with context %}
 
-L'avantage de ce mode de fonctionnement est que les générations des pyramides indépendantes peuvent se faire en parallèle. Il n'y a pas de modifications de données et celles-ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les pyramides utilisées dans la composition).
+L’avantage de ce mode de fonctionnement est que les générations des pyramides indépendantes peuvent se faire en parallèle. Il n’y a pas de modifications de données et celles-ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les pyramides utilisées dans la composition).
 
 ```mermaid
 ---
@@ -25,7 +25,7 @@ stateDiagram
         Vérification (check)
         Traitement (processing)
         Exécution de traitement (processing execution)
-        Données stockée (stored data)
+        Données stockées (stored data)
     end note
 
     LIV2: Calcul de la pyramide contenant le deuxième jeu
@@ -34,20 +34,20 @@ stateDiagram
         Vérification (check)
         Traitement (processing)
         Exécution de traitement (processing execution)
-        Données stockée (stored data)
+        Données stockées (stored data)
     end note
 
     FUS: Calcul de la pyramide fusionnée
     note left of FUS
         Traitement (processing)
         Exécution de traitement (processing execution)
-        Données stockée (stored data)
+        Données stockées (stored data)
     end note
 
     PUB_TILED: Publication en WMTS/TMS pour validation
     note right of PUB_TILED
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
@@ -67,244 +67,254 @@ stateDiagram
     class LIV1,LIV2,PUB_TILED,FUS concepts
 ```
 
-## Gestion du premier jeu de données
+### Gestion du premier jeu de données
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/uploads
-```
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/uploads
+    ```
 
-```json
-{
-    "description": "SCAN 1000 Nord Corse",
-    "name": "SCAN 1000 Nord Corse",
-    "type": "RASTER",
-    "srs": "EPSG:2154"
-}
-```
+    ```json
+    {
+        "description": "SCAN 1000 Nord Corse",
+        "name": "SCAN 1000 Nord Corse",
+        "type": "RASTER",
+        "srs": "EPSG:2154"
+    }
+    ```
 
-???
-<br>
+    ???
 
-- Livraison des fichiers : 
-{{ component("download", {
-    title: "scan1000_corse_nord.tif",
-    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif",
-    detail: "TIFF - 7.5 Mo"
-}) }}
+    <br>
+
+- Livraison des fichiers :
+
+    {{ component("download", {
+        title: "scan1000_corse_nord.tif",
+        href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif",
+        detail: "TIFF - 7.5 Mo"
+    }) }}
 
 - Fermeture de la livraison
-- Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
+- Création de l’exécution de traitement : il est important de préciser que l’on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
-```
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+    ```
 
-```json
-{
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
-    "inputs": {
-        "upload": ["{upload Corse Nord}"]
-    },
-    "output": {
-        "stored_data": {
-            "name": "SCAN 1000 Nord Corse",
-            "storage_tags": ["PYRAMIDE"]
+    ```json
+    {
+        "processing": "{{ ids.processings['raster_to_pyramid'] }}",
+        "inputs": {
+            "upload": ["{upload Corse Nord}"]
+        },
+        "output": {
+            "stored_data": {
+                "name": "SCAN 1000 Nord Corse",
+                "storage_tags": ["PYRAMIDE"]
+            }
+        },
+        "parameters": {
+            "tms": "PM",
+            "compression": "jpg",
+            "interpolation": "bicubic",
+            "mask": true
         }
-    },
-    "parameters": {
-        "tms": "PM",
-        "compression": "jpg",
-        "interpolation": "bicubic",
-        "mask": true
     }
-}
-```
+    ```
 
-???
-<br>
+    ???
 
-- Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
+    <br>
 
-Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui sur le deuxième jeu.
+- Lancement de l’exécution : ID de la donnée stockée `{stored data Corse Nord}`
 
-## Gestion du deuxième jeu de données
+Il n’est pas nécessaire d’attendre la fin de ce traitement pour lancer celui sur le deuxième jeu.
+
+### Gestion du deuxième jeu de données
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/uploads
-```
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/uploads
+    ```
 
-```json
-{
-    "description": "SCAN 1000 Sud Corse",
-    "name": "SCAN 1000 Sud Corse",
-    "type": "RASTER",
-    "srs": "EPSG:2154"
-}
-```
-
-???
-<br>
-
-- Livraison des fichiers : 
-{{ component("download", {
-    title: "scan1000_corse_sud.tif",
-    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
-    detail: "TIFF - 7.7 Mo"
-}) }}
-- Fermeture de la livraison
-- Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
-
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
-```
-
-```json
-{
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
-    "inputs": {
-        "upload": ["{upload Corse Sud}"]
-    },
-    "output": {
-        "stored_data": {
-            "name": "SCAN 1000 Sud Corse",
-            "storage_tags": ["PYRAMIDE"]
-        }
-    },
-    "parameters": {
-        "tms": "PM",
-        "compression": "jpg",
-        "interpolation": "bicubic",
-        "mask": true
+    ```json
+    {
+        "description": "SCAN 1000 Sud Corse",
+        "name": "SCAN 1000 Sud Corse",
+        "type": "RASTER",
+        "srs": "EPSG:2154"
     }
-}
-```
+    ```
 
-???
-<br>
+    ???
 
-- Lancement de l'exécution : ID de la données stockée `{stored data Corse Sud}`
+    <br>
 
-## Génération de la pyramide fusionnée
+- Livraison des fichiers :
 
-Lorsque les deux pyramides indépendantes sont générées :
+    {{ component("download", {
+        title: "scan1000_corse_sud.tif",
+        href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
+        detail: "TIFF - 7.7 Mo"
+    }) }}
 
-- Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids_to_pyramid'] }}`
+- Fermeture de la livraison
+- Création de l’exécution de traitement : il est important de préciser que l’on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}"
+    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}
-```
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+    ```
 
-```json
-{
-    "name": "Fusion de pyramides raster",
-    "description": "Ce traitement permet de générer une pyramide raster par composition de plusieurs pyramides indépendantes. Seules les dalles présentes dans plusieurs entrées seront recalculées. Celles présentes dans une seule entrée seront référencées. La pyramide en sortie a donc des dépendances avec celles en entrée.",
-    "input_types": {
-        "upload": [],
-        "stored_data": ["ROK4-PYRAMID-RASTER"]
-    },
-    "output_type": {
-        "stored_data": "ROK4-PYRAMID-RASTER",
-        "storage": ["S3"]
-    },
-    "parameters": [
-        {
-            "name": "parallelization",
-            "description": "Le niveau de parallélisation du calcul (nombre de scripts parallèles, nombre de threads)",
-            "mandatory": false,
-            "default_value": 1
+    ```json
+    {
+        "processing": "{{ ids.processings['raster_to_pyramid'] }}",
+        "inputs": {
+            "upload": ["{upload Corse Sud}"]
         },
-        {
-            "name": "top",
-            "description": "Niveau du haut de la pyramide en sortie : ce sera par défaut le plus haut de toutes les pyramides en entrée",
-            "mandatory": false
+        "output": {
+            "stored_data": {
+                "name": "SCAN 1000 Sud Corse",
+                "storage_tags": ["PYRAMIDE"]
+            }
         },
-        {
-            "name": "bottom",
-            "description": "Niveau du bas de la pyramide en sortie : ce sera par défaut le plus bas de toutes les pyramides en entrée",
-            "mandatory": false
-        },
-        {
-            "name": "bbox",
-            "description": "Étendue géographique sur laquelle sera générée la pyramide : ce sera par défaut l'union des étendues de toutes les pyramides en entrée",
-            "mandatory": false
+        "parameters": {
+            "tms": "PM",
+            "compression": "jpg",
+            "interpolation": "bicubic",
+            "mask": true
         }
-    ],
-    "_id": "{{ ids.processings['pyramids_to_pyramid'] }}",
-    "required_checks": []
-}
-```
+    }
+    ```
 
-???
-<br>
+    ???
 
-- Création de l'exécution de traitement (on s'appuie sur les valeurs par défaut des paramètres)
+    <br>
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+- Lancement de l’exécution : ID de la donnée stockée `{stored data Corse Sud}`
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
-```
+### Génération de la pyramide fusionnée
 
-```json
-{
-    "processing": "{{ ids.processings['pyramids_to_pyramid'] }}",
-    "inputs": {
-        "stored_data": ["{stored data Corse Nord}", "{stored data Corse Sud}"]
-    },
-    "output": {
-        "stored_data": {
-            "name": "SCAN 1000 Corse",
-            "storage_tags": ["PYRAMIDE"]
-        }
-    },
-    "parameters": {}
-}
-```
+Lorsque les deux pyramides indépendantes sont générées :
 
-???
-<br>
+- Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids_to_pyramid'] }}`
 
-- Lancement de l'exécution
-- À la fin, on peut voir que notre nouvelle pyramide a deux dépendances : elle utilise nos deux pyramides indépendantes, qu'on ne pourra plus supprimer.
+    ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}"
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}
+    ```
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
-```
-
-```json
-{
-    "used_by": [],
-    "use": [
-        {
-            "name": "SCAN 1000 Nord Corse",
-            "_id": "{stored data Corse Nord}"
+    ```json
+    {
+        "name": "Fusion de pyramides raster",
+        "description": "Ce traitement permet de générer une pyramide raster par composition de plusieurs pyramides indépendantes. Seules les dalles présentes dans plusieurs entrées seront recalculées. Celles présentes dans une seule entrée seront référencées. La pyramide en sortie a donc des dépendances avec celles en entrée.",
+        "input_types": {
+            "upload": [],
+            "stored_data": ["ROK4-PYRAMID-RASTER"]
         },
-        {
-            "name": "SCAN 1000 Sud Corse",
-            "_id": "{stored data Corse Sud}"
-        }
-    ]
-}
-```
+        "output_type": {
+            "stored_data": "ROK4-PYRAMID-RASTER",
+            "storage": ["S3"]
+        },
+        "parameters": [
+            {
+                "name": "parallelization",
+                "description": "Le niveau de parallélisation du calcul (nombre de scripts parallèles, nombre de threads)",
+                "mandatory": false,
+                "default_value": 1
+            },
+            {
+                "name": "top",
+                "description": "Niveau du haut de la pyramide en sortie : ce sera par défaut le plus haut de toutes les pyramides en entrée",
+                "mandatory": false
+            },
+            {
+                "name": "bottom",
+                "description": "Niveau du bas de la pyramide en sortie : ce sera par défaut le plus bas de toutes les pyramides en entrée",
+                "mandatory": false
+            },
+            {
+                "name": "bbox",
+                "description": "Étendue géographique sur laquelle sera générée la pyramide : ce sera par défaut l’union des étendues de toutes les pyramides en entrée",
+                "mandatory": false
+            }
+        ],
+        "_id": "{{ ids.processings['pyramids_to_pyramid'] }}",
+        "required_checks": []
+    }
+    ```
 
-???
-<br>
+    ???
+
+    <br>
+
+- Création de l’exécution de traitement (on s’appuie sur les valeurs par défaut des paramètres)
+
+    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+    ```
+
+    ```json
+    {
+        "processing": "{{ ids.processings['pyramids_to_pyramid'] }}",
+        "inputs": {
+            "stored_data": ["{stored data Corse Nord}", "{stored data Corse Sud}"]
+        },
+        "output": {
+            "stored_data": {
+                "name": "SCAN 1000 Corse",
+                "storage_tags": ["PYRAMIDE"]
+            }
+        },
+        "parameters": {}
+    }
+    ```
+
+    ???
+
+    <br>
+
+- Lancement de l’exécution
+- À la fin, on peut voir que notre nouvelle pyramide a deux dépendances : elle utilise nos deux pyramides indépendantes, qu’on ne pourra plus supprimer.
+
+    ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
+
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
+    ```
+
+    ```json
+    {
+        "used_by": [],
+        "use": [
+            {
+                "name": "SCAN 1000 Nord Corse",
+                "_id": "{stored data Corse Nord}"
+            },
+            {
+                "name": "SCAN 1000 Sud Corse",
+                "_id": "{stored data Corse Sud}"
+            }
+        ]
+    }
+    ```
+
+    ???
+
+    <br>
 
 En publiant notre pyramide fusionnée, on retrouve bien la Corse en entier.
 

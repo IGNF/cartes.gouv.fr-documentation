@@ -335,7 +335,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 {{ component("download", {
     title: "installation.sld",
     href: "/data/tutoriels/alimentation-maj/installation.sld",
-    detail: "sld - 4.3 Ko"
+    detail: "sld - 4.3 Ko"
 }) }}
 
 📄 `<installation.sld>`
@@ -487,10 +487,6 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 
 <br>
 
-<<<<<<< HEAD
-On peut vérifier la présence de notre couche `installations_classees` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
-=======
 On peut vérifier la présence de notre couche `installations_classees` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
->>>>>>> 9e45dac (integration a 'Alimentation par mise à jour vecteur')
 
 Si on consulte la donnée sur QGIS, on ne verra pour le moment aucune donnée.

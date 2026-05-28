@@ -35,9 +35,9 @@ Afin de rendre ce fichier accessible, nous allons le déposer au sein de l'entre
     {{ component("table", {
         headers: ["Corps de requête Multipart"],
         data: [
-            ["file = `<getcap.xml>`"],
-            ["paths = `capabilities/mes_couches_wfs`"],
-            ["published = `true`"]
+            ["file = &lt;getcap.xml&gt;"],
+            ["paths = capabilities/mes_couches_wfs"],
+            ["published = true"]
         ]
     }) }}
   
@@ -60,4 +60,4 @@ Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvo
 
 * {{ urls.annexes }}/{technical_name}/capabilities/mes_couches_wfs
 
-En mettant cette URL dans QGis pour définir un nouveau serveur WFS, on va pouvoir ne récupérer, en s'y connectant, que les couches sélectionnées.
+En mettant cette URL dans QGIS pour définir un nouveau serveur WFS, on va pouvoir ne récupérer, en s'y connectant, que les couches sélectionnées.

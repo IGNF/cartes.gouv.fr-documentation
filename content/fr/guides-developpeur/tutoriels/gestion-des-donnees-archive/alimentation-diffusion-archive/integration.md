@@ -1,19 +1,20 @@
 ---
-title: Intégration des données archives
+title: Intégration des données archive
 mermaid: true
 eleventyNavigation:
-    key: Intégration des données archives
+    key: Intégration des données archive
     order: 2
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Intégration
 ---
 
-## Intégration des données
+### Intégration des données
 
-Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données archives, il n'y a aucune modification des données, une simple copie sur le stockage pérenne. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
+Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données archive, il n’y a aucune modification des données, une simple copie sur le stockage pérenne. L’entité qui correspond à cette donnée pérenne est une donnée stockée.
 
-Pour recopier la donnée livrée en donnée stockée, des traitements sont mis à disposition de l'entrepôt.
+Pour recopier la donnée livrée en donnée stockée, des traitements sont mis à disposition de l’entrepôt.
 
 ```mermaid
 flowchart LR
@@ -26,7 +27,7 @@ flowchart LR
         fic3[/Fichier 3/]
     end
 
-    subgraph tra[Traitement d'intégration]
+    subgraph tra[Traitement d’intégration]
         exe[Exécution du traitement]
     end
 
@@ -39,34 +40,36 @@ flowchart LR
     class tra global
 ```
 
-### Consultation des traitements disponibles
+#### Consultation des traitements disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
+
 ???
+
 <br>
 
-### Consultation du traitement qui nous intéresse
+#### Consultation du traitement qui nous intéresse
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive_to_archive'] }}"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive_to_archive'] }}
 ```
 
 ```json
 {
-    "name": "Recopie d'une archive livrée",
-    "description": "Génération ou mise à jour d'une donnée stockée ARCHIVE à partir d'une archive livrée. Si un fichier livré existait déjà dans la donnée en sortie, celui-ci va écraser l'ancienne version",
+    "name": "Recopie d’une archive livrée",
+    "description": "Génération ou mise à jour d’une donnée stockée ARCHIVE à partir d’une archive livrée. Si un fichier livré existait déjà dans la donnée en sortie, celui-ci va écraser l’ancienne version",
     "priority": "STANDARD",
     "input_types": {
         "upload": [
@@ -85,7 +88,7 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
     "required_checks": [
         {
             "name": "Vérification archive",
-            "description": "Contrôle de l'absence de conflit dans le nommage des fichiers livrés",
+            "description": "Contrôle de l’absence de conflit dans le nommage des fichiers livrés",
             "_id": "{{ ids.checks.archive }}"
         },
         {
@@ -96,16 +99,18 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
     ]
 }
 ```
+
 ???
+
 <br>
 
-### Configuration d'une exécution de ce traitement
+#### Configuration d’une exécution de ce traitement
 
-On distingue le traitement, ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
+On distingue le traitement, ressource de la plateforme mise à disposition de l’entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -129,7 +134,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 ```json
 {
     "processing": {
-        "name": "Recopie d'une archive livrée",
+        "name": "Recopie d’une archive livrée",
         "_id": "{{ ids.processings['archive_to_archive'] }}"
     },
     "status": "CREATED",
@@ -158,35 +163,39 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
     "_id": "{execution}"
 }
 ```
+
 ???
+
 <br>
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch
 ```
 
 ???
+
 <br>
 
-### Consultation de l'état de l'exécution
+#### Consultation de l’état de l’exécution
 
-Une exécution va avoir les statuts dans l'ordre suivant :
+Une exécution va avoir les statuts dans l’ordre suivant :
+- `CREATED` : créée mais non lancée
+- `WAITING` : lancée mais pas encore prise en charge par le cluster de calcul
+- `PROGRESS` : en cours d’exécution sur le cluster de calcul
+- `SUCCESS` ou `FAILURE` : terminé
 
-* CREATED : créée mais non lancée
-* WAITING : lancée mais pas encore prise en charge par le cluster de calcul
-* PROGRESS : en cours d'exécution sur le cluster de calcul
-* SUCCESS ou FAILURE : terminé
+<br>
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
 
 ```json
 {
     "processing": {
-        "name": "Recopie d'une archive livrée",
+        "name": "Recopie d’une archive livrée",
         "_id": "{{ ids.processings['archive_to_archive'] }}"
     },
     "status": "PROGRESS",
@@ -217,19 +226,20 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "_id": "{execution}"
 }
 ```
+
 ???
+
 <br>
 
-## Ajout d'informations sur la donnée stockée
+### Ajout d’informations sur la donnée stockée
 
-À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, nombre de fichiers, système de coordonnées).
+À la fin du traitement, des informations concernant la donnée finale sont remontées afin d’apparaître au niveau de l’API (taille, nombre de fichiers, système de coordonnées).
 
-Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel format, potentiellement des fichiers compressés. C'est pourquoi le traitement d'intégration n'extrait pas d'étendue à partir des données. Nous allons pouvoir la préciser (géométrie en GeoJSON avec au plus 5000 points), ainsi que des dates d'édition.
-
+Cependant, les données de type ARCHIVE peuvent correspondre à n’importe quel format, potentiellement des fichiers compressés. C’est pourquoi le traitement d’intégration n’extrait pas d’étendue à partir des données. Nous allons pouvoir la préciser (géométrie en GeoJSON avec au plus 5 000 points), ainsi que des dates d’édition.
 
 ??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
@@ -692,18 +702,19 @@ Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel f
     }
 }
 ```
+
 ???
+
 <br>
 
-## Nettoyage de la livraison
+### Nettoyage de la livraison
 
-Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
+Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}
 ```
 
 ???
-<br>

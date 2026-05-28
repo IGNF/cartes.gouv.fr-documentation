@@ -5,21 +5,23 @@ eleventyNavigation:
     order: 3
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Publication
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Configuration de la diffusion
+### Configuration de la diffusion
 
-La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
+La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :
+- nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations `DOWNLOAD` de la plateforme)
+- doublon dans le nom des sous-couches (si on veut diffuser plusieurs données `ARCHIVE` au sein d’une même configuration)
 
-* nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations DOWNLOAD de la plateforme)
-* doublon dans le nom des sous-couches (si on veut diffuser plusieurs données ARCHIVE au sein d'une même configuration)
+<br>
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -56,25 +58,27 @@ La configuration centralise toutes les informations nécessaires à la diffusion
     }
 }
 ```
+
 ???
+
 <br>
 
-Si on ne précise pas de titre ou de résumé pour la donnée stockée diffusée, ce sera son nom qui sera utilisé. Les codes des langues sont ceux [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1).
+Si on ne précise pas de titre ou de résumé pour la donnée stockée diffusée, ce sera son nom qui sera utilisé. Les codes des langues sont ceux [ISO 639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1).
 
-Dans les sous-ressources, `format`, `zone` et `resolution` (non utilisé ici) s'appuieront sur les nomenclatures pour afficher au niveau du service de téléchargement des noms plus humains. On fournit ici les `term` et les `label` seront ajoutés. Si la valeur dans la configuration ne correspond à aucun term pour le type correspondant, le label prendra la même valeur. Le SRS de la donnée stockée sera également enrichie en utilisant la nomenclature. Dans le service de téléchargement, le `term` sera converti en URL pour respecter les spécifications Atom.
+Dans les sous-ressources, `format`, `zone` et `resolution` (non utilisé ici) s’appuieront sur les nomenclatures pour afficher au niveau du service de téléchargement des noms plus humains. On fournit ici les `term` et les `label` seront ajoutés. Si la valeur dans la configuration ne correspond à aucun term pour le type correspondant, le label prendra la même valeur. Le SRS de la donnée stockée sera également enrichie en utilisant la nomenclature. Dans le service de téléchargement, le `term` sera converti en URL pour respecter les spécifications Atom.
 
-Voici un exemple pour voir la nomenclature des zones :
+Voici un exemple pour voir la nomenclature des zones :
 
 ??? GET "{{ urls.api_entrepot }}/statics/nomenclatures"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/statics/nomenclatures
 ```
 
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
-        ["type = `ZONE`"]
+        ["type = ZONE"]
     ]
 }) }}
 
@@ -97,34 +101,38 @@ Voici un exemple pour voir la nomenclature des zones :
         }
     ]
 ```
+
 ???
+
 <br>
 
-## Publication
+### Publication
 
-À ce stade, aucune information n'a été envoyée aux serveurs de téléchargement assurant la diffusion. Cette synchronisation de la configuration sur les serveurs de diffusion, représentés par le point d'accès, se fait via la création d'une offre : la publication. Elle matérialise la présence d'une configuration sur un point d'accès.
+À ce stade, aucune information n’a été envoyée aux serveurs de téléchargement assurant la diffusion. Cette synchronisation de la configuration sur les serveurs de diffusion, représentés par le point d’accès, se fait via la création d’une offre : la publication. Elle matérialise la présence d’une configuration sur un point d’accès.
 
-### Consultation des points de diffusion disponibles
+#### Consultation des points de diffusion disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
+
 ???
+
 <br>
 
-C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
+C’est le point d’accès de type `DOWNLOAD` qui va nous intéresser.
 
-### Création de l'offre
+#### Création de l’offre
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings
 ```
 
@@ -155,33 +163,35 @@ C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
     "_id": "{offering}"
 }
 ```
+
 ???
-</br>
 
-## Consultation du service de téléchargement
+<br>
 
-En consultant les [capacités du service de téléchargement]({{ urls.public.download }}/capabilities), on retrouve notre couche (on demande ici la réponse en JSON, c'est le format XML Atom par défaut). On va également filtrer sur nos valeurs spécifiques pour n'avoir que notre résultat.
+### Consultation du service de téléchargement
+
+En consultant les [capacités du service de téléchargement]({{ urls.public.download }}/capabilities), on retrouve notre couche (on demande ici la réponse en JSON, c’est le format XML Atom par défaut). On va également filtrer sur nos valeurs spécifiques pour n’avoir que notre résultat.
 
 ??? GET "{{ urls.public.download }}/capabilities"
 
-``` title="Contenu" 
+```plain
 {{ urls.public.download }}/capabilities
 ```
 
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
-        ["crs = `https://www.opengis.net/def/crs/EPSG/0/2154`"],
-        ["zone = `FXX`"],
-        ["format = `SHP`"],
-        ["editionDateTo = `2024-09-16`"]
+        ["crs = https://www.opengis.net/def/crs/EPSG/0/2154"],
+        ["zone = FXX"],
+        ["format = SHP"],
+        ["editionDateTo = 2024-09-16"]
     ]
 }) }}
 
 {{ component("table", {
     headers: ["En-tête de requête"],
     data: [
-        ["Accept = `application/json`"]
+        ["Accept = application/json"]
     ]
 }) }}
 
@@ -199,11 +209,11 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
     "title": "Public Download Service of Géoplateforme",
     "subtitle": "This Download Service allows you to download public datasources",
     "id": "{{ urls.public.download }}/capabilities",
-    "rights": "Conditions Générales d'Utilisation disponibles ici : https://cartes.gouv.fr/cgu-licences",
+    "rights": "Conditions Générales d’Utilisation disponibles ici : https://cartes.gouv.fr/cgu-licences",
     "updated": "2024-09-17",
     "author":
     {
-        "name": "Institut national de l'information géographique et forestière",
+        "name": "Institut national de l’information géographique et forestière",
         "email": "geoplateforme@ign.fr"
     },
     "link":
@@ -290,22 +300,24 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
     ]
 }
 ```
+
 ???
+
 <br>
 
-Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit [le lien dans l'entrée]({{ urls.public.download }}/resource/limites_administratives), c'est-à-dire les sous-ressources. Dans notre cas, on a une seule sous-ressource, `departements`.
+Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit le [lien dans l’entrée]({{ urls.public.download }}/resource/limites_administratives), c’est-à-dire les sous-ressources. Dans notre cas, on a une seule sous-ressource, `departements`.
 
 
 ??? GET "{{ urls.public.download }}/resource/limites_administratives"
 
-``` title="Contenu" 
+```plain
 {{ urls.public.download }}/resource/limites_administratives
 ```
 
 {{ component("table", {
     headers: ["En-tête de requête"],
     data: [
-        ["Accept = `application/json`"]
+        ["Accept = application/json"]
     ]
 }) }}
     
@@ -408,21 +420,23 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
     ]
 }
 ```
+
 ???
+
 <br>
 
-Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous-ressource en suivant le [lien de l'entrée]({{ urls.public.download }}/resource/limites_administratives/departements).
+Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous-ressource en suivant le [lien de l’entrée]({{ urls.public.download }}/resource/limites_administratives/departements).
 
 ??? GET "{{ urls.public.download }}/resource/limites_administratives/departements"
 
-``` title="Contenu" 
+```plain
 {{ urls.public.download }}/resource/limites_administratives/departements
 ```
 
 {{ component("table", {
     headers: ["En-tête de requête"],
     data: [
-        ["Accept = `application/json`"]
+        ["Accept = application/json"]
     ]
 }) }}
 
@@ -701,18 +715,19 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
     ]
 }
 ```
+
 ???
+
 <br>
 
-On retrouve nos 10 fichiers, avec leur taille et leur signature MD5, téléchargeables :
-
-* [LIMITE_DEPARTEMENT.dbf]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf)
-* [LIMITE_DEPARTEMENT.prj]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj)
-* [LIMITE_DEPARTEMENT.cpg]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg)
-* [LIMITE_DEPARTEMENT.shp]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp)
-* [LIMITE_DEPARTEMENT.shx]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx)
-* [DEPARTEMENT.dbf]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf)
-* [DEPARTEMENT.prj]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.prj)
-* [DEPARTEMENT.cpg]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg)
-* [DEPARTEMENT.shp]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shp)
-* [DEPARTEMENT.shx]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shx)
+On retrouve nos 10 fichiers, avec leur taille et leur signature MD5, téléchargeables :
+- [LIMITE_DEPARTEMENT.dbf]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf)
+- [LIMITE_DEPARTEMENT.prj]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj)
+- [LIMITE_DEPARTEMENT.cpg]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg)
+- [LIMITE_DEPARTEMENT.shp]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp)
+- [LIMITE_DEPARTEMENT.shx]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx)
+- [DEPARTEMENT.dbf]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf)
+- [DEPARTEMENT.prj]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.prj)
+- [DEPARTEMENT.cpg]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg)
+- [DEPARTEMENT.shp]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shp)
+- [DEPARTEMENT.shx]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shx)

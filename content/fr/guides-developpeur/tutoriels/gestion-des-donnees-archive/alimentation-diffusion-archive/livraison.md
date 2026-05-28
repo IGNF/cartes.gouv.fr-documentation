@@ -1,28 +1,29 @@
 ---
-title: Livraison des données archives
+title: Livraison des données archive
 eleventyNavigation:
-    key: Livraison des données archives
+    key: Livraison des données archive
     order: 1
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Livraison
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Livraison des données
+### Livraison des données
 
-La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l'entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
+La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l’entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
 
-La livraison n'a qu'un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
+La livraison n’a qu’un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
 
-### Déclarer la livraison
+#### Déclarer la livraison
 
-Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera simplement une information 
+Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera simplement une information.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 
@@ -57,179 +58,212 @@ Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera si
     "type_infos": {}
 }
 ```
+
 ???
+
 <br>
 
-### Téléverser un fichier
+#### Téléverser un fichier
 
-Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La seule contrainte est sur le nommage : on ne peut pas avoir deux fichiers qui ont le même nom à des endroits différents de l'arborescence de la livraison. La vérification sortirait en erreur. Les fichiers étant stockés de manière pérenne à plat, on ne veut pas de conflit sur le nommage.
+Il n’y a aucune limitation aux formats de fichiers qui seront pris en charge. La seule contrainte est sur le nommage : on ne peut pas avoir deux fichiers qui ont le même nom à des endroits différents de l’arborescence de la livraison. La vérification sortirait en erreur. Les fichiers étant stockés de manière pérenne à plat, on ne veut pas de conflit sur le nommage.
 
 📄 `<DEPARTEMENT.cpg>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.cpg"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.cpg
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<DEPARTEMENT.cpg>`"]
+        ["file = &lt;DEPARTEMENT.cpg&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<DEPARTEMENT.dbf>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.dbf"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.dbf
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<DEPARTEMENT.dbf>`"]
+        ["file = &lt;DEPARTEMENT.dbf&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<DEPARTEMENT.prj>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.prj"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.prj
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<DEPARTEMENT.prj>`"]
+        ["file = &lt;DEPARTEMENT.prj&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<DEPARTEMENT.shp>`
-??? request-post "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.shp"
 
-``` title="Contenu" 
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.shp"
+
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.shp
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<DEPARTEMENT.shp>`"]
+        ["file = &lt;DEPARTEMENT.shp&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<DEPARTEMENT.shx>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.shx"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/DEPARTEMENT.shx
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<DEPARTEMENT.shx>`"]
+        ["file = &lt;DEPARTEMENT.shx&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<LIMITE_DEPARTEMENT.cpg>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.cpg"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.cpg
 ```
+
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<LIMITE_DEPARTEMENT.cpg>`"]
+        ["file = &lt;LIMITE_DEPARTEMENT.cpg&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<LIMITE_DEPARTEMENT.dbf>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.dbf"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.dbf
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<LIMITE_DEPARTEMENT.dbf>`"]
+        ["file = &lt;LIMITE_DEPARTEMENT.dbf&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<LIMITE_DEPARTEMENT.prj>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.prj"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.prj
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<LIMITE_DEPARTEMENT.prj>`"]
+        ["file = &lt;LIMITE_DEPARTEMENT.prj&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
 📄 `<LIMITE_DEPARTEMENT.shp>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.shp"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.shp
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<LIMITE_DEPARTEMENT.shp>`"]
+        ["file = &lt;LIMITE_DEPARTEMENT.shp&gt;"]
     ]
 }) }}
+
+???
 
 <br>
 
 📄 `<LIMITE_DEPARTEMENT.shx>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.shx"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/LIMITE_DEPARTEMENT.shx
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<LIMITE_DEPARTEMENT.shx>`"]
+        ["file = &lt;LIMITE_DEPARTEMENT.shx&gt;"]
     ]
 }) }}
+
 ???
+
 <br>
 
-### Contrôler le contenu
+#### Contrôler le contenu
 
-Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
+Afin de vérifier que tous les fichiers ont bien été déposés, ainsi que leur éventuelle arborescence :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
 
@@ -294,30 +328,34 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
     }
 ]
 ```
+
 ???
+
 <br>
 
-## Terminer la livraison
+### Terminer la livraison
 
-Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu'elles puissent être traitées sans conflit. Des vérifications vont s'exécuter, lire les données livrées et détecter d'éventuels problèmes qui auraient mis en échec les traitements à suivre.
+Terminer la livraison va consister à retirer les droits en écriture sur les données déposées afin qu’elles puissent être traitées sans conflit. Des vérifications vont s’exécuter, lire les données livrées et détecter d’éventuels problèmes qui auraient mis en échec les traitements à suivre.
 
-### Fermeture
+#### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close
 ```
+
 ???
+
 <br>
 
-### Consultation des vérifications sur ma livraison
+#### Consultation des vérifications sur ma livraison
 
 Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne faisant que lire les données déposées.
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 
@@ -344,14 +382,16 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
     "failed": []
 }
 ```
+
 ???
+
 <br>
 
-Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l'appel précédent sera :
+Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l’appel précédent sera :
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 
@@ -378,5 +418,5 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
     "failed": []
 }
 ```
+
 ???
-<br>
