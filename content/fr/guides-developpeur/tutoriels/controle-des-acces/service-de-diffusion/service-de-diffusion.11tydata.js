@@ -1,7 +1,8 @@
 module.exports = {
+    layout: "layouts/article_nav_tertiaire.njk",
     segments: [
         {
-            url: "/guides-developpeur/tutoriels/controle-des-acces/service-de-diffusion",
+            url: "/guides-developpeur/tutoriels/controle-des-acces/service-de-diffusion/",
             title: "Contrôle des accès aux services de diffusion",
         },
     ],
