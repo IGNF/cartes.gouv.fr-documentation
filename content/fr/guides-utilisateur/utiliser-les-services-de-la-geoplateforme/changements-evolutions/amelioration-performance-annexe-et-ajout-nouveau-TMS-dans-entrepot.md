@@ -22,4 +22,4 @@ Le TMS 2154_50cm_MNx va être ajouté dans l’entrepot. Il va permettre de reca
 
 ## Corrections de bugs
 
-- [Autocomplétion] Suppession d’un message d’erreur qui apparaissait à l’ouverture du [Swagger](https://data.geopf.fr/geocodage/completion/openapi)
+- [Autocomplétion] Suppression d’un message d’erreur qui apparaissait à l’ouverture du [Swagger](https://data.geopf.fr/geocodage/completion/openapi)
