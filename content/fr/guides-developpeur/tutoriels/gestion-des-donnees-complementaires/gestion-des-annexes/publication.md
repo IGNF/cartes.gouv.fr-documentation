@@ -3,7 +3,6 @@ title: Publication d’une annexe
 eleventyNavigation:
     key: Publication d’une annexe
     order: 1
-pictogram: digital/data-visualization.svg
 tertiaryTitle: Publication
 ---
 

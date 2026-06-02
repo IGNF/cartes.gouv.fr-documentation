@@ -3,7 +3,6 @@ title: Partage d’un document personnel
 eleventyNavigation:
     key: Partage d’un document personnel
     order: 1
-pictogram: digital/data-visualization.svg
 tertiaryTitle: Partage
 ---
 

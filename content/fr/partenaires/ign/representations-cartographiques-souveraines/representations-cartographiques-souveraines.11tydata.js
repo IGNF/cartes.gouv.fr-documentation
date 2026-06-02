@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/representations-cartographiques-souveraines",
+            url: "/partenaires/ign/representations-cartographiques-souveraines/",
             title: "Représentations cartographiques souveraines",
         },
     ],

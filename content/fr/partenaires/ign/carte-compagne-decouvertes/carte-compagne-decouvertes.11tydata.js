@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/carte-compagne-decouvertes",
+            url: "/partenaires/ign/carte-compagne-decouvertes/",
             title: "La carte, compagne de vos découvertes",
         },
     ],
