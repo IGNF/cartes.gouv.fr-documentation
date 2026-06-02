@@ -52,10 +52,12 @@ Afin de rendre ce fichier accessible, nous allons le déposer au sein de l’ent
     "_id": "{annexe}"
 }
 ```
+
 ???
+
 <br>
 
-Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement via cette URL : 
+Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement via cette URL :
 
 `{{ urls.annexes }}/{technical_name}/capabilities/mes_couches_wfs`
 

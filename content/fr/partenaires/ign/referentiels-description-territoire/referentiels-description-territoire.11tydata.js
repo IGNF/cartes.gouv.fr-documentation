@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/referentiels-description-territoire",
+            url: "/partenaires/ign/referentiels-description-territoire/",
             title: "Référentiels de description du territoire",
         },
     ],

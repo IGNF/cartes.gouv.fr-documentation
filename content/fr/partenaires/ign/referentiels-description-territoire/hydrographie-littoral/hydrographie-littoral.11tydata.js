@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/referentiels-description-territoire/hydrographie-littoral",
+            url: "/partenaires/ign/referentiels-description-territoire/hydrographie-littoral/",
             title: "Hydrographie et littoral",
         },
     ],

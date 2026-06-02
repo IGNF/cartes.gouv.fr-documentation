@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/generalites-ign/actualites",
+            url: "/partenaires/ign/generalites-ign/actualites/",
             title: "Actualités",
         },
     ],

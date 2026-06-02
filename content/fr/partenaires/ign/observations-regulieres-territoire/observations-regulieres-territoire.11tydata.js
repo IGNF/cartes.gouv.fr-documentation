@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/observations-regulieres-territoire",
+            url: "/partenaires/ign/observations-regulieres-territoire/",
             title: "Observations régulières du territoire",
         },
     ],

@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign",
+            url: "/partenaires/ign/",
             title: "Institut national de l’information géographique et forestière",
         },
     ],

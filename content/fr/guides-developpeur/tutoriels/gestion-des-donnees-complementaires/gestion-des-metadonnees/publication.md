@@ -5,7 +5,6 @@ eleventyNavigation:
     order: 1
 summary:
     visible: true
-pictogram: digital/data-visualization.svg
 tertiaryTitle: Publication
 ---
 

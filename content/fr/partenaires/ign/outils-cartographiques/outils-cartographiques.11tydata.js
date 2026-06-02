@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/outils-cartographiques",
+            url: "/partenaires/ign/outils-cartographiques/",
             title: "Outils cartographiques du service public",
         },
     ],
