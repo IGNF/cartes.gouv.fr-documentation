@@ -2,8 +2,9 @@
 title: Découverte de l’offre produit
 description: Comprendre et comparer ce que contient l’offre de données et services Relief de l’Institut national de l’information géographique et forestière
 eleventyNavigation:
-    key: Découverte de l’offre produit
+    key: Découverte de l’offre produit - relief
     order: 1
+    title: Découverte de l’offre produit
 ---
 
 {% set currentParent = eleventyNavigation.parent %}
@@ -26,22 +27,6 @@ eleventyNavigation:
       {% endif %}
       {% set _ = dejaVus.push(entry.inputPath) %}
     {% endif %}
-    {% set siblingDir = entry.inputPath.slice(0, entry.inputPath.lastIndexOf('/') + 1) %}
-    {% for child in collections.all %}
-      {% if child.inputPath.startsWith(siblingDir)
-        and child.inputPath != entry.inputPath
-        and child.inputPath != page.inputPath
-        and dejaVus.indexOf(child.inputPath) == -1 %}
-        {% if child.data.edition == "dernière" %}
-          {% set _ = dernieres.push(child) %}
-        {% elseif child.data.edition == "historique" %}
-          {% set _ = patrimoines.push(child) %}
-        {% else %}
-          {% set _ = autres.push(child) %}
-        {% endif %}
-        {% set _ = dejaVus.push(child.inputPath) %}
-      {% endif %}
-    {% endfor %}
   {% endif %}
 {% endfor %}
 
