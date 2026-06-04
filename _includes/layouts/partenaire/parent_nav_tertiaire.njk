@@ -73,6 +73,17 @@ layout: layouts/base.njk
       {% else %}
         <h2 class="fr-mt-2v"{% if title == "Découverte de l’offre produit"%} data-pagefind-ignore{% endif %}>{{ title }}</h2>
       {% endif %}
+      {% set tertiaryChildren = [] %}
+      {% for p in navCollection %}
+        {% if p.data.eleventyNavigation.parent == eleventyNavigation.key %}
+          {% set _ = tertiaryChildren.push(p) %}
+        {% endif %}
+      {% endfor %}
+      {% set tabnavItems = [{ title: tertiaryTitle, url: page.url, active: true }] %}
+      {% for p in tertiaryChildren | sort(false, false, "data.eleventyNavigation.order") %}
+        {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url }) %}
+      {% endfor %}
+      {{ component("tabnav", { items: tabnavItems, forceMobile: true }) }}
       {% if summary.visible %}
         {% set depth = summary.depth | default(1) %}
         {% set summaryItems = content | getSummaryItems(depth) %}

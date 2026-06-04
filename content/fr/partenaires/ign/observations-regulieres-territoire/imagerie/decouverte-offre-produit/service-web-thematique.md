@@ -1,12 +1,9 @@
-{% from "components/component.njk" import component with context %}
-
-{% set tabnavLinks = [
-  { title: "Présentation", url: "../" },
-  { title: "Choisir mon produit", url: "../choisir-produit" },
-  { title: "Services web thématique", active: true }
-] %}
-
-{{ component("tabnav", { items: tabnavLinks }) }}
+---
+title: Services web thématique
+eleventyNavigation:
+    order: 2
+tertiaryTitle: Services web thématique
+---
 
 :::info Page en cours de rédaction
 Cette page sera complétée prochainement.
