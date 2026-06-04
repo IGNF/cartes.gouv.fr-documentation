@@ -74,7 +74,7 @@ Exemple :
 
 Notez que :
 - Pour que la métadonnée soit intégrée dans le [catalogue INSPIRE]({{ urls.public.csw }}/INSPIRE), il suffit de l’indiquer dans l’attribut `type` (`"type": "INSPIRE"`). Elle sera alors moissonnée par le [Géocatalogue](https://www.geocatalogue.fr/fr).
-- Pour que la métadonnée soit moissonnée par le site [data.gouv.fr](https://www.data.gouv.fr), il suffit de l’indiquer dans l’attribut `open_data` (`"open_data": "true"`).
+- Pour que la métadonnée soit moissonnée par le site [data.gouv.fr](https://www.data.gouv.fr), il suffit de l’indiquer dans l’attribut `open_data` (`"open_data": true`).
 
 <br>
 
