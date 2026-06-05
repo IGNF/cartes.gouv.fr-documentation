@@ -314,6 +314,12 @@ class PageFinder {
 (async () => {
     const pagefind = await import(PAGEFIND_URL);
 
+    await pagefind.options({
+        ranking: {
+            diacriticSimilarity: 0,
+        },
+    });
+
     // affichage des premiers résultats
     const pageFinder = new PageFinder(pagefind);
 
