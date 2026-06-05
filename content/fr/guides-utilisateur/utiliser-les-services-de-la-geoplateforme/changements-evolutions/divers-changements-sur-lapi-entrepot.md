@@ -172,7 +172,7 @@ Ce nouveau permet de connaitre facilement la date de dernière modification « 
 
 Ce champ est mise à jour lors de ces évènements :
 
-- lors du téléversement d’un nouveau fichier annexe pour écraser l’ancien (PUT /datastore/{datastore}/annexes/{annexe})
+- lors du téléversement d’un nouveau fichier annexe pour écraser l’ancien (PUT /datastore/{datastore}/annexes/{annex})
 - lors du téléversement d’un nouveau fichier metadonnée pour écraser l’ancien (PUT /datastore/{datastore}/metadata/{metadata})
 - lors du téléversement d’un nouveau fichier statique pour écraser l’ancien (PUT /datastore/{datastore}/statics/{static})
 - lors d’un appel de modification de la configuration (PUT /datastore/{datastore}/configurations/{configuration})

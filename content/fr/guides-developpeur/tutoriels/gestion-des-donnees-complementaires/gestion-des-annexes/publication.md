@@ -14,7 +14,7 @@ Publier une annexe revient à modifier son statut de publication.
 
 ???? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}"
 ```plain
-{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}
+{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annex}
 ```
 ??? Corps de requête JSON
 ```json
@@ -31,7 +31,7 @@ Publier une annexe revient à modifier son statut de publication.
     "mime_type": "image/jpeg",
     "published": true,
     "labels": [],
-    "_id": "{annexe}"
+    "_id": "{annex}"
 }
 ```
 ???
