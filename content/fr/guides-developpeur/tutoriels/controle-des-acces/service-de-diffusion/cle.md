@@ -214,7 +214,7 @@ Quel que soit le type de clé, il est possible de préciser des conditions d’u
 Il est maintenant possible d’[interroger le service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle). Cependant, aucune couche ne semble disponible, car nous n’avons pas encore donné de droits à cette clé.
 
 :::warning Caractères spéciaux
-Les caractères ( ) . % + - * ? [ ] ^ $ doivent être échappés avec un % (notamment lorsqu’un referer est forcé). Donc pour définir le `referer` « `www.geoportail-urbanisme.gouv.fr` », il faut préciser `"referer" : "www.geoportail%-urbanisme.gouv.fr"`.
+Les caractères ( ) . % + - * ? [ ] ^ $ doivent être échappés avec un % (notamment lorsqu’un referer est forcé). Donc pour définir le `referer` « `www.geoportail-urbanisme.gouv.fr` », il faut préciser `"referer": "www.geoportail%-urbanisme.gouv.fr"`.
 :::
 
 #### Gérer les accès à la clé
