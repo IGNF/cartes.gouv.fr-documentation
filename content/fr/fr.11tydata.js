@@ -5,6 +5,7 @@ module.exports = {
         api_entrepot: "https://data.geopf.fr/api",
         swagger: "https://data.geopf.fr/api/swagger-ui/index.html",
         annexes: "https://data.geopf.fr/annexes",
+        documents: "https://data.geopf.fr/documents",
         rechercher_une_donnee: "https://cartes.gouv.fr/rechercher-une-donnee",
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
@@ -31,7 +32,7 @@ module.exports = {
         },
     },
     secrets: {
-        qgis: process.env.QGIS_SECRET,
+        qgis: "F77z01QHTaJClBJ1p2OZYkFGL24XYLti",
     },
     ids: {
         storages: {
@@ -79,6 +80,7 @@ module.exports = {
             raster_to_pyramid: "2ae50661-986c-4f47-a3f0-e380417b522c",
             pyramids_to_pyramid: "7cdca031-9e86-4804-8764-9b1d783b087d",
             wms_to_pyramid: "6a54dc92-fc93-4c8e-9f02-046bf889550e",
+            index2index: "c3297784-71e6-4417-864b-f62514768b87",
             db_to_db: "2c18eda8-d30c-42ab-8760-ec16d8929de5",
         },
     },

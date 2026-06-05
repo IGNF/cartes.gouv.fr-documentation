@@ -12,10 +12,10 @@ L’ajout au chemin du nom technique de l’entrepôt permet de gérer l’unici
 
 Publier une annexe revient à modifier son statut de publication.
 
-??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}"
+??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annex}"
 
 ```plain
-{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}
+{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annex}
 ```
 
 ```json
@@ -31,7 +31,7 @@ Publier une annexe revient à modifier son statut de publication.
     "mime_type": "image/jpeg",
     "published": true,
     "labels": [],
-    "_id": "{annexe}"
+    "_id": "{annex}"
 }
 ```
 

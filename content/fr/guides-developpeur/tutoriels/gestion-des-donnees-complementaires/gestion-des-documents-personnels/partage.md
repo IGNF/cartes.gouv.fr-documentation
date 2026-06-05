@@ -16,11 +16,9 @@ Il existe deux possibilités de partage de documents personnels :
 
 ### Le partage nominatif
 
-Il est nécessaire d’avoir les identifiants des personnes avec lesquelles on souhaite partager notre document.
+Il est nécessaire de disposer des identifiants des utilisateurs avec lesquels on souhaite partager le document
 
-L’ajout au chemin du nom technique de l’entrepôt permet de gérer l’unicité d’un chemin de publication d’une annexe seulement au sein d’un entrepôt. Ce nom est récupérable avec l’appel **GET** `/datastores/{identifiant de l’entrepôt de travail}`. Dans l’exemple qui suit, la racine d’accès public aux annexes de mon entrepôt est `{{ urls.annexes }}/{technical_name}`.
-
-Publier une annexe revient à modifier son statut de publication.
+Le partage d'un document personnel avec d'autres utilisateurs s'effectue à l'aide de l'appel suivant : 
 
 ??? POST "{{ urls.api_entrepot }}/users/me/documents/{document}/sharings"
 
