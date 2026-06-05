@@ -16,9 +16,9 @@ Il existe deux possibilités de partage de documents personnels :
 
 ### Le partage nominatif
 
-Il est nécessaire de disposer des identifiants des utilisateurs avec lesquels on souhaite partager le document
+Il est nécessaire de disposer des identifiants des utilisateurs avec lesquels on souhaite partager le document.
 
-Le partage d'un document personnel avec d'autres utilisateurs s'effectue à l'aide de l'appel suivant : 
+Le partage d’un document personnel avec d’autres utilisateurs s’effectue à l’aide de l’appel suivant : 
 
 ??? POST "{{ urls.api_entrepot }}/users/me/documents/{document}/sharings"
 
