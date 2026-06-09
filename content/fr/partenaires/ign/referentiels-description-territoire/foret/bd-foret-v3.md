@@ -17,8 +17,8 @@ image:
 
 La BD Forêt v3 est le nouveau référentiel géographique de l’IGN décrivant les essences forestières. Cette base de données est fondée sur une méthode de production innovante, permettant de mieux répondre aux besoins utilisateurs exprimés.\
 Testez dès aujourd’hui un nouveau, et dernier, jeu de données test BD Forêt v3 :\
-Ce nouveau jeu de données test, en théorie plus performant, et intégrant les remarques utilisateurs réalisées sur les données diffusées en mars 2026, offre environ 60 zones, réparties sur l’ensemble du territoire hexagonal. Il s’agit encore à ce stade d’une donnée intermédiaire du processus de production, issue directement de l’IA et n’ayant donc pas encore fait l’objet de reprises manuelles de la part des photo-interprètes forêt de l'IGN.\
-Le jeu test est mis à disposition courant juin 2026, dans le cadre d’une nouvelle phase d’échange avec les utilisateurs. Il constitue une étape clé avant la production de la BD Forêt v3 sur l’ensemble de l'hexagone.
+Ce nouveau jeu de données test, en théorie plus performant, et intégrant les remarques utilisateurs réalisées sur les données diffusées en mars 2026, offre environ 60 zones, réparties sur l’ensemble du territoire hexagonal. Il s’agit encore à ce stade d’une donnée intermédiaire du processus de production, issue directement de l’IA et n’ayant donc pas encore fait l’objet de reprises manuelles de la part des photo-interprètes forêt de l’IGN.\
+Le jeu test est mis à disposition courant juin 2026, dans le cadre d’une nouvelle phase d’échange avec les utilisateurs. Il constitue une étape clé avant la production de la BD Forêt v3 sur l’ensemble de l’hexagone.
 
 #### Tester la BD Forêt v3
 
@@ -36,13 +36,10 @@ En cliquant sur [**Donner mon avis**](https://tally.so/r/VL1jMv){target="_blank"
 
 Nous vous remercions par avance pour votre participation à la co-construction de cette future donnée de référence sur la forêt. Les réponses que vous apporterez nous aideront à améliorer le processus de production et à orienter le travail de consolidation et reprise manuelle par photo-interprétation des données brutes issues de l’IA.
 
-<br>
-
 #### Les nouveautés depuis le jeu de données test diffusé en mars 2026 :
-Les retours et remarques des utilisateurs concernant le jeu test de mars 2026, ont permis à l’équipe projet BD Forêt v3 d’affiner le processus de production, et de produire ainsi un nouveau jeu de données test en meilleure adéquation avec leurs attentes. Par ailleurs, de nouvelles données d’apprentissage ont été intégrées afin de perfectionner l’entrainement des modèles, ce qui a permis d’améliorer la qualité des données produites.\
-La validation de ce nouveau et dernier jeu de données test est l’étape finale avant le lancement de la production de 5 départements pilote avec photo-interprétation à partir de juillet 2026. Vos retours le concernant sont donc particulièrement importants. 
 
-<br>
+Les retours et remarques des utilisateurs concernant le jeu test de mars 2026, ont permis à l’équipe projet BD Forêt v3 d’affiner le processus de production, et de produire ainsi un nouveau jeu de données test en meilleure adéquation avec leurs attentes. Par ailleurs, de nouvelles données d’apprentissage ont été intégrées afin de perfectionner l’entrainement des modèles, ce qui a permis d’améliorer la qualité des données produites.\
+La validation de ce nouveau et dernier jeu de données test est l’étape finale avant le lancement de la production de 5 départements pilote avec photo-interprétation à partir de juillet 2026. Vos retours le concernant sont donc particulièrement importants.
 
 #### À qui s’adresse la BD Forêt v3 ?
 
@@ -133,7 +130,7 @@ Le projet BD Forêt v3 fait partie des grands projets numériques de l’État, 
 _Connaître la forêt, c’est pouvoir la préserver._ Telle est la vision de l’équipe projet de la BD Forêt v3.\
 Les études de besoins et les discussions avec les utilisateurs ont permis de faire ressortir de nombreux usages tels que :
 - Suivi des opérations forestières et de la ressource en bois
-- Préparation des missions d'expertises forestières
+- Préparation des missions d’expertises forestières
 - Études d’impact et planification urbaine
 - Optimisation des chaînes d’approvisionnement
 - Suivi des bioagresseurs
@@ -156,8 +153,6 @@ La diffusion du jeu de données test de juin 2026 constitue une étape clé avan
 :::
 
 Si vous souhaitez participer activement à la co-construction de la BD Forêt v3 et intégrer le comité des utilisateurs vous pouvez nous contacter via l’adresse : <carto.forestiere@ign.fr>
-
-<br>
 
 #### Contact :
 
