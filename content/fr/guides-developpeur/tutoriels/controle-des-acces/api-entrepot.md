@@ -1,7 +1,312 @@
 ---
-title: Contrôle des accès à l'API Entrepôt
-layout: layouts/parent.njk
+title: Contrôle des accès à l’API Entrepôt
+layout: layouts/parent_nav_tertiaire.njk
 eleventyNavigation:
-    key: Contrôle des accès à l'API Entrepôt
+    key: Contrôle des accès à l’API Entrepôt
     order: 1
+tertiaryTitle: Connexion à l’API Entrepôt
+subTitle: Connexion à l’API Entrepôt
 ---
+
+La procédure pour créer un compte Géoplateforme/cartes.gouv.fr et se connecter est décrite dans la page [Connexion](/fr/guides-utilisateur/presentation-utilisateur/connexion).
+
+Une fois le compte créé, on peut manipuler l’API Entrepôt.
+
+### Qui suis-je ?
+
+Un premier appel permet de récupérer nos informations personnelles et principalement les communautés dont nous sommes membres.
+
+??? GET "{{ urls.api_entrepot }}/users/me"
+
+```plain
+{{ urls.api_entrepot }}/users/me
+```
+
+```json
+{
+    "email": "dave.lopper@ign.fr",
+    "creation": "2023-02-01T09:45:10.725069Z",
+    "last_call": "2023-03-24T17:02:32.676055Z",
+    "communities_member": [
+        {
+            "rights": [
+                "ANNEX",
+                "UPLOAD",
+                "BROADCAST",
+                "PROCESSING",
+                "COMMUNITY"
+            ],
+            "community": {
+                "name": "Communauté des tutoriels",
+                "technical_name": "tutoriels",
+                "datastore": "{datastore}",
+                "supervisor": "{user}",
+                "public": true,
+                "_id": "{community}"
+            }
+        }
+    ],
+    "technical": false,
+    "administrator": false,
+    "_id": "{user}",
+    "last_name": "Lopper",
+    "first_name": "Dave"
+}
+```
+???
+<br>
+
+L’identifiant de votre compte utilisateur est une information :
+- à fournir à un gestionnaire de communauté si vous voulez la rejoindre
+- à l’adresse <geoplateforme@ign.fr> si vous souhaitez qu’un espace de travail soit créé pour vous (en tant que producteur ou gestionnaire de consommateur de données)
+
+<br>
+
+Lorsque la communauté est associée à un entrepôt, on a également dans cette réponse son identifiant. Cet identifiant d’entrepôt sera systématiquement présent dans les routes d’appels à l’API pour l’alimentation précisant au sein de quel entrepôt on souhaite travailler.
+
+On voit également les droits que l’on a dans chaque communauté, limitant les actions autorisées.
+
+La vidéo suivante montre comment avoir ces informations en utilisant l’[interface Swagger]({{ urls.swagger }}).
+
+<figure role="group" class="fr-content-media">
+    <video src="/videos/recuperation_id_utilisateur_swagger.webm" class="fr-responsive-vid" controls>
+        <p>Tutoriel d’utilisation du Swagger</p>
+    </video>
+</figure>
+
+<br>
+
+### Quelles sont les possibilités de mon entrepôt ?
+
+La plateforme dispose de ressources globales permettant l’alimentation et la diffusion de données :
+- Des vérifications
+- Des traitements
+- Des espaces de stockage
+- Des grappes de serveur de diffusion, les points d’accès
+
+<br>
+
+Ces ressources sont individuellement mises à disposition des entrepôts, avec quotas.
+
+Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressources qui vous ont été allouées) :
+
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+
+```plain
+{{ urls.api_entrepot }}/datastores/{datastore}
+```
+
+```json
+{
+    "community": {
+        "contact": "contact@ign.fr",
+        "public": true,
+        "_id": "{community}"
+    },
+    "processings": [
+        "{{ ids.processings['vector_to_db'] }}",
+        "{{ ids.processings['archive_to_archive'] }}",
+        "{{ ids.processings['db_to_pyramid'] }}",
+        "{{ ids.processings['raster_to_pyramid'] }}",
+        "{{ ids.processings['pyramids_to_pyramid'] }}"
+    ],
+    "name": "Communauté des tutoriels",
+    "technical_name": "tutoriels",
+    "endpoints": [
+        {
+            "use": 0,
+            "quota": 10,
+            "endpoint": {
+                "name": "Service de diffusion WMS Vecteur principal",
+                "technical_name": "gpf-geoserver-wms-v",
+                "type": "WMS-VECTOR",
+                "urls": [
+                    {
+                        "type": "WMS",
+                        "url": "{{ urls.public.wmsv }}"
+                    }
+                ],
+                "_id": "{{ ids.endpoints.open.wmsv }}",
+                "open": true,
+                "metadata_fi": "gpf-geoserver-wms-v"
+            }
+        },
+        {
+            "use": 0,
+            "quota": 10,
+            "endpoint": {
+                "name": "Service de diffusion WFS principal",
+                "technical_name": "gpf-geoserver-wfs",
+                "type": "WFS",
+                "urls": [
+                    {
+                        "type": "WFS",
+                        "url": "{{ urls.public.wfs }}"
+                    }
+                ],
+                "_id": "{{ ids.endpoints.open.wfs }}",
+                "open": true,
+                "metadata_fi": "gpf-geoserver-wfs"
+            }
+        },
+        {
+            "use": 0,
+            "quota": 10,
+            "endpoint": {
+                "name": "Service de diffusion WMS Raster principal",
+                "technical_name": "gpf-rok4-server-wms-r",
+                "type": "WMS-RASTER",
+                "urls": [
+                    {
+                        "type": "WMS",
+                        "url": "{{ urls.public.wmsr }}"
+                    }
+                ],
+                "_id": "{{ ids.endpoints.open.wmsr }}",
+                "open": true,
+                "metadata_fi": "gpf-rok4-server-wms-r"
+            }
+        },
+        {
+            "use": 0,
+            "quota": 10,
+            "endpoint": {
+                "name": "Service de diffusion WMTS/TMS principal",
+                "technical_name": "gpf-rok4-server-wmts-tms",
+                "type": "WMTS-TMS",
+                "urls": [
+                    {
+                        "type": "WMTS",
+                        "url": "{{ urls.public.wmts }}"
+                    },
+                    {
+                        "type": "TMS",
+                        "url": "{{ urls.public.tms }}"
+                    }
+                ],
+                "_id": "{{ ids.endpoints.open.wmts }}",
+                "open": true,
+                "metadata_fi": "gpf-rok4-server-wmts-tms"
+            }
+        },
+        {
+            "use": 0,
+            "quota": 10,
+            "endpoint": {
+                "name": "Service de téléchargement principal",
+                "technical_name": "gpf-download",
+                "type": "DOWNLOAD",
+                "urls": [
+                    {
+                        "type": "DOWNLOAD",
+                        "url": "{{ urls.public.download }}"
+                    }
+                ],
+                "_id": "{{ ids.endpoints.open.download }}",
+                "open": true,
+                "metadata_fi": "gpf-download"
+            }
+        },
+        {
+            "use": 0,
+            "quota": 100,
+            "endpoint": {
+                "name": "Service de diffusion de métadonnées principal",
+                "technical_name": "gpf-geonetwork",
+                "type": "CSW",
+                "urls": [
+                    {
+                        "type": "CSW",
+                        "url": "{{ urls.public.csw }}"
+                    }
+                ],
+                "_id": "{{ ids.endpoints.open.csw }}",
+                "open": true,
+                "metadata_fi": "gpf-geonetwork"
+            }
+        }
+    ],
+    "storages": {
+        "data": [
+            {
+                "use": 0,
+                "quota": 10000000000,
+                "storage": {
+                    "name": "Stockage OpenIO performant pour les données pyramides des partenaires",
+                    "type": "S3",
+                    "labels": [
+                        "PARTENAIRE",
+                        "PYRAMIDE",
+                        "PERF"
+                    ],
+                    "_id": "{{ ids.storages.s3_data_pyramid }}"
+                }
+            },
+            {
+                "use": 0,
+                "quota": 10000000000,
+                "storage": {
+                    "name": "Stockage OpenIO performant pour les données archives des partenaires",
+                    "type": "S3",
+                    "labels": [
+                        "PARTENAIRE",
+                        "ARCHIVE",
+                        "PERF"
+                    ],
+                    "_id": "{{ ids.storages.s3_data_archive }}"
+                }
+            },
+            {
+                "use": 0,
+                "quota": 10000000000,
+                "storage": {
+                    "name": "Stockage PostgreSQL standard Partenaires",
+                    "type": "POSTGRESQL",
+                    "labels": [
+                        "PARTENAIRE",
+                        "VECTEUR"
+                    ],
+                    "_id": "{{ ids.storages.postgresql }}"
+                }
+            }
+        ],
+        "upload": {
+            "use": 0,
+            "quota": 10000000000,
+            "storage": {
+                "name": "Stockage OpenIO pour les livraisons",
+                "type": "S3",
+                "labels": [
+                    "LIVRAISON",
+                    "PERF"
+                ],
+                "_id": "{{ ids.storages.s3_upload }}"
+            }
+        },
+        "annexe": {
+            "use": 0,
+            "quota": 10000000000,
+            "storage": {
+                "name": "Stockage OpenIO pour les annexes",
+                "type": "S3",
+                "labels": [
+                    "ANNEXE",
+                    "PERF"
+                ],
+                "_id": "{{ ids.storages.s3_annexe }}"
+            }
+        }
+    },
+    "active": true,
+    "_id": "{datastore}",
+    "checks": [
+        "{{ ids.checks.standard }}",
+        "{{ ids.checks.vector }}",
+        "{{ ids.checks.raster }}",
+        "{{ ids.checks.archive }}",
+        "{{ ids.checks['pyramid_rok4'] }}"
+    ]
+}
+```
+
+???

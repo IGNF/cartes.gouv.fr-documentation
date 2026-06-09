@@ -2,7 +2,7 @@ module.exports = {
     layout: "layouts/partenaire/article.njk",
     segments: [
         {
-            url: "/partenaires",
+            url: "/partenaires/",
             title: "Documentations partenaires",
         },
     ],

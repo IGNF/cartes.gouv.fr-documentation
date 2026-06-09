@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/component.njk" import component with context %}
+<div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      {% set navContext = eleventyNavigation.nav | getNavigationContext %}
+      {% set navCollection = collections[navContext.collectionName] %}
+      {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
+      {% set sidemenuTitle = navContext.title %}
+      {% set sidemenuActive = eleventyNavigation.sidemenuActive %}
+      {% include "templates/sidemenu.njk" %}
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row">
+        <div class="fr-col-12 fr-col-md-9">
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          <h1>{{ title }}</h1>
+          {% include "components/published_on.njk" %}
+          {% if description and showDescription != false %}
+            <p class="fr-text--lead">{{ description }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% set tertiaryChildren = [] %}
+      {% for p in navCollection %}
+        {% if p.data.eleventyNavigation.parent == eleventyNavigation.key %}
+          {% set _ = tertiaryChildren.push(p) %}
+        {% endif %}
+      {% endfor %}
+      {% set tabnavItems = [{ title: tertiaryTitle, url: page.url, active: true }] %}
+      {% for p in tertiaryChildren | sort(false, false, "data.eleventyNavigation.order") %}
+        {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url }) %}
+      {% endfor %}
+      {{ component("tabnav", { items: tabnavItems, forceMobile: true }) }}
+      {% if subTitle %}
+        <h2>{{ subTitle }}</h2>
+      {% endif %}
+      {% if summary.visible %}
+        {% set depth = summary.depth | default(2) %}
+        {% set summaryItems = content | getSummaryItems(depth) %}
+        {% include "components/summary.njk" %}
+      {% endif %}
+      {{ content | safe }}
+      {% include "components/page_switcher.njk" %}
+    </div>
+  </div>
+</div>

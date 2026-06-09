@@ -17,7 +17,7 @@ Pour connaître les membres de l’organisme (pagination disponible) :
 
 ??? GET "{{ urls.api_entrepot }}/organizations/{organization}/users"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/organizations/{organization}/users
 ```
 
@@ -37,29 +37,33 @@ Pour connaître les membres de l’organisme (pagination disponible) :
     }
 ]
 ```
+
 ???
+
 <br>
 
 Pour ajouter un membre à l’organisme (pas de droits plus fins, être attaché à un organisme donne tous les droits de lecture et de gestion de ses membres) :
 
 ??? PUT "{{ urls.api_entrepot }}/organizations/{organization}/users/{user}"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/organizations/{organization}/users/{user}
 ```
 
 ???
+
 <br>
 
 Pour supprimer un membre de l’organisme :
 
 ??? DELETE "{{ urls.api_entrepot }}/organizations/{organization}/users/{user}"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/organizations/{organization}/users/{user}
 ```
 
 ???
+
 <br>
 
 ## Lecture du contenu
@@ -68,7 +72,7 @@ Avoir la liste des communautés rattachées à l’organisme peut se faire via l
 
 ??? GET "{{ urls.api_entrepot }}/organizations/{organization}/communities"
 
-``` title="Contenu" 
+```plain
 {{ urls.api_entrepot }}/organizations/{organization}/communities
 ```
 
@@ -96,17 +100,18 @@ Avoir la liste des communautés rattachées à l’organisme peut se faire via l
     }
 ]
 ```
+
 ???
+
 <br>
 
 La liste des entités suivantes est consultable au niveau de l’organisme. Dans les réponses, l’identifiant de la communauté et de l’entrepôt sont disponibles pour pouvoir en consulter le détail. Les filtres présents sur les routes de consultation de l’entrepôt sont également disponibles dans ces routes (consulter les spécifications OpenAPI pour avoir le détail). Il est possible en plus de filtrer par communauté ou entrepôt.
-
-* les annexes : `GET {{ urls.api_entrepot }}/organizations/{organization}/annexes`
-* les configurations : `GET {{ urls.api_entrepot }}/organizations/{organization}/configurations`
-* les points d’accès disponibles, avec les quotas : `GET {{ urls.api_entrepot }}/organizations/{organization}/endpoints`
-* les offres : `GET {{ urls.api_entrepot }}/organizations/{organization}/offerings`
-* les permissions : `GET {{ urls.api_entrepot }}/organizations/{organization}/permissions`
-* les exécutions de traitement : `GET {{ urls.api_entrepot }}/organizations/{organization}/processings/executions`
-* les fichiers statiques : `GET {{ urls.api_entrepot }}/organizations/{organization}/statics`
-* les données stockées : `GET {{ urls.api_entrepot }}/organizations/{organization}/stored_data`
-* les livraisons : `GET {{ urls.api_entrepot }}/organizations/{organization}/uploads`
+- les annexes : `GET {{ urls.api_entrepot }}/organizations/{organization}/annexes`
+- les configurations : `GET {{ urls.api_entrepot }}/organizations/{organization}/configurations`
+- les points d’accès disponibles, avec les quotas : `GET {{ urls.api_entrepot }}/organizations/{organization}/endpoints`
+- les offres : `GET {{ urls.api_entrepot }}/organizations/{organization}/offerings`
+- les permissions : `GET {{ urls.api_entrepot }}/organizations/{organization}/permissions`
+- les exécutions de traitement : `GET {{ urls.api_entrepot }}/organizations/{organization}/processings/executions`
+- les fichiers statiques : `GET {{ urls.api_entrepot }}/organizations/{organization}/statics`
+- les données stockées : `GET {{ urls.api_entrepot }}/organizations/{organization}/stored_data`
+- les livraisons : `GET {{ urls.api_entrepot }}/organizations/{organization}/uploads`

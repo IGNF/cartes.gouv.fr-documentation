@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/component.njk" import component with context %}
+<div class="fr-container">
+  <div class="fr-grid-row">
+    <div class="fr-col-12 fr-col-md-4">
+      {% set navContext = eleventyNavigation.nav | getNavigationContext %}
+      {% set navCollection = collections[navContext.collectionName] %}
+      {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
+      {% set parentPage = null %}
+      {% for p in navCollection %}
+        {% if p.data.eleventyNavigation.key == eleventyNavigation.parent %}
+          {% set parentPage = p %}
+        {% endif %}
+      {% endfor %}
+      {% set ancestorPage = null %}
+      {% if parentPage and parentPage.data.eleventyNavigation.parent %}
+        {% set ancestorPage = null %}
+        {% for p in navCollection %}
+          {% if p.data.eleventyNavigation.key == parentPage.data.eleventyNavigation.parent %}
+            {% set ancestorPage = p %}
+          {% endif %}
+        {% endfor %}
+        {% if ancestorPage and ancestorPage.data.eleventyNavigation.parent %}
+          {% set greatAncestorPage = null %}
+          {% for p in navCollection %}
+            {% if p.data.eleventyNavigation.key == ancestorPage.data.eleventyNavigation.parent %}
+              {% set greatAncestorPage = p %}
+            {% endif %}
+          {% endfor %}
+          {% set parentData = greatAncestorPage.data if greatAncestorPage else ancestorPage.data %}
+        {% else %}
+          {% set parentData = ancestorPage.data if ancestorPage else parentPage.data %}
+        {% endif %}
+      {% elif parentPage %}
+        {% set parentData = parentPage.data %}
+      {% else %}
+        {% set parentData = null %}
+      {% endif %}
+      {% set sidemenuTitle = navContext.title %}
+      {% set sidemenuActive = parentPage.url if parentPage else eleventyNavigation.sidemenuActive %}
+      {% include "templates/sidemenu.njk" %}
+    </div>
+    <div id="contenu" class="fr-col-12 fr-col-md-8 fr-py-12v">
+      <div class="fr-grid-row" data-pagefind-ignore>
+        <div class="fr-col-12">
+          {% if showBreadcrumb %}
+            {% include "components/breadcrumb.njk" %}
+          {% endif %}
+          {% include "components/published_on.njk" %}
+          <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v">
+            {% if parentData and parentData.image %}
+              <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
+                <img src="{{ parentData.image.src }}"
+                    alt="{{ parentData.image.alt }}"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
+              </div>
+            {% endif %}
+            <div class="fr-col">
+              <h1 class="fr-mb-2v">{{ parentData.title if parentData and parentData.title else title }}</h1>
+              {% if parentData and parentData.tags %}
+                {% set tags = parentData.tags %}
+                {% set small_tags = true %}
+                  {% include "components/taggroup-disabled.njk" %}
+              {% endif %}
+              {% if parentData and parentData.description %}
+                <p class="fr-text--bold">{{ parentData.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+          {% if parentData and parentData.quote %}
+            <div class="fr-grid-row fr-grid-row--gutters">
+              <span class="fr-col-auto fr-icon-quote-fill fr-icon--lg fr-text-title--blue-france" aria-hidden="true"></span>
+              <p class="fr-col">{{ parentData.quote }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if ancestorPage and ancestorPage.data.eleventyNavigation.parent %}
+        <h2 class="fr-mt-2v" data-pagefind-ignore>{{ ancestorPage.data.title }}</h2>
+        <h3 class="fr-mt-2v" data-pagefind-ignore>{{ parentPage.data.title if parentPage else title }}</h3>
+      {% else %}
+        <h2 class="fr-mt-2v" data-pagefind-ignore>{{ parentPage.data.title if parentPage else title }}</h2>
+      {% endif %}
+      {% set tertiaryChildren = [] %}
+      {% for p in navCollection %}
+        {% if p.data.eleventyNavigation.parent == eleventyNavigation.parent %}
+          {% set _ = tertiaryChildren.push(p) %}
+        {% endif %}
+      {% endfor %}
+      {% set tabnavItems = [{ title: parentPage.data.tertiaryTitle, url: parentPage.url }] %}
+      {% for p in tertiaryChildren | sort(false, false, "data.eleventyNavigation.order") %}
+        {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url, active: p.url == page.url }) %}
+      {% endfor %}
+      {{ component("tabnav", { items: tabnavItems, forceMobile: true }) }}
+      {% if summary.visible %}
+        {% set depth = summary.depth | default(1) %}
+        {% set summaryItems = content | getSummaryItems(depth) %}
+        {% include "components/summary.njk" %}
+      {% endif %}
+      {{ content | safe }}
+      {% if showPageSwitcher %}
+        {% include "components/page_switcher.njk" %}
+      {% endif %}
+    </div>
+  </div>
+</div>

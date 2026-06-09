@@ -9,6 +9,14 @@ layout: layouts/base.njk
       {% set navContext = eleventyNavigation.nav | getNavigationContext %}
       {% set navCollection = collections[navContext.collectionName] %}
       {% set navLinks = navCollection | filterCollectionLang | eleventyNavigation %}
+      {# parent.njk est toujours niveau 2, on cherche le parent direct #}
+      {% set parentPage = null %}
+      {% for p in navCollection %}
+        {% if p.data.eleventyNavigation.key == eleventyNavigation.parent %}
+          {% set parentPage = p %}
+        {% endif %}
+      {% endfor %}
+      {% set parentData = parentPage.data if parentPage else null %}
       {% set sidemenuTitle = navContext.title %}
       {% include "templates/sidemenu.njk" %}
     </div>
@@ -19,31 +27,31 @@ layout: layouts/base.njk
             {% include "components/breadcrumb.njk" %}
           {% endif %}
           {% include "components/published_on.njk" %}
-          {% if parentInfo %}
+          {% if parentData and eleventyNavigation.parent %}
             <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v" data-pagefind-ignore>
-              {% if parentInfo.image %}
+              {% if parentData.image %}
                 <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
-                  <img src="{{ parentInfo.image.src }}"
-                      alt="{{ parentInfo.image.alt }}"
+                  <img src="{{ parentData.image.src }}"
+                      alt="{{ parentData.image.alt }}"
                       style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
                 </div>
               {% endif %}
               <div class="fr-col">
-                <h1 class="fr-mb-2v">{{ parentInfo.title }}</h1>
-                {% if parentInfo.tags %}
-                  {% set tags = parentInfo.tags %}
+                <h1 class="fr-mb-2v">{{ parentData.title }}</h1>
+                {% if parentData.tags %}
+                  {% set tags = parentData.tags %}
                   {% set small_tags = true %}
                   {% include "components/taggroup-disabled.njk" %}
                 {% endif %}
-                {% if parentInfo.description %}
-                  <p class="fr-text--bold">{{ parentInfo.description }}</p>
+                {% if parentData.description %}
+                  <p class="fr-text--bold">{{ parentData.description }}</p>
                 {% endif %}
               </div>
             </div>
-            {% if parentInfo.quote %}
+            {% if parentData.quote %}
               <div class="fr-grid-row fr-grid-row--gutters" data-pagefind-ignore>
                 <span class="fr-col-auto fr-icon-quote-fill fr-icon--lg fr-text-title--blue-france" aria-hidden="true"></span>
-                <p class="fr-col">{{ parentInfo.quote }}</p>
+                <p class="fr-col">{{ parentData.quote }}</p>
               </div>
             {% endif %}
           {% else %}
@@ -75,7 +83,7 @@ layout: layouts/base.njk
           {% endif %}
         </div>
       </div>
-      {% if parentInfo %}
+      {% if parentData and eleventyNavigation.parent %}
         <h2 class="fr-mt-2v">{{ title }}</h2>
       {% endif %}
       {{ content | safe }}

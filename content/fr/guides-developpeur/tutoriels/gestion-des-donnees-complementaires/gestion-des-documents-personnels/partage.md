@@ -1,30 +1,28 @@
 ---
-title: Partage d'un document personnel
-layout: layouts/parent.njk
+title: Partage d’un document personnel
 eleventyNavigation:
-    key: Partage d'un document personnel
-    order: 2
-pictogram: digital/data-visualization.svg
+    key: Partage d’un document personnel
+    order: 1
+tertiaryTitle: Partage
 ---
 
 {% from "components/component.njk" import component with context %}
 
-Il existe deux possibilités de partage de documents personnels : 
+Il existe deux possibilités de partage de documents personnels :
+- le partage nominatif : la personne pourra alors voir le document dans sa liste et le télécharger
+- le partage public : une URL aléatoire permet alors à n’importe qui de télécharger le fichier
 
-* le partage nominatif : la personne pourra alors voir le document dans sa liste et le télécharger
-* le partage public : une URL aléatoire permet alors à n'importe qui de télécharger le fichier
+<br>
 
-## Le partage nominatif
+### Le partage nominatif
 
-Il est nécessaire d'avoir les identifiants des personnes avec lesquelles on souhaite partager notre document.
+Il est nécessaire de disposer des identifiants des utilisateurs avec lesquels on souhaite partager le document.
 
-L'ajout au chemin du nom technique de l'entrepôt permet de gérer l'unicité d'un chemin de publication d'une annexe seulement au sein d'un entrepôt. Ce nom est récupérable avec l'appel **GET** `/datastores/{identifiant de l'entrepôt de travail}`. Dans l'exemple qui suit, la racine d'accès public aux annexes de mon entrepôt est {{ urls.annexes }}/{technical_name}.
-
-Publier une annexe revient à modifier son statut de publication.
+Le partage d’un document personnel avec d’autres utilisateurs s’effectue à l’aide de l’appel suivant : 
 
 ??? POST "{{ urls.api_entrepot }}/users/me/documents/{document}/sharings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/users/me/documents/{document}/sharings
 ```
 
@@ -38,7 +36,7 @@ Publier une annexe revient à modifier son statut de publication.
 ```json
 {
     "name": "Mon super croquis",
-    "description": "Un petit coucou géoréférencé à l'IGN",
+    "description": "Un petit coucou géoréférencé à l’IGN",
     "size": 5435,
     "mime_type": "application/octet-stream",
     "labels": [
@@ -48,37 +46,40 @@ Publier une annexe revient à modifier son statut de publication.
     "_id": "{document}"
 }
 ```
+
 ???
+
 <br>
 
-Désormais, les comptes ciblés pourront voir le document dans leur liste avec l'appel :
+Désormais, les comptes ciblés pourront voir le document dans leur liste avec l’appel :
 
 ??? GET "{{ urls.api_entrepot }}/users/me/documents"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/users/me/documents
 ```
 
-    {{ component("table", {
-        headers: ["Corps de requête Multipart"],
-        data: [
-            ["shared = `true`"]
-        ]
-    }) }}
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["shared = true"]
+    ]
+}) }}
 
 ???
+
 <br>
 
-Et ces comptes pourront télécharger le fichier via l'API Entrepôt ({{ urls.api_entrepot }}/users/me/documents/{document}/file, la même URL qu'avec' le compte propriétaire). Ce partage implique d'être authentifié pour le destinataire (donc d'avoir un compte) et de partager explicitement avec tous les destinataires.
+Et ces comptes pourront télécharger le fichier via l’API Entrepôt (`{{ urls.api_entrepot }}/users/me/documents/{document}/file`, la même URL qu’avec le compte propriétaire). Ce partage implique d’être authentifié pour le destinataire (donc d’avoir un compte) et de partager explicitement avec tous les destinataires.
 
-## Le partage public
+### Le partage public
 
 Ce mode de partage est plus simple mais moins sécurisé. Il consiste à associer au fichier une URL publique qui pourra être consultée anonymement.
 
 
 ??? PATCH "{{ urls.api_entrepot }}/users/me/documents/{document}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/users/me/documents/{document}
 ```
 
@@ -91,7 +92,7 @@ Ce mode de partage est plus simple mais moins sécurisé. Il consiste à associe
 ```json
 {
     "name": "Mon super croquis",
-    "description": "Un petit coucou géoréférencé à l'IGN",
+    "description": "Un petit coucou géoréférencé à l’IGN",
     "size": 5435,
     "mime_type": "application/octet-stream",
     "labels": [
@@ -102,7 +103,9 @@ Ce mode de partage est plus simple mais moins sécurisé. Il consiste à associe
     "_id": "{document}"
 }
 ```
+
 ???
+
 <br>
 
-Une URL publique a été générée aléatoirement, une extension en accord avec le type de fichier a été mise. Il est possible de supprimer cet accès public en précisant `"public_url": false`. À chaque partage public, l'URL sera différente.
+Une URL publique a été générée aléatoirement, une extension en accord avec le type de fichier a été mise. Il est possible de supprimer cet accès public en précisant `"public_url": false`. À chaque partage public, l’URL sera différente.

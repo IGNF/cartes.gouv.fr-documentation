@@ -319,6 +319,7 @@ a.custom-center-btn.fr-btn {
         flex-direction: row;
         padding-top: 0;
         display: flex;
+        flex-wrap: wrap;
     }
 
     .dsfr-doc-tab-navigation__tab {

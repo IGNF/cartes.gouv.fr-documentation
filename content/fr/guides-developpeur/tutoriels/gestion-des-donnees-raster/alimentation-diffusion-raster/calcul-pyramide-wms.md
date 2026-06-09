@@ -6,12 +6,13 @@ eleventyNavigation:
     order: 5
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Moissonnage WMS
 ---
 
-## Calcul de la pyramide raster par moissonnage WMS
+### Calcul de la pyramide raster par moissonnage WMS
 
-Il existe une autre possibilité pour générer une pyramide raster dans l'entrepôt sans avoir à déposer de données : le moissonnage WMS. Le traitement prendra uniquement des paramètres précisant le service et les couches à moissonner, ainsi que la zone sur laquelle faire ce moissonnage.
+Il existe une autre possibilité pour générer une pyramide raster dans l’entrepôt sans avoir à déposer de données : le moissonnage WMS. Le traitement prendra uniquement des paramètres précisant le service et les couches à moissonner, ainsi que la zone sur laquelle faire ce moissonnage.
 
 ```mermaid
 flowchart LR
@@ -30,11 +31,11 @@ flowchart LR
     class tra global
 ```
 
-### Consultation des traitements disponibles
+#### Consultation des traitements disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
@@ -43,20 +44,21 @@ flowchart LR
 ```
 
 ???
+
 <br>
 
-### Consultation du traitement qui nous intéresse
+#### Consultation du traitement qui nous intéresse
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms_to_pyramid'] }}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms_to_pyramid'] }}
 ```
 
 ```json
 {
     "name": "Calcul ou mise à jour de pyramide raster par moissonnage WMS",
-    "description": "Il n'y a pas besoin de donnée en entrée. Sont fournis en paramètres toutes les informations sur le service WMS et le jeu de données à moissonner, ainsi que la zone sur laquelle faire le moissonnage",
+    "description": "Il n’y a pas besoin de donnée en entrée. Sont fournis en paramètres toutes les informations sur le service WMS et le jeu de données à moissonner, ainsi que la zone sur laquelle faire le moissonnage",
     "input_types": {
         "upload": [],
         "stored_data": ["ROK4-PYRAMID-RASTER"]
@@ -68,7 +70,7 @@ flowchart LR
     "parameters": [
         {
             "name": "harvest_layers",
-            "description": "Couches à moisonner (séparées par des virgules)",
+            "description": "Couches à moissonner (séparées par des virgules)",
             "mandatory": true,
             "constraints": {
                 "type": "string"
@@ -84,7 +86,7 @@ flowchart LR
         },
         {
             "name": "harvest_dimensions",
-            "description": "Deux entiers positifs, dimensions pixel maximales de moisonnage, devra être un diviseur de la taille pixel des dalles",
+            "description": "Deux entiers positifs, dimensions pixel maximales de moissonnage, devront être des diviseurs de la taille pixel des dalles",
             "mandatory": false,
             "constraints": {
                 "type": "array",
@@ -122,7 +124,7 @@ flowchart LR
         },
         {
             "name": "tms",
-            "description": "L identifiant du quadrillage à utiliser (Tile Matrix Set)",
+            "description": "L’identifiant du quadrillage à utiliser (Tile Matrix Set)",
             "mandatory": false,
             "constraints": {
                 "enum": ["PM"],
@@ -131,7 +133,7 @@ flowchart LR
         },
         {
             "name": "height",
-            "description": "Le nombre de tuile par dalle en hauteur (entier >= 1)",
+            "description": "Le nombre de tuiles par dalle en hauteur (entier >= 1)",
             "mandatory": false,
             "default_value": 16
         },
@@ -174,7 +176,7 @@ flowchart LR
         },
         {
             "name": "width",
-            "description": "Le nombre de tuile par dalle en largeur (entier >= 1)",
+            "description": "Le nombre de tuiles par dalle en largeur (entier >= 1)",
             "mandatory": false,
             "default_value": 16
         },
@@ -239,17 +241,18 @@ flowchart LR
 ```
 
 ???
+
 <br>
 
-Le traitement n'attend pas de livraison en entrée. Si on fournit une pyramide en entrée, c'est pour préciser que l'on veut la mettre à jour par référencement (une nouvelle pyramide est créée, en référençant les images de celle en entrée).
+Le traitement n’attend pas de livraison en entrée. Si on fournit une pyramide en entrée, c’est pour préciser que l’on veut la mettre à jour par référencement (une nouvelle pyramide est créée, en référençant les images de celle en entrée).
 
-### Configuration d'une exécution de ce traitement
+#### Configuration d’une exécution de ce traitement
 
-On distingue le traitement, la ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et possède en entrée et en sortie des données spécifiques.
+On distingue le traitement, la ressource de la plateforme mise à disposition de l’entrepôt, et son exécution. Une exécution appartient à un entrepôt et possède en entrée et en sortie des données spécifiques.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
@@ -315,36 +318,35 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 ```
 
 ???
+
 <br>
 
 La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier).
 
-:::warning Points d'attentions
-Les flux sortant des nœuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d'un usage avec d'autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
+:::warning
+- Les flux sortant des nœuds de calcul sont contraints. Télécharger depuis `data.geopf.fr` est autorisé. Dans le cas d’un usage avec d’autres sources, il est nécessaire de contacter la Géoplateforme pour ouvrir les flux nécessaires.
+- Pour les données vecteur privées, il faut ajouter le paramètre `harvest_extras` en précisant une apikey : `"harvest_extras": "apikey={apikey}"`
 :::
 
-:::warning Données privées
-Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extras` en précisant une apikey : "harvest_extras": "apikey={apikey}"
-:::
-
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution moissonnage}/launch"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution moissonnage}/launch
 ```
 
 ???
+
 <br>
 
-## Consultation de la donnée stockée en sortie
+### Consultation de la donnée stockée en sortie
 
-À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées et niveaux).
+À la fin du traitement, des informations concernant la donnée finale sont remontées afin d’apparaître au niveau de l’API (taille, étendue, système de coordonnées et niveaux).
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data moissonnage}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data moissonnage}
 ```
 
@@ -393,15 +395,16 @@ Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extr
 ```
 
 ???
+
 <br>
 
-## Diffusion en WMS
+### Diffusion en WMS
 
-### Création de la configuration
+#### Création de la configuration
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -452,13 +455,14 @@ Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extr
 ```
 
 ???
+
 <br>
 
-### Publication
+#### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms moissonnage}/offerings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms moissonnage}/offerings
 ```
 
@@ -470,14 +474,15 @@ Pour les données vecteurs privées, il faut ajouter le paramètre `harvest_extr
 ```
 
 ???
+
 <br>
 
-On peut vérifier la présence de notre couche `ortho` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)
+On peut vérifier la présence de notre couche `ortho` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
 
-### Visualisation des données
+#### Visualisation des données
 
-On peut visualiser nos données dans QGis en WMS.
+On peut visualiser nos données dans QGIS en WMS.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-diffusion/donnees_wms_harvest.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-La donnée moissonnée est plus large que la zone voulue car l'intégralité des dalles intersectant la zone est calculée et stockée.
+La donnée moissonnée est plus large que la zone voulue car l’intégralité des dalles intersectant la zone est calculée et stockée.

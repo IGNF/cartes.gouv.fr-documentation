@@ -5,57 +5,61 @@ eleventyNavigation:
     order: 3
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Publication en WMS
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Mise en place d'un style
+### Mise en place d’un style
 
-Les données MNT ont un format particulier : les images possèdent un unique canal contenant des valeurs flottantes. Les flux WMS et WMTS permettent de récupérer les données brutes (pour d'éventuels calculs), mais leur affichage peut s'avérer complexe.
+Les données MNT ont un format particulier : les images possèdent un unique canal contenant des valeurs flottantes. Les flux WMS et WMTS permettent de récupérer les données brutes (pour d’éventuels calculs), mais leur affichage peut s’avérer complexe.
 
-En WMS, on va permettre la demande de donnée symbolisée, en appliquant des teintes hypsométriques. Afin que le consommateur des flux puisse connaître les caractéristiques de ces teintes, nous allons mettre en ligne la légende, qui sera référencée dans le style via son URL.
+En WMS, on va permettre la demande de données symbolisées, en appliquant des teintes hypsométriques. Afin que le consommateur des flux puisse connaître les caractéristiques de ces teintes, nous allons mettre en ligne la légende, qui sera référencée dans le style via son URL.
 
 Nous allons partir sur une représentation qui, sur la donnée en exemple, donne le résultat suivant.
 
-![Teintes hypsométriques](/img/guides-developpeur/raster/mnt/mnt_hypso.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Teintes hypsométriques](/img/guides-developpeur/raster/mnt/mnt_hypso.png){.fr-responsive-img .frx-img-contained}
 
-Avec la légende :
+Avec la légende :
 
 ![Légende](/img/guides-developpeur/raster/mnt/hypso_legende.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-### Hébergement de la légende sous forme d'annexe
+#### Hébergement de la légende sous forme d’annexe
 
-Pour obtenir une URL publique pointant sur notre légende, nous allons la téléverser dans l'entrepôt sous forme d'annexe, en demandant la publication immédiate.
+Pour obtenir une URL publique pointant sur notre légende, nous allons la téléverser dans l’entrepôt sous forme d’annexe, en demandant la publication immédiate.
 
 📄 `<hypso_legende.png>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<hypso_legende.png>`"],
+        ["file = &lt;hypso_legende.png&gt;"],
         ["paths = legendes/teintes_hypsometriques.png"],
-        ["published = `true`"],
+        ["published = true"],
         ["labels = legende"]
     ]
 }) }}
+
 ???
+
 <br>
 
-L'ajout d'un label facilite la recherche des annexes et leur gestion (publication/dépublication).
+L’ajout d’un label facilite la recherche des annexes et leur gestion (publication/dépublication).
 
-La légende est maintenant accessible à l'URL `{{ urls.annexes }}/{technical_name}/legendes/teintes_hypsometriques.png`.
+La légende est maintenant accessible à l’URL `{{ urls.annexes }}/{technical_name}/legendes/teintes_hypsometriques.png`.
 
-### Téléversement du style à destination du serveur WMS
+#### Téléversement du style à destination du serveur WMS
 
-Le style permettant au serveur WMS d'appliquer ces teintes aux donnée MNT est le suivant :
+Le style permettant au serveur WMS d’appliquer ces teintes aux données MNT est le suivant :
 
-```json title="Contenu de hypso.json"
+```json
 {
     "identifier": "hypsometrique",
     "title": "Teintes hypsométriques",
@@ -87,19 +91,20 @@ Le style permettant au serveur WMS d'appliquer ces teintes aux donnée MNT est l
 }
 ```
 
-On y précise bien les informations sur la légende associée. Le champ `identifier` sera l'identifiant public que les consommateurs du WMS pourront préciser dans les requêtes pour demander l'utilisation de ce style.
+On y précise bien les informations sur la légende associée. Le champ `identifier` sera l’identifiant public que les consommateurs du WMS pourront préciser dans les requêtes pour demander l’utilisation de ce style.
 
-📄 `hypso.json`
+📄 `<hypso.json>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = <hypso.json>"],
+        ["file = &lt;hypso.json&gt;"],
         ["type = ROK4-STYLE"],
         ["name = Teintes hypsométriques"]
     ]
@@ -118,11 +123,12 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 ```
 
 ???
+
 <br>
 
 Pour que la même couche puisse également être interrogée au format brut, nous allons déposer un style qui ne modifie pas les données.
 
-```json title="Contenu de normal.json"
+```json
 {
     "identifier": "normal",
     "title": "Données brutes",
@@ -139,18 +145,19 @@ Pour que la même couche puisse également être interrogée au format brut, nou
 }
 ```
 
-On y précise bien les informations sur la légende associée. Le champ `identifier` sera l'identifiant public que les consommateurs du WMS pourront préciser dans les requêtes pour demander l'utilisation de ce style. Une même couche ne peut pas avoir deux styles qui ont le même `identifier`.
+On y précise bien les informations sur la légende associée. Le champ `identifier` sera l’identifiant public que les consommateurs du WMS pourront préciser dans les requêtes pour demander l’utilisation de ce style. Une même couche ne peut pas avoir deux styles qui ont le même `identifier`.
 
-📄 `normal.json`
+📄 `<normal.json>`
+
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = <normal.json>"],
+        ["file = &lt;normal.json&gt;"],
         ["type = ROK4-STYLE"],
         ["name = Données brutes"]
     ]
@@ -169,15 +176,16 @@ On y précise bien les informations sur la légende associée. Le champ `identif
 ```
 
 ???
+
 <br>
 
-## Configuration de la diffusion
+### Configuration de la diffusion
 
-Nous allons publier la donnée sous une couche, avec les deux styles. Le style placé en premier sera appliqué par défaut si aucun style n'est précisé dans la requête GetMap.
+Nous allons publier la donnée sous une couche, avec les deux styles. Le style placé en premier sera appliqué par défaut si aucun style n’est précisé dans la requête GetMap.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
 
@@ -207,17 +215,18 @@ Nous allons publier la donnée sous une couche, avec les deux styles. Le style p
 ```
 
 ???
+
 <br>
 
-## Envoi sur les services de diffusion
+### Envoi sur les services de diffusion
 
-Seule la création d'une offre sur un point d'accès (publication) permet d'envoyer les informations de configuration au serveurs de diffusion.
+Seule la création d’une offre sur un point d’accès (publication) permet d’envoyer les informations de configuration aux serveurs de diffusion.
 
-### Consultation des points de diffusion disponibles
+#### Consultation des points de diffusion disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
 
@@ -226,13 +235,14 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
 ```
 
 ???
+
 <br>
 
-### Publication
+#### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms lidarhd}/offerings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms lidarhd}/offerings
 ```
 
@@ -244,10 +254,11 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
 ```
 
 ???
+
 <br>
 
 On peut vérifier la présence de notre couche `lidarhd` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0), avec la présence des deux styles.
 
-Dans QGis, on retrouve la légende déposée sous forme d'annexe.
+Dans QGIS, on retrouve la légende déposée sous forme d’annexe.
 
-![Visualisation MNT avec teintes hypsométriques dans QGis](/img/guides-developpeur/raster/mnt/qgis_mnt_legend.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Visualisation MNT avec teintes hypsométriques dans QGIS](/img/guides-developpeur/raster/mnt/qgis_mnt_legend.png){.fr-responsive-img .frx-border-img .frx-img-contained}

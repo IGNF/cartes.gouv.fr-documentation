@@ -1,19 +1,20 @@
 ---
-title: Calcul d'une pyramide raster
+title: Calcul d’une pyramide raster
 mermaid: true
 eleventyNavigation:
-    key: Calcul d'une pyramide raster
+    key: Calcul d’une pyramide raster
     order: 2
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Calcul d’une pyramide
 ---
 
-## Calcul de la pyramide raster
+### Calcul de la pyramide
 
-Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d'images (la donnée est calculée dans plusieurs résolutions) sur du stockage S3. L'entité qui correspond à cette donnée pérenne est une donnée stockée.
+Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données raster, ce stockage est une pyramide d’images (la donnée est calculée dans plusieurs résolutions) sur du stockage S3. L’entité qui correspond à cette donnée pérenne est une donnée stockée.
 
-Pour transformer la donnée livrée en donnée stockée, des traitements sont mis à disposition de l'entrepôt.
+Pour transformer la donnée livrée en donnée stockée, des traitements sont mis à disposition de l’entrepôt.
 
 ```mermaid
 flowchart LR
@@ -39,11 +40,11 @@ flowchart LR
     class tra global
 ```
 
-### Consultation des traitements disponibles
+#### Consultation des traitements disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
 
@@ -52,22 +53,23 @@ flowchart LR
 ```
 
 ???
+
 <br>
 
-### Consultation du traitement qui nous intéresse
+#### Consultation du traitement qui nous intéresse
 
-Le détail d'un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de données en sortie, ainsi que les paramètres et les vérifications requises pour les livraisons en entrée.
+Le détail d’un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de données en sortie, ainsi que les paramètres et les vérifications requises pour les livraisons en entrée.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}"
+??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster_to_pyramid'] }}"
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}
+```plain
+{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster_to_pyramid'] }}
 ```
 
 ```json
 {
     "name": "Calcul de pyramide raster",
-    "description": "Génération ou mise à jour d'une pyramide de tuiles raster à partir d'une livraison d'images géo-référencées",
+    "description": "Génération ou mise à jour d’une pyramide de tuiles raster à partir d’une livraison d’images géoréférencées",
     "input_types": {
         "upload": [
             "RASTER"
@@ -90,7 +92,7 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
         },
         {
             "name": "tms",
-            "description": "Tile Matrix Set, grille de définition des tuiles. Dans le cas d'une génération initiale, il est obligatoire",
+            "description": "Tile Matrix Set, grille de définition des tuiles. Dans le cas d’une génération initiale, il est obligatoire",
             "mandatory": false,
             "constraints": {
                 "type": "string",
@@ -132,13 +134,13 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
         },
         {
             "name": "parallelization",
-            "description": "Nombre de scripts d'écriture des dalles en parallèle",
+            "description": "Nombre de scripts d’écriture des dalles en parallèle",
             "mandatory": false,
             "default_value": 1
         },
         {
             "name": "top",
-            "description": "Niveau du haut de la pyramide. Par défaut, on remonte jusqu'au niveau le plus haut de la grille",
+            "description": "Niveau du haut de la pyramide. Par défaut, on remonte jusqu’au niveau le plus haut de la grille",
             "mandatory": false
         },
         {
@@ -153,12 +155,12 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
             "mandatory": false,
             "default_value": 16
         }
-    ]
-    "_id": "{{ ids.processings['raster-to-pyramid'] }}",
+    ],
+    "_id": "{{ ids.processings['raster_to_pyramid'] }}",
     "required_checks": [
         {
             "name": "Vérification raster",
-            "description": "La vérification raster contrôle que les fichiers sont bien lisibles et en extraie le géoréférencement",
+            "description": "La vérification raster contrôle que les fichiers sont bien lisibles et en extrait le géoréférencement",
             "_id": "{{ ids.checks.vector }}"
         },
         {
@@ -171,21 +173,22 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
 ```
 
 ???
+
 <br>
 
-### Configuration d'une exécution de ce traitement
+#### Configuration d’une exécution de ce traitement
 
-On distingue le traitement, la ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et possède en entrée et en sortie des données spécifiques.
+On distingue le traitement, la ressource de la plateforme mise à disposition de l’entrepôt, et son exécution. Une exécution appartient à un entrepôt et possède en entrée et en sortie des données spécifiques.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
 ```json
 {
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
+    "processing": "{{ ids.processings['raster_to_pyramid'] }}",
     "inputs": {
         "upload": ["{upload}"]
     },
@@ -207,7 +210,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 {
     "processing": {
         "name": "Calcul de pyramide raster",
-        "_id": "{{ ids.processings['raster-to-pyramid'] }}"
+        "_id": "{{ ids.processings['raster_to_pyramid'] }}"
     },
     "status": "CREATED",
     "creation": "2023-05-22T09:15:50.353341276Z",
@@ -245,35 +248,38 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 ```
 
 ???
+
 <br>
 
-:::warning Points d'attention
-Si votre pyramide est destinée à être mise à jour (voir [l'alimentation raster par mise à jour](../../alimentation-mise-a-jour-raster)), il peut être important de préciser que l'on souhaite calculer les masques de données (paramètre `"mask": true`).
+:::warning
+Si votre pyramide est destinée à être mise à jour (voir l’[alimentation par mise à jour raster](../../alimentation-mise-a-jour-raster)), il peut être important de préciser que l’on souhaite calculer les masques de données (paramètre `"mask": true`).
 :::
 
-### Déclenchement de cette exécution
+#### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}/launch
 ```
 
 ???
+
 <br>
 
-### Consultation de l'état de l'exécution
+#### Consultation de l’état de l’exécution
 
-Une exécution va avoir les statuts dans l'ordre suivant :
+Une exécution va avoir les statuts dans l’ordre suivant :
+- CREATED : créée mais non lancée
+- WAITING : lancée mais pas encore prise en charge par le cluster de calcul
+- PROGRESS : en cours d’exécution sur le cluster de calcul
+- SUCCESS ou FAILURE : terminé
 
-- CREATED : créée mais non lancée
-- WAITING : lancée mais pas encore prise en charge par le cluster de calcul
-- PROGRESS : en cours d'exécution sur le cluster de calcul
-- SUCCESS ou FAILURE : terminé
+<br>
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}
 ```
 
@@ -281,7 +287,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 {
     "processing": {
         "name": "Calcul de pyramide raster",
-        "_id": "{{ ids.processings['raster-to-pyramid'] }}"
+        "_id": "{{ ids.processings['raster_to_pyramid'] }}"
     },
     "status": "PROGRESS",
     "creation": "2023-05-22T09:15:50.353341276Z",
@@ -320,15 +326,16 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 ```
 
 ???
+
 <br>
 
-## Consultation de la donnée stockée en sortie
+### Consultation de la donnée stockée en sortie
 
-À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées et niveaux).
+À la fin du traitement, des informations concernant la donnée finale sont remontées afin d’apparaître au niveau de l’API (taille, étendue, système de coordonnées et niveaux).
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
@@ -377,17 +384,17 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 ```
 
 ???
+
 <br>
 
-## Nettoyage de la livraison
+### Nettoyage de la livraison
 
-Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
+Maintenant que la donnée a été stockée de manière pérenne, on peut supprimer la livraison et son contenu :
 
 ??? DELETE "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}"
 
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}
 ```
 
 ???
-<br>
