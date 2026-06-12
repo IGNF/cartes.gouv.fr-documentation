@@ -1,5 +1,5 @@
 ---
-title: Mises à jour mars 2026
+title: Mises à jour Mars 2026
 description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois de mars 2026
 tags:
     - Mises à jour

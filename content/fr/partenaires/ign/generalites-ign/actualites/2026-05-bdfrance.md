@@ -3,8 +3,9 @@ title: Construire ensemble la BD France, le référentiel géographique national
 description: Ces pompiers qui contribuent à décrire le territoire et à construire un commun de la donnée publique. Retour sur le Géosdis 2026, la rencontre annuelle des géomaticiens dans les services d’incendie et de secours (SDIS) de France.
 tags:
     - BD France
-    - BD Topo
-    - SDIS
+    - BD Topo®
+    - Donnée vecteur
+    - Partenaire
 eleventyNavigation:
     key: Construire ensemble la BD France, le référentiel géographique national de demain
     order: -20260526
@@ -96,4 +97,4 @@ Collectivités, gestionnaires d’infrastructures, producteurs de données méti
 
 <br>
 
-Vous pouvez, vous aussi, rejoindre la communauté BD France et contribuer à construire le référentiel géographique national de demain. En attendant l’ouverture de la communauté dédiée, vous pouvez déjà nous écrire pour le faire savoir, vous serez ainsi informés dès sa mise en ligne : [contact.geoservices@ign.fr](mailto:contact.geoservices@ign.fr)
+Vous pouvez, vous aussi, rejoindre la communauté BD France et contribuer à construire le référentiel géographique national de demain. En attendant l’ouverture de la communauté dédiée, vous pouvez déjà nous contacter pour le faire savoir, vous serez ainsi informés dès sa mise en ligne : [Formulaire pré-inscription - Communautés usages BD FRANCE - Expertise et territoire](https://analytics-eu.clickdimensions.com/ignfr-agj1s/pages/etfhjl29efgojnweunaahg.html?PageId=8e47d112bd5df111a8267c1e5276801e)

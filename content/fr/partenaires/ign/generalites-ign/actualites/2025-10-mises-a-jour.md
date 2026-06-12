@@ -1,5 +1,5 @@
 ---
-title: Mises à jour octobre 2025
+title: Mises à jour Octobre 2025
 description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois d’octobre 2025
 tags:
     - Mises à jour

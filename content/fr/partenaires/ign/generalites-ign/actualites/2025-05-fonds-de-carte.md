@@ -2,7 +2,8 @@
 title: Nouveaux plans transfrontaliers à très grande échelle en Europe et en outre-mer
 description: L’IGN a mis en place un premier fond de carte test à grande échelle issu des données OSM dans un style Plan IGN
 tags:
-    - Plan IGN
+    - PLAN IGN
+    - Cartes
 eleventyNavigation:
     key: Nouveaux plans transfrontaliers à très grande échelle en Europe et en outre-mer
     order: -20250930

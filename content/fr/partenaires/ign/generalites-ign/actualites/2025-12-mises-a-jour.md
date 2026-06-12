@@ -1,5 +1,5 @@
 ---
-title: Mises à jour décembre 2025
+title: Mises à jour Décembre 2025
 description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois de décembre 2025
 tags:
     - Mises à jour

@@ -3,6 +3,7 @@ title: De nouvelles bases de données au service de la détection des forêts su
 description: Rares, précieuses et riches en biodiversité, leur protection est désormais un objectif national
 tags:
     - Forêt
+    - Donnée vecteur
 eleventyNavigation:
     key: De nouvelles bases de données au service de la détection des forêts subnaturelles
     order: -20250930

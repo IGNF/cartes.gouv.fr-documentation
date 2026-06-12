@@ -9,7 +9,7 @@ tags:
     - Itinéraire
 eleventyNavigation:
     key: Calculer un itinéraire
-    order: 13
+    order: 7
 pictogram: custom/calculer-un-itineraire.svg
 summary:
     visible: true

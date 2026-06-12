@@ -14,7 +14,7 @@ tags:
     - Géométrie
 eleventyNavigation:
     key: Annoter la carte
-    order: 6
+    order: 5
 pictogram: custom/annoter-la-carte.svg
 summary:
     visible: true

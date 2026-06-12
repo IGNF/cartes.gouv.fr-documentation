@@ -9,7 +9,7 @@ tags:
     - Géoplateforme
 eleventyNavigation:
     key: Choisir un fond de carte
-    order: 4
+    order: 2
 pictogram: leisure/book.svg
 summary:
     visible: true

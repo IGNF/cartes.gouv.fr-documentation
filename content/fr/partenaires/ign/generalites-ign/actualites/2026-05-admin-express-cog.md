@@ -2,8 +2,7 @@
 title: Les millésimes 2026 de Admin Express COG et Limites d’IRIS sont disponibles en téléchargement et en web services sur cartes.gouv.fr
 description: Depuis quelques semaines, l’IGN a mis à disposition l’édition 2026 de son offre « Administratif » 
 tags:
-    - Admin Express COG
-    - Iris
+    - Limites administratives
 eleventyNavigation:
     key: Les millésimes 2026 de Admin Express COG et Limites d’IRIS sont disponibles en téléchargement et en web services sur cartes.gouv.fr
     order: -20260522
