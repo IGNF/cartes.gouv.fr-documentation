@@ -1,9 +1,8 @@
 ---
-title: Mises à jour mai 2026
+title: Mises à jour Mai 2026
 description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois de mai 2026
 tags:
     - Mises à jour
-    - Diffusion
 eleventyNavigation:
     key: Mises à jour mai 2026
     order: -20260502
@@ -14,11 +13,15 @@ date: 2026-05-02
 
 ![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-01-maj.png){.fr-responsive-img .frx-img-contained}
 
-Actualité mise à jour le 7 mai 2026
+_Actualité mise à jour le 29 mai 2026_
 
 #### Services web
 
-##### Ajout de flux en accès libre
+:::callout
+ Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/services.csv)** au format .csv mis à jour chaque vendredi, vous retrouvez toutes les ressources mises en avant par l'Institut national de l’information géographique et forestière.
+:::
+
+###### Ajout de flux en accès libre
 
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
@@ -27,7 +30,7 @@ Actualité mise à jour le 7 mai 2026
     ]
 }) }}
 
-##### Liste des mises à jour de flux en accès libre
+###### Liste des mises à jour de flux en accès libre
 
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
@@ -40,7 +43,8 @@ Actualité mise à jour le 7 mai 2026
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO® 50 cm - ouvre une nouvelle fenêtre">BD ORTHO® 50 cm RVB</a>', "ORTHOIMAGERY.ORTHOPHOTOS.BDORTHO", "WMS-Raster et WMTS", "ortho", "D027, D031, D076, D085 - Édition 2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO® IRC - ouvre une nouvelle fenêtre">BD ORTHO® IRC</a>', "ORTHOIMAGERY.ORTHOPHOTOS.IRC", "WMS-Raster et WMTS", "ortho", "D027, D031, D076, D085 - Édition 2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="Graphe de mosaïquage BD ORTHO® - ouvre une nouvelle fenêtre">Graphe de mosaïquage BD ORTHO®</a>', "ORTHOIMAGERY.ORTHOPHOTOS.GRAPHE-MOSAIQUAGE", "WFS et WMS-Vecteur", "ortho", "D027, D031, D076, D085 - Édition 2025"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-SAT" target="_blank" rel="noopener noreferrer" title="PLEIADES 2026 - ouvre une nouvelle fenêtre">PLEIADES 2026</a>', "ORTHOIMAGERY.ORTHO-SAT.PLEIADES.2026", "WMS-Raster et WMTS", "satellite", "Littoral Atlantique, Littoral Hauts-de-France, Canal Rhin-Rhône - Édition 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO-HISTO" target="_blank" rel="noopener noreferrer" title="Photographies aériennes 1965-1980 - ouvre une nouvelle fenêtre">Photographies aériennes 1965-1980</a>', " ORTHOIMAGERY.ORTHOPHOTOS.1965-1980 ", "WMS-Raster et WMTS", "orthohisto", "D054 - Édition 1967"],        
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-SAT" target="_blank" rel="noopener noreferrer" title="PLEIADES 2026 - ouvre une nouvelle fenêtre">PLEIADES 2026</a>', "ORTHOIMAGERY.ORTHO-SAT.PLEIADES.2026", "WMS-Raster et WMTS", "satellite", "Littoral Atlantique, Littoral Hauts-de-France, Canal Rhin-Rhône, Strasbourg - Édition 2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_COSIA" target="_blank" rel="noopener noreferrer" title="CoSIA - ouvre une nouvelle fenêtre">Couverture du Sol par IA 2024-2025</a>', "IGNF_COSIA_2024-2026", "WMS-Raster et WMTS", "sol", "D031, D051, D054, D057, D076, D085, D088 - Édition 2025"]
     ]
 }) }}
@@ -49,14 +53,17 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
 
 #### Téléchargement
 
-##### Liste des mises à jour de données en téléchargement
+###### Liste des mises à jour de données en téléchargement
 
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],
     data: [
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS" target="_blank" rel="noopener noreferrer" title="ADMIN EXPRESS - ouvre une nouvelle fenêtre">ADMIN EXPRESS</a>', "FXX + DROM", "2026-05"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS" target="_blank" rel="noopener noreferrer" title="ADMIN EXPRESS COG - ouvre une nouvelle fenêtre">ADMIN EXPRESS COG</a>', "FXX + DROM (formats FlatGeobuf et GeoParquet)", "2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BAN-PLUS" target="_blank" rel="noopener noreferrer" title="BAN PLUS® - ouvre une nouvelle fenêtre">BAN PLUS</a>', "FXX + DROM", "2026-03"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO® EXPRESS</a>', "FXX + DROM", "hebdomadaire"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO®</a>', "FXX + DROM (formats FlatGeobuf et GeoParquet)", "2026-03"],        
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PARCELLAIRE-EXPRESS-PCI" target="_blank" rel="noopener noreferrer" title="Parcellaire Express (PCI) - ouvre une nouvelle fenêtre">Parcellaire Express (PCI)</a>', "FXX + DROM", "2026-03"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS Correl - ouvre une nouvelle fenêtre">MNS Correl</a>', "D010, D051", "2025"]
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS Correl - ouvre une nouvelle fenêtre">MNS Correl</a>', "D010, D051, D054, D055, D057, D088", "2025"]
     ]
 }) }}

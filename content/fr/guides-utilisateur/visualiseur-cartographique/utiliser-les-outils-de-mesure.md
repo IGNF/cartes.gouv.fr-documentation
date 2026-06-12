@@ -13,7 +13,7 @@ tags:
     - Mesurer
 eleventyNavigation:
     key: Utiliser les outils de mesure
-    order: 5
+    order: 4
 pictogram: custom/mesurer-une-distance.svg
 summary:
     visible: true

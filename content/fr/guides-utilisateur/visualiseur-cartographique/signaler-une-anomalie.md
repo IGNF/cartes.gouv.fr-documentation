@@ -8,17 +8,27 @@ tags:
     - Mes enregistrements
 eleventyNavigation:
     key: Signaler une anomalie
-    order: 12
+    order: 14
 pictogram: document/passport.svg
 summary:
     visible: true
 ---
 
+
+« Accéder à d’autres outils » via le bouton en haut à gauche de votre écran :
+
+![Icône du menu « Accéder à d’autres outils »](/img/guides-utilisateur/visualiseur-cartographique/acceder-a-dautres-outils/01_acceder-autres-outils.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+Ce menu vous permet d’accéder à des outils supplémentaires en lien avec votre carte de manière globale :
+
+![Options du menu « Accéder à d’autres outils » : « Mes enregistrements », « Importer des données », « Partager, intégrer la carte », « Imprimer », « Signaler une anomalie », « Affichage compact »](/img/guides-utilisateur/visualiseur-cartographique/acceder-a-dautres-outils/02_liste-des-outils.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+---
 ## Signaler une anomalie dans le menu « Accéder à d’autres outils »
 
 Vous remarquez une erreur sur la carte ? Vous pouvez la faire remonter en faisant un **signalement**.
 
-Le menu « Accéder à d’autres outils » vous offre cette possibilité, il faut cliquer sur cette icône :
+Il faut cliquer sur cette icône :
 
 ![Icône pour signaler une anomalie](/img/guides-utilisateur/visualiseur-cartographique/signaler-une-anomalie/01_signaler-une-anomalie.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

@@ -12,7 +12,7 @@ tags:
     - Pente
 eleventyNavigation:
     key: Calculer un profil altimétrique
-    order: 17
+    order: 9
 pictogram: custom/profil-altimetrique.svg
 summary:
     visible: true

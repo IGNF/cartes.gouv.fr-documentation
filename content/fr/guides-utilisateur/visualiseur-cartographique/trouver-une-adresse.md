@@ -12,7 +12,7 @@ tags:
     - Toponyme
 eleventyNavigation:
     key: Trouver une adresse
-    order: 15
+    order: 10
 pictogram: custom/trouver-une-adresse.svg
 summary:
     visible: true
