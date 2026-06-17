@@ -10,7 +10,7 @@ tags:
     - Isochrone
 eleventyNavigation:
     key: Calculer une isochrone
-    order: 14
+    order: 6
 pictogram: custom/calculer-une-isochrone.svg
 summary:
     visible: true

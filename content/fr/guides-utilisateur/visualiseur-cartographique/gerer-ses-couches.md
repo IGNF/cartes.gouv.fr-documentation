@@ -11,7 +11,7 @@ tags:
     - Couche
 eleventyNavigation:
     key: Gérer ses couches
-    order: 10
+    order: 3
 pictogram: leisure/pictures.svg
 summary:
     visible: true

@@ -1,10 +1,10 @@
 ---
-title: Mises à jour novembre 2025
+title: Mises à jour Novembre 2025
 description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois de novembre 2025
 tags:
     - Mises à jour
 eleventyNavigation:
-    key: Mises à jour novembre 2025
+    key: Mises à jour Novembre 2025
     order: -20251103
 date: 2025-11-03
 ---

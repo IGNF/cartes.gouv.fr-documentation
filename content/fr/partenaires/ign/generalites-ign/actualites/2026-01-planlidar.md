@@ -3,6 +3,7 @@ title: Un nouveau territoire test pour les cartographies LiDAR à grande échell
 description: Depuis quelques semaines, une nouvelle zone test est disponible sur une portion de l’Isère et du massif des Écrins
 tags:
     - LiDAR
+    - Plan IGN
 eleventyNavigation:
     key: Un nouveau territoire test pour les cartographies LiDAR à grande échelle
     order: -20260126

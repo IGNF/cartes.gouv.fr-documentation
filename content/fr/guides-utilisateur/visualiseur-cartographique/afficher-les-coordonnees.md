@@ -11,7 +11,7 @@ tags:
     - Système de référence
 eleventyNavigation:
     key: Afficher les coordonnées
-    order: 16
+    order: 8
 pictogram: custom/coordonnees.svg
 summary:
     visible: true
