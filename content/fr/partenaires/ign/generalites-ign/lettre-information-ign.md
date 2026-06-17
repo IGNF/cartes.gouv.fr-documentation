@@ -14,4 +14,4 @@ Chaque mois, recevez l’actualité de l’offre IGN pour les professionnels et 
 
 <br>
 
-Inscrivez-vous à la lettre d’information IGN pour les professionnels ici : [https://www.ign.fr/offre-IGN-professionnels](https://www.ign.fr/offre-IGN-professionnels){target="_blank" rel="noopener noreferrer" title="Recevez l’actualité de l’offre IGN pour les professionnels - ouvre une nouvelle fenêtre"}
+[Inscrivez-vous à la lettre d’information IGN pour les professionnels](https://www.ign.fr/offre-IGN-professionnels){.fr-btn target="_blank" rel="noopener noreferrer" title="Recevez l’actualité de l’offre IGN pour les professionnels - ouvre une nouvelle fenêtre"}
