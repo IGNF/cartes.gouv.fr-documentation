@@ -21,7 +21,7 @@ module.exports = {
     repository_url: "https://github.com/IGNF/cartes.gouv.fr-documentation",
     language: "fr",
     subtitle: "Aide",
-    description: "Le service public des cartes et données du territoire",
+    description: "Notre territoire commun",
     author: {
         name: "IGN",
         email: "geoplateforme@ign.fr",
