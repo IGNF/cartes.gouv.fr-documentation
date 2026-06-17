@@ -4,37 +4,37 @@ description: Toutes les nouvelles données IGN disponibles en services web et en
 tags:
     - Mises à jour
 eleventyNavigation:
-    key: Mises à jour juin 2026
+    key: Mises à jour Juin 2026
     order: -20260601
 date: 2026-06-01
 ---
 
 {% from "components/component.njk" import component with context %}
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/00-2026-06-mises-a-jour.png "Mise à Jour 00"){.fr-responsive-img .frx-img-contained}
+![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/00-2026-06-mises-a-jour.png "Mise à jour 00"){.fr-responsive-img .frx-img-contained}
 
-<figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Actualité mise à jour le 10 Juin 2026</figcaption>
+<figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Actualité mise à jour le 10 juin 2026</figcaption>
 
 #### Services web
 
 :::callout
- Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/services.csv)** au format .csv mis à jour chaque vendredi, vous retrouvez toutes les ressources mises en avant par l'Institut national de l’information géographique et forestière.
+Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/services.csv)** au format CSV mis à jour chaque vendredi, vous retrouvez toutes les ressources mises en avant par l’Institut national de l’information géographique et forestière.
 :::
 
-###### Ajout de flux en accès libre
+##### Ajout de flux en accès libre
 
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO-EXPRESS IRC - ouvre une nouvelle fenêtre">ORTHO-EXPRESS IRC</a>', "ORTHOIMAGERY.ORTHOPHOTOS.IRC-EXPRESS.2026", "WMS Raster et WMTS", "ortho", "D013, D090 - 2026"], 
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO-EXPRESS RVB - ouvre une nouvelle fenêtre">ORTHO-EXPRESS RVB</a>', "ORTHOIMAGERY.ORTHOPHOTOS.RVB-EXPRESS.2026", "WMS Raster et WMTS", "ortho", "D013, D090 - 2026"],    
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO 2021-2023 - ouvre une nouvelle fenêtre">Graphe de mosaïquage de la BD ORTHO® 2021-2023</a>', "ORTHOIMAGERY.ORTHOPHOTOS.GRAPHE.2021-2023", "WFS et WMS Vecteur", "orthohisto", "FXX+DROM - 2021 à 2023"],            
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">VOIRIE DGF</a>', "DGF_2026_:XXX", "WFS", "topographie", "FXX + DROM - 2026"],         
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">VOIRIE DGF</a>', "DGF_2025_:XXX", "WFS", "topographie", "FXX + DROM - 2025"],         
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie communale retenue DSR 2025</a>', "DGF_2026-voirie-retenue-communes", "WMTS", "topographie", "FXX + DROM - 2026"],        
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie départementale retenue DGF 2026</a>', "DGF_2026-voirie-retenue-departements", "WMTS", "topographie", "FXX + DROM - 2026"], 
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie communale retenue DSR 2025</a>', "DGF_2025-voirie-retenue-communes", "WMTS", "topographie", "FXX + DROM - 2025"], 
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie départementale retenue DGF 2025</a>', "DGF_2025-voirie-retenue-departements", "WMTS", "topographie", "FXX + DROM - 2025"]              
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO-EXPRESS IRC - ouvre une nouvelle fenêtre">ORTHO-EXPRESS IRC</a>', "ORTHOIMAGERY.ORTHOPHOTOS.IRC-EXPRESS.2026", "WMS-Raster et WMTS", "ortho", "D013, D090 - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO-EXPRESS RVB - ouvre une nouvelle fenêtre">ORTHO-EXPRESS RVB</a>', "ORTHOIMAGERY.ORTHOPHOTOS.RVB-EXPRESS.2026", "WMS-Raster et WMTS", "ortho", "D013, D090 - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO 2021-2023 - ouvre une nouvelle fenêtre">Graphe de mosaïquage de la BD ORTHO® 2021-2023</a>', "ORTHOIMAGERY.ORTHOPHOTOS.GRAPHE.2021-2023", "WFS et WMS-Vecteur", "orthohisto", "FXX + DROM - 2021 à 2023"],            
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">VOIRIE DGF</a>', "DGF_2026_:XXX", "WFS", "topographie", "FXX + DROM - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">VOIRIE DGF</a>', "DGF_2025_:XXX", "WFS", "topographie", "FXX + DROM - 2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie communale retenue DSR 2025</a>', "DGF_2026-voirie-retenue-communes", "WMTS", "topographie", "FXX + DROM - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie départementale retenue DGF 2026</a>', "DGF_2026-voirie-retenue-departements", "WMTS", "topographie", "FXX + DROM - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie communale retenue DSR 2025</a>', "DGF_2025-voirie-retenue-communes", "WMTS", "topographie", "FXX + DROM - 2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_VOIRIE-DGF" target="_blank" rel="noopener noreferrer" title="VOIRIE DGF - ouvre une nouvelle fenêtre">Voirie départementale retenue DGF 2025</a>', "DGF_2025-voirie-retenue-departements", "WMTS", "topographie", "FXX + DROM - 2025"]
     ]
 }) }}
 
@@ -44,7 +44,9 @@ Les flux ci-dessus remplacent les flux suivants :
 - DGCL.2026.communale
 - DGCL.2026.voirie-departementale
 
-###### Liste des mises à jour de flux en accès libre
+<br>
+
+##### Liste des mises à jour de flux en accès libre
 
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
@@ -59,14 +61,14 @@ Les flux ci-dessus remplacent les flux suivants :
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/FSV_STATIONS-VERTES" target="_blank" rel="noopener noreferrer" title="Stations Vertes - ouvre une nouvelle fenêtre">Stations Vertes</a>', "STATIONSVERTES", "WMS-Vecteur", "cartovecto", "FXX - 2026-06"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/FFVE_VILLAGES-ETAPES" target="_blank" rel="noopener noreferrer" title="Villages Etapes - ouvre une nouvelle fenêtre">Villages Etapes</a>', "LABELS.TOURISTIQUES:villages_etape", "WFS", "cartovecto", "FXX - 2026-06"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/FFVE_VILLAGES-ETAPES" target="_blank" rel="noopener noreferrer" title="Villages Etapes - ouvre une nouvelle fenêtre">Villages Etapes</a>', "VILLAGESETAPE", "WMS-Vecteur", "cartovecto", "FXX - 2026-06"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO 2021-2023 - ouvre une nouvelle fenêtre">Photographies aériennes 2021-2023</a>', "ORTHOIMAGERY.ORTHOPHOTOS2021-2023", "WMS Raster et WMTS", "orthohisto", "FXX+DROM - 2021 à 2023"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO 2021-2023 - ouvre une nouvelle fenêtre">Photographies aériennes 2021-2023</a>', "ORTHOIMAGERY.ORTHOPHOTOS2021-2023", "WMS-Raster et WMTS", "orthohisto", "FXX + DROM - 2021 à 2023"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-SAT" target="_blank" rel="noopener noreferrer" title="PLEIADES 2026 - ouvre une nouvelle fenêtre">PLEIADES 2026</a>', "ORTHOIMAGERY.ORTHO-SAT.PLEIADES.2026", "WMS-Raster et WMTS", "satellite", "Littoral Atlantique, Littoral Cotentin et zones sur Dourdan, Sancerre-Cosne et Sud-Est Grenoble - Édition 2026"]
     ]
 }) }}
 
 Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-Raster et WMTS) et BD Géodésie ([IGNF_GEODESIE-XXX services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_GEODESIE-ET-NIVELLEMENT){target="_blank" rel="noopener noreferrer" title="GEODESIE ET NIVELLEMENT - ouvre une nouvelle fenêtre"}) sont mises à jour quotidiennement et la ressource Base Adresse Nationale ([BAN.DATA.GOUV services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BAN-PLUS){target="_blank" rel="noopener noreferrer" title="BAN PLUS - ouvre une nouvelle fenêtre"}) est actualisée hebdomadairement.
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/01-2026-06-mises-a-jour.png "Mise à Jour 01"){.fr-responsive-img .frx-img-contained}
+![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/01-2026-06-mises-a-jour.png "Mise à jour 01"){.fr-responsive-img .frx-img-contained}
 
 <figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Limites administratives et Voirie DGF - Mantet (66)</figcaption>
 
@@ -74,7 +76,7 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
 
 #### Téléchargement
 
-###### Liste des mises à jour de données en téléchargement
+##### Liste des mises à jour de données en téléchargement
 
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],
@@ -95,6 +97,6 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
     ]
 }) }}
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/02-2026-06-mises-a-jour.png "Mise à Jour 02"){.fr-responsive-img .frx-img-contained}
+![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/02-2026-06-mises-a-jour.png "Mise à jour 02"){.fr-responsive-img .frx-img-contained}
 
 <figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Réseau de nivellement, CoSIA et MNT issu du LiDAR HD - Sospel (04)</figcaption>

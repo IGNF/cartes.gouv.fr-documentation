@@ -4,7 +4,7 @@ description: Toutes les nouvelles données IGN disponibles en services web et en
 tags:
     - Mises à jour
 eleventyNavigation:
-    key: Mises à jour mars 2026
+    key: Mises à jour Mars 2026
     order: -20260302
 date: 2026-03-02
 ---

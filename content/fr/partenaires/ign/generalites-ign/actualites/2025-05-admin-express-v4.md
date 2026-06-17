@@ -8,9 +8,7 @@ eleventyNavigation:
     key: De nombreuses nouveautés arrivent avec la nouvelle version d’Admin Express (v4)
     order: -20250501
 date: 2025-05-01
-
 ---
-
 
 Depuis mi-2024, l’IGN œuvre en interne à une refonte du contenu autour de ses référentiels administratifs en réponse aux demandes d’évolution remontées par nos utilisateurs avertis sur ce thème.
 

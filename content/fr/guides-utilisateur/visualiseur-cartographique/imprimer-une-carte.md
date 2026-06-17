@@ -21,6 +21,7 @@ Ce menu vous permet d’accéder à des outils supplémentaires en lien avec vot
 ![Options du menu « Accéder à d’autres outils » : « Mes enregistrements », « Importer des données », « Partager, intégrer la carte », « Imprimer », « Signaler une anomalie », « Affichage compact »](/img/guides-utilisateur/visualiseur-cartographique/acceder-a-dautres-outils/02_liste-des-outils.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ---
+
 ## Imprimer une carte
 
 Vous pouvez exporter un aperçu de votre carte en format PDF afin de l’imprimer. Pour cela il faut cliquer sur l’icône suivante :

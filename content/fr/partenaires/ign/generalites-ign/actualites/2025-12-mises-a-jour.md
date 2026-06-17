@@ -4,7 +4,7 @@ description: Toutes les nouvelles données IGN disponibles en services web et en
 tags:
     - Mises à jour
 eleventyNavigation:
-    key: Mises à jour décembre 2025
+    key: Mises à jour Décembre 2025
     order: -20251201
 date: 2025-12-01
 ---
