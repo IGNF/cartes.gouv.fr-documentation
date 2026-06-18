@@ -13,12 +13,12 @@ Une fois le compte créé, on peut manipuler l'API Entrepôt.
 
 Un premier appel permet de récupérer nos informations personnelles et principalement les communautés dont nous sommes membres.
 
-??? GET "{{ urls.api_entrepot }}/users/me"
+???? GET "{{ urls.api_entrepot }}/users/me"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "email": "dave.lopper@ign.fr",
@@ -51,6 +51,7 @@ Un premier appel permet de récupérer nos informations personnelles et principa
 }
 ```
 ???
+????
 <br>
 
 L'identifiant de votre compte utilisateur est une information :
@@ -83,12 +84,12 @@ Ces ressources sont individuellement mises à disposition des entrepôts, avec q
 
 Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressources qui vous ont été allouées) :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "community": {
@@ -299,3 +300,4 @@ Pour voir celles accessibles par votre entrepôt (la réponse dépend des ressou
 }
 ```
 ???
+????

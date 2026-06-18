@@ -72,12 +72,12 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "SCAN 1000 Nord Corse",
@@ -86,20 +86,20 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
     "srs": "EPSG:2154"
 }
 ```
-
 ???
+????
 <br>
 
 - Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
 - Fermeture de la livraison
 - Création de l'exécution de traitement
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
@@ -119,8 +119,8 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
     }
 }
 ```
-
 ???
+????
 <br>
 
 - Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
@@ -129,12 +129,12 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
 
 - Création de la configuration WMTS-TMS : ID `{configuration}`
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMTS-TMS",
@@ -164,8 +164,8 @@ On a notre permier jeu de donnée, la pyramide calculée se fera dans les même 
     }
 }
 ```
-
 ???
+????
 <br>
 
 - Création de l'offre : ID `{offering}`
@@ -180,12 +180,12 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "SCAN 1000 Sud Corse",
@@ -194,8 +194,8 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     "srs": "EPSG:2154"
 }
 ```
-
 ???
+????
 <br>
 
 - Livraison des fichiers :
@@ -209,12 +209,12 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
 - Fermeture de la livraison
 - Création de l'exécution de traitement : on a ici deux données en entrée, la nouvelle zone livrée, ainsi que la pyramide ne contenant que le Nord de la Corse
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
@@ -231,19 +231,19 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     "parameters": {}
 }
 ```
-
 ???
+????
 <br>
 
 - Lancement de l'exécution : ID de la données stockée `{stored data Corse}`
 - À la fin, on peut voir que notre nouvelle pyramide a une dépendance : elle utilise notre première pyramide, qu'on ne pourra plus supprimer
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "used_by": [],
@@ -255,20 +255,20 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     ]
 }
 ```
-
 ???
+????
 <br>
 
 ### Diffusion
 
 - Mise à jour de la configuration WMTS-TMS : on change le titre, le résumé et surtout la donnée stockée utilisée. À ce stade, la diffusion n'a pas encore été mise à jour
 
-??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}"
+???? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMTS-TMS",
@@ -298,8 +298,8 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jo
     }
 }
 ```
-
 ???
+????
 <br>
 
 - Synchronisation de l'offre : cette action va renvoyer les informations auprès des serveurs de diffusion pour prendre en compte les modifications. Cela permet de conserver l'offre et son identifiant, ce qui est intéressant lorsque des restrictions d'accès ont été définies

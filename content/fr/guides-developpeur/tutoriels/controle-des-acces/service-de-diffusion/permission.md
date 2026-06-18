@@ -16,12 +16,12 @@ Toutes les offres sur un point d'accès ouvert sont accessibles sans contrôle. 
 
 Nous allons travailler avec l'offre WFS suivante :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "open": false,
@@ -44,6 +44,7 @@ Nous allons travailler avec l'offre WFS suivante :
 }
 ```
 ???
+????
 <br>
 
 Le champ `available` permet facilement de bloquer tous les accès sans dépublier ni supprimer les permissions.
@@ -56,12 +57,12 @@ Une permission est un lien entre UN utilisateur **ou** UNE communauté et DES of
 
 Il faut pour cela avoir les identifiants entrepôt des utilisateurs à qui on souhaite donner la permission.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/permissions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/permissions"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/permissions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "end_date": "2023-06-23T14:00:00Z",
@@ -76,7 +77,8 @@ Il faut pour cela avoir les identifiants entrepôt des utilisateurs à qui on so
     ]
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -132,6 +134,7 @@ Il faut pour cela avoir les identifiants entrepôt des utilisateurs à qui on so
 ]
 ```
 ???
+????
 <br>
 
 Le champ `only_oauth` permet de forcer les consommateurs de données à exploiter la permission uniquement avec leur compte personnel, et non des clés moins sécurisées (voir [Gestion des clés de consommation des services de diffusion](../cle/)).
@@ -140,12 +143,12 @@ Le champ `only_oauth` permet de forcer les consommateurs de données à exploite
 
 Sensiblement de la même manière, on va pouvoir préciser la ou les communautés qui pourront consommer l'offre. Cela permet de déléguer à cette communauté la gestion des utilisateurs qui pourront concrètement exploiter cette permission. Cela implique donc d'avoir confiance en cette communauté et sa gestion.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/permissions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/permissions"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/permissions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "end_date": "2023-06-23T14:00:00Z",
@@ -159,8 +162,8 @@ Sensiblement de la même manière, on va pouvoir préciser la ou les communauté
     ]
 }
 ```
-
-
+???
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -195,6 +198,7 @@ Sensiblement de la même manière, on va pouvoir préciser la ou les communauté
 ]
 ```
 ???
+????
 <br>
 
 Le travail du producteur de données s'arrête ici. C'est maintenant aux consommateurs de données de gérer leurs clés et leurs accès.
@@ -203,18 +207,19 @@ Le travail du producteur de données s'arrête ici. C'est maintenant aux consomm
 
 Si une anomalie est constatée (contenu des données, consommation abusive...), il est possible de bloquer facilement toutes les consommations en changeant le statut `available` au niveau de l'offre. Cela permet de ne rien perdre de la configuration des permissions et accès, et de pouvoir rapidement revenir en arrière.
 
-??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
+???? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "available": false
 }
 ```
 ???
+????
 <br>
 
 Les couches correspondantes à l'offre n'apparaîtront plus dans les capacités du service et ne peuvent plus être consultées. Cela n'est possible que pour les offres liées à un point d'accès non ouvert.

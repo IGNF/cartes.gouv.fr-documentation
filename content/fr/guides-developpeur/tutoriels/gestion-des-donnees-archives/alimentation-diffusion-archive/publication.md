@@ -17,12 +17,12 @@ La configuration centralise toutes les informations nécessaires à la diffusion
 * nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations DOWNLOAD de la plateforme)
 * doublon dans le nom des sous-couches (si on veut diffuser plusieurs données ARCHIVE au sein d'une même configuration)
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "DOWNLOAD",
@@ -57,6 +57,7 @@ La configuration centralise toutes les informations nécessaires à la diffusion
 }
 ```
 ???
+????
 <br>
 
 Si on ne précise pas de titre ou de résumé pour la donnée stockée diffusée, ce sera son nom qui sera utilisé. Les codes des langues sont ceux [ISO-639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1).
@@ -65,7 +66,7 @@ Dans les sous-ressources, `format`, `zone` et `resolution` (non utilisé ici) s'
 
 Voici un exemple pour voir la nomenclature des zones :
 
-??? GET "{{ urls.api_entrepot }}/statics/nomenclatures"
+???? GET "{{ urls.api_entrepot }}/statics/nomenclatures"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/statics/nomenclatures
@@ -78,6 +79,7 @@ Voici un exemple pour voir la nomenclature des zones :
     ]
 }) }}
 
+??? Corps de réponse JSON
 ```json
     [
         {
@@ -98,6 +100,7 @@ Voici un exemple pour voir la nomenclature des zones :
     ]
 ```
 ???
+????
 <br>
 
 ## Publication
@@ -106,35 +109,37 @@ Voici un exemple pour voir la nomenclature des zones :
 
 ### Consultation des points de diffusion disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 ???
+????
 <br>
 
 C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
 
 ### Création de l'offre
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.download }}",
     "open": true
 }
 ```
-
+????
+??? Corps de réponse JSON
 ```json
 {
     "open": true,
@@ -156,13 +161,14 @@ C'est le point d'accès de type DOWNLOAD qui va nous intéresser.
 }
 ```
 ???
+????
 </br>
 
 ## Consultation du service de téléchargement
 
 En consultant les [capacités du service de téléchargement]({{ urls.public.download }}/capabilities), on retrouve notre couche (on demande ici la réponse en JSON, c'est le format XML Atom par défaut). On va également filtrer sur nos valeurs spécifiques pour n'avoir que notre résultat.
 
-??? GET "{{ urls.public.download }}/capabilities"
+???? GET "{{ urls.public.download }}/capabilities"
 
 ``` title="Contenu" 
 {{ urls.public.download }}/capabilities
@@ -184,7 +190,7 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
         ["Accept = `application/json`"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "georssNs": "http://www.georss.org/georss",
@@ -291,12 +297,13 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
 }
 ```
 ???
+????
 <br>
 
 Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit [le lien dans l'entrée]({{ urls.public.download }}/resource/limites_administratives), c'est-à-dire les sous-ressources. Dans notre cas, on a une seule sous-ressource, `departements`.
 
 
-??? GET "{{ urls.public.download }}/resource/limites_administratives"
+???? GET "{{ urls.public.download }}/resource/limites_administratives"
 
 ``` title="Contenu" 
 {{ urls.public.download }}/resource/limites_administratives
@@ -308,7 +315,7 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
         ["Accept = `application/json`"]
     ]
 }) }}
-    
+??? Corps de réponse JSON    
 ```json
 {
     "georssNs": "http://www.georss.org/georss",
@@ -409,11 +416,12 @@ Si on veut avoir le contenu de notre ressource de téléchargement `limites_admi
 }
 ```
 ???
+????
 <br>
 
 Pour connaître les fichiers téléchargeables, on va pouvoir demander le contenu de la sous-ressource en suivant le [lien de l'entrée]({{ urls.public.download }}/resource/limites_administratives/departements).
 
-??? GET "{{ urls.public.download }}/resource/limites_administratives/departements"
+???? GET "{{ urls.public.download }}/resource/limites_administratives/departements"
 
 ``` title="Contenu" 
 {{ urls.public.download }}/resource/limites_administratives/departements
@@ -425,7 +433,7 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
         ["Accept = `application/json`"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "georssNs": "http://www.georss.org/georss",
@@ -702,6 +710,7 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
 }
 ```
 ???
+????
 <br>
 
 On retrouve nos 10 fichiers, avec leur taille et leur signature MD5, téléchargeables :

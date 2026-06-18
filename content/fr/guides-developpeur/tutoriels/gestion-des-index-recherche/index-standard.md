@@ -29,12 +29,12 @@ On considère que ces documents de recherche font partie de l'index géoplatefor
 
 Il est possible de rechercher à partir de nombreux champs dans les documents de recherche (aucun des champs n'est obligatoire pour effectuer la recherche) :
 
-??? POST "{{ urls.public.search }}/api/indexes/geoplateforme"
+???? POST "{{ urls.public.search }}/api/indexes/geoplateforme"
 
 ```title="Contenu"
 {{ urls.public.search }}/api/indexes/geoplateforme
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "title": "Titre",
@@ -58,7 +58,8 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
     "producers": "IGN"
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "documents": [
@@ -183,6 +184,7 @@ Il est possible de rechercher à partir de nombreux champs dans les documents de
 }
 ```
 ???
+????
 <br>
 
 Si aucun champ n'est précisé dans le JSON, la réponse obtenue renvoie tous les documents présent dans l'index géoplateforme.
@@ -231,12 +233,12 @@ Voici un exemple pour ajouter les différents tags après la création d'une con
 
 Les champs *production_year* et *producer* sont aussi à définir manuellement mais, cette fois-ci, il est à définir à partir d'un tag de la **stored_data** de la donnée publiée. De même, le tag peut être ajouté au moment de la création de la configuration ou ajouté par la suite :
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/tags"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/tags"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/tags
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "production_year": 2023,
@@ -244,6 +246,7 @@ Les champs *production_year* et *producer* sont aussi à définir manuellement m
 }
 ```
 ???
+????
 <br>
 
 #### Champs *extra*
@@ -252,12 +255,12 @@ Le champ *extra* permet de stocker n'importe quelle information sur les entités
 
 Pour ajouter un champ extra dans la configuration :
 
-??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{configuration}"
+???? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{configuration}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{configuration}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "extra": {
@@ -269,6 +272,7 @@ Pour ajouter un champ extra dans la configuration :
 }
 ```
 ???
+????
 <br>
 
 Dans le service de recherche, nous retrouverons ainsi ce champ extra (après publication ou synchronisation de l'offre) :
@@ -285,7 +289,7 @@ La suggestion par champ permet une autocomplétion (sur les champs autorisés) d
 
 Les champs utilisables pour la suggestion sont *title*, *description*, *layer_name*, *theme*, *keywords*, *producers*, *type*, *production_years* et *metadata_urls*. Il est possible d'avoir une suggestion sur tous ces champs en même temps à partir d'une requête de ce type :
 
-??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest"
+???? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest"
 
 ```title="Contenu"
 {{ urls.public.search }}/api/indexes/geoplateforme/suggest
@@ -298,7 +302,7 @@ Les champs utilisables pour la suggestion sont *title*, *description*, *layer_na
     ]
 }) }}
     
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -458,13 +462,14 @@ Les champs utilisables pour la suggestion sont *title*, *description*, *layer_na
 ]
 ```
 ???
+????
 <br>
 
 Les documents obtenus sont classés selon un score calculé par OpenSearch (et fourni dans la réponse).
 
 Il est possible de ne rechercher que dans un seul champ en ajoutant un paramètre *fields* à la requête :
 
-??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest"
+???? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest"
 
 ```title="Contenu"
 {{ urls.public.search }}/api/indexes/geoplateforme/suggest
@@ -478,7 +483,7 @@ Il est possible de ne rechercher que dans un seul champ en ajoutant un paramètr
     ]
 }) }}
     
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -590,6 +595,7 @@ Il est possible de ne rechercher que dans un seul champ en ajoutant un paramètr
 ]
 ```
 ???
+????
 <br>
 
 Il est aussi possible de préciser plusieurs champs sur lesquels effectuer la suggestion (exemple : *fields* = *keywords*, *title*)
@@ -600,7 +606,7 @@ L'autocomplétion de titre permet de corriger les mots d'une recherche pour corr
 
 Sans précision du champs précisé, l'autocomplétion a lieu sur le champ *title* :
 
-??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete"
+???? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete"
 
 ```title="Contenu"
 {{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete
@@ -614,7 +620,7 @@ Sans précision du champs précisé, l'autocomplétion a lieu sur le champ *titl
         ]
     }) }}
     
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -655,11 +661,12 @@ Sans précision du champs précisé, l'autocomplétion a lieu sur le champ *titl
 ]
 ```
 ???
+????
 <br>
 
 Mais, il est possible de préciser le champ sur lequel s'appuie l'autocomplétion à partir du filtre *field* :
 
-??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete"
+???? GET "{{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete"
 
 ```title="Contenu"
 {{ urls.public.search }}/api/indexes/geoplateforme/suggest_autocomplete
@@ -673,8 +680,7 @@ Mais, il est possible de préciser le champ sur lequel s'appuie l'autocomplétio
         ]
     }) }}
 
-    
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -704,18 +710,19 @@ Mais, il est possible de préciser le champ sur lequel s'appuie l'autocomplétio
 ]
 ```
 ???
+????
 <br>
 
 ## Consultation par ID d'un document
 
 Il est possible de retrouver un document de recherche à partir de son ID :
 
-??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/documents/{document}"
+???? GET "{{ urls.public.search }}/api/indexes/geoplateforme/documents/{document}"
 
 ```title="Contenu"
 {{ urls.public.search }}/api/indexes/geoplateforme/documents/{document}
 ```    
-
+??? Corps de réponse JSON
 ```json
 {
     "id": "4c2afe00-d2a4-4536-a254-e4025aa8daf7",
@@ -768,18 +775,19 @@ Il est possible de retrouver un document de recherche à partir de son ID :
 }
 ```
 ???
+????
 <br>
 
 ## Consultation par offres
 
 Il est possible de récupérer tous les ids de document issus d'une offre :
 
-??? GET "{{ urls.public.search }}/api/indexes/geoplateforme/offerings/{offering}"
+???? GET "{{ urls.public.search }}/api/indexes/geoplateforme/offerings/{offering}"
     
 ```title="Contenu"
 {{ urls.public.search }}/api/indexes/geoplateforme/offerings/{offering}
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -791,4 +799,5 @@ Il est possible de récupérer tous les ids de document issus d'une offre :
 ]
 ```
 ???
+????
 <br>

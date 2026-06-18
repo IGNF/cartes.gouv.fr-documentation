@@ -18,12 +18,12 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 ### Déclarer la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "Données mondiales : pays et éco-régions",
@@ -32,7 +32,8 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
     "srs": "EPSG:4326"
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Données mondiales",
@@ -54,8 +55,8 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
     "_id": "{upload}"
 }
 ```
-
 ???
+????
 <br>
 
 ### Téléverser un fichier
@@ -84,7 +85,6 @@ Les formats de fichier vecteur gérés sont :
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -98,12 +98,12 @@ Les formats de fichier vecteur gérés sont :
 
 Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -120,8 +120,8 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
     }
 ]
 ```
-
 ???
+????
 <br>
 
 ## Terminer la livraison
@@ -143,12 +143,12 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 
 Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne faisant que lire les données déposées.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [
@@ -172,18 +172,18 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles ci ne f
     "failed": []
 }
 ```
-
 ???
+????
 <br>
 
 Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l'appel précédent sera :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [],
@@ -207,6 +207,6 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
     "failed": []
 }
 ```
-
 ???
+????
 <br>

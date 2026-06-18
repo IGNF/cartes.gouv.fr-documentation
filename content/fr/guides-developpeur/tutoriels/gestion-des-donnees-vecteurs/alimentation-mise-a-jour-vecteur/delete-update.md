@@ -46,12 +46,12 @@ Exemple :
 
 ### Déclarer la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "Suppression des données",
@@ -60,7 +60,8 @@ Exemple :
     "srs": "EPSG:4326"
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Modification et suppression de données",
@@ -83,6 +84,7 @@ Exemple :
 }
 ```
 ???
+????
 <br>
 
 ### Téléverser les fichiers CSV
@@ -125,12 +127,12 @@ Exemple :
 
 Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload suppression modification}/tree"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload suppression modification}/tree"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload suppression modification}/tree
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -153,6 +155,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 ]
 ```
 ???
+????
 <br>
 
 
@@ -171,12 +174,12 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 ### Consultation des vérifications sur ma livraison
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload suppression modification}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload suppression modification}/checks"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload suppression modification}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [
@@ -201,6 +204,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 }
 ```
 ???
+????
 <br>
 
 ## Modification des données
@@ -213,12 +217,12 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu'en créer une nouvelle. Par défaut, le traitement d'intégration ne prend pas en compte les fichiers de suppression et modification, pour limiter les mauvaises manipulations. On va donc préciser en paramètre que nous voulons faire ce genre d'action.
 :::
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['vector_to_db'] }}",
@@ -238,7 +242,8 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 
 ```json
 {
@@ -277,6 +282,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 }
 ```
 ???
+????
 <br>
 
 ### Déclenchement de cette exécution
@@ -292,12 +298,12 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 
 ## Consultation de la donnée
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Installations classées pour la protection de l'environnement",
@@ -385,6 +391,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 }
 ```
 ???
+????
 <br>
 
 ## Nettoyage de la livraison

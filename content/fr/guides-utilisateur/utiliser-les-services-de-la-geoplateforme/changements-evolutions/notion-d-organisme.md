@@ -15,12 +15,12 @@ L’objectif est de faciliter le travail des personnes gérant plusieurs communa
 
 Pour savoir si votre communauté est rattachée à un organisme, faites la requête suivante.
 
-??? GET "/communities/{community}"
+???? GET "/communities/{community}"
 
 ```plain
 /communities/{community}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Ma communauté",
@@ -42,8 +42,8 @@ Pour savoir si votre communauté est rattachée à un organisme, faites la requ�
     "public": false
 }
 ```
-
 ???
+????
 
 <br>
 

@@ -61,12 +61,12 @@ stateDiagram
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "SCAN 1000 Nord Corse",
@@ -75,8 +75,8 @@ stateDiagram
     "srs": "EPSG:2154"
 }
 ```
-
 ???
+????
 <br>
 
 - Livraison des fichiers :
@@ -90,12 +90,12 @@ stateDiagram
 - Fermeture de la livraison
 - Création de l'exécution de traitement :
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
@@ -115,8 +115,8 @@ stateDiagram
     }
 }
 ```
-
 ???
+????
 <br>
 
 - Lancement de l'exécution
@@ -129,12 +129,12 @@ stateDiagram
 
 - Création de la configuration WMTS-TMS
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMTS-TMS",
@@ -164,8 +164,8 @@ stateDiagram
     }
 }
 ```
-
 ???
+????
 <br>
 
 - Création de l'offre
@@ -180,12 +180,12 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "SCAN 1000 Sud Corse",
@@ -194,8 +194,8 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
     "srs": "EPSG:2154"
 }
 ```
-
 ???
+????
 <br>
 
 - Livraison des fichiers :
@@ -209,12 +209,12 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
 - Fermeture de la livraison
 - Création de l'exécution de traitement : on renseigne en sortie la pyramide déjà existante, pour signifier qu'on souhaite la modifier
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
@@ -229,8 +229,8 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
     "parameters": {}
 }
 ```
-
 ???
+????
 <br>
 
 - Lancement de l'exécution

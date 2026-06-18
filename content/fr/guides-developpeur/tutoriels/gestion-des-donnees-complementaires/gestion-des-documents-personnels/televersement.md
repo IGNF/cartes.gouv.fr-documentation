@@ -16,7 +16,7 @@ Il n'y a aucun contrôle sur le type de fichier téléversé, il sera stocké te
 
 Le fichier utilisé dans cet exemple est [croquis.geojson](/data/tutoriels/complementaire/croquis.geojson)
 
-??? POST "{{ urls.api_entrepot }}/users/me/documents"
+???? POST "{{ urls.api_entrepot }}/users/me/documents"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/users/me/documents
@@ -31,7 +31,7 @@ Le fichier utilisé dans cet exemple est [croquis.geojson](/data/tutoriels/compl
             ["labels = `tutoriels,croquis`"]
         ]
     }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Mon super croquis",
@@ -46,6 +46,7 @@ Le fichier utilisé dans cet exemple est [croquis.geojson](/data/tutoriels/compl
 }
 ```
 ???
+????
 <br>
 
 Les labels vont permettre de filtrer nos documents lors de recherches ultérieures. À ce stade, seul le compte propriétaire du document peut télécharger le fichier, via l'API Entrepôt ({{ urls.api_entrepot }}/users/me/documents/{document}/file).

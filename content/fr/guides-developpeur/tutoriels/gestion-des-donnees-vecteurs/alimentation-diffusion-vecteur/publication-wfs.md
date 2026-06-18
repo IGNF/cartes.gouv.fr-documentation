@@ -20,12 +20,12 @@ Dans le cas du WFS, une configuration va donner plusieurs couches finales, le la
 - `pays_ecoregions:regions_ecologiques`
 - `pays_ecoregions:pays`
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WFS",
@@ -61,8 +61,8 @@ Dans le cas du WFS, une configuration va donner plusieurs couches finales, le la
     }
 }
 ```
-
 ???
+????
 <br>
 
 Si on ne précise pas de public_name, c'est le nom natif de stockage qui est utilisé.
@@ -73,35 +73,35 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 
 ### Consultation des points de diffusion disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON (champ endpoints)
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Publication
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wfs}/offerings
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.wfs }}",
     "open": true
 }
 ```
-
 ???
+????
 <br>
 
 On peut vérifier la présence de nos couches `pays_ecoregions:regions_ecologiques` et `pays_ecoregions:pays` dans le [GetCapabilities du service]({{ urls.public.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0)

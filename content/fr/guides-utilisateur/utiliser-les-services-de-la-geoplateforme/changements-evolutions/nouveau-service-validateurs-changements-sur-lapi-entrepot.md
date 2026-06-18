@@ -110,12 +110,12 @@ Ces requêtes peuvent prendre comme paramètres :
 
 Exemple :
 
-??? GET "/datastores/{datastore}/stored_data/activity"
+???? GET "/datastores/{datastore}/stored_data/activity"
 
 ```plain
 /datastores/{datastore}/stored_data/activity
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "id": "string",
@@ -167,6 +167,7 @@ Exemple :
 }
 ```
 ???
+????
 
 <br>
 
@@ -186,12 +187,12 @@ Ces requêtes peuvent prendre comme paramètres :
 
 Exemple :
 
-??? GET "/communities/{community}/users/activity"
+???? GET "/communities/{community}/users/activity"
 
 ```plain
 /communities/{community}/users/activity
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "id": "string",
@@ -243,6 +244,7 @@ Exemple :
 }
 ```
 ???
+????
 
 <br>
 
@@ -271,12 +273,12 @@ La valeur de ce champ peut être modifiée grâce à ses routes :
 
 <br>
 
-??? POST "/datastores/{datastore}/stored_data/{stored_data}"
+???? POST "/datastores/{datastore}/stored_data/{stored_data}"
 
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}
 ```
-
+??? Corps de requête JSON
 ```json
 
 {
@@ -292,8 +294,8 @@ La valeur de ce champ peut être modifiée grâce à ses routes :
     "public_activity": true
 }
 ```
-
 ???
+????
 
 <br>
 
@@ -309,12 +311,12 @@ Les paramètres possibles de la requêtes sont :
 
 Seuls la création et la modification des données stockées et des offerings qui ont un champ « public_activity » à « true » sont affichées dans le flux.
 
-??? GET "/communities/{technical_name}/activity"
+???? GET "/communities/{technical_name}/activity"
 
 ```plain
 /communities/{technical_name}/activity
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "id": "string",
@@ -365,8 +367,8 @@ Seuls la création et la modification des données stockées et des offerings qu
     ]
 }
 ```
-
 ???
+????
 
 <br>
 

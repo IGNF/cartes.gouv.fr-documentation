@@ -15,12 +15,12 @@ La configuration centralise toutes les informations nécessaires à la diffusion
 - nom de couche déjà pris (il doit y avoir unicité sur toutes les configurations WMTS-TMS de la plateforme)
 - Niveau absent de la donnée stockée
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMTS-TMS",
@@ -50,8 +50,8 @@ La configuration centralise toutes les informations nécessaires à la diffusion
     }
 }
 ```
-
 ???
+????
 <br>
 
 Si les niveaux d'utilisation ne sont pas cohérents avec ce que contient la pyramide, une erreur est retournée.

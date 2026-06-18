@@ -19,18 +19,19 @@ Afin d’harmoniser les livraisons avec les données stockées, la ligne de cata
 
 Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur d’un <span lang="en">_datastore_</span> d’accorder la visibilité d’une de ses données stockées à une ou plusieurs communautés pour leur permettre d’utiliser la donnée en lecture.
 
-??? POST "/datastores/{datastore}/stored_data/{stored_data}/visibility"
+???? POST "/datastores/{datastore}/stored_data/{stored_data}/visibility"
 
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}/visibility
 ```
-
+??? Corps de requête JSON
 ```json
 [
     "{id_community}"
 ]
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -41,19 +42,19 @@ Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur d’un <
     }
 ]
 ```
-
 ???
+????
 
 <br>
 
 Il est ensuite possible de récupérer la liste des visibilités accordées à une de ses données stockées :
 
-??? GET "/datastores/{datastore}/stored_data/{stored_data}/visibility"
+???? GET "/datastores/{datastore}/stored_data/{stored_data}/visibility"
 
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}/visibility
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -64,8 +65,8 @@ Il est ensuite possible de récupérer la liste des visibilités accordées à u
     }
 ]
 ```
-
 ???
+????
 
 <br>
 
@@ -76,14 +77,14 @@ Il est aussi possible de supprimer la visibilité d’une donnée stockée :
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}/visibility
 ```
-
+??? Corps de requête JSON
 ```json
 [
     "{id_community}"
 ]
 ```
-
 ???
+????
 
 <br>
 
@@ -184,12 +185,12 @@ Modification du système de tri dans les listes d’entités.
 
 Le tri par « lastEvent » est remplacé par « last_event ». Exemple :
 
-??? GET "/datastores/{datastore}/configurations?sort=last_event,desc"
+???? GET "/datastores/{datastore}/configurations?sort=last_event,desc"
 
 ```plain
 /datastores/{datastore}/configurations?sort=last_event,desc
 ```
-
+??? Corps de réponsee JSON
 ```json
 [
     {
@@ -215,8 +216,8 @@ Le tri par « lastEvent » est remplacé par « last_event ». Exemple :
     }
 ]
 ```
-
 ???
+????
 
 <br>
 
@@ -267,12 +268,12 @@ Liste les stockages disponibles pour le datastore. Les paramètres disponibles p
 
 <br>
 
-??? GET "/datastores/{datastore}/storages"
+???? GET "/datastores/{datastore}/storages"
 
 ```plain
 /datastores/{datastore}/storages
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "data": [
@@ -321,8 +322,8 @@ Liste les stockages disponibles pour le datastore. Les paramètres disponibles p
     }
 }
 ```
-
 ???
+????
 
 <br>
 
@@ -344,12 +345,12 @@ Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur de conna
 
 Les paramètres de filtrage sont identiques à ceux de « GET /datastores/{datastore}/stored_data », sauf « owned » et « shared ».
 
-??? GET "/users/me/stored_data"
+???? GET "/users/me/stored_data"
 
 ```plain
 /users/me/stored_data
 ```
-
+??? Corps de réponsee JSON
 ```json
 [
     {
@@ -394,19 +395,19 @@ Les paramètres de filtrage sont identiques à ceux de « GET /datastores/{data
     }
 ]
 ```
-
 ???
+????
 
 <br>
 
 De plus, une route supplémentaire permet de récupérer les informations d’une donnée stockée visisible de l’utilisateur :
 
-??? GET "/users/me/stored_data/{stored_data}"
+???? GET "/users/me/stored_data/{stored_data}"
 
 ```plain
 /users/me/stored_data/{stored_data}
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -451,8 +452,8 @@ De plus, une route supplémentaire permet de récupérer les informations d’un
     }
 ]
 ```
-
 ???
+????
 
 <br>
 

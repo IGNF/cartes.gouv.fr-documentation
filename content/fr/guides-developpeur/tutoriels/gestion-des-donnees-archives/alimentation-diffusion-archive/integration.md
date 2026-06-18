@@ -41,28 +41,29 @@ flowchart LR
 
 ### Consultation des traitements disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
-
+??? Corps de réponse JSON
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
 ???
+????
 <br>
 
 ### Consultation du traitement qui nous intéresse
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive_to_archive'] }}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive_to_archive'] }}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['archive_to_archive'] }}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Recopie d'une archive livrée",
@@ -97,18 +98,19 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
 }
 ```
 ???
+????
 <br>
 
 ### Configuration d'une exécution de ce traitement
 
 On distingue le traitement, ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['archive_to_archive'] }}",
@@ -125,7 +127,8 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -159,6 +162,7 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
 }
 ```
 ???
+????
 <br>
 
 ### Déclenchement de cette exécution
@@ -181,8 +185,8 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 * PROGRESS : en cours d'exécution sur le cluster de calcul
 * SUCCESS ou FAILURE : terminé
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
-
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -218,6 +222,7 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 }
 ```
 ???
+????
 <br>
 
 ## Ajout d'informations sur la donnée stockée
@@ -227,12 +232,12 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel format, potentiellement des fichiers compressés. C'est pourquoi le traitement d'intégration n'extrait pas d'étendue à partir des données. Nous allons pouvoir la préciser (géométrie en GeoJSON avec au plus 5000 points), ainsi que des dates d'édition.
 
 
-??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
+???? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "edition": {
@@ -450,7 +455,8 @@ Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel f
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Données départementales",
@@ -693,6 +699,7 @@ Cependant, les données de type ARCHIVE peuvent correspondre à n'importe quel f
 }
 ```
 ???
+????
 <br>
 
 ## Nettoyage de la livraison

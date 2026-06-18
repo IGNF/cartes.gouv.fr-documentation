@@ -22,19 +22,20 @@ L'ajout au chemin du nom technique de l'entrepôt permet de gérer l'unicité d'
 
 Publier une annexe revient à modifier son statut de publication.
 
-??? POST "{{ urls.api_entrepot }}/users/me/documents/{document}/sharings"
+???? POST "{{ urls.api_entrepot }}/users/me/documents/{document}/sharings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/users/me/documents/{document}/sharings
 ```
-
+??? Corps de requête JSON
 ```json
 [
     "{compte 1}",
     "{compte 2}"
 ]
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Mon super croquis",
@@ -49,6 +50,7 @@ Publier une annexe revient à modifier son statut de publication.
 }
 ```
 ???
+????
 <br>
 
 Désormais, les comptes ciblés pourront voir le document dans leur liste avec l'appel :
@@ -81,13 +83,14 @@ Ce mode de partage est plus simple mais moins sécurisé. Il consiste à associe
 ```title="Contenu"
 {{ urls.api_entrepot }}/users/me/documents/{document}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "public_url": true
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Mon super croquis",
@@ -103,6 +106,7 @@ Ce mode de partage est plus simple mais moins sécurisé. Il consiste à associe
 }
 ```
 ???
+????
 <br>
 
 Une URL publique a été générée aléatoirement, une extension en accord avec le type de fichier a été mise. Il est possible de supprimer cet accès public en précisant `"public_url": false`. À chaque partage public, l'URL sera différente.

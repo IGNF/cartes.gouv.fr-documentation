@@ -15,12 +15,12 @@ summary:
 
 ### Déclarer la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "Données sur le Doubs",
@@ -29,8 +29,8 @@ summary:
     "srs": "EPSG:4326"
 }
 ```
-
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "description": "Données sur le Doubs",
@@ -53,6 +53,7 @@ summary:
 }
 ```
 ???
+????
 <br>
 
 ### Téléverser les fichiers CSV et CSVT
@@ -95,12 +96,12 @@ summary:
 
 Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/tree"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/tree"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/tree
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -122,8 +123,8 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
     }
 ]
 ```
-
 ???
+????
 <br>
 
 ## Finalisation de la livraison
@@ -141,12 +142,12 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 ### Consultation des vérifications sur ma livraison
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/checks"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload injection 2}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [
@@ -171,6 +172,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 }
 ```
 ???
+????
 <br>
 
 ## Injection des données
@@ -183,12 +185,12 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On va donc modifier une donnée plutôt qu'en créer une nouvelle.
 :::
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['vector_to_db'] }}",
@@ -204,7 +206,8 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -239,6 +242,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 }
 ```
 ???
+????
 <br>
 
 ### Déclenchement de cette exécution
@@ -254,12 +258,12 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 
 ## Consultation de la donnée
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Installations classées pour la protection de l'environnement",
@@ -347,6 +351,7 @@ On utilise à nouveau le traitement d'intégration de données vecteur.
 }
 ```
 ???
+????
 <br>
 
 L'étendue a été mise à jour ainsi que la taille (de 270 336 octets à 1 073 152).

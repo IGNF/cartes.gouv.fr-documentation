@@ -15,12 +15,12 @@ Lorsque l’on appartient à un organisme, on a la possibilité d’en gérer le
 
 Pour connaître les membres de l’organisme (pagination disponible) :
 
-??? GET "{{ urls.api_entrepot }}/organizations/{organization}/users"
+???? GET "{{ urls.api_entrepot }}/organizations/{organization}/users"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/organizations/{organization}/users
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -38,6 +38,7 @@ Pour connaître les membres de l’organisme (pagination disponible) :
 ]
 ```
 ???
+????
 <br>
 
 Pour ajouter un membre à l’organisme (pas de droits plus fins, être attaché à un organisme donne tous les droits de lecture et de gestion de ses membres) :
@@ -66,12 +67,12 @@ Pour supprimer un membre de l’organisme :
 
 Avoir la liste des communautés rattachées à l’organisme peut se faire via l’appel suivant :
 
-??? GET "{{ urls.api_entrepot }}/organizations/{organization}/communities"
+???? GET "{{ urls.api_entrepot }}/organizations/{organization}/communities"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/organizations/{organization}/communities
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -97,6 +98,7 @@ Avoir la liste des communautés rattachées à l’organisme peut se faire via l
 ]
 ```
 ???
+?????
 <br>
 
 La liste des entités suivantes est consultable au niveau de l’organisme. Dans les réponses, l’identifiant de la communauté et de l’entrepôt sont disponibles pour pouvoir en consulter le détail. Les filtres présents sur les routes de consultation de l’entrepôt sont également disponibles dans ces routes (consulter les spécifications OpenAPI pour avoir le détail). Il est possible en plus de filtrer par communauté ou entrepôt.

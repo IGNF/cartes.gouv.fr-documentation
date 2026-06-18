@@ -90,7 +90,7 @@ Le style permettant au serveur WMS d'appliquer ces teintes aux donnée MNT est l
 On y précise bien les informations sur la légende associée. Le champ `identifier` sera l'identifiant public que les consommateurs du WMS pourront préciser dans les requêtes pour demander l'utilisation de ce style.
 
 📄 `hypso.json`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
@@ -104,7 +104,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
         ["name = Teintes hypsométriques"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Teintes hypsométriques",
@@ -116,8 +116,8 @@ On y précise bien les informations sur la légende associée. Le champ `identif
     }
 }
 ```
-
 ???
+????
 <br>
 
 Pour que la même couche puisse également être interrogée au format brut, nous allons déposer un style qui ne modifie pas les données.
@@ -142,7 +142,7 @@ Pour que la même couche puisse également être interrogée au format brut, nou
 On y précise bien les informations sur la légende associée. Le champ `identifier` sera l'identifiant public que les consommateurs du WMS pourront préciser dans les requêtes pour demander l'utilisation de ce style. Une même couche ne peut pas avoir deux styles qui ont le même `identifier`.
 
 📄 `normal.json`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
@@ -155,7 +155,7 @@ On y précise bien les informations sur la légende associée. Le champ `identif
         ["name = Données brutes"]
     ]
 }) }}  
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Données brutes",
@@ -167,20 +167,20 @@ On y précise bien les informations sur la légende associée. Le champ `identif
     }
 }
 ```
-
 ???
+????
 <br>
 
 ## Configuration de la diffusion
 
 Nous allons publier la donnée sous une couche, avec les deux styles. Le style placé en premier sera appliqué par défaut si aucun style n'est précisé dans la requête GetMap.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMS-RASTER",
@@ -205,8 +205,8 @@ Nous allons publier la donnée sous une couche, avec les deux styles. Le style p
     }
 }
 ```
-
 ???
+????
 <br>
 
 ## Envoi sur les services de diffusion
@@ -215,35 +215,35 @@ Seule la création d'une offre sur un point d'accès (publication) permet d'envo
 
 ### Consultation des points de diffusion disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON (champs endpoints)
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Publication
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms lidarhd}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms lidarhd}/offerings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms lidarhd}/offerings
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.wmsr }}",
     "open": true
 }
 ```
-
 ???
+????
 <br>
 
 On peut vérifier la présence de notre couche `lidarhd` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0), avec la présence des deux styles.

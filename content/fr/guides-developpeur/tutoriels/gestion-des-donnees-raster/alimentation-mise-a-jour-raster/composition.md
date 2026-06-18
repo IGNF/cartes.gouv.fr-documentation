@@ -71,12 +71,12 @@ stateDiagram
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "SCAN 1000 Nord Corse",
@@ -85,8 +85,8 @@ stateDiagram
     "srs": "EPSG:2154"
 }
 ```
-
 ???
+????
 <br>
 
 - Livraison des fichiers : 
@@ -99,12 +99,12 @@ stateDiagram
 - Fermeture de la livraison
 - Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
@@ -125,8 +125,8 @@ stateDiagram
     }
 }
 ```
-
 ???
+????
 <br>
 
 - Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
@@ -137,12 +137,12 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
 
 - Création de la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "SCAN 1000 Sud Corse",
@@ -151,8 +151,8 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
     "srs": "EPSG:2154"
 }
 ```
-
 ???
+????
 <br>
 
 - Livraison des fichiers : 
@@ -164,12 +164,12 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
 - Fermeture de la livraison
 - Création de l'exécution de traitement : il est important de préciser que l'on veut générer et stocker les masques. Ces derniers vont être indispensables pour que la fusion évite la perte de données.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
@@ -190,8 +190,8 @@ Il n'est pas nécessaire d'attendre la fin de ce traitement pour lancer celui su
     }
 }
 ```
-
 ???
+????
 <br>
 
 - Lancement de l'exécution : ID de la données stockée `{stored data Corse Sud}`
@@ -202,12 +202,12 @@ Lorsque les deux pyramides indépendantes sont générées :
 
 - Récupération du traitement qui nous intéresse : ID `{{ ids.processings['pyramids_to_pyramid'] }}`
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['pyramids_to_pyramid'] }}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Fusion de pyramides raster",
@@ -247,18 +247,18 @@ Lorsque les deux pyramides indépendantes sont générées :
     "required_checks": []
 }
 ```
-
 ???
+????
 <br>
 
 - Création de l'exécution de traitement (on s'appuie sur les valeurs par défaut des paramètres)
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['pyramids_to_pyramid'] }}",
@@ -274,19 +274,19 @@ Lorsque les deux pyramides indépendantes sont générées :
     "parameters": {}
 }
 ```
-
 ???
+????
 <br>
 
 - Lancement de l'exécution
 - À la fin, on peut voir que notre nouvelle pyramide a deux dépendances : elle utilise nos deux pyramides indépendantes, qu'on ne pourra plus supprimer.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "used_by": [],
@@ -302,8 +302,8 @@ Lorsque les deux pyramides indépendantes sont générées :
     ]
 }
 ```
-
 ???
+????
 <br>
 
 En publiant notre pyramide fusionnée, on retrouve bien la Corse en entier.
