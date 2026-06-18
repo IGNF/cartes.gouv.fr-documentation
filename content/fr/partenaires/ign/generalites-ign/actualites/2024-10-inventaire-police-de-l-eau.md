@@ -3,8 +3,7 @@ title: Les inventaires police de l’eau, un nouvel attribut dans la BD TOPO®
 description:
 tags:
     - BD TOPO®
-    - Inventaire
-    - Eau
+    - Donnée vecteur
 eleventyNavigation:
     key: Les inventaires police de l’eau, un nouvel attribut enrichit la BD TOPO®
     order: -20241001

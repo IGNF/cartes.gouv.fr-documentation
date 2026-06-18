@@ -2,7 +2,7 @@
 title: Recueil des besoins et usages en imagerie
 description: Contribuez à l’évolution de l’offre image de l’IGN
 tags:
-    - Imagerie
+    - Imagerie aérienne
 eleventyNavigation:
     key: Recueil des besoins et usages en imagerie
     order: -20260126

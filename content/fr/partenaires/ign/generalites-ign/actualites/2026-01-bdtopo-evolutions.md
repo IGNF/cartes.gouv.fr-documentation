@@ -3,6 +3,7 @@ title: Les évolutions de la BD TOPO® de l’édition de décembre 2025
 description: Quoi de neuf dans cette nouvelle version ?
 tags:
     - BD TOPO®
+    - Donnée vecteur
 eleventyNavigation:
     key: Les évolutions de la BD TOPO® de l’édition de décembre 2025
     order: -20260122
