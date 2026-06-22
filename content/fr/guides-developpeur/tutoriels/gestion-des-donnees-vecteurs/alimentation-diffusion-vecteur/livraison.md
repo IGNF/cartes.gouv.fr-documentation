@@ -18,12 +18,20 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 ### Déclarer la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+??? Configurer la requête de création d'une livraison
 
-```title="Contenu"
+**Requête type**
+```http
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
+Dans la requête ci-dessus, {datastore} doit être remplacé par l'identifiant de votre datastore de travail.
 
+| Méthode      | Requête                     |
+|:------------|:----------------------------|
+| POST       | {{ urls.api_entrepot }}/datastores/{datastore}/uploads                |
+
+
+**Corps de requête type**
 ```json
 {
     "description": "Données mondiales : pays et éco-régions",
@@ -32,7 +40,18 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
     "srs": "EPSG:4326"
 }
 ```
+Descriptif des paramètres :
 
+* **_description_** : Permet de décrire le contenu de la livraison en quelques mots. **Cette information n'est lisible que par un autre utilisateur membre de cet entrepôt, pas par l'utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour  vous - producteur de donnée.** Cette information est modifiable après coup.
+
+* **_name_** : Permet de nommer cette livraison. **Cette information n'est lisible que par un autre utilisateur membre de cet entrepôt, pas par l'utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour  vous - producteur de donnée.** Cette information est modifiable après coup.
+
+* **_type_** : Définit le type de la donnée qui va être livrée. Pour ce tutoriel la valuer sera exclusivement **VECTOR**. Cette information n'est pas modifiable après coup. En cas d'erreur vous devrez créer une nouvelle livraison.
+
+* **_srs_** : Définit la projection des données **en entrée**. Cette projection ne préjuge pas de la projection de diffusion des données. Cette information n'est pas modifiable après coup. En cas d'erreur vous devrez créer une nouvelle livraison.
+
+
+**Corps de réponse type**
 ```json
 {
     "name": "Données mondiales",
@@ -54,6 +73,18 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
     "_id": "{upload}"
 }
 ```
+On retrouve en sortie, les paramètres et leur valeurs saisis en entrée ainsi que quelques informations supplémentaires :
+ * **_status_** : Le statut de la livraison au sein de l'entrepôt. elle est OPEN (ouverte) après création, ce qui correspond à un état compatible avec l'alimentation à venir de cette livraison.
+
+ * **_contact_** : L'email de contact qui correspond à l'email de contact associé à la communauté qui porte cette livraison.
+
+ * **_size_** : La taille **en octet** de cette livraison (pour le moment à 0 puisque la livraison n'a pas été alimentée). 
+
+ * **_last_event_** : Mentionne la dernière action effectuée sur cette livraison et **le compte utilisateur ayant mené cette action**.
+
+ **La seule information réellement essentielle** pour poursuivre l'action de livraison est reprise en fin de réponse : 
+ * **_id** : C'est l'identifiant attribué par l'entrepôt Géoplateforme à la livraison. Cet identifiant doit être **obligatoirement récupéré en sortie de la création de la livraison pour être utilisé dans les prochains appels.**
+ 
 
 ???
 <br>
