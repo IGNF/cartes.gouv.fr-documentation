@@ -20,8 +20,6 @@ summary:
 
 L’outil **« Calculer une zone selon un temps de trajet »** permet d’afficher sur la carte un périmètre contenant l’ensemble des points situés à une certaine distance (**« Isodistance »**) ou temps de trajet (**« Isochrone »**).
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
-
 Cliquez sur l’icône de l’outil :
 
 ![Icône de l’outil « Calculer une zone selon un temps de trajet »](/img/guides-utilisateur/visualiseur-cartographique/calculer-une-isochrone/01_calculer-une-isochrone.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -98,7 +96,7 @@ Vous pouvez sauvegarder votre isochrone / isodistance en lui donnant un nom et
 Si vous souhaitez enregistrer votre résultat, il faut que vous soyez [connecté](../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vous retrouverez alors votre isochrone / isodistance avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Accéder à d’autres outils »](../acceder-a-dautres-outils) :
+Vous retrouverez alors votre isochrone / isodistance avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Mes enregistrements »](../mes-cartes-et-donnees-enregistrees) :
 
 ![Emplacement de son résultat enregistré](/img/guides-utilisateur/visualiseur-cartographique/calculer-une-isochrone/10_isochrone-sauvegardee.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

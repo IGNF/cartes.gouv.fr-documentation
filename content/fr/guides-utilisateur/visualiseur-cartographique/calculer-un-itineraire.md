@@ -19,8 +19,6 @@ summary:
 
 L’outil **« Ouvrir le calcul d’itinéraire »** permet de trouver le meilleur chemin entre deux ou plusieurs points, à pied ou en voiture, et de dessiner le résultat sur la carte.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
-
 Cliquez sur l’icône de l’outil :
 
 ![Icône de l’outil d’itinéraire](/img/guides-utilisateur/visualiseur-cartographique/calculer-un-itineraire/01_Calculer-un-itineraire.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -96,7 +94,7 @@ Vous pouvez sauvegarder votre itinéraire en lui donnant un nom et en cliquant s
 Si vous souhaitez enregistrer votre itinéraire, il faut que vous soyez [connecté](../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vous retrouverez alors votre itinéraire avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Accéder à d’autres outils »](../acceder-a-dautres-outils) :
+Vous retrouverez alors votre itinéraire avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Mes enregistrements »](../mes-cartes-et-donnees-enregistrees) :
 
 ![Emplacement de son itinéraire enregistré](/img/guides-utilisateur/visualiseur-cartographique/calculer-un-itineraire/10_Itineraire-sauvegarde.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

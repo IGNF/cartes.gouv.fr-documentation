@@ -38,7 +38,7 @@ Vous pourrez alors donner un nom à cette carte pour la retrouver plus tard :
 
 ![Enregistrement d’une nouvelle carte](/img/guides-utilisateur/visualiseur-cartographique/mes-cartes-et-donnees-enregistrees/02_enregistrer-une-carte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-La carte ainsi sauvegardée contiendra **l’emprise** de l’écran, **les cartes sélectionnées** depuis le cartalogue (voir [Choisir un fond de carte](../choisir-un-fond-de-carte)) et **les outils sélectionnés** depuis le catalogue d’outils (voir [Catalogue d’outils](../catalogue-d-outils)).
+La carte ainsi sauvegardée contiendra **l’emprise** de l’écran, **les cartes sélectionnées** depuis le cartalogue (voir [Choisir un fond de carte](../choisir-un-fond-de-carte)).
 
 Il suffira alors de cliquer sur la carte sauvegardée pour l’afficher sur votre écran.
 
@@ -69,7 +69,7 @@ Cliquez sur l’icône suivante pour copier le lien URL à partager :
 
 ### Mes données
 
-Cet espace permet de lister un ensemble de données que vous avez sauvegardées. Cela peut être une **donnée importée** ou bien le résultat d’un **outil de calcul** (voir [Catalogue d’outils](../catalogue-d-outils)).
+Cet espace permet de lister un ensemble de données que vous avez sauvegardées. Cela peut être une **donnée importée** ou bien le résultat d’un **outil de calcul**.
 
 #### Renommer une donnée
 

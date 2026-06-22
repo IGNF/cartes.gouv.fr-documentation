@@ -29,8 +29,6 @@ L’outil **« Annoter la carte »** permet de dessiner directement sur la car
 Si vous souhaitez [enregistrer votre croquis](#enregistrer-son-croquis), il faut que vous soyez [connecté](../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
-
 Cliquez sur l’icône de l’outil :
 
 ![Icône de l’outil « Annoter la carte »](/img/guides-utilisateur/visualiseur-cartographique/annoter-la-carte/01_Annoter-la-carte.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -335,7 +333,7 @@ Vous pouvez sauvegarder votre croquis à tout moment en lui donnant un nom et en
 
 ![Enregistrement de son croquis](/img/guides-utilisateur/visualiseur-cartographique/annoter-la-carte/41_Enregistrer-son-croquis-1.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Vous retrouverez alors votre croquis avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Accéder à d’autres outils »](../acceder-a-dautres-outils) :
+Vous retrouverez alors votre croquis avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Mes enregistrements »](../mes-cartes-et-donnees-enregistrees) :
 
 ![Emplacement de son croquis enregistré](/img/guides-utilisateur/visualiseur-cartographique/annoter-la-carte/42_Enregistrer-son-croquis-2.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
