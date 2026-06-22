@@ -1,8 +1,11 @@
 ---
-title: Lettre d’information IGN
+title: Lettre IGN Actu Pros 
 eleventyNavigation:
-    key: Lettre d’information IGN
+    key: Lettre IGN Actu Pros
     order: 2
+image:
+    src: /img/partenaires/ign/generalites/lettre-information-ign.jpg
+    alt: IGN   
 ---
 
 Chaque mois, recevez l’actualité de l’offre IGN pour les professionnels et la décision publique :
