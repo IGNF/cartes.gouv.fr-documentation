@@ -1,6 +1,6 @@
 ---
 title: Dernière chance pour donner votre avis et participer ainsi à la co-construction de la chaîne de production de la BD Forêt® v3
-description: L’IGN met à disposition au cours du mois de juin 2026 un nouveau et dernier jeu de données de test de la BD Forêt® v3.
+description: L’IGN met à disposition au cours du mois de juin 2026 un nouveau et dernier jeu de données de test de la BD Forêt® v3
 tags:
     - Forêt
     - Donnée vecteur
