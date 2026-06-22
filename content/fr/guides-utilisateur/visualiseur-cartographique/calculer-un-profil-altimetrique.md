@@ -22,8 +22,6 @@ summary:
 
 L’outil **« Calculer un profil altimétrique »** permet de dessiner une ligne sur la carte et d’afficher la courbe d’altitude le long de cette ligne.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
-
 Cliquez sur l’icône de l’outil :
 
 ![Icône de l’outil « Calculer un profil altimétrique »](/img/guides-utilisateur/visualiseur-cartographique/calculer-un-profil-altimetrique/01_Calculer-un-profil-altimetrique.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -58,7 +56,7 @@ Vous pouvez sauvegarder votre profil en lui donnant un nom et en cliquant sur **
 Si vous souhaitez enregistrer votre profil altimétrique, il faut que vous soyez [connecté](../../presentation-utilisateur/connexion) à votre compte au préalable.
 :::
 
-Vous retrouverez alors votre profil avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Accéder à d’autres outils »](../acceder-a-dautres-outils) :
+Vous retrouverez alors votre profil avec son nouveau nom dans le [gestionnaire de couches](../gerer-ses-couches), ainsi que dans votre espace personnel dans le [menu « Mes enregistrements »](../mes-cartes-et-donnees-enregistrees) :
 
 ![Emplacement de son profil enregistré](/img/guides-utilisateur/visualiseur-cartographique/calculer-un-profil-altimetrique/05_Profil-altimetrique-enregistre.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

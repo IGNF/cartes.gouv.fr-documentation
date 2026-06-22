@@ -22,8 +22,6 @@ summary:
 
 L’outil **« Trouver une adresse »** permet de trouver l’adresse, la parcelle ou le toponyme d’un lieu sur la carte, et de copier le résultat.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
-
 Cliquez sur l’icône de l’outil :
 
 ![Icône de l’outil « Trouver une adresse »](/img/guides-utilisateur/visualiseur-cartographique/trouver-une-adresse/01_trouver-une-adresse.png){.fr-responsive-img .frx-border-img .frx-img-contained}

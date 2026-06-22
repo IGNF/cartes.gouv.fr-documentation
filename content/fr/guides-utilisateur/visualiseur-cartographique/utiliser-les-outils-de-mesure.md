@@ -24,8 +24,6 @@ summary:
 
 L’outil **« Mesurer une distance »** permet de dessiner une ligne sur la carte et d’en connaître en temps réel la longueur.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
-
 Cliquez sur l’icône de l’outil :
 
 ![Icône de l’outil « Mesurer une distance »](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-distance/01_mesurer-une-distance.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -49,8 +47,6 @@ Par contre si vous cliquez sur un autre outil, vous sortirez de **« Mesurer un
 
 L’outil **« Mesurer une surface »** permet de dessiner une zone sur la carte et d’en connaître en temps réel la surface.
 
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
-
 Cliquez sur l’icône de l’outil :
 
 ![Icône de l’outil « Mesurer une surface »](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-surface/01_mesurer-une-surface.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -73,8 +69,6 @@ Par contre si vous cliquez sur un autre outil, vous sortirez de **« Mesurer un
 ## Mesurer un angle
 
 L’outil **« Mesurer un angle »** permet de dessiner une ligne sur la carte et de connaître son angle par rapport au Nord géographique.
-
-Vérifiez au préalable que l’outil est bien sélectionné dans le [catalogue d’outils](../catalogue-d-outils).
 
 Cliquez sur l’icône de l’outil :
 
