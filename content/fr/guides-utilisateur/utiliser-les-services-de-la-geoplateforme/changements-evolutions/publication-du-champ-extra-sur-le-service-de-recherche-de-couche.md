@@ -17,7 +17,6 @@ Pour avoir un champ « extra » personnalisé sur le service de recherche de c
 Avec la valeur « extra » suivante sur la configuration :
 
 ??? Champ extra personnalisé
-
 ```json
 {
     ...
@@ -30,15 +29,12 @@ Avec la valeur « extra » suivante sur la configuration :
     ...
 }
 ```
-
 ???
-
 <br>
 
 On retrouvera la valeur suivante sur le service de recherche :
 
 ??? Champ extra
-
 ```json
 {
     ...
@@ -48,9 +44,7 @@ On retrouvera la valeur suivante sur le service de recherche :
     ...
 } 
 ```
-
 ???
-
 <br>
 
 Seule la sous-partie « _search » est publiée pour pouvoir utiliser le champ « extra » de la configuration pour des informations internes.

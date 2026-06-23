@@ -262,10 +262,10 @@ Si votre pyramide est destinée à être mise à jour (voir l’[alimentation pa
 #### Consultation de l’état de l’exécution
 
 Une exécution va avoir les statuts dans l’ordre suivant :
-- CREATED : créée mais non lancée
-- WAITING : lancée mais pas encore prise en charge par le cluster de calcul
-- PROGRESS : en cours d’exécution sur le cluster de calcul
-- SUCCESS ou FAILURE : terminé
+- `CREATED` : créée mais non lancée
+- `WAITING` : lancée mais pas encore prise en charge par le cluster de calcul
+- `PROGRESS` : en cours d’exécution sur le cluster de calcul
+- `SUCCESS` ou `FAILURE` : terminé
 
 <br>
 
@@ -327,7 +327,7 @@ Une exécution va avoir les statuts dans l’ordre suivant :
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
-???
+??? Corps de réponse JSON
 ```json
 {
     "name": "SCAN1000 de la Corse",

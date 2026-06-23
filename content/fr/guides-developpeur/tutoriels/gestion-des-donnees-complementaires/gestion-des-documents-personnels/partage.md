@@ -71,7 +71,7 @@ Et ces comptes pourront télécharger le fichier via l’API Entrepôt (`{{ urls
 
 Ce mode de partage est plus simple mais moins sécurisé. Il consiste à associer au fichier une URL publique qui pourra être consultée anonymement.
 
-??? PATCH "{{ urls.api_entrepot }}/users/me/documents/{document}"
+???? PATCH "{{ urls.api_entrepot }}/users/me/documents/{document}"
 ```plain
 {{ urls.api_entrepot }}/users/me/documents/{document}
 ```

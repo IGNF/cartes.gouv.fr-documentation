@@ -15,13 +15,10 @@ Pour effectuer une recherche sur un index custom, il faudra se connecter au pré
 Il est possible de lister les différents index custom qui nous sont accessibles avec cette route (tous les index custom à `"open": true` et les `"open": false` où vous avez la permission) :
 
 ??? GET "{{ urls.private.search }}/api/indexes"
-
 ```plain
 {{ urls.private.search }}/api/indexes
 ```
-
 ???
-
 <br>
 
 Le champ `index` obtenu pour chaque index est à utiliser par la suite pour rechercher dans celui-ci. Il est défini selon le `layer_name` de la configuration dans l’entrepôt

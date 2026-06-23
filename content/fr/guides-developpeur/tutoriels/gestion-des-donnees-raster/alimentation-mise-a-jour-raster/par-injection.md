@@ -90,7 +90,7 @@ stateDiagram
 - Fermeture de la livraison
 - Création de l’exécution de traitement :
 
-    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
     ```plain
     {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
     ```
@@ -130,7 +130,7 @@ stateDiagram
 
 - Création de la configuration WMTS-TMS
 
-    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
     ```plain
     {{ urls.api_entrepot }}/datastores/{datastore}/configurations
     ```
@@ -180,7 +180,7 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
 
 - Création de la livraison
 
-    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
     ```plain
     {{ urls.api_entrepot }}/datastores/{datastore}/uploads
     ```
@@ -208,7 +208,7 @@ On met tout de suite les informations cible, le but étant de ne pas avoir à mo
 - Fermeture de la livraison
 - Création de l’exécution de traitement : on renseigne en sortie la pyramide déjà existante, pour signifier qu’on souhaite la modifier
 
-    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
     ```plain
     {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
     ```

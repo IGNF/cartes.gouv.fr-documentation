@@ -116,11 +116,9 @@ Et la fiche elle même à l’adresse `https://cartes.gouv.fr/entrepot/{datastor
 Il est possible d’avoir une vignette associée à la fiche de données, sous forme d’une annexe. Le fichier utilisé dans cet exemple est [vignette.png](/img/guides-producteur/compatibilites-cartes-gouv/alimentation/vignette.png). On associe à l’annexe directement les labels nécessaires et on la publie automatiquement.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -130,7 +128,6 @@ Il est possible d’avoir une vignette associée à la fiche de données, sous f
         ["labels = type=thumbnail,datasheet_name=Mon jeu de données"]
     ]
 }) }}
-
 ```json
 {
     "paths": [
@@ -146,9 +143,7 @@ Il est possible d’avoir une vignette associée à la fiche de données, sous f
     "_id": "{annexe}"
 }
 ```
-
 ???
-
 <br>
 
 ![Liste des fiches de données de l’entrepôt](/img/guides-producteur/compatibilites-cartes-gouv/alimentation/fddsv.png){.fr-responsive-img .frx-border-img .frx-img-contained}
@@ -170,11 +165,9 @@ Mais pour une donnée vecteur publiée en WFS, la représentation de base peut n
 Pour améliorer ce rendu, il est possible de préciser quel style appliquer côté client. On va téléverser un SLD ressemblant à celui utilisé pour la diffusion WMS en tant qu’annexe, le symbole `diamond` n’étant pas géré par le visualisateur. Il est aussi possible d’utiliser un style au format QML.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -183,7 +176,6 @@ Pour améliorer ce rendu, il est possible de préciser quel style appliquer côt
         ["published = true"]
     ]
 }) }}
-
 ```json
 {
     "paths": [
@@ -195,9 +187,7 @@ Pour améliorer ce rendu, il est possible de préciser quel style appliquer côt
     "_id": "{annexe}"
 }
 ```
-
 ???
-
 <br>
 
 Nous allons maintenant décrire les styles à associer à chaque table de notre configuration WFS. Il est possible de préciser plusieurs styles pour une même table, pour donner le choix. C’est une donnée au format JSON qui a le format suivant :
@@ -255,7 +245,6 @@ Il suffit maintenant de stocker cette information dans la propriété `extra` de
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configuration/{configuration}
 ```
-
 ```json
 {
     "extra": {
@@ -275,9 +264,7 @@ Il suffit maintenant de stocker cette information dans la propriété `extra` de
     }
 }
 ```
-
 ???
-
 <br>
 
 On retrouve désormais une visualisation plus personnalisée, avec la possibilité de gérer les styles dans le panneau à droite.
@@ -291,39 +278,31 @@ Pour avoir des informations sur les exécutions qui ont calculé les données st
 - Sur la livraison
 
     ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tags"
-
     ```plain
     {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tags
     ```
-
     ```json
     {
         "proc_int_id": "{execution}",
         "vectordb_id": "{stored data}"
     }
     ```
-
     ???
-
     <br>
 
 - Sur la donnée stockée
 
     ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}/tags"
-
     ```plain
     {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}/tags
     ```
-
     ```json
     {
         "upload_id": "{upload}",
         "proc_int_id": "{execution}"
     }
     ```
-
     ???
-
     <br>
 
 Cela va avoir comme effet d’avoir un onglet pour le rapport de génération dans les détails de la donnée stockée.
@@ -337,11 +316,9 @@ Cela va avoir comme effet d’avoir un onglet pour le rapport de génération da
 Si vous souhaitez que vos documents annexes aux données soient associés à une fiche de données, il faut tout d’abord leur ajouter les labels `type=document` et `datasheet_name=Mon jeu de données`.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -351,7 +328,6 @@ Si vous souhaitez que vos documents annexes aux données soient associés à une
         ["labels = type=document,datasheet_name=Mon jeu de données"]
     ]
 }) }}
-
 ```json
 {
     "paths": [
@@ -367,9 +343,7 @@ Si vous souhaitez que vos documents annexes aux données soient associés à une
     "_id": "{annexe}"
 }
 ```
-
 ???
-
 <br>
 
 Il faut ensuite tenir à jour l’annexe qui liste ces documents. Une annexe avec les labels `type=document-list` et `datasheet_name=Mon jeu de données` a été automatiquement ajouté par cartes.gouv.fr lors de la détection de la fiche de données. Nous allons devoir la remplacer avec le nouveau contenu.
@@ -410,18 +384,15 @@ Ici, nous avons un document, ce qui donne le fichier suivant à téléverser en 
 ```
 
 ??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe document-list de la fiche de données}"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe document-list de la fiche de données}
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
         ["file = &lt;documents.json&gt;"]
     ]
 }) }}
-
 ```json
 {
     "paths": [
@@ -437,9 +408,7 @@ Ici, nous avons un document, ce qui donne le fichier suivant à téléverser en 
     "_id": "{annexe document-list de la fiche de données}"
 }
 ```
-
 ???
-
 <br>
 
 Notre document est maintenant bien visible dans le tableau de bord de la fiche de données.

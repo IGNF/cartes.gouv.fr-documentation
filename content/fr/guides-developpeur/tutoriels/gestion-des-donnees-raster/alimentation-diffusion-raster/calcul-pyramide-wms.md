@@ -34,27 +34,21 @@ flowchart LR
 #### Consultation des traitements disponibles
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
-
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
-
 ???
-
 <br>
 
 #### Consultation du traitement qui nous intéresse
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms_to_pyramid'] }}"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['wms_to_pyramid'] }}
 ```
-
 ```json
 {
     "name": "Calcul ou mise à jour de pyramide raster par moissonnage WMS",
@@ -239,9 +233,7 @@ flowchart LR
     "required_checks": []
 }
 ```
-
 ???
-
 <br>
 
 Le traitement n’attend pas de livraison en entrée. Si on fournit une pyramide en entrée, c’est pour préciser que l’on veut la mettre à jour par référencement (une nouvelle pyramide est créée, en référençant les images de celle en entrée).
@@ -251,11 +243,9 @@ Le traitement n’attend pas de livraison en entrée. Si on fournit une pyramide
 On distingue le traitement, la ressource de la plateforme mise à disposition de l’entrepôt, et son exécution. Une exécution appartient à un entrepôt et possède en entrée et en sortie des données spécifiques.
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
 ```json
 {
     "processing": "{{ ids.processings['wms_to_pyramid'] }}",
@@ -280,7 +270,6 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
     }
 }
 ```
-
 ```json
 {
     "processing": {
@@ -316,9 +305,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
     "_id": "{execution moissonnage}"
 }
 ```
-
 ???
-
 <br>
 
 La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier).
@@ -331,13 +318,10 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
 #### Déclenchement de cette exécution
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution moissonnage}/launch"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution moissonnage}/launch
 ```
-
 ???
-
 <br>
 
 ### Consultation de la donnée stockée en sortie
@@ -345,11 +329,9 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d’apparaître au niveau de l’API (taille, étendue, système de coordonnées et niveaux).
 
 ??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data moissonnage}"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data moissonnage}
 ```
-
 ```json
 {
     "name": "Photographies aériennes de la Corse",
@@ -393,9 +375,7 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
     }
 }
 ```
-
 ???
-
 <br>
 
 ### Diffusion en WMS
@@ -403,11 +383,9 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
 #### Création de la configuration
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
 ```json
 {
     "type": "WMS-RASTER",
@@ -453,28 +431,22 @@ La zone de moissonnage est à fournir en WKT, en EPSG:4326 (longitude en premier
     }
 }
 ```
-
 ???
-
 <br>
 
 #### Publication
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms moissonnage}/offerings"
-
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms moissonnage}/offerings
 ```
-
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.wmsr }}",
     "open": true
 }
 ```
-
 ???
-
 <br>
 
 On peut vérifier la présence de notre couche `ortho` dans le [GetCapabilities du service]({{ urls.public.wmsr }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).

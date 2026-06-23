@@ -1,7 +1,7 @@
 {% if not tabnav %}
     {% set tabnav = params %}
 {% endif %}
-<div class="dsfr-doc-tab-navigation">
+<div id="nav-tertiaire" class="dsfr-doc-tab-navigation">
   <div class="fr-sidemenu" data-fr-js-sidemenu-actionee="true">
     <div class="fr-sidemenu__inner">
       <button aria-expanded="false" aria-controls="dsfr-doc-tab-navigation--collapse" type="button" class="fr-sidemenu__btn" data-fr-js-collapse-button="true">
@@ -14,22 +14,76 @@
         {% endif %}
       </button>
       <div class="fr-collapse" id="dsfr-doc-tab-navigation--collapse" data-fr-js-collapse="true">
-        <ul>
-          {% for item in tabnav.items %}
-            <li>
-              {% if item.active %}
-                <div aria-current="page" class="dsfr-doc-tab-navigation__tab">
-                  {{ item.title }}
-                </div>
-              {% else %}
-                <a class="dsfr-doc-tab-navigation__tab" href="{{ item.url }}">
-                  {{ item.title }}
-                </a>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
+        <div class="dsfr-doc-tab-navigation__scroll-wrapper">
+          <button type="button" class="dsfr-doc-tab-navigation__scroll-btn dsfr-doc-tab-navigation__scroll-btn--prev" aria-hidden="true" tabindex="-1" aria-label="Voir les onglets précédents"></button>
+          <ul>
+            {% for item in tabnav.items %}
+              <li>
+                {% if item.active %}
+                  <div aria-current="page" class="dsfr-doc-tab-navigation__tab">
+                    {{ item.title }}
+                  </div>
+                {% else %}
+                  <a class="dsfr-doc-tab-navigation__tab" href="{{ item.url }}">
+                    {{ item.title }}
+                  </a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          <button type="button" class="dsfr-doc-tab-navigation__scroll-btn dsfr-doc-tab-navigation__scroll-btn--next" aria-hidden="true" tabindex="-1" aria-label="Voir les onglets suivants"></button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+(function () {
+  function initTabNavScroll(nav) {
+    if (nav.dataset.tabnavInitialized) return;
+    nav.dataset.tabnavInitialized = 'true';
+    var wrapper = nav.querySelector('.dsfr-doc-tab-navigation__scroll-wrapper');
+    var list = nav.querySelector('.dsfr-doc-tab-navigation__scroll-wrapper > ul');
+    var prevBtn = nav.querySelector('.dsfr-doc-tab-navigation__scroll-btn--prev');
+    var nextBtn = nav.querySelector('.dsfr-doc-tab-navigation__scroll-btn--next');
+    if (!wrapper || !list || !prevBtn || !nextBtn) return;
+    var SCROLL_AMOUNT = 200;
+    function updateButtons() {
+      var overflowing = list.scrollWidth > list.clientWidth + 1;
+      var scrollLeft = Math.round(list.scrollLeft);
+      var maxScroll = list.scrollWidth - list.clientWidth;
+      wrapper.classList.toggle('has-prev', overflowing && scrollLeft > 0);
+      wrapper.classList.toggle('has-next', overflowing && scrollLeft < maxScroll - 1);
+    }
+    prevBtn.addEventListener('click', function () {
+      list.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', function () {
+      list.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+    list.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons, { passive: true });
+    var activeTab = list.querySelector('[aria-current="page"]');
+      var activeLi = activeTab.closest('li') || activeTab;
+      function scrollToActive() {
+        var maxScroll = list.scrollWidth - list.clientWidth;
+        if (maxScroll <= 0) { updateButtons(); return; }
+        var listRect = list.getBoundingClientRect();
+        var liRect = activeLi.getBoundingClientRect();
+        var tabLeft = liRect.left - listRect.left + list.scrollLeft;
+        var ideal = tabLeft + liRect.width / 2 - list.clientWidth / 2;
+        list.scrollLeft = Math.max(0, Math.min(ideal, maxScroll));
+      }
+      updateButtons();
+      scrollToActive();
+  }
+  function initAll() {
+    document.querySelectorAll('.dsfr-doc-tab-navigation').forEach(initTabNavScroll);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
+}());
+</script>

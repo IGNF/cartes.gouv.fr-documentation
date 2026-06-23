@@ -240,7 +240,7 @@ Les permissions ouvrent des droits a priori sur des offres, mais c’est à la c
 
 On peut connaître toutes les offres que la clé peut consommer avec l’appel suivant.
 
-??? GET "{{ urls.api_entrepot }}/users/me/keys/{key HASH}/accesses"
+???? GET "{{ urls.api_entrepot }}/users/me/keys/{key HASH}/accesses"
 ??? Corps de réponse JSON
 ```json
 [
@@ -314,7 +314,6 @@ On peut maintenant voir les couches correspondantes à l’offre dans les [capac
 
 Il est aussi possible de mettre la clé dans le header `apikey` plutôt qu’en paramètre de requête.
 
-
 ![Clé HASH dans QGIS](/img/guides-developpeur/controle-acces/qgis_cle_hash.png){.fr-responsive-img .frx-img-contained}
 
 <figcaption class="fr-content-media__caption fr-mb-6v">Clé HASH dans QGIS</figcaption>
@@ -322,7 +321,6 @@ Il est aussi possible de mettre la clé dans le header `apikey` plutôt qu’en 
 #### Créer une clé de type BASIC
 
 Nous allons ajouter à cette clé des limites d’utilisation et un `user_agent` particulier qui limite l’usage de la clé au client QGIS. À noter que l’ajout d’un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
-
 
 ???? POST "{{ urls.api_entrepot }}/users/me/keys"
 ```plain
@@ -371,7 +369,7 @@ Afin que les requêtes passent, il est maintenant nécessaire que le header `ref
 
 Cette clé est un moyen de préciser que l’on va consommer les services de diffusion en utilisant son compte. Ce mode d’identification de la consommation est considéré comme la seule sécurisation forte. C’est pourquoi certaines permissions peuvent n’autoriser leur usage qu’avec de telles clés. Comme chaque utilisateur n’a qu’un compte, il ne peut se créer qu’une seule clé de ce type.
 
-??? POST "{{ urls.api_entrepot }}/users/me/keys"
+???? POST "{{ urls.api_entrepot }}/users/me/keys"
 ```plain
 {{ urls.api_entrepot }}/users/me/keys
 ```

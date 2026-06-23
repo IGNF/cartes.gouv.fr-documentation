@@ -79,9 +79,9 @@ layout: layouts/base.njk
           {% set _ = tertiaryChildren.push(p) %}
         {% endif %}
       {% endfor %}
-      {% set tabnavItems = [{ title: tertiaryTitle, url: page.url, active: true }] %}
+      {% set tabnavItems = [{ title: tertiaryTitle, url: page.url + "#nav-tertiaire", active: true }] %}
       {% for p in tertiaryChildren | sort(false, false, "data.eleventyNavigation.order") %}
-        {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url }) %}
+        {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url + "#nav-tertiaire" }) %}
       {% endfor %}
       {{ component("tabnav", { items: tabnavItems, forceMobile: true }) }}
       {% if summary.visible %}

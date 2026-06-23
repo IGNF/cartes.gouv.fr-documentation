@@ -41,7 +41,7 @@ Lorsque l’on récupère ses informations personnelles sur l’Entrepôt, on vo
 ```plain
 {{ urls.api_entrepot }}/users/me
 ```
-??? ??? Corps de réponse JSON
+??? Corps de réponse JSON
 ``` json
 {
     "email": "dave.lopper@ign.fr",
@@ -80,7 +80,6 @@ Lorsque l’on récupère ses informations personnelles sur l’Entrepôt, on vo
 <br>
 
 ## Lister les membres
-
 
 ???? GET "{{ urls.api_entrepot }}/communities/{community}/users"
 ```plain
@@ -126,7 +125,7 @@ Lorsque l’on récupère ses informations personnelles sur l’Entrepôt, on vo
 
 Une seule route de l’API va permettre d’ajouter ou modifier les droits d’un membre (en mode `UPSERT`). Pour ajouter une personne, il faut avoir son identifiant Entrepôt. Cela implique qu’elle ait joué la requête de récupération de ses informations personnelles. Si la personne était déjà membre, on remplace ses droits par ceux définis dans le corps. Sinon on ajoute la personne avec ces droits.
 
-??? PUT "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
+???? PUT "{{ urls.api_entrepot }}/communities/{community}/users/{user}"
 ```plain
 {{ urls.api_entrepot }}/communities/{community}/users/{user}
 ```

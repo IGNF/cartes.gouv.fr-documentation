@@ -24,12 +24,10 @@ Voici le fichier utilisé dans cet exemple :
 
 ![Carte de la Bretagne](/img/guides-developpeur/complementaire/imagette.jpg){.fr-responsive-img .frx-img-contained}
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
-
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -38,7 +36,7 @@ Voici le fichier utilisé dans cet exemple :
         ["paths = quickview/rgealti.jpg"]
     ]
 }) }}
-
+??? Corps de requête JSON
 ```json
 {
     "paths": [
@@ -51,9 +49,8 @@ Voici le fichier utilisé dans cet exemple :
     "_id": "{annexe}"
 }
 ```
-
 ???
-
+????
 <br>
 
 À ce stade, elle n’est accessible que par l’API Entrepôt, aux utilisateurs membres de la communauté, via son identifiant.

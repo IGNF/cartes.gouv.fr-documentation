@@ -134,7 +134,7 @@ C’est le point d’accès de type `DOWNLOAD` qui va nous intéresser.
     "open": true
 }
 ```
-????
+???
 ??? Corps de réponse JSON
 ```json
 {
@@ -294,7 +294,6 @@ En consultant les [capacités du service de téléchargement]({{ urls.public.dow
 <br>
 
 Si on veut avoir le contenu de notre ressource de téléchargement `limites_administratives`, on suit le [lien dans l’entrée]({{ urls.public.download }}/resource/limites_administratives), c’est-à-dire les sous-ressources. Dans notre cas, on a une seule sous-ressource, `departements`.
-
 
 ???? GET "{{ urls.public.download }}/resource/limites_administratives"
 ```plain

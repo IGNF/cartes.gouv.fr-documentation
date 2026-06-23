@@ -73,7 +73,7 @@ On a notre premier jeu de données, la pyramide calculée se fera dans les même
 
 - Création de la livraison
 
-    ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
     ```plain
     {{ urls.api_entrepot }}/datastores/{datastore}/uploads
     ```

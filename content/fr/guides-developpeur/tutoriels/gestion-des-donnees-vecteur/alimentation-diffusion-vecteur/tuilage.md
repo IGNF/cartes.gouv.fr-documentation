@@ -33,7 +33,7 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 
 #### Consultation du traitement qui nous intéresse
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db_to_pyramid'] }}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db_to_pyramid'] }}"
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db_to_pyramid'] }}
 ```

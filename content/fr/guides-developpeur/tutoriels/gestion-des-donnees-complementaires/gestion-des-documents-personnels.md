@@ -20,12 +20,10 @@ Il n’y a aucun contrôle sur le type de fichier téléversé, il sera stocké 
 
 Le fichier utilisé dans cet exemple est [croquis.geojson](/data/tutoriels/complementaire/croquis.geojson)
 
-??? POST "{{ urls.api_entrepot }}/users/me/documents"
-
+???? POST "{{ urls.api_entrepot }}/users/me/documents"
 ```plain
 {{ urls.api_entrepot }}/users/me/documents
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -35,7 +33,7 @@ Le fichier utilisé dans cet exemple est [croquis.geojson](/data/tutoriels/compl
         ["labels = tutoriels, croquis"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Mon super croquis",
@@ -49,9 +47,8 @@ Le fichier utilisé dans cet exemple est [croquis.geojson](/data/tutoriels/compl
     "_id": "{document}"
 }
 ```
-
 ???
-
+????
 <br>
 
 Les labels vont permettre de filtrer les documents lors de recherches ultérieures. À ce stade, seul le compte propriétaire du document peut télécharger le fichier, via l’API Entrepôt (`{{ urls.api_entrepot }}/users/me/documents/{document}/file`).

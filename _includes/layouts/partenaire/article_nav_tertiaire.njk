@@ -90,9 +90,9 @@ layout: layouts/base.njk
           {% set _ = tertiaryChildren.push(p) %}
         {% endif %}
       {% endfor %}
-      {% set tabnavItems = [{ title: parentPage.data.tertiaryTitle, url: parentPage.url }] %}
+      {% set tabnavItems = [{ title: parentPage.data.tertiaryTitle, url: parentPage.url + "#nav-tertiaire" }] %}
       {% for p in tertiaryChildren | sort(false, false, "data.eleventyNavigation.order") %}
-        {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url, active: p.url == page.url }) %}
+        {% set _ = tabnavItems.push({ title: p.data.tertiaryTitle, url: p.url + "#nav-tertiaire", active: p.url == page.url }) %}
       {% endfor %}
       {{ component("tabnav", { items: tabnavItems, forceMobile: true }) }}
       {% if summary.visible %}
