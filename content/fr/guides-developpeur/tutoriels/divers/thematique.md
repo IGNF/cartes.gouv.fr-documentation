@@ -30,7 +30,7 @@ Il n'est pas nécessaire d'être le propriétaire des couches laissées dans la 
 
 Afin de rendre ce fichier accessible, nous allons le déposer au sein de l'entrepôt sous forme d'annexe. Il est bien sûr possible de l'héberger de n'importe quelle manière, par un simple serveur de fichier.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 
     {{ component("table", {
         headers: ["Corps de requête Multipart"],
@@ -41,7 +41,7 @@ Afin de rendre ce fichier accessible, nous allons le déposer au sein de l'entre
         ]
     }) }}
   
-
+??? Corps de réponse JSON
 ```json
 {
     "paths": [
@@ -54,6 +54,7 @@ Afin de rendre ce fichier accessible, nous allons le déposer au sein de l'entre
 }
 ```
 ???
+????
 <br>
 
 Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement à cette URL : 

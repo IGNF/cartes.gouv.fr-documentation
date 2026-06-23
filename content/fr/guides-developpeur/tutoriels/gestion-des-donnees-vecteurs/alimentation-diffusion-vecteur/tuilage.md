@@ -18,27 +18,27 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 
 ### Consultation des traitements disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
-
+??? Corps de réponse JSON
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Consultation du traitement qui nous intéresse
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db-to-pyramid'] }}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db-to-pyramid'] }}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['db-to-pyramid'] }}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Calcul de pyramide vecteur",
@@ -127,8 +127,8 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
     "required_checks": []
 }
 ```
-
 ???
+????
 <br>
 
 ### Configuration d'une exécution de ce traitement
@@ -139,12 +139,12 @@ Cette étape supplémentaire permet une diffusion à plus grande échelle de don
 
 Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans tous les niveaux, et les écorégions ne seront présents que jusqu'au niveau 5. On ne filtre pas les données et on ne change pas les noms des tables dans les tuiles. On veut tous les attributs.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['db-to-pyramid'] }}",
@@ -175,20 +175,20 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
     }
 }
 ```
-
 ???
+????
 <br>
 
 ### Consultation de la donnée stockée en sortie
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées, grille et niveaux).
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data pyramide}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data pyramide}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data pyramide}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Pays et éco-régions",
@@ -228,8 +228,8 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans 
     }
 }
 ```
-
 ???
+????
 <br>
 
 ## Diffusion des tuiles vectorielles
@@ -238,12 +238,12 @@ Les données de la pyramide de tuiles vectorielles sont diffusables selon l'API 
 
 ### Création de la configuration
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMTS-TMS",
@@ -262,43 +262,43 @@ Les données de la pyramide de tuiles vectorielles sont diffusables selon l'API 
     }
 }
 ```
-
 ???
+????
 <br>
 
 La donnée n'est pas représentée côté serveur, il n'y a donc pas de fichier de style à préciser au niveau de la configuration.
 
 ### Consultation des points de diffusion disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON (champ endpoints)
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Publication
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wmts-tms}/offerings
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.wmts }}",
     "open": true
 }
 ```
-
 ???
+????
 <br>
 
 On peut vérifier la présence de notre couche `pays_ecoregions` dans le [GetCapabilities du service TMS]({{ urls.public.tms }}/1.0.0). On peut également avoir des [détails sur cette couche]({{ urls.public.tms }}/1.0.0/pays_ecoregions).
@@ -311,12 +311,11 @@ L'affichage des tuiles vectorielles implique l'application d'un style côté cli
 
 Ce [style d'exemple](/data/tutoriels/alimentation-diffusion-simple/globales/production/pays_ecoregions.json) est format mapbox.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/annexes"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -325,7 +324,7 @@ Ce [style d'exemple](/data/tutoriels/alimentation-diffusion-simple/globales/prod
         ["published = `true`"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "paths": ["/styles/mapbox/pays_ecoregions.json"],
@@ -335,8 +334,8 @@ Ce [style d'exemple](/data/tutoriels/alimentation-diffusion-simple/globales/prod
     "_id": "{annexe}"
 }
 ```
-
 ???
+????
 <br>
 
 Nous avons demandé à ce que cette annexe soit directement publiée. Nous pouvons donc maintenant y accéder publiquement. On va pouvoir définir une couche «Tuile vectorielle» dans QGis, en précisant la source des tuiles et l'URL du style :

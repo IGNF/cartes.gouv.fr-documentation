@@ -18,12 +18,12 @@ La livraison n'a qu'un rôle temporaire : elle existe uniquement le temps que le
 
 ### Déclarer la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "Dalle kilométrique de MNT 50 cm issue du LidarHD",
@@ -32,7 +32,8 @@ La livraison n'a qu'un rôle temporaire : elle existe uniquement le temps que le
     "srs": "EPSG:2154"
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Dalle MNT LidarHD",
@@ -53,8 +54,8 @@ La livraison n'a qu'un rôle temporaire : elle existe uniquement le temps que le
     "type_infos": {}
 }
 ```
-
 ???
+????
 <br>
 
 ### Téléverser un fichier
@@ -91,12 +92,12 @@ Les formats de fichier raster gérés pour du MNT sont :
 
 Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -113,8 +114,8 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
     }
 ]
 ```
-
 ???
+????
 <br>
 
 ## Terminer la livraison
@@ -136,12 +137,12 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 
 Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne faisant que lire les données déposées.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [
@@ -165,18 +166,18 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
     "failed": []
 }
 ```
-
 ???
+????
 <br>
 
 Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l'appel précédent sera :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [],
@@ -200,6 +201,6 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
     "failed": []
 }
 ```
-
 ???
+????
 <br>

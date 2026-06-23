@@ -20,12 +20,12 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 
 Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera simplement une information 
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "Départements et limites départementales",
@@ -34,7 +34,8 @@ Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera si
     "srs": "EPSG:2154"
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Données départementales",
@@ -58,6 +59,7 @@ Le système de coordonnées ne sera jamais utilisé dans des calculs. Il sera si
 }
 ```
 ???
+????
 <br>
 
 ### Téléverser un fichier
@@ -227,12 +229,12 @@ Il n'y a aucune limitation aux formats de fichiers qui seront pris en charge. La
 
 Afin de vérifier que tous les fichiers ont bien été déposés et leur éventuelle arborescence :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -295,6 +297,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés et leur éventu
 ]
 ```
 ???
+????
 <br>
 
 ## Terminer la livraison
@@ -315,12 +318,12 @@ Terminer la livraison va consister à retirer les droits en écriture sur les do
 
 Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne faisant que lire les données déposées.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [],
@@ -345,16 +348,17 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
 }
 ```
 ???
+????
 <br>
 
 Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l'appel précédent sera :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [],
@@ -379,4 +383,5 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 }
 ```
 ???
+????
 <br>

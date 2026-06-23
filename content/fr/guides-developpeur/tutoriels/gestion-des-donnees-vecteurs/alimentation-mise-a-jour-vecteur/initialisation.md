@@ -14,12 +14,12 @@ summary:
 
 ### Déclarer la livraison
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "description": "Seule la structure est définie : une table et une vue",
@@ -28,8 +28,8 @@ summary:
     "srs": "EPSG:4326"
 }
 ```
-
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Installations classées pour la protection de l'environnement",
@@ -52,6 +52,7 @@ summary:
 }
 ```
 ???
+????
 <br>
 
 ### Téléverser le fichier SQL
@@ -81,12 +82,12 @@ summary:
 
 Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/tree"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/tree"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/tree
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -104,6 +105,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 ]
 ```
 ???
+????
 <br>
 
 ## Finalisation de la livraison
@@ -121,12 +123,12 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 ### Consultation des vérifications sur ma livraison
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/checks"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/checks"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload initialisation}/checks
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "asked": [
@@ -151,6 +153,7 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 }
 ```
 ???
+????
 <br>
 
 ## Création de la donnée vide
@@ -159,12 +162,12 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 
 On utilise le traitement d'intégration de données vecteur.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['vector_to_db'] }}",
@@ -181,7 +184,8 @@ On utilise le traitement d'intégration de données vecteur.
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -215,6 +219,7 @@ On utilise le traitement d'intégration de données vecteur.
 }
 ```
 ???
+????
 <br>
 
 ### Déclenchement de cette exécution
@@ -230,12 +235,12 @@ On utilise le traitement d'intégration de données vecteur.
 
 ## Consultation de la donnée
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Installations classées pour la protection de l'environnement",
@@ -296,6 +301,7 @@ On utilise le traitement d'intégration de données vecteur.
 }
 ```
 ???
+????
 <br>
 
 On retrouve bien notre table et notre vue, qu'on distingue grâce au champ `type`.
@@ -324,7 +330,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 }) }}
 
 📄 `<installation.sld>`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
@@ -339,7 +345,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
     ]
 }) }}
   
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Style pour les installations",
@@ -353,6 +359,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 }
 ```
 ???
+????
 <br>
 
 ### Téléversement du template d'info-bulle
@@ -364,7 +371,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 }) }}
 
 📄 `<installation.ftl>`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
@@ -379,7 +386,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
     ]
 }) }}
   
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "FTL pour les installations",
@@ -397,16 +404,17 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 }
 ```
 ???
+????
 <br>
 
 ### Création de la configuration WMS
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMS-VECTOR",
@@ -440,6 +448,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 }
 ```
 ???
+????
 <br>
 
 :::warning Points d'attention
@@ -449,13 +458,13 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 
 ### Publication
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}/offerings
 ```
 
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.wmsv }}",
@@ -463,6 +472,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 }
 ```
 ???
+????
 <br>
 
 On peut vérifier la présence de notre couche `installations_classees` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)

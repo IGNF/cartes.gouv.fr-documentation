@@ -36,12 +36,12 @@ Les droits sont :
 Lorsque l’on récupère ses informations personnelles sur l’Entrepôt, on voit la liste des communautés auxquelles on appartient, ainsi que nos droits dans chacune.
 
 
-??? GET "{{ urls.api_entrepot }}/users/me"
+???? GET "{{ urls.api_entrepot }}/users/me"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me
 ```
-
+??? ??? Corps de réponse JSON
 ``` json
 {
     "email": "dave.lopper@ign.fr",
@@ -76,17 +76,18 @@ Lorsque l’on récupère ses informations personnelles sur l’Entrepôt, on vo
 }
 ```
 ???
+????
 <br>
 
 ## Lister les membres
 
 
-??? GET "{{ urls.api_entrepot }}/communities/{community}/users"
+???? GET "{{ urls.api_entrepot }}/communities/{community}/users"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/communities/{community}/users
 ```
-
+??? Corps de réponse JSON
 ``` json
 [
     {
@@ -119,6 +120,7 @@ Lorsque l’on récupère ses informations personnelles sur l’Entrepôt, on vo
 ]
 ```
 ???
+????
 <br>
 
 ## Ajouter / modifier un membre
@@ -130,7 +132,7 @@ Une seule route de l’API va permettre d’ajouter ou modifier les droits d’u
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/communities/{community}/users/{user}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "rights": [
@@ -141,6 +143,7 @@ Une seule route de l’API va permettre d’ajouter ou modifier les droits d’u
 }
 ```
 ???
+????
 <br>
 
 ## Exclure un membre

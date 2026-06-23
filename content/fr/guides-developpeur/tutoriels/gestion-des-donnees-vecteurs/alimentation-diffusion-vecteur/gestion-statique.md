@@ -70,12 +70,11 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
 On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
 
 📄 `ecoregions.sld`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -84,7 +83,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
         ["name = Style pour les écorégions"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Style pour les écorégions",
@@ -95,12 +94,12 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     }
 }
 ```
-
 ???
+????
 <br>
 
 📄 `pays.sld`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
@@ -114,7 +113,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
         ["name = Style pour les pays"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Style pour les pays",
@@ -123,17 +122,16 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     "type_infos": {}
 }
 ```
-
 ???
+????
 <br>
 
 📄 `ecoregions.ftl`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
@@ -143,6 +141,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     ]
 }) }}
 
+??? Corps de réponse JSON
 ```json
 {
     "name": "FTL pour les écorégions",
@@ -153,12 +152,12 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     }
 }
 ```
-
 ???
+????
 <br>
 
 📄 `pays.ftl`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/statics
@@ -173,6 +172,7 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     ]
 }) }}
 
+??? Corps de réponse JSON
 ```json
 {
     "name": "FTL pour les pays",
@@ -183,6 +183,6 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
     }
 }
 ```
-
 ???
+????
 <br>

@@ -27,12 +27,12 @@ Il peut être ajouté et mis à jour via la route « PATCH/datastores/{datastor
 
 Exemple d’utilisation pour une livraison :
 
-??? PATCH "/datastores/{datastore}/uploads/{upload}"
+???? PATCH "/datastores/{datastore}/uploads/{upload}"
 
 ```plain
 /datastores/{datastore}/uploads/{upload}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "extra": {
@@ -41,7 +41,8 @@ Exemple d’utilisation pour une livraison :
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "SCAN1000 - Corse",
@@ -66,5 +67,5 @@ Exemple d’utilisation pour une livraison :
     "type_infos": {}
 }
 ```
-
 ???
+????

@@ -14,12 +14,12 @@ La pyramide générée va être également utilisable par le service d'altimétr
 
 ## Configuration de la diffusion
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON pour lidar
 ```json
 {
     "type": "ALTIMETRY",
@@ -54,8 +54,8 @@ La pyramide générée va être également utilisable par le service d'altimétr
     }
 }
 ```
-
 ???
+????
 <br>
 
 Les informations pour la source et la précision de la donnée peuvent être définies de manière statiques, comme ici, ou bien s'appuyer sur des pyramides raster (1 canal entier). On précisera alors la correspondance entre la valeur entière du pixel et l'intitulé de l'information.
@@ -66,40 +66,40 @@ Les informations pour la source et la précision de la donnée peuvent être dé
 
 Ce sont les points d'accès de type `ALTIMETRY` qui nous intéressent ici.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON (champ endpoints)
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Publication
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration altimétrie}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration altimétrie}/offerings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration altimétrie}/offerings
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.alti }}",
     "open": true
 }
 ```
-
 ???
+????
 <br>
 
 On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le [GetCapabilities du service]({{ urls.public.alti }}/resources). Voici un exemple de demande d'altitude en deux points :
 
-??? GET "{{ urls.public.alti }}/calcul/alti/rest/elevation.json"
+???? GET "{{ urls.public.alti }}/calcul/alti/rest/elevation.json"
 
 ```title="Contenu"
 {{ urls.public.alti }}/calcul/alti/rest/elevation.json
@@ -114,7 +114,7 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
         ["measures = `true`"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 {
     "elevations": [
@@ -165,6 +165,6 @@ On peut vérifier la présence de notre ressource couche `lidarhd_test` dans le 
     ]
 }
 ```
-
 ???
+????
 <br>

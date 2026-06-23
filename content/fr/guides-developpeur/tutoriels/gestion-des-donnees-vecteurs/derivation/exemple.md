@@ -35,7 +35,7 @@ Ce fichier va permettre :
 - D'ajouter une colonne à la table `ecoregions`
 - De remplir avec pour valeur celle de l'attribut `nnh` multipliée par un nombre fourni en paramètre de l'exécution de traitement. La syntaxe {% raw %}`{{ params.<x> }}`{% endraw %} permet de rendre dynamique ces scripts de dérivation.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/statics"
 
 ```title="Contenu"
 https://data.geopf.fr/api/datastores/{datastore}/statics
@@ -50,7 +50,7 @@ https://data.geopf.fr/api/datastores/{datastore}/statics
     ]
 }) }}
 
-### Corps de réponse JSON
+??? Corps de réponse JSON
 
 ```json
 {
@@ -62,8 +62,8 @@ https://data.geopf.fr/api/datastores/{datastore}/statics
     }
 }
 ```
-
 ???
+????
 <br>
 
 ## Contrôle des données avant dérivation
@@ -82,13 +82,13 @@ On utilise le traitement de dérivation vecteur.
 Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notre donnée stockée initialisée juste avant. On précise également cette donnée comme étant en entrée de notre exécution. On va donc modifier une donnée plutôt qu'en créer une nouvelle.
 :::
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
 
-### Corps de réponse JSON
+??? Corps de requête JSON
 
 ```json
 {
@@ -109,8 +109,8 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
     }
 }
 ```
-
-### Corps de réponse JSON
+???
+??? Corps de réponse JSON
 
 ```json
 {
@@ -152,8 +152,8 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
     "_id": "{execution dérivation}"
 }
 ```
-
 ???
+????
 <br>
 
 ### Déclenchement de cette exécution
@@ -171,13 +171,13 @@ Pour la donnée en sortie, on ne précise pas un nom, mais l'identifiant de notr
 
 On peut voir le nouveau champ apparaître dans la description de la donnée
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
 
-### Corps de réponse JSON
+??? Corps de réponse JSON
 
 ```json
 {
@@ -235,8 +235,8 @@ On peut voir le nouveau champ apparaître dans la description de la donnée
     }
 }
 ```
-
 ???
+????
 <br>
 
 ## Contrôle des données après dérivation

@@ -41,29 +41,29 @@ flowchart LR
 
 ### Consultation des traitements disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
-
+??? Corps de réponse JSON
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Consultation du traitement qui nous intéresse
 
 Le détail sur un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de donnée en sortie, les paramètres et les vérifications requises pour les livraisons en entrée.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector_to_db'] }}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector_to_db'] }}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['vector_to_db'] }}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Intégration de données vecteur livrées en base",
@@ -98,20 +98,20 @@ Le détail sur un traitement permet de voir les types de données (livrées ou s
     ]
 }
 ```
-
 ???
+????
 <br>
 
 ### Configuration d'une exécution de ce traitement
 
 On distingue le traitement, ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et a en entrée et en sortie des données spécifiques.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['vector_to_db'] }}",
@@ -129,7 +129,8 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -167,8 +168,8 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l'
     "_id": "{execution}"
 }
 ```
-
 ???
+????
 <br>
 
 ### Déclenchement de cette exécution
@@ -195,12 +196,12 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 - PROGRESS : en cours d'exécution sur le cluster de calcul
 - SUCCESS ou FAILURE : terminé
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -239,20 +240,20 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "_id": "{execution}"
 }
 ```
-
 ???
+????
 <br>
 
 ## Consultation de la donnée stockée en sortie
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées, tables et attributs).
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Pays et éco-régions",
@@ -298,8 +299,8 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     }
 }
 ```
-
 ???
+????
 <br>
 
 ## Nettoyage de la livraison

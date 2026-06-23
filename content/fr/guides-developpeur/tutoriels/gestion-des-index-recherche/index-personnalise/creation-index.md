@@ -323,12 +323,12 @@ Il faudra que le datastore possède la vérification *checkindex*, le storage *O
 
 Pour cela, on commence par créer la livraison :
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "INDEX",
@@ -341,6 +341,7 @@ Pour cela, on commence par créer la livraison :
 }
 ```
 ???
+????
 <br>
 
 C'est à cette étape qu'est défini le flag is_search_layer.
@@ -422,12 +423,12 @@ Une fois la livraison terminée, le traitement utilisé est **index2index** qui 
 
 Pour cela, il faut commencer par créer un traitement **index2index** :
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de réquête JSON
 ```json
 {
     "processing": "{{ ids.processings.index2index }}",
@@ -446,6 +447,7 @@ Pour cela, il faut commencer par créer un traitement **index2index** :
 }
 ```
 ???
+????
 <br>
 
 Cette requête donne un *execution_id* et un *stored_data_id* qu'il faut conserver pour la suite.
@@ -498,12 +500,12 @@ Une fois que le traitement passe en **SUCCESS**, il est possible de passer à la
 
 Une fois le traitement terminé, il faut créer la configuration de l'index custom :
 
-??? POST "{{ urls.api_entrepot }}/{datastore}/datastores/configurations"
+???? POST "{{ urls.api_entrepot }}/{datastore}/datastores/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/{datastore}/datastores/configurations
 ```
-
+??? Corps de réquête JSON
 ```json
 {
     "type": "SEARCH",
@@ -543,18 +545,19 @@ Une fois le traitement terminé, il faut créer la configuration de l'index cust
 }
 ```
 ???
+????
 <br>
 
 On récupère l'id de la configuration en retour de cette requête.
 
 Enfin, pour que l'index custom soit visible, il faut publiée l'offre :
 
-??? POST "{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings"
+???? POST "{{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/{datastore}/datastores/configurations/{configuration}/offerings
 ```
-
+??? Corps de réquête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.private.search }}",
@@ -562,6 +565,7 @@ Enfin, pour que l'index custom soit visible, il faut publiée l'offre :
 }
 ```
 ???
+????
 <br>
 
 Le champ *open* permet de déterminer le niveau de visibilité de l'index custom :
@@ -588,12 +592,12 @@ Une fois l'offre en *PUBLISHED*, l'index custom est bien disponible et il est po
 
 Pour ajouter des documents à un index, il faut livrer les nouveaux documents en respectant le schéma défini précédemment pour l'index. Il faut ensuite refaire un traitement avec la nouvelle livraison en précisant l'id de la donnée stockée de l'index à mettre à jour :
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de réquête JSON
 ```json
 {
     "processing": "{{ ids.processings.index2index }}",
@@ -611,6 +615,7 @@ Pour ajouter des documents à un index, il faut livrer les nouveaux documents en
 }
 ```
 ???
+????
 <br>
 
 Une fois le traitement terminé, l'index est à jour et les nouveaux documents sont recherchables.

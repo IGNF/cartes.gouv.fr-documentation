@@ -14,27 +14,29 @@ La publication des métadonnées va envoyer les fichiers au niveaux des services
 
 C'est le point de diffusion de type `CSW` qui nous intéresse.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
+??? Corps de réponse JSON (champ endpoints)
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 ???
+????
 <br>
 
 ## Publier les métadonnées
 
 Un appel à la route de publication permet de publier plusieurs métadonnées en une fois, en s'appuyant sur leur file identifier.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/metadata/publication"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/metadata/publication"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/metadata/publication
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "file_identifiers": [
@@ -44,16 +46,17 @@ Un appel à la route de publication permet de publier plusieurs métadonnées en
 }
 ```
 ???
+????
 <br>
 
 Si on récupère les informations sur la métadonnée publiée, on voit apparaître le point de diffusion :
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/metadata/{metadata}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/metadata/{metadata}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/metadata/{metadata}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "type": "ISOAP",
@@ -69,6 +72,7 @@ Si on récupère les informations sur la métadonnée publiée, on voit apparaî
 }
 ```
 ???
+????
 <br>
 
 Il est maintenant possible de consulter la métadonnée sur le service CSW avec la requête [GetRecordById]({{ urls.public.csw }}?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&ID=IGNF_RGEALTIr_2-0_ASC_5M_LAMB93_IGN69_D074.xml).
@@ -77,12 +81,12 @@ Il est maintenant possible de consulter la métadonnée sur le service CSW avec 
 
 De la même manière, il est possible de dépublier des métadonnées d'un catalogue
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/metadata/unpublication"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/metadata/unpublication"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/metadata/unpublication
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "file_identifiers": [
@@ -92,6 +96,7 @@ De la même manière, il est possible de dépublier des métadonnées d'un catal
 }
 ```
 ???
+????
 <br>
 
 À ce stade, la métadonnée a été dépubliée du catalogue, mais elle est toujours présente dans l’entrepôt.

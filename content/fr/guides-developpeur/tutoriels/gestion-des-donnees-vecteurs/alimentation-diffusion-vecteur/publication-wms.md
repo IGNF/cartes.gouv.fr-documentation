@@ -18,12 +18,12 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
 - table absente de la donnée stockée
 - style ou FTL exploitant des attributs absents de la table utilisée
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "WMS-VECTOR",
@@ -59,8 +59,8 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
     }
 }
 ```
-
 ???
+????
 <br>
 
 :::warning Attention
@@ -73,35 +73,35 @@ Comme pour le WFS, seule la création d'une offre sur un point d'accès (publica
 
 ### Consultation des points de diffusion disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON (champ endpoints)
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Publication
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration wms}/offerings
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.wmsv }}",
     "open": true
 }
 ```
-
 ???
+????
 <br>
 
 On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0)

@@ -20,12 +20,12 @@ Dans le cas du TMS vecteur, une configuration va donner plusieurs couches finale
 - `pays_ecoregions.regions_ecologiques`
 - `pays_ecoregions.pays`
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "type": "VECTOR-TMS",
@@ -51,8 +51,8 @@ Dans le cas du TMS vecteur, une configuration va donner plusieurs couches finale
     }
 }
 ```
-
 ???
+????
 <br>
 
 Si on ne précise pas de public_name, c'est le nom natif de stockage qui est utilisé.
@@ -63,17 +63,17 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 
 ### Consultation des points de diffusion disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}
 ```
-
+??? Corps de réponse JSON (champ endpoints)
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Publication
@@ -83,15 +83,15 @@ Si on ne précise pas de public_name, c'est le nom natif de stockage qui est uti
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration tms vecteur}/offerings
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "endpoint": "{{ ids.endpoints.open.tmsv }}",
     "open": true
 }
 ```
-
 ???
+????
 <br>
 
 On peut vérifier la présence de nos couches `pays_ecoregions.regions_ecologiques` et `pays_ecoregions.pays` dans le [GetCapabilities du service TMS Vecteur]({{ urls.public.tmsv }}/1.0.0/index.json). On peut également avoir des [détails sur la couche pays_ecoregions.regions_ecologiques]({{ urls.public.tmsv }}/1.0.0/pays_ecoregions.regions_ecologiques.json) et des [détails sur la couche pays_ecoregions.pays]({{ urls.public.tmsv }}/1.0.0/pays_ecoregions.pays.json).

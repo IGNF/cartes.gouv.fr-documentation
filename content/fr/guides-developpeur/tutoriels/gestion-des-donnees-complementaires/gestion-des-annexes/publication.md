@@ -13,18 +13,19 @@ L'ajout au chemin du nom technique de l'entrepôt permet de gérer l'unicité d'
 
 Publier une annexe revient à modifier son statut de publication.
 
-??? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}"
+???? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/annexes/{annexe}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "published": true
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "paths": ["/imagettes/rgealti.jpg", "/quickview/rgealti.jpg"],
@@ -35,8 +36,8 @@ Publier une annexe revient à modifier son statut de publication.
     "_id": "{annexe}"
 }
 ```
-
 ???
+????
 <br>
 
 Les URL suivantes sont maintenant disponibles :

@@ -18,7 +18,7 @@ L’ensemble des permissions qui m'ont été personnellement données ou qui ont
 
 ### Récupérer ses permissions personnelles
 
-??? GET "{{ urls.api_entrepot }}/users/me/permissions"
+???? GET "{{ urls.api_entrepot }}/users/me/permissions"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me/permissions
@@ -30,7 +30,7 @@ L’ensemble des permissions qui m'ont été personnellement données ou qui ont
             ["community = `false`"]
         ]
     }) }}
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -52,6 +52,7 @@ L’ensemble des permissions qui m'ont été personnellement données ou qui ont
 ]
 ```
 ???
+????
 <br>
 
 En tant que bénéficiaire de cette permission personnelle, je peux la supprimer si elle ne m'intéresse pas.
@@ -59,7 +60,7 @@ En tant que bénéficiaire de cette permission personnelle, je peux la supprimer
 ### Récupérer ses permissions communautaires
 
 
-??? GET "{{ urls.api_entrepot }}/users/me/permissions"
+???? GET "{{ urls.api_entrepot }}/users/me/permissions"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me/permissions
@@ -72,6 +73,7 @@ En tant que bénéficiaire de cette permission personnelle, je peux la supprimer
         ]
     }) }}
 
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -93,6 +95,7 @@ En tant que bénéficiaire de cette permission personnelle, je peux la supprimer
 ]
 ```
 ???
+????
 <br>
 
 Les deux permissions donnent accès à la même offre. Lors de la configuration de la clé, il sera important de préciser quelle permission exploiter, en gardant à l’esprit qu'il est possible de perdre le droit de consommer des données si la permission est modifiée par le diffuseur de la donnée.
@@ -101,12 +104,12 @@ Les deux permissions donnent accès à la même offre. Lors de la configuration 
 
 Dans la suite, nous allons exploiter la permission personnelle. Il est possible d’avoir plus d’informations sur celle-ci.
 
-??? GET "{{ urls.api_entrepot }}/users/me/permissions/{permission utilisateur}"
+???? GET "{{ urls.api_entrepot }}/users/me/permissions/{permission utilisateur}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me/permissions/{permission utilisateur}
 ```
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -128,13 +131,14 @@ Dans la suite, nous allons exploiter la permission personnelle. Il est possible 
 ]
 ```
 ???
+????
 <br>
 
 ## Gérer une clé d’accès
 
 Sans clé d’accès, il n'est pas possible de consulter le service de diffusion, même pour une [requête de capacités du service]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0).
 
-??? GET "{{ urls.private.wfs }}"
+???? GET "{{ urls.private.wfs }}"
 
 ``` title="Contenu" 
 {{ urls.private.wfs }}
@@ -148,7 +152,7 @@ Sans clé d’accès, il n'est pas possible de consulter le service de diffusion
         ]
     }) }}
 
-
+??? Corps de réponse XML
 ```xml
 <html>
     <head><title>401 Authorization Required</title></head>
@@ -158,6 +162,7 @@ Sans clé d’accès, il n'est pas possible de consulter le service de diffusion
 </html>
 ```
 ???
+????
 <br>
 
 La clé d’accès est un moyen de s'identifier lors de l’utilisation des services de diffusion. Il existe trois types d’identification :
@@ -170,12 +175,12 @@ La clé d’accès est un moyen de s'identifier lors de l’utilisation des serv
 
 Nous allons ici voir un exemple de mise en place d’une clé de type HASH.
 
-??? POST "{{ urls.api_entrepot }}/users/me/keys"
+???? POST "{{ urls.api_entrepot }}/users/me/keys"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me/keys
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "name": "Ma clé HASH",
@@ -185,8 +190,8 @@ Nous allons ici voir un exemple de mise en place d’une clé de type HASH.
     }
 }
 ```
-
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Ma clé HASH",
@@ -200,6 +205,7 @@ Nous allons ici voir un exemple de mise en place d’une clé de type HASH.
 }
 ```
 ???
+????
 <br>
 
 Quel que soit le type de clé, il est possible de préciser des conditions d’utilisation de la clé :
@@ -219,12 +225,12 @@ Il est maintenant possible [d’interroger le service]({{ urls.private.wfs }}?RE
 
 Les permissions ouvrent des droits a priori sur des offres, mais c'est à la charge du propriétaire de la clé de définir les accès aux offres. Un accès est un lien entre une clé et une offre, en exploitant une permission. On peut ajouter plusieurs accès à des offres en un appel, tant que c'est la même permission qui permet les accès.
 
-??? POST "{{ urls.api_entrepot }}/users/me/keys/{key HASH}/accesses"
+???? POST "{{ urls.api_entrepot }}/users/me/keys/{key HASH}/accesses"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me/keys/{key HASH}/accesses
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "permission": "{permission utilisateur}",
@@ -234,13 +240,14 @@ Les permissions ouvrent des droits a priori sur des offres, mais c'est à la cha
 }
 ```
 ???
+????
 <br>
 
 On peut connaître toutes les offres que la clé peut consommer avec l’appel suivant.
 
 ??? GET "{{ urls.api_entrepot }}/users/me/keys/{key HASH}/accesses"
 
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -263,11 +270,12 @@ On peut connaître toutes les offres que la clé peut consommer avec l’appel s
 ]
 ```
 ???
+????
 <br>
 
 On peut maintenant voir les couches correspondantes à l’offre dans les [capacités du serveur]({{ urls.private.wfs }}?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0&apikey=masupercle).
 
-??? GET "{{ urls.private.wfs }}"
+???? GET "{{ urls.private.wfs }}"
 
 ``` title="Contenu" 
 {{ urls.private.wfs }}
@@ -282,7 +290,7 @@ On peut maintenant voir les couches correspondantes à l’offre dans les [capac
         ]
     }) }}
 
-
+??? Corps de réponse XML
 ```xml
 <FeatureTypeList>
     <FeatureType
@@ -318,6 +326,7 @@ On peut maintenant voir les couches correspondantes à l’offre dans les [capac
 </FeatureTypeList>
 ```
 ???
+????
 <br>
 
 Il est aussi possible de mettre la clé dans le header `apikey` plutôt qu'en paramètre de requête.
@@ -332,12 +341,12 @@ Clé HASH dans QGis
 Nous allons ajouter à cette clé des limites d’utilisation et un user agent particulier qui limite l’usage de la clé au client QGis. À noter que l’ajout d’un filtrage par referer ne peut être considéré comme une méthode de sécurisation forte.
 
 
-??? POST "{{ urls.api_entrepot }}/users/me/keys"
+???? POST "{{ urls.api_entrepot }}/users/me/keys"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me/keys
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "name": "Ma clé BASIC",
@@ -349,8 +358,8 @@ Nous allons ajouter à cette clé des limites d’utilisation et un user agent p
     }
 }
 ```
-
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Ma clé BASIC",
@@ -366,6 +375,7 @@ Nous allons ajouter à cette clé des limites d’utilisation et un user agent p
 }
 ```
 ???
+????
 <br>
 
 L’affectation d’accès sur cette clé se fait exactement comme pour la première clé.
@@ -385,7 +395,7 @@ Cette clé est un moyen de préciser que l’on va consommer les services de dif
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/users/me/keys
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "name": "Ma clé OAUTH2",
@@ -393,8 +403,8 @@ Cette clé est un moyen de préciser que l’on va consommer les services de dif
     "type_infos": {}
 }
 ```
-
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Ma clé OAUTH2",
@@ -406,6 +416,7 @@ Cette clé est un moyen de préciser que l’on va consommer les services de dif
 }
 ```
 ???
+????
 <br>
 
 l’affectation d’accès sur cette clé se fait exactement comme pour la première clé.

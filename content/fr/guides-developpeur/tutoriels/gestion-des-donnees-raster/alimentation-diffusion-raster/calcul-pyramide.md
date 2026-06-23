@@ -41,29 +41,29 @@ flowchart LR
 
 ### Consultation des traitements disponibles
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings
 ```
-
+??? Corps de réponse JSON
 ```json
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/processings.json" | readFILE | safe }}
 ```
-
 ???
+????
 <br>
 
 ### Consultation du traitement qui nous intéresse
 
 Le détail d'un traitement permet de voir les types de données (livrées ou stockées) attendus en entrée, le type de données en sortie, ainsi que les paramètres et les vérifications requises pour les livraisons en entrée.
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/{{ ids.processings['raster-to-pyramid'] }}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "name": "Calcul de pyramide raster",
@@ -169,20 +169,20 @@ Le détail d'un traitement permet de voir les types de données (livrées ou sto
     ]
 }
 ```
-
 ???
+????
 <br>
 
 ### Configuration d'une exécution de ce traitement
 
 On distingue le traitement, la ressource de la plateforme mise à disposition de l'entrepôt, et son exécution. Une exécution appartient à un entrepôt et possède en entrée et en sortie des données spécifiques.
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processing": "{{ ids.processings['raster-to-pyramid'] }}",
@@ -202,7 +202,8 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
     }
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -243,8 +244,8 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
     "_id": "{execution}"
 }
 ```
-
 ???
+????
 <br>
 
 :::warning Points d'attention
@@ -271,12 +272,12 @@ Une exécution va avoir les statuts dans l'ordre suivant :
 - PROGRESS : en cours d'exécution sur le cluster de calcul
 - SUCCESS ou FAILURE : terminé
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions/{execution}
 ```
-
+??? Corps de réponse JSON
 ```json
 {
     "processing": {
@@ -318,20 +319,20 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     "_id": "{execution}"
 }
 ```
-
 ???
+????
 <br>
 
 ## Consultation de la donnée stockée en sortie
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d'apparaître au niveau de l'API (taille, étendue, système de coordonnées et niveaux).
 
-??? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
+???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 
 ```title="Contenu"
 {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}
 ```
-
+???
 ```json
 {
     "name": "SCAN1000 de la Corse",
@@ -375,8 +376,8 @@ Une exécution va avoir les statuts dans l'ordre suivant :
     }
 }
 ```
-
 ???
+????
 <br>
 
 ## Nettoyage de la livraison

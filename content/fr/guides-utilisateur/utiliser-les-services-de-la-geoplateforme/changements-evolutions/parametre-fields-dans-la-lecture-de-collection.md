@@ -88,7 +88,7 @@ Les entités suivantes sont concernées :
 
 Exemple d’utilisation pour des données stockées
 
-??? GET "/datastores/{datastore}/stored_data"
+???? GET "/datastores/{datastore}/stored_data"
 
 ```plain
 /datatores/{datastore}/stored_data
@@ -100,7 +100,7 @@ Exemple d’utilisation pour des données stockées
         ["fields = `last_event,bbox,tags`"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -143,5 +143,5 @@ Exemple d’utilisation pour des données stockées
     }
 ]
 ```
-
 ???
+????

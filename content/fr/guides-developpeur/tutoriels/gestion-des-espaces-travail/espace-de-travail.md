@@ -26,12 +26,12 @@ Définir un espace de travail implique de connaître les ressources partagées p
 
 La communauté permet de définir les utilisateurs qui y ont accès et leurs droits. Le nom technique doit être URL-compliant et être unique. Il se retrouvera entre autres dans les URL publiques de téléchargement des annexes.
 
-??? POST "{{ urls.api_entrepot }}/administrator/communities"
+???? POST "{{ urls.api_entrepot }}/administrator/communities"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/administrator/communities
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "name": "Communauté des tutoriels",
@@ -41,7 +41,8 @@ La communauté permet de définir les utilisateurs qui y ont accès et leurs dro
     "supervisor": "{user}"
 }
 ```
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "name": "Communauté des tutoriels",
@@ -58,6 +59,7 @@ La communauté permet de définir les utilisateurs qui y ont accès et leurs dro
 }
 ```
 ???
+????
 <br>
 
 Le superviseur est un utilisateur qui a forcément tous les droits sur la communauté et ne peut pas être enlevé. Cela assure la présence d’au moins une personne qui pourra en faire entrer d’autres.
@@ -68,12 +70,12 @@ Comme nous souhaitons mettre en place un espace de travail pour des producteurs 
 
 C’est au niveau de l’entrepôt que l’on va affecter tout ou partie des ressources partagées, potentiellement avec quota. On crée dans l’exemple un entrepôt pour la gestion de base de la donnée vecteur (sans tuiles vectorielles). On liste après l’exemple les ressources à attribuer pour chaque usage et par type.
 
-??? POST "{{ urls.api_entrepot }}/administrator/datastores"
+???? POST "{{ urls.api_entrepot }}/administrator/datastores"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/administrator/datastores
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "processings": [
@@ -112,8 +114,8 @@ C’est au niveau de l’entrepôt que l’on va affecter tout ou partie des res
     ]
 }
 ```
-
-
+???
+??? Corps de réponse JSON
 ```json
 {
     "community": {
@@ -216,6 +218,7 @@ C’est au niveau de l’entrepôt que l’on va affecter tout ou partie des res
 }
 ```
 ???
+????
 <br>
 
 Les quotas de stockage sont à définir en octets. Ceux sur les points d’accès sont en nombre d’offres.
@@ -389,18 +392,19 @@ Les quotas de stockage sont à définir en octets. Ceux sur les points d’accè
 
 À ce stade, l’entrepôt n’est pas utilisable car non activé. Pour l’activer, il suffit de modifier son champ `active` :
 
-??? PATCH "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
+???? PATCH "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/administrator/datastores/{datastore}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "active": true
 }
 ```
 ???
+????
 <br>
 
 Par la suite, il sera possible de désactiver un entrepôt pour bloquer instantanément tous les nouveaux appels sur celui ci. Rien n’est supprimé, mais cela permet de mettre en sécurité un entrepôt pour lequel une utilisation frauduleuse ou dangereuse est détectée.
@@ -409,28 +413,29 @@ Par la suite, il sera possible de désactiver un entrepôt pour bloquer instanta
 
 Il est possible de changer le superviseur d’une communauté après coup :
 
-??? PATCH "{{ urls.api_entrepot }}/administrator/communities/{community}"
+???? PATCH "{{ urls.api_entrepot }}/administrator/communities/{community}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/administrator/communities/{community}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "supervisor": "id nouveau superviseur"
 }
 ```
 ???
+????
 <br>
 
 On peut également modifier les quotas après coup, ou donner accès à de nouveaux traitements. Il n’est pas nécessaire de tout fournir, mais seulement les parties à changer. Un exemple ici pour augmenter le quota de l’espace de livraison à 100 Go :
 
-??? request-patch "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
+???? request-patch "{{ urls.api_entrepot }}/administrator/datastores/{datastore}"
 
 ``` title="Contenu" 
 {{ urls.api_entrepot }}/administrator/datastores/{datastore}
 ```
-
+??? Corps de requête JSON
 ```json
 {
     "storages": {
@@ -442,3 +447,4 @@ On peut également modifier les quotas après coup, ou donner accès à de nouve
 }
 ```
 ???
+????

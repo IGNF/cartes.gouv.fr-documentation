@@ -15,7 +15,7 @@ date: 2025-06-30
 
 Il est possible de consulter les points d’accès disponibles pour un entrepôt avec la nouvelle route d’<span lang="en">_API_</span> « GET /datastores/{datastore}/endpoints », avec des filtrages sur les noms, types et quotas.
 
-??? GET "/datastores/{datastore}/endpoints"
+???? GET "/datastores/{datastore}/endpoints"
 
 ```plain
 /datastores/{datastore}/endpoints
@@ -30,7 +30,7 @@ Il est possible de consulter les points d’accès disponibles pour un entrepôt
         ["use_ratio = `50 pour avoir tous les points d’accès dont le quota est consommé à plus de 50%`"]
     ]
 }) }}
-
+??? Corps de réponse JSON
 ```json
 [
     {
@@ -56,5 +56,5 @@ Il est possible de consulter les points d’accès disponibles pour un entrepôt
     }
 ]
 ```
-
 ???
+????
