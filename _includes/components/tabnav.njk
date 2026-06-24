@@ -49,7 +49,7 @@
     if (!wrapper || !list || !prevBtn || !nextBtn) return;
     var SCROLL_AMOUNT = 200;
     function updateButtons() {
-      var overflowing = list.scrollWidth > list.clientWidth + 1;
+      var overflowing = list.scrollWidth > wrapper.clientWidth + 1;
       var scrollLeft = Math.round(list.scrollLeft);
       var maxScroll = list.scrollWidth - list.clientWidth;
       wrapper.classList.toggle('has-prev', overflowing && scrollLeft > 0);
