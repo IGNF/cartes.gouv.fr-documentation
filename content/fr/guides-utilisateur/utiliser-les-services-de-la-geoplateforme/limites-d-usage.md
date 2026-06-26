@@ -47,7 +47,7 @@ Les limites d’usage fixées sont les suivantes :
         ["Géocodage"," 50 requêtes/s"],
         ["Autocomplétion"," 10 requêtes/s"],
         ["Calcul altimétrique"," 5 requêtes/s"],
-        ["Calcul d’itinéraire"," 5 requêtes/s"],
+        ["Calcul d’itinéraire"," 10 requêtes/s"],
         ["Calcul d’isochrone/isodistance"," 5 requêtes/s"],
         ["Recherche"," 10 requêtes/s"],
         ["Diffusion de tuiles vectorielles pg_tileserv"," 400 requêtes/s"],
