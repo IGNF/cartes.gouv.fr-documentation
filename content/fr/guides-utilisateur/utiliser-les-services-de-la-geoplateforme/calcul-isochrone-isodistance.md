@@ -70,7 +70,6 @@ Les paramètres également précisés dans le [swagger du calcul d’isochrone/i
     - **`point`**
         - Point de départ exprimé dans le CRS, par défaut, de la ressource (EPSG:4326) (exemple : `2.337306,48.849319`).
     - **`resource`**
-        - `bdtopo-osrm` : les calculs sont effectués avec le moteur « OSRM », il permet des performances de calcul élevées mais présente un choix limité dans le paramétrage des requêtes notamment pour l’expression des contraintes.
         - `bdtopo-valhalla` : les calculs sont effectués avec le moteur « Valhalla » : il présente les mêmes avantages et inconvénients qu’OSRM, mais avec des performances un peu moindres. Nous vous conseillons de plutôt utiliser les ressources OSRM.
         - `bdtopo-pgr` : les calculs sont effectués avec le moteur « pgRouting », il permet un plus grand choix dans le paramétrage des requêtes notamment pour l’expression des contraintes et pour la récupération d’attributs issus de la BD TOPO®. Cependant, les performances de calcul de ce moteur sont très inférieures à celles d’OSRM et Valhalla, nous vous conseillons donc de choisir de manière préférentielle OSRM, et de n’opter pour pgRouting que si vous avez des besoins précis concernant les contraintes de calcul et/ou les attributs récupérés.
     - **`costValue`**
