@@ -89,11 +89,9 @@ Les entités suivantes sont concernées :
 Exemple d’utilisation pour des données stockées
 
 ???? GET "/datastores/{datastore}/stored_data"
-
 ```plain
 /datatores/{datastore}/stored_data
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [

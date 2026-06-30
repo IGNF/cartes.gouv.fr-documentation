@@ -61,7 +61,8 @@ Concrètement, cela passe par le développement d’outils permettant :
 
 Des plug-ins QGIS sont déjà proposés pour faciliter la saisie et la contribution directe sur certaines thématiques spécifiques comme le routier, les odonymes ou encore la défense contre l’incendie.
 
-![Plug-in QGIS](/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/02-bdfrance.png "Exemple de plug-in QGIS – assistant de saisie DFCI"){.fr-responsive-img .frx-border-img .frx-img-contained}
+![Plug-in QGIS](/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/02-bdfrance.png "Exemple de plug-in QGIS - assistant de saisie DFCI"){.fr-responsive-img .frx-border-img .frx-img-contained}
+
 <figcaption class="fr-content-media__caption fr-mb-6v">Exemple de plug-in QGIS - assistant de saisie DFCI</figcaption>
 
 Pour les SDIS, l’intégration dans le référentiel national des changements observés sur le terrain aussi bien topographiques que métiers est facilitée. Les outils de synchronisation leur permettront à terme de maintenir leurs données plus spécifiques en local sans difficulté et d’éviter les écarts d’actualité et les redondances d’informations.

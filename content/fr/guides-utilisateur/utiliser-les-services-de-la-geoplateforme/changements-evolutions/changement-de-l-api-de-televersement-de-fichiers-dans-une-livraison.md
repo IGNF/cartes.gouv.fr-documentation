@@ -23,11 +23,9 @@ Les téléversements en dehors des données dans une livraison (métadonnées, a
 ### Ancien usage de l’API
 
 ??? POST "/datastores/{datastore}/uploads/{upload}/data"
-
 ```plain
 /datastores/{datastore}/uploads/{upload}/data
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
@@ -35,9 +33,7 @@ Les téléversements en dehors des données dans une livraison (métadonnées, a
         ["path  = `data`"]
     ]
 }) }}
-
 ???
-
 <br>
 
 ### Nouvel usage de l’API
@@ -45,16 +41,13 @@ Les téléversements en dehors des données dans une livraison (métadonnées, a
 L’information du chemin où écrire le fichier dans la livraison (path) devient un paramètre de requête et doit préciser le nom du fichier. Cela permet de changer de nom de fichier par rapport à celui en local.
 
 ??? POST "/datastores/{datastore}/uploads/{upload}/data?path=data/image.tif"
-
 ```plain
 /datastores/{datastore}/uploads/{upload}/data?path=data/image.tif
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
         ["file = `image.tif`"]
     ]
 }) }}
-
 ???

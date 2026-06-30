@@ -1,7 +1,8 @@
 module.exports = {
+    layout: "layouts/article_nav_tertiaire.njk",
     segments: [
         {
-            url: "/guides-developpeur/tutoriels/gestion-des-donnees-raster/mnt",
+            url: "/guides-developpeur/tutoriels/gestion-des-donnees-raster/mnt/",
             title: "Gestion de données MNT",
         },
     ],

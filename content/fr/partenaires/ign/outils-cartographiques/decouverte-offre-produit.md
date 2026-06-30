@@ -2,8 +2,9 @@
 title: Découverte de l’offre produit
 description: Comprendre et comparer ce que contient l’offre de données et services Outils cartographiques du service public de l’Institut national de l’information géographique et forestière
 eleventyNavigation:
-    key: Découverte de l’offre produit
+    key: Découverte de l’offre produit - outils-cartographiques
     order: 1
+    title: Découverte de l’offre produit
 ---
 
 {% set currentParent = eleventyNavigation.parent %}

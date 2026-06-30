@@ -1,20 +1,15 @@
 ---
 title: Découverte de l’offre produit
+#layout: layouts/partenaire/parent_nav_tertiaire.njk
 description: Comprendre et comparer ce que contient l’offre de données et services Imagerie de l’Institut national de l’information géographique et forestière
 eleventyNavigation:
-    key: Découverte de l’offre produit
+    key: Découverte de l’offre produit - imagerie
     order: 1
+    title: Découverte de l’offre produit
+#tertiaryTitle: Présentation
 ---
 
-{# {% from "components/component.njk" import component with context %}
-
-{% set tabnavLinks = [
-  { title: "Présentation", active: true },
-  { title: "Choisir mon produit", url: "./choisir-produit" },
-  { title: "Services web thématique", url: "./service-web-thematique" }
-] %}
-
-{{ component("tabnav", { items: tabnavLinks }) }} #}
+{% from "components/component.njk" import component with context %}
 
 {% set currentParent = eleventyNavigation.parent %}
 {% set dernieres = [] %}
@@ -36,22 +31,6 @@ eleventyNavigation:
       {% endif %}
       {% set _ = dejaVus.push(entry.inputPath) %}
     {% endif %}
-    {% set siblingDir = entry.inputPath.slice(0, entry.inputPath.lastIndexOf('/') + 1) %}
-    {% for child in collections.all %}
-      {% if child.inputPath.startsWith(siblingDir)
-        and child.inputPath != entry.inputPath
-        and child.inputPath != page.inputPath
-        and dejaVus.indexOf(child.inputPath) == -1 %}
-        {% if child.data.edition == "dernière" %}
-          {% set _ = dernieres.push(child) %}
-        {% elseif child.data.edition == "historique" %}
-          {% set _ = patrimoines.push(child) %}
-        {% else %}
-          {% set _ = autres.push(child) %}
-        {% endif %}
-        {% set _ = dejaVus.push(child.inputPath) %}
-      {% endif %}
-    {% endfor %}
   {% endif %}
 {% endfor %}
 

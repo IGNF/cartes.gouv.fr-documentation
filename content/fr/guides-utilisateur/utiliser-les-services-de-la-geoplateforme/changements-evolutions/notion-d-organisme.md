@@ -16,7 +16,6 @@ L’objectif est de faciliter le travail des personnes gérant plusieurs communa
 Pour savoir si votre communauté est rattachée à un organisme, faites la requête suivante.
 
 ???? GET "/communities/{community}"
-
 ```plain
 /communities/{community}
 ```
@@ -44,7 +43,6 @@ Pour savoir si votre communauté est rattachée à un organisme, faites la requ�
 ```
 ???
 ????
-
 <br>
 
 Pour plus d’informations sur l’utilisation des organismes, lire le tutoriel [ici](../../../../guides-developpeur/tutoriels/gestion-des-espaces-travail/consultation-organisme){target="_blank" rel="noopener noreferrer" title="Consultation d’un organisme - ouvre une nouvelle fenêtre"}.

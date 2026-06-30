@@ -5,22 +5,22 @@ eleventyNavigation:
     order: 1
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Livraison
 ---
 
 {% from "components/component.njk" import component with context %}
 
-## Livraison des données
+### Livraison des données
 
-La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l'entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
+La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l’entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
 
-La livraison n'a qu'un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
+La livraison n’a qu’un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
 
-### Déclarer la livraison
+#### Déclarer la livraison
 
 ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads
 ```
 ??? Corps de requête JSON
@@ -58,55 +58,50 @@ La livraison n'a qu'un rôle temporaire, le temps que les données soient transf
 ????
 <br>
 
-### Téléverser un fichier
+#### Téléverser un fichier
 
-Les formats de fichier raster gérés sont :
-
+Les formats de fichier raster gérés sont :
 - GeoTIFF
 - TIFF + TFW
 - JPEG2000
 
-📄 `<scan1000_corse.tif>`
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tif"
+<br>
 
-```title="Contenu"
+📄 `<scan1000_corse.tif>`
+
+??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tif"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tif
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<scan1000_corse.tif>`"]
+        ["file = &lt;scan1000_corse.tif&gt;"]
     ]
 }) }}
-
 ???
 <br>
 
 📄 `<scan1000_corse.tfw>`
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tfw"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/scan1000_corse.tfw
 ```
-
 {{ component("table", {
     headers: ["Corps de requête Multipart"],
     data: [
-        ["file = `<scan1000_corse.tfw>`"]
+        ["file = &lt;scan1000_corse.tfw&gt;"]
     ]
 }) }}
-
 ???
 <br>
 
-### Contrôler le contenu
+#### Contrôler le contenu
 
-Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuelle arborescence :
+Afin de vérifier que tous les fichiers ont bien été déposés, et l’éventuelle arborescence :
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/tree
 ```
 ??? Corps de réponse JSON
@@ -135,28 +130,25 @@ Afin de vérifier que tous les fichiers ont bien été déposés, et l'éventuel
 ????
 <br>
 
-## Terminer la livraison
+### Terminer la livraison
 
-Terminer la livraison consiste à retirer les droits en écriture sur les données déposées afin que l'on puisse les traiter sans conflit. Des vérifications s'exécuteront, liront les données livrées et détecteront d'éventuels problèmes qui auraient pu mettre en échec les traitements suivants.
+Terminer la livraison consiste à retirer les droits en écriture sur les données déposées afin que l’on puisse les traiter sans conflit. Des vérifications s’exécuteront, liront les données livrées et détecteront d’éventuels problèmes qui auraient pu mettre en échec les traitements suivants.
 
-### Fermeture
+#### Fermeture
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/close
 ```
-
 ???
 <br>
 
-### Consultation des vérifications sur ma livraison
+#### Consultation des vérifications sur ma livraison
 
 Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne faisant que lire les données déposées.
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 ??? Corps de réponse JSON
@@ -187,11 +179,10 @@ Plusieurs vérifications peuvent tourner sur une même livraison, celles-ci ne f
 ????
 <br>
 
-Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l'appel précédent sera :
+Lorsque toutes les vérifications seront passées, la livraison passera en statut `CLOSED` et la réponse à l’appel précédent sera :
 
 ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks"
-
-```title="Contenu"
+```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/checks
 ```
 ??? Corps de réponse JSON
@@ -220,4 +211,3 @@ Lorsque toutes les vérifications seront passées, la livraison passera en statu
 ```
 ???
 ????
-<br>

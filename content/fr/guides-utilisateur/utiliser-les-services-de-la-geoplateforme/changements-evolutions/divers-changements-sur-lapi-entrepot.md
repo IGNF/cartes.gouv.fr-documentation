@@ -20,7 +20,6 @@ Afin d’harmoniser les livraisons avec les données stockées, la ligne de cata
 Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur d’un <span lang="en">_datastore_</span> d’accorder la visibilité d’une de ses données stockées à une ou plusieurs communautés pour leur permettre d’utiliser la donnée en lecture.
 
 ???? POST "/datastores/{datastore}/stored_data/{stored_data}/visibility"
-
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}/visibility
 ```
@@ -44,13 +43,11 @@ Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur d’un <
 ```
 ???
 ????
-
 <br>
 
 Il est ensuite possible de récupérer la liste des visibilités accordées à une de ses données stockées :
 
 ???? GET "/datastores/{datastore}/stored_data/{stored_data}/visibility"
-
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}/visibility
 ```
@@ -67,13 +64,11 @@ Il est ensuite possible de récupérer la liste des visibilités accordées à u
 ```
 ???
 ????
-
 <br>
 
 Il est aussi possible de supprimer la visibilité d’une donnée stockée :
 
 ??? DELETE "/datastores/{datastore}/stored_data/{stored_data}/visibility"
-
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}/visibility
 ```
@@ -85,7 +80,6 @@ Il est aussi possible de supprimer la visibilité d’une donnée stockée :
 ```
 ???
 ????
-
 <br>
 
 ### Amélioration des évènements sur les livraisons, les données stockées et les configurations
@@ -93,29 +87,22 @@ Il est aussi possible de supprimer la visibilité d’une donnée stockée :
 Les titres des évènements sont améliorés pour être plus parlants pour les utilisateurs. Les évènements sont accessibles à ces <span lang="en">_URL_</span> :
 
 ??? GET "/datastores/{datastore}/uploads/{upload}/events"
-
 ```plain
 /datastores/{datastore}/uploads/{upload}/events
 ```
-
 ???
 
 ??? GET "/datastores/{datastore}/stored_data/{stored_data}/events"
-
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}/events
 ```
-
 ???
 
 ??? GET "/datastores/{datastore}/configurations/{configuration}/events"
-
 ```plain
 /datastores/{datastore}/configurations/{configuration}/events
 ```
-
 ???
-
 <br>
 
 ### Ajout d’un filtrage sur les clés utilisateurs
@@ -172,7 +159,7 @@ Ce nouveau permet de connaitre facilement la date de dernière modification « 
 
 Ce champ est mise à jour lors de ces évènements :
 
-- lors du téléversement d’un nouveau fichier annexe pour écraser l’ancien (PUT /datastore/{datastore}/annexes/{annexe})
+- lors du téléversement d’un nouveau fichier annexe pour écraser l’ancien (PUT /datastore/{datastore}/annexes/{annex})
 - lors du téléversement d’un nouveau fichier metadonnée pour écraser l’ancien (PUT /datastore/{datastore}/metadata/{metadata})
 - lors du téléversement d’un nouveau fichier statique pour écraser l’ancien (PUT /datastore/{datastore}/statics/{static})
 - lors d’un appel de modification de la configuration (PUT /datastore/{datastore}/configurations/{configuration})
@@ -186,7 +173,6 @@ Modification du système de tri dans les listes d’entités.
 Le tri par « lastEvent » est remplacé par « last_event ». Exemple :
 
 ???? GET "/datastores/{datastore}/configurations?sort=last_event,desc"
-
 ```plain
 /datastores/{datastore}/configurations?sort=last_event,desc
 ```
@@ -218,7 +204,6 @@ Le tri par « lastEvent » est remplacé par « last_event ». Exemple :
 ```
 ???
 ????
-
 <br>
 
 De plus, ajout de la possibilité de trier par date de création (« creation ») et par date de mise à jour (« update ») pour les <span lang="en">_API_</span> suivantes :
@@ -269,7 +254,6 @@ Liste les stockages disponibles pour le datastore. Les paramètres disponibles p
 <br>
 
 ???? GET "/datastores/{datastore}/storages"
-
 ```plain
 /datastores/{datastore}/storages
 ```
@@ -324,7 +308,6 @@ Liste les stockages disponibles pour le datastore. Les paramètres disponibles p
 ```
 ???
 ????
-
 <br>
 
 ### Suppression de la visibilité associée aux livraisons et données stockées et ajout d’une notion de publicité
@@ -346,7 +329,6 @@ Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur de conna
 Les paramètres de filtrage sont identiques à ceux de « GET /datastores/{datastore}/stored_data », sauf « owned » et « shared ».
 
 ???? GET "/users/me/stored_data"
-
 ```plain
 /users/me/stored_data
 ```
@@ -397,13 +379,11 @@ Les paramètres de filtrage sont identiques à ceux de « GET /datastores/{data
 ```
 ???
 ????
-
 <br>
 
 De plus, une route supplémentaire permet de récupérer les informations d’une donnée stockée visisible de l’utilisateur :
 
 ???? GET "/users/me/stored_data/{stored_data}"
-
 ```plain
 /users/me/stored_data/{stored_data}
 ```
@@ -454,7 +434,6 @@ De plus, une route supplémentaire permet de récupérer les informations d’un
 ```
 ???
 ????
-
 <br>
 
 ### Ajout du champ « fields » pour l’API de récupération de la liste des traitements disponibles

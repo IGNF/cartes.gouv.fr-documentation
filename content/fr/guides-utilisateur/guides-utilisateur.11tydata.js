@@ -3,7 +3,7 @@ module.exports = {
     tags: ["Utilisateur"],
     segments: [
         {
-            url: "/guides-utilisateur",
+            url: "/guides-utilisateur/",
             title: "Guides utilisateur",
         },
     ],

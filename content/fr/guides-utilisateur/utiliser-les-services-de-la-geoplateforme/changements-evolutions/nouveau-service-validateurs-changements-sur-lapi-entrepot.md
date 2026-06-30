@@ -111,7 +111,6 @@ Ces requêtes peuvent prendre comme paramètres :
 Exemple :
 
 ???? GET "/datastores/{datastore}/stored_data/activity"
-
 ```plain
 /datastores/{datastore}/stored_data/activity
 ```
@@ -168,7 +167,6 @@ Exemple :
 ```
 ???
 ????
-
 <br>
 
 ### Ajout de routes d’activités d’une communauté
@@ -188,7 +186,6 @@ Ces requêtes peuvent prendre comme paramètres :
 Exemple :
 
 ???? GET "/communities/{community}/users/activity"
-
 ```plain
 /communities/{community}/users/activity
 ```
@@ -245,7 +242,6 @@ Exemple :
 ```
 ???
 ????
-
 <br>
 
 ### Ajout de la date de rattachement d’un utilisateur à une communauté
@@ -274,13 +270,11 @@ La valeur de ce champ peut être modifiée grâce à ses routes :
 <br>
 
 ???? POST "/datastores/{datastore}/stored_data/{stored_data}"
-
 ```plain
 /datastores/{datastore}/stored_data/{stored_data}
 ```
 ??? Corps de requête JSON
 ```json
-
 {
     "name": "string",
     "open": true,
@@ -296,7 +290,6 @@ La valeur de ce champ peut être modifiée grâce à ses routes :
 ```
 ???
 ????
-
 <br>
 
 ### Ajout d’une route d’activité publique d’une communauté
@@ -312,7 +305,6 @@ Les paramètres possibles de la requêtes sont :
 Seuls la création et la modification des données stockées et des offerings qui ont un champ « public_activity » à « true » sont affichées dans le flux.
 
 ???? GET "/communities/{technical_name}/activity"
-
 ```plain
 /communities/{technical_name}/activity
 ```
@@ -369,7 +361,6 @@ Seuls la création et la modification des données stockées et des offerings qu
 ```
 ???
 ????
-
 <br>
 
 ### Permission de la suppression d’une livraison au statut UNSTABLE
@@ -377,13 +368,10 @@ Seuls la création et la modification des données stockées et des offerings qu
 La suppression d’une livraison au statut UNSTABLE est maintenant possible avec la route :
 
 ??? DELETE "/datastores/{datastore}/uploads/{upload}"
-
 ```plain
 /datastores/{datastore}/uploads/{upload}
 ```
-
 ???
-
 <br>
 
 ### API de téléchargement d’un fichier d’une livraison
@@ -396,13 +384,10 @@ Le paramètre à préciser dans la requête :
 <br>
 
 ??? GET "/datastores/{datastore}/uploads/{upload}"
-
 ```plain
 /datastores/{datastore}/uploads/{upload}/data
 ```
-
 ???
-
 <br>
 
 En sortie, le fichier demandé est téléchargé.

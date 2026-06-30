@@ -1,6 +1,6 @@
 ---
 title: BD ALTI®
-description: Modèle Numérique de Terrain (MNT) au pas de 25 m et 75m décrivant la forme et l’altitude normale du sol
+description: Modèle Numérique de Terrain (MNT) au pas de 25 m et 75 m décrivant la forme et l’altitude normale du sol
 tags:
     - MNT
     - ME

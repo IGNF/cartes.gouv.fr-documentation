@@ -6,14 +6,15 @@ eleventyNavigation:
     order: 1
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Au fur et à mesure
 ---
 
 {% from "components/component.njk" import component with context %}
 
 Une mise à jour par chaînage va créer une nouvelle donnée stockée. Le nouveau contenu sera ajouté et les anciennes données seront référencées.
 
-L'avantage est qu'il n'y a pas de modifications des anciennes données et que celles-ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les anciennes données).
+L’avantage est qu’il n’y a pas de modifications des anciennes données et que celles-ci ne sont pas dupliquées. En revanche, une dépendance est ajoutée entre les données, ce qui va empêcher la suppression des données référencées (les anciennes données).
 
 ```mermaid
 ---
@@ -34,7 +35,7 @@ stateDiagram
     PUB_TILED1: Publication en WMTS/TMS pour validation
     note right of PUB_TILED1
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
@@ -50,7 +51,7 @@ stateDiagram
     PUB_TILED2: Republication en WMTS/TMS pour validation
     note right of PUB_TILED2
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
@@ -64,253 +65,265 @@ stateDiagram
     class LIV1,LIV2,PUB_TILED1,PUB_TILED2 concepts
 ```
 
-## Gestion du premier jeu de données
+### Gestion du premier jeu de données
 
-### Calcul de la pyramide
+#### Calcul de la pyramide
 
-On a notre permier jeu de donnée, la pyramide calculée se fera dans les même conditions que dans le [tutoriel de diffusion de données raster](../../alimentation-diffusion-raster).
-
-- Création de la livraison
-
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/uploads
-```
-??? Corps de requête JSON
-```json
-{
-    "description": "SCAN 1000 Nord Corse",
-    "name": "SCAN 1000 Nord Corse",
-    "type": "RASTER",
-    "srs": "EPSG:2154"
-}
-```
-???
-????
-<br>
-
-- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
-- Fermeture de la livraison
-- Création de l'exécution de traitement
-
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
-```
-??? Corps de requête JSON
-```json
-{
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
-    "inputs": {
-        "upload": ["{upload Corse Nord}"]
-    },
-    "output": {
-        "stored_data": {
-            "name": "SCAN 1000 Nord Corse",
-            "storage_tags": ["PYRAMIDE"]
-        }
-    },
-    "parameters": {
-        "tms": "PM",
-        "compression": "jpg",
-        "interpolation": "bicubic"
-    }
-}
-```
-???
-????
-<br>
-
-- Lancement de l'exécution : ID de la données stockée `{stored data Corse Nord}`
-
-### Diffusion
-
-- Création de la configuration WMTS-TMS : ID `{configuration}`
-
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/configurations
-```
-??? Corps de requête JSON
-```json
-{
-    "type": "WMTS-TMS",
-    "name": "SCAN 1000 Nord Corse",
-    "layer_name": "scan1000_corse",
-    "metadata": [
-        {
-            "format": "application/xml",
-            "url": "https://data.geopf.fr/csw?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://standards.iso.org/iso/19115/-3/mdb/2.0&elementSetName=full&ID=IGNF_SCAN-1000",
-            "type": "ISO19115:2003"
-        }
-    ],
-    "type_infos": {
-        "title": "SCAN 1000 Nord Corse",
-        "abstract": "Données SCAN 1000 sur le Nord de la Corse",
-        "keywords": ["Tutoriel", "Raster", "Mise à jour"],
-        "used_data": [
-            {
-                "bottom_level": "10",
-                "top_level": "0",
-                "stored_data": "{stored data Corse Nord}"
-            }
-        ]
-    },
-    "getfeatureinfo": {
-        "stored_data": true
-    }
-}
-```
-???
-????
-<br>
-
-- Création de l'offre : ID `{offering}`
-
-On met tout de suite comme `layer_name` le nom cible : lorsque l'on mettra à jour la diffusion, on ne pourra plus le changer.
-
-![Visualisation des données du tutoriel](../../assets/images/wmts_rastermaj_nord.png)
-
-## Gestion du deuxième jeu de données
-
-### Calcul de la pyramide
+On a notre premier jeu de données, la pyramide calculée se fera dans les mêmes conditions que dans le [tutoriel de diffusion de données raster](../../alimentation-diffusion-raster).
 
 - Création de la livraison
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/uploads
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "description": "SCAN 1000 Nord Corse",
+        "name": "SCAN 1000 Nord Corse",
+        "type": "RASTER",
+        "srs": "EPSG:2154"
+    }
+    ```
+    ???
+    ????
+    <br>
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/uploads
-```
-??? Corps de requête JSON
-```json
-{
-    "description": "SCAN 1000 Sud Corse",
-    "name": "SCAN 1000 Sud Corse",
-    "type": "RASTER",
-    "srs": "EPSG:2154"
-}
-```
-???
-????
-<br>
+- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
+- Fermeture de la livraison
+- Création de l’exécution de traitement
 
-- Livraison des fichiers :
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/uploads
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "description": "SCAN 1000 Nord Corse",
+        "name": "SCAN 1000 Nord Corse",
+        "type": "RASTER",
+        "srs": "EPSG:2154"
+    }
+    ```
+    ???
+    ????
+    <br>
 
-{{ component("download", {
-    title: "scan1000_corse_sud.tif",
-    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
-    detail: "tif - 7.5 Mo"
-}) }}
+- Livraison des fichiers : [scan1000_corse_nord.tif](/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif)
+- Fermeture de la livraison
+- Création de l’exécution de traitement
+
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "processing": "{{ ids.processings['raster_to_pyramid'] }}",
+        "inputs": {
+            "upload": ["{upload Corse Nord}"]
+        },
+        "output": {
+            "stored_data": {
+                "name": "SCAN 1000 Nord Corse",
+                "storage_tags": ["PYRAMIDE"]
+            }
+        },
+        "parameters": {
+            "tms": "PM",
+            "compression": "jpg",
+            "interpolation": "bicubic"
+        }
+    }
+    ```
+    ???
+    ????
+    <br>
+
+- Lancement de l’exécution : ID de la données stockée `{stored data Corse Nord}`
+
+#### Diffusion
+
+- Création de la configuration WMTS-TMS : ID `{configuration}`
+
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/configurations
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "type": "WMTS-TMS",
+        "name": "SCAN 1000 Nord Corse",
+        "layer_name": "scan1000_corse",
+        "metadata": [
+            {
+                "format": "application/xml",
+                "url": "https://data.geopf.fr/csw?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://standards.iso.org/iso/19115/-3/mdb/2.0&elementSetName=full&ID=IGNF_SCAN-1000",
+                "type": "ISO19115:2003"
+            }
+        ],
+        "type_infos": {
+            "title": "SCAN 1000 Nord Corse",
+            "abstract": "Données SCAN 1000 sur le Nord de la Corse",
+            "keywords": ["Tutoriel", "Raster", "Mise à jour"],
+            "used_data": [
+                {
+                    "bottom_level": "10",
+                    "top_level": "0",
+                    "stored_data": "{stored data Corse Nord}"
+                }
+            ]
+        },
+        "getfeatureinfo": {
+            "stored_data": true
+        }
+    }
+    ```
+    ???
+    ????
+    <br>
+
+- Création de l’offre : ID `{offering}`
+
+On met tout de suite comme `layer_name` le nom cible : lorsque l’on mettra à jour la diffusion, on ne pourra plus le changer.
+
+![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-maj/wmts_rastermaj_nord.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+
+### Gestion du deuxième jeu de données
+
+#### Calcul de la pyramide
+
+- Création de la livraison
+
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/uploads
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "description": "SCAN 1000 Sud Corse",
+        "name": "SCAN 1000 Sud Corse",
+        "type": "RASTER",
+        "srs": "EPSG:2154"
+    }
+    ```
+    ???
+    ????
+    <br>
+
+- Livraison des fichiers :
+
+    {{ component("download", {
+        title: "scan1000_corse_sud.tif",
+        href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
+        detail: "tif - 7.5 Mo"
+    }) }}
 
 - Fermeture de la livraison
-- Création de l'exécution de traitement : on a ici deux données en entrée, la nouvelle zone livrée, ainsi que la pyramide ne contenant que le Nord de la Corse
+- Création de l’exécution de traitement : on a ici deux données en entrée, la nouvelle zone livrée, ainsi que la pyramide ne contenant que le Nord de la Corse
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "processing": "{{ ids.processings['raster_to_pyramid'] }}",
+        "inputs": {
+            "upload": ["{upload Corse Sud}"],
+            "stored_data": ["{stored data Corse Nord}"]
+        },
+        "output": {
+            "stored_data": {
+                "name": "SCAN 1000 Corse complète",
+                "storage_tags": ["PYRAMIDE"]
+            }
+        },
+        "parameters": {}
+    }
+    ```
+    ???
+    ????
+    <br>
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
-```
-??? Corps de requête JSON
-```json
-{
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
-    "inputs": {
-        "upload": ["{upload Corse Sud}"],
-        "stored_data": ["{stored data Corse Nord}"]
-    },
-    "output": {
-        "stored_data": {
-            "name": "SCAN 1000 Corse complète",
-            "storage_tags": ["PYRAMIDE"]
-        }
-    },
-    "parameters": {}
-}
-```
-???
-????
-<br>
+- Lancement de l’exécution : ID de la données stockée `{stored data Corse}`
+- À la fin, on peut voir que notre nouvelle pyramide a une dépendance : elle utilise notre première pyramide, qu’on ne pourra plus supprimer
 
-- Lancement de l'exécution : ID de la données stockée `{stored data Corse}`
-- À la fin, on peut voir que notre nouvelle pyramide a une dépendance : elle utilise notre première pyramide, qu'on ne pourra plus supprimer
-
-???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
-```
-??? Corps de réponse JSON
-```json
-{
-    "used_by": [],
-    "use": [
-        {
-            "name": "SCAN 1000 Nord Corse",
-            "_id": "{stored data Corse Nord}"
-        }
-    ]
-}
-```
-???
-????
-<br>
-
-### Diffusion
-
-- Mise à jour de la configuration WMTS-TMS : on change le titre, le résumé et surtout la donnée stockée utilisée. À ce stade, la diffusion n'a pas encore été mise à jour
-
-???? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}
-```
-??? Corps de requête JSON
-```json
-{
-    "type": "WMTS-TMS",
-    "name": "SCAN 1000 Corse complète",
-    "layer_name": "scan1000_corse",
-    "metadata": [
-        {
-            "format": "application/xml",
-            "url": "https://data.geopf.fr/csw?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://standards.iso.org/iso/19115/-3/mdb/2.0&elementSetName=full&ID=IGNF_SCAN-1000",
-            "type": "ISO19115:2003"
-        }
-    ],
-    "type_infos": {
-        "title": "SCAN 1000 Corse complète",
-        "abstract": "Données SCAN 1000 sur toute la Corse",
-        "keywords": ["Tutoriel", "Raster", "Mise à jour"],
-        "used_data": [
+    ???? GET "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data Corse}/dependencies
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "used_by": [],
+        "use": [
             {
-                "bottom_level": "10",
-                "top_level": "0",
-                "stored_data": "{stored data Corse}"
+                "name": "SCAN 1000 Nord Corse",
+                "_id": "{stored data Corse Nord}"
             }
         ]
-    },
-    "getfeatureinfo": {
-        "stored_data": true
     }
-}
-```
-???
-????
-<br>
+    ```
+    ???
+    ????
+    <br>
 
-- Synchronisation de l'offre : cette action va renvoyer les informations auprès des serveurs de diffusion pour prendre en compte les modifications. Cela permet de conserver l'offre et son identifiant, ce qui est intéressant lorsque des restrictions d'accès ont été définies
+#### Diffusion
 
-??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
+- Mise à jour de la configuration WMTS-TMS : on change le titre, le résumé et surtout la donnée stockée utilisée. À ce stade, la diffusion n’a pas encore été mise à jour
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}
-```
+    ???? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration}
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "type": "WMTS-TMS",
+        "name": "SCAN 1000 Corse complète",
+        "layer_name": "scan1000_corse",
+        "metadata": [
+            {
+                "format": "application/xml",
+                "url": "https://data.geopf.fr/csw?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://standards.iso.org/iso/19115/-3/mdb/2.0&elementSetName=full&ID=IGNF_SCAN-1000",
+                "type": "ISO19115:2003"
+            }
+        ],
+        "type_infos": {
+            "title": "SCAN 1000 Corse complète",
+            "abstract": "Données SCAN 1000 sur toute la Corse",
+            "keywords": ["Tutoriel", "Raster", "Mise à jour"],
+            "used_data": [
+                {
+                    "bottom_level": "10",
+                    "top_level": "0",
+                    "stored_data": "{stored data Corse}"
+                }
+            ]
+        },
+        "getfeatureinfo": {
+            "stored_data": true
+        }
+    }
+    ```
+    ???
+    ????
+    <br>
 
-???
-<br>
+- Synchronisation de l’offre : cette action va renvoyer les informations auprès des serveurs de diffusion pour prendre en compte les modifications. Cela permet de conserver l’offre et son identifiant, ce qui est intéressant lorsque des restrictions d’accès ont été définies
+
+    ??? PUT "{{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/offerings/{offering}
+    ```
+    ???
+    <br>
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-maj/wmts_rastermaj_complet.png){.fr-responsive-img .frx-border-img .frx-img-contained}

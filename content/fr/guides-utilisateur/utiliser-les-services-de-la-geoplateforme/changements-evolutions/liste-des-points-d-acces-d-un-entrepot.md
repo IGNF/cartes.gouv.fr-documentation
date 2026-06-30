@@ -16,11 +16,9 @@ date: 2025-06-30
 Il est possible de consulter les points d’accès disponibles pour un entrepôt avec la nouvelle route d’<span lang="en">_API_</span> « GET /datastores/{datastore}/endpoints », avec des filtrages sur les noms, types et quotas.
 
 ???? GET "/datastores/{datastore}/endpoints"
-
 ```plain
 /datastores/{datastore}/endpoints
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [

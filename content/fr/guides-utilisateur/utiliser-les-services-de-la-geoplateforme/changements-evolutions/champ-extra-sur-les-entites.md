@@ -28,7 +28,6 @@ Il peut être ajouté et mis à jour via la route « PATCH/datastores/{datastor
 Exemple d’utilisation pour une livraison :
 
 ???? PATCH "/datastores/{datastore}/uploads/{upload}"
-
 ```plain
 /datastores/{datastore}/uploads/{upload}
 ```

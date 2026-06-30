@@ -16,26 +16,21 @@ Le joker est le caractère « % ». Attention de bien mettre « %25 » pour 
 ### Routes d’entrepôt
 
 ??? GET "/datastores/{datastore}/checks"
-
 ```plain
 /datastores/{datastore}/checks
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
         ["name = `%25string%25`"]
     ]
 }) }}
-
 ???
 
 ??? GET "/datastores/{datastore}/configurations"
-
 ```plain
 /datastores/{datastore}/configurations
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
@@ -43,65 +38,51 @@ Le joker est le caractère « % ». Attention de bien mettre « %25 » pour 
         ["layer_name = `%25string%25`"]
     ]
 }) }}
-
 ???
 
 ??? GET "/datastores/{datastore}/offerings"
-
 ```plain
 /datastores/{datastore}/offerings
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
         ["layer_name = `%25string%25`"]
     ]
 }) }}
-
 ???
 
 ??? GET "/datastores/{datastore}/annexes"
-
 ```plain
 /datastores/{datastore}/annexes
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
         ["mime_type = `%25string%25`"]
     ]
 }) }}
-
 ???
-
 <br>
 
 ### Routes personnelles
 
 ??? GET "/users/me/documents"
-
 ```plain
 /users/me/documents
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
         ["mime_type = `%25string%25`"]
     ]
 }) }}
-
 ???
 
-
 ??? GET "/users/me/permissions"
-
 ```plain
 /users/me/permissions
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
@@ -110,15 +91,12 @@ Le joker est le caractère « % ». Attention de bien mettre « %25 » pour 
         ["layer_name = `%25string%25 : ne retourne que les permissions qui contiennent au moins une couche correspondant à cette chaîne`"]
     ]
 }) }}
-
 ???
 
 ??? GET "/users/me/keys"
-
 ```plain
 /users/me/keys
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
@@ -130,19 +108,15 @@ Le joker est le caractère « % ». Attention de bien mettre « %25 » pour 
         ["name = `%25string%25`"]
     ]
 }) }}
-
 ???
-
 <br>
 
 ### Routes globales
 
 ??? GET "/statics/tms"
-
 ```plain
 /statics/tms
 ```
-
 {{ component("table", {
     headers: ["Paramètres de requête"],
     data: [
@@ -151,5 +125,4 @@ Le joker est le caractère « % ». Attention de bien mettre « %25 » pour 
         ["resolution = `0.1 : ne retourne que les TMS incluant la résolution donnée entre le plus haut niveau et le plus bas`"]
     ]
 }) }}
-
 ???

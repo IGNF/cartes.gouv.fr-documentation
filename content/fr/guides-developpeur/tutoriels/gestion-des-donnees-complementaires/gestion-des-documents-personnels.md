@@ -1,9 +1,54 @@
 ---
 title: Gestion des documents personnels
 description: Téléversement de fichiers en tant que document personnel et partage
-layout: layouts/parent.njk
+layout: layouts/parent_nav_tertiaire.njk
 eleventyNavigation:
     key: Gestion des documents personnels
     order: 3
 pictogram: digital/data-visualization.svg
+tertiaryTitle: Téléversement
+subTitle: Téléversement d’un document personnel
 ---
+
+{% from "components/component.njk" import component with context %}
+
+Les documents personnels permettent d’héberger des fichiers rattachés à son propre compte, sans avoir besoin d’un entrepôt. Il sera alors possible de le partager avec d’autres comptes pour qu’ils puissent le consulter, ou via une URL publique, permettant alors la consultation anonyme du fichier.
+
+### Téléversement d’un fichier sous forme de document personnel
+
+Il n’y a aucun contrôle sur le type de fichier téléversé, il sera stocké tel quel et son poids sera compté dans le quota de stockage des documents personnels (consultable via l’appel **GET** `/users/me`).
+
+Le fichier utilisé dans cet exemple est [croquis.geojson](/data/tutoriels/complementaire/croquis.geojson)
+
+???? POST "{{ urls.api_entrepot }}/users/me/documents"
+```plain
+{{ urls.api_entrepot }}/users/me/documents
+```
+{{ component("table", {
+    headers: ["Corps de requête Multipart"],
+    data: [
+        ["file = &lt;croquis.geojson&gt;"],
+        ["name = Mon super croquis"],
+        ["description = Un petit coucou géoréférencé à l’IGN"],
+        ["labels = tutoriels, croquis"]
+    ]
+}) }}
+??? Corps de réponse JSON
+```json
+{
+    "name": "Mon super croquis",
+    "description": "Un petit coucou géoréférencé à l’IGN",
+    "size": 5435,
+    "mime_type": "application/octet-stream",
+    "labels": [
+        "tutoriels",
+        "croquis"
+    ],
+    "_id": "{document}"
+}
+```
+???
+????
+<br>
+
+Les labels vont permettre de filtrer les documents lors de recherches ultérieures. À ce stade, seul le compte propriétaire du document peut télécharger le fichier, via l’API Entrepôt (`{{ urls.api_entrepot }}/users/me/documents/{document}/file`).

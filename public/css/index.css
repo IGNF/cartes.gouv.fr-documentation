@@ -311,13 +311,69 @@ a.custom-center-btn.fr-btn {
         padding: 0;
     }
 
-    .dsfr-doc-tab-navigation ul {
+    .dsfr-doc-tab-navigation__scroll-wrapper {
+        display: flex;
+        align-items: stretch;
         background-image: linear-gradient(0deg, var(--border-default-grey), var(--border-default-grey));
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: 100% 2px;
+    }
+
+    .dsfr-doc-tab-navigation ul {
+        flex: 1;
+        min-width: 0;
         flex-direction: row;
         padding-top: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .dsfr-doc-tab-navigation ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dsfr-doc-tab-navigation__scroll-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--background-default-grey);
+        background-image: linear-gradient(0deg, var(--border-default-grey), var(--border-default-grey));
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 2px;
+        border: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+        padding: 0 0.5rem;
+        color: var(--text-default-grey);
+    }
+
+    .dsfr-doc-tab-navigation__scroll-btn::before {
+        content: "";
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background-color: currentColor;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+
+    .dsfr-doc-tab-navigation__scroll-btn--prev::before {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E");
+    }
+
+    .dsfr-doc-tab-navigation__scroll-btn--next::before {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E");
+    }
+
+    .dsfr-doc-tab-navigation__scroll-wrapper.has-prev .dsfr-doc-tab-navigation__scroll-btn--prev,
+    .dsfr-doc-tab-navigation__scroll-wrapper.has-next .dsfr-doc-tab-navigation__scroll-btn--next {
         display: flex;
     }
 
@@ -329,6 +385,7 @@ a.custom-center-btn.fr-btn {
         padding: 0.75rem;
         font-size: 14px;
         font-weight: 400;
+        white-space: nowrap;
     }
 
     .dsfr-doc-tab-navigation__tab:hover:not([aria-current="page"]) {

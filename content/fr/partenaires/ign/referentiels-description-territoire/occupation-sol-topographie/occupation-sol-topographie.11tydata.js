@@ -1,7 +1,7 @@
 module.exports = {
     segments: [
         {
-            url: "/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie",
+            url: "/partenaires/ign/referentiels-description-territoire/occupation-sol-topographie/",
             title: "Occupation du sol et topographie",
         },
     ],

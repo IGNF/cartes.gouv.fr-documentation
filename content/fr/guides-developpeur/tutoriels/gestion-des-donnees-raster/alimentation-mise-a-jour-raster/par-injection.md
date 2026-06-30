@@ -6,14 +6,15 @@ eleventyNavigation:
     order: 2
 summary:
     visible: true
-    depth: 2
+    depth: 3
+tertiaryTitle: Par injection
 ---
 
 {% from "components/component.njk" import component with context %}
 
-L'avantage de la mise à jour par injection, c'est qu'il n'est pas nécessaire de reconfigurer la diffusion : les flux sont mis à jour "à chaud".
+L’avantage de la mise à jour par injection, c’est qu’il n’est pas nécessaire de reconfigurer la diffusion : les flux sont mis à jour « à chaud ».
 
-En revanche, la modification n'étant pas réversible, on peut détériorer la pyramide et le flux si les données livrées ne sont pas valides.
+En revanche, la modification n’étant pas réversible, on peut détériorer la pyramide et le flux si les données livrées ne sont pas valides.
 
 ```mermaid
 ---
@@ -34,7 +35,7 @@ stateDiagram
     PUB_TILED1: Publication en WMTS/TMS pour validation
     note right of PUB_TILED1
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
@@ -55,189 +56,188 @@ stateDiagram
     class LIV1,LIV2,PUB_TILED1 concepts
 ```
 
-## Initialisation de la pyramide et des flux
+### Initialisation de la pyramide et des flux
 
-### Calcul de la pyramide
+#### Calcul de la pyramide
 
 - Création de la livraison
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/uploads
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "description": "SCAN 1000 Nord Corse",
+        "name": "SCAN 1000 Nord Corse",
+        "type": "RASTER",
+        "srs": "EPSG:2154"
+    }
+    ```
+    ???
+    ????
+    <br>
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/uploads
-```
-??? Corps de requête JSON
-```json
-{
-    "description": "SCAN 1000 Nord Corse",
-    "name": "SCAN 1000 Nord Corse",
-    "type": "RASTER",
-    "srs": "EPSG:2154"
-}
-```
-???
-????
-<br>
+- Livraison des fichiers :
 
-- Livraison des fichiers :
-
-{{ component("download", {
-    title: "scan1000_corse_nord.tif",
-    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif",
-    detail: "TIFF - 7.5 Mo"
-}) }}
+    {{ component("download", {
+        title: "scan1000_corse_nord.tif",
+        href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif",
+        detail: "TIFF - 7.5 Mo"
+    }) }}
 
 - Fermeture de la livraison
-- Création de l'exécution de traitement :
+- Création de l’exécution de traitement :
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
-```
-??? Corps de requête JSON
-```json
-{
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
-    "inputs": {
-        "upload": ["{upload Corse Nord}"]
-    },
-    "output": {
-        "stored_data": {
-            "name": "SCAN 1000 Corse par injection",
-            "storage_tags": ["PYRAMIDE"]
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "processing": "{{ ids.processings['raster_to_pyramid'] }}",
+        "inputs": {
+            "upload": ["{upload Corse Nord}"]
+        },
+        "output": {
+            "stored_data": {
+                "name": "SCAN 1000 Corse par injection",
+                "storage_tags": ["PYRAMIDE"]
+            }
+        },
+        "parameters": {
+            "tms": "PM",
+            "compression": "jpg",
+            "interpolation": "bicubic"
         }
-    },
-    "parameters": {
-        "tms": "PM",
-        "compression": "jpg",
-        "interpolation": "bicubic"
     }
-}
-```
-???
-????
+    ```
+    ???
+    ????
+    <br>
+
+- Lancement de l’exécution
+- Les informations sur nos données stockées sont :
+    - ID `{stored data Corse}`
+    - taille : 4 967 972 octets
+    - étendue : 7.70943739,42.08814213 10.2673901,43.12553835
+
 <br>
 
-- Lancement de l'exécution
-- Les informations sur notre donnée stockées sont :
-    - ID `{stored data Corse}`
-    - taille : 4 967 972 octets
-    - étendue : 7.70943739,42.08814213 10.2673901,43.12553835
-
-### Diffusion
+#### Diffusion
 
 - Création de la configuration WMTS-TMS
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
-
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/configurations
-```
-??? Corps de requête JSON
-```json
-{
-    "type": "WMTS-TMS",
-    "name": "SCAN 1000 Corse",
-    "layer_name": "scan1000_corse_injection",
-    "metadata": [
-        {
-            "format": "application/xml",
-            "url": "https://data.geopf.fr/csw?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://standards.iso.org/iso/19115/-3/mdb/2.0&elementSetName=full&ID=IGNF_SCAN-1000",
-            "type": "ISO19115:2003"
-        }
-    ],
-    "type_infos": {
-        "title": "SCAN 1000 Corse",
-        "abstract": "Données SCAN 1000 sur la Corse, alimenté par injection",
-        "keywords": ["Tutoriel", "Raster", "Mise à jour", "Injection"],
-        "used_data": [
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/configurations
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "type": "WMTS-TMS",
+        "name": "SCAN 1000 Corse",
+        "layer_name": "scan1000_corse_injection",
+        "metadata": [
             {
-                "bottom_level": "10",
-                "top_level": "0",
-                "stored_data": "{stored data Corse}"
+                "format": "application/xml",
+                "url": "https://data.geopf.fr/csw?REQUEST=GetRecordById&SERVICE=CSW&VERSION=2.0.2&OUTPUTSCHEMA=http://standards.iso.org/iso/19115/-3/mdb/2.0&elementSetName=full&ID=IGNF_SCAN-1000",
+                "type": "ISO19115:2003"
             }
-        ]
-    },
-    "getfeatureinfo": {
-        "stored_data": true
+        ],
+        "type_infos": {
+            "title": "SCAN 1000 Corse",
+            "abstract": "Données SCAN 1000 sur la Corse, alimentées par injection",
+            "keywords": ["Tutoriel", "Raster", "Mise à jour", "Injection"],
+            "used_data": [
+                {
+                    "bottom_level": "10",
+                    "top_level": "0",
+                    "stored_data": "{stored data Corse}"
+                }
+            ]
+        },
+        "getfeatureinfo": {
+            "stored_data": true
+        }
     }
-}
-```
-???
-????
-<br>
+    ```
+    ???
+    ????
+    <br>
 
-- Création de l'offre
+- Création de l’offre
 
 On met tout de suite les informations cible, le but étant de ne pas avoir à modifier la diffusion à chaque mise à jour.
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/raster/alimentation-maj/wmts_rastermaj_nord.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-## Ajout du deuxième jeu de données
+### Ajout du deuxième jeu de données
 
-### Modification de la pyramide
+#### Modification de la pyramide
 
 - Création de la livraison
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/uploads
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "description": "SCAN 1000 Sud Corse",
+        "name": "SCAN 1000 Sud Corse",
+        "type": "RASTER",
+        "srs": "EPSG:2154"
+    }
+    ```
+    ???
+    ????
+    <br>
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/uploads
-```
-??? Corps de requête JSON
-```json
-{
-    "description": "SCAN 1000 Sud Corse",
-    "name": "SCAN 1000 Sud Corse",
-    "type": "RASTER",
-    "srs": "EPSG:2154"
-}
-```
-???
-????
-<br>
+- Livraison des fichiers :
 
-- Livraison des fichiers :
-
-{{ component("download", {
-    title: "scan1000_corse_sud.tif",
-    href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
-    detail: "TIFF - 7.7 Mo"
-}) }}
+    {{ component("download", {
+        title: "scan1000_corse_sud.tif",
+        href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
+        detail: "TIFF - 7.7 Mo"
+    }) }}
 
 - Fermeture de la livraison
-- Création de l'exécution de traitement : on renseigne en sortie la pyramide déjà existante, pour signifier qu'on souhaite la modifier
+- Création de l’exécution de traitement : on renseigne en sortie la pyramide déjà existante, pour signifier qu’on souhaite la modifier
 
-???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions"
+    ```plain
+    {{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
+    ```
+    ??? Corps de requête JSON
+    ```json
+    {
+        "processing": "{{ ids.processings['raster_to_pyramid'] }}",
+        "inputs": {
+            "upload": ["{upload Corse Sud}"]
+        },
+        "output": {
+            "stored_data": {
+                "id": "{stored data Corse}"
+            }
+        },
+        "parameters": {}
+    }
+    ```
+    ???
+    ????
+    <br>
 
-```title="Contenu"
-{{ urls.api_entrepot }}/datastores/{datastore}/processings/executions
-```
-??? Corps de requête JSON
-```json
-{
-    "processing": "{{ ids.processings['raster-to-pyramid'] }}",
-    "inputs": {
-        "upload": ["{upload Corse Sud}"]
-    },
-    "output": {
-        "stored_data": {
-            "id": "{stored data Corse}"
-        }
-    },
-    "parameters": {}
-}
-```
-???
-????
+- Lancement de l’exécution
+- Les informations sur nos données stockées sont maintenant :
+    - taille : 5 102 292 octets
+    - étendue : 7.55821978,41.22153919 10.2673901,43.12553835
+
 <br>
 
-- Lancement de l'exécution
-- Les informations sur notre donnée stockées sont maintenant :
-    - taille : 5 102 292 octets
-    - étendue : 7.55821978,41.22153919 10.2673901,43.12553835
-
-### Visualisation
+#### Visualisation
 
 Sans action supplémentaire sur la diffusion, on peut voir nos données mises à jour.

@@ -1,17 +1,18 @@
 ---
 title: Gestion de données MNT
-description: Téléversement d'images à canal flottant, calcul de pyramides, diffusion en WMS et utilisation dans le service d'altimétrie
+description: Téléversement d’images à canal flottant, calcul de pyramides, diffusion en WMS et utilisation dans le service d’altimétrie
 mermaid: true
-layout: layouts/parent.njk
+layout: layouts/parent_nav_tertiaire.njk
 eleventyNavigation:
     key: Gestion de données MNT
     order: 3
 pictogram: digital/data-visualization.svg
+tertiaryTitle: Présentation
 ---
 
 {% from "components/component.njk" import component with context %}
 
-Le but de ce tutoriel est de diffuser des données raster (images géoréférencées) de type MNT (canal flottant) en WMTS/TMS, WMS et sur le service d'altimétrie. Les concepts de l'entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
+Le but de ce tutoriel est de diffuser des données raster (images géoréférencées) de type MNT (canal flottant) en WMTS/TMS, WMS et sur le service d’altimétrie. Les concepts de l’entrepôt manipulés lors de chaque étape sont détaillés dans les notes, avec le terme français et celui technique entre parenthèses.
 
 ```mermaid
 ---
@@ -26,7 +27,7 @@ stateDiagram
         Vérification (check)
     end note
 
-    PYR: Calcul de la pyramide d'image
+    PYR: Calcul de la pyramide d’image
     note left of PYR
         Traitement (processing)
         Exécution de traitement (processing execution)
@@ -36,22 +37,22 @@ stateDiagram
     PUB_TILED: Publication en WMTS/TMS
     note right of PUB_TILED
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
     PUB_WMS: Publication en WMS
     note right of PUB_WMS
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
         Fichier statique (static)
     end note
 
-    PUB_ALTI: Publication sur le service d'altimétrie
+    PUB_ALTI: Publication sur le service d’altimétrie
     note right of PUB_ALTI
         Configuration (configuration)
-        Point d'accès (endpoint)
+        Point d’accès (endpoint)
         Offre (offering)
     end note
 
@@ -83,7 +84,7 @@ flowchart LR
         sto["Stockage (storage)"]
         chec["Vérification (check)"]
         proc["Traitement (processing)"]
-        endp["Point d'accès (endpoint)"]
+        endp["Point d’accès (endpoint)"]
     end
 
 	subgraph dat[Entrepôt]
@@ -94,7 +95,7 @@ flowchart LR
         off["Offre (offering)"]
 	end
 
-    dat -- à accès à une partie, avec quota ----> glo
+    dat -- a accès à une partie, avec quota ----> glo
 
     exe -- utilise en entrée --> upl
     exe -- génère en sortie --> sd
@@ -119,18 +120,18 @@ flowchart LR
 
 ## Données du tutoriel
 
-Les données de l'exemple sont constituées d'une dalle kilométrique MNT issue du LidarHD (50 cm de résolution), au format Geotiff :
+Les données de l’exemple sont constituées d’une dalle kilométrique MNT issue du LidarHD (50 cm de résolution), au format Geotiff :
 
 {{ component("download", {
     title: "[GeoTIFF] LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif",
     href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif",
-    detail: "TIFF - 15.3 Mo"
+    detail: "TIFF - 15.3 Mo"
 }) }}
 
-On pourra traiter de la même manière la dalle kilométrique correspondante :
+On pourra traiter de la même manière la dalle kilométrique correspondante :
 
 {{ component("download", {
     title: "[MNS] LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
     href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
-    detail: "TIFF - 15.3 Mo"
+    detail: "TIFF - 15.3 Mo"
 }) }}

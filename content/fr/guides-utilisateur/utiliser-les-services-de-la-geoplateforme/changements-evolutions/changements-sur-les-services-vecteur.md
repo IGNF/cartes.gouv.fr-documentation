@@ -14,13 +14,13 @@ date: 2026-03-04
 
 ## Changements
 
-Lorsque l’on souhaite livrer une donnée vecteur, le <span lang="en">_check-vector_</span> va contrôler le nom des tables de la donnée (pour qu’elle puisse être comprise par <span lang="en">_Geoserver_</span>). Les tables devront respecter ces règles :
+Lorsque l’on souhaite livrer une donnée vecteur, le <span lang="en">_check-vector_</span> va contrôler le nom des tables de la donnée (pour qu’elle puisse être comprise par GeoServer). Les tables devront respecter ces règles :
 - doit commencer par un caractère de [a-z_]
 - ne doit contenir que des caractères de [a-z0-9_]
 
 <br>
 
-Changements d’informations dans le <span lang="en">_GetCapabilities CSW_</span>.
+Changements d’informations dans le GetCapabilities CSW.
 
 ## Correction de bugs
 

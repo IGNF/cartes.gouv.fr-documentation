@@ -2,11 +2,11 @@ module.exports = {
     tags: ["Géoplateforme", "Tutoriel", "Index des tutoriels"],
     segments: [
         {
-            url: "/guides-developpeur/tutoriels",
-            title: "Tutoriels d'utilisation de l'Entrepôt",
+            url: "/guides-developpeur/tutoriels/",
+            title: "Tutoriels d’utilisation de l’Entrepôt",
         },
     ],
     eleventyNavigation: {
-        parent: "Tutoriels d'utilisation de l'Entrepôt",
+        parent: "Tutoriels d’utilisation de l’Entrepôt",
     },
 };
