@@ -18,7 +18,7 @@ Co-construisez une base de données à l’aide de signalements et de contributi
 
 Ce service rejoindra cartes.gouv.fr à partir de 2026.
 
-<p style="text-align: center;"><span class="fr-badge fr-badge--new">à venir</span></p>
+<p class="text-center"><span class="fr-badge fr-badge--new">à venir</span></p>
 
 Pour les producteurs et responsables de données, le service permettra de gérer une communauté autour de votre base de données et d’ouvrir celle-ci à la collaboration via des signalements ou des contributions directes.
 

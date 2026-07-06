@@ -30,7 +30,7 @@ La v3 se distingue également par une amélioration notable dans la finesse de d
 ---
 
 ![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-03-bdforet-v3/01-bdforet.png  "BD Forêt v3"){.fr-responsive-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Zoom sur zone test sur la région Auvergne-Rhône-Alpes </figcaption>
+<figcaption class="fr-content-media__caption fr-mb-6v text-center">Zoom sur zone test sur la région Auvergne-Rhône-Alpes </figcaption>
 
 :::info Légende
 Extrait de la BD Forêt croisée avec une orthophoto IGN. Les couleurs distinguent les types de forêts et essences (feuillus, conifères, mélanges, jeunes peuplements, coupes rases…) et le type de remplissage des polygones indique le caractère ouvert ou fermé de la forêt.

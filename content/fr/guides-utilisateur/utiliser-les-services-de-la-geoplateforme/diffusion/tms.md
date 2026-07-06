@@ -57,4 +57,4 @@ https://data.geopf.fr/tms/1.0.0/{Layer}/{z}/{x}/{y}.pbf
 https://data.geopf.fr/annexes/ressources/vectorTiles/styles/{Layer}/{style}.json
 ```
 
-Retrouvez dans l’aperçu cartographique des fiches produits les flux TMS et les différents styles associés : [Accéder au catalogue](https://cartes.gouv.fr/rechercher-une-donnee/search).
+Retrouvez dans l’aperçu cartographique des fiches produits les flux TMS et les différents styles associés : [Accéder au catalogue](https://cartes.gouv.fr/rechercher-une-donnee/search?format=TMS).
