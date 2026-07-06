@@ -17,7 +17,7 @@ Mobilisez les données de cartes.gouv.fr et créez des cartes personnalisées, i
 
 Ce service rejoindra progressivement cartes.gouv.fr à partir de 2026.
 
-<p style="text-align: center;"><span class="fr-badge fr-badge--new">à venir</span></p>
+<p class="text-center"><span class="fr-badge fr-badge--new">à venir</span></p>
 
 Il offrira la création de cartes à partir de flux ou de données importées, la personnalisation de la symbologie et le partage en ligne, gratuitement.
 
