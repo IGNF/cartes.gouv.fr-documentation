@@ -23,9 +23,11 @@ Nous en avons déjà parlé précédemment sous le nom de code [PLAN LiDAR](../
 
 C’est un nouveau type de cartographie des paysages du territoire français qui intègre au fond de carte la richesse des informations d’ombrages issus des données réalisées dans le cadre du [programme LiDAR HD]({{ urls.rechercher_une_donnee }}/dataset/IGNF_MNS-LIDAR-HD) et d’occupation du sol issu des [données CoSIA]({{ urls.rechercher_une_donnee }}/dataset/IGNF_COSIA), permettant de donner vie à une nouvelle représentation grande échelle très détaillée sur l’ensemble du territoire.
 
-La version que vous retrouverez dans l’application met en avant des éléments au-dessus du sol, tels que la végétation, les bâtiments et leurs ombres portées.
+Vous pouvez la découvrir et la parcourir pendant l’été au sein de l’application Cartes IGN.
 
-Le Plan IGN HD sera disponible sur l’intégralité des zones couvertes par le programme LiDAR HD, en licence ouverte, en septembre, dans les ressources proposées par l’IGN dans la Géoplateforme si cette phase de test est concluante. 
+La version que vous retrouverez dans l’application souligne les reliefs et met en avant des éléments au-dessus du sol, tels que la végétation, les bâtiments et leurs ombres portées.
+
+Si cette phase de test est concluante, le Plan IGN HD sera disponible en licence ouverte sur l’intégralité des zones couvertes par le programme LiDAR HD, à partir du mois de septembre, dans les ressources proposées par l’IGN dans la Géoplateforme.
 
 ![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/01-plan-ign-hd-et-sentiers.webp "Couverture actuelle du Plan IGN HD dans l’application mobile Cartes IGN"){.fr-responsive-img .frx-border-img .frx-img-contained}
 <figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Couverture actuelle du Plan IGN HD dans l’application mobile Cartes IGN</figcaption>
@@ -35,7 +37,7 @@ La technique utilisée exploite la précision centimétrique des données LiDAR�
 - La structure du relief repose sur la fusion d’un modèle numérique de terrain (MNT) qui accentue les ruptures de pente majeures, tandis que le modèle numérique de surface (MNS) intègre le sursol pérenne. En associant des ombrages unidirectionnels et multidirectionnels, le rendu révèle les microreliefs, quelle que soit leur orientation géographique. À cette base s’ajoute un raster d’ombres portées réelles, calculé par la simulation géométrique d’un vecteur lumineux selon l’azimut et l’altitude du soleil. Cette technique projette les zones d’ombre des obstacles topographiques du MNS. L’objectif est d’apporter de la profondeur au rendu.
 - Les silhouettes du bâti et de la végétation sont soulignées par une technique d’encrage. Ce traitement, issu d’un calcul de pentes appliqué aux MNT et MNS, a pour but de faire ressortir les éléments structurants du paysage tout en améliorant la lisibilité des bâtis et des grands arbres en forêt, mais aussi des rochers en montagne.
 - L’occupation du sol combine quant à elle une carte des classes et les données CoSIA issues d’une classification par intelligence artificielle. Quand la carte des classes isole le bâti et segmente la végétation selon sa hauteur, CoSIA enrichit la représentation et donne une information sur la nature du couvert végétal.
-- Enfin, la carte est complétée par les données vectorielles de la BD TOPO®, représentées selon la symbolisation utilisée sur Plan IGN.
+- Enfin, la carte est complétée par les données vectorielles issues de la BD TOPO®, représentées selon la symbolisation utilisée sur Plan IGN.
 
 ![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/02-plan-ign-hd-et-sentiers.webp "Données utilisées pour réaliser le Plan IGN HD"){.fr-responsive-img .frx-border-img .frx-img-contained}
 <figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Illustration des données utilisées pour réaliser le Plan IGN HD</figcaption>
@@ -74,9 +76,9 @@ Pour cette première version du flux, nous n’avons pas détaillé l’origine 
 ![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/06-plan-ign-hd-et-sentiers.webp "Circuit du Tuc des Neuf Églises"){.fr-responsive-img .frx-border-img .frx-img-contained}
 <figcaption class="fr-content-media__caption fr-mb-6v" style="text-align: center;">Consultation du circuit du Tuc des Neuf Églises via la couche Sentiers de randonnée balisés dans l’application mobile Cartes IGN</figcaption>
 
-Ces ressources vous sont offertes grâce aux partenariats de longue date qui lient l’IGN aux différentes associations locales et collectivités qui œuvrent au quotidien à offrir une offre de chemins balisés et sécurisés sur toute la France pour découvrir notre territoire en dehors des sentiers battus. 
+Ces ressources vous sont proposées grâce aux partenariats de longue date qui lient l’IGN aux différentes associations locales et collectivités qui œuvrent au quotidien à offrir une offre de chemins balisés et sécurisés sur toute la France pour découvrir notre territoire en dehors des sentiers battus. Vous pouvez les découvrir et les parcourir pendant l’été au sein de l’application Cartes IGN.
 
-La donnée Sentiers de randonnée balisés sera proposée fin 2026 à tous les utilisateurs dans les mêmes conditions et en complément du SCAN 25® à l’issue de cette phase de test et de retours utilisateurs.
+À l’issue de cette phase de test et de retours utilisateurs, la donnée Sentiers de randonnée balisés sera proposée à tous les utilisateurs fin 2026, dans les mêmes conditions que le SCAN 25®.
 
 :::callout Transmettez-nous vos avis et commentaires
 Si vous souhaitez nous faire part de vos retours relatifs aux deux nouvelles cartes Plan IGN HD et Sentiers de randonnée balisés ou encore valoriser votre offre de chemins et d’itinéraires sur votre territoire, 
@@ -84,9 +86,5 @@ contactez-nous à l’adresse [contact.geoservices@ign.fr](mailto:contact.geoser
 :::
 
 :::info SCAN 25®, Sentiers de randonnée balisés et licence d’utilisation et d’exploitation
-L’IGN produit et édite les données SCAN 25®, SCAN 100® ainsi que les flux Cartes IGN, Carte TOPO 25 (SCAN 25®) et Sentiers de randonnée balisés avec des données de partenaires qui sont soumis eux-mêmes à des redevances versées par l’IGN à différents partenaires.
-
-Ces données constituent une image numérique du territoire français à différentes échelles qui permettent de visualiser, localiser et positionner des informations géographiques, saisir et mettre à jour des données métiers. Ces données cartographiques faisant l’objet d’une diffusion publique ne sont pas soumises aux dispositions du titre 1 du livre III du Code des Relations entre le Public et l’Administration (CRPA) ni à l’exercice du droit d’accès à l’information environnementale (article L-124-1 du code de l’environnement).
-
-En conséquence, ces données ne sauraient être communiquées en application du droit d’accès aux documents administratifs et à l’information environnementales et font l’objet d’une licence d’utilisation et d’exploitation spécifique. 
+L’IGN produit et édite les bases de données SCAN 25®, SCAN 100® ainsi que les flux Cartes IGN, Carte TOPO 25 et sentiers de randonnée balisés à partir de données de partenaires qui sont soumises à des licences et redevances. Ces bases de données et flux édités par l’IGN ne sont donc pas en licence ouverte et font eux-même l’objet d’une licence d’utilisation et d’exploitation spécifique.
 :::
