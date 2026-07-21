@@ -11,8 +11,7 @@ date: 2026-05-02
 
 {% from "components/component.njk" import component with context %}
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-01-maj.png){.fr-responsive-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v text-center">Actualité mise à jour le 29 mai 2026</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-maj.png", "Actualité mise à jour le 29 mai 2026" %}
 
 #### Services web
 

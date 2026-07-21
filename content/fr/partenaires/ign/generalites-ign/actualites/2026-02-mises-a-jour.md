@@ -55,9 +55,7 @@ date: 2026-02-03
 
 Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS Raster et WMTS) et BD Géodésie ([IGNF_GEODESIE-XXX services WFS et WMS Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_GEODESIE-ET-NIVELLEMENT){target="_blank" rel="noopener noreferrer" title="GEODESIE ET NIVELLEMENT - ouvre une nouvelle fenêtre"}) sont mises à jour quotidiennement et la ressource Base Adresse Nationale ([BAN.DATA.GOUV services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BAN-PLUS){target="_blank" rel="noopener noreferrer" title="BAN PLUS - ouvre une nouvelle fenêtre"}) est actualisée hebdomadairement.
 
-![Archives Nationales - Carte de Cassini - La Rochelle (17)](/img/partenaires/ign/generalites/actualites/2026-02-cassini.png){.fr-responsive-img .frx-img-contained}
-
-<figcaption class="fr-content-media__caption fr-mb-6v">Archives Nationales - Carte de Cassini - La Rochelle (17)</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-02-cassini.png", "Archives Nationales - Carte de Cassini - La Rochelle (17)" %}
 
 #### Téléchargement
 
@@ -76,6 +74,4 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS 
     ]
 }) }}
 
-![IGN-F - Accessibilité physique des forêts - Région Occitanie](/img/partenaires/ign/generalites/actualites/2026-02-accessibilite-forets.png){.fr-responsive-img .frx-img-contained}
-
-<figcaption class="fr-content-media__caption fr-mb-6v">IGN-F - Accessibilité physique des forêts - Région Occitanie</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-02-accessibilite-forets.png", "IGN-F - Accessibilité physique des forêts - Région Occitanie" %}
