@@ -249,7 +249,7 @@ Pour afficher une image :
 - Image avec légende :
     ```njk
     {% raw %}
-    {% imageContent "/img/partenaires/producteurABC/…/monImage.png", "Description de l’image", "Légende de l’image", ".classe-css…" %}
+    {% imageContent "/img/partenaires/producteurABC/…/monImage.png", "Description de l’image", "Légende de l’image", "classe-css…" %}
     {% endraw %}
     ```
     :::info
