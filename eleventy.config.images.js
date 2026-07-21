@@ -22,7 +22,7 @@ const getImageAttributes = (cls, alt, sizes) => {
 
 const relativeToInputPath = (inputPath, relativeFilePath) => {
     if (relativeFilePath.startsWith("/img/")) {
-        return path.join(__dirname, "public", relativeFilePath);
+        return path.join(__dirname, "public", relativeFilePath.slice(1));
     }
     let split = inputPath.split("/");
     split.pop();
