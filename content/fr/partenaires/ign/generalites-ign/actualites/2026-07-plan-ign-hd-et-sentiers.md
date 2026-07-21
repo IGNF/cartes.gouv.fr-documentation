@@ -61,6 +61,7 @@ Les sentiers et chemins représentés dans cette ressource correspondent à des 
     <li>
         L’offre proposée par le <a href="https://www.club-vosgien.eu/les-sentiers-du-club-vosgien/nos-itineraires-de-randonnee-2/#filter=r-fullyTranslatedLangus-,r-openState-,sb-sortedBy-0&zc=5.,6.92139,47.98992">Club Vosgien</a>, un réseau de plus de 20 000 km de chemins de randonnée entretenus avec passion leurs bénévoles dévoués.
         {% imageContent "/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/05-plan-ign-hd-et-sentiers.webp", "Consultation d’un Circuit court du Club Vosgien via la couche Sentiers de randonnée balisés dans l’application mobile Cartes IGN" %}
+    </li>
     <li>
         L’offre compilée, assemblée, recalée et représentée avec passion depuis plus de 10 ans par les techniciens BD TOPO® de l’IGN en se servant des données ouvertes par les collectivités qui <strong>répertorient, protègent et promeuvent les itinéraires de randonnée et de promenade</strong> sur leurs territoires dans les plans départementaux de randonnées pédestre et des plans locaux de randonnées. Ces données n’étant pas systématiquement proposées sous formats ouverts, ces offres ont pu être levées parfois par GNSS directement par les agents IGN lors de leur travail de reconnaissance terrain.
     </li>
