@@ -43,7 +43,10 @@ module.exports = (eleventyConfig) => {
     });
 
     eleventyConfig.addAsyncShortcode("imageContent", async function imageContentShortcode(src, alt, caption, cls = "", widths, sizes) {
-        const figCaption = caption || alt;
+        const escapeHtml = require("escape-html");
+        const figCaption = caption || alt || "";
+        const safeCaption = escapeHtml(figCaption);
+        const safeAlt = escapeHtml(alt || "");
 
         let file = relativeToInputPath(this.page.inputPath, src);
         const options = getOptions(widths);
