@@ -253,7 +253,7 @@ Pour afficher une image :
     {% endraw %}
     ```
     :::info
-    Si le champ correspondant à la légende n’est pas défini ou est défini comme `null`, la légende prendra par défaut la valeur du texte alternatif (ici : « Description de l’image »).
+    Si le champ correspondant à la légende n’est pas défini ou est défini comme `null`, la légende prendra par défaut la valeur du texte alternatif (ici : « Description de l’image »).
     :::
 
 Pour afficher un extrait de code :
