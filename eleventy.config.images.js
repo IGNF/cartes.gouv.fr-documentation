@@ -48,15 +48,11 @@ module.exports = (eleventyConfig) => {
         const safeCaption = escapeHtml(figCaption);
         const safeAlt = escapeHtml(alt || "");
 
-        let file = relativeToInputPath(this.page.inputPath, src);
-        const options = getOptions(widths);
-        options["outputDir"] = path.join(eleventyConfig.dir.output, "img"); // Advanced usage note: `eleventyConfig.dir` works here because we're using addPlugin.
-        let metadata = await eleventyImage(file, options);
-
-        const naturalWidth = Math.max(...Object.values(metadata)[0].map((img) => img.width));
-
         // GIFs are served as-is to preserve animation (eleventy-img would strip it)
         if (src.toLowerCase().endsWith(".gif")) {
+            const sizeOf = require("image-size");
+            const gifFile = relativeToInputPath(this.page.inputPath, src);
+            const { width: naturalWidth } = sizeOf(gifFile);
             return `
 <figure class="fr-content-media" role="group" aria-label="${safeCaption}">
     <div class="fr-content-media__img" style="max-width: ${naturalWidth}px">
@@ -66,12 +62,19 @@ module.exports = (eleventyConfig) => {
 </figure>\n`;
         }
 
+        let file = relativeToInputPath(this.page.inputPath, src);
+        const options = getOptions(widths);
+        options["outputDir"] = path.join(eleventyConfig.dir.output, "img");
+        let metadata = await eleventyImage(file, options);
+
+        const naturalWidth = Math.max(...Object.values(metadata)[0].map((img) => img.width));
+
         return `
-<figure class="fr-content-media" role="group" aria-label="${figCaption}">
+<figure class="fr-content-media" role="group" aria-label="${safeCaption}">
     <div class="fr-content-media__img" style="max-width: ${naturalWidth}px">
         ${eleventyImage.generateHTML(metadata, getImageAttributes(cls, alt, sizes))}
     </div>
-    <figcaption class="fr-content-media__caption text-center">${figCaption}</figcaption>
+    <figcaption class="fr-content-media__caption text-center">${safeCaption}</figcaption>
 </figure>\n`;
     });
 
