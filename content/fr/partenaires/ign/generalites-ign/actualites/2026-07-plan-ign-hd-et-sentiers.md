@@ -55,7 +55,7 @@ Les sentiers et chemins représentés dans cette ressource correspondent à des 
 
 <ul>
     <li>
-        L’offre proposée par la <a href="https://www.ffrandonnee.fr/https://www.ffrandonnee.fr/">Fédération Française de la Randonnée Pédestre</a> connus sous la marque GR®, PR® et GRP, un réseau d’environ 245 250 km d’itinéraires (métropole et outre-mer), toutes catégories d’itinéraires confondues dont 118 575 km de GR®, GR® de Pays et GR® Européens et 36 107 km de PR® labellisés.
+        L’offre proposée par la <a href="https://www.ffrandonnee.fr/">Fédération Française de la Randonnée Pédestre</a> connus sous la marque GR®, PR® et GRP, un réseau d’environ 245 250 km d’itinéraires (métropole et outre-mer), toutes catégories d’itinéraires confondues dont 118 575 km de GR®, GR® de Pays et GR® Européens et 36 107 km de PR® labellisés.
         {% imageContent "/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/04-plan-ign-hd-et-sentiers.webp", "Consultation du GR® 10 via la couche Sentiers de randonnée balisés dans l’application mobile Cartes IGN" %}
     </li>
     <li>
