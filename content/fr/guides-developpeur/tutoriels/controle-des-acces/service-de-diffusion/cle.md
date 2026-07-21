@@ -396,7 +396,7 @@ Cette clé est un moyen de préciser que l’on va consommer les services de dif
 
 L’affectation d’accès sur cette clé se fait exactement comme pour la première clé.
 
-{% imageContent "/img/guides-developpeur/controle-acces/qgis_cle_basic.png", "Clé OAUTH2 dans QGIS" %}
+{% imageContent "/img/guides-developpeur/controle-acces/qgis_cle_oauth2.png", "Clé OAUTH2 dans QGIS" %}
 
 - URL de requête : `{{ urls.iam }}/protocol/openid-connect/auth`
 - URL du jeton : `{{ urls.iam }}/protocol/openid-connect/token`
