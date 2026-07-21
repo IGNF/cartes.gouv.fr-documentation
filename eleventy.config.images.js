@@ -58,11 +58,11 @@ module.exports = (eleventyConfig) => {
         // GIFs are served as-is to preserve animation (eleventy-img would strip it)
         if (src.toLowerCase().endsWith(".gif")) {
             return `
-<figure class="fr-content-media" role="group" aria-label="${figCaption}">
+<figure class="fr-content-media" role="group" aria-label="${safeCaption}">
     <div class="fr-content-media__img" style="max-width: ${naturalWidth}px">
-        <img src="${src}" alt="${alt}" class="${`fr-responsive-img fr-ratio-auto ${cls}`.trim()}" loading="lazy" decoding="async">
+        <img src="${escapeHtml(src)}" alt="${safeAlt}" class="${`fr-responsive-img fr-ratio-auto ${cls}`.trim()}" loading="lazy" decoding="async">
     </div>
-    <figcaption class="fr-content-media__caption text-center">${figCaption}</figcaption>
+    <figcaption class="fr-content-media__caption text-center">${safeCaption}</figcaption>
 </figure>\n`;
         }
 
