@@ -470,7 +470,7 @@ Dans tous les cas, à l’échelle de l’entrepôt Géoplateforme, le niveau qu
 
 Pour rendre une donnée extractible à l’ensemble des utilisateurs Géoplateforme, le producteur de données doit ouvrir la `stored_data` de type `VECTOR-DB` considérée.
 
-Cette ouverture se fait à postériori de la génération de ladite `stored_data` au moyen de la route :
+Cette ouverture se fait a posteriori de la génération de ladite `stored_data` au moyen de la route :
 
 PATCH <a href="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data} - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore}/stored_data/&#123;stored_data&#125;</a>
 
