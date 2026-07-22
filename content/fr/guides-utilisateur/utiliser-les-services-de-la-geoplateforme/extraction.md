@@ -275,7 +275,7 @@ Dans la partie `inputs` donc :
         "attributes": [
             // une liste nommant les attributs que l’on veut conserver
         ],
-        "filters" : "syntaxe de filtrage" 
+        "filters": "syntaxe de filtrage" 
     }
     ```
 
