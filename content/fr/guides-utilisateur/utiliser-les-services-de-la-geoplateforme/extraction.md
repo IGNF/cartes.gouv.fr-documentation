@@ -46,7 +46,7 @@ La documentation swagger permettant d’accéder aux détails des routes et para
 
 Chaque compte utilisateur de la Géoplateforme ne peut exécuter qu’une seule extraction en même temps. Une extraction est considérée comme terminée et le quota réinitialisé dès lors que l’extraction s’est terminée en succès ou en échec.
 
-Par ailleurs le service est configuré de telle sorte que, pour l’ensemble des utilisateurs déclenchant une extraction, 20 extractions peuvent tourner en simultanée. Cela implique la constitution d’une file d’attente dès lors que ce quota est rempli et donc des temps de mise à disposition des extractions de chacun qui peuvent être conjoncturellement rallongés.
+Par ailleurs le service est configuré de telle sorte que, pour l’ensemble des utilisateurs déclenchant une extraction, 20 extractions peuvent tourner en simultané. Cela implique la constitution d’une file d’attente dès lors que ce quota est rempli et donc des temps de mise à disposition des extractions de chacun qui peuvent être conjoncturellement rallongés.
 
 ## Généralités liées au standard OGC API Processes
 
