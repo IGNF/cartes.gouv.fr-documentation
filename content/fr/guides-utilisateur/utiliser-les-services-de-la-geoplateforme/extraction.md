@@ -52,7 +52,7 @@ Par ailleurs le service est configuré de telle sorte que, pour l’ensemble des
 
 ### Capabilities
 
-L’URL de capabilities correspond à la racine du service : https://data.geopf.fr/extraction 
+L’URL de capabilities correspond à la racine du service : https://data.geopf.fr/extraction
 
 Conformément au standard OGC API Processes, cette URL référence les URL de niveau immédiatement inférieur :
 - Lien vers le swagger
