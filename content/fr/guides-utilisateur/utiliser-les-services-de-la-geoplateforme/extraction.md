@@ -228,8 +228,8 @@ On trouvera au-dessous de ce corps de requête type, un descriptif détaillé et
 {
     "inputs": {
         "relations": {
-            "table_1": { 
-                "attributes": [ 
+            "table_1": {
+                "attributes": [
                     "attribut1",
                     "attribut2",
                     "attribut3",
@@ -238,8 +238,8 @@ On trouvera au-dessous de ce corps de requête type, un descriptif détaillé et
                 ],
                 "filters": "ST_intersects(attribut_geometrie,st_transform(st_setsrid('POLYGON ((893173.37413014 6245898.77978964,897816.865990493 6246039.4916642,897852.043959132 6241747.77949023,893208.552098779 6241501.53370976,893208.552098779 6241501.53370976,893173.37413014 6245898.77978964))'::geometry,2154),2154)) AND attribut1='Valeur texte de filtrage'" 
             },
-            "table_2": { 
-            	"attributes": [
+            "table_2": {
+                "attributes": [
                     "attribut1",
                     "attribut2",
                     "attribut3",
@@ -506,7 +506,7 @@ Avec le corps de requête suivant :
 {
     "name": "Un nom informatif avec espaces, majuscules ou accents si nécessaire",
     "description": "Une description synthétique en toutes lettres",
-    "open": true 
+    "open": true
 }
 ```
 
