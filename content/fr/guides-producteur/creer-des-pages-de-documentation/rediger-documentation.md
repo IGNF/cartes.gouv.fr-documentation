@@ -242,10 +242,19 @@ Pour afficher un lien s’ouvrant dans une nouvelle fenêtre :
 ```
 
 Pour afficher une image :
-
-```markdown
-![Description de l’image](/img/partenaires/producteurABC/.../monImage.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-```
+- Image sans légende :
+    ```markdown
+    ![Description de l’image](/img/partenaires/producteurABC/…/monImage.png){.fr-responsive-img .frx-img-contained .classe-css…}
+    ```
+- Image avec légende :
+    ```njk
+    {% raw %}
+    {% imageContent "/img/partenaires/producteurABC/…/monImage.png", "Description de l’image", "Légende de l’image", "classe-css…" %}
+    {% endraw %}
+    ```
+    :::info
+    Si le champ correspondant à la légende n’est pas défini ou est défini comme `null`, la légende prendra par défaut la valeur du texte alternatif (ici : « Description de l’image »).
+    :::
 
 Pour afficher un extrait de code :
 
@@ -282,7 +291,7 @@ Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne
 
 ## Images et pictogrammes
 
-Les images sont stockées dans le dossier **« cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/... »**. Il suffit de rajouter votre image dans le dossier correspondant.
+Les images sont stockées dans le dossier **« cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/… »**. Il suffit de rajouter votre image dans le dossier correspondant.
 
 Il existe une liste de pictogrammes réutilisables dans le dossier **« cartes.gouv.fr-documentation_site\artwork\pictograms »**. Pour appeler un pictogramme existant dans l’en-tête, il suffit d’indiquer le dossier parent de l’en-tête et son nom :
 
@@ -290,7 +299,7 @@ Il existe une liste de pictogrammes réutilisables dans le dossier **« cartes.
 
 Il est possible de créer ses propres pictogrammes customisés. Il faut alors respecter les recommandations du DSFR : <a href="https://www.systeme-de-design.gouv.fr/fondamentaux/pictogramme/" target="_blank" rel="noopener noreferrer" title="Pictogramme Système de Design de l’État - ouvre une nouvelle fenêtre">Pictogramme - Système de Design de l’État </a>
 
-Placez votre pictogramme .svg dans le dossier **« cartes.gouv.fr-documentation\public\artwork\pictograms\custom »**, et appelez le pictogramme dans l’en-tête avec **« custom/nomDuPictogramme.svg »**.
+Placez votre pictogramme SVG dans le dossier **« cartes.gouv.fr-documentation\public\artwork\pictograms\custom »**, et appelez le pictogramme dans l’en-tête avec **« custom/nomDuPictogramme.svg »**.
 
 ---
 

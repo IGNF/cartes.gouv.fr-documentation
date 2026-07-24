@@ -314,9 +314,7 @@ On peut maintenant voir les couches correspondantes à l’offre dans les [capac
 
 Il est aussi possible de mettre la clé dans le header `apikey` plutôt qu’en paramètre de requête.
 
-![Clé HASH dans QGIS](/img/guides-developpeur/controle-acces/qgis_cle_hash.png){.fr-responsive-img .frx-img-contained}
-
-<figcaption class="fr-content-media__caption fr-mb-6v">Clé HASH dans QGIS</figcaption>
+{% imageContent "/img/guides-developpeur/controle-acces/qgis_cle_hash.png", "Clé HASH dans QGIS" %}
 
 #### Créer une clé de type BASIC
 
@@ -362,8 +360,7 @@ L’affectation d’accès sur cette clé se fait exactement comme pour la premi
 
 Afin que les requêtes passent, il est maintenant nécessaire que le header `referer` contienne une valeur avec QGIS (cela permet par exemple d’accepter toutes les requêtes venant de QGIS, quelle que soit la version et le système d’exploitation).
 
-![Clé BASIC dans QGIS](/img/guides-developpeur/controle-acces/qgis_cle_basic.png){.fr-responsive-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Clé BASIC dans QGIS</figcaption>
+{% imageContent "/img/guides-developpeur/controle-acces/qgis_cle_basic.png", "Clé BASIC dans QGIS" %}
 
 #### Créer une clé de type OAUTH2
 
@@ -399,8 +396,7 @@ Cette clé est un moyen de préciser que l’on va consommer les services de dif
 
 L’affectation d’accès sur cette clé se fait exactement comme pour la première clé.
 
-![Clé OAUTH2 dans QGIS](/img/guides-developpeur/controle-acces/qgis_cle_oauth2.png){.fr-responsive-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Clé OAUTH2 dans QGIS</figcaption>
+{% imageContent "/img/guides-developpeur/controle-acces/qgis_cle_oauth2.png", "Clé OAUTH2 dans QGIS" %}
 
 - URL de requête : `{{ urls.iam }}/protocol/openid-connect/auth`
 - URL du jeton : `{{ urls.iam }}/protocol/openid-connect/token`

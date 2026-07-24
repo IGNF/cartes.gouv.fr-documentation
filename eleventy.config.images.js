@@ -21,6 +21,9 @@ const getImageAttributes = (cls, alt, sizes) => {
 };
 
 const relativeToInputPath = (inputPath, relativeFilePath) => {
+    if (relativeFilePath.startsWith("/img/")) {
+        return path.join(__dirname, "public", relativeFilePath.slice(1));
+    }
     let split = inputPath.split("/");
     split.pop();
     return path.resolve(split.join(path.sep), relativeFilePath);
@@ -29,33 +32,54 @@ const relativeToInputPath = (inputPath, relativeFilePath) => {
 module.exports = (eleventyConfig) => {
     // Eleventy Image shortcodes
     // https://www.11ty.dev/docs/plugins/image/
-    eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, widths, sizes, cls = "") {
+    eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, cls = "", widths, sizes) {
         let file = relativeToInputPath(this.page.inputPath, src);
         const options = getOptions(widths);
-        options["outputDir"] = path.join(eleventyConfig.dir.output, "img"); // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+        options["outputDir"] = path.join(eleventyConfig.dir.output, "img"); // Advanced usage note: `eleventyConfig.dir` works here because we're using addPlugin.
         let metadata = await eleventyImage(file, options);
 
         // TODO loading=eager and fetchpriority=high
         return eleventyImage.generateHTML(metadata, getImageAttributes(cls, alt, sizes));
     });
 
-    eleventyConfig.addAsyncShortcode("imageContent", async function imageContentShortcode(src, alt, widths, sizes, cls = "") {
+    eleventyConfig.addAsyncShortcode("imageContent", async function imageContentShortcode(src, alt, caption, cls = "", widths, sizes) {
+        const escapeHtml = require("escape-html");
+        const figCaption = caption || alt || "";
+        const safeCaption = escapeHtml(figCaption);
+        const safeAlt = escapeHtml(alt || "");
+
+        // GIFs are served as-is to preserve animation (eleventy-img would strip it)
+        if (src.toLowerCase().endsWith(".gif")) {
+            const sizeOf = require("image-size");
+            const gifFile = relativeToInputPath(this.page.inputPath, src);
+            const { width: naturalWidth } = sizeOf(gifFile);
+            return `
+<figure class="fr-content-media" role="group" aria-label="${safeCaption}">
+    <div class="fr-content-media__img" style="max-width: ${naturalWidth}px">
+        <img src="${escapeHtml(src)}" alt="${safeAlt}" class="${`fr-responsive-img fr-ratio-auto ${cls}`.trim()}" loading="lazy" decoding="async">
+    </div>
+    <figcaption class="fr-content-media__caption text-center">${safeCaption}</figcaption>
+</figure>\n`;
+        }
+
         let file = relativeToInputPath(this.page.inputPath, src);
         const options = getOptions(widths);
-        options["outputDir"] = path.join(eleventyConfig.dir.output, "img"); // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+        options["outputDir"] = path.join(eleventyConfig.dir.output, "img");
         let metadata = await eleventyImage(file, options);
 
+        const naturalWidth = Math.max(...Object.values(metadata)[0].map((img) => img.width));
+
         return `
-<figure class="fr-content-media" role="group" aria-label="${alt}">
-    <div class="fr-content-media__img">
+<figure class="fr-content-media" role="group" aria-label="${safeCaption}">
+    <div class="fr-content-media__img" style="max-width: ${naturalWidth}px">
         ${eleventyImage.generateHTML(metadata, getImageAttributes(cls, alt, sizes))}
     </div>
-    <figcaption class="fr-content-media__caption">${alt}</figcaption>
+    <figcaption class="fr-content-media__caption text-center">${safeCaption}</figcaption>
 </figure>\n`;
     });
 
     // Synchronous method for Nunjucks macros
-    eleventyConfig.addNunjucksShortcode("imageSync", function imageShortcode(src, alt, widths, sizes, cls = "") {
+    eleventyConfig.addNunjucksShortcode("imageSync", function imageShortcode(src, alt, cls = "", widths, sizes) {
         let file = relativeToInputPath(this.page.inputPath, src);
         const options = getOptions(widths);
         options["outputDir"] = path.join(eleventyConfig.dir.output, "img"); // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
