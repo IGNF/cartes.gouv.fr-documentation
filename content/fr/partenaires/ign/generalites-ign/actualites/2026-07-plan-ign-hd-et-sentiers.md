@@ -42,7 +42,7 @@ La technique utilisée exploite la précision centimétrique des données LiDAR�
 
 #### Les sentiers de randonnée balisés
 
-C’est LA nouveauté de cet été ! Vous les connaissiez représentés en couleur magenta (et pas rose !) dans le SCAN 25® en version image. Ces sentiers ont été retravaillés pour être utilsés sous forme de tuiles vectorielles TMS ([Tile Map Service](../../../../../guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/tms/)).
+C’est LA nouveauté de cet été ! Vous les connaissiez représentés en couleur magenta (et pas rose !) dans le SCAN 25® en version image. Ces sentiers ont été retravaillés pour être utilisés sous forme de tuiles vectorielles TMS ([Tile Map Service](../../../../../guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/tms/)).
 
 {% imageContent "/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/03-plan-ign-hd-et-sentiers.webp", "Consultation du GR® 654 Est via la couche Sentiers de randonnée balisés dans l’application mobile Cartes IGN" %}
 
@@ -61,11 +61,11 @@ Les sentiers et chemins représentés dans cette ressource correspondent à des 
         {% imageContent "/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/04-plan-ign-hd-et-sentiers.webp", "Consultation du GR® 10 via la couche Sentiers de randonnée balisés dans l’application mobile Cartes IGN" %}
     </li>
     <li>
-        L’offre proposée par le <a href="https://www.club-vosgien.eu/les-sentiers-du-club-vosgien/nos-itineraires-de-randonnee-2/#filter=r-fullyTranslatedLangus-,r-openState-,sb-sortedBy-0&zc=5.,6.92139,47.98992">Club Vosgien</a>, un réseau de plus de 20 000 km de chemins de randonnée entretenus avec passion leurs bénévoles dévoués.
+        L’offre proposée par le <a href="https://www.club-vosgien.eu/les-sentiers-du-club-vosgien/nos-itineraires-de-randonnee-2/#filter=r-fullyTranslatedLangus-,r-openState-,sb-sortedBy-0&zc=5.,6.92139,47.98992">Club Vosgien</a>, un réseau de plus de 20 000 km de chemins de randonnée entretenus avec passion par leurs bénévoles dévoués.
         {% imageContent "/img/partenaires/ign/generalites/actualites/2026-07-plan-ign-hd-et-sentiers/05-plan-ign-hd-et-sentiers.webp", "Consultation d’un Circuit court du Club Vosgien via la couche Sentiers de randonnée balisés dans l’application mobile Cartes IGN" %}
     </li>
     <li>
-        L’offre compilée, assemblée, recalée et représentée avec passion depuis plus de 10 ans par les techniciens BD TOPO® de l’IGN en se servant des données ouvertes par les collectivités qui <strong>répertorient, protègent et promeuvent les itinéraires de randonnée et de promenade</strong> sur leurs territoires dans les plans départementaux de randonnées pédestre et des plans locaux de randonnées. Ces données n’étant pas systématiquement proposées sous formats ouverts, ces offres ont pu être levées parfois par GNSS directement par les agents IGN lors de leur travail de reconnaissance terrain.
+        L’offre compilée, assemblée, recalée et représentée avec passion depuis plus de 10 ans par les techniciens BD TOPO® de l’IGN en se servant des données ouvertes par les collectivités qui <strong>répertorient, protègent et promeuvent les itinéraires de randonnée et de promenade</strong> sur leurs territoires dans les plans départementaux de randonnées pédestres et des plans locaux de randonnées. Ces données n’étant pas systématiquement proposées sous formats ouverts, ces offres ont pu être levées parfois par GNSS directement par les agents IGN lors de leur travail de reconnaissance terrain.
     </li>
 </ul>
 
@@ -84,6 +84,6 @@ Si vous souhaitez nous faire part de vos retours relatifs aux deux nouvelles car
 contactez-nous à l’adresse [contact.geoservices@ign.fr](mailto:contact.geoservices@ign.fr?subject=plan%20ign%20hd%20et%20sentiers)
 :::
 
-:::info SCAN 25®, Sentiers de randonnée balisés et licence d’utilisation et d’exploitation
-L’IGN produit et édite les bases de données SCAN 25®, SCAN 100® ainsi que les flux Cartes IGN, Carte TOPO 25 et sentiers de randonnée balisés à partir de données de partenaires qui sont soumises à des licences et redevances. Ces bases de données et flux édités par l’IGN ne sont donc pas en licence ouverte et font eux-même l’objet d’une licence d’utilisation et d’exploitation spécifique.
+:::info SCAN 25®, sentiers de randonnée balisés et licence d’utilisation et d’exploitation
+L’IGN produit et édite les bases de données SCAN 25®, SCAN 100® ainsi que les flux Cartes IGN, Carte TOPO 25 et sentiers de randonnée balisés à partir de données de partenaires qui sont soumises à des licences et redevances. Ces bases de données et flux édités par l’IGN ne sont donc pas en licence ouverte et font eux-mêmes l’objet d’une licence d’utilisation et d’exploitation spécifique.
 :::
