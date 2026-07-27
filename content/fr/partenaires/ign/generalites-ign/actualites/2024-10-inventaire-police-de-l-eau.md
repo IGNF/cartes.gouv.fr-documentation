@@ -16,17 +16,13 @@ A la demande du Ministère de la transition écologique, de l’énergie, du cli
 
 38 départements sont ainsi déjà diffusés au sein de la BD TOPO®.
 
-![Echantillon police de l’eau](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/00-echantillon-police-de-l-eau.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Echantillon d’inventaire police de l’eau - département du Cher (données DDT)</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/00-echantillon-police-de-l-eau.png", "Echantillon police de l’eau", "Échantillon d’inventaire police de l’eau - département du Cher (données DDT)" %}
 
-![Echantillon police de l’eau](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/01-echantillon-police-de-l-eau.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Echantillon de BD TOPO® - département du Cher</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/01-echantillon-police-de-l-eau.png", "Echantillon police de l’eau", "Échantillon de BD TOPO® - département du Cher" %}
 
-![Echantillon police de l’eau](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/02-echantillon-police-de-l-eau.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Echantillon de BD TOPO® après appariement de l’inventaire police de l’eau - département du Cher</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/02-echantillon-police-de-l-eau.png", "Echantillon police de l’eau", "Échantillon de BD TOPO® après appariement de l’inventaire police de l’eau - département du Cher" %}
 
-![Appariement police de l’eau et BD TOPO®](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/03-appariement-police-de-l-eau-et-bdtopo.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Superposition de l’inventaire police de l’eau d’origine et de la BD TOPO® après appariement</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/03-appariement-police-de-l-eau-et-bdtopo.png", "Appariement police de l’eau et BD TOPO®", "Superposition de l’inventaire police de l’eau d’origine et de la BD TOPO® après appariement" %}
 
 ---
 
@@ -49,8 +45,7 @@ La BD TOPO® est la description vectorielle 3D (structurée en objets) des élé
 
 Les objets de la BD TOPO® sont regroupés par thèmes dont un thème hydrographique. Ce thème décrit les éléments hydrographiques de surface dont des tronçons hydrographiques. C’est notamment la source qui permet de représenter le bleu sur la base de données [PLAN IGN](https://www.geoportail.gouv.fr/carte?c=-0.5607376529448428,44.96329217811967&z=13&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes). Une classe cours d’eau est constituée à partir de l’agrégation de différents tronçons hydrographiques portant le même toponyme. Elle est réalisée à vocation principalement cartographique, afin de représenter des cours d’eau nommés sur une carte.
 
-![PLAN IGN](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/04-planign.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Extrait de PLAN IGN sur le Géoportail</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/04-planign.png", "Plan IGN", "Extrait de PLAN IGN sur le Géoportail" %}
 
 ### BCAE (Bonnes conditions agricoles et environnementales)
 
@@ -60,8 +55,7 @@ La référence réglementaire est la [carte millésimée des cours d’eau BCAE]
 
 L’IGN agrège et diffuse annuellement une couche de données élaborées et mises à jour par les DDT(M) avec la coordination de la direction générale de la performance économique et environnementale des entreprises (DGPE) du ministère de l’Agriculture, de la souveraineté alimentaire et de la forêt, puis transmises à l’IGN. La couche BCAE diffusée sur cartes.gouv n’est pas une dérivation depuis la BD TOPO® mais d’un référentiel dédié. Les tracés des cours d’eau des cartographies BCAE ont une origine géométrique variable selon l’option prise par la DDTM dans chaque département et ne sont pas tous superposables à la BD TOPO®.
 
-![Différences entre BCAE et BD TOPO®](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/05-difference-bcae-bdtopo.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Illustration des différences géométriques entre les inventaires locaux BCAE et les tronçons hydrographiques BD TOPO® - département du Cher</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/05-difference-bcae-bdtopo.png", "Différences entre BCAE et BD TOPO®", "Différences géométriques entre les inventaires locaux BCAE et les tronçons hydrographiques BD TOPO® - département du Cher" %}
 
 ### BD TOPAGE®
 
@@ -85,8 +79,7 @@ Elle est mise à jour tous les ans à partir de l’archive de décembre de la B
 
 La BD TOPAGE® est diffusée via le SANDRE (Service d’administration nationale des référentiels de l’eau) de façon millésimée.
 
-![Superposition de la BD TOPAGE® et de la BD TOPO®](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/06-superposition-bdtopage-bdtopo.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Superposition de la BD TOPAGE® et de la BD TOPO® - département du Pas-de-Calais</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/06-superposition-bdtopage-bdtopo.png", "Superposition de la BD TOPAGE® et de la BD TOPO®" %}
 
 ### Les cartes
 
@@ -107,13 +100,11 @@ Il est important de noter que l’information représentée sur la carte au 1 :
 
 <br>
 
-Depuis 2020, certains thèmes du SCAN25® ont été mis à jour indépendamment de la carte papier mais pas l’hydrographie. Un changement des méthodes et logiciels de production est actuellement en cours de mise en œuvre permettant des mises à jour plus fréquentes du SCAN25® et ayant comme référence la BD TOPO®. Le thème hydrographique en bénéficiera.
+Depuis 2020, certains thèmes du SCAN 25® ont été mis à jour indépendamment de la carte papier mais pas l’hydrographie. Un changement des méthodes et logiciels de production est actuellement en cours de mise en œuvre permettant des mises à jour plus fréquentes du SCAN 25® et ayant comme référence la BD TOPO®. Le thème hydrographique en bénéficiera.
 
-![SCAN25®](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/07-scan25.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">SCAN25® - secteur de St-Même-le-Tenu</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/07-scan25.png", "SCAN 25®", "SCAN 25® - secteur de St-Même-le-Tenu" %}
 
-![Superposition du SCAN25® et de la BD TOPO®](/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/08-superpostion-scan25-bdtopo.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-<figcaption class="fr-content-media__caption fr-mb-6v">Superposition du SCAN25® et du réseau hydrographique de la BD TOPO® - même secteur</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2024-10-inventaire-police-de-l-eau/08-superpostion-scan25-bdtopo.png", "Superposition du SCAN 25® et de la BD TOPO®", "Superposition du SCAN 25® et du réseau hydrographique de la BD TOPO® - même secteur" %}
 
 :::info Zoom sur les ZNT (Zone de non traitement) point d’eau
 Une zone non traitée (ZNT) doit être mise en place à proximité des points d’eau, en application de l’arrêté interministériel du 4 mai 2017. Elle correspond aux distances minimales sans application de produits phytopharmaceutiques (PPP) que les agriculteurs doivent respecter, en fonction des règles fixées par l’autorisation de mise sur le marché (AMM) du PPP et du matériel utilisé pour leur pulvérisation. Cette ZNT a pour objectif de limiter la pollution de l’eau due au transfert de produits par dérive de pulvérisation. Les points d’eau, incluant les cours d’eau définis à l’article L. 215-7-1 du Code de l’environnement ainsi que les éléments du réseau hydrographique figurant sur les cartes au 1 : 25 000 de l’IGN, à considérer pour l’application de la ZNT, sont définis par arrêté préfectoral.

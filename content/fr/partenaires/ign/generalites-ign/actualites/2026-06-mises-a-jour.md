@@ -11,8 +11,7 @@ date: 2026-06-01
 
 {% from "components/component.njk" import component with context %}
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/00-2026-06-mises-a-jour.png){.fr-responsive-img .frx-img-contained .frx-shadow-img}
-<figcaption class="fr-content-media__caption fr-mb-6v text-center">Actualité Mise à jour le 30 juin 2026</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/00-2026-06-mises-a-jour.png", "Actualité Mise à jour le 30 juin 2026" %}
 
 #### Services web
 
@@ -93,8 +92,7 @@ Les flux ci-dessus remplacent les flux suivants :
 
 Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-Raster et WMTS) et BD Géodésie ([IGNF_GEODESIE-XXX services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_GEODESIE-ET-NIVELLEMENT){target="_blank" rel="noopener noreferrer" title="GEODESIE ET NIVELLEMENT - ouvre une nouvelle fenêtre"}) sont mises à jour quotidiennement et la ressource Base Adresse Nationale ([BAN.DATA.GOUV services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BAN-PLUS){target="_blank" rel="noopener noreferrer" title="BAN PLUS - ouvre une nouvelle fenêtre"}) est actualisée hebdomadairement.
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/02-2026-06-mises-a-jour.png){.fr-responsive-img .frx-img-contained .frx-shadow-img}
-<figcaption class="fr-content-media__caption fr-mb-6v text-center">Limites administratives et Voirie DGF - Mantet (66)</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/02-2026-06-mises-a-jour.png", "Limites administratives et Voirie DGF - Mantet (66)" %}
 
 ---
 
@@ -128,5 +126,4 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
     ]
 }) }}
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/01-2026-06-mises-a-jour.png){.fr-responsive-img .frx-img-contained .frx-shadow-img}
-<figcaption class="fr-content-media__caption fr-mb-6v text-center">Réseau de nivellement, CoSIA et MNT issu du LiDAR HD - Sospel (04)</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-06-mises-a-jour/01-2026-06-mises-a-jour.png", "Réseau de nivellement, CoSIA et MNT issu du LiDAR HD - Sospel (04)" %}

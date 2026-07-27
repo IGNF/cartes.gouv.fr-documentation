@@ -134,7 +134,7 @@ module.exports = function (eleventyConfig) {
         // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
         return DateTime.fromJSDate(dateObj, { zone: zone || "utc" })
             .setLocale(this.page.lang)
-            .toFormat(format || "dd LLLL yyyy");
+            .toFormat(format || "d LLLL yyyy");
     });
 
     eleventyConfig.addFilter("htmlDateString", (dateObj) => {
