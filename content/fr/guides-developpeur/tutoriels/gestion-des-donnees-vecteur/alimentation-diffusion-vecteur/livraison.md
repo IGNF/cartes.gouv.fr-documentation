@@ -80,6 +80,8 @@ Les formats de fichier vecteur gérés sont :
 - FlatGeoBuf
 - Géoparquet (accepté dans la vérification et prochainement dans l'intégration vecteur)
 
+<br>
+
 📄 `<monde.gpkg>`
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload}/data?path=data/monde.gpkg"
