@@ -34,7 +34,7 @@ Son swagger est accessible ici : [swagger du géocodage](https://data.geopf.fr/
 
 La requête **GetCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
-Elle est accessible via l’URL suivante : 
+Elle est accessible via l’URL suivante :
 
 ```plain
 https://data.geopf.fr/geocodage/getcapabilities
@@ -81,69 +81,48 @@ Ces deux types de géocodage se déclinent sous la forme d’appels unitaires en
 
 Pour géocoder un grand nombre d’adresses, la possibilité est offerte de passer par un traitement par lot, dit « batch », pour la recherche directe ou inverse.
 
-Les fichiers doivent être encodés en UTF-8 et faire moins de 50 Mo ou 200000 lignes.
+Les fichiers doivent être encodés en UTF-8 et faire moins de 50 Mo ou 200 000 lignes.
 
 Le site national de l’adresse propose une [interface intuitive](https://adresse.data.gouv.fr/outils/csv) pour la gestion des opérations de géocodage **direct** par fichiers.
 
-Enfin, pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (Cf. section « Géocodage par lot asynchrone » dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
+Enfin, pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (cf. section « Géocodage par lot asynchrone » dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
 
-???? Informations complémentaires à l'usage du Géocodage de masse asynchrone
-
+???? Informations complémentaires à l’usage du géocodage de masse asynchrone
 ??? Organisation générale du workflow type
-
-Afin de mener à bien un traitement de géocodage de masse, l'ordonnancement des routes d'API présentées dans le swagger doit être envisagé comme suit :
-
-1. Exécution de la route de création d'un projet (POST /async/projects )
-
-2. En sortie récupération de l'identifiant (élément json "id" dans la réponse) et du jeton (élément json "token" dans la réponse) associé au projet.
-
-3. ou 4. Cette étape peut être permutée avec la suivante. Dépôt du fichier (PUT
-/async/projects/{projectId}/input-file).
-    - Bien spécifier sur cet appel un header "Authorization Token mon_token_projet" où mon_token_projet correspond à la valeur récupérée en étape 2
+Afin de mener à bien un traitement de géocodage de masse, l’ordonnancement des routes d’API présentées dans le swagger doit être envisagé comme suit :
+1. Exécution de la route de création d’un projet (`POST /async/projects`).
+2. En sortie récupération de l’identifiant (élément JSON `id` dans la réponse) et du jeton (élément JSON `token` dans la réponse) associé au projet.
+3. (ou 4.) Cette étape peut être permutée avec la suivante. Dépôt du fichier (`PUT /async/projects/{projectId}/input-file`).
+    - Bien spécifier sur cet appel un header `Authorization Token mon_token_projet` où `mon_token_projet` correspond à la valeur récupérée en étape 2.
     - récupération en sortie du token associé au fichier déposé pour téléchargement ultérieur de ce dernier.
-
-4. ou 3. Définition des paramètres du traitement. 
-    - Bien spécifier sur cet appel un header "Authorization Token mon_token_projet" où mon_token_projet correspond à la valeur récupérée en étape 2
-    - La rubrique "indexes" définit le type de géocodage : address pour un géocodage d'adresse postales, poi pour un géocodage sur les points  d’intérêt et parcel pour un géocodage de codes parcellaires.
-    - "columns" définit les colonnes du fichier livré qui vont être concaténées pour produire l'adresse complète à géocodée. les champs doivent être fournis dans l'ordre pour produire en sortie une adresse du type "24 rue de la Libération 96260 Trifouilly les Oies"
-    - les paramètres "type" à "number" présentés ensuite dans le swagger correspondent à des critères de filtrage possible pour le géocodage. Par exemple, si le fichier livré contient un champ "code_insee" il est possible de filtrer les résultats du géocodage en fonction de ce champ en indiquant dans le pipeline : "citycode" : "code_insee".
-
-5. Lancer le Géocodage (POST /async/projects/{projectId}/start)
-    - Bien spécifier sur cet appel un header "Authorization Token mon_token_projet" où mon_token_projet correspond à la valeur récupérée en étape 2
-
-6. Exécuter de manière cyclique l'état du traitement (GET /async/projects/{projectId})
-    - Bien spécifier sur cet appel un header "Authorization Token mon_token_projet" où mon_token_projet correspond à la valeur récupérée en étape 2
-    - Le traitement sera terminé lorsque le paramètre json de la réponse "status" vaudra "completed".
-    - Dès lors récupérer en sortie le token du fichier de sortie contenu dans le paramètre json "token" inclus dans l'objet "outputFile".
-
-7. Récupérer le fichier géocodé (GET /async/projects/{projectId}/output-file/{token})
+4. (ou 3.) Définition des paramètres du traitement.
+    - Bien spécifier sur cet appel un header `Authorization Token mon_token_projet` où `mon_token_projet` correspond à la valeur récupérée en étape 2.
+    - La rubrique `indexes` définit le type de géocodage : `address` pour un géocodage d’adresses postales, `poi` pour un géocodage sur les points d’intérêt et `parcel` pour un géocodage de codes parcellaires.
+    - `columns` définit les colonnes du fichier livré qui vont être concaténées pour produire l’adresse complète à géocoder. Les champs doivent être fournis dans l’ordre pour produire en sortie une adresse du type `24 rue de la Libération 96260 Trifouilly les Oies`.
+    - les paramètres `type` à `number` présentés ensuite dans le swagger correspondent à des critères de filtrage possible pour le géocodage. Par exemple, si le fichier livré contient un champ `code_insee` il est possible de filtrer les résultats du géocodage en fonction de ce champ en indiquant dans le pipeline : `"citycode": "code_insee"`.
+5. Lancer le géocodage (`POST /async/projects/{projectId}/start`).
+    - Bien spécifier sur cet appel un header `Authorization Token mon_token_projet` où `mon_token_projet` correspond à la valeur récupérée en étape 2.
+6. Exécuter de manière cyclique l’état du traitement (`GET /async/projects/{projectId}`).
+    - Bien spécifier sur cet appel un header `Authorization Token mon_token_projet` où `mon_token_projet` correspond à la valeur récupérée en étape 2.
+    - Le traitement sera terminé lorsque le paramètre JSON de la réponse `status` vaudra `completed`.
+    - Dès lors récupérer en sortie le token du fichier de sortie contenu dans le paramètre JSON `token` inclus dans l’objet `outputFile`.
+7. Récupérer le fichier géocodé (`GET /async/projects/{projectId}/output-file/{token}`).
 ???
 ??? Le mode authentifié
-
-Pour bénéficier des atouts du mode authentifié du Géocodage de masse, vous devez disposer d'un espace de travail Géoplateforme.
+Pour bénéficier des atouts du mode authentifié du géocodage de masse, vous devez disposer d’un espace de travail Géoplateforme.
 
 :::info
-- Pour en savoir plus sur les conditions d'accès : [CGU Cartes.gouv.fr](https://cartes.gouv.fr/cgu/#annexe-2-offre-geoplateforme)
-
-
+- Pour en savoir plus sur les conditions d’accès : [CGU Cartes.gouv.fr](https://cartes.gouv.fr/cgu/#annexe-2-offre-geoplateforme).
 - Pour demander la création de votre espace, rendez vous sur votre [tableau de bord](https://cartes.gouv.fr/tableau-de-bord/entrepots/demande-de-creation) depuis votre espace connecté cartes.gouv.fr.
-
-
-- La connexion à la Géoplateforme s'effectue au moyen d'un protocole OAuth2. Nous vous invitons à contacter le support <geoplateforme@ign.fr> qui vous fournira les éléments nécessaires : url d'obtention de token, client id et client secret.
+- La connexion à la Géoplateforme s’effectue au moyen d’un protocole OAuth2. Nous vous invitons à contacter le support <geoplateforme@ign.fr> qui vous fournira les éléments nécessaires : URL d’obtention de token, `client id` et `client secret`.
 :::
-<br>
-Une fois authentifié, le token Géoplateforme doit être fourni **uniquement en Header de l'étape 1 du workflow type** décrit plus haut. Cela au moyen d'un Header Authorization Bearer {mon_token}.
-<br>
 
-**Le reste du workflow s'effectue avec les token internes au processus de géocodage de masse asynchrone (voir workflow type ci-dessus).**
-<br>
-<br>
-Pour bénéficier de quotas d'upload augmentés par rapport au mode non authentifié ou de davantage de processus de calcul vous devez :
+Une fois authentifié, le token Géoplateforme doit être fourni **uniquement en header de l’étape 1 du workflow type** décrit plus haut. Cela au moyen d’un header `Authorization Bearer {mon_token}`.
 
-- Lancer un géocodage de masse asynchrone une première fois en mentionnant le Header X-Community associé à l'identifiant Géoplateforme de votre communauté - **communauté, pas datastore** - au moment de la création du projet de Géocodage asynchrone (étape 1 du workflow type). Cela permettra de référencer votre communauté dans le mécanisme de supervision du géocodage asynchrone.
+**Le reste du workflow s’effectue avec les tokens internes au processus de géocodage de masse asynchrone (voir workflow type ci-dessus).**
 
-- Contacter le support <geoplateforme@ign.fr> en décrivant votre projet (volume d'adresse, fréquence du géocodage), type de structure pour laquelle vous opérez afin que nous puissions dimensionner correctement les augmentations de quotas associés à votre espace.
-
+Pour bénéficier de quotas d’upload augmentés par rapport au mode non authentifié ou de davantage de processus de calcul vous devez :
+- Lancer un géocodage de masse asynchrone une première fois en mentionnant le header `X-Community` associé à l’identifiant Géoplateforme de votre communauté - **communauté, pas datastore** - au moment de la création du projet de géocodage asynchrone (étape 1 du workflow type). Cela permettra de référencer votre communauté dans le mécanisme de supervision du géocodage asynchrone.
+- Contacter le support <geoplateforme@ign.fr> en décrivant votre projet (volume d’adresse, fréquence du géocodage), type de structure pour laquelle vous opérez afin que nous puissions dimensionner correctement les augmentations de quotas associés à votre espace.
 ???
 ????
-<br>
