@@ -176,7 +176,8 @@
         renderCards(filtered);
         renderPagination(filtered.length);
         if (scroll) {
-            document.documentElement.scrollIntoView({ behavior: "smooth" });
+            const filterLabel = filterTagsEl.previousElementSibling;
+            (filterLabel || filterTagsEl).scrollIntoView({ behavior: "smooth" });
         }
     }
 

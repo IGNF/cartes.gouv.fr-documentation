@@ -77,6 +77,10 @@ Les formats de fichier vecteur gérés sont :
     - CREATE SEQUENCE
     - ALTER TABLE
     - ALTER SEQUENCE
+- FlatGeoBuf
+- Géoparquet (accepté dans la vérification et prochainement dans l'intégration vecteur)
+
+<br>
 
 📄 `<monde.gpkg>`
 
