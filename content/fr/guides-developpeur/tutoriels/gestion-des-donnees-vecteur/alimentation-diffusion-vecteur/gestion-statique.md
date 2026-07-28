@@ -14,6 +14,14 @@ Pour certains types de diffusion, le serveur de diffusion peut avoir besoin de f
 
 ### Génération d’un SLD
 
+:::info
+De manière générale il faut retenir que la Géoplateforme consomme des SLD dans leur version 1.0.0.
+
+Vous devez être vigilant à la version du SLD dont vous disposez ou celle générée par votre client SIG préféré. Par exemple QGIS génère du SLD 1.1.0
+:::
+
+Différentes options existent pour générer un SLD compatible : 
+
 Après l’export des styles depuis QGIS dans son format, il est nécessaire d’utiliser l’outil GeoStyler en ligne de commande pour les convertir :
 
 ```bash
@@ -23,9 +31,23 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ✔ File "pays.qml" translated successfully. Output written to pays.sld
 ```
 
+Vous pouvez, toujours depuis QGIS, exporter directement un SLD version 1.1.0 et utiliser le démonstrateur en ligne de Geostyler pour en faire un SLD 1.0.0 : https://demo.geostyler.org/ 
+
 :::warning
 Chaque outil d’export peut entraîner des comportements différents. Au final, le SLD sera interprété par GeoServer sur la Géoplateforme. Le plugin [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) peut également être utilisé.
 :::
+
+:::warning
+De manière générale il est recommandé d'être particulièrement attentif avec les SLD référençant des pictogrammes ou des motifs de remplissage.
+
+En effet vous devrez prévoir :
+- d'héberger le pictogramme sur la Géoplateforme en tant qu'annexe [Voir le tutoriel](https://cartes.gouv.fr/aide/fr/guides-developpeur/tutoriels/gestion-des-donnees-complementaires/gestion-des-annexes/)
+- de modifier manuellement votre SLD pour pointer sur le pictogramme hébergé en annexe. 
+
+Vous êtes invités à privilégier des pictogrammes images (jpeg ou png) et à éviter les trames complexes.
+
+:::
+
 
 {{ component("download", {
     title: "ecoregions.sld",
