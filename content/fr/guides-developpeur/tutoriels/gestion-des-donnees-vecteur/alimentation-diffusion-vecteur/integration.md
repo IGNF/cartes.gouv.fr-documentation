@@ -167,40 +167,34 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l�
 }
 ```
 ???
-??? Plus d'aide sur la configuration de l'exécution du traitement d'intégration vecteur
+??? Plus d’aide sur la configuration de l’exécution du traitement d’intégration vecteur
+Description des paramètres en entrée :
+- `inputs`/`upload` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un identifiant entrepôt de **livraison** (voir étape précédente).
+- `output`/`stored_data`/`name` : Le nom défini ici est un nommage libre.
 
-- Description des paramètres en entrée :
-    - **_inputs/upload_** :  Il s'agit ici d'une liste (présence des caractères [ ]) qui prend comme valeur au moins un identifiant entrepôt de **livraison** (voir étape précédente)
-    - **_output/stored_data/name_** : Le nom définit ici est un nommage libre.
+    **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.**
 
-        **Cette information n'est lisible que par un autre utilisateur membre de cet entrepôt, pas par l'utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour  vous - producteur de donnée.** 
+    Cette information est modifiable après coup.
+- `output`/`stored_data`/`storage_tags` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie.
 
-        Cette information est modifiable après coup.
+    Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique « Entrepôt » du swagger) dans l’attribut de réponse `labels` associé à chaque stockage.
 
-    - **_output/stored_data/storage_tags_** : Il s'agit ici d'une liste (présence des caractères [ ]) qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie. 
-
-        Vous pouvez retrouvez ces tags via la route GET /datastores/{datastore}/storages (rubrique Entrepôt du Swagger) dans l'attribut de réponse "labels" associé à chaque stockage. 
-
-        Pour une donnée vecteur en entrée, seul le stockage PostgreSQL est accessible, ce qui correspond au label, donc au storage_tag "VECTEUR".
-    
-    - **_parameters/srs_** : ce paramètre optionnel permet de faire faire à la Géoplateforme une reprojection des données au moment de leur intégration. dans l'exemple du tutoriel : On livre une donnée en EPSG:4326 et ici avec le paramètre "srs" : "EPSG:3857", elle sera donc re-projetée par la Géoplateforme en projection Google Mercator et stockée sous cette projection.
+    Pour une donnée vecteur en entrée, seul le stockage PostgreSQL est accessible, ce qui correspond au label, donc au `storage_tag` : `VECTEUR`.
+- `parameters`/`srs` : ce paramètre optionnel permet de faire faire à la Géoplateforme une reprojection des données au moment de leur intégration. Dans l’exemple du tutoriel : on livre une donnée en EPSG:4326 et ici avec le paramètre `"srs": "EPSG:3857"`, elle sera donc re-projetée par la Géoplateforme en projection Google Mercator et stockée sous cette projection.
 
 :::info
-Comme pour la livraison il vous est possible de configurer l'envoi d'un mail automatique à la fin du traitement.
+Comme pour la livraison il vous est possible de configurer l’envoi d’un courriel automatique à la fin du traitement.
 
-Pour ce faire, il suffit d'ajouter l'élément json ci-dessous après l'élément "parameters" dans le corps de requête de déclaration d'exécution.
+Pour ce faire, il suffit d’ajouter l’élément JSON ci-dessous après l’élément `parameters` dans le corps de requête de déclaration d’exécution.
 ```json
 "callback": {
     "type": "email",
     "to_address": [
-      "example@mail.fr"
+        "example@mail.fr"
     ]
-  }
-
+}
 ```
-
 Vous êtes invités à vous référer au swagger pour avoir les détails et options complètes sur cette partie.
-
 :::
 ???
 ????
@@ -222,10 +216,10 @@ Les noms des tables et des champs sont « standardisés » lors de l’intégr
 #### Consultation de l’état de l’exécution
 
 Une exécution va avoir les statuts dans l’ordre suivant :
-- CREATED : créée mais non lancée
-- WAITING : lancée mais pas encore prise en charge par le <span lang="en">_cluster_</span> de calcul
-- PROGRESS : en cours d’exécution sur le <span lang="en">_cluster_</span> de calcul
-- SUCCESS ou FAILURE : terminé
+- `CREATED` : créée mais non lancée
+- `WAITING` : lancée mais pas encore prise en charge par le <span lang="en">_cluster_</span> de calcul
+- `PROGRESS` : en cours d’exécution sur le <span lang="en">_cluster_</span> de calcul
+- `SUCCESS` ou `FAILURE` : terminé
 
 <br>
 
@@ -331,27 +325,23 @@ Une exécution va avoir les statuts dans l’ordre suivant :
 }
 ```
 ???
-??? Plus d'aide sur l'identification de la donnée stockée de sortie
-
-Dès le lancement de l'exécution du traitement, dans le corps de réponse ou à chaque interrogation de la requête d'état d'exécution vous disposez dans le corps de réponse de ces requêtes de l'élément json :
-
+??? Plus d’aide sur l’identification de la donnée stockée de sortie
+Dès le lancement de l’exécution du traitement, dans le corps de réponse ou à chaque interrogation de la requête d’état d’exécution vous disposez dans le corps de réponse de ces requêtes de l’élément JSON :
 ```json
 "output": {
-        "stored_data": {
-            "name": "Pays et éco-régions",
-            "type": "VECTOR-DB",
-            "status": "GENERATING",
-            "_id": "{stored data}"
-        }
+    "stored_data": {
+        "name": "Pays et éco-régions",
+        "type": "VECTOR-DB",
+        "status": "GENERATING",
+        "_id": "{stored data}"
+    }
 }
 ```
-ce qui vous donne l'élément "_id" à isoler pour identifier ensuite votre stored_data de sortie
+Ce qui vous donne l’élément `_id` à isoler pour identifier ensuite votre `stored_data` de sortie.
 
 :::info
-La stored_data de sortie n'est exploitable et interrogeable qu'une fois l'exécution du traitement terminée avec succès.
+La `stored_data` de sortie n’est exploitable et interrogeable qu’une fois l’exécution du traitement terminée avec succès.
 :::
-
-
 ???
 ????
 <br>
@@ -367,7 +357,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 ???
 
 :::warning
-La livraison n'a qu'un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
+La livraison n’a qu’un rôle temporaire, le temps que les données soient transformées et stockées dans leur format pérenne sur la plateforme. Les fichiers déposés ne sont pas ceux utilisés par les services de diffusion.
 
-La livraison doit impérativement être supprimée après la réalisation des étapes "traitement".
+La livraison doit impérativement être supprimée après la réalisation des étapes « traitement ».
 :::

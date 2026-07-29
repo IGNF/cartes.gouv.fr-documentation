@@ -54,39 +54,23 @@ Dans le cas du TMS Vecteur, une configuration va donner plusieurs couches finale
 }
 ```
 ???
-??? Plus d'aide sur la configuration VECTOR-TMS
-- Description des paramètres en entrée :
-    - **_type_** : La valeur est contrainte par une liste de valeur définie à tout moment dans le swagger. "VECTOR-TMS" pour une publication en tuiles vectorielles calculées à la volée. La définition de cette valeur est sensible à la casse.
-
-    - **_name_** : Permet de nommer cette configuration. **Cette information n'est lisible que par un autre utilisateur membre de cet entrepôt, pas par l'utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour  vous - producteur de donnée.** Cette information est modifiable après coup.
-
-    - **_layer_name**_ : Définit le nom technique par lequel le flux sera rendu disponible au sein du webservice. **Cette information est visible de l'utilisateur final**
-
-    - **_type_infos_** : L'essentiel des spécificités de la configuration liées à vos données est à retrouver ici : 
-
-        
-
-        
-
-        - **_keywords_** : Il s'agit d'une liste de mots clés, chaque mot ou expression clé étant placée entre doubles quotes, pour permettre à un utilisateur de retrouver plus facilement une donnée. **Cette information est visible de l'utilisateur final**
-
-        - **_bbox_** : Permet de forcer une bbox lors de la publication. Les valeurs de coordonnées sont systématiquement à renseigner en EPSG:4326. 
+??? Plus d’aide sur la configuration VECTOR-TMS
+Description des paramètres en entrée :
+- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le swagger. `VECTOR-TMS` pour une publication en tuiles vectorielles calculées à la volée. La définition de cette valeur est sensible à la casse.
+- `name` : Permet de nommer cette configuration. **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.** Cette information est modifiable après coup.
+- `layer_name` : Définit le nom technique par lequel le flux sera rendu disponible au sein du webservice. **Cette information est visible de l’utilisateur final.**
+- `type_infos` : L’essentiel des spécificités de la configuration liées à vos données est à retrouver ici :
+    - `keywords` : Il s’agit d’une liste de mots clés, chaque mot ou expression clé étant placée entre doubles quotes, pour permettre à un utilisateur de retrouver plus facilement une donnée. **Cette information est visible de l’utilisateur final**
+    - `bbox` : Permet de forcer une `bbox` lors de la publication. Les valeurs de coordonnées sont systématiquement à renseigner en EPSG:4326.
         :::info
-        L'élément "bbox" est optionnel, s'il n'est pas mentionné dans la configuration, le système calcule automatiquement l'emprise du service publié à partir de l'emprise de la stored_data renseignée plus bas.
+        L’élément `bbox` est optionnel, s’il n’est pas mentionné dans la configuration, le système calcule automatiquement l’emprise du service publié à partir de l’emprise de la `stored_data` renseignée plus bas.
         :::
-
-        - **_used_data_** : Permet de définir, au sein d'une stored_data placée comme dernier paramètre de l'élément, les couches de données qui seront publiées. ainsi une offre WFS peut permettre de publier plusieurs couches de données unitaires :
-
-            - **_relations_** : Il s'agit de la liste des couches à publier. Pour chacune on retrouve la possibilité de définir 4 éléments :
-
-                - **_native_name_** :  C'est le nom technique de la couche tel qu'il est défini dans la stored_data.
-
-                - **_public_name_** : C'est le nom technique (donc sans espace, accent ou autre caractère spécial) sous lequel vous voulez publier la couche.  **Cette information est visible de l'utilisateur final**
-
-                - **_abstract_** : Présente une courte description informative en toutes lettre de la couche publiée (ou du lot de couche publié). **Cette information est visible de l'utilisateur final**
-
- 
-            - **_stored_data_** : Il s'agit ici de l'identifiant entrepôt de la stored_data qui va être publiée
+    - `used_data` : Permet de définir, au sein d’une `stored_data` placée comme dernier paramètre de l’élément, les couches de données qui seront publiées. Ainsi une offre TMS Vecteur peut permettre de publier plusieurs couches de données unitaires :
+        - `relations` : Il s’agit de la liste des couches à publier. Pour chacune on retrouve la possibilité de définir 4 éléments :
+            - `native_name` :  C’est le nom technique de la couche tel qu’il est défini dans la `stored_data`.
+            - `public_name` : C’est le nom technique (donc sans espace, accent ou autre caractère spécial) sous lequel vous voulez publier la couche. **Cette information est visible de l’utilisateur final.**
+            - `abstract` : Présente une courte description informative en toutes lettres de la couche publiée (ou du lot de couches publié). **Cette information est visible de l’utilisateur final.**
+        - `stored_data` : Il s’agit ici de l’identifiant entrepôt de la `stored_data` qui va être publiée.
 ???
 ????
 <br>
@@ -108,17 +92,15 @@ Si on ne précise pas de `public_name`, c’est le nom natif de stockage qui est
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 ???
-
 :::info
-Pour la publication de tuiles vectorielles calculées à la volée, seul le mode opendata est proposé par la Géoplateforme.
+Pour la publication de tuiles vectorielles calculées à la volée, seul le mode <span lang="en">_open data_</span> est proposé par la Géoplateforme.
 :::
-
 ????
 <br>
 
 #### Publication
 
-??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration tms vecteur}/offerings"
+???? POST "{{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration tms vecteur}/offerings"
 ```plain
 {{ urls.api_entrepot }}/datastores/{datastore}/configurations/{configuration tms vecteur}/offerings
 ```
@@ -130,11 +112,9 @@ Pour la publication de tuiles vectorielles calculées à la volée, seul le mode
 }
 ```
 ???
-
 :::info
-Pour la publication de tuiles vectorielles calculées à la volée, seul le mode opendata est proposé par la Géoplateforme.
+Pour la publication de tuiles vectorielles calculées à la volée, seul le mode <span lang="en">_open data_</span> est proposé par la Géoplateforme.
 :::
-
 ????
 <br>
 

@@ -61,38 +61,25 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
 }
 ```
 ???
-??? Plus d'aide sur la configuration WMS-V
-- Description des paramètres en entrée :
-    - **_type_** : La valeur est contrainte par une liste de valeur définie à tout moment dans le swagger. "WMS-V" pour une publication WMS à partir de données vecteur. La définition de cette valeur est sensible à la casse.
-
-    - **_name_** : Permet de nommer cette configuration. **Cette information n'est lisible que par un autre utilisateur membre de cet entrepôt, pas par l'utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour  vous - producteur de donnée.** Cette information est modifiable après coup.
-
-    - **_layer_name_** : Définit le nom technique par lequel le flux sera rendu disponible au sein du webservice. **Cette information est visible de l'utilisateur final**
-
-    - **_type_infos_** : L'essentiel des spécificités de la configuration liées à vos données est à retrouver ici : 
-
-        - **_title_** : C'est le titre en texte libre (accents, espaces, minuscules et majuscules autorisés) de votre service web. **Cette information est visible de l'utilisateur final**
-
-        - **_abstract_** : Présente une courte description informative en toutes lettre de la couche publiée (ou du lot de couche publié). **Cette information est visible de l'utilisateur final**
-
-        - **_keywords_** : Il s'agit d'une liste de mots clés, chaque mot ou expression clé étant placée entre doubles quotes, pour permettre à un utilisateur de retrouver plus facilement une donnée. **Cette information est visible de l'utilisateur final**
-
-        - **_bbox_** : Permet de forcer une bbox lors de la publication. Les valeurs de coordonnées sont systématiquement à renseigner en EPSG:4326. 
+??? Plus d’aide sur la configuration WMS-V
+Description des paramètres en entrée :
+- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le swagger. `WMS-V` pour une publication WMS à partir de données vecteur. La définition de cette valeur est sensible à la casse.
+- `name` : Permet de nommer cette configuration. **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.** Cette information est modifiable après coup.
+- `layer_name` : Définit le nom technique par lequel le flux sera rendu disponible au sein du webservice. **Cette information est visible de l’utilisateur final.**
+- `type_infos` : L’essentiel des spécificités de la configuration liées à vos données est à retrouver ici :
+    - `title` : C’est le titre en texte libre (accents, espaces, minuscules et majuscules autorisés) de votre service web. **Cette information est visible de l’utilisateur final.**
+    - `abstract` : Présente une courte description informative en toutes lettres de la couche publiée (ou du lot de couche publié). **Cette information est visible de l’utilisateur final.**
+    - `keywords` : Il s’agit d’une liste de mots clés, chaque mot ou expression clé étant placée entre doubles quotes, pour permettre à un utilisateur de retrouver plus facilement une donnée. **Cette information est visible de l’utilisateur final.**
+    - `bbox` : Permet de forcer une `bbox` lors de la publication. Les valeurs de coordonnées sont systématiquement à renseigner en EPSG:4326.
         :::info
-        L'élément "bbox" est optionnel, s'il n'est pas mentionné dans la configuration, le système calcule automatiquement l'emprise du service publié à partir de l'emprise de la stored_data renseignée plus bas.
+        L’élément `bbox` est optionnel, s’il n’est pas mentionné dans la configuration, le système calcule automatiquement l’emprise du service publié à partir de l’emprise de la `stored_data` renseignée plus bas.
         :::
-
-        - **_used_data_** : Permet de définir, au sein d'une stored_data placée comme dernier paramètre de l'élément, les couches de données qui seront publiées. ainsi une offre WFS peut permettre de publier plusieurs couches de données unitaires :
-
-            - **_relations_** : Il s'agit de la liste des couches à publier. Pour chacune on retrouve la possibilité de définir 4 éléments :
-
-                - **name_** :  C'est le nom technique de la couche tel qu'il est défini dans la stored_data.
-
-                - **_sld_** : C'est l'identifiant entrepôt (_id) du fichier de style sld chargé à l'étape précédente. **Cette information est optionnelle**. Si un tel fichier n'est mentionné, la couche sera rendue en bleu, style par défaut, sans que l'utilisateur final puisse influer sur le rendu.
-
-                - **_ftl_** : C'est l'identifiant entrepôt (_id) du fichier de présentation des attributs ftl chargé à l'étape précédente.**Cette information est optionnelle**. Si un tel fichier n'est mentionné, l'ensemble des attributs est présenté par l'opération getFeatureInfo du WMS.
- 
-            - **_stored_data_** : Il s'agit ici de l'identifiant entrepôt de la stored_data qui va être publiée
+    - `used_data` : Permet de définir, au sein d’une `stored_data` placée comme dernier paramètre de l’élément, les couches de données qui seront publiées. Ainsi une offre WMS peut permettre de publier plusieurs couches de données unitaires :
+        - `relations` : Il s’agit de la liste des couches à publier. Pour chacune on retrouve la possibilité de définir 4 éléments :
+            - `name` :  C’est le nom technique de la couche tel qu’il est défini dans la `stored_data`.
+            - `sld` : C’est l’identifiant entrepôt (`_id`) du fichier de style SLD chargé à l’étape précédente. **Cette information est optionnelle**. Si un tel fichier n’est mentionné, la couche sera rendue en bleu, style par défaut, sans que l’utilisateur final puisse influer sur le rendu.
+            - `ftl` : C’est l’identifiant entrepôt (`_id`) du fichier de présentation des attributs FTL chargé à l’étape précédente. **Cette information est optionnelle**. Si un tel fichier n’est mentionné, l’ensemble des attributs est présenté par l’opération `getFeatureInfo` du WMS.
+        - `stored_data` : Il s’agit ici de l’identifiant entrepôt de la `stored_data` qui va être publiée
 ???
 ????
 <br>
@@ -100,7 +87,7 @@ La création de la configuration WMS va permettre de vérifier de nombreuses inf
 :::warning
 Une configuration WMS-VECTOR donnera une unique couche. Même si elle utilise plusieurs tables, ces dernières ne seront pas consultables individuellement en WMS. Si c’est votre besoin, faites une configuration (et donc une couche) par table.
 
-Dans le cas où vous souhaitez bien déclarer plusieurs table dans votre WMS, pense zà régler correctement l'ordre des couches dans l'élément json "used_data"/"relations" : La première couche lisible sera au dessus, la dernière tou en dessous.
+Dans le cas où vous souhaitez bien déclarer plusieurs tables dans votre WMS, pensez à régler correctement l’ordre des couches dans l’élément JSON `used_data.relations` : la première couche lisible sera au-dessus, la dernière tout en dessous.
 :::
 
 ### Envoi sur les services de diffusion
@@ -118,17 +105,14 @@ Comme pour le WFS, seule la création d’une offre sur un point d’accès (pub
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 ???
-??? Plus d'aide sur le choix de son point de diffusion
+??? Plus d’aide sur le choix de son point de diffusion
+Cette étape est l’étape clé pour décider si le flux que vous vous apprêtez à publier va être publié en <span lang="en">_open data_</span> ou au contraire seulement aux utilisateurs accrédités. Dans l’écosystème Géoplateforme on appelle ce dernier mode, le mode privé.
 
-Cette étape est l'étape clé pour décider si le flux que vous vous apprêtez à publier va être publié en opendata ou au contraire seulement aux utilisateurs accrédités. Dans l'écosystème Géoplateforme on appelle ce dernier mode, le mode privé.
+Si vous souhaitez publier en <span lang="en">_open data_</span>, vous allez chercher, dans la réponse ci-dessus, un <span lang="en">_endpoint_</span> du type de la configuration créée (pour le tutoriel, `WMS`) dont l’**élément `open` est à `true`**.
 
-Si vous souhaitez publier en opendata, vous allez chercher, dans la réponse si dessus, un endpoint du type de la configuration créée (pour le tutoriel, WFS) dont l'**élément "open" est à true**.
+Si vous souhaitez publier en mode **privé**, vous allez chercher, dans la réponse ci-dessus, un <span lang="en">_endpoint_</span> du type de la configuration créée (pour le tutoriel, `WMS`) dont l’**élément `open` est à `false`**.
 
-Si vous souhaitez publier en mode **privé**, vous allez chercher, dans la réponse si dessus, un endpoint du type de la configuration créée (pour le tutoriel, WFS) dont l'**élément "open" est à false**.
-
-Le tutoriel est déroulé en mode opendata. Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](https://cartes.gouv.fr/aide/fr/guides-developpeur/tutoriels/controle-des-acces/service-de-diffusion/)
-
-
+Le tutoriel est déroulé en mode <span lang="en">_open data_</span>. Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](../../../controle-des-acces/service-de-diffusion/).
 ???
 ????
 <br>
@@ -147,20 +131,17 @@ Le tutoriel est déroulé en mode opendata. Pour accéder à une donnée publié
 }
 ```
 ???
-??? Plus d'aide sur la configuration de la publication
+??? Plus d’aide sur la configuration de la publication
+L’exemple ci-dessus présente une publication en mode <span lang="en">_open data_</span>.
 
-L'exemple ci-dessus présente une publication en mode opendata.
-
-Si vous choisissez de publier en mode privé, le corps de requête sera : 
-
+Si vous choisissez de publier en mode privé, le corps de requête sera :
 ```json
 {
     "endpoint": "{{ ids.endpoints.private.wmsv }}",
     "open": false
 }
 ```
-Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](https://cartes.gouv.fr/aide/fr/guides-developpeur/tutoriels/controle-des-acces/service-de-diffusion/)
-
+Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](../../../controle-des-acces/service-de-diffusion/)
 ???
 ????
 <br>

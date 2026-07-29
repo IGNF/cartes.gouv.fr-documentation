@@ -1,7 +1,7 @@
 ---
-title: Diffusion en tuiles vectorielles précalculée
+title: Diffusion en tuiles vectorielles précalculées
 eleventyNavigation:
-    key: Diffusion en tuiles vectorielles précalculée
+    key: Diffusion en tuiles vectorielles précalculées
     order: 7
 eleventyComputed:
     markdownTemplateEngine: njk
@@ -15,7 +15,7 @@ tertiaryTitle: Tuilage
 
 Cette étape supplémentaire permet une diffusion à plus grande échelle de données vecteur. Seules les parties nouvelles sont détaillées.
 
-### Calcul de la pyramide de tuiles vectorielle
+### Calcul de la pyramide de tuiles vectorielles
 
 #### Consultation des traitements disponibles
 
@@ -152,7 +152,7 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans
     "output": {
         "stored_data": {
             "name": "Pays et éco-régions",
-            "storage_tags": ["PYARAMIDE"]
+            "storage_tags": ["PYRAMIDE"]
         }
     },
     "parameters": {
@@ -174,79 +174,62 @@ Dans notre exemple ici, on choisit un cas simple : les pays sont présents dans
 }
 ```
 ???
-??? Plus d'aide sur la configuration d'une exécution de traitement de création d'une pyramide de tuiles vectorielles.
-- Description des paramètres en entrée :
-    - **_inputs/stored_data_** :  Il s'agit ici d'une liste (présence des caractères [ ]) qui prend comme valeur au moins un identifiant entrepôt de **stored_data** de type VECTOR-DB (voir étape précédente)
-    - **_output/stored_data/name_** : Le nom définit ici est un nommage libre.
+??? Plus d’aide sur la configuration d’une exécution de traitement de création d’une pyramide de tuiles vectorielles
+Description des paramètres en entrée :
+- `inputs/stored_data` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un identifiant entrepôt de **`stored_data`** de type `VECTOR-DB` (voir étape précédente)
+- `output/stored_data/name` : Le nom défini ici est un nommage libre.
 
-        **Cette information n'est lisible que par un autre utilisateur membre de cet entrepôt, pas par l'utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour  vous - producteur de donnée.** 
+    **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.**
 
-        Cette information est modifiable après coup.
+    Cette information est modifiable après coup.
+- `output/stored_data/storage_tags` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie.
 
-    - **_output/stored_data/storage_tags_** : Il s'agit ici d'une liste (présence des caractères [ ]) qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie. 
+    Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique Entrepôt du swagger) dans l’attribut de réponse `labels` associé à chaque stockage.
 
-        Vous pouvez retrouvez ces tags via la route GET /datastores/{datastore}/storages (rubrique Entrepôt du Swagger) dans l'attribut de réponse "labels" associé à chaque stockage. 
-
-        Pour une donnée de type tuiles vecteur pré-calculées en sortie, seul le stockage S3 est accessible, ce qui correspond au label, donc au storage_tag "PYRAMIDE".
-    
-    - **_parameters_** : C'est là que toute la configuration du traitement prend corps :
-
-        - **_composition_** : Définit les couches qui vont être tuilées avec pour chaque couche :
-
-            - **_table_** : Le nom technique de la relation à tuiler, tel que défini dans la stored_data
-
-            - **_layer_** : Le nom technique de la relation telle qu'elle sera présentée dans le flux. Paramètre optionnel, utile à définir en cas de renommage.
-
-            - **_filter_** : Critère de filtrage pour ne diffuser que le objets correspondant au critère de filtrage. Utilisez une syntaxe de type PostgreSQL : "filter" : "mon_champ='ma valeur'".
-
-            - **_top_level_** : Niveau haut (le plus dézoomé, le chiffre le plus faible) de la pyramide auquel la couche sera tuilée et donc visible.
-
-            - **_bottom_level_** : Niveau bas (le plus zoomé, le chiffre le plus grand) de la pyramide auquel la couche sera tuilée et donc visible.
-
-            - **_attributes_** : Liste des attributs, entre doubles quotes et séparés par des virgules à diffuser dans le flux. Pour diffuser tous les attributs, déclarez le caractère * .
-        
-        - **_bottom_level_** : Niveau haut (le plus dézoomé, le chiffre le plus faible) de la pyramide auquel la couche sera tuilée et donc visible. Permet de définir un niveau global à l'ensemble de la pyramide.
+    Pour une donnée de type tuiles vecteur pré-calculées en sortie, seul le stockage S3 est accessible, ce qui correspond au label, donc au `storage_tag` : `PYRAMIDE`.
+- `parameters` : C’est là que toute la configuration du traitement prend corps :
+    - `composition` : Définit les couches qui vont être tuilées avec pour chaque couche :
+        - `table` : Le nom technique de la relation à tuiler, tel que défini dans la `stored_data`.
+        - `layer` : Le nom technique de la relation telle qu’elle sera présentée dans le flux. Paramètre optionnel, utile à définir en cas de renommage.
+        - `filter` : Critère de filtrage pour ne diffuser que le objets correspondant au critère de filtrage. Utilisez une syntaxe de type PostgreSQL : `"filter": "mon_champ='ma valeur'"`.
+        - `top_level` : Niveau haut (le plus dézoomé, le chiffre le plus faible) de la pyramide auquel la couche sera tuilée et donc visible.
+        - `bottom_level` : Niveau bas (le plus zoomé, le chiffre le plus grand) de la pyramide auquel la couche sera tuilée et donc visible.
+        - `attributes` : Liste des attributs, entre doubles quotes et séparés par des virgules à diffuser dans le flux. Pour diffuser tous les attributs, déclarez le caractère « `*` » .
+    - `top_level` : Niveau haut (le plus dézoomé, le chiffre le plus faible) de la pyramide auquel la couche sera tuilée et donc visible. Permet de définir un niveau global à l’ensemble de la pyramide.
         :::warning
-        Ce paramètre est obligatoire s'il n'est pas défini pour chaque table dans la composition.
+        Ce paramètre est obligatoire s’il n’est pas défini pour chaque table dans la composition.
 
-        S'il est précisé en plus de la composition, il est préférable d'adopter une valeur cohérente au regarde de celles définies dans la composition : à savoir égale au plus grand bottom_level de la composition.
+        S’il est précisé en plus de la composition, il est préférable d’adopter une valeur cohérente au regard de celles définies dans la composition : à savoir égale au plus grand `top_level` de la composition.
         :::
-
-        - **_top_level_** : Niveau bas (le plus zoomé, le chiffre le plus grand) de la pyramide auquel la couche sera tuilée et donc visible. Permet de définir un niveau global à l'ensemble de la pyramide.
+    - `bottom_level` : Niveau bas (le plus zoomé, le chiffre le plus grand) de la pyramide auquel la couche sera tuilée et donc visible. Permet de définir un niveau global à l’ensemble de la pyramide.
         :::warning
-        Ce paramètre est obligatoire s'il n'est pas défini pour chaque table dans la composition.
+        Ce paramètre est obligatoire s’il n’est pas défini pour chaque table dans la composition.
 
-        S'il est précisé en plus de la composition, il est préférable d'adopter une valeur cohérente au regarde de celles définies dans la composition : à savoir égale au plus petit top_level de la composition.
+        S’il est précisé en plus de la composition, il est préférable d’adopter une valeur cohérente au regard de celles définies dans la composition : à savoir égale au plus petit `bottom_level` de la composition.
         :::
-
-        - **_area_** : WKT de la zone sur laquelle le moissonnage doit se faire, en EPSG:4326. Ce paramètre est obligatoire si la base vecteur en entrée n’a pas d’étendue et est utile si la donnée est disséminée à travers le globe (France + DOM par exemple)
-
-        - **_tippecanoe_options_** : Plus d'informations sur ces options et leur syntaxe peuvent être trouvées sur la [documentation de l'outil](https://github.com/mapbox/tippecanoe/blob/master/README.md).
-
-
+    - `area` : WKT de la zone sur laquelle le moissonnage doit se faire, en EPSG:4326. Ce paramètre est obligatoire si la base vecteur en entrée n’a pas d’étendue et est utile si la donnée est disséminée à travers le globe (France + DOM par exemple).
+    - `tippecanoe_options` : Plus d’informations sur ces options et leur syntaxe peuvent être trouvées sur la [documentation de l’outil](https://github.com/mapbox/tippecanoe/blob/master/README.md).
         ::: info
+        La caractéristique à retenir d’une tuile vectorielle générée avec Tippecanoe est qu’elle ne peut contenir plus de 5 000 objets, et ce quelle que soit la tuile ou son niveau.
 
-        La caractéristique à retenir d'une tuile vectorielle générée avec tippecanoe est qu'elle ne peut contenir plus de 5000 objet, ce quelle que soit la tuile ou son niveau. 
-        
-        C'est la première cause d'échec de traitement par les utilisateurs
-        
-        Les options sont donc essentielles pour adapter le jeu de donnée en entrée à cette contrainte. Elles proposent différentes méthodes de généralisation à petite échelle pour assurer une représentation fiable de la donnée tout en limitant le nombre d'objets par tuile.
+        C’est la première cause d’échec de traitement par les utilisateurs
 
+        Les options sont donc essentielles pour adapter le jeu de donnée en entrée à cette contrainte. Elles proposent différentes méthodes de généralisation à petite échelle pour assurer une représentation fiable de la donnée tout en limitant le nombre d’objets par tuile.
         :::
+
 Vous êtes invités à vous référer au swagger pour avoir les détails et options complètes sur cette partie.
 
 :::info
-Comme pour la livraison il vous est possible de configurer l'envoi d'un mail automatique à la fin du traitement.
+Comme pour la livraison il vous est possible de configurer l’envoi d’un courriel automatique à la fin du traitement.
 
-Pour ce faire, il suffit d'ajouter l'élément json ci-dessous après l'élément "parameters" dans le corps de requête de déclaration d'exécution.
+Pour ce faire, il suffit d’ajouter l’élément JSON ci-dessous après l’élément `parameters` dans le corps de requête de déclaration d’exécution.
 ```json
 "callback": {
     "type": "email",
     "to_address": [
-      "example@mail.fr"
+        "example@mail.fr"
     ]
-  }
-
+}
 ```
 :::
 ???
@@ -302,34 +285,30 @@ Pour ce faire, il suffit d'ajouter l'élément json ci-dessous après l'élémen
 }
 ```
 ???
-??? Plus d'aide sur l'identification de la donnée stockée de sortie
-
-Dès le lancement de l'exécution du traitement, dans le corps de réponse ou à chaque interrogation de la requête d'état d'exécution vous disposez dans le corps de réponse de ces requêtes de l'élément json :
-
+??? Plus d’aide sur l’identification de la donnée stockée de sortie
+Dès le lancement de l’exécution du traitement, dans le corps de réponse ou à chaque interrogation de la requête d’état d’exécution vous disposez dans le corps de réponse de ces requêtes de l’élément JSON :
 ```json
 "output": {
-        "stored_data": {
-            "name": "Pays et éco-régions",
-            "type": "ROK4-PYRAMID-VECTOR",
-            "status": "GENERATING",
-            "_id": "{stored data}"
-        }
+    "stored_data": {
+        "name": "Pays et éco-régions",
+        "type": "ROK4-PYRAMID-VECTOR",
+        "status": "GENERATING",
+        "_id": "{stored data}"
+    }
 }
 ```
-ce qui vous donne l'élément "_id" à isoler pour identifier ensuite votre stored_data de sortie
+Ce qui vous donne l’élément `_id` à isoler pour identifier ensuite votre `stored_data` de sortie.
 
 :::info
-La stored_data de sortie n'est exploitable et interrogeable qu'une fois l'exécution du traitement terminée avec succès.
+La `stored_data` de sortie n’est exploitable et interrogeable qu’une fois l’exécution du traitement terminée avec succès.
 :::
-
-
 ???
 ????
 <br>
 
 ### Diffusion des tuiles vectorielles
 
-Les données de la pyramide de tuiles vectorielles sont diffusables selon l’API Tile Map Service. Cette API est disponible sur un point d’accès de type WMTS-TMS.
+Les données de la pyramide de tuiles vectorielles sont diffusables selon l’API Tile Map Service. Cette API est disponible sur un point d’accès de type `WMTS-TMS`.
 
 #### Création de la configuration
 
@@ -373,17 +352,14 @@ La donnée n’est pas représentée côté serveur, il n’y a donc pas de fich
 {{ "public/data/tutoriels/alimentation-diffusion-simple/globales/production/endpoints.json" | readFILE | safe }}
 ```
 ???
-??? Plus d'aide sur le choix de son point de diffusion
+??? Plus d’aide sur le choix de son point de diffusion
+Cette étape est l’étape clé pour décider si le flux que vous vous apprêtez à publier va être publié en <span lang="en">_open data_</span> ou au contraire seulement aux utilisateurs accrédités. Dans l’écosystème Géoplateforme on appelle ce dernier mode, le mode privé.
 
-Cette étape est l'étape clé pour décider si le flux que vous vous apprêtez à publier va être publié en opendata ou au contraire seulement aux utilisateurs accrédités. Dans l'écosystème Géoplateforme on appelle ce dernier mode, le mode privé.
+Si vous souhaitez publier en <span lang="en">_open data_</span>, vous allez chercher, dans la réponse ci-dessus, un <span lang="en">_endpoint_</span> du type de la configuration créée (pour le tutoriel, `WMTS-TMS`) dont l’**élément `open` est à `true`**.
 
-Si vous souhaitez publier en opendata, vous allez chercher, dans la réponse si dessus, un endpoint du type de la configuration créée (pour le tutoriel, WFS) dont l'**élément "open" est à true**.
+Si vous souhaitez publier en mode **privé**, vous allez chercher, dans la réponse ci-dessus, un <span lang="en">_endpoint_</span> du type de la configuration créée (pour le tutoriel, `WMTS-TMS`) dont l’**élément `open` est à `false`**.
 
-Si vous souhaitez publier en mode **privé**, vous allez chercher, dans la réponse si dessus, un endpoint du type de la configuration créée (pour le tutoriel, WFS) dont l'**élément "open" est à false**.
-
-Le tutoriel est déroulé en mode opendata. Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](https://cartes.gouv.fr/aide/fr/guides-developpeur/tutoriels/controle-des-acces/service-de-diffusion/)
-
-
+Le tutoriel est déroulé en mode <span lang="en">_open data_</span>. Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](../../../controle-des-acces/service-de-diffusion/).
 ???
 ????
 <br>
@@ -402,20 +378,17 @@ Le tutoriel est déroulé en mode opendata. Pour accéder à une donnée publié
 }
 ```
 ???
-??? Plus d'aide sur la configuration de la publication
+??? Plus d’aide sur la configuration de la publication
+L’exemple ci-dessus présente une publication en mode <span lang="en">_open data_</span>.
 
-L'exemple ci-dessus présente une publication en mode opendata.
-
-Si vous choisissez de publier en mode privé, le corps de requête sera : 
-
+Si vous choisissez de publier en mode privé, le corps de requête sera : 
 ```json
 {
     "endpoint": "{{ ids.endpoints.private.wmts }}",
     "open": false
 }
 ```
-Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](https://cartes.gouv.fr/aide/fr/guides-developpeur/tutoriels/controle-des-acces/service-de-diffusion/)
-
+Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur le contrôle des accès](../../../controle-des-acces/service-de-diffusion/).
 ???
 ????
 <br>
