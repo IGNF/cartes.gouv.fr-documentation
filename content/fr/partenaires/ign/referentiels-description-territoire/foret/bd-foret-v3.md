@@ -102,7 +102,7 @@ La BD Forêt v3 est construite à partir de la BD ORTHO. Le millésime diffusé 
 ##### Couverture géographique :
 
 La BD Forêt v3 sera disponible sur l’ensemble de la France hexagonale et la Corse courant 2027.\
-Elle ne couvre pas les DROM mais des produits équivalents, adaptés à ces territoires, sont en cours de production : les cartographies des formations végétales, disponibles avec le lien suivant : [CARTO VEGETATION DROM]({{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION){target="_blank" rel="noopener noreferrer" title="CARTOS VEGETATION DROM - ouvre une nouvelle fenêtre"}
+Elle ne couvre pas les DROM mais des produits équivalents, adaptés à ces territoires, sont en cours de production : les cartographies des formations végétales, disponibles avec le lien suivant : [CARTOS VEGETATION DROM]({{ urls.rechercher_une_donnee }}/dataset/IGNF_CARTO-VEGETATION){target="_blank" rel="noopener noreferrer" title="CARTOS VEGETATION DROM - ouvre une nouvelle fenêtre"}
 
 ##### Commanditaire de la donnée :
 
