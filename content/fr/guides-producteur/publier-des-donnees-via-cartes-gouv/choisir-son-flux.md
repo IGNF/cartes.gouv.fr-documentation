@@ -29,11 +29,10 @@ Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur
 {{ component("table", {
     headers: ["Type de flux", "Avantages", "Inconvénients"],
     data: [
-        ["WFS", "permet d’interroger précisémment la donnée et rapide à publier", "lourd à charger à petite échelle"],
-        ["WMS-V", "rapide à publier", "lourd à charger à petite échelle"],
-        ["TMS", "performant à l’affichage", "plus lent à publier et nécessite plus d’espace de stockage"],
-        ["WMS-R", "rapide à publier", "lourd à charger à petite échelle"],
-        ["WMTS", "performant à l’affichage", "plus lent à publier et nécessite plus d’espace de stockage"]
+        ["WFS", "possible d’appliquer des styles à la volée facilement<br>autorise le requêtage et le téléchargement :<br> - describeFeatureType : description du modèle<br> - getFeature : télécharger des objets", "limité à 1000-5000 entités à la fois, peu adapté à de la visualisation à petite échelle<br>ne permet pas d’indiquer une attribution"],
+        ["WMS-V / WMS-R", "plus rapide à publier qu’un WMTS<br>autorise le requêtage :<br> - getMap : extraction personnalisée d’une zone<br> - getFeatureInfo : information sur les entités", "lourd à charger à petite échelle"],
+        ["TMS", "performant à l’affichage<br>permet de gérer différents styles à la source", "plus lent à publier et nécessite plus d’espace de stockage<br>ce n’est pas un vrai standard OGC (pas de getCapabilities ni getFeatureInfo)"],
+        ["WMTS", "performant à l’affichage<br>autorise le requêtage :<br> - getTile : récupération d’une tuile<br> - getFeatureInfo : information sur les entités", "plus lent à publier et nécessite plus d’espace de stockage<br>ne permet pas d’indiquer une attribution"]
     ]
 }) }}
 
