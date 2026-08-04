@@ -40,7 +40,7 @@ Pour cela, il faut livrer ce style ci-dessous en tant que `static` dans l’entr
 }
 ```
 
-Puis il faut déclarer ce style dans la configuration de la donnée dont on souhaite ajouter la transparence. Et, après la synchronisation de l’offre, les pixels blancs ou sans données deviennent transparent.
+Puis il faut déclarer ce style dans la configuration de la donnée dont on souhaite ajouter la transparence. Et, après la synchronisation de l’offre, les pixels blancs ou sans données deviennent transparents.
 
 Une documentation plus approfondie devrait arriver prochainement dans la partie « Guides développeur » de la documentation.
 
