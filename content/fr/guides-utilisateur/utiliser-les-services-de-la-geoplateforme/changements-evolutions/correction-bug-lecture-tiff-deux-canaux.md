@@ -1,12 +1,11 @@
 ---
 title: Correction d’un bug à la lecture de l’encodage TIFF en 2 canaux en WMS-Raster + correction d’autres bugs
-description: Correction d’un bug à la lecture de l’encodage TIFF en 2 canaux en WMS-Raster, ajout d’un style permettant de rendre transparent les pixels blancs en WMS-Raster, correction de bugs sur les GetCap WMTS et WMS-Raster, correction de l’absence de content-type et content-length sur les requêtes HEAD de Téléchargement
+description: Correction d’un bug à la lecture de l’encodage TIFF en 2 canaux en WMS-Raster, ajout de la transparence à la volée en WMS Raster, correction de bugs sur les GetCap WMTS et WMS-Raster, correction de l’absence de content-type et content-length sur les requêtes HEAD de Téléchargement
 tags:
     - WMS-Raster
     - WMTS
     - Téléchargement
     - Entrepôt
-    - orchestrateur
 eleventyNavigation:
     key: Correction d’un bug à la lecture de l’encodage TIFF en 2 canaux en WMS-Raster + correction d’autres bugs
     order: -20260803
@@ -15,9 +14,35 @@ date: 2026-08-03
 
 ## Changements
 
-**Ajout d’un nouveau style à appliquer sur le <span lang="en">_processing_</span> « [Calcul ou mise à jour de pyramide raster](../../../../guides-developpeur/tutoriels/gestion-des-donnees-raster/alimentation-diffusion-raster/calcul-pyramide/) » permettant de rendre transparent à la volée les pixels blancs en WMS-Raster.**
+**Ajout de la transparence à la volée en [WMS-Raster](../../diffusion/wms-raster/)**
 
-Ce nouveau style s’appelle `colorize` et est ajouté à la liste des styles disponibles dans le <span lang="en">_processing_</span>.
+Pour cela, il faut livrer ce style ci-dessous en tant que static dans l'entrepôt :
+
+```json
+{
+    "identifier": "white_to_alpha",
+    "title": "Blanc transparent",
+    "abstract": "Rend le blanc transparent",
+    "keywords": ["white", "alpha"],
+    "legend": {
+        "format": "image/png",
+        "url": "http://ign.fr",
+        "height": 100,
+        "width": 100,
+        "min_scale_denominator": 0,
+        "max_scale_denominator": 30
+    },
+    "colorize": {
+        "source": [255,255,255],
+        "destination": [255,255,255,0],
+        "tolerance": 2
+    }
+}
+```
+
+Puis il faut déclarer ce style dans la configuration de la donnée dont on souhaite ajouter la transparence. Et, après la synchronisation de l'offre, les pixels blancs ou sans données deviennent transparent.
+
+Une documentation plus approfondie devrait arriver prochainement dans la partie `Guides développeur` de la documentation
 
 ## Corrections de bugs
 
