@@ -1,6 +1,6 @@
 ---
 title: Correction d’un bug à la lecture de l’encodage TIFF en 2 canaux en WMS-Raster + correction d’autres bugs
-description: Correction d’un bug à la lecture de l’encodage TIFF en 2 canaux en WMS-Raster, ajout de la transparence à la volée en WMS Raster, correction de bugs sur les GetCap WMTS et WMS-Raster, correction de l’absence de content-type et content-length sur les requêtes HEAD de Téléchargement
+description: Correction d’un bug à la lecture de l’encodage TIFF en 2 canaux en WMS-Raster, ajout de la transparence à la volée en WMS-Raster, correction de bugs sur les GetCap WMTS et WMS-Raster, correction de l’absence de content-type et content-length sur les requêtes HEAD de Téléchargement
 tags:
     - WMS-Raster
     - WMTS
@@ -16,7 +16,7 @@ date: 2026-08-03
 
 **Ajout de la transparence à la volée en [WMS-Raster](../../diffusion/wms-raster/)**
 
-Pour cela, il faut livrer ce style ci-dessous en tant que static dans l'entrepôt :
+Pour cela, il faut livrer ce style ci-dessous en tant que `static` dans l’entrepôt :
 
 ```json
 {
@@ -40,9 +40,9 @@ Pour cela, il faut livrer ce style ci-dessous en tant que static dans l'entrepô
 }
 ```
 
-Puis il faut déclarer ce style dans la configuration de la donnée dont on souhaite ajouter la transparence. Et, après la synchronisation de l'offre, les pixels blancs ou sans données deviennent transparent.
+Puis il faut déclarer ce style dans la configuration de la donnée dont on souhaite ajouter la transparence. Et, après la synchronisation de l’offre, les pixels blancs ou sans données deviennent transparent.
 
-Une documentation plus approfondie devrait arriver prochainement dans la partie `Guides développeur` de la documentation
+Une documentation plus approfondie devrait arriver prochainement dans la partie « Guides développeur » de la documentation.
 
 ## Corrections de bugs
 
