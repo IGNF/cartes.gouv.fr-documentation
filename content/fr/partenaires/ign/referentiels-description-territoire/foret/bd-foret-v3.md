@@ -16,21 +16,17 @@ image:
 #### La BD Forêt v3 arrive
 
 La BD Forêt v3 est le nouveau référentiel géographique de l’IGN décrivant les essences forestières. Cette base de données est fondée sur une méthode de production innovante, permettant de mieux répondre aux besoins utilisateurs exprimés.\
-Depuis juin 2025, dans le cadre d'une démarche de co-construction du produit avec les utilisateurs, trois jeux de données test ont été diffusés par l'IGN.\
+Depuis juin 2025, dans le cadre d’une démarche de co-construction du produit avec les utilisateurs, trois jeux de données test ont été diffusés par l’IGN.\
 Il s’agissait encore à ce stade de données brutes issues directement de l’IA, et n’ayant donc pas fait l’objet de reprises manuelles de la part des photo-interprètes forêt de l’IGN. Ils ont néanmoins constitué une étape clé avant la production de la BD Forêt v3 sur l’ensemble de l’hexagone.\
-Nous remercions chaleureusement l’ensemble des utilisateurs nous ayant fait un retour au sujet de ces jeux test.  Les réponses apportées ont permis d’améliorer le processus de production et d’orienter le travail de consolidation et reprise manuelle par photo-interprétation des données brutes issues de l’IA.
+Nous remercions chaleureusement l’ensemble des utilisateurs nous ayant fait un retour au sujet de ces jeux test. Les réponses apportées ont permis d’améliorer le processus de production et d’orienter le travail de consolidation et reprise manuelle par photo-interprétation des données brutes issues de l’IA.
 
-À titre d'information, les données test de juin 2026 sont toujours disponibles : [**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="Jeu de données test BD Forêt v3 MARS 2026 - bêta - ouvre une nouvelle fenêtre"} 
+À titre d’information, les données test de juin 2026 sont toujours disponibles : [**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="Jeu de données test BD Forêt v3 JUIN 2026 - bêta - ouvre une nouvelle fenêtre"}
 
-<br>
+#### Les prochaines étapes du projet :
 
-#### Les prochaine étapes du projet :
+L’équipe projet BD Forêt v3 de l’IGN vient de lancer la production de cinq départements pilotes (la Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret). À la différence des jeux de données test produits jusqu’à présent, ces données issues de l’IA feront l’objet de reprises manuelles par photo-interprétation.
 
-L’équipe projet BD Forêt v3 de l’IGN vient de lancer la production de cinq départements pilotes (Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret). A la différence des jeux de données test produits jusqu’à présent, ces données issues de l’IA feront l’objet de reprises manuelles par photo-interprétation. 
-La décision d’étendre la production sur le reste de l’hexagone devrait avoir lieu courant octobre. 
-
-<br>
-
+La décision d’étendre la production sur le reste de l’hexagone devrait avoir lieu courant octobre.
 
 #### À qui s’adresse la BD Forêt v3 ?
 
@@ -85,7 +81,7 @@ Cette donnée sera construite en s’appuyant sur le [Masque Forêt v1]({{ urls.
 
 ##### Mobilisation de l’IA :
 
-La BD Forêt v3 marque un tournant décisif dans l’élaboration des bases de données de l’IGN. L’IA est un nouvel outil central mobilisé afin de mieux répondre à la nécessité d’une production de données rapide (l’objectif est de couvrir tout l’Hexagone en un an seulement), et de pouvoir l’actualiser plus fréquemment grâce à des coûts de mise-à-jour réduits. En cela, la construction de la BD Forêt v3 se distingue des méthodes plus traditionnelles et augmente de façon significative la précision géométrique et sémantique. L’objectif est de créer un processus de production très automatisé tout en conservant une part d’intervention humaine, par des spécialistes de la photo-interprétation forestière, en fin de production afin de garantir la fiabilité des données diffusées.\
+La BD Forêt v3 marque un tournant décisif dans l’élaboration des bases de données de l’IGN. L’IA est un nouvel outil central mobilisé afin de mieux répondre à la nécessité d’une production de données rapide (l’objectif est de couvrir tout l’Hexagone en un an seulement), et de pouvoir l’actualiser plus fréquemment grâce à des coûts de mise à jour réduits. En cela, la construction de la BD Forêt v3 se distingue des méthodes plus traditionnelles et augmente de façon significative la précision géométrique et sémantique. L’objectif est de créer un processus de production très automatisé tout en conservant une part d’intervention humaine, par des spécialistes de la photo-interprétation forestière, en fin de production afin de garantir la fiabilité des données diffusées.\
 La BD Forêt v3 se distingue de la BD Forêt v1 et v2 par sa finesse géométrique et sémantique. L’automatisation accrue de son processus de production, et sa capacité à être actualisée à un coût réduit témoignent d’un changement significatif dans la production de données géographiques.\
 Ces travaux ont bénéficié d’un accès aux moyens de calcul de l’IDRIS au travers de l’allocation de ressources AD010114597R2 attribuée par GENCI.
 
@@ -95,9 +91,9 @@ Ces travaux ont bénéficié d’un accès aux moyens de calcul de l’IDRIS au 
 
 #### Caractéristiques de la BD Forêt v3 :
 
-##### Rythme de mise à jour :
+##### Rythme de mises à jour :
 
-Le recours à l’intelligence artificielle permet d’envisager une mise à jour tous les six ans, en adéquation avec les besoins exprimés par les utilisateurs. Le recours à l’IA pour produire la donnée permet de réduire de façon significative les délais et les coûts futurs des mises-à-jour.
+Le recours à l’intelligence artificielle permet d’envisager une mise à jour tous les six ans, en adéquation avec les besoins exprimés par les utilisateurs. Le recours à l’IA pour produire la donnée permet de réduire de façon significative les délais et les coûts futurs des mises à jour.
 
 ##### Millésimes :
 
@@ -118,7 +114,7 @@ Le projet BD Forêt v3 fait partie des grands projets numériques de l’État, 
 
 ##### Usages identifiés :
 
-_Connaître la forêt, c’est pouvoir la préserver._ Telle est la vision de l’équipe projet de la BD Forêt v3.\
+« Connaître la forêt, c’est pouvoir la préserver. », telle est la vision de l’équipe projet de la BD Forêt v3.\
 Les études de besoins et les discussions avec les utilisateurs ont permis de faire ressortir de nombreux usages tels que :
 - Suivi des opérations forestières et de la ressource en bois
 - Préparation des missions d’expertises forestières
@@ -136,8 +132,8 @@ Les études de besoins et les discussions avec les utilisateurs ont permis de fa
 
 Un comité des utilisateurs a été mis en place afin de co-construire la BD Forêt v3 avec ses futurs utilisateurs. Les retours émis permettent aux équipes de l’IGN d’ajuster la chaîne de traitement en conséquence, afin de mieux répondre aux attentes exprimées.\
 Ces comités sont maintenus, mais avec un rythme moins soutenu. Ils permettront à l’équipe projet BD Forêt v3 de rendre compte de l’avancée de la production, et aux utilisateurs de poser leurs éventuelles questions sur ces données.
-Si vous souhaitez participer activement à la co-construction de la BD Forêt v3 et intégrer le comité des utilisateurs, vous pouvez nous contacter via l’adresse suivante : <carto.forestiere@ign.fr>
 
+Si vous souhaitez participer activement à la co-construction de la BD Forêt v3 et intégrer le comité des utilisateurs, vous pouvez nous contacter via l’adresse suivante : <carto.forestiere@ign.fr>
 
 #### Contact :
 
