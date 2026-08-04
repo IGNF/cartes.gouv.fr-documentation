@@ -32,7 +32,7 @@ Vous pouvez alors cliquer sur la carte pour commencer à créer la ligne. Chaque
 
 ![Création d’une ligne](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-distance/02_creer-la-ligne.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la ligne. Cela figera la ligne, et vous pourrez en créer une nouvelle de la même façon :
+Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la ligne (attention : cliquer sur le point précédent ou à un endroit très proche finira également la ligne). Cela figera la ligne, et vous pourrez en créer une nouvelle de la même façon :
 
 ![Finalisation de la ligne](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-distance/03_finaliser-la-ligne.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
@@ -55,7 +55,7 @@ Vous pouvez alors cliquer sur la carte pour commencer à créer la zone. Chaque 
 
 ![Création d’une surface](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-surface/02_creer-la-surface.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la zone. Cela figera la surface, et vous pourrez en créer une nouvelle de la même façon :
+Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la zone (attention : cliquer sur le point précédent ou à un endroit très proche finira également la zone). Cela figera la surface, et vous pourrez en créer une nouvelle de la même façon :
 
 ![Finalisation de la surface](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-surface/03_finaliser-la-surface.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
