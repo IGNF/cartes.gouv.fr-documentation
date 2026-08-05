@@ -40,10 +40,10 @@ Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur
                         autorise le requêtage et le téléchargement :
                         <ul>
                             <li>
-                                describeFeatureType : description du modèle
+                                <code>DescribeFeatureType</code> : description du modèle
                             </li>
                             <li>
-                                getFeature : télécharger des objets
+                                <code>GetFeature</code> : télécharger des objets
                             </li>
                         </ul>
                     </li>
@@ -71,10 +71,10 @@ Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur
                         autorise le requêtage :
                         <ul>
                             <li>
-                                getMap : extraction personnalisée d’une zone
+                                <code>GetMap</code> : extraction personnalisée d’une zone
                             </li>
                             <li>
-                                getFeatureInfo : information sur les entités
+                                <code>GetFeatureInfo</code> : information sur les entités
                             </li>
                         </ul>
                     </li>
@@ -106,7 +106,7 @@ Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur
                         plus lent à publier et nécessite plus d’espace de stockage
                     </li>
                     <li>
-                        ce n’est pas un vrai standard OGC (pas de getCapabilities ni getFeatureInfo)
+                        ce n’est pas un vrai standard OGC (pas de <code>GetCapabilities</code> ni <code>GetFeatureInfo</code>)
                     </li>
                 </ul>
             "
@@ -122,10 +122,10 @@ Vous trouverez ci-dessous deux tableaux récapitulatifs des flux disponibles sur
                         autorise le requêtage :
                         <ul>
                             <li>
-                                getTile : récupération d’une tuile
+                                <code>GetTile</code> : récupération d’une tuile
                             </li>
                             <li>
-                                getFeatureInfo : information sur les entités
+                                <code>GetFeatureInfo</code> : information sur les entités
                             </li>
                         </ul>
                     </li>
