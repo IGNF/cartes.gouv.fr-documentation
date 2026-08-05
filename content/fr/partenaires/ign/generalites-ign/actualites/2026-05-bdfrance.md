@@ -20,11 +20,9 @@ Une route mal nommée, un établissement recevant du public manquant, un nouveau
 
 En partageant leurs informations glanées sur le terrain, les SDIS contribuent à enrichir une donnée publique partagée, plus à jour, plus adaptée à leurs usages opérationnels et au bénéfice de l’ensemble des acteurs publics et privés qui l’utilisent, participant ainsi à la construction progressive de la BD France.
 
-![Offre Admin Express](/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/00-bdfrance.png "Les contributions des SDIS en 2025 par département, selon les thèmes"){.fr-responsive-img .frx-img-contained}
+![Suivi des contributions directes du guichet SDIS Experts](/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/00-bdfrance.png){.fr-responsive-img .frx-img-contained .frx-shadow-img}
 
-![Offre Admin Express](/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/01-bdfrance.png "Les contributions des SDIS en 2025 par département, selon les thèmes"){.fr-responsive-img .frx-img-contained}
-
-<figcaption class="fr-content-media__caption fr-mb-6v">Les contributions des SDIS en 2025 par département, selon les thèmes</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/01-bdfrance.png", "Suivi des contributions directes du guichet SDIS Découverte", "Les contributions des SDIS en 2025 par département, selon les thèmes", "frx-shadow-img" %}
 
 Présenté lors du Géosdis 2026, le programme BD France vise à structurer et amplifier cette dynamique collaborative, en facilitant les échanges entre la donnée produite au niveau national gérée par l’IGN, les données produites par les acteurs locaux et les données produites dans le cadre de métiers plus spécifiques (comme la défense contre l’incendie par exemple).
 
@@ -61,9 +59,7 @@ Concrètement, cela passe par le développement d’outils permettant :
 
 Des plug-ins QGIS sont déjà proposés pour faciliter la saisie et la contribution directe sur certaines thématiques spécifiques comme le routier, les odonymes ou encore la défense contre l’incendie.
 
-![Plug-in QGIS](/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/02-bdfrance.png "Exemple de plug-in QGIS - assistant de saisie DFCI"){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-<figcaption class="fr-content-media__caption fr-mb-6v">Exemple de plug-in QGIS - assistant de saisie DFCI</figcaption>
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-05-bdfrance/02-bdfrance.png", "Exemple de plug-in QGIS - assistant de saisie DFCI" %}
 
 Pour les SDIS, l’intégration dans le référentiel national des changements observés sur le terrain aussi bien topographiques que métiers est facilitée. Les outils de synchronisation leur permettront à terme de maintenir leurs données plus spécifiques en local sans difficulté et d’éviter les écarts d’actualité et les redondances d’informations.
 

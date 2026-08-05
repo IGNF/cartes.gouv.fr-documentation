@@ -27,7 +27,7 @@ date: 2026-01-05
     ]
 }) }}
 
-<figcaption class="fr-content-media__caption fr-mb-6v">* Cette couche remplace la couche IGNF_COSIA_2024</figcaption>
+<p class="fr-text--xs fr-mb-8v">* Cette couche remplace la couche IGNF_COSIA_2024</p>
 
 ##### Liste des mises à jour de flux en accès libre
 
