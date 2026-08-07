@@ -36,7 +36,7 @@ Par exemple :
 
 ## Accès au swagger
 
-La documentation swagger permettant d’accéder aux détails des routes et paramètres pour réaliser une extraction vecteur est accessible ici :
+La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une extraction vecteur est accessible ici :
 - Pour l’API Entrepôt (partie « Accéder aux ressources extractibles » et « Pour un producteur de données ») : [https://data.geopf.fr/api/swagger-ui/index.html](https://data.geopf.fr/api/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 - Pour l’API d’extraction vecteur (le reste de cette documentation) : [https://data.geopf.fr/extraction/swagger-ui/index.html](https://data.geopf.fr/extraction/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
@@ -52,10 +52,10 @@ Par ailleurs le service est configuré de telle sorte que, pour l’ensemble des
 
 ### Capabilities
 
-L’URL de capabilities correspond à la racine du service : https://data.geopf.fr/extraction
+L’URL de <span lang="en">_capabilities_</span> correspond à la racine du service : https://data.geopf.fr/extraction
 
 Conformément au standard OGC API Processes, cette URL référence les URL de niveau immédiatement inférieur :
-- Lien vers le swagger
+- Lien vers le <span lang="en">_swagger_</span>
 - Lien vers l’URL de conformité
 - Lien vers la liste des process d’extraction
 - Lien vers la liste des travaux d’extraction
@@ -76,7 +76,7 @@ Pour connaitre la liste des données qui lui sont accessibles en extraction, un 
 
 <br>
 
-Pour l’ensemble des paramètres et valeurs de ces paramètres vous êtes invités à consulter le **swagger**.
+Pour l’ensemble des paramètres et valeurs de ces paramètres vous êtes invités à consulter le **<span lang="en">_swagger_</span>**.
 
 Néanmoins, ces routes ayant des usages qui vont au-delà de la seule API d’extraction, on va faire ici un zoom sur quelques paramètres qui peuvent être mobilisés à bon escient pour faciliter l’identification d’une ressource à extraire.
 
@@ -86,7 +86,7 @@ Les paramètres que l’on mentionne ici sont exclusivement à mobiliser dans la
 
 GET [https://data.geopf.fr/api/users/me/stored_data](https://data.geopf.fr/api/users/me/stored_data){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/users/me/stored_data - ouvre une nouvelle fenêtre"}
 
-Ils sont listés dans l’ordre d’apparition dans le swagger.
+Ils sont listés dans l’ordre d’apparition dans le <span lang="en">_swagger_</span>.
 - `type` et `VECTOR-DB` : Permet de restreindre la liste des résultats aux seules données mobilisables par l’API d’extraction : des données de type vecteur.
 - `name` : Permet d’identifier une donnée par son nom. Le **caractère joker « `%` »** permet la recherche sur un contenu partiel. La chaine de texte à préciser est **insensible à la casse**. Ainsi, une chaine `%BD%TOPO%` trouvera des données comme `Ma BDTOPO`, `BD TOPO` ou encore `BDTOPO_septembre_2025`.
 - `lon` et `lat` : Où des coordonnées latitude - longitude (EPSG : WGS84 en degrés décimaux) d’un point d’intérêt sont intersectées avec l’emprise des données : si le point est intersecté, la donnée est listée, sinon elle n’est pas listée.
