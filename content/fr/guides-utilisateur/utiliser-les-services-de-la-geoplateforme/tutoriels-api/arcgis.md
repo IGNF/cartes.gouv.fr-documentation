@@ -11,85 +11,36 @@ eleventyNavigation:
 pictogram: digital/coding.svg
 ---
 
-## Utiliser les données libres en flux WMS/WMTS
+## ArcGIS Earth
 
-### Intégration d’un flux WMTS
+Cette section décrit l’intégration des flux IGN dans l’application ArcGIS Earth. Les démarches sont regroupées par familles afin de limiter les répétitions, tout en tenant compte des spécificités du web : authentification, performances, limites de volumétrie et contraintes de partage.
 
-Dans le menu **« Insérer »**, allez dans **« Connexions »** puis **« Nouveau serveur WMTS »**.
+ArcGIS Earth vous permet gratuitement d’utiliser divers éléments provenant de ArcGIS Online, de ArcGIS Enterprise, de données locales et de services Web.
 
-![Nouveau serveur WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/01_serveur-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-Dans la boîte de dialogue **« Ajouter une connexion au serveur WMTS »**, renseignez le champ **« URL du serveur »** :
-
-```plain
-https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
-```
-
-Et cliquez sur **« OK »**.
-
-![Ajouter une connexion - WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/02_connexion-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-Les couches issues du flux WMTS s’affichent dans l’onglet **« Serveurs »** du catalogue du projet.
-
-![Ajout Plan IGN v2 - WMTS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/03_catalogue-wmts.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-:::info
-Ouvrir les images dans un nouvel onglet pour les avoir à leur taille réelle.
-:::
-
-### Intégration d’un flux WMS
-
-Dans le menu **« Insérer »**, allez dans **« Connexions »** puis **« Nouveau serveur WMS »**.
-
-![Nouveau serveur WMS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/04_serveur-wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-Dans la boîte de dialogue **« Ajouter une connexion au serveur WMS »**, renseignez le champ **« URL du serveur »** :
-- **WMS-Raster :**
-
-    ```plain
-    https://data.geopf.fr/wms-r?
-    ```
-
-- **WMS-Vecteur :**
-
-    ```plain
-    https://data.geopf.fr/wms-v?
-    ```
-
-Et cliquez sur **« OK »**.
-
-![Ajouter une connexion - WMS-r](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/05_connexion-wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-Les couches issues du flux WMS s’affichent dans l’onglet **« Serveurs »** du catalogue du projet.
-
-![Ajout Plan IGN v2 - WMS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wms-wmts/06_catalogue-wms.png){.fr-responsive-img .frx-border-img .frx-img-contained}
-
-:::info
-Ouvrir les images dans un nouvel onglet pour les avoir à leur taille réelle.
+:::callout Téléchargement
+[Tutoriel Argis Earth (.pdf)](https://data.geopf.fr/annexes/ressources/documentation/ArcGIS_Earth_et_les_Geoservices.pdf)
 :::
 
 ---
 
-## Utiliser les données libres en flux WFS
+## ArcGIS Online
 
-### Intégration d’un flux WFS
+Cette section décrit l’intégration des flux IGN dans ArcGIS Online (via l’application Map Viewer ou l’ajout d’éléments au portail). Les démarches sont regroupées par familles afin de limiter les répétitions, tout en tenant compte des spécificités du web : authentification, performances, limites de volumétrie et contraintes de partage.
 
-Dans le menu **« Insérer »**, allez dans **« Connexions »** puis **« Nouveau serveur WFS »**.
+ArcGIS Online est la plateforme SaaS (Software-as-a-Service, logiciel en tant que service) évolutive et sécurisée, adaptée aux processus géospatiaux. ArcGIS Online permet d’améliorer la prise de décision en collectant et en gérant des données de sources multiples, en les analysant et en partageant facilement des cartes et des applications dans un système d’information géographique (SIG) Web connecté et collaboratif.
 
-![Nouveau serveur WFS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wfs/01_serveur-wfs.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+:::callout Téléchargement 
+[Tutoriel ArcGis Online (.pdf)](https://data.geopf.fr/annexes/ressources/documentation/ArcGIS_Earth_et_les_Geoservices.pdf)
+:::
 
-Dans la boîte de dialogue **« Ajouter une nouvelle connexion au serveur WFS »**, renseignez le champ **« URL du serveur »** :
+---
 
-```plain
-https://data.geopf.fr/wfs?
-```
+## ArcGIS Pro
 
-Et cliquez sur **« OK »**.
+Cette section propose des tutoriels pas-à-pas pour ajouter et consommer les flux IGN dans l’application bureautique ArcGIS Pro. Les démarches sont regroupées par grandes familles afin de mutualiser les étapes communes. Les cas « sous droits d’utilisation » (apikey, endpoints privés) sont intégrés dans les chapitres concernés, car ils s’appliquent à des flux particuliers.
 
-![Ajouter une connexion - WFS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wfs/02_connexion-wfs.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+ArcGIS Pro est l’application SIG bureautique d’Esri, qui prend en charge la cartographie avancée, la gestion des données et l’analyse spatiale avec des données 2D, 3D et temporelles. ArcGIS Pro est étroitement intégré aux plateformes ArcGIS Online (SaaS) et ArcGIS Enterprise (on-premise), ce qui permet aux utilisateurs de partager et de collaborer entre plateformes. Il nécessite une installation et s’exécute sur des systèmes d’exploitation Windows.
 
-Dans la fenêtre **« Catalogue »**, vous retrouvez les couches disponibles du serveur WFS dans l’onglet **« Serveurs »**, puis **« WFS on data.geopf.fr.wfs »**.
-
-Ajoutez les couches que vous souhaitez sur votre carte.
-
-![Ajout ADMINEXPRESS - WFS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/arcgis/wfs/03_ajout-couche.png){.fr-responsive-img .frx-border-img .frx-img-contained}
+:::callout Téléchargement
+[Tutoriel ArcGis Pro (.pdf)](https://data.geopf.fr/annexes/ressources/documentation/ArcGIS_Earth_et_les_Geoservices.pdf)
+:::
