@@ -37,7 +37,7 @@ Par exemple :
 ## Accès au swagger
 
 La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une extraction vecteur est accessible ici :
-- Pour l’API Entrepôt (partie « Accéder aux ressources extractibles » et « Pour un producteur de données ») : [https://data.geopf.fr/api/swagger-ui/index.html](https://data.geopf.fr/api/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
+- Pour l’API Entrepôt (partie « Accéder aux ressources extractibles » et « Pour un producteur de données ») : [{{ urls.api_entrepot }}/swagger-ui/index.html]({{ urls.api_entrepot }}/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="{{ urls.api_entrepot }}/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 - Pour l’API d’extraction vecteur (le reste de cette documentation) : [https://data.geopf.fr/extraction/swagger-ui/index.html](https://data.geopf.fr/extraction/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
 <br>
@@ -52,7 +52,7 @@ Par ailleurs le service est configuré de telle sorte que, pour l’ensemble des
 
 ### Capabilities
 
-L’URL de <span lang="en">_capabilities_</span> correspond à la racine du service : https://data.geopf.fr/extraction
+L’URL de <span lang="en">_capabilities_</span> correspond à la racine du service : `https://data.geopf.fr/extraction`
 
 Conformément au standard OGC API Processes, cette URL référence les URL de niveau immédiatement inférieur :
 - Lien vers le <span lang="en">_swagger_</span>
@@ -71,8 +71,8 @@ L’accès à cette information n’est pas strictement nécessaire à l’exéc
 ## Accéder aux ressources extractibles et obtenir les infos clés (nom des tables, projection, structure attributaire)
 
 Pour connaitre la liste des données qui lui sont accessibles en extraction, un utilisateur dispose de deux routes **API Entrepôt** :
-- GET [https://data.geopf.fr/api/users/me/stored_data](https://data.geopf.fr/api/users/me/stored_data){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/users/me/stored_data - ouvre une nouvelle fenêtre"} : Permet d’obtenir la liste de l’ensemble des données qui me sont accessibles, possiblement en restreignant cette liste selon différents critères
-- GET <a href="https://data.geopf.fr/api/users/me/stored_data/{stored_data}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/users/me/stored_data/{stored_data} - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/users/me/stored_data/{stored_data}</a> : À partir de la route précédente, on obtient un identifiant de données `_id` qui sera placé en paramètre obligatoire permettant d’avoir le détail de cette donnée
+- `GET {{ urls.api_entrepot }}/users/me/stored_data` : Permet d’obtenir la liste de l’ensemble des données qui me sont accessibles, possiblement en restreignant cette liste selon différents critères
+- `GET {{ urls.api_entrepot }}/users/me/stored_data/{stored_data}` : À partir de la route précédente, on obtient un identifiant de données `_id` qui sera placé en paramètre obligatoire permettant d’avoir le détail de cette donnée
 
 <br>
 
@@ -84,7 +84,7 @@ Néanmoins, ces routes ayant des usages qui vont au-delà de la seule API d’ex
 
 Les paramètres que l’on mentionne ici sont exclusivement à mobiliser dans la requête :
 
-GET [https://data.geopf.fr/api/users/me/stored_data](https://data.geopf.fr/api/users/me/stored_data){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/users/me/stored_data - ouvre une nouvelle fenêtre"}
+`GET {{ urls.api_entrepot }}/users/me/stored_data`
 
 Ils sont listés dans l’ordre d’apparition dans le <span lang="en">_swagger_</span>.
 - `type` et `VECTOR-DB` : Permet de restreindre la liste des résultats aux seules données mobilisables par l’API d’extraction : des données de type vecteur.
@@ -99,7 +99,7 @@ Ils sont listés dans l’ordre d’apparition dans le <span lang="en">_swagger_
 
 Une fois la donnée d’intérêt identifiée ci-dessus et son `_id` récupéré, il peut être injecté dans la requête de détail :
 
-GET <a href="https://data.geopf.fr/api/users/me/stored_data/{stored_data}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/users/me/stored_data/{stored_data} - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/users/me/stored_data/&#123;stored_data&#125;</a>
+`GET {{ urls.api_entrepot }}/users/me/stored_data/{stored_data}`
 
 Où `{stored_data}` sera remplacé par la valeur de cet `_id` sans les doubles quotes.
 
@@ -184,7 +184,7 @@ Lors de l’étape précédente on a donc isolé un identifiant de donnée extra
 
 En basculant sur l’**API d’extraction vecteur**, la route est :
 
-GET [https://data.geopf.fr/extraction/processes](https://data.geopf.fr/extraction/processes){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/processes - ouvre une nouvelle fenêtre"}
+`GET https://data.geopf.fr/extraction/processes`
 
 On récupère une liste de processus d’extraction décrits par :
 - Un `_id` identifiant de manière unique un processus d’extraction lié à une donnée particulière
@@ -203,7 +203,7 @@ Or un identifiant `_id` est toujours composé de la même manière : « identi
 
 Sur l’API d’extraction vecteur, la route est :
 
-GET <a href="https://data.geopf.fr/extraction/processes/{processID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/processes/{processID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/extraction/processes/&#123;processID&#125;</a>
+`GET https://data.geopf.fr/extraction/processes/{processID}`
 
 Elle permet d’obtenir, en plus des informations précédentes, les informations suivantes :
 - `version` : La version du traitement, actuellement `1.0.0`.
@@ -218,7 +218,7 @@ Grâce aux informations accumulées aux étapes précédentes, il est possible d
 
 La configuration de l’extraction et son déclenchement se font en un seul et même appel API via la route :
 
-POST <a href="https://data.geopf.fr/extraction/processes/{processID}/execution" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/processes/{processID}/execution - ouvre une nouvelle fenêtre">https://data.geopf.fr/extraction/processes/{processID}/execution</a>
+`POST https://data.geopf.fr/extraction/processes/{processID}/execution`
 
 On configure, dans le corps de requête ci-dessous, une extraction type pour une donnée contenant deux tables de données.
 
@@ -286,7 +286,7 @@ Dans la partie `inputs` donc :
         La syntaxe SQL n’est pas autorisée dans cette partie. La géométrie étant un champ attributaire comme un autre, si on souhaite un export spatial, il faut mentionner le champ géométrie dans cette partie.
         :::
 
-    - Le paramètre `filters` contient entre doubles quotes, une **syntaxe** PostgreSQL/PostGIS permettant de filtrer les objets d’une couche. Tout ce qu’il est possible de faire dans un **« WHERE » PostgreSQL/PostGIS mono-couche** est autorisé.
+    - Le paramètre `filters` contient entre doubles quotes, une **syntaxe** PostgreSQL/PostGIS permettant de filtrer les objets d’une couche. Tout ce qu’il est possible de faire dans un **`WHERE` PostgreSQL/PostGIS mono-couche** est autorisé.
 
         :::info
         L’appel d’une sous-requête n’est pas permis. Les requêtes multi-tables ne sont pas permises. La combinaison de requêtes spatiales et/ou de requêtes spatiales avec des critères alphanumériques ou de date est tout à fait admise.
@@ -358,7 +358,7 @@ En retour de l’exécution de la requête d’extraction, l’utilisateur reço
 
 Une fois le traitement d’extraction démarré par l’exécution de la requête précédente, il est possible, voire utile de suivre le déroulé des opérations via la route :
 
-GET <a href="https://data.geopf.fr/extraction/jobs/{jobID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/jobs/{jobID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/extraction/jobs/&#123;jobID&#125;</a>
+`GET https://data.geopf.fr/extraction/jobs/{jobID}`
 
 L’utilisateur reçoit un retour qui ressemble trait pour trait au retour reçu à l’étape précédente et ce jusqu’à ce que l’extraction termine en échec ou en succès, auquel cas il obtiendra un retour de ce type :
 
@@ -391,7 +391,7 @@ L’utilisateur reçoit un retour qui ressemble trait pour trait au retour reçu
 ```
 
 En plus des informations détaillées à l’étape précédente on retrouve :
-- `finished`, un élément d’horodatage de la fin du traitement. En cas de demande d’extraction récurrente il est utile d’observer le différentiel « `created` - `finished` » pour le cas échéant adapter l’horaire de déclenchement de son extraction
+- `finished`, un élément d’horodatage de la fin du traitement. En cas de demande d’extraction récurrente il est utile d’observer le différentiel `created - finished` pour le cas échéant adapter l’horaire de déclenchement de son extraction
 - `status` qui a évolué soit vers une valeur `successful` soit vers une valeur `failed`
 - dans `links`, un second élément dans le tableau de réponse, décrit par `"rel": "describedBy"` et qui permet d’obtenir directement la route d’API à exécuter pour prendre connaissance du résultat ou du log d’erreur en cas d’échec
 
@@ -401,7 +401,7 @@ En plus des informations détaillées à l’étape précédente on retrouve :
 
 Une fois le traitement terminé à l’étape précédente, on peut donc exécuter la route d’obtention des résultats via :
 
-GET <a href="https://data.geopf.fr/extraction/jobs/{jobID}/results" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/jobs/{jobID}/results - ouvre une nouvelle fenêtre">https://data.geopf.fr/extraction/jobs/{jobID}/results</a>
+`GET https://data.geopf.fr/extraction/jobs/{jobID}/results`
 
 On reçoit alors un retour du type :
 
@@ -435,7 +435,7 @@ On reçoit alors un retour du type :
 
 Si l’utilisateur a raté l’étape « Exploiter la réponse de la demande d’exécution de traitement » ou pour toute nécessité de se référer à un traitement déjà lancé, il est possible de retrouver un traitement via la route :
 
-GET [https://data.geopf.fr/extraction/jobs](https://data.geopf.fr/extraction/jobs){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/jobs - ouvre une nouvelle fenêtre"}
+`GET https://data.geopf.fr/extraction/jobs`
 
 Cette recherche est filtrable par :
 - Une liste d’identifiants de processes.
@@ -452,13 +452,13 @@ Cette recherche est filtrable par :
 
 En cas de nécessité, un utilisateur peut stopper l’exécution d’un traitement via la route :
 
-DELETE <a href="https://data.geopf.fr/extraction/jobs/{jobID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/jobs/{jobID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/extraction/jobs/&#123;jobID&#125;</a>
+`DELETE https://data.geopf.fr/extraction/jobs/{jobID}`
 
 L’ensemble des résultats liés éventuellement à ce traitement sont supprimés.
 
 Le quota d’extraction disponible à l’utilisateur est instantanément libéré.
 
-Une trace de ce traitement annulé est conservée via la route GET <a href="https://data.geopf.fr/extraction/jobs" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/jobs - ouvre une nouvelle fenêtre">https://data.geopf.fr/extraction/jobs</a>, les traitements annulés pouvant être retrouvés en filtrant sur le statut `DISMISSED`.
+Une trace de ce traitement annulé est conservée via la route `GET https://data.geopf.fr/extraction/jobs`, les traitements annulés pouvant être retrouvés en filtrant sur le statut `DISMISSED`.
 
 ## Pour un producteur de données : Rendre une donnée extractible via l’API d’extraction vecteur
 
@@ -472,7 +472,7 @@ Pour rendre une donnée extractible à l’ensemble des utilisateurs Géoplatefo
 
 Cette ouverture se fait a posteriori de la génération de ladite `stored_data` au moyen de la route :
 
-PATCH <a href="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data} - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore}/stored_data/&#123;stored_data&#125;</a>
+`PATCH {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}`
 
 À ce stade, il faut noter que la `stored_data`, au moment où elle a été générée, a rarement été configurée pour présenter un nom et une description agréable à un utilisateur final. Il se trouve que la route nommée précédemment permet de remédier à cela. Il est donc conseillé de profiter de l’ouverture pour régler un nom et une description qui soient utiles aux utilisateurs de l’API d’extraction pour identifier correctement la donnée à extraire.
 
@@ -498,7 +498,7 @@ Pour rendre visible à certaines communautés, une donnée stockée, le producte
 
 Mais au préalable, ce qui a été dit au paragraphe précédent sur le nom et la description de la `stored_data`, donc première étape, améliorer ces informations via :
 
-PATCH <a href="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data} - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore}/stored_data/&#123;stored_data&#125;</a>
+`PATCH {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}`
 
 Avec le corps de requête suivant :
 
@@ -520,7 +520,7 @@ Attention toutefois si vous utilisez le SDK, qui lui peut mobiliser le nom de la
 
 Ce rappel fait, on peut désormais modifier la visibilité de la donnée via la route dédiée :
 
-POST <a href="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility</a>
+`POST {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/visibility`
 
 Avec le corps de requête suivant (en JSON) :
 
@@ -535,10 +535,10 @@ Où les valeurs entre quotes sont des identifiants de communautés dont l’ense
 
 Cette route de modification de visibilité est associée à une route listant à quelles communautés une donnée est visible :
 
-GET <a href="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility</a>
+`GET {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/visibility`
 
 Ainsi qu’une route pour révoquer cette ouverture :
 
-DELETE <a href="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore}/stored_data/{stored_data}/visibility</a>
+`DELETE {{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored_data}/visibility`
 
 Qui fonctionnent exactement sur le même principe.

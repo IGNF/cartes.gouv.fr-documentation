@@ -33,15 +33,15 @@ L’usage de ce service ou de ce traitement est à privilégier lorsque la donn�
 
 En tant que producteur d’une donnée agrégée répondant à un standard, il peut être utile d’inclure le traitement de validation comme étape préalable obligatoire à destination des producteurs de données locales afin qu’eux-mêmes ne fournissent au processus d’agrégation qu’une donnée normalisée.
 
-## Accès au <span lang="en">swagger</span>
+## Accès au swagger
 
-La documentation _<span lang="en">swagger</span>_ permettant d’accéder aux détails des routes et paramètres pour réaliser une validation est accessible ici :
+La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une validation est accessible ici :
 
 [https://data.geopf.fr/validation/swagger-ui/index.html](https://data.geopf.fr/validation/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
-La documentation _<span lang="en">swagger</span>_ permettant d’accéder aux détails des routes et paramètres pour réaliser une validation via un traitement d’entrepôt est accessible ici :
+La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une validation via un traitement d’entrepôt est accessible ici :
 
-[https://data.geopf.fr/api/swagger-ui/index.html](https://data.geopf.fr/api/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
+[{{ urls.api_entrepot }}/swagger-ui/index.html]({{ urls.api_entrepot }}/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="{{ urls.api_entrepot }}/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
 ## Limites d’usage
 
@@ -79,11 +79,11 @@ L’usage de l’API Validation démarre par l’envoi du lot de données à val
 
 Cette création se fait au moyen de la route :
 
-POST [https://data.geopf.fr/validation/api/validations](https://data.geopf.fr/validation/api/validations){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations - ouvre une nouvelle fenêtre"}
+`POST https://data.geopf.fr/validation/api/validations`
 
 **`retention`** prend comme valeur un entier en jours et vient en paramètre de l’URL. Il définit la durée pendant laquelle le résultat (log, rapport, donnée source, donnée normalisée) sera disponible.
 
-Le **_<span lang="en">body</span>_** du POST est constitué par le lot de données à valider, envoyé au format archive (« .zip », « .7z », « .tat », et « .tar.gz »). Ce _<span lang="en">body</span>_ est soumis en **multipart/form-data**.
+Le **<span lang="en">_body_</span>** du `POST` est constitué par le lot de données à valider, envoyé au format archive (`.zip`, `.7z`, `.tat`, et `.tar.gz`). Ce <span lang="en">_body_</span> est soumis en **<span lang="en">_multipart/form-data_</span>**.
 
 L’utilisateur reçoit en retour un corps de **réponse en JSON** du type :
 
@@ -106,7 +106,7 @@ Il convient d’extraire de cette réponse le **`validationID`** qui va servir p
 
 Ce paramétrage s’effectue au moyen de la route :
 
-PATCH <a href="https://data.geopf.fr/validation/api/validations/{validationID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}</a>
+`PATCH https://data.geopf.fr/validation/api/validations/{validationID}`
 
 Où :
 - **`validationID`** est l’identifiant de la validation, récupéré à l’étape « [Créer une validation](#creer-une-validation) »
@@ -165,7 +165,7 @@ Suivant le volume de donnée livré et la complexité du standard mobilisé sur 
 
 Il peut donc être pertinent de venir interroger à pas de temps régulier la requête :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}`
 
 Pour prendre connaissance de l’état de la validation. Le corps de réponse (en JSON) de cette requête est du type :
 
@@ -207,7 +207,7 @@ Toutes les informations sur les résultats suivantes sont uniquement accessibles
 
 Que la validation se soit terminée en **`failure`** ou en **`success`**, le log est toujours consultable via la route :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/logs" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/logs - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/logs</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/logs`
 
 Le retour en JSON donne les grandes étapes de la validation et le niveau de l’erreur le cas échéant.
 
@@ -217,9 +217,9 @@ Le rapport de validation est accessible uniquement en cas de validation dont le 
 
 Il est récupérable via :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/results.csv" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/results.csv - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/results.csv</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/results.csv`
 
-Cette requête produit un fichier results.csv délivré via une réponse en _<span lang="en">multipart/form-data</span>_.
+Cette requête produit un fichier results.csv délivré via une réponse en <span lang="en">_multipart/form-data_</span>.
 
 #### Récupération de la donnée normalisée
 
@@ -227,9 +227,9 @@ La donnée normalisée n’est disponible que si la validation a terminé en **`
 
 À ces deux conditions seulement, l’appel à la route :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized`
 
-Déclenche en retour d’appel un corps en _<span lang="en">multipart/form-data</span>_ qui permet de récupérer un ZIP_ de la donnée transmise en incluant en plus les champs manquants au bon type dans les différentes tables du lot de données pour lesquelles la validation est applicable.
+Déclenche en retour d’appel un corps en <span lang="en">_multipart/form-data_</span> qui permet de récupérer un ZIP de la donnée transmise en incluant en plus les champs manquants au bon type dans les différentes tables du lot de données pour lesquelles la validation est applicable.
 
 ### Opérations annexes
 
@@ -239,7 +239,7 @@ Déclenche en retour d’appel un corps en _<span lang="en">multipart/form-data<
 
 C’est possible au moyen de la route :
 
-GET [https://data.geopf.fr/validation/api/validations](https://data.geopf.fr/validation/api/validations){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations - ouvre une nouvelle fenêtre"}
+`GET https://data.geopf.fr/validation/api/validations`
 
 Il est possible de filtrer ces recherches par :
 - **`status`** : un statut de validation parmi les valeurs : **`created`**, **`progress`**, **`success`**, **`failure`** et **`deleted`**
@@ -263,9 +263,9 @@ En l’occurrence, l’API de validation met à disposition une route qui permet
 
 Cet accès se fait par la route :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/files/source" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/files/source - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/files/source</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/files/source`
 
-Il déclenche en retour d’appel un corps en _<span lang="en">multipart/form-data</span>_ qui permet de récupérer un ZIP de la donnée transmise.
+Il déclenche en retour d’appel un corps en <span lang="en">_multipart/form-data_</span> qui permet de récupérer un ZIP de la donnée transmise.
 
 :::warning
 Ces informations sont uniquement accessibles pendant la durée de rétention fixée à l’étape « [Créer une validation](#creer-une-validation) ».
@@ -275,7 +275,7 @@ Ces informations sont uniquement accessibles pendant la durée de rétention fix
 
 En cas de nécessité, une route permettant d’interrompre une validation déjà lancée est disponible via :
 
-POST <a href="https://data.geopf.fr/validation/api/validations/{validationID}/abort" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/abort - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/abort</a>
+`POST https://data.geopf.fr/validation/api/validations/{validationID}/abort`
 
 Actionner cette route fait passer la validation en statut **`deleted`** et toutes les ressources associées à cette validation (donnée à valider, log…) sont supprimées de la plateforme.
 
@@ -287,7 +287,7 @@ Elle a pour effet de faire passer la validation au statut **`deleted`** et de su
 
 Cette suppression est déclenchée par la route :
 
-DELETE <a href="https://data.geopf.fr/validation/api/validations/{validationID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}</a>
+`DELETE https://data.geopf.fr/validation/api/validations/{validationID}`
 
 ### Le traitement validation
 
@@ -311,7 +311,7 @@ Il convient donc de porter une attention particulière au quota disponible sur c
 
 Enfin, dans le cas d’une validation exécutée en tant que traitement, la livraison de type archive doit avoir été effectuée classiquement selon les étapes habituelles :
 - Création d’une livraison avec affectation des paramètres standard **dont la projection**
-- Alimentation de la livraison par un fichier archive respectant les prérequis de la validation (donnée au format compressé : « .zip », « .7z », « .tat », et « .tar.gz »)
+- Alimentation de la livraison par un fichier archive respectant les prérequis de la validation (donnée au format compressé : `.zip`, `.7z`, `.tat`, et `.tar.gz`)
 - Fermeture de la livraison
 - Vérification de la bonne exécution des vérifications
 
@@ -327,7 +327,7 @@ Pour utiliser le traitement de validation sans normalisation de donnée, on four
 {
     "processing": "cc923709-e34c-4fab-8ebd-7414a0ddbabf",
     "inputs": {
-        "upload": ["66a31282-d9cb-42c6-916f-a2b58c120a0c"]     
+        "upload": ["66a31282-d9cb-42c6-916f-a2b58c120a0c"]
     },
     "output": {
         "upload": { "id": "66a31282-d9cb-42c6-916f-a2b58c120a0c"}
@@ -347,7 +347,7 @@ L’appel en lui-même se fait, comme pour tout traitement, via l’appel API En
 
 Par rapport à l’exécution via l’API Validation on notera les différences suivantes :
 - Les entrées **`inputs`** et **`output`** prennent dans les deux cas un type **`upload`** renseigné par l’identifiant de la livraison qui va être validée
-- Dans les paramètres, on prendra soin de bien préciser le paramètre « `"is_compressed": true` » dans le cas où on fournit une archive compressée, sans quoi l’instruction de dézippage ne sera pas effectuée et le traitement sortira en erreur
+- Dans les paramètres, on prendra soin de bien préciser le paramètre `"is_compressed": true` dans le cas où on fournit une archive compressée, sans quoi l’instruction de dézippage ne sera pas effectuée et le traitement sortira en erreur
 - À noter que comme pour tout traitement, une instruction de notification par courriel peut être ajoutée, par exemple après l’instruction **`parameters`** en fournissant la syntaxe suivante :
     ```json
     "callback": {
@@ -370,7 +370,7 @@ Pour ne pas préjuger de l’usage futur de la livraison ainsi validée, en sort
 :::
 
 Cette précision faite, la récupération du rapport de validation s’effectue en deux appels :
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree</a> permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type : 
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/tree` permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type : 
     ```json
     [
         {
@@ -393,7 +393,7 @@ Cette précision faite, la récupération du rapport de validation s’effectue 
     ]
     ```
     Ce qui permet de déduire que le **chemin d’accès au rapport** de validation consécutif à cette validation est `source/__results.jsonl`. **Cette information est utile pour le second appel.**
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl</a> permet grâce aux informations précédentes, d’obtenir un corps de réponse _<span lang="en">multipart/form-data</span>_ donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl` permet grâce aux informations précédentes, d’obtenir un corps de réponse <span lang="en">_multipart/form-data_</span> donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
 
 <br>
 
@@ -428,7 +428,7 @@ L’appel en lui-même se fait, comme pour tout traitement, via l’appel API En
 Par rapport à l’exécution via l’API Validation on notera les différences suivantes :
 
 - Les entrées **`inputs`** et **`output`** prennent un type **`upload`** renseigné par l’identifiant de la livraison qui va être validée.
-- L’entrée **`output`** prend un type **`upload`** renseigné par un nom au choix pour créer un second jeu de données en sortie, jeu de données qui sera le jeu de données d’entrée modifié par l’ajout des éléments de normalisation. Après l’exécution de cette requête, le corps de réponse permet d’obtenir l’identifiant de la **donnée d’_<span lang="en">upload</span>_ normalisée** qui sera produite. **Cette information est à mettre de côté pour la phase « Récupération de la donnée normalisée ».**
+- L’entrée **`output`** prend un type **`upload`** renseigné par un nom au choix pour créer un second jeu de données en sortie, jeu de données qui sera le jeu de données d’entrée modifié par l’ajout des éléments de normalisation. Après l’exécution de cette requête, le corps de réponse permet d’obtenir l’identifiant de la **donnée d’<span lang="en">_upload_</span> normalisée** qui sera produite. **Cette information est à mettre de côté pour la phase « Récupération de la donnée normalisée ».**
 - Dans les paramètres, on prendra soin de bien préciser : 
     - Le paramètre **`is_compressed`** à **`true`** dans le cas où on fournit une archive compressée, sans quoi l’instruction de dézippage ne sera pas effectuée et le traitement sortira en erreur
     - Le paramètre **`normalize`** à **`true`** pour produire la donnée normalisée en sortie
@@ -456,7 +456,7 @@ Pour ne pas préjuger de l’usage futur de la livraison ainsi validée, en sort
 
 Cette précision faite, la récupération du rapport de validation s’effectue en deux appels :
 
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree</a> permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type :
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/tree` permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type :
     ```json
     [
         {
@@ -479,7 +479,7 @@ Cette précision faite, la récupération du rapport de validation s’effectue 
     ]
     ```
     Ce qui permet de déduire que le **chemin d’accès au rapport** de validation consécutif à cette validation est `validation/__results.jsonl`. **Cette information est utile pour le second appel.**
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl</a> permet grâce aux informations précédentes, d’obtenir un corps de réponse _<span lang="en">multipart/form-data</span>_ donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl` permet grâce aux informations précédentes, d’obtenir un corps de réponse <span lang="en">_multipart/form-data_</span> donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
 
 <br>
 
