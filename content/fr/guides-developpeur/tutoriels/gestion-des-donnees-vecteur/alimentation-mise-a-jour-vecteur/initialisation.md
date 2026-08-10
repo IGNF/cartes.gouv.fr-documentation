@@ -314,7 +314,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 {{ component("download", {
     title: "installation.sld",
     href: "/data/tutoriels/alimentation-maj/installation.sld",
-    detail: "sld - 4.3 Ko"
+    detail: "SLD - 4,3 Ko"
 }) }}
 
 📄 `<installation.sld>`
@@ -353,7 +353,7 @@ Maintenant que la donnée a été stockée de manière pérenne, on peut supprim
 {{ component("download", {
     title: "installation.ftl",
     href: "/data/tutoriels/alimentation-maj/installation.ftl",
-    detail: "Ftl - 45 octets"
+    detail: "FTL - 45 o"
 }) }}
 
 📄 `<installation.ftl>`

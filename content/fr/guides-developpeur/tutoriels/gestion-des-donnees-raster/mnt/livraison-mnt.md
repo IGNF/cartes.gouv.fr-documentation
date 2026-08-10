@@ -67,7 +67,7 @@ Les formats de fichier raster gérés pour du MNT sont :
 {{ component("download", {
     title: "[GeoTIFF] LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif",
     href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif",
-    detail: "TIFF - 15.3 Mo"
+    detail: "TIFF - 15,3 Mo"
 }) }}
 
 ??? POST "{{ urls.api_entrepot }}/datastores/{datastore}/uploads/{upload MNT}/data?path=data/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif"

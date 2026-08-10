@@ -221,7 +221,7 @@ On met tout de suite comme `layer_name` le nom cible : lorsque l’on mettra à
     {{ component("download", {
         title: "scan1000_corse_sud.tif",
         href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
-        detail: "tif - 7.5 Mo"
+        detail: "TIFF - 7,5 Mo"
     }) }}
 
 - Fermeture de la livraison
