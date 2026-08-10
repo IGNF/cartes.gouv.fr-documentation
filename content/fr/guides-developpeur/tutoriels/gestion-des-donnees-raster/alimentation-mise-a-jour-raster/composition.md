@@ -93,7 +93,7 @@ stateDiagram
     {{ component("download", {
         title: "scan1000_corse_nord.tif",
         href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_nord.tif",
-        detail: "TIFF - 7.5 Mo"
+        detail: "TIFF - 7,5 Mo"
     }) }}
 
 - Fermeture de la livraison
@@ -152,7 +152,7 @@ Il n’est pas nécessaire d’attendre la fin de ce traitement pour lancer celu
     {{ component("download", {
         title: "scan1000_corse_sud.tif",
         href: "/data/tutoriels/raster/alimentation-maj/scan1000_corse_sud.tif",
-        detail: "TIFF - 7.7 Mo"
+        detail: "TIFF - 7,7 Mo"
     }) }}
 
 - Fermeture de la livraison

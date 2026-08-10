@@ -117,7 +117,7 @@ Les données de l’exemple sont deux tables, les pays et régions écologiques 
 {{ component("download", {
     title: "monde.gpkg",
     href: "/data/tutoriels/alimentation-diffusion-simple/monde.gpkg",
-    detail: "Geopackage - 11.1Mo"
+    detail: "GPKG - 11,1 Mo"
 }) }}
 
 ![Visualisation des données du tutoriel](/img/guides-developpeur/vecteur/donnees_presentation_vecteur.png){.fr-responsive-img .frx-border-img .frx-img-contained}

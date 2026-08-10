@@ -50,13 +50,13 @@ Vous êtes invités à privilégier des pictogrammes images (JPEG ou PNG) et à 
 {{ component("download", {
     title: "ecoregions.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.sld",
-    detail: "SLD - 10.6Ko"
+    detail: "SLD - 10,6 Ko"
 }) }}
 
 {{ component("download", {
     title: "pays.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.sld",
-    detail: "SLD - 847o"
+    detail: "SLD - 847 o"
 }) }}
 
 ### Écriture de FTL
@@ -66,7 +66,7 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
 {{ component("download", {
     title: "ecoregions.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.ftl",
-    detail: "FTL - 118o"
+    detail: "FTL - 118 o"
 }) }}
 
 ```plain
@@ -76,7 +76,7 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
 {{ component("download", {
     title: "pays.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.ftl",
-    detail: "FTL - 75o"
+    detail: "FTL - 75 o"
 }) }}
 
 ```plain
