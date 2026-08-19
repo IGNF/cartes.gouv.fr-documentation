@@ -657,7 +657,7 @@ Dans le dossier `types`, on va renseigner quelles sont les caractéristiques des
 
 Chaque fichier du dossier est un JSON mais le contenu varie si c’est une `table` ou une `multi_table`.
 
-Nous allons décrire ici comment définir un modèle d’une table simple. Si le type est une `multi_table`, le fichier est un 
+Nous allons décrire ici comment définir un modèle d’une table simple.
 
 ##### Propriétés classiques
 
