@@ -1,6 +1,6 @@
 ---
 title: Correction de bugs de l’entrepôt
-description: Corrections de multiples bugs dans l’entrepôt
+description: Correction de plusieurs anomalies concernant les publications de métadonnées, d’annexes et de documents, ainsi qu’un cas d’erreur de livraison. Petite correction dans la documentation Swagger
 tags:
     - Entrepôt
 eleventyNavigation:
