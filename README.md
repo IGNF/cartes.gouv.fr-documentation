@@ -13,11 +13,7 @@ Il est construit sur la base des templates de [codegouvfr/eleventy-dsfr](https:/
 
 ## Déploiements
 
-La branche `main` est automatiquement déployée sur github pages en quelques minutes à l'adresse : [https://ignf.github.io/cartes.gouv.fr-documentation](https://ignf.github.io/cartes.gouv.fr-documentation)
-
-(NB: le formulaire de contact ainsi que les fonctionnalités connectées ne sont PAS utilisables sur github pages, faute de back-office associé)
-
-Il faut ensuite un tag respectant le versioning sémantique (`vX.Y.Z`) pour qu'une image prête pour la production soit générée sur le registre ghcr.io avec une url de la forme :
+Un tag respectant le versioning sémantique (`vX.Y.Z`) déclenche la génération d'une image déployable sur le registre ghcr.io avec une url de la forme :
 
 ```
 ghcr.io/ignf/cartes.gouv.fr-documentation:vX.Y.Z
@@ -25,7 +21,7 @@ ghcr.io/ignf/cartes.gouv.fr-documentation:vX.Y.Z
 
 Le déploiement de cette image n'est ensuite plus du ressort de ce dépôt.
 
-Tous les tags ne font pas l'objet d'une version déployer en production. Mais lorsque c'est le cas, des notes de version sont rédigées.
+Tous les tags ne font pas l'objet d'une version déployée en production. Mais lorsque c'est le cas, des notes de version sont rédigées et une release publiée ici.
 
 En production le déploiement est à l'adresse : https://cartes.gouv.fr/aide
 
