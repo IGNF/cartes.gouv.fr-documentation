@@ -12,6 +12,6 @@ Placer un x entre les crochets, ou cocher après création de la PR les cases qu
 - [ ] J'ai ajouté des mots clés et vérifié dans les mots clés existants s'il y en avait des appropriés pour ne pas créer de synonymes ou de variantes.
 - [ ] J'ai ajouté des illustrations et j'ai prêté attention à leur nommage dans le bon dossier et en minuscule. J'ai veillé à ce qu'elles ne soient pas inutilement volumineuses ou surdimensionnées. J'ai mis une légende et un texte alternatif pour chacune si nécessaire.
 - [ ] J'ai supprimé des illustrations d'une page et également du dossier `public` pour ne pas laisser des fichiers orphelins.
-- [ ] J'ai renommé un fichier et vérifié s'il y avait des liens internes vers cette page et je les ai modifié en conséquence.
+- [ ] J'ai renommé un fichier et vérifié s'il y avait des liens internes vers cette page et je les ai modifiés en conséquence.
 - [ ] J'ai créé des liens internes à l'aide et utilisé des urls relatives et non absolues (ne commençant pas par `http://...`)
 - [ ] J'ai vérifié le rendu sous forme de `card` sur l'éventuelle page parente de chaque fichier modifié ou ajouté, pour m'assurer que titre et description sont complémentaires et que l'éventuelle vignette d'illustration est correcte s'il y en a une.
