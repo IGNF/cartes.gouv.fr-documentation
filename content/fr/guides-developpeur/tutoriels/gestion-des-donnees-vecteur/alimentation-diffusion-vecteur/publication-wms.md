@@ -146,4 +146,4 @@ Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur
 ????
 <br>
 
-On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [GetCapabilities du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).
+On peut vérifier la présence de notre couche `ecoregions_tutoriel` dans le [`GetCapabilities` du service]({{ urls.public.wmsv }}?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0).

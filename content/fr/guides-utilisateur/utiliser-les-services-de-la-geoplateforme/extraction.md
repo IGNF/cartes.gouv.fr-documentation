@@ -280,7 +280,7 @@ Dans la partie `inputs` donc :
     ```
 
     - Le nom technique de la table et la liste des attributs, pour rappel, sont identifiés via la rubrique « [Accéder aux ressources extractibles et obtenir les infos clés (nom des tables, projection, structure attributaire)](#acceder-aux-ressources-extractibles-et-obtenir-les-infos-cles-nom-des-tables-projection-structure-attributaire) ».
-    - La liste des `attributes` débute par un « `[` » et se termine par un « `]` ». Elle reprend le nom technique de chaque attribut, **entre doubles quotes**, étant **séparé du précédent par une virgule**. Si on souhaite exporter **tous les attributs**, on doit **mentionner explicitement chaque attribut**.
+    - La liste des `attributes` débute par un `[` et se termine par un `]`. Elle reprend le nom technique de chaque attribut, **entre doubles quotes**, étant **séparé du précédent par une virgule**. Si on souhaite exporter **tous les attributs**, on doit **mentionner explicitement chaque attribut**.
     
         :::info
         La syntaxe SQL n’est pas autorisée dans cette partie. La géométrie étant un champ attributaire comme un autre, si on souhaite un export spatial, il faut mentionner le champ géométrie dans cette partie.

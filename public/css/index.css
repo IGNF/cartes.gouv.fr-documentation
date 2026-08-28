@@ -38,6 +38,10 @@ code {
     font-size: 0.9em;
 }
 
+a > code {
+    padding-bottom: 0;
+}
+
 pre[class*="language-"] {
     margin-bottom: 1.5em !important;
 }
