@@ -60,34 +60,34 @@ Les données de l’exemple sont les [installations classées pour la protection
     {{ component("download", {
         title: "installation-init.sql",
         href: "/data/tutoriels/alimentation-maj/installation-init.sql",
-        detail: "SQL - 455o"
+        detail: "SQL - 455 o"
     }) }}
 
 - Un premier lot de données (département des Ardennes). On livre les données à ajouter dans la table, pas la vue.
     {{ component("download", {
         title: "installation.gpkg",
         href: "/data/tutoriels/alimentation-maj/installation.gpkg",
-        detail: "GPKG - 360Ko"
+        detail: "GPKG - 360 Ko"
     }) }}
     {{ component("download", {
         title: "installation.csv",
         href: "/data/tutoriels/alimentation-maj/installation.csv",
-        detail: "CSV - 661Ko"
+        detail: "CSV - 661 Ko"
     }) }}
     {{ component("download", {
         title: "installation.csvt",
         href: "/data/tutoriels/alimentation-maj/installation.csvt",
-        detail: "CSVT - 84o"
+        detail: "CSVT - 84 o"
     }) }}
 
 - Un deuxième lot de données (département du Doubs).
     {{ component("download", {
         title: "installation.delete (CSV de suppression)",
         href: "/data/tutoriels/alimentation-maj/installation.delete",
-        detail: "CSV - 45o"
+        detail: "CSV - 45 o"
     }) }}
     {{ component("download", {
         title: "installation.update (CSV de modification)",
         href: "/data/tutoriels/alimentation-maj/installation.update",
-        detail: "CSV - 187o"
+        detail: "CSV - 187 o"
     }) }}

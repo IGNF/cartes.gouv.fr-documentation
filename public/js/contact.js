@@ -20,9 +20,9 @@ let isFormValid = true;
 document.getElementById("input-message").addEventListener("input", function (e) {
     let num = 8000 - e.target.value.length;
     if (num > 1) {
-        document.getElementById("remaining-characters").innerHTML = num + " caractères restants";
+        document.getElementById("input-message-messages-group").innerHTML = "<p class='fr-mt-2v fr-text--xs'>" + num + " caractères restants</p>";
     } else {
-        document.getElementById("remaining-characters").innerHTML = num + " caractère restant";
+        document.getElementById("input-message-messages-group").innerHTML = "<p class='fr-mt-2v fr-text--xs'>" + num + " caractère restant</p>";
     }
 });
 
@@ -82,13 +82,18 @@ let createAlertHTML = function (alert) {
 //Fonction d'envoie du formulaire
 let sendForm = function () {
     //récupération des valeurs du formulaire
+    let cat = null;
+    if (document.getElementsByName("category")[0].checked) {
+        cat = document.getElementsByName("category")[0].value;
+    } else if (document.getElementsByName("category")[1].checked) {
+        cat = document.getElementsByName("category")[1].value;
+    }
+
     let formContent = {
         email_contact: document.getElementsByName("email_contact")[0].value,
         first_name: document.getElementsByName("first_name")[0].value.trim(),
         last_name: document.getElementsByName("last_name")[0].value.trim(),
-        category: document.getElementsByName("category")[0].checked
-            ? document.getElementsByName("category")[0].value
-            : document.getElementsByName("category")[1].value,
+        category: cat,
         organization: document.getElementsByName("organization")[0].value.trim(),
         message: document.getElementsByName("message")[0].value,
         importance: document.getElementsByName("importance")[0].value,
@@ -100,6 +105,7 @@ let sendForm = function () {
     //si le formulaire est valide, on envoie la requête POST vers la route "contact_us"
     if (isFormValid) {
         document.getElementById("waiting-screen").classList.toggle("hidden");
+        document.title = "Nous écrire | Aide | cartes.gouv.fr";
 
         fetch(window.location.origin + "/contact_us", {
             method: "POST",
@@ -127,6 +133,8 @@ let sendForm = function () {
                 document.getElementById("waiting-screen").classList.toggle("hidden");
                 document.getElementById("contact-error").classList.toggle("hidden");
             });
+    } else {
+        document.title = "Erreur - Nous écrire | Aide | cartes.gouv.fr";
     }
 };
 
@@ -136,6 +144,7 @@ let checkForm = function (formContent) {
     checkMail(formContent.email_contact);
     checkFirstName(formContent.first_name);
     checkLastName(formContent.last_name);
+    checkCategory(formContent.category);
     checkOrganization(formContent.organization);
     checkMessage(formContent.message);
 };
@@ -175,6 +184,19 @@ let checkLastName = function (lastName) {
     if (!lastName) {
         document.getElementById("last-name-input-group").classList.toggle("fr-input-group--error");
         document.getElementById("input-last-name-messages-group").innerHTML = "<p class='fr-error-text'> Veuillez saisir votre nom </p>";
+        isFormValid = false;
+    }
+};
+
+//Gestion de la validité de la catégorie
+let checkCategory = function (category) {
+    document.getElementById("fr-fieldset-radio-messages-group").classList.contains("fr-input-group--error")
+        ? document.getElementById("fr-fieldset-radio-messages-group").classList.toggle("fr-input-group--error")
+        : null;
+    document.getElementById("fr-fieldset-radio-messages-group").innerHTML = "";
+    if (!category) {
+        document.getElementById("fr-fieldset-radio-messages-group").classList.toggle("fr-input-group--error");
+        document.getElementById("fr-fieldset-radio-messages-group").innerHTML = "<p class='fr-error-text'> Veuillez choisir une catégorie </p>";
         isFormValid = false;
     }
 };

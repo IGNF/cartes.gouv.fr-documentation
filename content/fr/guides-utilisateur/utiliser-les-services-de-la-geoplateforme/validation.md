@@ -33,15 +33,15 @@ L’usage de ce service ou de ce traitement est à privilégier lorsque la donn�
 
 En tant que producteur d’une donnée agrégée répondant à un standard, il peut être utile d’inclure le traitement de validation comme étape préalable obligatoire à destination des producteurs de données locales afin qu’eux-mêmes ne fournissent au processus d’agrégation qu’une donnée normalisée.
 
-## Accès au <span lang="en">swagger</span>
+## Accès au swagger
 
-La documentation _<span lang="en">swagger</span>_ permettant d’accéder aux détails des routes et paramètres pour réaliser une validation est accessible ici :
+La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une validation est accessible ici :
 
 [https://data.geopf.fr/validation/swagger-ui/index.html](https://data.geopf.fr/validation/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
-La documentation _<span lang="en">swagger</span>_ permettant d’accéder aux détails des routes et paramètres pour réaliser une validation via un traitement d’entrepôt est accessible ici :
+La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une validation via un traitement d’entrepôt est accessible ici :
 
-[https://data.geopf.fr/api/swagger-ui/index.html](https://data.geopf.fr/api/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
+[{{ urls.api_entrepot }}/swagger-ui/index.html]({{ urls.api_entrepot }}/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="{{ urls.api_entrepot }}/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
 ## Limites d’usage
 
@@ -79,11 +79,11 @@ L’usage de l’API Validation démarre par l’envoi du lot de données à val
 
 Cette création se fait au moyen de la route :
 
-POST [https://data.geopf.fr/validation/api/validations](https://data.geopf.fr/validation/api/validations){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations - ouvre une nouvelle fenêtre"}
+`POST https://data.geopf.fr/validation/api/validations`
 
 **`retention`** prend comme valeur un entier en jours et vient en paramètre de l’URL. Il définit la durée pendant laquelle le résultat (log, rapport, donnée source, donnée normalisée) sera disponible.
 
-Le **_<span lang="en">body</span>_** du POST est constitué par le lot de données à valider, envoyé au format archive (« .zip », « .7z », « .tat », et « .tar.gz »). Ce _<span lang="en">body</span>_ est soumis en **multipart/form-data**.
+Le **<span lang="en">_body_</span>** du `POST` est constitué par le lot de données à valider, envoyé au format archive (`.zip`, `.7z`, `.tar`, et `.tar.gz`). Ce <span lang="en">_body_</span> est soumis en **<span lang="en">_multipart/form-data_</span>**.
 
 L’utilisateur reçoit en retour un corps de **réponse en JSON** du type :
 
@@ -106,7 +106,7 @@ Il convient d’extraire de cette réponse le **`validationID`** qui va servir p
 
 Ce paramétrage s’effectue au moyen de la route :
 
-PATCH <a href="https://data.geopf.fr/validation/api/validations/{validationID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}</a>
+`PATCH https://data.geopf.fr/validation/api/validations/{validationID}`
 
 Où :
 - **`validationID`** est l’identifiant de la validation, récupéré à l’étape « [Créer une validation](#creer-une-validation) »
@@ -122,7 +122,7 @@ Où :
     }
     ```
     - **`model`** est le lien URL vers un fichier JSON modèle de validation (cf. « [Quels schémas de standard appeler et où les localiser ?](#quels-schemas-de-standard-appeler-et-ou-les-localiser) »)
-    - **`srs`** est le code EPSG de la projection dans laquelle se trouve les données dans l’archive livrée
+    - **`srs`** est le code EPSG de la projection dans laquelle se trouvent les données dans l’archive livrée
     - **`max-errors`** est un entier paramétrant le nombre maximal d’erreurs qu’on souhaite avoir dans le rapport d’erreur, attention au fait qu’en plaçant trop bas cette valeur, le rapport risque de ne pas être exhaustif
     - **`normalize`** est un booléen prenant :
         - soit vrai : dans ce cas, la normalisation produira en plus du rapport, un jeu de données normalisé (ajoutant à la structure fournie les champs manquants vides)
@@ -153,7 +153,7 @@ Au lancement de la requête, l’utilisateur récupère un corps de réponse du 
 
 On y retrouve, en plus du **`validationID`** :
 - **`created`** et **`started`** qui sont des mentions d’horodatage de création et de lancement effectif de la validation
-- **`status`** qui donne au moyen de valeurs fixes (ici **`created`**) l’état de la validation
+- **`status`** qui donne au moyen de valeurs fixes (ici **`progress`**) l’état de la validation
 - **`arguments`** qui reprend les paramètres de la validation déclarés lors de la requête PATCH
 - **`message`** donne, en français uniquement, une phrase synthétique de l’état dans lequel se trouve le traitement
 
@@ -165,7 +165,7 @@ Suivant le volume de donnée livré et la complexité du standard mobilisé sur 
 
 Il peut donc être pertinent de venir interroger à pas de temps régulier la requête :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}`
 
 Pour prendre connaissance de l’état de la validation. Le corps de réponse (en JSON) de cette requête est du type :
 
@@ -207,7 +207,7 @@ Toutes les informations sur les résultats suivantes sont uniquement accessibles
 
 Que la validation se soit terminée en **`failure`** ou en **`success`**, le log est toujours consultable via la route :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/logs" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/logs - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/logs</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/logs`
 
 Le retour en JSON donne les grandes étapes de la validation et le niveau de l’erreur le cas échéant.
 
@@ -217,9 +217,9 @@ Le rapport de validation est accessible uniquement en cas de validation dont le 
 
 Il est récupérable via :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/results.csv" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/results.csv - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/results.csv</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/results.csv`
 
-Cette requête produit un fichier results.csv délivré via une réponse en _<span lang="en">multipart/form-data</span>_.
+Cette requête produit un fichier results.csv délivré via une réponse en <span lang="en">_multipart/form-data_</span>.
 
 #### Récupération de la donnée normalisée
 
@@ -227,9 +227,9 @@ La donnée normalisée n’est disponible que si la validation a terminé en **`
 
 À ces deux conditions seulement, l’appel à la route :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/files/normalized`
 
-Déclenche en retour d’appel un corps en _<span lang="en">multipart/form-data</span>_ qui permet de récupérer un ZIP_ de la donnée transmise en incluant en plus les champs manquants au bon type dans les différentes tables du lot de données pour lesquelles la validation est applicable.
+Déclenche en retour d’appel un corps en <span lang="en">_multipart/form-data_</span> qui permet de récupérer un ZIP de la donnée transmise en incluant en plus les champs manquants au bon type dans les différentes tables du lot de données pour lesquelles la validation est applicable.
 
 ### Opérations annexes
 
@@ -239,7 +239,7 @@ Déclenche en retour d’appel un corps en _<span lang="en">multipart/form-data<
 
 C’est possible au moyen de la route :
 
-GET [https://data.geopf.fr/validation/api/validations](https://data.geopf.fr/validation/api/validations){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations - ouvre une nouvelle fenêtre"}
+`GET https://data.geopf.fr/validation/api/validations`
 
 Il est possible de filtrer ces recherches par :
 - **`status`** : un statut de validation parmi les valeurs : **`created`**, **`progress`**, **`success`**, **`failure`** et **`deleted`**
@@ -263,9 +263,9 @@ En l’occurrence, l’API de validation met à disposition une route qui permet
 
 Cet accès se fait par la route :
 
-GET <a href="https://data.geopf.fr/validation/api/validations/{validationID}/files/source" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/files/source - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/files/source</a>
+`GET https://data.geopf.fr/validation/api/validations/{validationID}/files/source`
 
-Il déclenche en retour d’appel un corps en _<span lang="en">multipart/form-data</span>_ qui permet de récupérer un ZIP de la donnée transmise.
+Il déclenche en retour d’appel un corps en <span lang="en">_multipart/form-data_</span> qui permet de récupérer un ZIP de la donnée transmise.
 
 :::warning
 Ces informations sont uniquement accessibles pendant la durée de rétention fixée à l’étape « [Créer une validation](#creer-une-validation) ».
@@ -275,7 +275,7 @@ Ces informations sont uniquement accessibles pendant la durée de rétention fix
 
 En cas de nécessité, une route permettant d’interrompre une validation déjà lancée est disponible via :
 
-POST <a href="https://data.geopf.fr/validation/api/validations/{validationID}/abort" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID}/abort - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}/abort</a>
+`POST https://data.geopf.fr/validation/api/validations/{validationID}/abort`
 
 Actionner cette route fait passer la validation en statut **`deleted`** et toutes les ressources associées à cette validation (donnée à valider, log…) sont supprimées de la plateforme.
 
@@ -287,7 +287,7 @@ Elle a pour effet de faire passer la validation au statut **`deleted`** et de su
 
 Cette suppression est déclenchée par la route :
 
-DELETE <a href="https://data.geopf.fr/validation/api/validations/{validationID}" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/api/validations/{validationID} - ouvre une nouvelle fenêtre">https://data.geopf.fr/validation/api/validations/{validationID}</a>
+`DELETE https://data.geopf.fr/validation/api/validations/{validationID}`
 
 ### Le traitement validation
 
@@ -311,7 +311,7 @@ Il convient donc de porter une attention particulière au quota disponible sur c
 
 Enfin, dans le cas d’une validation exécutée en tant que traitement, la livraison de type archive doit avoir été effectuée classiquement selon les étapes habituelles :
 - Création d’une livraison avec affectation des paramètres standard **dont la projection**
-- Alimentation de la livraison par un fichier archive respectant les prérequis de la validation (donnée au format compressé : « .zip », « .7z », « .tat », et « .tar.gz »)
+- Alimentation de la livraison par un fichier archive respectant les prérequis de la validation (donnée au format compressé : `.zip`, `.7z`, `.tar`, et `.tar.gz`)
 - Fermeture de la livraison
 - Vérification de la bonne exécution des vérifications
 
@@ -327,7 +327,7 @@ Pour utiliser le traitement de validation sans normalisation de donnée, on four
 {
     "processing": "cc923709-e34c-4fab-8ebd-7414a0ddbabf",
     "inputs": {
-        "upload": ["66a31282-d9cb-42c6-916f-a2b58c120a0c"]     
+        "upload": ["66a31282-d9cb-42c6-916f-a2b58c120a0c"]
     },
     "output": {
         "upload": { "id": "66a31282-d9cb-42c6-916f-a2b58c120a0c"}
@@ -347,7 +347,7 @@ L’appel en lui-même se fait, comme pour tout traitement, via l’appel API En
 
 Par rapport à l’exécution via l’API Validation on notera les différences suivantes :
 - Les entrées **`inputs`** et **`output`** prennent dans les deux cas un type **`upload`** renseigné par l’identifiant de la livraison qui va être validée
-- Dans les paramètres, on prendra soin de bien préciser le paramètre « `"is_compressed": true` » dans le cas où on fournit une archive compressée, sans quoi l’instruction de dézippage ne sera pas effectuée et le traitement sortira en erreur
+- Dans les paramètres, on prendra soin de bien préciser le paramètre `"is_compressed": true` dans le cas où on fournit une archive compressée, sans quoi l’instruction de dézippage ne sera pas effectuée et le traitement sortira en erreur
 - À noter que comme pour tout traitement, une instruction de notification par courriel peut être ajoutée, par exemple après l’instruction **`parameters`** en fournissant la syntaxe suivante :
     ```json
     "callback": {
@@ -370,7 +370,7 @@ Pour ne pas préjuger de l’usage futur de la livraison ainsi validée, en sort
 :::
 
 Cette précision faite, la récupération du rapport de validation s’effectue en deux appels :
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree</a> permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type : 
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/tree` permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type : 
     ```json
     [
         {
@@ -393,7 +393,7 @@ Cette précision faite, la récupération du rapport de validation s’effectue 
     ]
     ```
     Ce qui permet de déduire que le **chemin d’accès au rapport** de validation consécutif à cette validation est `source/__results.jsonl`. **Cette information est utile pour le second appel.**
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl</a> permet grâce aux informations précédentes, d’obtenir un corps de réponse _<span lang="en">multipart/form-data</span>_ donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl` permet grâce aux informations précédentes, d’obtenir un corps de réponse <span lang="en">_multipart/form-data_</span> donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
 
 <br>
 
@@ -428,7 +428,7 @@ L’appel en lui-même se fait, comme pour tout traitement, via l’appel API En
 Par rapport à l’exécution via l’API Validation on notera les différences suivantes :
 
 - Les entrées **`inputs`** et **`output`** prennent un type **`upload`** renseigné par l’identifiant de la livraison qui va être validée.
-- L’entrée **`output`** prend un type **`upload`** renseigné par un nom au choix pour créer un second jeu de données en sortie, jeu de données qui sera le jeu de données d’entrée modifié par l’ajout des éléments de normalisation. Après l’exécution de cette requête, le corps de réponse permet d’obtenir l’identifiant de la **donnée d’_<span lang="en">upload</span>_ normalisée** qui sera produite. **Cette information est à mettre de côté pour la phase « Récupération de la donnée normalisée ».**
+- L’entrée **`output`** prend un type **`upload`** renseigné par un nom au choix pour créer un second jeu de données en sortie, jeu de données qui sera le jeu de données d’entrée modifié par l’ajout des éléments de normalisation. Après l’exécution de cette requête, le corps de réponse permet d’obtenir l’identifiant de la **donnée d’<span lang="en">_upload_</span> normalisée** qui sera produite. **Cette information est à mettre de côté pour la phase « Récupération de la donnée normalisée ».**
 - Dans les paramètres, on prendra soin de bien préciser : 
     - Le paramètre **`is_compressed`** à **`true`** dans le cas où on fournit une archive compressée, sans quoi l’instruction de dézippage ne sera pas effectuée et le traitement sortira en erreur
     - Le paramètre **`normalize`** à **`true`** pour produire la donnée normalisée en sortie
@@ -456,7 +456,7 @@ Pour ne pas préjuger de l’usage futur de la livraison ainsi validée, en sort
 
 Cette précision faite, la récupération du rapport de validation s’effectue en deux appels :
 
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/tree</a> permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type :
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/tree` permet de détailler l’arborescence modifiée de la livraison initiale. L’utilisateur reçoit en retour, une réponse du type :
     ```json
     [
         {
@@ -479,7 +479,7 @@ Cette précision faite, la récupération du rapport de validation s’effectue 
     ]
     ```
     Ce qui permet de déduire que le **chemin d’accès au rapport** de validation consécutif à cette validation est `validation/__results.jsonl`. **Cette information est utile pour le second appel.**
-- L’appel GET <a href="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl" target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl - ouvre une nouvelle fenêtre">https://data.geopf.fr/api/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl</a> permet grâce aux informations précédentes, d’obtenir un corps de réponse _<span lang="en">multipart/form-data</span>_ donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
+- L’appel `GET {{ urls.api_entrepot }}/datastores/{datastore_id}/uploads/{upload_id}/data?path=mon_path/__results.jsonl` permet grâce aux informations précédentes, d’obtenir un corps de réponse <span lang="en">_multipart/form-data_</span> donnant accès au rapport de validation. Cette requête prend en paramètre, en plus des classiques identifiants de datastore et de livraison, le chemin d’accès identifié ci-dessus, via un paramètre **`path`**.
 
 <br>
 
@@ -488,3 +488,344 @@ Cette précision faite, la récupération du rapport de validation s’effectue 
 La récupération du jeu de données normalisé suit exactement le même processus que celui de récupération du rapport de validation.
 
 Il convient simplement d’adapter la partie du chemin qui sera récupéré.
+
+## Construire un standard de validation
+
+### Fiche référence des modèles de standard
+
+#### Structure
+
+Un modèle de standard se présente sous forme de dossier, le nom du dossier est préférablement sans espace (les remplacer par des `_`).
+
+Ce dossier est composé de trois parties :
+- Un fichier `files.json`, qui décrit les informations intrinsèques du modèle telles que son nom. C’est dans ce fichier que la structure des documents du standard est spécifiée.
+- Un dossier `types`, qui contient les informations et contraintes sur les fichiers des documents décrits par le standard.
+- Un dossier `codes`, qui contient les listes de données autorisées dans certains attributs (colonnes) des tables.
+
+Exemple :
+```
+cnig_PLU_2025
+├── types
+│   ├── DOC_URBA.json
+│   ...
+├── codes
+│   ├── ListeEtatPLU.csv
+│   ...
+└── files.json
+```
+
+<br>
+
+#### Fichier `files.json`
+
+Le fichier `files.json` est la colonne vertébrale du document. Il permet de décrire la structure des documents du standard.
+
+Puisque c’est un document JSON, il comporte évidemment `{` et `}` en début et en fin de fichier, ce qui définit l’objet principal du fichier.
+
+##### Description du standard
+
+Chaque entrée dans l’objet principal est présentée ci-dessous. Les propriétés doivent toutes être renseignées, sauf si elles sont indiquées comme optionnelles.
+- `id` (obligatoire) : Comme la plupart des objets présents dans un modèle de standards, l’objet principal de `files.json` comporte un `id`. Les `id` sont des suites de 32 caractères alphanumériques. Chaque `id` doit être unique pour l’ensemble du modèle.
+- `name` (obligatoire) : Le nom technique du modèle. Évitez les espaces.
+- `title` (optionnel) : Le nom général du modèle. Il est souvent identique au `name`.
+- `description` (optionnel) : Description du modèle.
+- `abstract` (optionnel) : Dans la plupart des cas, la valeur `false` est appropriée. Cette propriété est assignée à `true` dans des modèles de modèles utilisés par le Géoportail de l’Urbanisme.
+- `constraints` (optionnel) : La propriété `constraints` est un objet composé de deux propriétés :
+    - `folderName` permet de valider le nom des dossiers des documents testés. On valide le nom du dossier s’il vérifie le regex indiqué.
+    - `metadataSpecification` est la valeur attendue dans la fiche de métadonnée des documents testés.
+- `files` et `codes` (obligatoires) : Ces deux entrées sont des listes (donc introduites par `[` et `]`), qui définissent les fichiers du modèles et les listes de valeurs respectivement. Ces objets sont décrits dans les parties subséquentes.
+
+<br>
+
+##### Exemple de `files.json`
+
+```json
+{
+    "abstract": false,
+    "id": "3935ffc17d3dabe0d77ea7d3c416695d",
+    "name": "cnig_PLU_2025",
+    "title": "cnig_PLU_2025",
+    "description": "cnig_PLU_2025",
+    "files": [
+        ...
+    ],
+    "codes": [
+        ...
+    ],
+    "constraints": {
+        "folderName": "[a-zA-Z0-9]+_PLU_[0-9]{8}(_[a-zA-Z])?",
+        "metadataSpecification": "CNIG PLU v2025"
+    }
+}
+```
+
+##### Description de la structure des documents
+
+L’objet `files` de `files.json` est une liste qui permet d’indiquer quelles sont les fichiers du modèle. Ce n’est pas ici que l’on va décrire le contenu des fichiers, on explicite ici où ils se trouvent, quels sont leurs nom, etc.
+
+Chaque entrée dans l’objet `files` correspond à un fichier du standard et comprend les propriétés suivantes :
+- `id` (obligatoire) : Suit les mêmes règles que l’`id` présenté précédemment.
+- `name` (obligatoire) : Le nom technique du fichier.
+- `title` (optionnel) : Le nom général du fichier. `name` et `title` sont souvent identiques.
+- `description` (optionnel) : La description du fichier.
+- `path` (obligatoire) : Chemin relatif par rapport à la racine du document. Ce champ fait correspondre le nom du fichier à un regex.
+    :::warning
+    Ne pas inclure l’extension du fichier dans le regex !
+    :::
+- `mandatory` (obligatoire) : Indique si la présence du fichier en question est rédhibitoire à sa validation. Les valeurs possibles sont :
+    - `ERROR` : L’absence du fichier dans le document va renvoyer une erreur, ce qui rend le document invalide.
+    - `WARN` : L’absence du fichier dans le document va remonter un avertissement dans le rapport, mais cela n’invalide pas le document.
+    - `OPTIONAL` : l’absence du fichier dans le document ne pose aucun problème.
+- `type` (obligatoire) : Le type du fichier. Les valeurs autorisées sont les suivantes :
+    - `directory` : Dossier.
+    - `metadata` : Fiche de métadonnées XML au format ISO 19115 (`.xml`).
+    - `pdf` : Fichier PDF (`.pdf`).
+    - `table` : Table de données géographique ou non (`.csv`, `.dbf`, `.shp`, `.geojson`, `.gml`).
+    - `multi_table` : Un ensemble de tables stockées dans un seul fichier (`.gml`, `.gpkg`).
+- `tableModel` (obligatoire si et seulement si `type` est une `table`) : Chemin vers le modèle correspondant à la table. On fait appel ici au dossier `types` du modèle.
+- `tables` (obligatoires si et seulement si `type` est une `mutli_table`) : Si le type du fichier est une multitable, nous allons décrire chacune des tables que le fichier contient dans une seule liste. Ainsi, `tables` est une liste de tables, et chacun des éléments de la liste est un objet avec les propriétés suivantes :
+    - `name` : Le nom technique du modèle de la couche.
+    - `mandatory` : Quel est l’impact de l’absence de la couche sur la validaté du document testé (voir plus haut).
+    - `path` : Regex permettant de faire correspondre le nom de la couche du document testé avec le modèle.
+    - `tableModel` : Chemin vers le modèle correspondant à la table.
+
+<br>
+
+##### Énumération des codes
+
+Dans l’objet `codes` de `files.json`, on va énumérer tous les codes des modèles.
+
+Nous completerons cette partie dans la partie sur les codes.
+
+##### Exemple complet de files.json
+
+```json
+{
+    "abstract": false,
+    "id": "3935ffc17d3dabe0d77ea7d3c416695d",
+    "name": "cnig_PLU_2025",
+    "title": "cnig_PLU_2025",
+    "description": "cnig_PLU_2025",
+    "files": [
+        {
+            "type": "table",
+            "path": "Donnees_geographiques/[AB0-9]{5}_HABILLAGE_LIN_[0-9]{8}",
+            "mandatory": "OPTIONAL",
+            "tableModel": "./types/HABILLAGE_LIN.json",
+            "id": "ee0d570522f83a665134675aa5241d57",
+            "name": "HABILLAGE_LIN",
+            "title": "HABILLAGE_LIN"
+        },
+        {
+            "name": "GEOPACKAGE",
+            "id": "86d02bead41f4186be66260cf4727a21",
+            "description": "ceci est un exemple de multi_table non présent dans cnig_PLU_2025",
+            "type": "multi_table",
+            "path": "[^\\/]*",
+            "mandatory": "ERROR",
+            "tables": [
+                {
+                "name": "prefix_procedure",
+                "mandatory": "ERROR",
+                "path": "((?:[0-9]{2,3}|2a|2b)[0-9]{4}[0-9]{4}_[0-9]{4}_[0-9]{4})_procedure",
+                "tableModel": "./types/prefixeppr_procedure.json"
+                },
+                ...
+            ]
+        },
+        ...
+    ],
+    "codes": [
+        {
+            "data": "./codes/PrescriptionLUrbaType.csv",
+            "id": "023592188a2b11f0e88362966107deef",
+            "name": "PrescriptionLUrbaType",
+            "title": "PrescriptionLUrbaType"
+        },
+        ...
+    ],
+    "constraints": {
+        "folderName": "[a-zA-Z0-9]+_PLU_[0-9]{8}(_[a-zA-Z])?",
+        "metadataSpecification": "CNIG PLU v2025"
+    }
+}
+```
+
+#### Dossier `types`
+
+Dans le dossier `types`, on va renseigner quelles sont les caractéristiques des différentes `tables` que nous avons annoncées dans la partie `files` de `files.json`. Le `path` renvoie directement vers un fichier du dossier `types`.
+
+Chaque fichier du dossier est un JSON mais le contenu varie si c’est une `table` ou une `multi_table`.
+
+Nous allons décrire ici comment définir un modèle d’une table simple.
+
+##### Propriétés classiques
+
+- `id` (obligatoire) : Encore une fois, chaque modèle de table a un `id`. Attention, ce n’est **pas** le même que celui renseigné dans `files` de `files.json`.
+- `name` (obligatoire) : Le nom technique du modèle de table.
+- `title` (optionnel) : Le nom général du modèle de table. Il est courant qu’il soit identique au `name`.
+- `description` (optionnel) : La description de la table en question.
+- `columns` (obligatoire) : C’est dans cette propriété que nous allons définir les colonnes de notre modèle de tables. C’est une liste d’attributs, où chacun des éléments de la liste correspond à une colonne de la table. Chacun des éléments a les propriétés suivantes :
+    - `id` (obligatoire) : `id` similaire aux différents `id` rencontrés : une chaine de 32 caractères alphanumériques.
+    - `name` (obligatoire) : Le nom technique de l’attribut.
+    - `title` (optionnel) : Le nom général de l’attribut. Il est souvent identique au `name`.
+    - `description` (optionnel) : La description de l’attribut.
+    - `type` (obligatoire) : Le type de l’attribut peut prendre les valeurs suivantes :
+        - `Boolean` : Vrai ou faux
+        - `String` : Chaîne de caractères
+        - `Integer` : Valeur numérique entière
+        - `Double` : Valeur numérique en virgule flottante
+        - `Date` : Jour, mois et année
+        - `Geometry` : Géométrie de type non spécifié
+        - `Point` : Géométrie de type point
+        - `LineString` : Géométrie de type polyligne
+        - `Polygon` : Géométrie de type polygone
+        - `MultiPoint` : Géométrie de type multi-point
+        - `MultiLineString` : Géométrie de type multi-polyligne
+        - `MultiPolygon` : Géométrie de type multi-polygone
+        - `GeometryCollection` : Géométrie de type hétérogène
+        - `Path` : Chemin vers un fichier dans le document.
+        - `Url` : URL
+    - `constraints` (optionnel) : Liste de contraintes associées à la colonne.
+        :::warning
+        Les contraintes de clé étrangère, ou de liste de valeurs, ne sont pas à renseigner ici.
+        :::
+        Chaque contrainte peut prendre les valeurs suivantes :
+        - `presenceRequired` : `true` si la colonne doit être présente dans la table.
+        - `required` : `true` si toutes les valeurs de la colonne doivent être remplies. Ainsi, `false` permet l’intégration de valeurs nulles dans la colonne.
+        - `unique` : `true` si toutes les valeurs non-nulles de la colonne doivent être uniques.
+        - `maxLength` : Entier indiquant la longueur maximale du champ.
+        - `pattern` : Contrainte sous forme d’une expression régulière.
+
+##### Exemple de `columns`
+
+```json
+"columns": [
+    {
+        "type": "Url",
+        "id": "17bad748b0bb4361455ac976ac41c13b",
+        "name": "URLREG",
+        "title": "URLREG",
+        "description": "URL ou URI qui pointe sur le fichier du règlement papier complet scanné",
+        "constraints": {
+            "required": false,
+            "presenceRequired": true,
+            "unique": false,
+            "maxLength": 254
+        }
+    },
+    ...
+]
+```
+
+##### `constraints` (optionnel)
+
+Cette propriété des tables permet d’ajouter des controles qui valide des données à partir d’autres tables, listes de valeurs, ou même d’autre colonnes de la table.
+
+Deux types de contraintes de tables existent : les `conditions` et les `foreignKeys`, qui sont toutes deux des listes.
+
+###### `conditions`
+
+La propriété condition est une liste de valeurs textuelles, chacune ayant le format d’une condition SQL. Le nom des colonnes à utiliser dans ces expressions sont les noms des colonnes précédemment décrites.
+
+Exemple (qui n’existe pas dans `cnig_PLU_2025`) :
+
+```sql
+URLREG LIKE '%.ru'
+```
+
+`foreignKeys` : Comme son nom l’indique, cette liste de valeur permet de réaliser des clés étrangères vers d’autres tables ou listes de valeurs. On utilise la aussi une syntaxe SQL, en particulier en utilisant le terme `REFERENCES`.
+
+:::warning
+Attention, pour les listes de valeurs, on va faire référence à un fichier dans le dossier `codes`. Il faut alors :
+    - créer un csv dans le dossier `codes`, avec le nom souhaité, et au moins une colonne de valeurs, avec un en-tête.
+    - ajouter ce fichier dans la propriété `codes` de `files.json`.
+:::
+
+Exemple :
+- dans un fichier JSON du dossier `types` :
+    ```json
+    "columns": [
+        {
+            "type": "String",
+            "id": "c8d5869d42965b27d3316711a2db57fc",
+            "name": "ETAT"
+        },
+        ...
+    ],
+    "constraints": {
+        "foreignKeys": [
+            "(ETAT) REFERENCES ListeEtatPLUi(ETAT)"
+        ]
+    }
+    ```
+- dans le fichier `codes/ListeEtatPLUi.csv` :
+    ```csv
+    ETAT
+    01
+    02
+    03
+    ```
+- dans le fichier `files.json`:
+    ```json
+    "codes": [
+        {
+            "data": "./codes/ListeEtatPLUi.csv",
+            "id": "4b26536f095974b6dd19845fa013fdc0",
+            "name": "ListeEtatPLUi",
+            "title": "ListeEtatPLUi"
+        }
+    ]
+    ```
+
+<br>
+
+##### Exemple complet d’un fichier du dossier `types`
+
+```json
+{
+    "id": "48ac04777ad427d939e25ed2350f8787",
+    "name": "DOC_URBA",
+    "title": "DOC_URBA",
+    "description": "Table contenant la liste des documents d’Urbanisme PLU ou POS dont la numérisation ou l’élaboration sous fourme numérique est engagée",
+    "columns": [
+        {
+            "type": "String",
+            "id": "6518d7cc46cf4007341e061d835f7fc3",
+            "name": "DATAPPRO",
+            "title": "DATAPPRO",
+            "description": "Date de la dernière approbation administrative du document d’urbanisme",
+            "constraints": {
+                "required": false,
+                "presenceRequired": true,
+                "unique": false,
+                "pattern": "[0-9]{8}"
+            }
+        },
+        {
+            "type": "String",
+            "id": "c8d5869d42965b27d3316711a2db57fc",
+            "name": "ETAT",
+            "title": "ETAT",
+            "description": "Etat juridique du document d’urbanisme",
+            "constraints": {
+                "required": true,
+                "presenceRequired": true,
+                "unique": false,
+                "maxLength": 2
+            }
+        },
+        ...
+    ],
+    "constraints": {
+        "conditions": [
+            "DATAPPRO IS NOT NULL OR ETAT NOT LIKE '03'",
+            ...
+        ],
+        "foreignKeys": [
+            "(ETAT) REFERENCES ListeEtatPLUi(ETAT)",
+            ...
+        ]
+    }
+}
+```

@@ -23,7 +23,7 @@ Les entités suivantes sont concernées :
 
 <br>
 
-Il peut être ajouté et mis à jour via la route « PATCH/datastores/{datastore}/{entity}/{id} ». Ce champ n’est pas interprété par l’entrepôt, c’est-à-dire qu’il n’est pas possible de filtrer sur sa valeur dans les routes de liste des entités. Il permet en revanche à une application de stocker des informations structurées propres à son fonctionnement sans avoir besoin de stockage persistant de son côté.
+Il peut être ajouté et mis à jour via la route `PATCH /datastores/{datastore}/{entity}/{id}`. Ce champ n’est pas interprété par l’entrepôt, c’est-à-dire qu’il n’est pas possible de filtrer sur sa valeur dans les routes de liste des entités. Il permet en revanche à une application de stocker des informations structurées propres à son fonctionnement sans avoir besoin de stockage persistant de son côté.
 
 Exemple d’utilisation pour une livraison :
 

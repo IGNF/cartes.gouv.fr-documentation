@@ -14,6 +14,14 @@ Pour certains types de diffusion, le serveur de diffusion peut avoir besoin de f
 
 ### Génération d’un SLD
 
+:::info
+De manière générale il faut retenir que la Géoplateforme consomme des SLD dans leur version 1.0.0.
+
+Vous devez être vigilant à la version du SLD dont vous disposez ou celle générée par votre client SIG préféré. Par exemple QGIS génère du SLD 1.1.0.
+:::
+
+Différentes options existent pour générer un SLD compatible :
+
 Après l’export des styles depuis QGIS dans son format, il est nécessaire d’utiliser l’outil GeoStyler en ligne de commande pour les convertir :
 
 ```bash
@@ -23,20 +31,32 @@ $  geostyler-cli -o pays.sld -t sld -s qgis pays.qml
 ✔ File "pays.qml" translated successfully. Output written to pays.sld
 ```
 
+Vous pouvez, toujours depuis QGIS, exporter directement un SLD version 1.1.0 et utiliser le démonstrateur en ligne de GeoStyler pour en faire un SLD 1.0.0 : [https://demo.geostyler.org/](https://demo.geostyler.org/)
+
 :::warning
 Chaque outil d’export peut entraîner des comportements différents. Au final, le SLD sera interprété par GeoServer sur la Géoplateforme. Le plugin [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) peut également être utilisé.
+:::
+
+:::warning
+De manière générale il est recommandé d’être particulièrement attentif avec les SLD référençant des pictogrammes ou des motifs de remplissage.
+
+En effet vous devrez prévoir :
+- d’héberger le pictogramme sur la Géoplateforme en tant qu’annexe : [voir le tutoriel](../../../gestion-des-donnees-complementaires/gestion-des-annexes/)
+- de modifier manuellement votre SLD pour pointer sur le pictogramme hébergé en annexe
+
+Vous êtes invités à privilégier des pictogrammes images (JPEG ou PNG) et à éviter les trames complexes.
 :::
 
 {{ component("download", {
     title: "ecoregions.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.sld",
-    detail: "SLD - 10.6Ko"
+    detail: "SLD - 10,6 Ko"
 }) }}
 
 {{ component("download", {
     title: "pays.sld",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.sld",
-    detail: "SLD - 847o"
+    detail: "SLD - 847 o"
 }) }}
 
 ### Écriture de FTL
@@ -46,7 +66,7 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
 {{ component("download", {
     title: "ecoregions.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/ecoregions.ftl",
-    detail: "FTL - 118o"
+    detail: "FTL - 118 o"
 }) }}
 
 ```plain
@@ -56,7 +76,7 @@ Ces [fichiers FTL](https://docs.geoserver.org/stable/en/user/tutorials/freemarke
 {{ component("download", {
     title: "pays.ftl",
     href: "/data/tutoriels/alimentation-diffusion-simple/pays.ftl",
-    detail: "FTL - 75o"
+    detail: "FTL - 75 o"
 }) }}
 
 ```plain
@@ -166,7 +186,6 @@ On dépose les 4 fichiers de configuration (2 SLD et 2 FTL).
         ["name = FTL pour les pays"]
     ]
 }) }}
-
 ??? Corps de réponse JSON
 ```json
 {

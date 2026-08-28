@@ -42,7 +42,7 @@ Deux ateliers de standardisation d’une ZAER ont eu lieu en septembre dernier a
 {{ component("download", {
     title: "Télécharger les conclusions",
     href: "http://data.geopf.fr/annexes/enr/document/zaer/Standard_v1.pdf",
-    detail: "PDF - 1Mo"
+    detail: "PDF - 1 Mo"
 }) }}
 
 Vous pouvez poser toutes vos questions via notre [formulaire de contact](https://planification.climat-energie.gouv.fr/nous-contacter){target="_blank" rel="noopener noreferrer" title="planification.climat-energie.gouv.fr/nous-contacter - ouvre une nouvelle fenêtre"}.
@@ -112,7 +112,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_ZAER_ARRETEES_GPKG_WGS84_FRA.gpkg",
     href: "https://data.geopf.fr/telechargement/download/ZAER_ARRET_GPKG/ZAER_ARRET_GPKG/ENR_ZAER_ARRETEES_GPKG_WGS84_FRA.gpkg",
-    detail: "Geopackage - 1026Mo"
+    detail: "GPKG - 1,03 Go"
 }) }}
 
 ##### Potentiel solaire électrique et thermique
@@ -124,7 +124,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01/ENR_1-0_IRR-SOL_TIFF_WGS84G_FXX_2023-10-01.7z",
-    detail: "7-Zip - 14.9Mo"
+    detail: "7-Zip - 14,9 Mo"
 }) }}
 
 ###### Potentiel solaire au sol - couche « clé en main »
@@ -134,7 +134,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger cadcastres_solaires_detailles.gpkg",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_POT-SOL-SOL_GPKG_WGS84_WLD_2025-11-01/cadcastres_solaires_detailles.gpkg",
-    detail: "Geopackage - 2.4Go"
+    detail: "GPKG - 2,4 Go"
 }) }}
 
 ###### Potentiel solaire au sol - friches susceptibles d’accueillir des installations photovoltaïques
@@ -144,7 +144,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01/ENR_1-0_L14-POT-SOL-FRCH_GPKG_LAMB93_FXX_2023-04-01.7z",
-    detail: "7-Zip - 1Mo"
+    detail: "7-Zip - 1 Mo"
 }) }}
 
 ###### Cadastres solaires locaux
@@ -154,7 +154,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01/ENR_1-0_CAD-SOL-LOC_GPKG_WGS84_FRA_2026-03-01.7z",
-    detail: "7-Zip - 1236Mo"
+    detail: "7-Zip - 1,24 Go"
 }) }}
 
 ###### Potentiel solaire sur toiture (méthode simplifiée)
@@ -164,7 +164,7 @@ Région Île-de-France - R 11 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R11_2023-07-01.7z",
-    detail: "7-Zip - 332.3Mo"
+    detail: "7-Zip - 332,3 Mo"
 }) }}
 
 Région Centre-Val de Loire - R 24 :
@@ -172,7 +172,7 @@ Région Centre-Val de Loire - R 24 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R24_2023-07-01.7z",
-    detail: "7-Zip - 235.3Mo"
+    detail: "7-Zip - 235,3 Mo"
 }) }}
 
 Région Bourgogne-Franche-Comté - R 27 :
@@ -180,7 +180,7 @@ Région Bourgogne-Franche-Comté - R 27 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R27_2023-07-01.7z",
-    detail: "7-Zip - 248.6Mo"
+    detail: "7-Zip - 248,6 Mo"
 }) }}
 
 Région Normandie - R 28 :
@@ -188,7 +188,7 @@ Région Normandie - R 28 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R28_2023-07-01.7z",
-    detail: "7-Zip - 288Mo"
+    detail: "7-Zip - 288 Mo"
 }) }}
 
 Région Hauts-de-France - R 32 :
@@ -196,7 +196,7 @@ Région Hauts-de-France - R 32 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R32_2023-07-01.7z",
-    detail: "7-Zip - 432.7Mo"
+    detail: "7-Zip - 432,7 Mo"
 }) }}
 
 Région Grand Est - R 44 :
@@ -204,7 +204,7 @@ Région Grand Est - R 44 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R44_2023-07-01.7z",
-    detail: "7-Zip - 424.6Mo"
+    detail: "7-Zip - 424,6 Mo"
 }) }}
 
 Région Pays de la Loire - R 52 :
@@ -212,7 +212,7 @@ Région Pays de la Loire - R 52 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R52_2023-07-01.7z",
-    detail: "7-Zip - 363Mo"
+    detail: "7-Zip - 363 Mo"
 }) }}
 
 Région Bretagne - R 53 :
@@ -220,7 +220,7 @@ Région Bretagne - R 53 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R53_2023-07-01.7z",
-    detail: "7-Zip - 315Mo"
+    detail: "7-Zip - 315 Mo"
 }) }}
 
 Région Nouvelle-Aquitaine - R 75 :
@@ -228,7 +228,7 @@ Région Nouvelle-Aquitaine - R 75 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R75_2023-07-01.7z",
-    detail: "7-Zip - 669Mo"
+    detail: "7-Zip - 669 Mo"
 }) }}
 
 Région Occitanie - R 76 :
@@ -236,7 +236,7 @@ Région Occitanie - R 76 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R76_2023-07-01.7z",
-    detail: "7-Zip - 558Mo"
+    detail: "7-Zip - 558 Mo"
 }) }}
 
 Région Auvergne-Rhône-Alpes - R 84 :
@@ -244,7 +244,7 @@ Région Auvergne-Rhône-Alpes - R 84 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R84_2023-07-01.7z",
-    detail: "7-Zip - 553Mo"
+    detail: "7-Zip - 553 Mo"
 }) }}
 
 Région Provence-Alpes-Côte d’Azur - R 93 :
@@ -252,7 +252,7 @@ Région Provence-Alpes-Côte d’Azur - R 93 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R93_2023-07-01.7z",
-    detail: "7-Zip - 73.8Mo"
+    detail: "7-Zip - 73,8 Mo"
 }) }}
 
 Région Corse - R 94 :
@@ -260,7 +260,7 @@ Région Corse - R 94 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01/ENR_1-0_L21-POT-SOL-BAT_GPKG_LAMB93_R94_2023-07-01.7z",
-    detail: "7-Zip - 28Mo"
+    detail: "7-Zip - 28 Mo"
 }) }}
 
 ###### Potentiel solaire sur le réseau routier national (DIR)
@@ -270,7 +270,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_POT-SOL-RRN_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 1.3Mo"
+    detail: "7-Zip - 1,3 Mo"
 }) }}
 
 ###### Unités foncières contenant des surfaces de stationnement non couvertes de plus de 500 m² (données déclaratives)
@@ -280,7 +280,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01/ENR_2-0_POT-SOL-PARK_GPKG_WGS84G_FRA_2025-12-01.7z",
-    detail: "7-Zip - 54.7Mo"
+    detail: "7-Zip - 54,7 Mo"
 }) }}
 
 ###### Surfaces de parking supérieures à 500 m²
@@ -290,7 +290,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01/ENR_2-0_PARK-SUP-500_GPKG_WLD_WM_2026-02-01.7z",
-    detail: "7-Zip - 32.6Mo"
+    detail: "7-Zip - 32,6 Mo"
 }) }}
 
 ###### Délaissés autoroutiers
@@ -300,7 +300,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01/ENR_2-0_DELSS-AUTORT_GPKG_LAMB93_FXX_2024-10-01.7z",
-    detail: "7-Zip - 1.8Mo"
+    detail: "7-Zip - 1,8 Mo"
 }) }}
 
 ##### Potentiel éolien terrestre
@@ -312,7 +312,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_ENR-PERIM-HAB_GPKG_WGS84G_FRA_2024-04-01.7z",
-    detail: "7-Zip - 133Mo"
+    detail: "7-Zip - 133 Mo"
 }) }}
 
 ###### Potentiel éolien terrestre - couche « clé en main »
@@ -322,7 +322,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01/ENR_1-0_POT-EOL-REG_GPKG_WGS84G_FRA_2024-06-01.7z",
-    detail: "7-Zip - 3.5Go"
+    detail: "7-Zip - 3,5 Go"
 }) }}
 
 ###### Potentiel éolien terrestre - gisement de vent à 140 m
@@ -332,7 +332,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01/ENR_1-0_L33-POT-VENT140_GPKG_LAMB93_FXX_2023-06-01.7z",
-    detail: "7-Zip - 7.8Mo"
+    detail: "7-Zip - 7,8 Mo"
 }) }}
 
 ###### Potentiel éolien terrestre - gisement de vent à 160 m
@@ -342,7 +342,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01/ENR_1-0_L33-POT-VENT160_GPKG_LAMB93_FXX_2023-06-01.7z",
-    detail: "7-Zip - 7.8Mo"
+    detail: "7-Zip - 7,8 Mo"
 }) }}
 
 ###### Potentiel éolien terrestre - Contraintes réglementaires liées aux pentes
@@ -362,7 +362,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01/ENR_1-0_ENR-PERIM-ROUT_GPKG_WGS84G_FXX_2023-10-01.7z",
-    detail: "7-Zip - 1553Mo"
+    detail: "7-Zip - 1,55 Go"
 }) }}
 
 ##### Potentiel géothermique
@@ -374,7 +374,7 @@ Région Provence-Alpes-Côte d’Azur
 {{ component("download", {
     title: "Télécharger ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01/ENR_1-0_L41-POT-GEOTH_GPKG_LAMB93_R93_2023-06-01.7z",
-    detail: "7-Zip - 3.4Mo"
+    detail: "7-Zip - 3,4 Mo"
 }) }}
 
 ##### Potentiel hydroélectrique
@@ -386,7 +386,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_POT-HYDR_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 3.7Mo"
+    detail: "7-Zip - 3,7 Mo"
 }) }}
 
 ##### Potentiel de méthanisation et biogaz
@@ -398,7 +398,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01/ENR_1-0_L71-POT-METH-2050_GPKG_WGS84G_FXX_2023-06-01.7z",
-    detail: "7-Zip - 2.3Mo"
+    detail: "7-Zip - 2,3 Mo"
 }) }}
 
 ##### Potentiel de développement de réseaux de chaleur et de froid
@@ -410,7 +410,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-BES-C_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 234Mo"
+    detail: "7-Zip - 234 Mo"
 }) }}
 
 ###### Estimation des besoins de froid des bâtiments des secteurs résidentiels et tertiaires
@@ -420,7 +420,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-BES-F_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 234.6Mo"
+    detail: "7-Zip - 234,6 Mo"
 }) }}
 
 ###### Zones d’opportunité « à potentiel » pour la création ou l’extension de réseaux de chaleur - couche « clé en main »
@@ -430,7 +430,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-C_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 2Mo"
+    detail: "7-Zip - 2 Mo"
 }) }}
 
 ###### Zones d’opportunité « à fort potentiel » pour la création ou l’extension de réseaux de chaleur - couche « clé en main »
@@ -440,7 +440,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-FOR-C_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 5.5Mo"
+    detail: "7-Zip - 5,5 Mo"
 }) }}
 
 ###### Zones d’opportunité « à potentiel » pour la création ou l’extension de réseaux de froid - couche « clé en main »
@@ -450,7 +450,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-F_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 1.8Mo"
+    detail: "7-Zip - 1,8 Mo"
 }) }}
 
 ###### Zones d’opportunité « à fort potentiel » pour la création ou l’extension de réseaux de froid - couche « clé en main »
@@ -460,7 +460,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-ZON-POT-FOR-F_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 0.5Mo"
+    detail: "7-Zip - 0,5 Mo"
 }) }}
 
 ##### Localisation des installations de production énergétique
@@ -472,7 +472,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_LOC-MAT-EOL_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 0.7Mo"
+    detail: "7-Zip - 0,7 Mo"
 }) }}
 
 ###### Cartographie des accès biométhane
@@ -482,7 +482,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ACC-BIOMETH_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 0.9Mo"
+    detail: "7-Zip - 0,9 Mo"
 }) }}
 
 ###### Points d’injection de biométhane
@@ -492,7 +492,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_PNT-INJ-BIOM_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 0.2Mo"
+    detail: "7-Zip - 0,2 Mo"
 }) }}
 
 ###### Localisation des installations de production de chaleur par Biogaz
@@ -502,7 +502,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-BIOG_GPKG_LAMB93_FXX_2023-10-01.7z",
-    detail: "7-Zip - 1.5Mo"
+    detail: "7-Zip - 1,5 Mo"
 }) }}
 
 ###### Localisation des installations de production d’électricité pouvant valoriser de la chaleur
@@ -512,7 +512,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-COG_GPKG_LAMB93_FXX_2023-10-01.7z",
-    detail: "7-Zip - 1.5Mo"
+    detail: "7-Zip - 1,5 Mo"
 }) }}
 
 ###### Localisation des installations de production de chaleur par incinération des déchets
@@ -522,7 +522,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-DECH_GPKG_LAMB93_FXX_2023-10-01.7z",
-    detail: "7-Zip - 1.5Mo"
+    detail: "7-Zip - 1,5 Mo"
 }) }}
 
 ###### Localisation des installations de production de chaleur par méthanisation
@@ -532,7 +532,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-METH_GPKG_LAMB93_FXX_2023-10-01.7z",
-    detail: "7-Zip - 1.5Mo"
+    detail: "7-Zip - 1,5 Mo"
 }) }}
 
 ###### Localisation des sites de production de chaleur et froid
@@ -542,7 +542,7 @@ Région Bretagne - R 53 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC-B_GPKG_LAMB93_R53_2023-07-01.7z",
-    detail: "7-Zip - 22Ko"
+    detail: "7-Zip - 22 Ko"
 }) }}
 
 Région Provence-Alpes-Côte d’Azur - R 93 :
@@ -550,7 +550,7 @@ Région Provence-Alpes-Côte d’Azur - R 93 :
 {{ component("download", {
     title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC-P_GPKG_LAMB93_R93_2023-07-01.7z",
-    detail: "7-Zip - 46Ko"
+    detail: "7-Zip - 46 Ko"
 }) }}
 
 ###### Localisation des réseaux de chaleur et de froid en France
@@ -560,7 +560,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L811-SIT-PRD-C-RC_GPKG_LAMB93_FXX_2023-07-01.7z",
-    detail: "7-Zip - 0.3Mo"
+    detail: "7-Zip - 0,3 Mo"
 }) }}
 
 ###### Localisation des linéaires de réseaux de chaleur et de froid en France
@@ -570,7 +570,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_SIT-PRD-C-RCF-L_GPKG_LAMB93_FXX_2023-10-01.7z",
-    detail: "7-Zip - 26.7Mo"
+    detail: "7-Zip - 26,7 Mo"
 }) }}
 
 ###### Localisation et estimation du gisement de chaleur fatale des STEP en France
@@ -580,7 +580,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-C-FAT-STEP_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 0.5Mo"
+    detail: "7-Zip - 0,5 Mo"
 }) }}
 
 ###### Localisation et estimation du gisement de chaleur fatale des 500 plus gros sites industriels de France
@@ -590,7 +590,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_ENREZO-C-FAT-500-IND_GPKG_WGS84G_FRA_2024-04-01.7z",
-    detail: "7-Zip - 0.3Mo"
+    detail: "7-Zip - 0,3 Mo"
 }) }}
 
 ###### Localisation et caractérisation des datacenters en France
@@ -600,7 +600,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_ENREZO-C-FAT-DTCNTR_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 0.3Mo"
+    detail: "7-Zip - 0,3 Mo"
 }) }}
 
 ##### Productibles annuels
@@ -612,7 +612,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01/ENR_1-0_PRD-AN-2021_GPKG_LAMB93_FXX_2023-11-01.7z",
-    detail: "7-Zip - 489Mo"
+    detail: "7-Zip - 489 Mo"
 }) }}
 
 ###### Productible annuel photovoltaïque par commune
@@ -622,7 +622,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01/ENR_1-0_PRD-INST-PV_GPKG_WGS84G_FRA_2023-10-01.7z",
-    detail: "7-Zip - 2Mo"
+    detail: "7-Zip - 2 Mo"
 }) }}
 
 ##### Puissances cumulées électriques installées
@@ -634,7 +634,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01/ENR_1-0_L9-PAR-ENR-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
-    detail: "7-Zip - 95Ko"
+    detail: "7-Zip - 95 Ko"
 }) }}
 
 ###### Puissance cumulée d’injection de biométhane et de la puissance cumulée d’injection de méthanisation électrique
@@ -644,7 +644,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01/ENR_1-0_PUI-INST_GPKG_LAMB93_FXX_2023-10-01.7z",
-    detail: "7-Zip - 90Ko"
+    detail: "7-Zip - 90 Ko"
 }) }}
 
 ##### Réseaux et capacités d’accueil
@@ -656,7 +656,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GAZ-RES-DISTR_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 469Mo"
+    detail: "7-Zip - 469 Mo"
 }) }}
 
 ###### Réseau de transport de gaz
@@ -666,7 +666,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GAZ-RES-TRANS_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 1Mo"
+    detail: "7-Zip - 1 Mo"
 }) }}
 
 ##### Enjeux du territoire
@@ -678,7 +678,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01/ENR_1-0_GSF_GPKG_LAMB93_FXX_2024-04-01.7z",
-    detail: "7-Zip - 1Mo"
+    detail: "7-Zip - 1 Mo"
 }) }}
 
 ##### Eléments de connaissance sur le territoire
@@ -690,7 +690,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01/ENR_1-0_OFB-ZON-EXCL_GPKG_WGS84G_FXX_2024-04-01.7z",
-    detail: "7-Zip - 109Mo"
+    detail: "7-Zip - 109 Mo"
 }) }}
 
 ###### Zones d’exclusion des ZAER - toutes ENR sauf toitures (loi APER)
@@ -700,7 +700,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_OFB-ZON-EXCL-SF-TOIT_GPKG_WGS84G_FRA_2024-04-01.7z",
-    detail: "7-Zip - 18Mo"
+    detail: "7-Zip - 18 Mo"
 }) }}
 
 ###### Zonages environnementaux ENR - aires nécessitant l’avis du gestionnaire (loi APER)
@@ -710,7 +710,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01/ENR_1-0_OFB-ZON-NCST-AV-GEST_GPKG_WGS84G_FRA_2024-04-01.7z",
-    detail: "7-Zip - 230Mo"
+    detail: "7-Zip - 230 Mo"
 }) }}
 
 ###### Consommation annuelle d’électricité par commune (en MWh)
@@ -720,7 +720,7 @@ France entière
 {{ component("download", {
     title: "Télécharger ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01/ENR_1-0_L95-CNS-ELEC-COMM_GPKG_WGS84G_FRA_2023-07-01.7z",
-    detail: "7-Zip - 239Mo"
+    detail: "7-Zip - 239 Mo"
 }) }}
 
 ###### Consommation annuelle de gaz par commune (en MWh)
@@ -730,7 +730,7 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01.7z",
     href: "https://data.geopf.fr/telechargement/download/ENR/ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01/ENR_1-0_L95-CNS-GAZ-COMM_GPKG_LAMB93_FXX_2023-07-01.7z",
-    detail: "7-Zip - 22.4Mo"
+    detail: "7-Zip - 22,4 Mo"
 }) }}
 
 #### Guides utilisateurs
@@ -738,31 +738,31 @@ France métropolitaine
 {{ component("download", {
     title: "Télécharger le guide pas-à-pas sur la thématique ENR « Thermique »",
     href: "http://data.geopf.fr/annexes/enr/document/guide/Pas_a_pas_EnR_thermique.pdf",
-    detail: "PDF - 8.5Mo"
+    detail: "PDF - 8,5 Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pas-à-pas sur les thématiques ENR « Éolien et Solaire »",
     href: "http://data.geopf.fr/annexes/enr/document/guide/Pas_a_pas_EnR_eolien_solaire.pdf",
-    detail: "PDF - 10.4Mo"
+    detail: "PDF - 10,4 Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pour importer une zone",
     href: "http://data.geopf.fr/annexes/enr/document/guide/Importer_une_zone.pdf",
-    detail: "PDF - 0.5Mo"
+    detail: "PDF - 0,5 Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pour saisir et modifier une ZAER",
     href: "http://data.geopf.fr/annexes/enr/document/guide/Saisir_et_modifier_une_zone.pdf",
-    detail: "PDF - 0.4Mo"
+    detail: "PDF - 0,4 Mo"
 }) }}
 
 {{ component("download", {
     title: "Télécharger le guide pour soumettre une ZAER",
     href: "http://data.geopf.fr/annexes/enr/document/guide/Soumettre_une_zone.pdf",
-    detail: "PDF - 0.2Mo"
+    detail: "PDF - 0,2 Mo"
 }) }}
 
 #### Tutoriels vidéo
@@ -788,19 +788,19 @@ France métropolitaine
 {{ component("download", {
     title: "Standardisation ZAER",
     href: "http://data.geopf.fr/annexes/enr/document/zaer/Standard_v1.pdf",
-    detail: "PDF - 1Mo"
+    detail: "PDF - 1 Mo"
 }) }}
 
 {{ component("download", {
     title: "Exemple ZAER GeoJSON",
     href: "http://data.geopf.fr/annexes/enr/document/zaer/Exemple_v1.zip",
-    detail: "Zip - 1Ko"
+    detail: "Zip - 1 Ko"
 }) }}
 
 {{ component("download", {
     title: "Gabarit - cadastre solaire sur toiture local",
     href: "http://data.geopf.fr/annexes/enr/document/zaer/Cadastres_solaires_locaux.pdf",
-    detail: "PDF - 0.2Mo"
+    detail: "PDF - 0,2 Mo"
 }) }}
 
 #### Webinaires

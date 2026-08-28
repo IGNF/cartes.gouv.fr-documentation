@@ -105,53 +105,53 @@ Les données de l’exemple sont 10 fichiers, données brutes des limites dépar
 {{ component("download", {
     title: "DEPARTEMENT.cpg",
     href: "/data/tutoriels/archives/DEPARTEMENT.cpg",
-    detail: "cpg - 6 octets"
+    detail: "CPG - 6 o"
 }) }}
 {{ component("download", {
     title: "DEPARTEMENT.dbf",
     href: "/data/tutoriels/archives/DEPARTEMENT.dbf",
-    detail: "dbf - 16.8 Ko"
+    detail: "DBF - 16,8 Ko"
 }) }}
 {{ component("download", {
     title: "DEPARTEMENT.prj",
     href: "/data/tutoriels/archives/DEPARTEMENT.prj",
-    detail: "prj - 449 octets"
+    detail: "PRJ - 449 o"
 }) }}
 {{ component("download", {
     title: "DEPARTEMENT.shp",
     href: "/data/tutoriels/archives/DEPARTEMENT.shp",
-    detail: "shp - 3 Mo"
+    detail: "SHP - 3 Mo"
 }) }}
 {{ component("download", {
     title: "DEPARTEMENT.shx",
     href: "/data/tutoriels/archives/DEPARTEMENT.shx",
-    detail: "shx - 868 octets"
+    detail: "SHX - 868 o"
 }) }}
 
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.cpg",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.cpg",
-    detail: "cpg - 6 octets"
+    detail: "CPG - 6 o"
 }) }}
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.dbf",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.dbf",
-    detail: "dbf - 1.9 Mo"
+    detail: "DBF - 1,9 Mo"
 }) }}
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.prj",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.prj",
-    detail: "prj - 449 octets"
+    detail: "PRJ - 449 o"
 }) }}
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.shp",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.shp",
-    detail: "shp - 2.4 Mo"
+    detail: "SHP - 2,4 Mo"
 }) }}
 {{ component("download", {
     title: "LIMITE_DEPARTEMENT.shx",
     href: "/data/tutoriels/archives/LIMITE_DEPARTEMENT.shx",
-    detail: "shx - 70.9 Ko"
+    detail: "SHX - 70,9 Ko"
 }) }}
 
 ## Outil de requête

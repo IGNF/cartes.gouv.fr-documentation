@@ -30,13 +30,13 @@ Exemple :
 {{ component("download", {
     title: "metadonnee_lot.xml",
     href: "/data/tutoriels/complementaire/metadonnee_lot.xml",
-    detail: "XML - 28.4 Ko"
+    detail: "XML - 28,4 Ko"
 }) }}
 
 {{ component("download", {
     title: "metadonnee_produit.xml",
     href: "/data/tutoriels/complementaire/metadonnee_produit.xml",
-    detail: "XML - 29.7 Ko"
+    detail: "XML - 29,7 Ko"
 }) }}
 
 📄 `<metadonnee_lot.xml>`

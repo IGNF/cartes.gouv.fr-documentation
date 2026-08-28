@@ -125,7 +125,7 @@ Les données de l’exemple sont constituées d’une dalle kilométrique MNT is
 {{ component("download", {
     title: "[GeoTIFF] LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif",
     href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNT_0M50_LAMB93_IGN69.tif",
-    detail: "TIFF - 15.3 Mo"
+    detail: "TIFF - 15,3 Mo"
 }) }}
 
 On pourra traiter de la même manière la dalle kilométrique correspondante :
@@ -133,5 +133,5 @@ On pourra traiter de la même manière la dalle kilométrique correspondante :
 {{ component("download", {
     title: "[MNS] LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
     href: "/data/tutoriels/raster/mnt/LHD_FXX_0932_6453_MNS_0M50_LAMB93_IGN69.tif",
-    detail: "TIFF - 15.3 Mo"
+    detail: "TIFF - 15,3 Mo"
 }) }}

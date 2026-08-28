@@ -26,7 +26,7 @@ Exemple :
 {{ component("download", {
       title: "installation.delete",
       href: "/data/tutoriels/alimentation-maj/installation.delete",
-      detail: "CSV - 45o"
+      detail: "CSV - 45 o"
 }) }}
 
 ```plain
@@ -37,7 +37,7 @@ Exemple :
 {{ component("download", {
       title: "installation.update",
       href: "/data/tutoriels/alimentation-maj/installation.update",
-      detail: "CSV - 187o"
+      detail: "CSV - 187 o"
 }) }}
 
 ```plain

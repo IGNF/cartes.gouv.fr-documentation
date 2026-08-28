@@ -13,46 +13,44 @@ eleventyNavigation:
         <p>Sauf mention contraire “(optionnel)” dans le label, tous les champs sont obligatoires.</p>
         <div id="mail-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
             <label class="fr-label" for="input-mail">Votre adresse électronique<span class="fr-hint-text">Format attendu : nom@domaine.fr</span></label>
-            <input name="email_contact" autocomplete="email" class="fr-input" type="text" id="input-mail">
+            <input name="email_contact" autocomplete="email" class="fr-input" type="text" id="input-mail" aria-describedby="input-mail-messages-group">
             <div id="input-mail-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
         <div id="last-name-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
             <label class="fr-label" for="input-last-name">Votre nom</label>
-            <input name="last_name" autocomplete="family-name" class="fr-input" type="text" id="input-last-name">
+            <input name="last_name" autocomplete="family-name" class="fr-input" type="text" id="input-last-name" aria-describedby="input-last-name-messages-group">
             <div id="input-last-name-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
         <div id="first-name-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
             <label class="fr-label" for="input-first-name">Votre prénom</label>
-            <input name="first_name" autocomplete="given-name" class="fr-input" type="text" id="input-first-name">
+            <input name="first_name" autocomplete="given-name" class="fr-input" type="text" id="input-first-name" aria-describedby="input-first-name-messages-group">
             <div id="input-first-name-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
-        <fieldset id="fr-fieldset-radio" class="fr-fieldset fr-fieldset--inline" aria-labelledby="fr-fieldset-radio-legend fr-fieldset-radio-messages" onchange="onCategoryChange()">
+        <fieldset id="fr-fieldset-radio" class="fr-fieldset fr-fieldset--inline" aria-labelledby="fr-fieldset-radio-legend fr-fieldset-radio-messages-group" onchange="onCategoryChange()">
             <legend id="fr-fieldset-radio-legend" class="fr-fieldset__legend fr-text--regular">Vous êtes ?</legend>
             <div class="fr-fieldset__content">
                 <div class="fr-radio-group">
-                    <input type="radio" id="input-category-0" name="category" value="Particulier" data-fr-js-radio-actionee="true">
+                    <input type="radio" id="input-category-0" name="category" value="Particulier" data-fr-js-radio-actionee="true" aria-describedby="fr-fieldset-radio-messages-group">
                     <label class="fr-label" for="input-category-0">Particulier</label>
                 </div>
                 <div class="fr-radio-group">
-                    <input type="radio" id="input-category-1" name="category" value="Professionnel" checked data-fr-js-radio-actionee="true">
+                    <input type="radio" id="input-category-1" name="category" value="Professionnel" data-fr-js-radio-actionee="true" aria-describedby="fr-fieldset-radio-messages-group">
                     <label class="fr-label" for="input-category-1">Professionnel</label>
                 </div>
             </div>
-            <div class="fr-messages-group" id="input-category-messages-group"></div>
+            <div id="fr-fieldset-radio-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </fieldset>
-        <div id="organization-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
+        <div id="organization-input-group" class="fr-input-group" data-fr-js-input-actionee="true" style="display: none">
             <label class="fr-label" for="input-organization">Votre organisme</label>
-            <input name="organization" autocomplete="organization" class="fr-input" type="text" id="input-organization">
+            <input name="organization" autocomplete="organization" class="fr-input" type="text" id="input-organization" aria-describedby="input-organization-messages-group">
             <div id="input-organization-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
         <div id="message-input-group" class="fr-input-group fr-mb-0" data-fr-js-input-actionee="true">
-            <label class="fr-label" for="input-message:">Votre demande</label>
-            <textarea name="message" maxlength="8000" rows="8" placeholder="Décrivez votre demande en quelques lignes" class="fr-input" id="input-message"></textarea>
-            <div id="input-message-messages-group" class="fr-messages-group" aria-live="polite"></div>
+            <label class="fr-label" for="input-message">Votre demande</label>
+            <textarea name="message" maxlength="8000" rows="8" placeholder="Décrivez votre demande en quelques lignes" class="fr-input" id="input-message" aria-describedby="input-message-messages-group"></textarea>
+            <div id="input-message-messages-group" class="fr-messages-group" aria-live="polite"><p class="fr-mt-2v fr-text--xs">8000 caractères restants</p></div>
         </div>
-        <div class="fr-grid-row fr-grid-row--right fr-mb-2w fr-mt-1w">
-            <p id="remaining-characters" class="fr-m-0 fr-text--xs">8000 caractères restants</p>
-        </div>
+        <br>
         <div id="fr-select-group" class="fr-select-group hidden">
             <label class="fr-label" for="select-importance">importance</label>
             <select name="importance" class="fr-select" id="select-importance" aria-describedby="" data-fr-js-select-actionee="true">
@@ -65,7 +63,7 @@ eleventyNavigation:
         </div>
         <p>Les informations recueillies à partir de ce formulaire sont nécessaires à la gestion de votre demande par les services de l’IGN concernés. <a href="https://cartes.gouv.fr/donnees-personnelles">En savoir plus sur la gestion des données à caractère personnel</a>.</p>
         <div class="fr-grid-row fr-grid-row--right">
-            <button id="fr-button-:r22:" class="fr-btn" data-fr-js-button-actionee="true" onclick="sendForm()">Envoyer</button>
+            <button id="fr-button-:r22:" title="Envoyer la demande de contact" class="fr-btn" data-fr-js-button-actionee="true" onclick="sendForm()">Envoyer</button>
         </div>
     </div>
 </div>

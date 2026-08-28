@@ -1,11 +1,11 @@
 ---
 title: Utiliser les outils de mesure
-description: Utilisez ces outils pour mesurer une longueur, une surface ou un angle.
+description: Utilisez ces outils pour mesurer une longueur, une surface ou un angle
 tags:
     - Surface
     - Aire
     - Angle
-    - Azimuth
+    - Azimut
     - Longueur
     - Distance
     - Visualiseur
@@ -32,12 +32,12 @@ Vous pouvez alors cliquer sur la carte pour commencer à créer la ligne. Chaque
 
 ![Création d’une ligne](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-distance/02_creer-la-ligne.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la ligne. Cela figera la ligne, et vous pourrez en créer une nouvelle de la même façon :
+Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la ligne (attention : cliquer sur le point précédent ou à un endroit très proche finira également la ligne). Cela figera la ligne, et vous pourrez en créer une nouvelle de la même façon :
 
 ![Finalisation de la ligne](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-distance/03_finaliser-la-ligne.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-Vous pouvez vous déplacer sur la carte pendant la création de la ligne en restant appuyé sur le clic gauche et en déplaçant le curseur.
+Vous pouvez vous déplacer sur la carte pendant la création de la ligne en restant appuyé sur le clic gauche et en déplaçant le curseur.\
 Par contre si vous cliquez sur un autre outil, vous sortirez de **« Mesurer une distance »** et les lignes créées disparaîtront.
 :::
 
@@ -55,12 +55,12 @@ Vous pouvez alors cliquer sur la carte pour commencer à créer la zone. Chaque 
 
 ![Création d’une surface](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-surface/02_creer-la-surface.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la zone. Cela figera la surface, et vous pourrez en créer une nouvelle de la même façon :
+Pour finir, double-cliquez à l’endroit où vous souhaitez terminer la zone (attention : cliquer sur le point précédent ou à un endroit très proche finira également la zone). Cela figera la surface, et vous pourrez en créer une nouvelle de la même façon :
 
 ![Finalisation de la surface](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-une-surface/03_finaliser-la-surface.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-Vous pouvez vous déplacer sur la carte pendant la création de la surface en restant appuyé sur le clic gauche et en déplaçant le curseur.
+Vous pouvez vous déplacer sur la carte pendant la création de la surface en restant appuyé sur le clic gauche et en déplaçant le curseur.\
 Par contre si vous cliquez sur un autre outil, vous sortirez de **« Mesurer une surface »** et les zones créées disparaîtront.
 :::
 
@@ -83,6 +83,6 @@ Cliquez une seconde fois pour finir la ligne. Cela figera la ligne, et vous pour
 ![Finalisation de la ligne](/img/guides-utilisateur/visualiseur-cartographique/utiliser-les-outils-de-mesure/mesurer-un-angle/03_terminer-la-ligne.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-Vous pouvez vous déplacer sur la carte pendant la création de la ligne en restant appuyé sur le clic gauche et en déplaçant le curseur.
+Vous pouvez vous déplacer sur la carte pendant la création de la ligne en restant appuyé sur le clic gauche et en déplaçant le curseur.\
 Par contre si vous cliquez sur un autre outil, vous sortirez de **« Mesurer un angle »** et les lignes créées disparaîtront.
 :::
