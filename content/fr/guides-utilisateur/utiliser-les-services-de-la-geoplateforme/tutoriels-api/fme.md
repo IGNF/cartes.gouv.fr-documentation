@@ -43,7 +43,7 @@ La version est obligatoire pour les flux WMS, FME utilisant par défaut la versi
 
 - **Exemple WMS-Raster :**
     
-    Choisissez la couche **« Layers »** à afficher et vous avez la possibilité de jouer sur les **« Map Options »** que vous pouvez trouver dans le GetCapabilities.
+    Choisissez la couche **« Layers »** à afficher et vous avez la possibilité de jouer sur les **« Map Options »** que vous pouvez trouver dans le `GetCapabilities`.
 
     ![Paramètres du WMS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/fme/03_wms-parameters.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 

@@ -156,7 +156,7 @@ offeringId;layerName;title;description;open;thumbnail;type;endpointUrl;attributi
 00112233-4455-6677-8899-aabbccddeeff;Example Layer;Example Title;This is an example description;true;https://example.com/thumbnail.jpg;WFS;https://example.com/endpoint;Example Attribution;https://example.com/attribution;contact@example.com;png;https://example.com/logo.png;100;50;2023;POINT(24.0212 5.0565);Example Theme;2023-08-03;["example"];Example License;["https://example.com/metadata1"];["EPSG:4326"]
 ```
 
-##### Search_Layer avec un JSON
+##### `Search_Layer` avec un JSON
 
 Le **Schéma JSON** doit contenir obligatoirement le format suivant :
 

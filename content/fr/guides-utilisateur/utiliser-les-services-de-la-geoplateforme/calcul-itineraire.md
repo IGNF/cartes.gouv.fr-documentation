@@ -39,9 +39,9 @@ Son swagger est accessible ici : [swagger du calcul d’itinéraire](https://da
 
 ---
 
-## Capacités de l’API (GetCapabilities)
+## Capacités de l’API (`GetCapabilities`)
 
-La requête **GetCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête `GetCapabilities` permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante : 
 
@@ -63,7 +63,7 @@ https://data.geopf.fr/navigation/itineraire
 
 Les paramètres également précisés dans le swagger du calcul d’itinéraire sont les suivants :
 
-### Calculer un itinéraire via la méthode GET
+### Calculer un itinéraire via la méthode `GET`
 
 - Paramètres obligatoires :
     - **`resource`**
@@ -79,16 +79,16 @@ Les paramètres également précisés dans le swagger du calcul d’itinéraire 
         - Points intermédiaires sur votre itinéraire.
     - **`profile`**
         - Moyen de déplacement utilisé pour le calcul.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`car`, `pedestrian`…)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`car`, `pedestrian`…)
     - **`optimization`**
         - Mode de calcul utilisé pour déterminer l’itinéraire.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`fastest`, `shortest`) 
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`fastest`, `shortest`)
     - **`geometryFormat`**
         - Format des géométries dans la réponse.
-        - Valeurs possibles :celles listées dans le GetCapabilities (`geojson`, `polyline`)
+        - Valeurs possibles :celles listées dans le `GetCapabilities` (`geojson`, `polyline`)
     - **`constraints`**
         - Contraintes utilisées pour le calcul.
-        - Valeurs possibles : celles listées dans le GetCapabilities (exemple : `'banned','key':'wayType','operator':'=','value':'tunnel'`)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (exemple : `'banned','key':'wayType','operator':'=','value':'tunnel'`)
     - **`getSteps`**
         - Présence des étapes dans la réponse.
         - Valeurs possibles : `true`, `false`
@@ -97,16 +97,16 @@ Les paramètres également précisés dans le swagger du calcul d’itinéraire 
         - Valeurs possibles : `true`, `false`
     - **`distanceUnit`**
         - Unité de distance renvoyée.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`kilometer`, `meter`) 
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`kilometer`, `meter`)
     - **`timeUnit`**
         - Unité du temps renvoyé.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`hour`, `minute`, `second`…) 
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`hour`, `minute`, `second`…)
     - **`crs`**
         - Projection des géométries.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`EPSG:4326`…) 
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`EPSG:4326`…)
     - **`waysAttributes`**
         - Attributs des tronçons à afficher dans la réponse.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`name`…)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`name`…)
 
 Exemple de requête :
 
@@ -114,9 +114,9 @@ Exemple de requête :
 https://data.geopf.fr/navigation/itineraire?resource=bdtopo-osrm&start=2.337306,48.849319&end=2.367776,48.852891&profile=car&optimization=fastest&constraints=%7B%22constraintType%22:%22banned%22,%22key%22:%22wayType%22,%22operator%22:%22=%22,%22value%22:%22autoroute%22%7D&getSteps=true&getBbox=true&distanceUnit=kilometer&timeUnit=hour&crs=EPSG:4326
 ```
 
-### Calculer un itinéraire via la méthode POST
+### Calculer un itinéraire via la méthode `POST`
 
-En utilisant la méthode POST, il est nécessaire de fournir en entrée un « body » sous la forme d’un objet JSON.
+En utilisant la méthode `POST`, il est nécessaire de fournir en entrée un « body » sous la forme d’un objet JSON.
 
 Exemple d’appel :
 

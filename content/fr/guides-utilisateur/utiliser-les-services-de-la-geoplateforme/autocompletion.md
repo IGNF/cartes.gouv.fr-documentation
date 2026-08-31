@@ -28,9 +28,9 @@ Son swagger est accessible ici : [swagger de l’autocomplétion](https://data.
 
 ---
 
-## Capacités de l’API (GetCapabilities)
+## Capacités de l’API (`GetCapabilities`)
 
-La requête **GetCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête `GetCapabilities` permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante : 
 
@@ -64,7 +64,7 @@ Cette requête a pour caractéristiques :
         - Valeurs possibles : `METROPOLE`, `DOMTOM`, code(s) INSEE de département, code(s) postaux de commune
     - **`poiType`**
         - Description : filtre sur le type de localisant pour le type POI
-        - Valeurs possibles : celles listées dans le GetCapabilities (exemples : `administratif`, `pont`…)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (exemples : `administratif`, `pont`…)
     - **`depcode`**
         - Description : filtre pour les index address et poi. Il permet de filtrer les résultats par code département. Accepte plusieurs valeurs séparées par des virgules (maximum 10).
     - **`zipcode`**

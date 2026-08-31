@@ -40,9 +40,9 @@ Son swagger est accessible ici : [swagger du calcul d’isochrone/isodistance](
 
 ---
 
-## Capacités de l’API (GetCapabilities)
+## Capacités de l’API (`GetCapabilities`)
 
-La requête **GetCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête `GetCapabilities` permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante : 
 
@@ -76,29 +76,29 @@ Les paramètres également précisés dans le [swagger du calcul d’isochrone/i
         - Valeur du coût utilisé pour le calcul (une distance ou un temps selon l’optimisation choisie). L’unité dépendra des paramètres `distanceUnit` et `timeUnit`.
     - **`costType`**
         - Type du coût utilisé pour le calcul. L’unité dépendra des paramètres `distanceUnit` et `timeUnit`.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`distance`, `time`)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`distance`, `time`)
 - Paramètres facultatifs :
     - **`profile`**
         - Moyen de déplacement utilisé pour le calcul.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`car`, `pedestrian`…)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`car`, `pedestrian`…)
     - **`direction`**
         - Cela permet de définir le sens du parcours. Soit on définit un point de départ et on obtient les points d’arrivée potentiels. Soit on définit un point d’arrivée et on obtient les points de départ potentiels.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`departure`, `arrival`) 
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`departure`, `arrival`)
     - **`constraints`**
         - Contraintes utilisées pour le calcul.
-        - Valeurs possibles : celles listées dans le GetCapabilities (exemple : `'banned','key':'wayType','operator':'=','value':'tunnel'`)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (exemple : `'banned','key':'wayType','operator':'=','value':'tunnel'`)
     - **`geometryFormat`**
         - Format des géométries dans la réponse.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`geojson`, `polyline`)
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`geojson`, `polyline`)
     - **`distanceUnit`**
         - Unité de distance renvoyée.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`kilometer`, `meter`) 
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`kilometer`, `meter`)
     - **`timeUnit`**
         - Unité du temps renvoyé.
-        - Valeurs possibles : celles listées dans le GetCapabilities (`hour`, `minute`, `second`…) 
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`hour`, `minute`, `second`…)
     - **`crs`**
-        - Projection des géométries
-        - Valeurs possibles : celles listées dans le GetCapabilities (`EPSG:4326`…) 
+        - Projection des géométries.
+        - Valeurs possibles : celles listées dans le `GetCapabilities` (`EPSG:4326`…)
 
 Exemple de requête :
 

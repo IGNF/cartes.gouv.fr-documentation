@@ -39,6 +39,8 @@ code {
 }
 
 a > code {
+    position: relative;
+    bottom: 1px;
     padding-bottom: 0;
 }
 
