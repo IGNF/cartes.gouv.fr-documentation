@@ -38,9 +38,9 @@ Plusieurs routes ne sont plus accessibles avec ce type d’index custom :
 
 <br>
 
-Donc les routes possibles sont la recherche POST et l’autocomplétion de titre. Ces deux routes fonctionnent comme pour l’index standard.
+Donc les routes possibles sont la recherche `POST` et l’autocomplétion de titre. Ces deux routes fonctionnent comme pour l’index standard.
 
-Pour la requête POST, les champs recherchables correspondent à ceux définis dans le GetCapabilities de l’index;
+Pour la requête `POST`, les champs recherchables correspondent à ceux définis dans le `GetCapabilities` de l’index;
 
 Pour l’autocomplétion de titre, les champs recherchables sont seulement ceux de type `string`.
 
@@ -62,4 +62,4 @@ Je crée un index custom `Search_Layer` dans lequel j’intègre le champ `Titre
 
 Je fais les requêtes d’autocomplétion sur l’index custom `Search_Layer` en filtrant uniquement sur `title` (`/api/indexes/{index}/suggest?fields=title`).
 
-Je fais une requête POST finale sur l’index custom classique pour obtenir les informations de tous les autres champs du document choisi à partir de l’autocomplétion.
+Je fais une requête `POST` finale sur l’index custom classique pour obtenir les informations de tous les autres champs du document choisi à partir de l’autocomplétion.

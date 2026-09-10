@@ -393,7 +393,7 @@ Pour accéder à une donnée publiée en privé, référez vous au [tutoriel sur
 ????
 <br>
 
-On peut vérifier la présence de notre couche `pays_ecoregions` dans le [GetCapabilities du service TMS]({{ urls.public.tms }}/1.0.0). On peut également avoir des [détails sur cette couche]({{ urls.public.tms }}/1.0.0/pays_ecoregions).
+On peut vérifier la présence de notre couche `pays_ecoregions` dans le [`GetCapabilities` du service TMS]({{ urls.public.tms }}/1.0.0). On peut également avoir des [détails sur cette couche]({{ urls.public.tms }}/1.0.0/pays_ecoregions).
 
 On peut également récupérer nos données dans QGIS. Il faut ajouter une source de donnée « Tuile vectorielle » et préciser comme URL `{{ urls.public.tms }}/1.0.0/pays_ecoregions/{z}/{x}/{y}.pbf`
 

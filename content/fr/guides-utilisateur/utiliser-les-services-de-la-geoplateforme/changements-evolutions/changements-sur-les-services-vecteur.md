@@ -20,7 +20,7 @@ Lorsque l’on souhaite livrer une donnée vecteur, le <span lang="en">_check-ve
 
 <br>
 
-Changements d’informations dans le GetCapabilities CSW.
+Changements d’informations dans le `GetCapabilities` CSW.
 
 ## Correction de bugs
 

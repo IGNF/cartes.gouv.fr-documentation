@@ -43,9 +43,9 @@ Attention, **les résultats des requêtes sont paginés**. Pour parcourir les r�
 
 ---
 
-## Lister les ressources (GetCapabilities)
+## Lister les ressources (`GetCapabilities`)
 
-La méthode GetCapabilities permet de lister les ressources (au sens de produits pour l’IGN).
+La méthode `GetCapabilities` permet de lister les ressources (au sens de produits pour l’IGN).
 
 Elle est accessible via l’URL suivante :
 

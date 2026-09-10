@@ -30,9 +30,9 @@ Son swagger est accessible ici : [swagger du géocodage](https://data.geopf.fr/
 
 ---
 
-## Capacités de l’API (GetCapabilities)
+## Capacités de l’API (`GetCapabilities`)
 
-La requête **GetCapabilities** permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
+La requête `GetCapabilities` permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
 Elle est accessible via l’URL suivante :
 

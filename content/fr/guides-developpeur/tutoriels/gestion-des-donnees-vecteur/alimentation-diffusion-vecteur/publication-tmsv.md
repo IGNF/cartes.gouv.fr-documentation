@@ -118,7 +118,7 @@ Pour la publication de tuiles vectorielles calculées à la volée, seul le mode
 ????
 <br>
 
-On peut vérifier la présence de nos couches `pays_ecoregions.regions_ecologiques` et `pays_ecoregions.pays` dans le [GetCapabilities du service TMS Vecteur]({{ urls.public.tmsv }}/1.0.0/index.json). On peut également avoir des [détails sur la couche `pays_ecoregions.regions_ecologiques`]({{ urls.public.tmsv }}/1.0.0/pays_ecoregions.regions_ecologiques.json) et des [détails sur la couche `pays_ecoregions.pays`]({{ urls.public.tmsv }}/1.0.0/pays_ecoregions.pays.json).
+On peut vérifier la présence de nos couches `pays_ecoregions.regions_ecologiques` et `pays_ecoregions.pays` dans le [`GetCapabilities` du service TMS Vecteur]({{ urls.public.tmsv }}/1.0.0/index.json). On peut également avoir des [détails sur la couche `pays_ecoregions.regions_ecologiques`]({{ urls.public.tmsv }}/1.0.0/pays_ecoregions.regions_ecologiques.json) et des [détails sur la couche `pays_ecoregions.pays`]({{ urls.public.tmsv }}/1.0.0/pays_ecoregions.pays.json).
 
 L’avantage de ce service est de pouvoir faire du filtrage côté serveur, en précisant un paramètre `filter`, ainsi que de limiter les champs retournés avec le paramètre `properties`. Voici un exemple en définissant une source « Tuiles vectorielles » dans QGIS avec l’URL suivante : `{{ urls.public.tmsv }}/1.0.0/pays_ecoregions.regions_ecologiques/{z}/{x}/{y}.pbf?filter=realm='Palearctic'&properties=id,eco_name`
 

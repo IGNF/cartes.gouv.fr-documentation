@@ -23,9 +23,9 @@ Son usage est limité à 5 requêtes par seconde depuis une même adresse IP.
 
 Elle s’appuie sur des ressources altimétriques pour fournir des altitudes. Ainsi, lancer un calcul en sollicitant une ressource altimétrique basée sur la donnée RGE ALTI® donnera un résultat différent du même calcul sollicitant une ressource altimétrique basée sur la donnée BD ALTI®, en raison des différences de résolution et de précision entre ces deux produits.
 
-L’API est interrogeable en méthodes GET et POST.
+L’API est interrogeable en méthodes `GET` et `POST`.
 
-Son swagger est accessible ici : [swagger du calcul altimétrique](https://data.geopf.fr/altimetrie/swagger-ui/index.html).
+Son <span lang="en">_swagger_</span> est accessible ici : [<span lang="en">_swagger_</span> du calcul altimétrique](https://data.geopf.fr/altimetrie/api/index.html).
 
 ---
 
@@ -59,7 +59,7 @@ Les informations détaillées (emprise des données, sources, etc.) d’une ress
 https://data.geopf.fr/altimetrie/resources/{id_ressource}
 ```
 
-Exemple d’interrogation sur la ressource d’identifiant « ign_rge_alti_wld » (RGE ALTI® de l’IGN) :
+Exemple d’interrogation sur la ressource d’identifiant `ign_rge_alti_wld` (RGE ALTI® de l’IGN) :
 
 ```plain
 https://data.geopf.fr/altimetrie/resources/ign_rge_alti_wld
@@ -69,9 +69,9 @@ https://data.geopf.fr/altimetrie/resources/ign_rge_alti_wld
 
 ## Calculer des altitudes
 
-### Déterminer l’altitude d’un ou plusieurs points via la méthode GET
+### Déterminer l’altitude d’un ou plusieurs points via la méthode `GET`
 
-Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir de leurs coordonnées géographiques. Il est accessible via l’URL suivante :
+Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir de leurs coordonnées géographiques. Il est accessible via l’URL suivante :
 
 ```plain
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.{format}
@@ -79,7 +79,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.{format}
 
 La requête a pour caractéristiques :
 
-- Méthode : GET
+- Méthode : `GET`
 - Paramètres obligatoires :
     - **`format`** :
         - Description : format de sortie
@@ -102,7 +102,7 @@ La requête a pour caractéristiques :
     - **`delimiter`** :
         - Description : caractère utilisé pour séparer les longitudes et les latitudes
         - Format : texte
-        - Valeurs possibles : « `|` » ou « `;` » ou « `,` »
+        - Valeurs possibles : `|` ou `;` ou `,`
     - **`indent`** :
         - Description : choix d’une réponse indentée
         - Format : booléen (texte)
@@ -227,7 +227,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.json?lon=1.48;1.
 }
 ```
 
-### Déterminer l’altitude d’un ou plusieurs points via la méthode POST
+### Déterminer l’altitude d’un ou plusieurs points via la méthode `POST`
 
 Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir de leurs coordonnées géographiques. Il est accessible via l’URL suivante :
 
@@ -235,7 +235,7 @@ Ce calcul permet d’obtenir l’altitude d’un ou plusieurs points à partir d
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevation.{format}
 ```
 
-Il utilise la méthode POST et nécessite donc de fournir en entrée un « body » sous la forme d’un objet JSON.
+Il utilise la méthode `POST` et nécessite donc de fournir en entrée un « body » sous la forme d’un objet JSON.
 
 Exemple d’appel :
 
@@ -255,7 +255,7 @@ curl -X 'POST' \
 }'
 ```
 
-### Déterminer le profil altimétrique d’une courbe via la méthode GET
+### Déterminer le profil altimétrique d’une courbe via la méthode `GET`
 
 Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL suivante :
 
@@ -263,7 +263,7 @@ Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL su
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.{format}
 ```
 
-La requête **elevationLine** a les mêmes caractéristiques que la requête **elevation**, avec en supplément :
+La requête **`elevationLine`** a les mêmes caractéristiques que la requête **`elevation`**, avec en supplément :
 
 - Paramètres facultatifs supplémentaires :
     - **`profile_mode`** :
@@ -384,7 +384,7 @@ https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json?lon=1.4
 }
 ```
 
-### Déterminer le profil altimétrique d’une courbe via la méthode POST
+### Déterminer le profil altimétrique d’une courbe via la méthode `POST`
 
 Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL suivante :
 
@@ -392,9 +392,9 @@ Ce calcul permet d’obtenir un profil en long. Il est accessible via l’URL su
 https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.{format}
 ```
 
-Il utilise la méthode POST et nécessite donc de fournir en entrée un « body » sous la forme d’un objet JSON.
+Il utilise la méthode `POST` et nécessite donc de fournir en entrée un « body » sous la forme d’un objet JSON.
 
-Exemple d’appel :
+Exemple d’appel :
 
 ```bash
 curl -X 'POST' \
