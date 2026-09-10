@@ -251,29 +251,30 @@ a.custom-center-btn.fr-btn {
 }
 
 /* Barre de recherche de l'accueil */
-#content-search {
-    flex: 0 0 80%;
-    max-width: 80%;
-    width: 80%;
-}
-
-#search-input-lg {
-    text-overflow: ellipsis;
-}
-
-@media (max-width: 58em) and (min-width: 48em) {
-    #search-button {
-        border-radius: 0 0.25rem 0 0;
-        flex: 1 0 auto;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        max-height: 2.5rem;
-        max-width: 2.5rem;
-        min-height: 2.5rem;
-        overflow: hidden;
-        padding: 0.7rem;
-        white-space: nowrap;
+@media (min-width: 62rem) {
+    .frx-search-bar--lg .fr-btn {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        max-height: none;
+        max-width: 100%;
+        min-height: 3rem;
+        overflow: initial;
+        padding: 0.5rem 1.5rem;
     }
+
+    .frx-search-bar--lg .fr-btn::before {
+        --icon-size: 1.5rem;
+        margin-left: -0.1875rem;
+        margin-right: 0.5rem;
+    }
+
+    .frx-search-bar--lg .fr-input {
+        max-height: 3rem;
+    }
+}
+
+.frx-search-bar--lg .fr-input {
+    text-overflow: ellipsis;
 }
 
 @media (min-width: 62em) {
