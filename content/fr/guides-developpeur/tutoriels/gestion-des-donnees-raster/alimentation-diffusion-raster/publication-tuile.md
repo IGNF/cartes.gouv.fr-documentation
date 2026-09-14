@@ -54,7 +54,7 @@ La configuration centralise toutes les informations nécessaires à la diffusion
 ???
 ??? Pour plus d’aide sur la création d’une configuration WMTS
 Description des paramètres en entrée :
-- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le <span lang="en">_swagger_</span>. `WMTS-TMS` pour une publication WMTS. La définition de cette valeur est sensible à la casse.
+- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le Swagger. `WMTS-TMS` pour une publication WMTS. La définition de cette valeur est sensible à la casse.
 - `name` : Permet de nommer cette configuration. **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.** Cette information est modifiable après coup.
 - `layer_name` : Définit le nom technique par lequel le flux sera rendu disponible au sein du webservice. **Cette information est visible de l’utilisateur final.** Cette valeur est l’objet d’un contrôle d’unicité sur l’ensemble de la plateforme.
 - `metadata` : Lien vers une fiche de métadonnée associée déjà publiée sur la Géoplateforme. Voir le tutoriel « [Gestion des métadonnées](../../../gestion-des-donnees-complementaires/gestion-des-metadonnees/) ».

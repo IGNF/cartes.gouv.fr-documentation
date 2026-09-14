@@ -14,8 +14,8 @@ date: 2026-01-14
 
 Suite à cette montée de version, des perturbations pourront être observés sur le service jusqu’à la fin de la journée.
 
-Modifications des informations des le <span lang="en">_GetCap_</span> Géocodage.
+Modifications des informations des le `GetCap` Géocodage.
 
 ## Correction de bugs
 
-- [WFS] Correction d’une erreur de lecture des répondes du <span lang="en">_WFS_</span> avec GDAL > 3.7.0
+- [WFS] Correction d’une erreur de lecture des répondes du WFS avec GDAL > 3.7.0

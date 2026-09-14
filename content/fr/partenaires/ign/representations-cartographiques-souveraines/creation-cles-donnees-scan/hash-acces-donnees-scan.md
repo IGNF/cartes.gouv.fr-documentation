@@ -62,7 +62,7 @@ Dans le cadre de l’accès aux **données en consultation** (flux <span lang="e
 
 ##### Données en téléchargement
 
-Une fois la clé HASH créée, l’<span lang="en">_URL_</span> fournie correspond à un **<span lang="en">_GetCapabilities_</span>**, qui sert uniquement à lister les ressources disponibles. Elle ne permet pas de télécharger des données. Pour en savoir plus sur les méthodes de l’<span lang="en">_API_</span> de téléchargement, consultez la [documentation dédiée](/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/telechargement){target="_blank" rel="noopener noreferrer" title="API de téléchargement - ouvre une nouvelle fenêtre"}.
+Une fois la clé HASH créée, l’<span lang="en">_URL_</span> fournie correspond à un **<span lang="en">_GetCapabilities_</span>**, qui sert uniquement à lister les ressources disponibles. Elle ne permet pas de télécharger des données. Pour en savoir plus sur les méthodes de l’API de téléchargement, consultez la [documentation dédiée](/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/telechargement){target="_blank" rel="noopener noreferrer" title="API de téléchargement - ouvre une nouvelle fenêtre"}.
 
 Veuillez consulter ce [fichier <span lang="en">_CSV_</span>](https://data.geopf.fr/annexes/ressources/documentation/SCANs.csv){target="_blank" rel="noopener noreferrer" title="Méthode Download (CSV) - ouvre une nouvelle fenêtre"} qui liste les ressources SCAN disponibles. Chaque ressource peut ensuite être téléchargée en suivant la méthode décrite ci-dessous.
 

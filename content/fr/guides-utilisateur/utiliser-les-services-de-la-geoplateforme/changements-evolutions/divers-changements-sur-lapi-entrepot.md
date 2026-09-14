@@ -13,11 +13,11 @@ date: 2025-07-24
 
 ### Suppression de l’API de catalogue des uploads
 
-Afin d’harmoniser les livraisons avec les données stockées, la ligne de catalogage des livraisons est supprimée : GET /catalogs/uploads
+Afin d’harmoniser les livraisons avec les données stockées, la ligne de catalogage des livraisons est supprimée : `GET /catalogs/uploads`
 
 ### API d’ajout, de création et suppression de la visibilité d’une donnée stockée
 
-Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur d’un <span lang="en">_datastore_</span> d’accorder la visibilité d’une de ses données stockées à une ou plusieurs communautés pour leur permettre d’utiliser la donnée en lecture.
+Ajout d’une API permettant à un utilisateur d’un <span lang="en">_datastore_</span> d’accorder la visibilité d’une de ses données stockées à une ou plusieurs communautés pour leur permettre d’utiliser la donnée en lecture.
 
 ???? POST "/datastores/{datastore}/stored_data/{stored_data}/visibility"
 ```plain
@@ -84,7 +84,7 @@ Il est aussi possible de supprimer la visibilité d’une donnée stockée :
 
 ### Amélioration des évènements sur les livraisons, les données stockées et les configurations
 
-Les titres des évènements sont améliorés pour être plus parlants pour les utilisateurs. Les évènements sont accessibles à ces <span lang="en">_URL_</span> :
+Les titres des évènements sont améliorés pour être plus parlants pour les utilisateurs. Les évènements sont accessibles à ces URL :
 
 ??? GET "/datastores/{datastore}/uploads/{upload}/events"
 ```plain
@@ -107,70 +107,69 @@ Les titres des évènements sont améliorés pour être plus parlants pour les u
 
 ### Ajout d’un filtrage sur les clés utilisateurs
 
-Ajout d’un filtrage sur la recherche des clés utilisateur : GET /users/me/keys
+Ajout d’un filtrage sur la recherche des clés utilisateur : `GET /users/me/keys`
 
 Les champs sur lesquels il est possible de filtrer sont :
-- type (valeurs possibles : HASH, HEADER, BASIC, OAUTH2)
-- user_agent (possibilité de joker « % »)
-- referer (possibilité de joker « % »)
-- whitelist (possibilité de joker « % »)
-- blacklist (possibilité de joker « % »)
-- name (possibilité de joker « % »)
+- `type` (valeurs possibles : `HASH`, `HEADER`, `BASIC`, `OAUTH2`)
+- `user_agent` (possibilité de joker `%`)
+- `referer` (possibilité de joker `%`)
+- `whitelist` (possibilité de joker `%`)
+- `blacklist` (possibilité de joker `%`)
+- `name` (possibilité de joker `%`)
 
 <br>
 
-### Ajout du champ « creation » pour toutes les entités
+### Ajout du champ `creation` pour toutes les entités
 
-Les exécutions de traitement et de vérification possède un champ « creation » de type « date ». Ce champ est généraliser à toutes les entités :
-- upload
-- annex
-- stored data
-- configuration
-- static file
-- metadata
-- offering
-- document
-- datastore
-- community
-- permission
-- processing
+Les exécutions de traitement et de vérification possède un champ `creation` de type `date`. Ce champ est généraliser à toutes les entités :
+- `upload`
+- `annex`
+- `stored data`
+- `configuration`
+- `static file`
+- `metadata`
+- `offering`
+- `document`
+- `datastore`
+- `community`
+- `permission`
+- `processing`
 
 <br>
 
 Dans le cas des exécutions de traitement, les champs suivant sont renommés pour l’occasion :
-- creationDate <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> creation
-- lauchDate <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> lauch
-- startDate <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> start
-- finishDate <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> finish
+- `creationDate` <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> `creation`
+- `lauchDate` <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> `lauch`
+- `startDate` <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> `start`
+- `finishDate` <span class="fr-icon-arrow-right-line" aria-hidden="true"></span> `finish`
 
 <br>
 
 ### Généralisation de la date de mise à jour sur les entités
 
-Ce nouveau permet de connaitre facilement la date de dernière modification « importante » sur les entités. Le nouveau champ est appelé « update » et est ajouté à ces entités :
-- annex
-- configuration
-- static file
-- metadata
-- offering
-- document
+Ce nouveau permet de connaitre facilement la date de dernière modification « importante » sur les entités. Le nouveau champ est appelé `update` et est ajouté à ces entités :
+- `annex`
+- `configuration`
+- `static file`
+- `metadata`
+- `offering`
+- `document`
 
 <br>
 
 Ce champ est mise à jour lors de ces évènements :
-
-- lors du téléversement d’un nouveau fichier annexe pour écraser l’ancien (PUT /datastore/{datastore}/annexes/{annex})
-- lors du téléversement d’un nouveau fichier metadonnée pour écraser l’ancien (PUT /datastore/{datastore}/metadata/{metadata})
-- lors du téléversement d’un nouveau fichier statique pour écraser l’ancien (PUT /datastore/{datastore}/statics/{static})
-- lors d’un appel de modification de la configuration (PUT /datastore/{datastore}/configurations/{configuration})
-- lors d’un appel de synchronisation d’une offre (PUT /datastore/{datastore}/offerings/{offering})
-- lors du téléversement d’un nouveau fichier document (PUT /users/me/documents/{document})
+- lors du téléversement d’un nouveau fichier annexe pour écraser l’ancien (`PUT /datastore/{datastore}/annexes/{annex}`)
+- lors du téléversement d’un nouveau fichier metadonnée pour écraser l’ancien (`PUT /datastore/{datastore}/metadata/{metadata}`)
+- lors du téléversement d’un nouveau fichier statique pour écraser l’ancien (`PUT /datastore/{datastore}/statics/{static}`)
+- lors d’un appel de modification de la configuration (`PUT /datastore/{datastore}/configurations/{configuration}`)
+- lors d’un appel de synchronisation d’une offre (`PUT /datastore/{datastore}/offerings/{offering}`)
+- lors du téléversement d’un nouveau fichier document (`PUT /users/me/documents/{document}`)
 
 <br>
 
 Modification du système de tri dans les listes d’entités.
 
-Le tri par « lastEvent » est remplacé par « last_event ». Exemple :
+Le tri par `lastEvent` est remplacé par `last_event`. Exemple :
 
 ???? GET "/datastores/{datastore}/configurations?sort=last_event,desc"
 ```plain
@@ -206,50 +205,50 @@ Le tri par « lastEvent » est remplacé par « last_event ». Exemple :
 ????
 <br>
 
-De plus, ajout de la possibilité de trier par date de création (« creation ») et par date de mise à jour (« update ») pour les <span lang="en">_API_</span> suivantes :
-- GET /datastores/{datastore}/annexes
-- GET /organizations/{organization}/annexes
-- GET /administrator/annexes
-- GET /datastores/{datastore}/configurations
-- GET /organizations/{organization}/configurations
-- GET /administrator/configurations
-- GET /datastores/{datastore}/statics
-- GET /organizations/{organization}/statics
-- GET /administrator/statics
-- GET /datastores/{datastore}/metadata
-- GET /datastores/{datastore}/offerings
-- GET /organizations/{organization}/offerings
-- GET /administrator/offerings
-- GET /users/me/documents
+De plus, ajout de la possibilité de trier par date de création (`creation`) et par date de mise à jour (`update`) pour les API suivantes :
+- `GET /datastores/{datastore}/annexes`
+- `GET /organizations/{organization}/annexes`
+- `GET /administrator/annexes`
+- `GET /datastores/{datastore}/configurations`
+- `GET /organizations/{organization}/configurations`
+- `GET /administrator/configurations`
+- `GET /datastores/{datastore}/statics`
+- `GET /organizations/{organization}/statics`
+- `GET /administrator/statics`
+- `GET /datastores/{datastore}/metadata`
+- `GET /datastores/{datastore}/offerings`
+- `GET /organizations/{organization}/offerings`
+- `GET /administrator/offerings`
+- `GET /users/me/documents`
 
 <br>
 
-Et, pour les <span lang="en">_API_</span> suivantes, ajout uniquement de la possibilité de trier par date de création (« creation ») :
-- GET /datastores/{datastore}/uploads
-- GET /datastores/{datastore}/checks
-- GET /datastores/{datastore}/permissions
-- GET /datastores/{datastore}/stored_data
-- GET /datastores/{datastore}/processings
-- GET /datastores/{datastore}/processings/executions
-- GET /organizations/{organization}/uploads
-- GET /organizations/{organization}/stored_data
-- GET /organizations/{organization}/permissions
-- GET /organizations/{organization}/processings/executions
-- GET /administrator/uploads
-- GET /administrator/stored_data
-- GET /administrator/datastores
-- GET /administrator/communities
-- GET /administrator/checks
-- GET /administrator/processings
-- GET /administrator/processings/executions
+Et, pour les API suivantes, ajout uniquement de la possibilité de trier par date de création (`creation`) :
+- `GET /datastores/{datastore}/uploads`
+- `GET /datastores/{datastore}/checks`
+- `GET /datastores/{datastore}/permissions`
+- `GET /datastores/{datastore}/stored_data`
+- `GET /datastores/{datastore}/processings`
+- `GET /datastores/{datastore}/processings/executions`
+- `GET /organizations/{organization}/uploads`
+- `GET /organizations/{organization}/stored_data`
+- `GET /organizations/{organization}/permissions`
+- `GET /organizations/{organization}/processings/executions`
+- `GET /administrator/uploads`
+- `GET /administrator/stored_data`
+- `GET /administrator/datastores`
+- `GET /administrator/communities`
+- `GET /administrator/checks`
+- `GET /administrator/processings`
+- `GET /administrator/processings/executions`
 
 <br>
 
 ### Nouvelle route de listage des stockages
 
 Liste les stockages disponibles pour le datastore. Les paramètres disponibles pour la route sont :
-- type : type de stockage (valeurs disponibles : POSTGRESQL, S3, FILESYSTEM, OPENSEARCH, POSTGRESQL-ROUTING) 
-- use_ratio : Pourcentage minimum d’utilisation du quota
+- `type` : type de stockage (valeurs disponibles : `POSTGRESQL`, `S3`, `FILESYSTEM`, `OPENSEARCH`, `POSTGRESQL-ROUTING`) 
+- `use_ratio` : Pourcentage minimum d’utilisation du quota
 
 <br>
 
@@ -314,19 +313,19 @@ Liste les stockages disponibles pour le datastore. Les paramètres disponibles p
 
 Une harmonisation est réalisée en supprimant la visibilité associée aux entités et en ajoutant une notion de publicité.
 
-Pour les livraisons et les données stockées, le champs « visibility » est remplacé par « open ».
+Pour les livraisons et les données stockées, le champs `visibility` est remplacé par `open`.
 
-Ainsi, les livraisons et données stockées en « visibility=PUBLIC » deviennent « open=true » et celles en « visibility=REFERENCED » ou « visibility=PRIVATE » deviennent « open=false ».
+Ainsi, les livraisons et données stockées en `"visibility": "PUBLIC"` deviennent `"open": true` et celles en `"visibility": "REFERENCED"` ou `"visibility": "PRIVATE"` deviennent `"open": false`.
 
-Les livraisons et données stockées en « open=true » pourront donc être utilisé dans les traitements d’autres <span lang="en">_datastores_</span>.
+Les livraisons et données stockées en `"open": true` pourront donc être utilisé dans les traitements d’autres <span lang="en">_datastores_</span>.
 
-Cette modification impacte la création de la livraison et il faut bien remplacé le champ « visibility » par « open » pour que la création fonctionne.
+Cette modification impacte la création de la livraison et il faut bien remplacé le champ `visibility` par `open` pour que la création fonctionne.
 
 ### API de récupération des données stockées visibles d’un utilisateur
 
-Ajout d’une <span lang="en">_API_</span> permettant à un utilisateur de connaitre les données stockées qui lui sont visibles.
+Ajout d’une API permettant à un utilisateur de connaitre les données stockées qui lui sont visibles.
 
-Les paramètres de filtrage sont identiques à ceux de « GET /datastores/{datastore}/stored_data », sauf « owned » et « shared ».
+Les paramètres de filtrage sont identiques à ceux de `GET /datastores/{datastore}/stored_data`, sauf `owned` et `shared`.
 
 ???? GET "/users/me/stored_data"
 ```plain
@@ -436,16 +435,16 @@ De plus, une route supplémentaire permet de récupérer les informations d’un
 ????
 <br>
 
-### Ajout du champ « fields » pour l’API de récupération de la liste des traitements disponibles
+### Ajout du champ `fields` pour l’API de récupération de la liste des traitements disponibles
 
-Pour l’<span lang="en">_API_</span>, « GET /datastores/{datastore}/processings », le champ d’énumération « fields » a été ajouté pour préciser les champs souhaités dans la réponse. Les valeurs disponibles sont :
-- creation
-- name
-- descritption
-- priority
-- input_types
-- output_types
+Pour l’API, `GET /datastores/{datastore}/processings`, le champ d’énumération `fields` a été ajouté pour préciser les champs souhaités dans la réponse. Les valeurs disponibles sont :
+- `creation`
+- `name`
+- `descritption`
+- `priority`
+- `input_types`
+- `output_types`
 
 <br>
 
-Par défaut, la réponse contient les champs « name » et « description ».
+Par défaut, la réponse contient les champs `name` et `description`.

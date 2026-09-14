@@ -56,7 +56,7 @@ Dans le cas du TMS Vecteur, une configuration va donner plusieurs couches finale
 ???
 ??? Plus d’aide sur la configuration VECTOR-TMS
 Description des paramètres en entrée :
-- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le swagger. `VECTOR-TMS` pour une publication en tuiles vectorielles calculées à la volée. La définition de cette valeur est sensible à la casse.
+- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le Swagger. `VECTOR-TMS` pour une publication en tuiles vectorielles calculées à la volée. La définition de cette valeur est sensible à la casse.
 - `name` : Permet de nommer cette configuration. **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.** Cette information est modifiable après coup.
 - `layer_name` : Définit le nom technique par lequel le flux sera rendu disponible au sein du webservice. **Cette information est visible de l’utilisateur final.**
 - `type_infos` : L’essentiel des spécificités de la configuration liées à vos données est à retrouver ici :

@@ -15,9 +15,9 @@ date: 2026-01-07
 
 ## Changements
 
-Modification des informations dans les <span lang="en">_GetCap WFS_</span>, <span lang="en">_WMS-V_</span> et « Téléchargement ».
+Modification des informations dans les `GetCap` WFS, WMS-V et « Téléchargement ».
 
-Modification de la description du champ « terr » dans le <span lang="en">_GetCap_</span> Géocodage.
+Modification de la description du champ `terr` dans le `GetCap` Géocodage.
 
 Passage de :
 
@@ -31,7 +31,7 @@ Passage de :
 "une limitation de la zone de recherche de localisants. Les valeurs acceptées sont METROPOLE, DOMTOM, code(s) INSEE de département, code(s) postaux de commune"
 ```
 
-<span lang="en">_WMTS_</span>, <span lang="en">_WMS_</span>, <span lang="en">_WFS_</span> : envoi d’une erreur si un paramètre présent X fois avec une valeur différente.
+WMTS, WMS, WFS : envoi d’une erreur si un paramètre présent X fois avec une valeur différente.
 
 ## Correction de bugs
 

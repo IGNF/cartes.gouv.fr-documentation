@@ -1,35 +1,35 @@
 ---
-title: Changements dans l’entrepôt et le géocodage
-description: Correction de bugs dans l’entrepôt et suppression du remplissage automatique de tous les champs sur le Swagger de Géocodage
+title: Changements dans l’Entrepôt et le Géocodage
+description: Correction de bugs dans l’Entrepôt et suppression du remplissage automatique de tous les champs sur le Swagger de géocodage
 tags:
     - Entrepôt
     - Géocodage
 eleventyNavigation:
-    key: Changements dans l’entrepôt et le géocodage
+    key: Changements dans l’Entrepôt et le Géocodage
     order: -20260128
 date: 2026-01-28
 ---
 
 ## Changements
 
-**Ajout du paramètre « fields » pour la liste des documents personnels.**
+**Ajout du paramètre `fields` pour la liste des documents personnels.**
 
-Sur la route `GET /⁠users/me/documents`, ajout du paramètre de requête « fields » qui permettra de ne renvoyer que les champs d’un document souhaités parmi la liste suivante (à l’exception de « id » qui est retourné dans tous les cas) :
-- id
-- name
-- description
-- size
-- mime_type
-- labels
-- public_url
+Sur la route `GET /⁠users/me/documents`, ajout du paramètre de requête `fields` qui permettra de ne renvoyer que les champs d’un document souhaités parmi la liste suivante (à l’exception de `id` qui est retourné dans tous les cas) :
+- `id`
+- `name`
+- `description`
+- `size`
+- `mime_type`
+- `labels`
+- `public_url`
 
 <br>
 
-Par défaut (si « fields » est vide), on retourne les valeurs suivantes :
-- id
-- name
-- size
-- mime_type
+Par défaut (si `fields` est vide), on retourne les valeurs suivantes :
+- `id`
+- `name`
+- `size`
+- `mime_type`
 
 <br>
 
@@ -37,7 +37,7 @@ Par défaut (si « fields » est vide), on retourne les valeurs suivantes :
 
 Ce style n’est utilisable que pour les configurations WMS-Raster.
 
-Limitation à 99 caractères du nom des organismes dans l’entrepôt.
+Limitation à 99 caractères du nom des organismes dans l’Entrepôt.
 
 ## Correction de bugs
 

@@ -177,7 +177,7 @@ Description des paramètres en entrée :
     Cette information est modifiable après coup.
 - `output`/`stored_data`/`storage_tags` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie.
 
-    Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique « Entrepôt » du swagger) dans l’attribut de réponse `labels` associé à chaque stockage.
+    Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique « Entrepôt » du Swagger) dans l’attribut de réponse `labels` associé à chaque stockage.
 
     Pour une donnée vecteur en entrée, seul le stockage PostgreSQL est accessible, ce qui correspond au label, donc au `storage_tag` : `VECTEUR`.
 - `parameters`/`srs` : ce paramètre optionnel permet de faire faire à la Géoplateforme une reprojection des données au moment de leur intégration. Dans l’exemple du tutoriel : on livre une donnée en EPSG:4326 et ici avec le paramètre `"srs": "EPSG:3857"`, elle sera donc re-projetée par la Géoplateforme en projection Google Mercator et stockée sous cette projection.
@@ -194,7 +194,7 @@ Pour ce faire, il suffit d’ajouter l’élément JSON ci-dessous après l’é
     ]
 }
 ```
-Vous êtes invités à vous référer au swagger pour avoir les détails et options complètes sur cette partie.
+Vous êtes invités à vous référer au Swagger pour avoir les détails et options complètes sur cette partie.
 :::
 ???
 ????

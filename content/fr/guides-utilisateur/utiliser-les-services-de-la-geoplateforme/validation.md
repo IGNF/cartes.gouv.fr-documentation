@@ -33,13 +33,13 @@ L’usage de ce service ou de ce traitement est à privilégier lorsque la donn�
 
 En tant que producteur d’une donnée agrégée répondant à un standard, il peut être utile d’inclure le traitement de validation comme étape préalable obligatoire à destination des producteurs de données locales afin qu’eux-mêmes ne fournissent au processus d’agrégation qu’une donnée normalisée.
 
-## Accès au swagger
+## Accès au Swagger
 
-La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une validation est accessible ici :
+La documentation Swagger permettant d’accéder aux détails des routes et paramètres pour réaliser une validation est accessible ici :
 
 [https://data.geopf.fr/validation/swagger-ui/index.html](https://data.geopf.fr/validation/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/validation/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
-La documentation <span lang="en">_swagger_</span> permettant d’accéder aux détails des routes et paramètres pour réaliser une validation via un traitement d’entrepôt est accessible ici :
+La documentation Swagger permettant d’accéder aux détails des routes et paramètres pour réaliser une validation via un traitement d’entrepôt est accessible ici :
 
 [{{ urls.api_entrepot }}/swagger-ui/index.html]({{ urls.api_entrepot }}/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="{{ urls.api_entrepot }}/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
 
