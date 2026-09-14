@@ -319,7 +319,7 @@ On distingue le traitement, la ressource de la plateforme mise à disposition de
 Description des paramètres en entrée :
 - `inputs` : Ce paramètre est laissé vide puisqu’il n’y a pas à proprement parler, de donnée stockée ou de livraison Géoplateforme en point d’entrée de ce traitement
 - `output.stored_data.name` : Le nom défini ici est un nommage libre. **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.** Cette information est modifiable après coup.
-- `output.stored_data.storage_tags` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie. Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique « Entrepôt » du <span lang="en">_swagger_</span>) dans l’attribut de réponse `labels` associé à chaque stockage. Pour une donnée raster en entrée, c’est un stockage S3 qui sera mobilisé. Or il existe sur votre entrepôt au moins deux stockages S3 différents : un dédié au raster et l’autre au téléchargement. Ils ont chacun des quotas différents, il convient donc de pointer vers le bon. Pour ce faire, il faut pointer sur le label, donc le `"storage_tags": ["PYRAMIDE"]`.
+- `output.stored_data.storage_tags` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie. Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique « Entrepôt » du Swagger) dans l’attribut de réponse `labels` associé à chaque stockage. Pour une donnée raster en entrée, c’est un stockage S3 qui sera mobilisé. Or il existe sur votre entrepôt au moins deux stockages S3 différents : un dédié au raster et l’autre au téléchargement. Ils ont chacun des quotas différents, il convient donc de pointer vers le bon. Pour ce faire, il faut pointer sur le label, donc le `"storage_tags": ["PYRAMIDE"]`.
 - `parameters.tms` : Ce paramètre obligatoire permet de définir quelle matrice de tuilage va être utilisée pour fabriquer la pyramide. Vous retrouvez la liste des matrices de tuilage associées au traitement via l’étape « [Consultation du traitement qui nous intéresse](./#consultation-du-traitement-qui-nous-interesse) ». Le détail de chaque matrice est consultable via la route `GET {{ urls.api_entrepot }}/statics/tms/{tms}`. Cette route permet notamment d’identifier la projection de la matrice de tuilage et les niveaux de tuilage disponibles avec leur résolution associée.
 - `parameters.compression` : Ce paramètre obligatoire est des plus conditionnant dans la pyramide qui va être générée mais la valeur à mobiliser dépend aussi du type de raster fourni en entrée :
     - `jpg` : C’est la valeur adaptée et hautement recommandée à la grande majorité des usages valorisant en entrée des dalles raster encodées sur 3 canaux (Rouge - Vert - Bleu).
@@ -363,7 +363,7 @@ Pour ce faire, il suffit d’ajouter l’élément JSON ci-dessous après l’é
     ]
 }
 ```
-Vous êtes invités à vous référer au <span lang="en">_swagger_</span> pour avoir les détails et options complètes sur cette partie.
+Vous êtes invités à vous référer au Swagger pour avoir les détails et options complètes sur cette partie.
 :::
 ???
 ????
@@ -516,7 +516,7 @@ La `stored_data` de sortie n’est exploitable et interrogeable qu’une fois l�
 ???
 ??? Pour plus d’aide sur la création d’une configuration WMS-Raster
 Description des paramètres en entrée :
-- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le <span lang="en">_swagger_</span>. `WMS-RASTER` pour une publication WMS à partir de données raster. La définition de cette valeur est sensible à la casse.
+- `type` : La valeur est contrainte par une liste de valeurs définies à tout moment dans le Swagger. `WMS-RASTER` pour une publication WMS à partir de données raster. La définition de cette valeur est sensible à la casse.
 - `name` : Permet de nommer cette configuration. **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.** Cette information est modifiable après coup.
 - `layer_name` : Définit le nom technique par lequel le flux sera rendu disponible au sein du webservice. **Cette information est visible de l’utilisateur final.** Cette valeur est l’objet d’un contrôle d’unicité sur l’ensemble de la plateforme.
 - `metadata` : Lien vers une fiche de métadonnée associée déjà publiée sur la Géoplateforme. Voir le tutoriel « [Gestion des métadonnées](../../../gestion-des-donnees-complementaires/gestion-des-metadonnees/) ».

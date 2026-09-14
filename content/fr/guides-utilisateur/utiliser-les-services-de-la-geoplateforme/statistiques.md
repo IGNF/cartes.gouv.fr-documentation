@@ -24,7 +24,7 @@ L’API propose des requêtes destinées aux producteurs de données (qui diffus
 
 Elle est interrogeable en méthode GET en étant authentifié via son compte <span style="white-space:nowrap;">Géoplateforme/cartes.gouv.fr</span>.
 
-Son swagger est accessible ici : [swagger des statistiques d’utilisation](https://data.geopf.fr/api/stats/swagger-ui/index.html).
+Son Swagger est accessible ici : [Swagger des statistiques d’utilisation](https://data.geopf.fr/api/stats/swagger-ui/index.html).
 
 ---
 

@@ -24,7 +24,7 @@ Elle s’appuie sur des données BAN, BD TOPO® et Parcellaire Express (PCI).
 
 L’API est interrogeable en méthode GET.
 
-Son swagger est accessible ici : [swagger de l’autocomplétion](https://data.geopf.fr/geocodage/completion/openapi).
+Son Swagger est accessible ici : [Swagger de l’autocomplétion](https://data.geopf.fr/geocodage/completion/openapi).
 
 ---
 

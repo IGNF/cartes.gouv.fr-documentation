@@ -184,7 +184,7 @@ Description des paramètres en entrée :
     Cette information est modifiable après coup.
 - `output/stored_data/storage_tags` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie.
 
-    Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique Entrepôt du swagger) dans l’attribut de réponse `labels` associé à chaque stockage.
+    Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique Entrepôt du Swagger) dans l’attribut de réponse `labels` associé à chaque stockage.
 
     Pour une donnée de type tuiles vecteur pré-calculées en sortie, seul le stockage S3 est accessible, ce qui correspond au label, donc au `storage_tag` : `PYRAMIDE`.
 - `parameters` : C’est là que toute la configuration du traitement prend corps :
@@ -217,7 +217,7 @@ Description des paramètres en entrée :
         Les options sont donc essentielles pour adapter le jeu de donnée en entrée à cette contrainte. Elles proposent différentes méthodes de généralisation à petite échelle pour assurer une représentation fiable de la donnée tout en limitant le nombre d’objets par tuile.
         :::
 
-Vous êtes invités à vous référer au swagger pour avoir les détails et options complètes sur cette partie.
+Vous êtes invités à vous référer au Swagger pour avoir les détails et options complètes sur cette partie.
 
 :::info
 Comme pour la livraison il vous est possible de configurer l’envoi d’un courriel automatique à la fin du traitement.

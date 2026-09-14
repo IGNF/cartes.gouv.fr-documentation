@@ -26,7 +26,7 @@ Son usage est limité à 50 requêtes par seconde depuis une même adresse IP.
 
 Elle s’appuie sur des données BAN, BD TOPO® et Parcellaire Express (PCI).
 
-Son swagger est accessible ici : [swagger du géocodage](https://data.geopf.fr/geocodage/openapi).
+Son Swagger est accessible ici : [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi).
 
 ---
 
@@ -61,13 +61,13 @@ Le géocodage s’appuie sur plusieurs sources de données :
 
 Le service de géocodage est disponible au travers des URLs suivantes :
 
-Le géocodage direct est accessible via l’URL suivante : (les paramètres sont précisés dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
+Le géocodage direct est accessible via l’URL suivante : (les paramètres sont précisés dans le [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
 
 ```plain
 https://data.geopf.fr/geocodage/search
 ```
 
-Le géocodage inverse est accessible via l’URL suivante : (les paramètres sont précisés dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
+Le géocodage inverse est accessible via l’URL suivante : (les paramètres sont précisés dans le [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
 
 ```plain
 https://data.geopf.fr/geocodage/reverse
@@ -85,11 +85,11 @@ Les fichiers doivent être encodés en UTF-8 et faire moins de 50 Mo ou 200 00
 
 Le site national de l’adresse propose une [interface intuitive](https://adresse.data.gouv.fr/outils/csv) pour la gestion des opérations de géocodage **direct** par fichiers.
 
-Enfin, pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (cf. section « Géocodage par lot asynchrone » dans le [swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
+Enfin, pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (cf. section « Géocodage par lot asynchrone » dans le [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
 
 ???? Informations complémentaires à l’usage du géocodage de masse asynchrone
 ??? Organisation générale du workflow type
-Afin de mener à bien un traitement de géocodage de masse, l’ordonnancement des routes d’API présentées dans le swagger doit être envisagé comme suit :
+Afin de mener à bien un traitement de géocodage de masse, l’ordonnancement des routes d’API présentées dans le Swagger doit être envisagé comme suit :
 1. Exécution de la route de création d’un projet (`POST /async/projects`).
 2. En sortie récupération de l’identifiant (élément JSON `id` dans la réponse) et du jeton (élément JSON `token` dans la réponse) associé au projet.
 3. (ou 4.) Cette étape peut être permutée avec la suivante. Dépôt du fichier (`PUT /async/projects/{projectId}/input-file`).
@@ -99,7 +99,7 @@ Afin de mener à bien un traitement de géocodage de masse, l’ordonnancement d
     - Bien spécifier sur cet appel un header `Authorization Token mon_token_projet` où `mon_token_projet` correspond à la valeur récupérée en étape 2.
     - La rubrique `indexes` définit le type de géocodage : `address` pour un géocodage d’adresses postales, `poi` pour un géocodage sur les points d’intérêt et `parcel` pour un géocodage de codes parcellaires.
     - `columns` définit les colonnes du fichier livré qui vont être concaténées pour produire l’adresse complète à géocoder. Les champs doivent être fournis dans l’ordre pour produire en sortie une adresse du type `24 rue de la Libération 96260 Trifouilly les Oies`.
-    - les paramètres `type` à `number` présentés ensuite dans le swagger correspondent à des critères de filtrage possible pour le géocodage. Par exemple, si le fichier livré contient un champ `code_insee` il est possible de filtrer les résultats du géocodage en fonction de ce champ en indiquant dans le pipeline : `"citycode": "code_insee"`.
+    - les paramètres `type` à `number` présentés ensuite dans le Swagger correspondent à des critères de filtrage possible pour le géocodage. Par exemple, si le fichier livré contient un champ `code_insee` il est possible de filtrer les résultats du géocodage en fonction de ce champ en indiquant dans le pipeline : `"citycode": "code_insee"`.
 5. Lancer le géocodage (`POST /async/projects/{projectId}/start`).
     - Bien spécifier sur cet appel un header `Authorization Token mon_token_projet` où `mon_token_projet` correspond à la valeur récupérée en étape 2.
 6. Exécuter de manière cyclique l’état du traitement (`GET /async/projects/{projectId}`).
