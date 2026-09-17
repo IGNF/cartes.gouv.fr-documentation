@@ -1,6 +1,5 @@
 ---
 title: Créer des cartes personnalisées
-title_tag: h2
 description: L’éditeur cartographique de cartes.gouv.fr
 tags:
     - Symbologie

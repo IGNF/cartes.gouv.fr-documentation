@@ -1,5 +1,6 @@
 ---
 title: Changements & évolutions de la Géoplateforme
+title_tag: h2
 layout: layouts/blog.njk
 description: Retrouver les dernières évolutions de la Géoplateforme
 eleventyNavigation:

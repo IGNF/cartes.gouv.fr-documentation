@@ -55,14 +55,17 @@
             ? `<p class="fr-card__detail fr-icon-time-fill"><time class="postlist-date" datetime="${escapeHtml(page.date)}">${escapeHtml(page.readableDate)}</time></p>`
             : "";
 
+        const tagList = ["p", "h1", "h2", "h3", "h4", "h5", "h6"];
+        const titleTag = tagList.includes(escapeHtml(page.title_tag)) ? escapeHtml(page.title_tag) : "h3";
+
         return `
 <div class="fr-col-12 fr-col-md-6 fr-col-lg-6">
     <div class="fr-card fr-enlarge-link">
         <div class="fr-card__body">
             <div class="fr-card__content">
-                <h3 class="fr-card__title">
+                <${titleTag} class="fr-card__title">
                     <a href="${escapeHtml(page.url)}">${escapeHtml(page.title)}</a>
-                </h3>
+                </${titleTag}>
                 <p class="fr-card__desc">${escapeHtml(page.description)}</p>
                 <div class="fr-card__start">
                     ${tagsHtml ? `<ul class="fr-tags-group">${tagsHtml}</ul>` : ""}

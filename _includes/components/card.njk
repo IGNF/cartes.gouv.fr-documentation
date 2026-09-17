@@ -9,13 +9,17 @@
             {% else %}
                 {% set cardUrl = card.externalUrl %}
             {% endif %}
-            <h3 class="fr-card__title">
+            {% set title_tag = card.title_tag | default("h4") %}
+            {% if title_tag not in ["p", "h2", "h3", "h4", "h5", "h6"] %}
+                {% set title_tag = "h4" %}
+            {% endif %}
+            <{{- title_tag }} class="fr-card__title">
                 {% if not card.externalUrl %}
                     <a href="{{ cardUrl }}">{{ card.title }}</a>
                 {% else %}
                     {{ card.title }}
                 {% endif %}
-            </h3>
+            </{{- title_tag }}>
             <p class="fr-card__desc">{{ card.description }}</p>
             <div class="fr-card__start">
                 {% if card.tags and (card.show_tag is not defined or card.show_tag) %}

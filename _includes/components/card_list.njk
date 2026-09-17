@@ -7,6 +7,7 @@
       <div class="fr-col-12 fr-col-md-6 fr-col-lg-{{ card_list.columns or 4 }}">
         {% set card = {
           title: item.data.title,
+          title_tag: card_list.title_tag,
           url: item.url,
           description: item.data.description,
           tags: item.data.tags,

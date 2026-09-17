@@ -103,6 +103,7 @@ layout: layouts/base.njk
         <div class="fr-col-12 fr-my-10v" data-pagefind-ignore>
           {% set card = {
             title: decouvertePage.data.title,
+            title_tag: "h2",
             url: decouvertePage.url,
             description: decouvertePage.data.description,
             horizontal: true,
@@ -115,6 +116,7 @@ layout: layouts/base.njk
       <h2 data-pagefind-ignore>Offre produit et services</h2>
       {{ component("card_list", {
           items: otherPages | sort(attribute = "data.eleventyNavigation.order"),
+          title_tag: "h2",
           columns: 4,
           small_cards: true,
           ratio_cards: "16x9",

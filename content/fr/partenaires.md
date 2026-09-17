@@ -20,7 +20,8 @@ eleventyNavigation:
                 | filterRoot("./content/fr/partenaires/")
                 | filterCollectionLang 
                 | sort(attribute="data.title"),
-            black_tiles: true
+            black_tiles: true,
+            title_tag: "h2"
         }) -}}
     </div>
 </div>

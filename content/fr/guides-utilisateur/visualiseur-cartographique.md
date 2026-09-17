@@ -1,6 +1,5 @@
 ---
 title: Explorer les cartes
-title_tag: h2
 layout: layouts/parent.njk
 eleventyNavigation:
     key: Explorer les cartes

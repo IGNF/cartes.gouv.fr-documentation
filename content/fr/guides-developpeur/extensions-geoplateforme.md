@@ -1,6 +1,5 @@
 ---
 title: Extensions Géoplateforme
-title_tag: h2
 description: Extensions facilitant l’accès aux ressources de la Géoplateforme pour les bibliothèques cartographiques Leaflet, OpenLayers et iTowns
 eleventyNavigation:
     key: Extensions Géoplateforme

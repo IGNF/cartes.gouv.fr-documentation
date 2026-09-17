@@ -1,6 +1,5 @@
 ---
 title: SDK Python pour l'Entrepôt
-title_tag: h2
 description: Pour consommer l'API Entrepôt plus facilement avec des scripts développés en python
 eleventyNavigation:
     key: SDK Python pour l'Entrepôt
