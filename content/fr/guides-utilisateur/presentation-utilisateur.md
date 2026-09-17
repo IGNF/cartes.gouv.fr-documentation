@@ -1,5 +1,6 @@
 ---
 title: Présentation de cartes.gouv.fr
+title_tag: h2
 description: Tout ce qu'il faut savoir pour débuter sur cartes.gouv.fr en tant qu’utilisateur du site
 layout: layouts/parent.njk
 tags:

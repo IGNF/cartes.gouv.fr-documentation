@@ -1,5 +1,6 @@
 ---
 title: Tutoriels d’utilisation de l’Entrepôt
+title_tag: h2
 description: Accès au différents tutoriels, par type de données et d’usage
 layout: layouts/parent.njk
 tags:

@@ -1,5 +1,6 @@
 ---
 title: Spécifications OpenAPI de l'API Entrepôt
+title_tag: h2
 description: Détails de toutes les routes assurées par l'API Entrepôt
 swaggerui: true
 tags:

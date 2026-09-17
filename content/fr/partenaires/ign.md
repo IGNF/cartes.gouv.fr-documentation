@@ -1,5 +1,6 @@
 ---
 title: Institut national de l’information géographique et forestière
+title_tag: h3
 description: L’IGN est l’opérateur public de référence pour l’information géographique et forestière
 layout: layouts/partenaire/home.njk
 tags:

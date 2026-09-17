@@ -1,5 +1,6 @@
 ---
 title: Concepts de l'Entrepôt
+title_tag: h2
 description: Présentation des concepts manipulés dans l'Entrepôt et workflow général d'alimentation
 layout: layouts/parent.njk
 tags:

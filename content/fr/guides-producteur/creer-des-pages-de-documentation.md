@@ -1,5 +1,6 @@
 ---
 title: Créer des pages de documentation
+title_tag: h2
 description: Création, modification et publication de documentation partenaire sur le site de documentation de cartes.gouv.fr
 layout: layouts/parent.njk
 tags:

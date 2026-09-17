@@ -1,5 +1,6 @@
 ---
 title: Rechercher une donnée
+title_tag: h2
 description: Le catalogue de données de cartes.gouv.fr
 layout: layouts/parent.njk
 tags:

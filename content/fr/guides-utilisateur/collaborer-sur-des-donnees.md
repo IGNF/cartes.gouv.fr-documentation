@@ -1,5 +1,6 @@
 ---
 title: Collaborer sur des données
+title_tag: h2
 tags:
     - Collaboratif
     - Données

@@ -1,5 +1,6 @@
 ---
 title: Utiliser les services de la Géoplateforme
+title_tag: h2
 description: Les services de calcul et de diffusion de la Géoplateforme, mobilisables par API
 layout: layouts/parent.njk
 tags:
