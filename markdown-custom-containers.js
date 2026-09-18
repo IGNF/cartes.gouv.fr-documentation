@@ -8,14 +8,20 @@ module.exports = {
 
             render: (tokens, idx) => {
                 const params = tokens[idx].info.trim().match(re);
-
                 if (tokens[idx].nesting === 1) {
                     // opening tag
-                    return `
-<div class="fr-callout">
-    <p class="fr-callout__title">${md.utils.escapeHtml(params?.[1]) || ""}</p>
-    <div class="fr-callout__text">
-`;
+                    if (!md.utils.escapeHtml(params?.[1])) {
+                        return `
+                        <div class="fr-callout">
+                            <div class="fr-callout__text">
+                        `;
+                    } else {
+                        return `
+                        <div class="fr-callout">
+                            <p class="fr-callout__title">${md.utils.escapeHtml(params?.[1])}</p>
+                            <div class="fr-callout__text">
+                        `;
+                    }
                 } else {
                     // closing tag
                     return "</div></div>\n";

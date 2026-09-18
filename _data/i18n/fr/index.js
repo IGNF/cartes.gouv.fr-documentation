@@ -25,7 +25,7 @@ module.exports = {
     menu: "Menu",
     new_window: "Nouvelle fenêtre",
     next_page: "Page suivante",
-    not_compliant: "Non conforme",
+    not_compliant: "non conforme",
     partially_compliant: "Partiellement conforme",
     personal_data: "Données personnelles",
     pick_theme: "Choisissez un thème pour personnaliser l’apparence du site.",

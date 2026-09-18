@@ -45,6 +45,16 @@
         return div.innerHTML;
     }
 
+    function getCardTitleTag() {
+        const content = cardListEl.closest("#contenu");
+        const headings = content ? [...content.querySelectorAll("h1, h2, h3, h4, h5, h6")] : [];
+        const previousHeading = headings
+            .reverse()
+            .find((heading) => !cardListEl.contains(heading) && heading.compareDocumentPosition(cardListEl) & Node.DOCUMENT_POSITION_FOLLOWING);
+        const headingLevel = previousHeading ? Number(previousHeading.tagName.slice(1)) : 2;
+        return `h${Math.min(headingLevel + 1, 6)}`;
+    }
+
     function renderCard(page) {
         const tagsHtml = (page.tags || [])
             .filter((tag) => !universalTags.has(tag))
@@ -55,14 +65,16 @@
             ? `<p class="fr-card__detail fr-icon-time-fill"><time class="postlist-date" datetime="${escapeHtml(page.date)}">${escapeHtml(page.readableDate)}</time></p>`
             : "";
 
+        const titleTag = getCardTitleTag();
+
         return `
 <div class="fr-col-12 fr-col-md-6 fr-col-lg-6">
     <div class="fr-card fr-enlarge-link">
         <div class="fr-card__body">
             <div class="fr-card__content">
-                <h3 class="fr-card__title">
+                <${titleTag} class="fr-card__title">
                     <a href="${escapeHtml(page.url)}">${escapeHtml(page.title)}</a>
-                </h3>
+                </${titleTag}>
                 <p class="fr-card__desc">${escapeHtml(page.description)}</p>
                 <div class="fr-card__start">
                     ${tagsHtml ? `<ul class="fr-tags-group">${tagsHtml}</ul>` : ""}
