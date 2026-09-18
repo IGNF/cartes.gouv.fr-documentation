@@ -11,7 +11,7 @@ date: 2026-08-01
 
 {% from "components/component.njk" import component with context %}
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-08-mises-a-jour/00-2026-08-mises-a-jour.png", "Actualité Mise à jour le 31 août 2026" %}
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-08-mises-a-jour/00-2026-08-mises-a-jour.png", "Actualité mise à jour le 31 août 2026" %}
 
 #### Services web
 

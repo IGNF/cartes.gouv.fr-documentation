@@ -11,7 +11,7 @@ date: 2026-09-01
 
 {% from "components/component.njk" import component with context %}
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-09-mises-a-jour/00-2026-09-mises-a-jour.png", "Actualité Mise à jour le 18 septembre 2026" %}
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-09-mises-a-jour/00-2026-09-mises-a-jour.png", "Actualité mise à jour le 18 septembre 2026" %}
 
 #### Services web
 
@@ -102,4 +102,4 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
         ]
 }) }}
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-09-mises-a-jour/02-2026-09-mises-a-jour.png", "BD ORTHO® RVB et ADMIN EXPRESS - Cassis (13)" %}6
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-09-mises-a-jour/02-2026-09-mises-a-jour.png", "BD ORTHO® RVB et ADMIN EXPRESS - Cassis (13)" %}
