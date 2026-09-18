@@ -274,6 +274,7 @@ layout: layouts/home.njk
         {% endfor %}
         {{ component("card_list", {
             items: filteredItems | sort(true, 'date') | reverse,
+            title_tag: "h3",
             small_cards: true,
             show_images: false,
             show_tags: false
