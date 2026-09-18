@@ -27,7 +27,8 @@ layout: layouts/base.njk
             {% include "components/breadcrumb.njk" %}
           {% endif %}
           {% include "components/published_on.njk" %}
-          {% if parentData and eleventyNavigation.parent %}
+          {% set hasParent = parentData and eleventyNavigation.parent %}
+          {% if hasParent %}
             <div class="fr-grid-row fr-grid-row--gutters fr-mb-2v" data-pagefind-ignore>
               {% if parentData.image %}
                 <div class="fr-col-auto" style="width: 150px; height: 150px; overflow: hidden;">
@@ -83,7 +84,7 @@ layout: layouts/base.njk
           {% endif %}
         </div>
       </div>
-      {% if parentData and eleventyNavigation.parent %}
+      {% if hasParent %}
         <h2 class="fr-mt-2v">{{ title }}</h2>
       {% endif %}
       {{ content | safe }}
@@ -99,11 +100,13 @@ layout: layouts/base.njk
           {% endif %}
         {% endif %}
       {% endfor %}
+      {% set titleTag = "h3" if hasParent else "h2" %}
+      {% set subTitleTag = "h4" if hasParent else "h3" %}
       {% if decouvertePage %}
         <div class="fr-col-12 fr-my-10v" data-pagefind-ignore>
           {% set card = {
             title: decouvertePage.data.title,
-            title_tag: "h2",
+            title_tag: titleTag,
             url: decouvertePage.url,
             description: decouvertePage.data.description,
             horizontal: true,
@@ -113,10 +116,10 @@ layout: layouts/base.njk
           {% include "components/card.njk" %}
         </div>
       {% endif %}
-      <h2 data-pagefind-ignore>Offre produit et services</h2>
+      <{{ titleTag }} data-pagefind-ignore>Offre produit et services</{{ titleTag }}>
       {{ component("card_list", {
           items: otherPages | sort(attribute = "data.eleventyNavigation.order"),
-          title_tag: "h2",
+          title_tag: subTitleTag,
           columns: 4,
           small_cards: true,
           ratio_cards: "16x9",

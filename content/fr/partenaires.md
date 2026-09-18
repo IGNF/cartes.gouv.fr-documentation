@@ -21,7 +21,7 @@ eleventyNavigation:
                 | filterCollectionLang 
                 | sort(attribute="data.title"),
             black_tiles: true,
-            title_tag: "h2"
+            title_tag: "h3"
         }) -}}
     </div>
 </div>

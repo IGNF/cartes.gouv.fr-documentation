@@ -46,7 +46,6 @@ layout: layouts/base.njk
           {% for item in allPages | sort(true, false, "data.date") %}
             {{ {
               title: item.data.title,
-              title_tag: title_tag,
               url: '/aide' ~ item.url,
               description: item.data.description,
               tags: item.data.tags | filterTagList,

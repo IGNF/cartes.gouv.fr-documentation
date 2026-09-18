@@ -45,6 +45,16 @@
         return div.innerHTML;
     }
 
+    function getCardTitleTag() {
+        const content = cardListEl.closest("#contenu");
+        const headings = content ? [...content.querySelectorAll("h1, h2, h3, h4, h5, h6")] : [];
+        const previousHeading = headings
+            .reverse()
+            .find((heading) => !cardListEl.contains(heading) && heading.compareDocumentPosition(cardListEl) & Node.DOCUMENT_POSITION_FOLLOWING);
+        const headingLevel = previousHeading ? Number(previousHeading.tagName.slice(1)) : 2;
+        return `h${Math.min(headingLevel + 1, 6)}`;
+    }
+
     function renderCard(page) {
         const tagsHtml = (page.tags || [])
             .filter((tag) => !universalTags.has(tag))
@@ -55,8 +65,7 @@
             ? `<p class="fr-card__detail fr-icon-time-fill"><time class="postlist-date" datetime="${escapeHtml(page.date)}">${escapeHtml(page.readableDate)}</time></p>`
             : "";
 
-        const tagList = ["p", "h1", "h2", "h3", "h4", "h5", "h6"];
-        const titleTag = tagList.includes(escapeHtml(page.title_tag)) ? escapeHtml(page.title_tag) : "h3";
+        const titleTag = getCardTitleTag();
 
         return `
 <div class="fr-col-12 fr-col-md-6 fr-col-lg-6">

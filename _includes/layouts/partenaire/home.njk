@@ -63,7 +63,7 @@ layout: layouts/base.njk
       {{ component("card_list", {
           items: topLevelPages | sort(attribute = "data.eleventyNavigation.order"),
           columns: 4,
-          title_tag: "h2",
+          title_tag: "h3",
           small_cards: true,
           ratio_cards: "16x9",
           black_cards: true
