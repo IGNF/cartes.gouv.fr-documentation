@@ -53,6 +53,6 @@ Pensez à vérifier au préalable si votre structure dispose déjà d’un espac
 
 Un entrepôt public est visible des autres utilisateurs qui pourront formuler une demande pour rejoindre l’entrepôt. Il permet de travailler en collaboration avec plusieurs utilisateurs sur un même espace de travail.
 
-La création d’un tel entrepôt est limitée pour éviter les doublons et les chevauchements métiers. Il faut donc faire une demande argumentée et détaillée auprès de nos équipes ([geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)).
+La création d’un tel entrepôt est limitée pour éviter les doublons et les chevauchements métiers. Il faut donc faire une demande argumentée et détaillée auprès de nos équipes (<geoplateforme@ign.fr>).
 
 Une fois votre demande acceptée, vous aurez accès à cet espace de travail pour importer des données et publier des services (voir [Publier des données via cartes.gouv.fr](../../publier-des-donnees-via-cartes-gouv/)).

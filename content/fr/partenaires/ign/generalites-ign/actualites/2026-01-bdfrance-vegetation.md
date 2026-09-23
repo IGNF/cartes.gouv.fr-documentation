@@ -27,14 +27,14 @@ Les jeux de données tests de la BD France - Thème Végétation proposent une c
 
 La structuration de la donnée repose notamment sur la couverture du sol, décrivant la nature de la végétation observée. Cinq grandes natures sont ainsi représentées : la forêt, la lande ligneuse, la haie, la zone agricole et la zone herbacée. Cette nomenclature permet un enrichissement du thème végétation de la BD France, contribuant à une lecture plus complète et plus actuelle de la végétation.
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-theme-vegetation.png", "Thème végétation BD France - bêta - département 34" %}
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-bdfrance-vegetation/2026-01-theme-vegetation.png", "Thème végétation BD France - bêta - département 34" %}
 
 <div class="fr-grid-row fr-grid-row--gutters">
     <div class="fr-col-12 fr-col-md-6">
-        {% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-anhaux.gif", "Avant/après - 64 - Anhaux" %}
+        {% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-bdfrance-vegetation/2026-01-anhaux.gif", "Avant/après - 64 - Anhaux" %}
     </div>
     <div class="fr-col-12 fr-col-md-6">
-        {% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-saint-jean-de-luz.gif", "Avant/après - 64 - Saint-Jean-de-Luz" %}
+        {% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-bdfrance-vegetation/2026-01-saint-jean-de-luz.gif", "Avant/après - 64 - Saint-Jean-de-Luz" %}
     </div>
 </div>
 
@@ -48,7 +48,7 @@ Des règles communes de structuration, de priorisation des sources, de seuils de
 
 Dans le cadre de cette phase bêta, les jeux de données sont diffusés sur les départements pilotes suivants : Hautes-Alpes (05), Finistère (29), Hérault (34), Mayenne (53), Meuse (55) et Pyrénées-Atlantiques (64).
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-carte-theme-vegetation.png", "Carte des départements pour lesquels des jeux tests du thème végétation ont été produits" %}
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-bdfrance-vegetation/2026-01-carte-theme-vegetation.png", "Carte des départements pour lesquels des jeux tests du thème végétation ont été produits" %}
 
 Ce périmètre permet de tester la structuration de la BD France - Thème Végétation sur des territoires aux contextes variés, et d’en analyser les premiers usages dans des domaines tels que l’environnement, l’agriculture, la forêt ou encore la planification territoriale.
 

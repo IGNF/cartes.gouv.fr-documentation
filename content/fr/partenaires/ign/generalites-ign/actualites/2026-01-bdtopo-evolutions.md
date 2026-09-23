@@ -16,7 +16,7 @@ Vous trouverez tous les liens de téléchargement de la BD TOPO® ici : [Catalo
 
 Les URL d’accès à l’API de diffusion Géoplateforme sont décrites ici : [Documentation | cartes.gouv.fr](https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/diffusion/){target="_blank" rel="noopener noreferrer" title="API de diffusion - ouvre une nouvelle fenêtre"}
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-01-bdtopo-evolutions.png){.fr-responsive-img .frx-img-contained}
+![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-01-bdtopo-evolutions/2026-01-bdtopo-evolutions.png){.fr-responsive-img .frx-img-contained}
 
 #### Quoi de neuf dans cette nouvelle version ?
 
@@ -25,7 +25,7 @@ Les URL d’accès à l’API de diffusion Géoplateforme sont décrites ici : 
 
 <br>
 
-Le modèle de données concernant la classe « Itinéraire autre » a été revu pour centraliser et rendre plus lisible les différentes natures d’itinéraires : pédestre, équestre, cyclable. Par conséquent, un transfert d’une partie du contenu de la classe « route numérotée et nommée » vers « itinéraire autre » a été effectué.
+Le modèle de données concernant la classe « itinéraire autre » a été revu pour centraliser et rendre plus lisible les différentes natures d’itinéraires : pédestre, équestre, cyclable. Par conséquent, un transfert d’une partie du contenu de la classe « route numérotée et nommée » vers « itinéraire autre » a été effectué.
 
 Dans la classe « itinéraire autre » :
 - Suppression des valeurs de l’attribut « nature » : Autre, Sentier de découverte, Parcours sportif
@@ -43,11 +43,11 @@ Dans la classe « Route numérotée ou nommée » (transfert vers la classe «
 
 Synthèse des changements (avant/après) :
 
-![Synthèse des changements](/img/partenaires/ign/generalites/actualites/2026-01-tableau-avant-apres.jpg){.fr-responsive-img .frx-img-contained}
+![Synthèse des changements](/img/partenaires/ign/generalites/actualites/2026-01-bdtopo-evolutions/2026-01-tableau-avant-apres.jpg){.fr-responsive-img .frx-img-contained}
 
 Sur la classe « Tronçon hydrographique » : 
 - Renommage de l’attribut « Délimitation » en « Tracé connu » afin que cet attribut soit mieux compris par les utilisateurs.
-- Diffusion des attributs : Lien vers nœud hydrographique ini et lien_vers_noeud_hydrographique_fin pour des besoins exprimés autour du produit BDTOPAGE.
+- Diffusion des attributs : Lien vers nœud hydrographique ini et `lien_vers_noeud_hydrographique_fin` pour des besoins exprimés autour du produit BDTOPAGE.
 
 <br>
 
@@ -73,7 +73,7 @@ Sur la classe « Détail orographique » :
 
 #### Changements importants dans les données impactant la BD TOPO®
 
-- Enrichissement des toponymes de la BAN vers les attributs Toponymie, Statut du toponyme et source du toponyme pour les 7 classes suivantes : Lieu-dit non habité, Zone d’habitation, Zone d’activité ou d’intérêt, Equipement de transport, Détail hydrographique, Détail orographique, Point du réseau, et Toponymie (qui contient le champ “source de toponymie”).
+- Enrichissement des toponymes de la BAN vers les attributs Toponymie, Statut du toponyme et source du toponyme pour les 7 classes suivantes : Lieu-dit non habité, Zone d’habitation, Zone d’activité ou d’intérêt, Equipement de transport, Détail hydrographique, Détail orographique, Point du réseau, et Toponymie (qui contient le champ « source de toponymie »).
 - Dans la classe Zone d’activité et d’intérêt, l’IGN a réalisé un enrichissement des natures détaillées : centrale photovoltaïque, jardin public, parc et square grâce à des projets nationaux.
 - Intégration importante de données, à la suite de la restitution de nouvelles prises de vue aériennes, effectuées depuis l’édition de septembre BD TOPO® (253).
     - Département réintégré en octobre : 24 (PVA 05/2024)

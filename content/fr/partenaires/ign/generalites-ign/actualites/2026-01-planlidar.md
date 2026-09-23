@@ -27,6 +27,6 @@ Vous pouvez aussi nous faire des retours plus complets par mail à <contact.geos
 
 Pour les usagers professionnels souhaitant intégrer ces fonds dans leurs outils SIG :
 - URL d’accès au service WMTS : [https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities](https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities - ouvre une nouvelle fenêtre"}
-- Noms techniques des ressources : PLANIGN.LIDAR.SURSOL et PLANIGN.LIDAR.TERRAIN
+- Noms techniques des ressources : `PLANIGN.LIDAR.SURSOL` et `PLANIGN.LIDAR.TERRAIN`
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-plan-ign-sursol.png", "IGNF - PLAN IGN SURSOL - Le Désert en Valjouffrey (38)" %}
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-planlidar/2026-01-plan-ign-sursol.png", "IGNF - PLAN IGN SURSOL - Le Désert en Valjouffrey (38)" %}

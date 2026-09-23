@@ -11,7 +11,7 @@ date: 2026-01-05
 
 {% from "components/component.njk" import component with context %}
 
-![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-01-maj.png){.fr-responsive-img .frx-img-contained}
+![Image illustrative](/img/partenaires/ign/generalites/actualites/2026-01-mises-a-jour/2026-01-maj.png){.fr-responsive-img .frx-img-contained}
 
 #### Services web
 

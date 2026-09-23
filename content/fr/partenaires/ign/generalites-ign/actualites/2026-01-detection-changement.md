@@ -30,17 +30,17 @@ Exemple ci-dessous à Périgueux (Dordogne) avec le différentiel de MNS, sur un
 <div class="fr-grid-row fr-grid-row--gutters">
 <div class="fr-col-12 fr-col-md-6">
 
-![Périgueux en 2021](/img/partenaires/ign/generalites/actualites/2026-01-perigueux.png){.fr-responsive-img .frx-img-contained}
+![Périgueux en 2021](/img/partenaires/ign/generalites/actualites/2026-01-detection-changement/2026-01-perigueux.png){.fr-responsive-img .frx-img-contained}
 
 </div>
 <div class="fr-col-12 fr-col-md-6">
 
-![Périgueux en 2024](/img/partenaires/ign/generalites/actualites/2026-01-perigueux2.png){.fr-responsive-img .frx-img-contained}
+![Périgueux en 2024](/img/partenaires/ign/generalites/actualites/2026-01-detection-changement/2026-01-perigueux2.png){.fr-responsive-img .frx-img-contained}
 
 </div>
 </div>
 
-![Différence du MNS à Périgueux entre 2021 et 2024](/img/partenaires/ign/generalites/actualites/2026-01-perigueux3.png){.fr-responsive-img .frx-img-contained}
+![Différence du MNS à Périgueux entre 2021 et 2024](/img/partenaires/ign/generalites/actualites/2026-01-detection-changement/2026-01-perigueux3.png){.fr-responsive-img .frx-img-contained}
 
 Avec chaque image aérienne on calcule un MNS (Modèle Numérique de Surface). Les deux MNS calculés sont alors superposés l’un à l’autre pour calculer la différence de hauteur entre les 2 acquisitions. En rouge les éléments de sursol « détruits » ou réduits (différence négative), en bleu, les éléments de sursol qui apparaissent (différence positive).
 
@@ -49,14 +49,14 @@ Autre exemple toujours en Dordogne entre 2021 et 2024 où une forêt a été par
 <div class="fr-grid-row fr-grid-row--gutters">
 <div class="fr-col-12 fr-col-md-6">
 
-![Forêt de Dordogne en 2021](/img/partenaires/ign/generalites/actualites/2026-01-foret-dordogne.png){.fr-responsive-img .frx-img-contained}
+![Forêt de Dordogne en 2021](/img/partenaires/ign/generalites/actualites/2026-01-detection-changement/2026-01-foret-dordogne.png){.fr-responsive-img .frx-img-contained}
 
 </div>
 <div class="fr-col-12 fr-col-md-6">
 
-![Forêt de Dordogne en 2024](/img/partenaires/ign/generalites/actualites/2026-01-foret-dordogne2.png){.fr-responsive-img .frx-img-contained}
+![Forêt de Dordogne en 2024](/img/partenaires/ign/generalites/actualites/2026-01-detection-changement/2026-01-foret-dordogne2.png){.fr-responsive-img .frx-img-contained}
 
 </div>
 </div>
 
-![Différence du MNS sur une forêt de Dordogne entre 2021 et 2024](/img/partenaires/ign/generalites/actualites/2026-01-foret-dordogne3.png){.fr-responsive-img .frx-img-contained}
+![Différence du MNS sur une forêt de Dordogne entre 2021 et 2024](/img/partenaires/ign/generalites/actualites/2026-01-detection-changement/2026-01-foret-dordogne3.png){.fr-responsive-img .frx-img-contained}
