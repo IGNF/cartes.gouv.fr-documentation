@@ -11,7 +11,7 @@ date: 2026-01-26
 
 L’imagerie aérienne et satellitaire est aujourd’hui au cœur de nombreux usages professionnels : observation des territoires, analyses environnementales, aménagement, gestion de crise, modélisation, intelligence artificielle… Dans ce contexte, l’**IGN** engage une nouvelle étape de sa démarche de **recueil des besoins et usages en imagerie**, afin d’adapter au plus près ses **produits et services image** aux réalités du terrain.
 
-![Image d’illustration](/img/partenaires/ign/generalites/actualites/2026-01-imagerie.png){.fr-responsive-img .frx-img-contained}
+![Image d’illustration](/img/partenaires/ign/generalites/actualites/2026-01-imagerie/2026-01-imagerie.png){.fr-responsive-img .frx-img-contained}
 
 #### Une démarche structurante pour orienter l’évolution de l’offre image
 

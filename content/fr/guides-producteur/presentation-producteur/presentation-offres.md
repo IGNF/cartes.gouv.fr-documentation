@@ -21,7 +21,7 @@ Une offre idéale pour éprouver les fonctionnalités disponibles et s’assurer
 
 - 100 Go hébergés sur un entrepôt mutualisé avec suppression trimestrielle
 - 20 couches de données par compte
-- Support par courriel [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)
+- Support par courriel <geoplateforme@ign.fr>
 
 **GRATUIT**
 :::
@@ -33,7 +33,7 @@ Une offre adaptée aux besoins les plus courants, avec l’ensemble des fonction
 - 50 couches de données par entrepôt
 - 1 To max de trafic par an
 - Animation des communautés de contributeurs
-- Support par courriel [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)
+- Support par courriel <geoplateforme@ign.fr>
 
 **GRATUIT**
 :::
@@ -45,7 +45,7 @@ Une offre calibrée pour les volumes de données les plus importants tels que le
 - Nombre illimité de couches de données
 - Dépassement autorisé des 1 To max de trafic par an
 - Animation des communautés de contributeurs
-- Support par courriel [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr) et formations
+- Support par courriel <geoplateforme@ign.fr> et formations
 - Participation à la gouvernance
 
 à partir de **10 k€ HT par an** (tarif dégressif selon le volume de trafic : de 3,3 k€ à 1,5 k€ par To et par an)

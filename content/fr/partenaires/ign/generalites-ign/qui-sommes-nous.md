@@ -59,5 +59,5 @@ Satellites, avions, drones, radar, LiDAR, autant d’outils qui embrassent le mo
 L’IGN est un établissement public. Ses données de référence et leur représentation sont en open data. Au-delà, l’institut veut favoriser de véritables communs numériques co-produits par les acteurs citoyens, publics, associatifs et privés. Par ailleurs, son réseau Datalliance allie le meilleur des technologies et capacités des secteurs publics et privés, afin de développer ensemble des solutions technologiques pour la transition écologique.
 
 :::info Pour nous contacter
-Une seule adresse : [contact.geoservices@ign.fr](mailto:contact.geoservices@ign.fr)
+Une seule adresse : <contact.geoservices@ign.fr>
 :::

@@ -91,4 +91,4 @@ Cliquez sur **« Se connecter »** (en haut à droite), pour ouvrir la page de
 
 ![Image décrivant comment se connecter par FranceConnect ou AgentConnect](/img/guides-utilisateur/presentation-utilisateur/connexion/09_connexion-franceconnect.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Si vous avez activé la double authentification, il vous sera demandé de renseigné un code à usage unique via l’application authentificator. Si vous n’avez plus accès à l’application (par exemple si vous changez de téléphone) il faudra créer une demande au support de la Géoplateforme : [geoplateforme@ign.fr](mailto:geoplateforme@ign.fr)
+Si vous avez activé la double authentification, il vous sera demandé de renseigné un code à usage unique via l’application authentificator. Si vous n’avez plus accès à l’application (par exemple si vous changez de téléphone) il faudra créer une demande au support de la Géoplateforme : <geoplateforme@ign.fr>

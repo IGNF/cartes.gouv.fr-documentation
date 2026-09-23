@@ -27,7 +27,7 @@ La production de la couche « Vignes et vergers » repose sur une approche com
 
 À partir de ces données, des méthodes de segmentation d’images par apprentissage profond ont été mises en œuvre afin de détecter automatiquement des parcelles de vignes et de vergers, y compris celles absentes ou incomplètes dans les données initiales. Les résultats issus de ces traitements automatisés ont ensuite été consolidés par des post-traitements géométriques et sémantiques, puis par des contrôles par photo-interprétation, afin de garantir la cohérence des formes et la fiabilité de la qualification thématique. Cette combinaison de traitements automatisés et de contrôles humains garantit une donnée robuste, cohérente et exploitable à l’échelle nationale.
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-vignes-vergers.png", "Schéma de la chaine de traitement globale" %}
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-01-vignes-et-vergers/2026-01-vignes-vergers.png", "Schéma de la chaine de traitement globale" %}
 
 La couche « Vignes et vergers » décrit des zones surfaciques correspondant aux cultures pérennes, modélisées sous forme de polygones, conformément aux règles de structuration et de représentation de la BD TOPO®.
 
