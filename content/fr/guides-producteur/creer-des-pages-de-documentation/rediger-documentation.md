@@ -20,20 +20,20 @@ summary:
 Avant de commencer vos modifications, pensez à effectuer les étapes préalables indiquées page précédente. Vous éviterez ainsi d’éventuels conflits.
 :::
 
-## Modifier et prévisualiser avec _VS Code_
+## Modifier et prévisualiser avec VS Code
 
-À la suite de l’installation de _VS Code_, vous pouvez prévisualiser l’écriture de contenu de plusieurs facons. Néanmoins, cette prévisualisation n’englobera pas les composants DSFR. Il faudra déployer le site en local pour avoir une image complète de prévisualisation (cf. page précédente).
+À la suite de l’installation de VS Code, vous pouvez prévisualiser l’écriture de contenu de plusieurs facons. Néanmoins, cette prévisualisation n’englobera pas les composants DSFR. Il faudra déployer le site en local pour avoir une image complète de prévisualisation (cf. [page précédente](../etapes-prealables-aux-modifications/)).
 
-Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers **« crtl+k »** puis **« V »**) :
+Cliquez sur le bouton de prévisualisation (ou utilisez les raccourcis claviers `Crtl + K` puis `V`) :
 
 ![Image décrivant le bouton de prévisualisation](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/01_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 ![Image décrivant le résultat de l’opération précédente](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/02_Previsualisation_VS.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Lorsque vous enregistrez, la modification est prise en compte par _Eleventy_ et s’affichera dans la prévisualisation en _localhost_ sur votre navigateur.
+Lorsque vous enregistrez, la modification est prise en compte par Eleventy et s’affichera dans la prévisualisation en `localhost` sur votre navigateur.
 
 :::info
-la modification peut ne pas bien s’afficher dans le cas d’une création d’un nouveau fichier. Dans ce cas arrêtez _Eleventy_ en faisant **« ctrl+C »** dans l’invite de commande _Git Bash_, puis relancez la commande **« npm start »**
+La modification peut ne pas bien s’afficher dans le cas d’une création d’un nouveau fichier. Dans ce cas arrêtez Eleventy en faisant `Ctrl + C` dans l’invite de commande Git Bash, puis relancez la commande `npm start`.
 :::
 
 ---
@@ -41,9 +41,10 @@ la modification peut ne pas bien s’afficher dans le cas d’une création d’
 ## Emplacement des modifications
 
 En tant que rédacteur, vous n’aurez généralement pas de modification à effectuer hors de ces deux dossiers :
+- `content` et même uniquement `content/fr/` pour le contenu en français. Ce dossier contient le contenu des pages sous forme de fichiers au format Markdown (`.md`). Les fichiers de ce dossier sont ensuite transformés en pages HTML dans le dossier `_site` qui est absent du dépôt car généré seulement pour le déploiement.
+- `public` qui contient les fichiers ne nécessitant pas de transformation pour être affichés dans un navigateur web (notamment les images).
 
-- **« content »** et même uniquement **« content/fr/ »** pour le contenu en français. Ce dossier contient le contenu des pages sous forme de fichiers au format _markdown_ (_.md_). Les fichiers de ce dossier sont ensuite transformés en pages _html_ dans le dossier **« _site »** qui est absent du dépôt car généré seulement pour le déploiement.
-- **« public »** qui contient les fichiers ne nécessitant pas de transformation pour être affichés dans un navigateur web (notamment les images).
+<br>
 
 Le contenu de la barre de navigation n’est pas directement déterminée par l’arborescence des dossiers et fichiers mais par le contenu des cartouches (ou en-têtes) de chaque fichier.
 Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette navigation pour faciliter le repérage.
@@ -52,7 +53,7 @@ Il est toutefois conseillé d’avoir une arborescence qui corresponde à cette 
 
 ## Nouveau partenaire
 
-Pour ajouter un nouveau partenaire à la documentation, il faut ajouter un fichier _.md_ dans le dossier **« partenaires »**, contenant les informations suivantes :
+Pour ajouter un nouveau partenaire à la documentation, il faut ajouter un fichier `.md` dans le dossier `partenaires`, contenant les informations suivantes :
 
 ```yaml
 ---
@@ -65,15 +66,15 @@ sidemenuNav: ign
 ---
 ```
 
-- **« title »** correspond au titre de votre documentation partenaire.
-- **« layout »** est un terme technique à mettre systématiquement.
-- **« image/src »** indique le chemin de l’image à ajouter à la _card_ partenaire. L’image doit être déposée dans **« cartes.gouv.fr-documentation/public/img/partenaires/ »**.
-- **« image/alt »** indique la description alternative de l’image.
-- **« sidemenuNav »** correspond à l’identifiant de navigation au sein de cette documentation partenaire.
+- `title` correspond au titre de votre documentation partenaire.
+- `layout` est un terme technique à mettre systématiquement.
+- `image.src` indique le chemin de l’image à ajouter à la _card_ partenaire. L’image doit être déposée dans `cartes.gouv.fr-documentation/public/img/partenaires/`.
+- `image.alt` indique la description alternative de l’image.
+- `sidemenuNav` correspond à l’identifiant de navigation au sein de cette documentation partenaire.
 
 <br>
 
-Dans le fichier _eleventy.config.js_ situé à la racine du projet, créez votre identifiant de navigation dans l’objet **« sidemenuNavigations »** à la suite des navigations préexistantes en vous basant sur le modèle de ces dernières :
+Dans le fichier `eleventy.config.js` situé à la racine du projet, créez votre identifiant de navigation dans l’objet `sidemenuNavigations` à la suite des navigations préexistantes en vous basant sur le modèle de ces dernières :
 
 ```js
 const sidemenuNavigations = {
@@ -84,19 +85,30 @@ const sidemenuNavigations = {
 };
 ```
 
-Vous pouvez ensuite créer un dossier du même nom que votre fichier _.md_ dans le dossier **« partenaires »**. À la racine de ce dossier, créez un fichier _.11tydata.js_ du même nom que le dossier. Dans ce fichier vous pourrez alors définir le paramètre **« nav »** sur la valeur de l’identifiant de navigation que vous avez créé, cela permet d’attribuer ce paramètre à toutes les pages de votre dossier afin qu’elles apparaissent toutes dans le même menu latéral. Par exemple dans le fichier _ign.11tydata.js_, on a :
+Vous pouvez ensuite créer un dossier du même nom que votre fichier `.md` dans le dossier `partenaires`. À la racine de ce dossier, créez un fichier `.11tydata.js` du même nom que le dossier. Dans ce fichier vous pourrez alors définir le paramètre `nav` sur la valeur de l’identifiant de navigation que vous avez créé, cela permet d’attribuer ce paramètre à toutes les pages de votre dossier afin qu’elles apparaissent toutes dans le même menu latéral. Par exemple dans le fichier `ign.11tydata.js`, on a :
 
 ```js
-eleventyNavigation: {
-    nav: "ign",
-},
+module.exports = {
+    partenaireSubtitle: "IGN",
+    segments: [
+        {
+            url: "/partenaires/ign/",
+            title: "Institut national de l’information géographique et forestière",
+        },
+    ],
+    eleventyNavigation: {
+        nav: "ign",
+    },
+};
 ```
+
+Le paramètre `partenaireSubtitle` ajoute un sous-titre dans le titre des onglets des pages, il est propre au cas où on se trouve dans une documentation partenaire. Le paramètre `segments` est quant à lui présent sur la plupart des fichiers `.11tydata.js` dont l’utilisation est expliqué dans la section [Fichier `.11tydata.js`](#fichier-11tydata-js).
 
 ---
 
-## Fichier .md parent
+## Fichier `.md` parent
 
-Chaque dossier doit contenir un fichier _.md_ pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
+Chaque dossier doit contenir un fichier `.md` pour chacun de ses sous-dossiers, portant le même nom que celui-ci :
 
 ![Image décrivant la présence du fichier d’index .md dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/04_Fichiers-index-en-markdown.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 Ce fichier correspond à la **page d’accueil** de ce sous-dossier. Il définit via son en-tête l’arborescence du dossier dans la navigation :
@@ -126,13 +138,13 @@ Attention : le menu latéral ne peut contenir que trois niveaux au maximum !
 
 ---
 
-## Fichier .11tydata.js
+## Fichier `.11tydata.js`
 
-Chaque sous-dossier doit contenir un fichier **« nom-du-dossier-parent.11tydata.js »** qui permet de déterminer les paramètres communs des fichiers adjacents.
+Chaque sous-dossier doit contenir un fichier `nom-du-dossier-parent.11tydata.js` qui permet de déterminer les paramètres communs des fichiers adjacents.
 
 ![Image décrivant la présence du fichier .11tydata.js dans les dossiers](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/05_Fichier-11tydata.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
-Ce fichier contient par exemple les informations suivantes (modifiez les **« tags »**, **« url »**, **« title »** et **« parent »** pour correspondre à votre page) :
+Ce fichier contient par exemple les informations suivantes (modifiez les `tags`, `url`, `title` et `parent` pour correspondre à votre page) :
 
 ```js
 module.exports = {
@@ -149,18 +161,18 @@ module.exports = {
 };
 ```
 
-- **« tags »** correspond aux tags communs à tous les fichiers adjacents.
-- **« segments/url »** définit l’url de la page parent pour créer le lien vers cette dernière dans le fil d’arianne.
-- **« segments/title »** indique le titre du lien de la page parent dans le fil d’arianne.
-- **« eleventyNavigation/parent »** indique le parent commun de tous les fichiers adjacents. Ce qui permet que ces pages apparaissent sous ce parent dans le menu latéral.
+- `tags` correspond aux tags communs à tous les fichiers adjacents.
+- `segments.url` définit l’url de la page parent pour créer le lien vers cette dernière dans le fil d’Ariane.
+- `segments.title` indique le titre du lien de la page parent dans le fil d’Ariane.
+- `eleventyNavigation.parent` indique le parent commun de tous les fichiers adjacents. Ce qui permet que ces pages apparaissent sous ce parent dans le menu latéral.
 
 :::info
-Comme vu précédemment dans [Nouveau partenaire](#nouveau-partenaire), le fichier _.11tydata.js_ à la racine du dossier principal définit quant à lui le paramètre **« nav »** indiquant que tout ce qui est contenu dans ce dossier doit apparaitre dans le même menu latéral.
+Comme vu précédemment dans [Nouveau partenaire](#nouveau-partenaire), le fichier `.11tydata.js` à la racine du dossier principal définit quant à lui le paramètre `nav` indiquant que tout ce qui est contenu dans ce dossier doit apparaitre dans le même menu latéral.
 :::
 
 ---
 
-## Fichier .md décrivant le contenu de la page
+## Fichier `.md` décrivant le contenu de la page
 
 Le texte est découpé en 2 parties : un en-tête (ou cartouche) qui contient les métadonnées de la page du site correspondant à ce texte, et le corps du texte. L’en-tête est similaire à celui des pages parents :
 
@@ -185,11 +197,10 @@ summary:
 ```
 
 :::info
-Notez l’absence de la ligne **« layout: layouts/parent.njk »**.
+Notez l’absence de la ligne `layout: layouts/parent.njk`.
 :::
 
-
-Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après l’en-tête :
+Si des éléments `njk` (Nunjucks) sont utilisés dans la page (par exemple pour afficher une image, un extrait de code, etc.) alors il faut rajouter la ligne suivante après l’en-tête :
 
 ```njk
 {% raw %}
@@ -197,9 +208,9 @@ Si des éléments _njk_ (_nunjucks_) sont utilisés dans la page (par exemple po
 {% endraw %}
 ```
 
-Le contenu des pages de documentation est rédigé en _markdown_ (_.md_), éditables avec un logiciel éditeur de texte comme le _Bloc note_, _Notepad++_ ou _VS Code_ (conseillé).
+Le contenu des pages de documentation est rédigé en Markdown (`.md`), éditables avec un logiciel éditeur de texte comme le Bloc note, Notepad++ ou VS Code (conseillé).
 
-La syntaxe propre au <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener noreferrer" title="Documentation Markdown - ouvre une nouvelle fenêtre">mardown</a> est relativement simple. Ci-dessous vous pouvez retrouver les différentes syntaxes à utiliser :
+La syntaxe propre au <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener noreferrer" title="Documentation Markdown - ouvre une nouvelle fenêtre">Mardown</a> est relativement simple. Ci-dessous vous pouvez retrouver les différentes syntaxes à utiliser :
 
 ```markdown
 ## Titre de niveau 1
@@ -253,8 +264,10 @@ Pour afficher une image :
     {% endraw %}
     ```
     :::info
-    Si le champ correspondant à la légende n’est pas défini ou est défini comme `null`, la légende prendra par défaut la valeur du texte alternatif (ici : « Description de l’image »).
+    Si le champ correspondant à la légende n’est pas défini ou est défini comme `null`, la légende prendra par défaut la valeur du texte alternatif (ici : `Description de l’image`).
     :::
+
+<br>
 
 Pour afficher un extrait de code :
 
@@ -291,15 +304,15 @@ Pensez à bien séparer le bloc image du texte précédent avec un saut de ligne
 
 ## Images et pictogrammes
 
-Les images sont stockées dans le dossier **« cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/… »**. Il suffit de rajouter votre image dans le dossier correspondant.
+Les images sont stockées dans le dossier `cartes.gouv.fr-documentation/public/img/partenaires/producteurABC/…`. Il suffit de rajouter votre image dans le dossier correspondant.
 
-Il existe une liste de pictogrammes réutilisables dans le dossier **« cartes.gouv.fr-documentation_site\artwork\pictograms »**. Pour appeler un pictogramme existant dans l’en-tête, il suffit d’indiquer le dossier parent de l’en-tête et son nom :
+Il existe une liste de pictogrammes réutilisables dans le dossier `cartes.gouv.fr-documentation/_site/artwork/pictograms`. Pour appeler un pictogramme existant dans l’en-tête, il suffit d’indiquer le dossier parent de l’en-tête et son nom :
 
 ![Image décrivant l’en-tête du fichier de la page index](/img/guides-producteur/creer-des-pages-de-documentation/rediger-documentation/06_En-tete-et-pictogramme.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 Il est possible de créer ses propres pictogrammes customisés. Il faut alors respecter les recommandations du DSFR : <a href="https://www.systeme-de-design.gouv.fr/fondamentaux/pictogramme/" target="_blank" rel="noopener noreferrer" title="Pictogramme Système de Design de l’État - ouvre une nouvelle fenêtre">Pictogramme - Système de Design de l’État </a>
 
-Placez votre pictogramme SVG dans le dossier **« cartes.gouv.fr-documentation\public\artwork\pictograms\custom »**, et appelez le pictogramme dans l’en-tête avec **« custom/nomDuPictogramme.svg »**.
+Placez votre pictogramme SVG dans le dossier `cartes.gouv.fr-documentation/public/artwork/pictograms/custom`, et appelez le pictogramme dans l’en-tête avec `custom/nomDuPictogramme.svg`.
 
 ---
 
