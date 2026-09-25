@@ -56,6 +56,9 @@ Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/servi
 
 Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-Raster et WMTS) et BD Géodésie ([IGNF_GEODESIE-XXX services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_GEODESIE-ET-NIVELLEMENT){target="_blank" rel="noopener noreferrer" title="GEODESIE ET NIVELLEMENT - ouvre une nouvelle fenêtre"}) sont mises à jour quotidiennement et la ressource Base Adresse Nationale ([BAN.DATA.GOUV services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BAN-PLUS){target="_blank" rel="noopener noreferrer" title="BAN PLUS - ouvre une nouvelle fenêtre"}) est actualisée hebdomadairement.
 
+---
+
+{% from "components/component.njk" import component with context %}
 {% imageContent "/img/partenaires/ign/generalites/actualites/2026-08-mises-a-jour/01-2026-08-mises-a-jour.png", "CoSIA et MNS issu du LiDAR HD - Les Contamines-Montjoie (74)" %}
 
 ---
