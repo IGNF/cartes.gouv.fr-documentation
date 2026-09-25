@@ -92,7 +92,7 @@
 <script src="/js/header-logo.js" defer></script>
 <script src="/js/env.js"></script>
 <script type="module" src="/js/header-auth.js"></script>
-<title>{{ title  ~ " | " ~ metadata.subtitle ~ " | " ~ metadata.title }}</title>
+<title>{{ title ~ (" | " ~ partenaireSubtitle if partenaireSubtitle) ~ " | " ~ metadata.subtitle ~ " | " ~ metadata.title }}</title>
 </head>
 <body id="top">
     {% getBundle "js", "top" %}

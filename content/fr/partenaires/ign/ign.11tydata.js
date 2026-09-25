@@ -1,4 +1,5 @@
 module.exports = {
+    partenaireSubtitle: "IGN",
     segments: [
         {
             url: "/partenaires/ign/",
