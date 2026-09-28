@@ -51,7 +51,7 @@ Certains contributeurs de la BD TOPO® peuvent être amenés à corriger une in
 ### Des plugins pour faciliter le respect des spécifications et la qualité de l’information produite à plusieurs
 
 Certaines fonctionnalités présentées lors des Géodatadays ont été développées à la demande de notre communauté de contributeurs, pour accompagner les opérations de contrôle et de qualification des données saisies ou encore pour faciliter les modifications sur plusieurs objets à la fois.
- Dans ce cas, on retrouve **Altibonne** (plugin ID 5928), permettant de visualiser et corriger des profils altimétriques sur des objets linéaires ou surfaciques ou encore **Shortest path** qui permet de sélectionner le plus court chemin en sélectionnant un tronçon de départ et d’arrivée sur des objets linéaires d’une même couche : modifier le sens d’écoulement sur l’ensemble des tronçons d’un cours d’eau devient ainsi plus rapide. 
+ Dans ce cas, on retrouve **Altibonne** (plugin ID : 5928), permettant de visualiser et corriger des profils altimétriques sur des objets linéaires ou surfaciques ou encore **Shortest path** qui permet de sélectionner le plus court chemin en sélectionnant un tronçon de départ et d’arrivée sur des objets linéaires d’une même couche : modifier le sens d’écoulement sur l’ensemble des tronçons d’un cours d’eau devient ainsi plus rapide. 
 
 {% imageContent "/img/partenaires/ign/generalites/actualites/2026-09-bd-france-outil/03-2026-09-bd-france-outil.png", "Altibonne permettant de visualiser et de corriger l’altimétrie d’un objet" %}
 
