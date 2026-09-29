@@ -15,6 +15,16 @@ summary:
     visible: true
 ---
 
+<figure role="group" class="fr-content-media">
+    <video src="https://data.geopf.fr/annexes/ressources/aide/2026-09-choisir-fonds-de-plan.mp4" class="fr-responsive-vid" controls>
+        <p>Voir la transcription ci-dessous</p>
+    </video>
+    <figcaption class="fr-content-media__caption">
+        Choisir un fond de carte : activez le son pour suivre ce tutoriel.
+        Des informations plus détaillées se trouvent dans la suite de la page.
+    </figcaption>
+</figure>
+
 ## Ouvrir le catalogue de cartes
 
 Le catalogue de cartes est l’outil principal du service **« Explorer les cartes »**. Cliquez sur l’icône suivante pour l’ouvrir :
