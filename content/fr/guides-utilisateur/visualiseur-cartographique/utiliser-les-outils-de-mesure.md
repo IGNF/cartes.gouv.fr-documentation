@@ -20,6 +20,16 @@ summary:
     depth: 1
 ---
 
+<figure role="group" class="fr-content-media">
+    <video src="https://data.geopf.fr/annexes/ressources/aide/2026-09-outils-de-mesure.mp4" class="fr-responsive-vid" controls>
+        <p>Voir la transcription ci-dessous</p>
+    </video>
+    <figcaption class="fr-content-media__caption">
+        Outils de mesure : activez le son pour suivre ce tutoriel.
+        Des informations plus détaillées se trouvent dans la suite de la page.
+    </figcaption>
+</figure>
+
 ## Mesurer une distance
 
 L’outil **« Mesurer une distance »** permet de dessiner une ligne sur la carte et d’en connaître en temps réel la longueur.
