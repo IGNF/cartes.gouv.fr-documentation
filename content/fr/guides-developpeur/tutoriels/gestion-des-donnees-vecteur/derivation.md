@@ -17,19 +17,19 @@ Dans certains cas, la modification peut aller jusqu’à « casser » la diffu
 :::
 
 Les instructions SQL suivantes sont autorisées :
-- CREATE TABLE
-- INSERT
-- UPDATE
-- SELECT
-- CREATE INDEX
-- ALTER TABLE
-- CREATE FUNCTION
-- DROP TABLE
-- DELETE
-- CREATE SEQUENCE
-- CREATE VIEW
-- ALTER SEQUENCE
-- CREATE TRIGGER
+- `CREATE TABLE`
+- `INSERT`
+- `UPDATE`
+- `SELECT`
+- `CREATE INDEX`
+- `ALTER TABLE`
+- `CREATE FUNCTION`
+- `DROP TABLE`
+- `DELETE`
+- `CREATE SEQUENCE`
+- `CREATE VIEW`
+- `ALTER SEQUENCE`
+- `CREATE TRIGGER`
 
 <br>
 
