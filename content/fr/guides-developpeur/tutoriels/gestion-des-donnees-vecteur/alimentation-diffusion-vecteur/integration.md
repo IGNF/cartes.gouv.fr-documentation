@@ -169,18 +169,18 @@ On distingue le traitement, ressource de la plateforme mise à disposition de l�
 ???
 ??? Plus d’aide sur la configuration de l’exécution du traitement d’intégration vecteur
 Description des paramètres en entrée :
-- `inputs`/`upload` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un identifiant entrepôt de **livraison** (voir étape précédente).
-- `output`/`stored_data`/`name` : Le nom défini ici est un nommage libre.
+- `inputs.upload` : Il s’agit ici d’une liste (présence des caractères `[]`) qui prend comme valeur au moins un identifiant entrepôt de **livraison** (voir étape précédente).
+- `output.stored_data.name` : Le nom défini ici est un nommage libre.
 
     **Cette information n’est lisible que par un autre utilisateur membre de cet entrepôt, pas par l’utilisateur final. Vous êtes donc invité à renseigner ici des informations parlantes pour vous - producteur de donnée.**
 
     Cette information est modifiable après coup.
-- `output`/`stored_data`/`storage_tags` : Il s’agit ici d’une liste (présence des caractères « `[ ]` ») qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie.
+- `output.stored_data.storage_tags` : Il s’agit ici d’une liste (présence des caractères `[]`) qui prend comme valeur au moins un tag associé au stockage qui va accueillir la donnée de sortie.
 
     Vous pouvez retrouver ces tags via la route `GET /datastores/{datastore}/storages` (rubrique « Entrepôt » du Swagger) dans l’attribut de réponse `labels` associé à chaque stockage.
 
     Pour une donnée vecteur en entrée, seul le stockage PostgreSQL est accessible, ce qui correspond au label, donc au `storage_tag` : `VECTEUR`.
-- `parameters`/`srs` : ce paramètre optionnel permet de faire faire à la Géoplateforme une reprojection des données au moment de leur intégration. Dans l’exemple du tutoriel : on livre une donnée en EPSG:4326 et ici avec le paramètre `"srs": "EPSG:3857"`, elle sera donc re-projetée par la Géoplateforme en projection Google Mercator et stockée sous cette projection.
+- `parameters.srs` : ce paramètre optionnel permet de faire faire à la Géoplateforme une reprojection des données au moment de leur intégration. Dans l’exemple du tutoriel : on livre une donnée en EPSG:4326 et ici avec le paramètre `"srs": "EPSG:3857"`, elle sera donc re-projetée par la Géoplateforme en projection Google Mercator et stockée sous cette projection.
 
 :::info
 Comme pour la livraison il vous est possible de configurer l’envoi d’un courriel automatique à la fin du traitement.
