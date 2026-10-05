@@ -1,12 +1,12 @@
 ---
-title: Correction d’un bug sur l’intégration vecteur sans reprojection + Correction d’autres bugs orchestrateur et entrepôt
-description: Correction d’un bug sur l’intégration vecteur sans reprojection, correction d’un bug avec les fichiers GZ, correction de la casse pour les output WFS, blocage de la création d’une vue commençant par un chiffre, correction d’un bug sur le Swagger entrepôt
+title: Correction d’un bug sur l’intégration vecteur sans reprojection + Correction d’autres bugs orchestrateur et Entrepôt
+description: Correction d’un bug sur l’intégration vecteur sans reprojection, correction d’un bug avec les fichiers GZ, correction de la casse pour les output WFS, blocage de la création d’une vue commençant par un chiffre, correction d’un bug sur le Swagger Entrepôt
 tags:
     - Orchestrateur
     - Vecteur
     - Entrepôt
 eleventyNavigation:
-    key: Correction d’un bug sur l’intégration vecteur sans reprojection + Correction d’autres bugs orchestrateur et entrepôt
+    key: Correction d’un bug sur l’intégration vecteur sans reprojection + Correction d’autres bugs orchestrateur et Entrepôt
     order: -20260930
 date: 2026-09-30
 ---
