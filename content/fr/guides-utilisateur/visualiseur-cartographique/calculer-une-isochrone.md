@@ -2,9 +2,6 @@
 title: Calculer une isochrone
 description: Calculer une zone selon un temps de trajet ou une distance
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Outils
     - Périmètre
     - Isochrone

@@ -2,9 +2,6 @@
 title: Calculer un itinéraire
 description: Trouvez le meilleur trajet à pied ou en voiture
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Outils
     - Itinéraire
 eleventyNavigation:

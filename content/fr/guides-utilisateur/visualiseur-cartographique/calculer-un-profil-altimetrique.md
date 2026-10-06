@@ -2,9 +2,6 @@
 title: Calculer un profil altimétrique
 description: Affichez l’altitude le long d’un trajet
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Outils
     - Profil altimétrique
     - Altitude

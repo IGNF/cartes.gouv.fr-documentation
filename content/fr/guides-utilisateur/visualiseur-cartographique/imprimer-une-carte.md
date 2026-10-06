@@ -1,9 +1,6 @@
 ---
 title: Imprimer une carte
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Menu
     - Mes enregistrements
 eleventyNavigation:

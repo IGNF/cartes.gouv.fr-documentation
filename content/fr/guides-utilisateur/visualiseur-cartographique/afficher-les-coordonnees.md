@@ -2,9 +2,6 @@
 title: Afficher les coordonnées
 description: Trouvez les coordonnées d’un point ou trouvez un point avec ses coordonnées
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Outils
     - Coordonnées
     - Projection

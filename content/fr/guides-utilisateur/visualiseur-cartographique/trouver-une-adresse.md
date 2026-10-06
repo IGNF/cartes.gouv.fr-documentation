@@ -2,9 +2,6 @@
 title: Trouver une adresse
 description: Trouvez l’adresse, le toponyme ou la parcelle d’un lieu sur la carte
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Outils
     - Adresse
     - Parcelle

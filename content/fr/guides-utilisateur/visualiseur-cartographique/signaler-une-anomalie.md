@@ -1,9 +1,6 @@
 ---
 title: Signaler une anomalie
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Menu
     - Mes enregistrements
 eleventyNavigation:
