@@ -245,6 +245,14 @@ div.fr-callout__text p {
     color: var(--text-inverted-blue-france);
 }
 
+#header-auth-mobile .login-btn {
+    padding-left: 0.5rem;
+}
+
+.fr-header .fr-header__menu-links .fr-translate {
+    margin-right: 0;
+}
+
 /* Force le centrage pour les boutons aussi */
 a.custom-center-btn.fr-btn {
     display: flex !important;
@@ -254,6 +262,11 @@ a.custom-center-btn.fr-btn {
 
 .fr-menu__list {
     min-width: 288px;
+}
+
+.fr-menu__list .fr-btn.primary {
+    background-color: var(--background-action-high-blue-france);
+    color: var(--text-inverted-blue-france);
 }
 
 /* Barre de recherche de l'accueil */
