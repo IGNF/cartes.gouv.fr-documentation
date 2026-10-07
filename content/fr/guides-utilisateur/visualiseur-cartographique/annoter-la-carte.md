@@ -2,9 +2,6 @@
 title: Annoter la carte
 description: Ajoutez des points, lignes, formes ou textes directement sur la carte
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Outils
     - Annoter
     - Croquis

@@ -1,11 +1,10 @@
 ---
-title: Présence de vos données sur le catalogue de cartes.gouv
-description: Une métadonnée doit être publiée 
+title: Présence de vos données sur le catalogue de cartes.gouv.fr
+description: Une métadonnée doit être publiée
 tags:
-    - Compatibilité
     - Diffusion
 eleventyNavigation:
-    key: Présence de vos données sur le catalogue de cartes.gouv
+    key: Présence de vos données sur le catalogue de cartes.gouv.fr
     order: 2
 pictogram: digital/self-training.svg
 ---

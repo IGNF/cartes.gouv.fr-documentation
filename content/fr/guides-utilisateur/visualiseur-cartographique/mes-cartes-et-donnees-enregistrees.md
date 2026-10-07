@@ -1,9 +1,6 @@
 ---
 title: Mes cartes et données enregistrées
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Menu
     - Mes enregistrements
 eleventyNavigation:

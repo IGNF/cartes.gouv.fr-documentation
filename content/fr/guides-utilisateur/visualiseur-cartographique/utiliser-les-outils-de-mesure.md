@@ -8,7 +8,6 @@ tags:
     - Azimut
     - Longueur
     - Distance
-    - Visualiseur
     - Outils
     - Mesurer
 eleventyNavigation:

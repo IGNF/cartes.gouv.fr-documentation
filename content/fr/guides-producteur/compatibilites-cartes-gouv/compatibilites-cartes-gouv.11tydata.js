@@ -1,5 +1,5 @@
 module.exports = {
-    tags: ["Compatibilites"],
+    tags: ["Compatibilité"],
     segments: [
         {
             url: "/guides-producteur/compatibilites-cartes-gouv/",

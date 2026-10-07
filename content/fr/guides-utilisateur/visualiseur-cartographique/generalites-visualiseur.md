@@ -1,10 +1,6 @@
 ---
 title: Généralités
 description: Explorez la richesse des cartes de cartes.gouv.fr
-tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
 eleventyNavigation:
     key: Généralités
     order: 1

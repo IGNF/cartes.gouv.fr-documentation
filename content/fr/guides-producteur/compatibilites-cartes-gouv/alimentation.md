@@ -3,7 +3,6 @@ title: Compatibilité de l’alimentation avec cartes.gouv.fr
 description: Retrouvez vos données de la Géoplateforme sur cartes.gouv.fr
 mermaid: true
 tags:
-    - Compatibilité
     - Alimentation
     - Publier une donnée
     - Géoplateforme

@@ -2,10 +2,8 @@
 title: Généralités
 description: Explorez le catalogue de données et services de cartes.gouv.fr
 tags:
-    - Catalogue
     - Géoservices
     - Métadonnées
-    - Données
 eleventyNavigation:
     key: Généralités
     order: 1

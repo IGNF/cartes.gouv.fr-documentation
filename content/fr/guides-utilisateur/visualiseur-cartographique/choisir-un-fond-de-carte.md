@@ -2,9 +2,6 @@
 title: Choisir un fond de carte
 description: Accédez à la richesse des cartes stockées sur la Géoplateforme
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Cartalogue
     - Géoplateforme
 eleventyNavigation:

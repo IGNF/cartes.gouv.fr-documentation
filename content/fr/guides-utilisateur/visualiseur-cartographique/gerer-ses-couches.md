@@ -2,9 +2,6 @@
 title: Gérer ses couches
 description: Manipulez les cartes importées
 tags:
-    - Cartes
-    - Géoportail
-    - Visualiseur
     - Gestionnaire de couches
     - Opacité
     - Styles

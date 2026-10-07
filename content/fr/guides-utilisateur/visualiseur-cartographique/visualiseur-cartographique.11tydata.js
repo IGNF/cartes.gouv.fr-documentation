@@ -1,5 +1,5 @@
 module.exports = {
-    tags: ["Cartes", "Géoportail"],
+    tags: ["Cartes", "Géoportail", "Visualiseur"],
     segments: [
         {
             url: "/guides-utilisateur/visualiseur-cartographique/",
