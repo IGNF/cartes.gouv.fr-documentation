@@ -4,6 +4,8 @@ module.exports = {
         iam: "https://sso.geopf.fr/realms/geoplateforme",
         api_entrepot: "https://data.geopf.fr/api",
         swagger: "https://data.geopf.fr/api/swagger-ui/index.html",
+        extraction: "https://data.geopf.fr/extraction",
+        extraction_swagger: "https://data.geopf.fr/extraction/swagger-ui/index.html",
         annexes: "https://data.geopf.fr/annexes",
         documents: "https://data.geopf.fr/documents",
         rechercher_une_donnee: "https://cartes.gouv.fr/rechercher-une-donnee",
