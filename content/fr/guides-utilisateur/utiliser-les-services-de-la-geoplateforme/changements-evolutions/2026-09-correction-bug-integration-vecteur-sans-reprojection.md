@@ -17,4 +17,4 @@ date: 2026-09-30
 - [Orchestrateur] Correction d’un bug où les fichiers GZ faisaient planter le traitement de [génération d’archive](../../../../guides-developpeur/tutoriels/gestion-des-donnees-archive/alimentation-diffusion-archive/)
 - [Vecteur] [WFS] Correction du fait que les `outputFormat` du [WFS]({{ urls.public.wfs }}?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0) étaient sensibles à la casse
 - [Orchestrateur] Blocage de la création d’une vue commençant par un chiffre via la [dérivation vecteur](../../../../guides-developpeur/tutoriels/gestion-des-donnees-vecteur/derivation/) (cela bloquait la donnée stockée contenant cette vue)
-- [Entrepôt] Correction d’un bug où le `request_body` était indisponible pour faire des requêtes `POST` sur le [Swagger]({{ urls.api_entrepot }}/swagger-ui/index.html)
+- [Entrepôt] Correction d’un bug où le `request_body` était indisponible pour faire des requêtes `POST` sur le [Swagger]({{ urls.swagger }})

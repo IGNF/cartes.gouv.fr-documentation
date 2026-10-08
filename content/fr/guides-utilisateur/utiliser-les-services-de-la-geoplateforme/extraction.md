@@ -38,7 +38,7 @@ Par exemple :
 
 La documentation Swagger permettant d’accéder aux détails des routes et paramètres pour réaliser une extraction vecteur est accessible ici :
 - Pour l’API Entrepôt (partie « Accéder aux ressources extractibles » et « Pour un producteur de données ») : [{{ urls.api_entrepot }}/swagger-ui/index.html]({{ urls.api_entrepot }}/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="{{ urls.api_entrepot }}/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
-- Pour l’API d’extraction vecteur (le reste de cette documentation) : [https://data.geopf.fr/extraction/swagger-ui/index.html](https://data.geopf.fr/extraction/swagger-ui/index.html){target="_blank" rel="noopener noreferrer" title="https://data.geopf.fr/extraction/swagger-ui/index.html - ouvre une nouvelle fenêtre"}
+- Pour l’API d’extraction vecteur (le reste de cette documentation) : [{{ urls.extraction_swagger }}]({{ urls.extraction_swagger }}){target="_blank" rel="noopener noreferrer" title="{{ urls.extraction_swagger }} - ouvre une nouvelle fenêtre"}
 
 <br>
 
@@ -52,7 +52,7 @@ Par ailleurs le service est configuré de telle sorte que, pour l’ensemble des
 
 ### Capabilities
 
-L’URL de <span lang="en">_capabilities_</span> correspond à la racine du service : `https://data.geopf.fr/extraction`
+L’URL de <span lang="en">_capabilities_</span> correspond à la racine du service : `{{ urls.extraction }}`
 
 Conformément au standard OGC API Processes, cette URL référence les URL de niveau immédiatement inférieur :
 - Lien vers le Swagger
@@ -184,7 +184,7 @@ Lors de l’étape précédente on a donc isolé un identifiant de donnée extra
 
 En basculant sur l’**API d’extraction vecteur**, la route est :
 
-`GET https://data.geopf.fr/extraction/processes`
+`GET {{ urls.extraction }}/processes`
 
 On récupère une liste de processus d’extraction décrits par :
 - Un `_id` identifiant de manière unique un processus d’extraction lié à une donnée particulière
@@ -203,7 +203,7 @@ Or un identifiant `_id` est toujours composé de la même manière : « identi
 
 Sur l’API d’extraction vecteur, la route est :
 
-`GET https://data.geopf.fr/extraction/processes/{processID}`
+`GET {{ urls.extraction }}/processes/{processID}`
 
 Elle permet d’obtenir, en plus des informations précédentes, les informations suivantes :
 - `version` : La version du traitement, actuellement `1.0.0`.
@@ -218,7 +218,7 @@ Grâce aux informations accumulées aux étapes précédentes, il est possible d
 
 La configuration de l’extraction et son déclenchement se font en un seul et même appel API via la route :
 
-`POST https://data.geopf.fr/extraction/processes/{processID}/execution`
+`POST {{ urls.extraction }}/processes/{processID}/execution`
 
 On configure, dans le corps de requête ci-dessous, une extraction type pour une donnée contenant deux tables de données.
 
@@ -358,7 +358,7 @@ En retour de l’exécution de la requête d’extraction, l’utilisateur reço
 
 Une fois le traitement d’extraction démarré par l’exécution de la requête précédente, il est possible, voire utile de suivre le déroulé des opérations via la route :
 
-`GET https://data.geopf.fr/extraction/jobs/{jobID}`
+`GET {{ urls.extraction }}/jobs/{jobID}`
 
 L’utilisateur reçoit un retour qui ressemble trait pour trait au retour reçu à l’étape précédente et ce jusqu’à ce que l’extraction termine en échec ou en succès, auquel cas il obtiendra un retour de ce type :
 
@@ -401,7 +401,7 @@ En plus des informations détaillées à l’étape précédente on retrouve :
 
 Une fois le traitement terminé à l’étape précédente, on peut donc exécuter la route d’obtention des résultats via :
 
-`GET https://data.geopf.fr/extraction/jobs/{jobID}/results`
+`GET {{ urls.extraction }}/jobs/{jobID}/results`
 
 On reçoit alors un retour du type :
 
@@ -412,13 +412,13 @@ On reçoit alors un retour du type :
         "rel": "describedBy",
         "type": "application/json",
         "title": "Informations sur le processus d’extraction",
-        "href": "https://data.geopf.fr/extraction/telechargement/download/extraction_b1f8cdc1-7dd3-4536-a4aa-d484c8023878/data/extraction.json"
+        "href": "{{ urls.extraction }}/telechargement/download/extraction_b1f8cdc1-7dd3-4536-a4aa-d484c8023878/data/extraction.json"
     },
     "extractData": {
         "rel": "describedBy",
         "type": "application/atom+xml",
         "title": "Résultats du processus d’extraction",
-        "href": "https://data.geopf.fr/extraction/telechargement/resource/extraction_b1f8cdc1-7dd3-4536-a4aa-d484c8023878/data"
+        "href": "{{ urls.extraction }}/telechargement/resource/extraction_b1f8cdc1-7dd3-4536-a4aa-d484c8023878/data"
     }
 }
 ```
@@ -435,7 +435,7 @@ On reçoit alors un retour du type :
 
 Si l’utilisateur a raté l’étape « Exploiter la réponse de la demande d’exécution de traitement » ou pour toute nécessité de se référer à un traitement déjà lancé, il est possible de retrouver un traitement via la route :
 
-`GET https://data.geopf.fr/extraction/jobs`
+`GET {{ urls.extraction }}/jobs`
 
 Cette recherche est filtrable par :
 - Une liste d’identifiants de processes.
@@ -452,13 +452,13 @@ Cette recherche est filtrable par :
 
 En cas de nécessité, un utilisateur peut stopper l’exécution d’un traitement via la route :
 
-`DELETE https://data.geopf.fr/extraction/jobs/{jobID}`
+`DELETE {{ urls.extraction }}/jobs/{jobID}`
 
 L’ensemble des résultats liés éventuellement à ce traitement sont supprimés.
 
 Le quota d’extraction disponible à l’utilisateur est instantanément libéré.
 
-Une trace de ce traitement annulé est conservée via la route `GET https://data.geopf.fr/extraction/jobs`, les traitements annulés pouvant être retrouvés en filtrant sur le statut `DISMISSED`.
+Une trace de ce traitement annulé est conservée via la route `GET {{ urls.extraction }}/jobs`, les traitements annulés pouvant être retrouvés en filtrant sur le statut `DISMISSED`.
 
 ## Pour un producteur de données : Rendre une donnée extractible via l’API d’extraction vecteur
 

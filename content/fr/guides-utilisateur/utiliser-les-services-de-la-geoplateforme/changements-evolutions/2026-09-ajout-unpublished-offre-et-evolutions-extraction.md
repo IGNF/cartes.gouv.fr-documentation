@@ -26,7 +26,7 @@ De plus, il sera impossible de créer une nouvelle offre sur un endpoint s’il 
 
 ### Evolutions sur l’[API d’Extraction](../../extraction/)
 
-- Ajout d’un `jobName` dans les <span lang="en">_jobs_</span> d’extraction : ce champ permettra de donner un nom personnalisable au <span lang="en">_job_</span>. Pour la route [`POST /extraction/processes/{processID}/execution`](https://data.geopf.fr/extraction/swagger-ui/index.html#/Execute), il est possible de définir ce `jobName` dans la partie `output`. Ce qui donne cet exemple type de <span lang="en">_body_</span> :
+- Ajout d’un `jobName` dans les <span lang="en">_jobs_</span> d’extraction : ce champ permettra de donner un nom personnalisable au <span lang="en">_job_</span>. Pour la route [`POST /extraction/processes/{processID}/execution`]({{ urls.extraction_swagger }}#/Execute), il est possible de définir ce `jobName` dans la partie `output`. Ce qui donne cet exemple type de <span lang="en">_body_</span> :
 
 ```json
 {
@@ -70,7 +70,7 @@ De plus, il sera impossible de créer une nouvelle offre sur un endpoint s’il 
 }
 ```
 
-- Ajout d’une route de restitution des paramètres d’execution d’un job :  `GET /extraction/jobs/{job}/inputs`. Cette route restitue la totalité des inputs utilisé lors de la création du job avec la route [`POST /extraction/processes/{processID}/execution`](https://data.geopf.fr/extraction/swagger-ui/index.html#/Execute). L’objectif est de permettre aux consommateurs de l’API de retrouver les paramètres exacts ayant servi à générer une extraction sans avoir à les conserver côté client. Cela faciliterait la duplication et ou modification d’un ancien paramétrage pour recréer une nouvelle extraction.
+- Ajout d’une route de restitution des paramètres d’execution d’un job :  `GET /extraction/jobs/{job}/inputs`. Cette route restitue la totalité des inputs utilisé lors de la création du job avec la route [`POST /extraction/processes/{processID}/execution`]({{ urls.extraction_swagger }}#/Execute). L’objectif est de permettre aux consommateurs de l’API de retrouver les paramètres exacts ayant servi à générer une extraction sans avoir à les conserver côté client. Cela faciliterait la duplication et ou modification d’un ancien paramétrage pour recréer une nouvelle extraction.
 
 ### Ajout de filtres sur la route du catalogue des organisations
 
