@@ -27,7 +27,7 @@ document.getElementById("input-message").addEventListener("input", function (e) 
 });
 
 //Récupération des alertes
-fetch("https://data.geopf.fr/annexes/cartes.gouv.fr-config/public/alerts.json", { method: "GET" }).then(async function (res) {
+fetch("https://data.geopf.fr/annexes/cartes.gouv.fr-config/public/alerts.json", { method: "GET", cache: "no-cache" }).then(async function (res) {
     let result = await res.json();
     for (let i in result) {
         //si alerte concernant la page nous-ecrire
