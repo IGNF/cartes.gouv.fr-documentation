@@ -1,8 +1,7 @@
 //Récupération des alertes
 const md = window.markdownit();
 
-fetch("https://data.geopf.fr/annexes/cartes.gouv.fr-config/public/alerts.json", { method: "GET" }).then(async function (res) {
-    //fetch("https://gpf-annex-qua.priv.geopf.fr/annexes/cartes.gouv.fr-config/public/alerts.json", { method: "GET" }).then(async function (res) {
+fetch("https://data.geopf.fr/annexes/cartes.gouv.fr-config/public/alerts.json", { method: "GET", cache: "no-cache" }).then(async function (res) {
     let result = await res.json();
     if (!result.length) {
         document.getElementById("service-alert").innerHTML = "<p>Aucune alerte en cours.</p>";
