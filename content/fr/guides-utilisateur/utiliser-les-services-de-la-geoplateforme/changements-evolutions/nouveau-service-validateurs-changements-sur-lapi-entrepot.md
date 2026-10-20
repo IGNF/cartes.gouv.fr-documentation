@@ -402,6 +402,6 @@ Afin d’améliorer la maintenabilité du système, les fichiers préfixés par 
 
 ### Correction de bugs
 
-- [ENTREPOT] Correction de mauvais filtrage sur les noms de livraison lorsque le nom contenait un underscore `_`
-- [ENTREPOT] Correction d’un bug où le nombre de résultats était différent sur la route `/api/datastores/{datastore}/permissions` selon l’utilisation ou non du paramètre `sort`
-- [ENTREPOT] Pour les lignes API `GET /datastores/{datastore}/uploads/{upload}/data` et `GET /datastores/{datastore}/statics/{static}/file`, correction du `content-type` renvoyé : pour le GPKG, retourne `application/geopackage+sqlite3` et, si le <span lang="en">_MIME type_</span> n’est pas connu, renvoie `application/octet-stream`
+- [Entrepôt] Correction de mauvais filtrage sur les noms de livraison lorsque le nom contenait un underscore `_`
+- [Entrepôt] Correction d’un bug où le nombre de résultats était différent sur la route `/api/datastores/{datastore}/permissions` selon l’utilisation ou non du paramètre `sort`
+- [Entrepôt] Pour les lignes API `GET /datastores/{datastore}/uploads/{upload}/data` et `GET /datastores/{datastore}/statics/{static}/file`, correction du `content-type` renvoyé : pour le GPKG, retourne `application/geopackage+sqlite3` et, si le <span lang="en">_MIME type_</span> n’est pas connu, renvoie `application/octet-stream`
