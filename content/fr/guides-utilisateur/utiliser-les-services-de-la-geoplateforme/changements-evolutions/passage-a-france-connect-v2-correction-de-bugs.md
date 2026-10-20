@@ -29,9 +29,9 @@ date: 2025-09-25
 
 ## Correction de bugs
 
-- [Statistiques] Ajout de l’endpoint dans logs des requêtes en 429.
-- [Alti] Les API de `POST`/`PUT`/`DELETE` utilisées par l’agent alti sont bloquées.
-- [Orchestrateur][VECTOR2PYR] Correction d’un bug où, dans le cas d’une génération VectorToPyr utilisant de la composition, une configuration non fonctionnelle était créée si des top_level dans les paramètres n’avaient pas un écart d’au moins 2.
-- [Itineraire] Migration des données itinéraires sur un nouveau NAS-HA (pour corriger les incidents sur le graph OSRM).
-- [Orchestrateur][CHECK-PYRAMID-3D-EPT] Ajout du traitement du cas d’une pyramide 3D EPT contenant des subtree dans la vérification.
-- [Entrepot] Correction du nombre de résultat variable en fonction de la pagination demandée sur plusieurs routes API de l’Entrepôt.
+- [Statistiques] Ajout de l’`endpoint` dans logs des requêtes en 429
+- [Alti] Les API de `POST`/`PUT`/`DELETE` utilisées par l’agent alti sont bloquées
+- [Orchestrateur] [VECTOR2PYR] Correction d’un bug où, dans le cas d’une génération `VectorToPyr` utilisant de la composition, une configuration non fonctionnelle était créée si des `top_level` dans les paramètres n’avaient pas un écart d’au moins 2
+- [Itineraire] Migration des données itinéraires sur un nouveau NAS-HA (pour corriger les incidents sur le graph OSRM)
+- [Orchestrateur] [CHECK-PYRAMID-3D-EPT] Ajout du traitement du cas d’une pyramide 3D EPT contenant des `subtree` dans la vérification
+- [Entrepôt] Correction du nombre de résultat variable en fonction de la pagination demandée sur plusieurs routes API de l’Entrepôt

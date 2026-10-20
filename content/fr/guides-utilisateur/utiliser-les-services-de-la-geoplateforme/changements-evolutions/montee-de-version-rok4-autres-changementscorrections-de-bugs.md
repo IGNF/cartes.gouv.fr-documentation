@@ -53,6 +53,6 @@ Les routes concernées sont :
 - [Offre] Correction de l’impossibilité de dépublier une offre lorsqu’une permission et un accès sont définis pour cette offre
 - [Orchestrateur] Correction d’une erreur de connexion avec la base de donnée pour le calcul de données itinéraires
 - [Orchestrateur] Lors d’un moissonage vecteur, ajout d’une ligne d’erreur dans les logs dans le cas où la donnée vecteur se trouve en privé et que le paramètre « harvest_extra » est manquant
-- [Entrepot] Suppression, dans le filtrage des cles par type, du « header » qui n’existe pas
-- [Entrepot] Ajout dans le filtrage des « stored data » visibles par un utilisateur celles qui sont visibles via les communautés
+- [Entrepôt] Suppression, dans le filtrage des cles par type, du « header » qui n’existe pas
+- [Entrepôt] Ajout dans le filtrage des « stored data » visibles par un utilisateur celles qui sont visibles via les communautés
 - [Recherche] Correction de l’impossibilité de faire une requête « suggest_autocomplete » pour un index custom
