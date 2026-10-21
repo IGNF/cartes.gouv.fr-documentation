@@ -14,6 +14,8 @@ if (localStorage.getItem("scheme")) {
 mermaid.initialize({
     startOnLoad: true,
     theme: "base",
+    layout: "dagre",
+    look: "classic",
     themeVariables: {
         background: "#fff",
         darkMode: mermaidDarkMode,

@@ -5,7 +5,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItContainer = require("markdown-it-container");
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { rssPlugin } = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
@@ -57,7 +57,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(require("./eleventy.config.flatnav.js"));
 
     // Official plugins
-    eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(pluginSyntaxHighlight, {
         preAttributes: { tabindex: 0 },
     });
