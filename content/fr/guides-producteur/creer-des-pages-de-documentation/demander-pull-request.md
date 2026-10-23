@@ -17,7 +17,7 @@ summary:
 Cette page explique la procédure pour fusionner vos modifications faites en local avec le dépôt principal de la documentation de cartes.gouv.fr.
 
 :::info
-Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre *fork* : voir [Étapes préalables aux modifications](./etapes-initiales-aux-modifications/).
+Avant de confirmer la fusion, vérifiez que le dépôt principal n’ait pas pris d’avance sur votre *fork* : voir [Étapes préalables aux modifications](./etapes-prealables-aux-modifications/).
 :::
 
 ## Enregistrer les modifications
@@ -41,7 +41,7 @@ git status
 Cela vous résumera toutes les modifications que vous avez faites sur votre clone local.
 
 :::info
-Les fichiers non-enregistrés peuvent ne pas apparaitre dans la liste des modifications.
+Les fichiers non-enregistrés peuvent ne pas apparaître dans la liste des modifications.
 :::
 
 ![Image décrivant le résultat de la commande git status](/img/guides-producteur/creer-des-pages-de-documentation/demander-pull-request/02_Git-status.png){.fr-responsive-img .frx-border-img .frx-img-contained}

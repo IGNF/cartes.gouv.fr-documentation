@@ -1,6 +1,6 @@
 ---
 title: Mises à jour Octobre 2026
-description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois d’octobre 2026
+description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois d'octobre 2026
 tags:
     - Mises à jour
 eleventyNavigation:
@@ -11,7 +11,7 @@ date: 2026-10-01
 
 {% from "components/component.njk" import component with context %}
 
-{% imageContent "/img/partenaires/ign/generalites/actualites/2026-10-mises-a-jour/00-2026-10-mises-a-jour.jpg", "Actualité mise à jour le 8 octobre 2026" %}
+{% imageContent "/img/partenaires/ign/generalites/actualites/2026-10-mises-a-jour/00-2026-10-mises-a-jour.jpg", "Actualité mise à jour le 22 octobre 2026" %}
 
 #### Services web
 
@@ -24,7 +24,7 @@ Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/servi
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN-HD" target="_blank" rel="noopener noreferrer" title="Plan IGN HD - ouvre une nouvelle fenêtre">Plan IGN HD</a>', "IGNF_PLAN-IGN-HD", "WMS-Raster et WMTS", "cartes", "N/A"]
+    ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN-HD" target="_blank" rel="noopener noreferrer" title="Plan IGN HD - ouvre une nouvelle fenêtre">Plan IGN HD</a>', "IGNF_PLAN-IGN-HD", "WMS-Raster et WMTS", "cartes", "N/A"]
     ]
 }) }}
 <br/>
@@ -34,16 +34,33 @@ Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/servi
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS" target="_blank" rel="noopener noreferrer" title="ADMIN EXPRESS - ouvre une nouvelle fenêtre">ADMIN EXPRESS</a>', "ADMIN_EXPRESS", "TMS", "administratif", "FXX + DROM - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS" target="_blank" rel="noopener noreferrer" title="ADMIN EXPRESS - ouvre une nouvelle fenêtre">ADMIN EXPRESS</a>', "LIMITES_ADMINISTRATIVES_EXPRESS.LATEST", "WFS, WMS-Raster et WMTS", "administratif", "FXX + DROM - 2026-09"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS Correl - ouvre une nouvelle fenêtre">Estompage MNS Correl</a>', "ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNS.SHADOW", "WMS-Raster et WMTS", "altimétrie", "D022 - 2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS Correl - ouvre une nouvelle fenêtre">MNS Correl</a>', "ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNS", "WMTS", "altimétrie", "D022 - 2026"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="PLAN IGN - ouvre une nouvelle fenêtre">Plan IGN</a>', "PLAN.IGN", "TMS", "cartes", "FXX + DROM - Édition septembre 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="PLAN IGN - ouvre une nouvelle fenêtre">Plan IGN</a>', "PLAN.IGN", "TMS", "cartes", "FXX + DROM - édition septembre 2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="PLAN IGN - ouvre une nouvelle fenêtre">Plan IGN</a>', "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2", "WMS-Raster et WMTS", "cartes", "FXX + DROM - Édition septembre 2026"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE ARTIFICIALISATION - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "OCSGE.ARTIF.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D064, D082"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE Construction</a>', "OCSGE.CONSTRUCTION.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D064, D082"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE Couverture</a>', "OCSGE.COUVERTURE.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D064, D082"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE Usage</a>', "OCSGE.USAGE.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D064, D082"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO Express - ouvre une nouvelle fenêtre">ORTHO Express IRC 2026</a>', "ORTHOIMAGERY.ORTHOPHOTOS.IRC-EXPRESS.2026", "WMS-Raster et WMTS", "ortho", "D022, D025, D039 - 2026"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO Express - ouvre une nouvelle fenêtre">ORTHO Express RVB 2026</a>', "ORTHOIMAGERY.ORTHOPHOTOS.RVB-EXPRESS.2026", "WMS-Raster et WMTS", "ortho", "D022, D025, D039, D061 - 2026"]
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">Graphe de mosaïquage SCAN 25®</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25.GRAPHE-MOSAIQUAGE", "WFS et WMS-Vecteur", "cartes", "FXX - Édition septembre 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE ARTIFICIALISATION - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "OCSGE.ARTIF.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D009, D032, D046, D055, D057, D059, D064, D081, D082"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE Construction</a>', "OCSGE.CONSTRUCTION.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D009, D032, D046, D055, D057, D059, D064, D081, D082"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE Couverture</a>', "OCSGE.COUVERTURE.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D009, D032, D046, D055, D057, D059, D064, D081, D082"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE Usage</a>', "OCSGE.USAGE.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D009, D032, D046, D055, D057, D059, D064, D081, D082"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO Express - ouvre une nouvelle fenêtre">ORTHO Express IRC 2026</a>', "ORTHOIMAGERY.ORTHOPHOTOS.IRC-EXPRESS.2026", "WMS-Raster et WMTS", "ortho", "D001, D022, D025, D039, D061 et zone sur les départements D038, D073 - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ORTHO-EXPRESS" target="_blank" rel="noopener noreferrer" title="ORTHO Express - ouvre une nouvelle fenêtre">ORTHO Express RVB 2026</a>', "ORTHOIMAGERY.ORTHOPHOTOS.RVB-EXPRESS.2026", "WMS-Raster et WMTS", "ortho", "D001, D022, D025, D039, D061 et zone sur les départements D038, D073 - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO-HISTO" target="_blank" rel="noopener noreferrer" title="BD ORTHO Histo - ouvre une nouvelle fenêtre">Photographies aériennes 1965-1980</a>', "ORTHOIMAGERY.ORTHOPHOTOS.1965-1980", "WMS-Raster et WMTS", "orthohisto", "D070 (1973), D088 (1972)"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO-HISTO" target="_blank" rel="noopener noreferrer" title="BD ORTHO Histo - ouvre une nouvelle fenêtre">Graphe de mosaïquage ORTHO 1965-1980 </a>', "ORTHOIMAGERY.ORTHOPHOTOS.GRAPHE.1965-1980:graphe_bdortho", "WFS et WMS-Vecteur", "orthohisto", "D070 (1973), D088 (1972)"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_COSIA" target="_blank" rel="noopener noreferrer" title="CoSIA - ouvre une nouvelle fenêtre">Couverture du Sol par IA 2024-2026</a>', "IGNF_COSIA_2024-2026", "WMS-Raster et WMTS", "sol", "D013, D014, D035 - 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels</a>', "TRANSPORT_EXCEPTIONNEL", "TMS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels</a>', "SECUROUT.TE:XXX", "WFS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels 1TE</a>', "SECUROUTE.TE.1TE", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels 2TE48</a>', "SECUROUTE.TE.2TE48", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels - Tous les franchissements</a>', "SECUROUTE.TE.ALL", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels - Ouvrages d’art (autre que passages à niveau)</a>', "SECUROUTE.TE.OA", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels - Passages à niveau (autre que franchissement difficile)</a>', "SECUROUTE.TE.PN", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels - Passages à niveau à franchissement difficile</a>', "SECUROUTE.TE.PND", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels TE72</a>', "SECUROUTE.TE.TE72", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels TE94</a>', "SECUROUTE.TE.TE94", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels TE120</a>', "SECUROUTE.TE.TE120", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"]
     ]
 }) }}
 <br/>
@@ -52,34 +69,68 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
 
 {% imageContent "/img/partenaires/ign/generalites/actualites/2026-10-mises-a-jour/01-2026-10-mises-a-jour.jpg", "PLAN IGN HD et PLAN IGN (TMS) - Valjouffrey (38)" %}
 
+##### Liste des mises à jour de flux en accès non libre
+
+{{ component("table", {
+    headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
+    data: [
+            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "SCAN25TOUR_PYR-JPEG_WLD_WM", "WMS-Raster", "clé personnelle", "France métropolitaine - 2026-09"],
+            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR", "WMTS", "clé personnelle", "France métropolitaine - 2026-09"],
+            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">Cartes IGN</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS", "WMS-Raster et WMTS", "clé personnelle", "France métropolitaine - 2026-09"],
+            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25® Lambert-93</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR.L93", "WMTS", "clé personnelle", "France métropolitaine - 2026-09"]
+    ]
+}) }}
+<br/>
+
 ---
 
 #### Téléchargement
 
-##### Liste des mises à jour de données en téléchargement
+##### Liste des mises à jour de données en téléchargement en accès libre
 
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],
     data: [
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO® IRC - ouvre une nouvelle fenêtre">BD ORTHO® IRC</a>', "D035", "2026"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO® RVB - ouvre une nouvelle fenêtre">BD ORTHO® RVB</a>', "D035", "2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO® IRC - ouvre une nouvelle fenêtre">BD ORTHO® IRC</a>', "D035, D070, D090", "2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-ORTHO" target="_blank" rel="noopener noreferrer" title="BD ORTHO® RVB - ouvre une nouvelle fenêtre">BD ORTHO® RVB</a>', "D035, D070, D090", "2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS" target="_blank" rel="noopener noreferrer" title="ADMIN EXPRESS - ouvre une nouvelle fenêtre">ADMIN EXPRESS</a>', "FXX + DROM", "2026-10"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO" target="_blank" rel="noopener noreferrer" title="BD CARTO® - ouvre une nouvelle fenêtre">BD CARTO®</a>', "FXX + DROM France entière (GPKG et SQL), par territoires (GPKG et SQL), par régions (GPKG et Shapefile), par départements (GPKG et Shapefile)", "2026-03"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO® EXPRESS</a>', "FXX + DROM", "hebdomadaire"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO®</a>', "FXX + DROM France entière (FlatGeoBuf, GeoParquet), par territoires (GPKG), par départements (GPKG et Shapefile)", "Édition 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO®</a>', "FXX + DROM France entière (FlatGeoBuf, GeoParquet), par territoires (GPKG), par départements (GPKG et Shapefile)", "2026-09"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® Différentiel - ouvre une nouvelle fenêtre">BD TOPO® Différentiel</a>', "France entière (GPKG + SQL), par territoires (GPKG + SQL), par régions (GPKG + SHP)", "Éditions 2026-06 et 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_COSIA" target="_blank" rel="noopener noreferrer" title="CoSIA - ouvre une nouvelle fenêtre">CoSIA</a>', "D013, D014, D035", "2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_GEODESIE-ET-NIVELLEMENT" target="_blank" rel="noopener noreferrer" title="GEODESIE ET NIVELLEMENT - ouvre une nouvelle fenêtre">Fiches Géodésiques</a>', "FXX + DROM", "2026-10"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D057, D081", "2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D009, D032, D046, D055, D057, D059, D081", "2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D064", "2024"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D057, D081", "Correctif 2022"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D064", "Correctif 2021"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D057, D081", "Différentiel entre 2022 et 2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D009, D032, D046, D055, D057, D081", "Correctif 2022"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D059, D064", "Correctif 2021"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D009, D032, D046, D055, D057, D081", "Différentiel entre 2022 et 2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D059", "Différentiel entre 2021 et 2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE" target="_blank" rel="noopener noreferrer" title="OCS GE - ouvre une nouvelle fenêtre">OCS GE</a>', "D064", "Différentiel entre 2021 et 2024"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D057, D081", "2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D009, D032, D046, D055, D057, D059, D081", "2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D064", "2024"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D057, D081", "Différentiel entre 2022 et 2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D009, D032, D046, D055, D057, D081", "Différentiel entre 2022 et 2025"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D059", "Différentiel entre 2021 et 2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D064", "Différentiel entre 2021 et 2024"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS CORREL - ouvre une nouvelle fenêtre">Modèles Numériques de Surfaces correlés</a>', "D061", "2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS CORREL - ouvre une nouvelle fenêtre">Modèles Numériques de Surfaces correlés</a>', "D001, D007, D025, D026, D039, D061, D069", "2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_RGE-ALTI" target="_blank" rel="noopener noreferrer" title="RGE ALTI 1M - ouvre une nouvelle fenêtre">RGE ALTI® 1M</a>', "FXX + DROM", "Format TIFF"]
-    ]
+        ]
 }) }}
 
 {% imageContent "/img/partenaires/ign/generalites/actualites/2026-10-mises-a-jour/02-2026-10-mises-a-jour.jpg", "OCS GE et MNT issu du LiDAR HD - Lac Bersau (64)" %}
+
+##### Liste des mises à jour de données en téléchargement en accès non libre
+
+{{ component("table", {
+    headers: ["Donnée", "Zone", "Édition"],
+    data: [
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "France Métropolitaine", "2026-09"]
+        ]
+}) }}
+
+:::callout
+Les données SCAN 25®, SCAN 100® et SCAN OACI (et les services en lignes associés) ne sont pas libres de droit, selon les termes de [la licence](https://data.geopf.fr/annexes/ressources/documentation/conditions-de-licence.pdf), les particuliers ne sont pas autorisés à les télécharger, même à des fins personnelles, sauf à se rendre contrefacteurs. Pour les particuliers, la visualisation de ces données est possible depuis [l'explorateur cartographique](https://cartes.gouv.fr/explorer-les-cartes?c=2.442695,46.982819&z=6&l=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR$GEOPORTAIL:OGC:WMTS(1;1;1;0)&w=MousePosition,MeasureLength&permalink=yes).
+
+Pour télécharger et accéder aux flux SCAN 25®, [rejoignez la communauté](https://cartes.gouv.fr/rejoindre-des-communautes) et créez votre clé personnalisée via votre espace personnel cartes.gouv.fr. Pour rejoindre la communauté, pensez à compléter votre profil avec les informations liées à votre entreprise ou association, notamment le numéro de SIRET. [Un tutoriel](https://cartes.gouv.fr/aide/fr/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan) est disponible pour vous accompagner.
+:::
+

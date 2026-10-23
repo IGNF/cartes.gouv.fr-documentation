@@ -8,7 +8,7 @@ pictogram: digital/coding.svg
 ---
 
 
-Ces extensions pour les bibliothèques cartographiques **Leaflet**, **OpenLayers** et **iTowns** proposent des classes et widgets utilisables en complément de la bibliothèque cartographique elle-même. Elles permettent notamment :
+Ces extensions pour les bibliothèques cartographiques **Leaflet**, **OpenLayers** et **iTowns** proposent des classes et widgets utilisables en complément de la bibliothèque cartographique elle-même. Elles permettent notamment :
 
 * d’afficher simplement les couches WMTS et WMS délivrées par la Géoplateforme,
 * d’intégrer un widget de gestion d’empilement des couches,
@@ -18,5 +18,13 @@ Ces extensions pour les bibliothèques cartographiques **Leaflet**, **OpenLayers
 * d’afficher l’altitude en un point de la carte à l’aide du service d’altimétrie de la Géoplateforme.
 * …
 
-Retrouvez leur documentation et des exemples d’utilisation ici :<br/>
-<a href="https://github.com/IGNF/geoportal-extensions/blob/develop/README.md" target="_blank" rel="noopener noreferrer" title="IGNF/geoportal-extensions sur GitHub - ouvre une nouvelle fenêtre">https://github.com/IGNF/geoportal-extensions/</a>
+---
+
+<a href="https://github.com/IGNF/geopf-extensions-openlayers" target="_blank" rel="noopener noreferrer" title="IGNF/geopf-extensions-openlayers - ouvre une nouvelle fenêtre">L'extension **OpenLayers**</a> est en fonction en bêta et les extensions **Leaflet** et **iTowns** seront disponibles début 2027. Pour plus d'informations, vous pouvez vous référer à l'article dédié disponible dans nos <a href="https://cartes.gouv.fr/actualites/actu-developpeurs-leaflet-itowns-bascule-vers-des-depots-dedies" target="_blank" rel="noopener noreferrer" title="Actu développeurs - ouvre une nouvelle fenêtre">actualités</a>.
+
+---
+
+Retrouvez leur documentation et des exemples d’utilisation :<br/>
+* Documentation Leaflet à venir début 2027 ;
+* <a href="https://github.com/IGNF/geopf-extensions-openlayers/blob/main/doc/DOCUMENTATION.md" target="_blank" rel="noopener noreferrer" title="IGNF/geopf-extensions-openlayers Documentation - ouvre une nouvelle fenêtre">Documentation OpenLayers</a> ;
+* Documentation iTowns à venir début 2027.
