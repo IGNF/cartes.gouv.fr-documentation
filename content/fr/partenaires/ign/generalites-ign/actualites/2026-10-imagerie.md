@@ -21,4 +21,4 @@ Parmi les principaux enseignements, **l’accessibilité des données** apparaî
 L’étude révèle aussi l’émergence de nouveaux usages. Si l’analyse visuelle demeure largement dominante, un quart des répondants intègre désormais les images dans des processus automatisés et plus de 12 % disposent déjà de chaînes de traitement fondées sur l’intelligence artificielle. Cette évolution s’accompagne d’un intérêt croissant pour les données à plus forte richesse radiométrique, les images multispectrales et les formats adaptés aux traitements avancés.
 
 
-[👉 Consulter les résultats de l’enquête.](https://data.geopf.fr/annexes/ressources/documentation/Synthèse_Nationale_Questionnaire_Imagerie_IGN_2026.pdf)
+[👉 Consulter les résultats de l’enquête](https://data.geopf.fr/annexes/ressources/documentation/Synthèse_Nationale_Questionnaire_Imagerie_IGN_2026.pdf){target="_blank" rel="noopener noreferrer" title="Synthèse nationale - ouvre une nouvelle fenêtre"}

@@ -94,4 +94,4 @@ Collectivités, gestionnaires d’infrastructures, producteurs de données méti
 
 <br>
 
-Vous pouvez, vous aussi, rejoindre la communauté BD France et contribuer à construire le référentiel géographique national de demain en cliquant sur ce lien : [BD TOPO® et BD France : usagers et contributeurs des données IGN](https://www.expertises-territoires.fr/jcms/pl1_1027950/fr/bd-topo-et-bd-france-usagers-et-contributeurs-des-donnees-ign).
+Vous pouvez, vous aussi, rejoindre la communauté BD France et contribuer à construire le référentiel géographique national de demain en cliquant sur ce lien : [BD TOPO® et BD France : usagers et contributeurs des données IGN](https://www.expertises-territoires.fr/jcms/pl1_1027950/fr/bd-topo-et-bd-france-usagers-et-contributeurs-des-donnees-ign){target="_blank" rel="noopener noreferrer" title="BD TOPO® et BD France : usagers et contributeurs des données IGN - ouvre une nouvelle fenêtre"}.

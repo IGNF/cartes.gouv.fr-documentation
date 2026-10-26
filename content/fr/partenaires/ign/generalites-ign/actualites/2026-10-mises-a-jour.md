@@ -1,6 +1,6 @@
 ---
 title: Mises à jour Octobre 2026
-description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois d'octobre 2026
+description: Toutes les nouvelles données IGN disponibles en services web et en téléchargement au mois d’octobre 2026
 tags:
     - Mises à jour
 eleventyNavigation:
@@ -24,10 +24,9 @@ Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/servi
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
-    ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN-HD" target="_blank" rel="noopener noreferrer" title="Plan IGN HD - ouvre une nouvelle fenêtre">Plan IGN HD</a>', "IGNF_PLAN-IGN-HD", "WMS-Raster et WMTS", "cartes", "N/A"]
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN-HD" target="_blank" rel="noopener noreferrer" title="Plan IGN HD - ouvre une nouvelle fenêtre">Plan IGN HD</a>', "IGNF_PLAN-IGN-HD", "WMS-Raster et WMTS", "cartes", "N/A"]
     ]
 }) }}
-<br/>
 
 ##### Liste des mises à jour de flux en accès libre
 
@@ -38,7 +37,7 @@ Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/servi
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS" target="_blank" rel="noopener noreferrer" title="ADMIN EXPRESS - ouvre une nouvelle fenêtre">ADMIN EXPRESS</a>', "LIMITES_ADMINISTRATIVES_EXPRESS.LATEST", "WFS, WMS-Raster et WMTS", "administratif", "FXX + DROM - 2026-09"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS Correl - ouvre une nouvelle fenêtre">Estompage MNS Correl</a>', "ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNS.SHADOW", "WMS-Raster et WMTS", "altimétrie", "D022 - 2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS Correl - ouvre une nouvelle fenêtre">MNS Correl</a>', "ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNS", "WMTS", "altimétrie", "D022 - 2026"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="PLAN IGN - ouvre une nouvelle fenêtre">Plan IGN</a>', "PLAN.IGN", "TMS", "cartes", "FXX + DROM - édition septembre 2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="PLAN IGN - ouvre une nouvelle fenêtre">Plan IGN</a>', "PLAN.IGN", "TMS", "cartes", "FXX + DROM - Édition septembre 2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_PLAN-IGN" target="_blank" rel="noopener noreferrer" title="PLAN IGN - ouvre une nouvelle fenêtre">Plan IGN</a>', "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2", "WMS-Raster et WMTS", "cartes", "FXX + DROM - Édition septembre 2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">Graphe de mosaïquage SCAN 25®</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25.GRAPHE-MOSAIQUAGE", "WFS et WMS-Vecteur", "cartes", "FXX - Édition septembre 2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE ARTIFICIALISATION - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "OCSGE.ARTIF.2024-2026", "WMS-Raster et WMTS", "ocsge-ng", "D009, D032, D046, D055, D057, D059, D064, D081, D082"],
@@ -63,7 +62,6 @@ Dans ce **[document](https://data.geopf.fr/annexes/ressources/capabilities/servi
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TRANSPORTS-EXCEPTIONNELS" target="_blank" rel="noopener noreferrer" title="TRANSPORTS EXCEPTIONNELS - ouvre une nouvelle fenêtre">Réseau de transports exceptionnels TE120</a>', "SECUROUTE.TE.TE120", "WMS-Raster et WMTS", "transports", "France métropolitaine - 2026-09"]
     ]
 }) }}
-<br/>
 
 Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-Raster et WMTS) et BD Géodésie ([IGNF_GEODESIE-XXX services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_GEODESIE-ET-NIVELLEMENT){target="_blank" rel="noopener noreferrer" title="GEODESIE ET NIVELLEMENT - ouvre une nouvelle fenêtre"}) sont mises à jour quotidiennement et la ressource Base Adresse Nationale ([BAN.DATA.GOUV services WFS et WMS-Vecteur](https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BAN-PLUS){target="_blank" rel="noopener noreferrer" title="BAN PLUS - ouvre une nouvelle fenêtre"}) est actualisée hebdomadairement.
 
@@ -74,13 +72,12 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
 {{ component("table", {
     headers: ["Donnée", "Nom technique", "Service", "Thématique", "Édition ou emprise"],
     data: [
-            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "SCAN25TOUR_PYR-JPEG_WLD_WM", "WMS-Raster", "clé personnelle", "France métropolitaine - 2026-09"],
-            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR", "WMTS", "clé personnelle", "France métropolitaine - 2026-09"],
-            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">Cartes IGN</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS", "WMS-Raster et WMTS", "clé personnelle", "France métropolitaine - 2026-09"],
-            ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25® Lambert-93</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR.L93", "WMTS", "clé personnelle", "France métropolitaine - 2026-09"]
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "SCAN25TOUR_PYR-JPEG_WLD_WM", "WMS-Raster", "clé personnelle", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR", "WMTS", "clé personnelle", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">Cartes IGN</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS", "WMS-Raster et WMTS", "clé personnelle", "France métropolitaine - 2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25® Lambert-93</a>', "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR.L93", "WMTS", "clé personnelle", "France métropolitaine - 2026-09"]
     ]
 }) }}
-<br/>
 
 ---
 
@@ -96,7 +93,7 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS" target="_blank" rel="noopener noreferrer" title="ADMIN EXPRESS - ouvre une nouvelle fenêtre">ADMIN EXPRESS</a>', "FXX + DROM", "2026-10"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO" target="_blank" rel="noopener noreferrer" title="BD CARTO® - ouvre une nouvelle fenêtre">BD CARTO®</a>', "FXX + DROM France entière (GPKG et SQL), par territoires (GPKG et SQL), par régions (GPKG et Shapefile), par départements (GPKG et Shapefile)", "2026-03"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO® EXPRESS</a>', "FXX + DROM", "hebdomadaire"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO®</a>', "FXX + DROM France entière (FlatGeoBuf, GeoParquet), par territoires (GPKG), par départements (GPKG et Shapefile)", "2026-09"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® - ouvre une nouvelle fenêtre">BD TOPO®</a>', "FXX + DROM France entière (FlatGeobuf, GeoParquet), par territoires (GPKG), par départements (GPKG et Shapefile)", "2026-09"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-TOPO" target="_blank" rel="noopener noreferrer" title="BD TOPO® Différentiel - ouvre une nouvelle fenêtre">BD TOPO® Différentiel</a>', "France entière (GPKG + SQL), par territoires (GPKG + SQL), par régions (GPKG + SHP)", "Éditions 2026-06 et 2026-09"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_COSIA" target="_blank" rel="noopener noreferrer" title="CoSIA - ouvre une nouvelle fenêtre">CoSIA</a>', "D013, D014, D035", "2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_GEODESIE-ET-NIVELLEMENT" target="_blank" rel="noopener noreferrer" title="GEODESIE ET NIVELLEMENT - ouvre une nouvelle fenêtre">Fiches Géodésiques</a>', "FXX + DROM", "2026-10"],
@@ -112,9 +109,9 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D009, D032, D046, D055, D057, D081", "Différentiel entre 2022 et 2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D059", "Différentiel entre 2021 et 2025"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_OCS-GE-ARTIFICIALISATION" target="_blank" rel="noopener noreferrer" title="OCS GE Artificialisation - ouvre une nouvelle fenêtre">OCS GE Artificialisation</a>', "D064", "Différentiel entre 2021 et 2024"],
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS CORREL - ouvre une nouvelle fenêtre">Modèles Numériques de Surfaces correlés</a>', "D001, D007, D025, D026, D039, D061, D069", "2026"],
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_MNS-CORREL" target="_blank" rel="noopener noreferrer" title="MNS CORREL - ouvre une nouvelle fenêtre">Modèles Numériques de Surfaces corrélés</a>', "D001, D007, D025, D026, D039, D061, D069", "2026"],
         ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_RGE-ALTI" target="_blank" rel="noopener noreferrer" title="RGE ALTI 1M - ouvre une nouvelle fenêtre">RGE ALTI® 1M</a>', "FXX + DROM", "Format TIFF"]
-        ]
+    ]
 }) }}
 
 {% imageContent "/img/partenaires/ign/generalites/actualites/2026-10-mises-a-jour/02-2026-10-mises-a-jour.jpg", "OCS GE et MNT issu du LiDAR HD - Lac Bersau (64)" %}
@@ -124,13 +121,12 @@ Les ressources PLAN IGN J+1 (GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1 services WMS-
 {{ component("table", {
     headers: ["Donnée", "Zone", "Édition"],
     data: [
-        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "France Métropolitaine", "2026-09"]
-        ]
+        ['<a href="https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_SCAN-25" target="_blank" rel="noopener noreferrer" title="SCAN 25® - ouvre une nouvelle fenêtre">SCAN 25®</a>', "France métropolitaine", "2026-09"]
+    ]
 }) }}
 
 :::callout
-Les données SCAN 25®, SCAN 100® et SCAN OACI (et les services en lignes associés) ne sont pas libres de droit, selon les termes de [la licence](https://data.geopf.fr/annexes/ressources/documentation/conditions-de-licence.pdf), les particuliers ne sont pas autorisés à les télécharger, même à des fins personnelles, sauf à se rendre contrefacteurs. Pour les particuliers, la visualisation de ces données est possible depuis [l'explorateur cartographique](https://cartes.gouv.fr/explorer-les-cartes?c=2.442695,46.982819&z=6&l=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR$GEOPORTAIL:OGC:WMTS(1;1;1;0)&w=MousePosition,MeasureLength&permalink=yes).
-
-Pour télécharger et accéder aux flux SCAN 25®, [rejoignez la communauté](https://cartes.gouv.fr/rejoindre-des-communautes) et créez votre clé personnalisée via votre espace personnel cartes.gouv.fr. Pour rejoindre la communauté, pensez à compléter votre profil avec les informations liées à votre entreprise ou association, notamment le numéro de SIRET. [Un tutoriel](https://cartes.gouv.fr/aide/fr/partenaires/ign/representations-cartographiques-souveraines/creation-cles-donnees-scan) est disponible pour vous accompagner.
+Les données SCAN 25®, SCAN 100® et SCAN OACI (et les services en ligne associés) ne sont pas libres de droit, selon les termes de la [licence]({{ urls.annexes }}/ressources/documentation/conditions-de-licence.pdf){target="_blank" rel="noopener noreferrer" title="Conditions de licences - ouvre une nouvelle fenêtre"}, les particuliers ne sont pas autorisés à les télécharger, même à des fins personnelles, sauf à se rendre contrefacteurs. Pour les particuliers, la visualisation de ces données est possible depuis l’[explorateur cartographique]({{ metadata.author.url }}explorer-les-cartes?c=2.442695,46.982819&z=6&l=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR$GEOPORTAIL:OGC:WMTS(1;1;1;0)&w=MousePosition,MeasureLength&permalink=yes).\
+<br>
+Pour télécharger et accéder aux flux SCAN 25®, [rejoignez la communauté]({{ metadata.author.url }}rejoindre-des-communautes) et créez votre clé personnalisée via votre espace personnel cartes.gouv.fr. Pour rejoindre la communauté, pensez à compléter votre profil avec les informations liées à votre entreprise ou association, notamment le numéro de SIRET. Un [tutoriel](../../../representations-cartographiques-souveraines/creation-cles-donnees-scan) est disponible pour vous accompagner.
 :::
-
