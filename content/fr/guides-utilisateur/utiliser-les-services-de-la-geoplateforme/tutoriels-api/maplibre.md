@@ -21,6 +21,8 @@ Dans cet article nous allons apprendre à :
 - Afficher le Plan IGN en tuiles vectorielles
 - Afficher une couche WMTS en Lambert 93
 
+<br>
+
 Les exemples sont des pages HTML complètes. Servez-les avec un serveur web local, par exemple avec la commande `python -m http.server` lancée dans leur dossier, puis ouvrez `http://localhost:8000` dans un navigateur.
 
 <br>
@@ -140,8 +142,7 @@ On déclare d’abord cette projection avec `addProjection`, en utilisant [proj4
 ![Plan IGN v2 en Lambert 93 avec MapLibre GL JS](/img/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/tutoriels-api/maplibre/02_plan-ign-lambert93.png){.fr-responsive-img .frx-border-img .frx-img-contained}
 
 :::info
-
 - Le centre de la carte, les marqueurs et les emprises s’expriment toujours en longitude et latitude.
 - Les niveaux de zoom suivent la grille Lambert 93 et non celle de Web Mercator. Autour de la France, le zoom 13 en Lambert 93 montre à peu près la même zone que le zoom 12 en Web Mercator.
 - Pour une autre couche, reprenez les valeurs `LAYER`, `FORMAT` et `TILEMATRIXSET` du [`GetCapabilities`](https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities){target="_blank" rel="noopener noreferrer" title="GetCapabilities WMTS - ouvre une nouvelle fenêtre"}, par exemple `HR.ORTHOIMAGERY.ORTHOPHOTOS.L93` pour les photographies aériennes, et adaptez `minzoom` et `maxzoom` aux niveaux de sa pyramide.
-  :::
+:::
