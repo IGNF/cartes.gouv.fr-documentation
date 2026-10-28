@@ -17,7 +17,6 @@ pictogram: digital/coding.svg
 [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/){target="_blank" rel="noopener noreferrer" title="MapLibre GL JS - ouvre une nouvelle fenêtre"} est une bibliothèque JavaScript <span lang="en">_open-source_</span> qui affiche des cartes interactives dans un navigateur, à partir de tuiles vectorielles ou d’images tuilées. Elle lit directement les fichiers de styles de la Géoplateforme et, depuis sa version 6.15, elle affiche aussi des tuiles dans une autre projection que Web Mercator, comme Lambert 93.
 
 Dans cet article nous allons apprendre à :
-
 - Afficher le Plan IGN en tuiles vectorielles
 - Afficher une couche WMTS en Lambert 93
 
