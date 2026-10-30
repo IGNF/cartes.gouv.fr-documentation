@@ -121,7 +121,7 @@ let sendForm = function () {
                         throw new Error("Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer dans quelques instants.");
                     } else {
                         let result = await res.json();
-                        throw new Error(result.error);
+                        throw new Error(result.detail ?? result.error ?? "Une erreur s’est produite lors de l’envoi de votre demande.");
                     }
                 } else {
                     //si le requête s'est bien passée
