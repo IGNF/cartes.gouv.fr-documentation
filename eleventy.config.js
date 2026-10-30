@@ -48,6 +48,7 @@ module.exports = function (eleventyConfig) {
 
     // Watch content images for the image pipeline.
     eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+    eleventyConfig.addWatchTarget(".env.local");
 
     // App plugins
     eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
@@ -295,7 +296,7 @@ module.exports = function (eleventyConfig) {
     return {
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
-        templateFormats: ["md", "njk", "html", "liquid"],
+        templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
 
         // Pre-process *.md files with: (default: `liquid`)
         markdownTemplateEngine: "njk",
