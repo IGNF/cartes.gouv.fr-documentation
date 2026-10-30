@@ -62,13 +62,14 @@ eleventyNavigation:
             <div id="select-importance-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
         <p>Les informations recueillies à partir de ce formulaire sont nécessaires à la gestion de votre demande par les services de l’IGN concernés. <a href="https://cartes.gouv.fr/donnees-personnelles">En savoir plus sur la gestion des données à caractère personnel</a>.</p>
+        <p class="fr-hint-text">Ce formulaire nécessite la validation d’un captcha, qui sera automatiquement lancé lors de la soumission du formulaire.</p>
         <div class="fr-grid-row fr-grid-row--right">
             <button id="fr-button-:r22:" title="Envoyer la demande de contact" class="fr-btn" data-fr-js-button-actionee="true" onclick="sendForm()">Envoyer</button>
         </div>
     </div>
 </div>
 <div id="contact-error" class="fr-alert fr-alert--error hidden" data-fr-js-alert-actionee="true">
-    <h3 class="fr-alert__title">Votre message n'a pas pu être envoyé</h3>
+    <h3 class="fr-alert__title">Votre message n’a pas pu être envoyé</h3>
     <p id="contact-error-content"></p>
     <button class="fr-link--close fr-link" data-fr-js-link-actionee="true">Masquer le message</button>
 </div>
