@@ -213,6 +213,7 @@ div.fr-callout__text p {
 .page-switcher {
     display: flex;
     justify-content: flex-end;
+    gap: 2rem;
 }
 
 .page-switcher:has(> p.previous-page) {
