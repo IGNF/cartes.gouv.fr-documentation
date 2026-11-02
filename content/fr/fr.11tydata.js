@@ -22,6 +22,7 @@ module.exports = {
         },
         public: {
             wfs: "https://data.geopf.fr/wfs",
+            wms: "https://data.geopf.fr/wms",
             wmsv: "https://data.geopf.fr/wms-v",
             tmsv: "https://data.geopf.fr/vector-tms",
             tms: "https://data.geopf.fr/tms",
