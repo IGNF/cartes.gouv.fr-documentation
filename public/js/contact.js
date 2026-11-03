@@ -1,3 +1,53 @@
+let geoCaptchaReady = false;
+const geoCaptchaConfig = window.__CARTESGOUVFR_DOCS_ENV__ ?? {};
+
+function getGeoCaptchaToken() {
+    return new Promise((resolve, reject) => {
+        const options = {
+            submit: (token) => {
+                geoCaptchaReady = true;
+                resolve(token);
+            },
+            cancel: () => {
+                geoCaptchaReady = true;
+                reject(new Error("GéoCaptcha non résolu"));
+            },
+        };
+        if (geoCaptchaReady) {
+            window.geoCaptcha.launch(options);
+            return;
+        }
+
+        const script = document.createElement("script");
+        const geocaptchaUrl = geoCaptchaConfig.geocaptchaUrl?.replace(/\/+$/, "");
+        if (!geocaptchaUrl) {
+            reject(new Error("L'URL du GéoCaptcha n'est pas configurée."));
+            return;
+        }
+        script.src = `${geocaptchaUrl}/api/v1/lib.js?dsfr=true`;
+        script.async = true;
+        let captchaScript;
+        const fail = (error) => {
+            script.remove();
+            if (captchaScript) {
+                captchaScript.remove();
+            }
+            reject(error);
+        };
+        script.onload = () => {
+            captchaScript = Array.from(document.scripts).find((candidate) => candidate.src.startsWith(`${geocaptchaUrl}/api/v1/captcha`));
+            if (!captchaScript) {
+                fail(new Error("Impossible d'initialiser le GeoCaptcha."));
+                return;
+            }
+            captchaScript.addEventListener("error", () => fail(new Error(`Impossible de charger ${captchaScript.src}`)), { once: true });
+            window.geoCaptcha.captchas.push(options);
+        };
+        script.onerror = () => fail(new Error(`Impossible de charger ${script.src}`));
+        document.head.appendChild(script);
+    });
+}
+
 //remplissage automatique des champs si l'utilisateur est connecté
 fetch(window.location.origin + "/api/users/me", {
     method: "GET",
@@ -15,6 +65,7 @@ fetch(window.location.origin + "/api/users/me", {
 
 //booléen pour la validation du formulaire
 let isFormValid = true;
+let isSendingForm = false;
 
 //Listener pour le nombre de caractères restants du textarea
 document.getElementById("input-message").addEventListener("input", function (e) {
@@ -80,7 +131,10 @@ let createAlertHTML = function (alert) {
 };
 
 //Fonction d'envoie du formulaire
-let sendForm = function () {
+let sendForm = async function () {
+    if (isSendingForm) {
+        return;
+    }
     //récupération des valeurs du formulaire
     let cat = null;
     if (document.getElementsByName("category")[0].checked) {
@@ -104,10 +158,32 @@ let sendForm = function () {
 
     //si le formulaire est valide, on envoie la requête POST vers la route "contact_us"
     if (isFormValid) {
-        document.getElementById("waiting-screen").classList.toggle("hidden");
+        isSendingForm = true;
+        const submitButton = document.getElementById("fr-button-:r22:");
+        submitButton.disabled = true;
         document.title = "Nous écrire | Aide | cartes.gouv.fr";
+        document.getElementById("contact-error").classList.add("hidden");
 
-        fetch(window.location.origin + "/contact_us", {
+        let token;
+        if (geoCaptchaConfig.geocaptchaEnabled) {
+            try {
+                token = await getGeoCaptchaToken();
+            } catch (error) {
+                document.getElementById("contact-error-content").innerText = error.message;
+                document.getElementById("waiting-screen").classList.add("hidden");
+                document.getElementById("contact-error").classList.remove("hidden");
+                isSendingForm = false;
+                submitButton.disabled = false;
+                return;
+            }
+        }
+
+        if (token) {
+            formContent.geocaptchaToken = token;
+        }
+        document.getElementById("waiting-screen").classList.remove("hidden");
+
+        await fetch(window.location.origin + "/contact_us", {
             method: "POST",
             headers: {
                 "X-Requested-With": "XMLHttpRequest",
@@ -130,8 +206,12 @@ let sendForm = function () {
             })
             .catch(function (error) {
                 document.getElementById("contact-error-content").innerText = error.message;
-                document.getElementById("waiting-screen").classList.toggle("hidden");
-                document.getElementById("contact-error").classList.toggle("hidden");
+                document.getElementById("waiting-screen").classList.add("hidden");
+                document.getElementById("contact-error").classList.remove("hidden");
+            })
+            .finally(() => {
+                isSendingForm = false;
+                submitButton.disabled = false;
             });
     } else {
         document.title = "Erreur - Nous écrire | Aide | cartes.gouv.fr";

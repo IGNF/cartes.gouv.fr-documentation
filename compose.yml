@@ -21,6 +21,9 @@ services:
             - IAM_URL=${IAM_URL}
             - IAM_REALM=${IAM_REALM}
             - IAM_CLIENT_ID=${IAM_CLIENT_ID}
+            - geocaptcha_enabled=${geocaptcha_enabled}
+            - geocaptcha_url=${geocaptcha_url}
+            - client_geocaptcha_id=${client_geocaptcha_id}
         read_only: true
         tmpfs:
             - /tmp
