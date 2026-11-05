@@ -22,11 +22,24 @@ Nous remercions chaleureusement l’ensemble des utilisateurs nous ayant fait un
 
 À titre d’information, les données test de juin 2026 sont toujours disponibles : [**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="Jeu de données test BD Forêt v3 JUIN 2026 - bêta - ouvre une nouvelle fenêtre"}
 
+Aujourd’hui, l’équipe projet BD Forêt v3 de l’IGN a finalisé la production de cinq départements pilotes (Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret). A la différence des jeux de données test produits jusqu’à présent, ces données issues de l’IA ont fait l’objet de reprises manuelles par photo-interprétation. 
+
+Les données des cinq départements pilotes peuvent être téléchargées : \
+[**24 - Dordogne**](https://data.geopf.fr/private/telechargement/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D024_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D024_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU) {target="_blank" rel="noopener noreferrer" title= "Données du département 24 NOVEMBRE 2026 – ouvre une nouvelle fenêtre"} /
+[**34 - Hérault**](https://data.geopf.fr/private/telechargement/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D034_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D034_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU) {target="_blank" rel="noopener noreferrer" title= "Données du département 34 NOVEMBRE 2026 – ouvre une nouvelle fenêtre"} \
+[**38 - Isère**](https://data.geopf.fr/private/telechargement/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D038_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D038_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU) {target="_blank" rel="noopener noreferrer" title= "Données du département 38 NOVEMBRE 2026 – ouvre une nouvelle fenêtre"} \
+[**45 - Loiret**](https://data.geopf.fr/private/telechargement/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D045_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D045_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU) {target="_blank" rel="noopener noreferrer" title= "Données du département 38 NOVEMBRE 2026 – ouvre une nouvelle fenêtre"} \
+[**68 – Haut-Rhin**](https://data.geopf.fr/private/telechargement/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D048_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D048_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU) {target="_blank" rel="noopener noreferrer" title= "Données du département 38 NOVEMBRE 2026 – ouvre une nouvelle fenêtre"} \
+
+Si vous le souhaitez, vous pouvez nous faire des retours sur ces données en participant au questionnaire de satisfaction des cinq départements pilotes. 
+[**Participer au questionnaire de satisfaction**](https://tally.so/r/PdVJj1) {target="_blank" rel="noopener noreferrer" title= "Questionnaire de satisfaction NOVEMBRE 2026 – ouvre une nouvelle fenêtre"}
+
+
 #### Les prochaines étapes du projet :
 
-L’équipe projet BD Forêt v3 de l’IGN vient de lancer la production de cinq départements pilotes (la Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret). À la différence des jeux de données test produits jusqu’à présent, ces données issues de l’IA feront l’objet de reprises manuelles par photo-interprétation.
+La production de cinq départements pilotes (Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret) étant aboutie, l’équipe projet BD Forêt v3 de l’IGN a décidé d’étendre la production sur le reste de l’hexagone.
 
-La décision d’étendre la production sur le reste de l’hexagone devrait avoir lieu courant octobre.
+<br>
 
 #### À qui s’adresse la BD Forêt v3 ?
 
