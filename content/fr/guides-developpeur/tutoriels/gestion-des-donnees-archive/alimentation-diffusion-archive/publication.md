@@ -11,6 +11,22 @@ tertiaryTitle: Publication
 
 {% from "components/component.njk" import component with context %}
 
+ **Étape 3 sur 3 — Publication**
+
+ **Objectif :** créer une configuration `DOWNLOAD`, publier une offre, puis vérifier la diffusion.
+
+ **Prérequis :**
+ - `{stored data}` générée à l’étape d’intégration
+ - un endpoint `DOWNLOAD` disponible
+
+ **Identifiants à conserver :**
+ - `{configuration}`
+ - `{offering}`
+
+ **Succès attendu :**
+ - offre en `PUBLISHED`
+ - ressource visible dans `{{ urls.public.download }}/capabilities`
+
 ### Configuration de la diffusion
 
 La configuration centralise toutes les informations nécessaires à la diffusion de données sur les services. À ce moment, on va contrôler les paramètres et détecter les erreurs ou conflits potentiels :

@@ -10,6 +10,25 @@ summary:
 tertiaryTitle: Intégration
 ---
 
+ **Étape 2 sur 3 — Intégration des données archives**
+
+ **Objectif :** copier la livraison (`upload`) vers une donnée stockée (`stored_data`) via un traitement.
+
+ **Prérequis :**
+ - livraison fermée (`status = CLOSED`)
+ - vérifications passées (`vérifications de la livraison exécutées sans erreur`)
+
+ **Identifiants à conserver pour la suite :**
+ - `{execution}` (exécution du traitement)
+ - `{stored data}` (donnée stockée produite)
+
+ **Succès attendu :**
+ - exécution en `SUCCESS`
+ - donnée stockée en `GENERATED`
+
+  **Nettoyage de la livraison :**
+ - Supprimer la livraison : `{upload}`
+
 ### Intégration des données
 
 Les données déposées sur la plateforme sont systématiquement transformées et stockées sur des espaces dédiés pour pouvoir être diffusées. Dans le cas des données archive, il n’y a aucune modification des données, une simple copie sur le stockage pérenne. L’entité qui correspond à cette donnée pérenne est une donnée stockée.
