@@ -33,9 +33,9 @@ Le calcul peut être paramétré, en fonction du besoin, selon plusieurs options
 
 Les données de référence utilisées au sein du service de calcul d’itinéraire proviennent du réseau routier et des tables de non communications de la base de données BD TOPO® de l’IGN.
 
-L’API est interrogeable en méthodes GET et POST.
+L’API est interrogeable en méthodes `GET` et `POST`.
 
-Son Swagger est accessible ici : [Swagger du calcul d’itinéraire](https://data.geopf.fr/navigation/openapi/).
+Son Swagger est accessible ici : [Swagger du calcul d’itinéraire]({{ urls.navigation }}/openapi/).
 
 ---
 
@@ -46,7 +46,7 @@ La requête `GetCapabilities` permet de découvrir les capacités de l’API : 
 Elle est accessible via l’URL suivante : 
 
 ```plain
-https://data.geopf.fr/navigation/getcapabilities
+{{ urls.navigation }}/getcapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
@@ -58,7 +58,7 @@ Cette requête ne requiert aucun paramètre.
 Le calcul d’itinéraire est accessible via l’URL suivante :
 
 ```plain
-https://data.geopf.fr/navigation/itineraire
+{{ urls.navigation }}/itineraire
 ```
 
 Les paramètres également précisés dans le Swagger du calcul d’itinéraire sont les suivants :
@@ -111,7 +111,7 @@ Les paramètres également précisés dans le Swagger du calcul d’itinéraire 
 Exemple de requête :
 
 ```plain
-https://data.geopf.fr/navigation/itineraire?resource=bdtopo-osrm&start=2.337306,48.849319&end=2.367776,48.852891&profile=car&optimization=fastest&constraints=%7B%22constraintType%22:%22banned%22,%22key%22:%22wayType%22,%22operator%22:%22=%22,%22value%22:%22autoroute%22%7D&getSteps=true&getBbox=true&distanceUnit=kilometer&timeUnit=hour&crs=EPSG:4326
+{{ urls.navigation }}/itineraire?resource=bdtopo-osrm&start=2.337306,48.849319&end=2.367776,48.852891&profile=car&optimization=fastest&constraints=%7B%22constraintType%22:%22banned%22,%22key%22:%22wayType%22,%22operator%22:%22=%22,%22value%22:%22autoroute%22%7D&getSteps=true&getBbox=true&distanceUnit=kilometer&timeUnit=hour&crs=EPSG:4326
 ```
 
 ### Calculer un itinéraire via la méthode `POST`
@@ -122,7 +122,7 @@ Exemple d’appel :
 
 ```bash
 curl -X 'POST' \
-  'https://data.geopf.fr/navigation/itineraire' \
+  '{{ urls.navigation }}/itineraire' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -165,9 +165,9 @@ Le nouveau mode de calcul des vitesses (septembre 2023) s’inspire très largem
         ["Nature = « Route empierrée »", "10"],
         ["Nature = « Chemin »", "1"],
         ["Importance = 6", "10"],
-        ["Largeur de chaussée < 2.9 et ≠ 0.0 et non null", "10"],
+        ["Largeur de chaussée < 2,9 et ≠ 0,0 et non null", "10"],
         ["Intersecte un objet Equipement de transport de Nature = « Péage »", "50"],
-        ["Partage un point ou est à moins de 0.2 m d’un objet Point du réseau de Nature = « Passage à niveau »", "50"],
+        ["Partage un point ou est à moins de 0,2 m d’un objet Point du réseau de Nature = « Passage à niveau »", "50"],
         ["Nature = « Type autoroutier » et Classement administratif = « Autoroute », Importance = 1 et Urbain = faux", "125"],
         ["Nature = « Type autoroutier » et Classement administratif = « Autoroute », Importance = 1 et Urbain = vrai", "100"],
         ["Nature = « Type autoroutier » et Classement administratif = « Autoroute », Importance = 2 et Urbain = faux", "115"],
@@ -204,17 +204,16 @@ Le nouveau mode de calcul des vitesses (septembre 2023) s’inspire très largem
     ]
 }) }}
 
-*les vitesses brutes sont ensuite diminuées par une pénalité liée à la longueur et à la sinuosité du tronçon, à la
-densité du bâti environnant, ainsi qu’à la proximité d’écoles.
+<p class="fr-text--sm">* Les vitesses brutes sont ensuite diminuées par une pénalité liée à la longueur et à la sinuosité du tronçon, à la densité du bâti environnant, ainsi qu’à la proximité d’écoles.</p>
 
 #### Calcul des pénalités
 
 **Préalable : calcul des zones de densité de bâtiments**
 
-Une carte de chaleur est calculée à partir de la classe Bâtiment. Les objets sélectionnés sont :
-- ‘Construction légère’ = faux ou null,
-- ‘Etat de l’objet’ = « En service »,
-- Surface comprise entre 35 et 2000 m².
+Une carte de chaleur est calculée à partir de la classe `Bâtiment`. Les objets sélectionnés sont :
+- « Construction légère » = « faux » ou `null`,
+- « État de l’objet » = « En service »,
+- Surface comprise entre 35 et 2000 m².
 
 <br>
 
@@ -224,10 +223,10 @@ Le centroïde de chaque objet est ensuite pondéré par la hauteur du bâti (en 
     title: "Calcul des pénalités uniques",
     headers: ["Dénomination", "Condition", "Pénalité"],
     data: [
-        ["Impasses", "Le tronçon a une valence de 1 sur le graphe des tronçons de vitesse ≠ 0 et sa longueur < 200 m", "50%"],
-        ["Rond-point", "Le point médian intersecte la zone de densité « zone habitée »", "15%"],
-        ["Rond-point", "Le point médian intersecte la zone de densité « centre dense »", "30%"],
-        ["Rond-point", "Le point médian intersecte la zone de densité « hyper-centre »", "40%"]
+        ["Impasses", "Le tronçon a une valence de 1 sur le graphe des tronçons de vitesse ≠ 0 et sa longueur < 200 m", "50 %"],
+        ["Rond-point", "Le point médian intersecte la zone de densité « zone habitée »", "15 %"],
+        ["Rond-point", "Le point médian intersecte la zone de densité « centre dense »", "30 %"],
+        ["Rond-point", "Le point médian intersecte la zone de densité « hyper-centre »", "40 %"]
     ]
 }) }}
 
@@ -239,26 +238,26 @@ La valeur est enfin arrondie à 5 km/h supérieur pour les objets d’importanc
     title: "Calcul des pénalités cumulées",
     headers: ["Dénomination", "Condition", "Pénalité"],
     data: [
-        ["Densité", "Le point médian intersecte la zone de densité « zone habitée »","15%"],
-        ["Densité", "Le point médian intersecte la zone de densité « centre dense »","30%"],
-        ["Densité", "Le point médian intersecte la zone de densité « hyper-centre »","40%"],
-        ["Passage protégé", "Le tronçon est à moins de 80 m d’une <Zone d’activité ou d’intérêt> de Nature = « Enseignement primaire » ou « Collège » ou « Mairie » ou Nature détaillée = « Crèche » ET urbain = Vrai OU intersecte les zones de densité « centre dense » ou « zone habitée » ET n’intersecte pas la zone de densité « hyper-centre »", "15%"],
+        ["Densité", "Le point médian intersecte la zone de densité « zone habitée »","15 %"],
+        ["Densité", "Le point médian intersecte la zone de densité « centre dense »","30 %"],
+        ["Densité", "Le point médian intersecte la zone de densité « hyper-centre »","40 %"],
+        ["Passage protégé", "Le tronçon est à moins de 80 m d’une « Zone d’activité ou d’intérêt » de Nature = « Enseignement primaire » ou « Collège » ou « Mairie » ou Nature détaillée = « Crèche » ET urbain = Vrai OU intersecte les zones de densité « centre dense » ou « zone habitée » ET n’intersecte pas la zone de densité « hyper-centre »", "15 %"],
         ["Longueur", "Tronçon dont la longueur est inférieure ou égale à 80 m ET dont la nature est différente de « Route empierrée », « chemin » et « sentier » ET possède à ses deux sommets 3 liens ou plus avec des tronçons de nature différentes de « Route empierrée », « chemin » et « sentier ».", "(80 - longueur) / 4"],
-        ["Relance ronds-points proches (tronçons connexes)", "La longueur inférieure à 300 m ET le tronçon touche 2 tronçons de Nature = « Rond-point »", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60%)"],
-        ["Relance ronds-points proches (tronçons connexes)", "La longueur inférieure à 300 m ET le tronçon touche 4 tronçons de Nature = « Rond-point »", "Arrondi entier le plus proche (300 - longueur) / 7.5 (coût maximum : 40%)"],
-        ["Sinuosité", "Longueur du tronçon / distance entre les 2 extrémités >= 1.25", "20%"],
-        ["Sinuosité", "Longueur du tronçon / distance entre les 2 extrémités >= 1.05", "10%"],
-        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 3 touche un seul tronçon d’importance 1 ou 2", "Arrondi entier le plus proche (300 - longueur) / 3.75 (coût maximum : 80%)"],
-        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 4 touche un seul tronçon d’importance 1 à 3", "Arrondi entier le plus proche (300 - longueur) / 3.75 (coût maximum : 80%)"],
-        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 5 touche un seul tronçon d’importance 1 à 4", "Arrondi entier le plus proche (300 - longueur) / 3.75 (coût maximum : 80%)"],
-        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 3 touche au moins deux tronçons d’importance 1 ou 2", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60%)"],
-        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 4 touche au moins deux tronçons d’importance 1 à 3", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60%)"],
-        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 5 touche au moins deux tronçons d’importance 1 à 4", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60%)"],
-        ["Largeur « rurale »", "Le tronçon n’est pas en zone urbaine, sa nature est différente de « Bretelle », son importance est 3 ou 4 et sa largeur est inférieure à 5 m", "15%"]
+        ["Relance ronds-points proches (tronçons connexes)", "La longueur inférieure à 300 m ET le tronçon touche 2 tronçons de Nature = « Rond-point »", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60 %)"],
+        ["Relance ronds-points proches (tronçons connexes)", "La longueur inférieure à 300 m ET le tronçon touche 4 tronçons de Nature = « Rond-point »", "Arrondi entier le plus proche (300 - longueur) / 7,5 (coût maximum : 40 %)"],
+        ["Sinuosité", "Longueur du tronçon / distance entre les 2 extrémités ≥ 1,25", "20 %"],
+        ["Sinuosité", "Longueur du tronçon / distance entre les 2 extrémités ≥ 1,05", "10 %"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 3 touche un seul tronçon d’importance 1 ou 2", "Arrondi entier le plus proche (300 - longueur) / 3,75 (coût maximum : 80 %)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 4 touche un seul tronçon d’importance 1 à 3", "Arrondi entier le plus proche (300 - longueur) / 3,75 (coût maximum : 80 %)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 5 touche un seul tronçon d’importance 1 à 4", "Arrondi entier le plus proche (300 - longueur) / 3,75 (coût maximum : 80 %)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 3 touche au moins deux tronçons d’importance 1 ou 2", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60 %)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 4 touche au moins deux tronçons d’importance 1 à 3", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60 %)"],
+        ["Stop", "La longueur du tronçon < 300 m hors Nature « Bretelle ». Si un tronçon d’importance 5 touche au moins deux tronçons d’importance 1 à 4", "Arrondi entier le plus proche (300 - longueur) / 5 (coût maximum : 60 %)"],
+        ["Largeur « rurale »", "Le tronçon n’est pas en zone urbaine, sa nature est différente de « Bretelle », son importance est 3 ou 4 et sa largeur est inférieure à 5 m", "15 %"]
     ]
 }) }}
 
-Les pénalités sont ensuite additionnées, avec toutefois un plafond de 80%.
+Les pénalités sont ensuite additionnées, avec toutefois un plafond de 80 %.
 
 La vitesse brute est diminuée de cette somme des pénalités (vitesse moyenne = vitesse brute * (1 - somme des pénalités)).
 
@@ -270,7 +269,7 @@ Contrainte sur l’attribut : Valeur obligatoire (calculée).
 
 Pour les piétons, les calculs sont basés sur les critères suivants :
 
-- NATURE = ‘Autoroute’ & IMPORTANCE = ‘1’ <span class="fr-icon-arrow-right-line"></span> 0 km/h
-- NATURE = ‘Autoroute’ & IMPORTANCE = ‘2’ <span class="fr-icon-arrow-right-line"></span> 0 km/h
-- NATURE = ‘Autoroute’ & IMPORTANCE = ‘3’ <span class="fr-icon-arrow-right-line"></span> 0 km/h
+- NATURE = « Autoroute » & IMPORTANCE = « 1 » <span class="fr-icon-arrow-right-line"></span> 0 km/h
+- NATURE = « Autoroute » & IMPORTANCE = « 2 » <span class="fr-icon-arrow-right-line"></span> 0 km/h
+- NATURE = « Autoroute » & IMPORTANCE = « 3 » <span class="fr-icon-arrow-right-line"></span> 0 km/h
 - Autres axes <span class="fr-icon-arrow-right-line"></span> 4 km/h
