@@ -13,6 +13,8 @@ image:
     alt: BD Forêt v3
 ---
 
+{% from "components/component.njk" import component with context %}
+
 #### La BD Forêt v3 arrive
 
 La BD Forêt v3 est le nouveau référentiel géographique de l’IGN décrivant les essences forestières. Cette base de données est fondée sur une méthode de production innovante, permettant de mieux répondre aux besoins utilisateurs exprimés.\
@@ -22,11 +24,41 @@ Nous remercions chaleureusement l’ensemble des utilisateurs nous ayant fait un
 
 À titre d’information, les données test de juin 2026 sont toujours disponibles : [**Tester la BD Forêt v3**]({{ urls.rechercher_une_donnee }}/dataset/BETA-IGN_JEU-TEST_BD-FORET-V3){target="_blank" rel="noopener noreferrer" title="Jeu de données test BD Forêt v3 JUIN 2026 - bêta - ouvre une nouvelle fenêtre"}
 
+Aujourd’hui, l’équipe projet BD Forêt v3 de l’IGN a finalisé la production de cinq départements pilotes (la Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret). À la différence des jeux de données test produits jusqu’à présent, ces données issues de l’IA ont fait l’objet de reprises manuelles par photo-interprétation. 
+
+Les données des cinq départements pilotes peuvent être téléchargées :
+
+{{ component("download", {
+    title: "24 - Dordogne",
+    href: urls.private.download + "/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D024_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D024_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU",
+    detail: "7z - 37,1 Mo"
+}) }}
+{{ component("download", {
+    title: "34 - Hérault",
+    href: urls.private.download + "/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D034_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D034_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU",
+    detail: "7z - 20,8 Mo"
+}) }}
+{{ component("download", {
+    title: "38 - Isère",
+    href: urls.private.download + "/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D038_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D038_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU",
+    detail: "7z - 52,5 Mo"
+}) }}
+{{ component("download", {
+    title: "45 - Loiret",
+    href: urls.private.download + "/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D045_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D045_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU",
+    detail: "7z - 27,5 Mo"
+}) }}
+{{ component("download", {
+    title: "68 - Haut-Rhin",
+    href: urls.private.download + "/download/BDFORETV3-TEST/BDFORET_3-0_TEST_GPKG_LAMB93_D068_2026-01-01/BDFORET_3-0_TEST_GPKG_LAMB93_D068_2026-01-01.7z?apikey=seIh1izVWlMzqFujUdNQ4eCtNVYH4KfU",
+    detail: "7z - 20,1 Mo"
+}) }}
+
+Si vous le souhaitez, vous pouvez nous faire des retours sur ces données en participant au questionnaire de satisfaction des cinq départements pilotes. [**Participer au questionnaire de satisfaction**](https://tally.so/r/PdVJj1){target="_blank" rel="noopener noreferrer" title="Questionnaire de satisfaction (novembre 2026) - ouvre une nouvelle fenêtre"}
+
 #### Les prochaines étapes du projet :
 
-L’équipe projet BD Forêt v3 de l’IGN vient de lancer la production de cinq départements pilotes (la Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret). À la différence des jeux de données test produits jusqu’à présent, ces données issues de l’IA feront l’objet de reprises manuelles par photo-interprétation.
-
-La décision d’étendre la production sur le reste de l’hexagone devrait avoir lieu courant octobre.
+La production de cinq départements pilotes (la Dordogne, le Haut-Rhin, l’Hérault, l’Isère et le Loiret) étant aboutie, l’équipe projet BD Forêt v3 de l’IGN a décidé d’étendre la production sur le reste de l’hexagone.
 
 #### À qui s’adresse la BD Forêt v3 ?
 
@@ -73,13 +105,13 @@ Dans la continuité de la BD Forêt v1 et v2, la BD Forêt v3 marque un renouvea
 
 ??? Pour en savoir plus
 
-##### La BD Forêt v3 marque un tournant dans la cartographie forestière :
+###### La BD Forêt v3 marque un tournant dans la cartographie forestière :
 
-L’actualisation rapide des données (l’objectif étant de couvrir tout le territoire hexagonal en un an seulement), sa finesse géométrique et sémantique, font de cette base de données un outil inégalé pour la localisation des essences forestières. La BD Forêt v3 se caractérise en effet par une nomenclature cible en 35 classes dans lesquelles plusieurs essences et mélanges d’essences ont été distingués par rapport à la v2 (8 essences supplémentaires ont été distinguées par rapport à la v2).\
+L’actualisation rapide des données (l’objectif étant de couvrir tout le territoire hexagonal en un an seulement), sa finesse géométrique et sémantique font de cette base de données un outil inégalé pour la localisation des essences forestières. La BD Forêt v3 se caractérise en effet par une nomenclature cible en 35 classes dans lesquelles plusieurs essences et mélanges d’essences ont été distingués par rapport à la v2 (8 essences supplémentaires ont été distinguées par rapport à la v2).\
 Sa résolution géométrique a également été affinée : désormais, les différentes essences cartographiées sont distinguées les unes des autres dès 0,5 hectare contre 2 hectares pour la BD Forêt v2.\
-Cette donnée sera construite en s’appuyant sur le [Masque Forêt v1]({{ urls.aide }}/fr/partenaires/ign/referentiels-description-territoire/foret/masque-foret){target="_blank" rel="noopener noreferrer" title="Masque Forêt - ouvre une nouvelle fenêtre"}. Le Masque Forêt v1 permet de visualiser l’occupation forestière de l’Hexagone et apporte une information sur l’usage spécifique de certaines forêts : les forêts avec un usage agricole déclaré ainsi que les forêts urbaines. Il constitue le périmètre de travail de la BD Forêt v3.
+Cette donnée sera construite en s’appuyant sur le [Masque Forêt v1](../masque-foret){target="_blank" rel="noopener noreferrer" title="Masque Forêt - ouvre une nouvelle fenêtre"}. Le Masque Forêt v1 permet de visualiser l’occupation forestière de l’Hexagone et apporte une information sur l’usage spécifique de certaines forêts : les forêts avec un usage agricole déclaré ainsi que les forêts urbaines. Il constitue le périmètre de travail de la BD Forêt v3.
 
-##### Mobilisation de l’IA :
+###### Mobilisation de l’IA :
 
 La BD Forêt v3 marque un tournant décisif dans l’élaboration des bases de données de l’IGN. L’IA est un nouvel outil central mobilisé afin de mieux répondre à la nécessité d’une production de données rapide (l’objectif est de couvrir tout l’Hexagone en un an seulement), et de pouvoir l’actualiser plus fréquemment grâce à des coûts de mise à jour réduits. En cela, la construction de la BD Forêt v3 se distingue des méthodes plus traditionnelles et augmente de façon significative la précision géométrique et sémantique. L’objectif est de créer un processus de production très automatisé tout en conservant une part d’intervention humaine, par des spécialistes de la photo-interprétation forestière, en fin de production afin de garantir la fiabilité des données diffusées.\
 La BD Forêt v3 se distingue de la BD Forêt v1 et v2 par sa finesse géométrique et sémantique. L’automatisation accrue de son processus de production, et sa capacité à être actualisée à un coût réduit témoignent d’un changement significatif dans la production de données géographiques.\
@@ -110,7 +142,7 @@ La production de la BD Forêt v3 est commanditée et financée par le Ministère
 
 ##### Un Grand Projet Numérique de l’État :
 
-Le projet BD Forêt v3 fait partie des grands projets numériques de l’État, et l’IGN a reçu le feu vert de la Direction Interministérielle (DINUM) afin de la mener à bien.
+Le projet BD Forêt v3 fait partie des grands projets numériques de l’État, et l’IGN a reçu le feu vert de la Direction interministérielle du numérique (DINUM) afin de la mener à bien.
 
 ##### Usages identifiés :
 
