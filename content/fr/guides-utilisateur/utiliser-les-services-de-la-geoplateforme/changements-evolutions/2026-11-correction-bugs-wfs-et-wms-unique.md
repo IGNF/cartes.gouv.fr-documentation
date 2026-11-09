@@ -1,6 +1,6 @@
 ---
 title: Correction de bugs sur le WFS et le WMS Unique
-description: Correction outpoutformat WFS sensible à la casse, correction de la présence de double ou triple "/wfs" dans certaines requêtes, correction de formalisme d’un message d’erreur en WMS Unique
+description: Correction outputFormat WFS sensible à la casse, correction de la présence de double ou triple /wfs dans certaines requêtes, correction de formalisme d’un message d’erreur en WMS Unique
 tags:
     - Vecteur
     - WFS
