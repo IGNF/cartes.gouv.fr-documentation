@@ -4,13 +4,13 @@ const { parseEnv } = require("node:util");
 module.exports = function () {
     const localEnv = fs.existsSync(".env.local") ? parseEnv(fs.readFileSync(".env.local", "utf8")) : {};
     const env = { ...localEnv, ...process.env };
-    const enabled = env.geocaptcha_enabled ?? "false";
+    const enabled = env.GEOCAPTCHA_ENABLED ?? "false";
 
     if (enabled !== "true" && enabled !== "false") {
-        throw new Error("geocaptcha_enabled doit valoir 'true' ou 'false'.");
+        throw new Error("GEOCAPTCHA_ENABLED doit valoir 'true' ou 'false'.");
     }
-    if (enabled === "true" && !env.geocaptcha_url) {
-        throw new Error("geocaptcha_url est requis lorsque le GéoCaptcha est activé.");
+    if (enabled === "true" && !env.GEOCAPTCHA_URL) {
+        throw new Error("GEOCAPTCHA_URL est requis lorsque le GéoCaptcha est activé.");
     }
 
     return {
@@ -18,7 +18,7 @@ module.exports = function () {
         iamRealm: env.IAM_REALM ?? "geoplateforme",
         iamClientId: env.IAM_CLIENT_ID ?? "cartes-gouv-public",
         geocaptchaEnabled: enabled === "true",
-        geocaptchaUrl: env.geocaptcha_url ?? "",
-        clientGeocaptchaId: env.client_geocaptcha_id ?? "",
+        geocaptchaUrl: env.GEOCAPTCHA_URL ?? "",
+        clientGeocaptchaId: env.CLIENT_GEOCAPTCHA_ID ?? "",
     };
 };
