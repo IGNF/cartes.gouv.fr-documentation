@@ -11,19 +11,25 @@ tertiaryTitle: Livraison
 
 {% from "components/component.njk" import component with context %}
 
-**Étape 1 sur 3 — Livraison des données archives**
+**Étape 1 sur 3 — Livraison des données archive**
 
-**Objectif :** déposer les fichiers archive dans une livraison, puis fermer la livraison.
+**Objectif :** déposer les fichiers archive dans une livraison, puis fermer la livraison
 
-**Prérequis :**
- - un `datastore` existant
- - des fichiers à téléverser (ex. SHP/DBF/PRJ/SHX/CPG)
+**Prérequis :**
+- un `datastore` existant
+- des fichiers à téléverser (exemple : SHP/DBF/PRJ/SHX/CPG)
 
-**Identifiants à conserver pour la suite :**
- - `{upload}` (retourné à la création de la livraison)
+<br>
 
-**Fermeture de la livraison :**
- - Fermer la livraison afin de lancer les vérifications.
+**Identifiants à conserver pour la suite :**
+- `{upload}` (retourné à la création de la livraison)
+
+<br>
+
+**Fermeture de la livraison :**
+- fermer la livraison afin de lancer les vérifications
+
+<br>
 
 ### Livraison des données
 

@@ -10,24 +10,32 @@ summary:
 tertiaryTitle: Intégration
 ---
 
- **Étape 2 sur 3 — Intégration des données archives**
+**Étape 2 sur 3 — Intégration des données archive**
 
- **Objectif :** copier la livraison (`upload`) vers une donnée stockée (`stored_data`) via un traitement.
+**Objectif :** copier la livraison (`upload`) vers une donnée stockée (`stored_data`) via un traitement
 
- **Prérequis :**
- - livraison fermée (`status = CLOSED`)
- - vérifications passées (`vérifications de la livraison exécutées sans erreur`)
+**Prérequis :**
+- livraison fermée (`"status": "CLOSED"`)
+- vérifications passées (vérifications de la livraison exécutées sans erreur)
 
- **Identifiants à conserver pour la suite :**
- - `{execution}` (exécution du traitement)
- - `{stored data}` (donnée stockée produite)
+<br>
 
- **Succès attendu :**
- - exécution en `SUCCESS`
- - donnée stockée en `GENERATED`
+**Identifiants à conserver pour la suite :**
+- `{execution}` (exécution du traitement)
+- `{stored data}` (donnée stockée produite)
 
-  **Nettoyage de la livraison :**
- - Supprimer la livraison : `{upload}`
+<br>
+
+**Succès attendu :**
+- exécution en `SUCCESS`
+- donnée stockée en `GENERATED`
+
+<br>
+
+**Nettoyage de la livraison :**
+- supprimer la livraison : `{upload}`
+
+<br>
 
 ### Intégration des données
 
@@ -245,7 +253,7 @@ Une exécution va avoir les statuts dans l’ordre suivant :
 
 À la fin du traitement, des informations concernant la donnée finale sont remontées afin d’apparaître au niveau de l’API (taille, nombre de fichiers, système de coordonnées).
 
-Cependant, les données de type ARCHIVE peuvent correspondre à n’importe quel format, potentiellement des fichiers compressés. C’est pourquoi le traitement d’intégration n’extrait pas d’étendue à partir des données. Nous allons pouvoir la préciser (géométrie en GeoJSON avec au plus 5 000 points), ainsi que des dates d’édition.
+Cependant, les données de type `ARCHIVE` peuvent correspondre à n’importe quel format, potentiellement des fichiers compressés. C’est pourquoi le traitement d’intégration n’extrait pas d’étendue à partir des données. Nous allons pouvoir la préciser (géométrie en GeoJSON avec au plus 5 000 points), ainsi que des dates d’édition.
 
 ???? PATCH "{{ urls.api_entrepot }}/datastores/{datastore}/stored_data/{stored data}"
 ```plain

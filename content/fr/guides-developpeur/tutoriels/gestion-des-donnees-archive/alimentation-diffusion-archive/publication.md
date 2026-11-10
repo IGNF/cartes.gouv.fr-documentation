@@ -11,21 +11,27 @@ tertiaryTitle: Publication
 
 {% from "components/component.njk" import component with context %}
 
- **Étape 3 sur 3 — Publication**
+**Étape 3 sur 3 — Publication**
 
- **Objectif :** créer une configuration `DOWNLOAD`, publier une offre, puis vérifier la diffusion.
+**Objectif :** créer une configuration `DOWNLOAD`, publier une offre, puis vérifier la diffusion
 
- **Prérequis :**
- - `{stored data}` générée à l’étape d’intégration
- - un endpoint `DOWNLOAD` disponible
+**Prérequis :**
+- `{stored data}` générée à l’étape d’intégration
+- un endpoint `DOWNLOAD` disponible
 
- **Identifiants à conserver :**
- - `{configuration}`
- - `{offering}`
+<br>
 
- **Succès attendu :**
- - offre en `PUBLISHED`
- - ressource visible dans `{{ urls.public.download }}/capabilities`
+**Identifiants à conserver :**
+- `{configuration}`
+- `{offering}`
+
+<br>
+
+**Succès attendu :**
+- offre en `PUBLISHED`
+- ressource visible dans `{{ urls.public.download }}/capabilities`
+
+<br>
 
 ### Configuration de la diffusion
 
@@ -95,23 +101,23 @@ Voici un exemple pour voir la nomenclature des zones :
 }) }}
 ??? Corps de réponse JSON
 ```json
-    [
-        {
-            "type": "ZONE",
-            "label": "Paris",
-            "term": "D075"
-        },
-        {
-            "type": "ZONE",
-            "label": "Ain",
-            "term": "D001"
-        },
-        {
-            "type": "ZONE",
-            "label": "France métropolitaine",
-            "term": "FXX"
-        }
-    ]
+[
+    {
+        "type": "ZONE",
+        "label": "Paris",
+        "term": "D075"
+    },
+    {
+        "type": "ZONE",
+        "label": "Ain",
+        "term": "D001"
+    },
+    {
+        "type": "ZONE",
+        "label": "France métropolitaine",
+        "term": "FXX"
+    }
+]
 ```
 ???
 ????
@@ -718,13 +724,54 @@ Pour connaître les fichiers téléchargeables, on va pouvoir demander le conten
 <br>
 
 On retrouve nos 10 fichiers, avec leur taille et leur signature MD5, téléchargeables :
-- [LIMITE_DEPARTEMENT.dbf]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf)
-- [LIMITE_DEPARTEMENT.prj]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj)
-- [LIMITE_DEPARTEMENT.cpg]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg)
-- [LIMITE_DEPARTEMENT.shp]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp)
-- [LIMITE_DEPARTEMENT.shx]({{ urls.public.download }}/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx)
-- [DEPARTEMENT.dbf]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.dbf)
-- [DEPARTEMENT.prj]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.prj)
-- [DEPARTEMENT.cpg]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.cpg)
-- [DEPARTEMENT.shp]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shp)
-- [DEPARTEMENT.shx]({{ urls.public.download }}/download/limites_administratives/departements/DEPARTEMENT.shx)
+
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.dbf",
+    href: urls.public.download + "/download/limites_administratives/departements/LIMITE_DEPARTEMENT.dbf",
+    detail: "DBF - 1,94 Mo"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.prj",
+    href: urls.public.download + "/download/limites_administratives/departements/LIMITE_DEPARTEMENT.prj",
+    detail: "PRJ - 449 o"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.cpg",
+    href: urls.public.download + "/download/limites_administratives/departements/LIMITE_DEPARTEMENT.cpg",
+    detail: "CPG - 6 o"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.shp",
+    href: urls.public.download + "/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shp",
+    detail: "SHP - 2,41 Mo"
+}) }}
+{{ component("download", {
+    title: "LIMITE_DEPARTEMENT.shx",
+    href: urls.public.download + "/download/limites_administratives/departements/LIMITE_DEPARTEMENT.shx",
+    detail: "SHX - 70,8 Ko"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.dbf",
+    href: urls.public.download + "/download/limites_administratives/departements/DEPARTEMENT.dbf",
+    detail: "DBF - 16,7 Ko"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.prj",
+    href: urls.public.download + "/download/limites_administratives/departements/DEPARTEMENT.prj",
+    detail: "PRJ - 449 o"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.cpg",
+    href: urls.public.download + "/download/limites_administratives/departements/DEPARTEMENT.cpg",
+    detail: "CPG - 6 o"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.shp",
+    href: urls.public.download + "/download/limites_administratives/departements/DEPARTEMENT.shp",
+    detail: "SHP - 2,97 Mo"
+}) }}
+{{ component("download", {
+    title: "DEPARTEMENT.shx",
+    href: urls.public.download + "/download/limites_administratives/departements/DEPARTEMENT.shx",
+    detail: "SHX - 868 o"
+}) }}
