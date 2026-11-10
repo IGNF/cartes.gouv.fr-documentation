@@ -31,7 +31,7 @@ fetch("https://data.geopf.fr/annexes/cartes.gouv.fr-config/public/alerts.json", 
     let result = await res.json();
     for (let i in result) {
         //si alerte concernant la page nous-ecrire
-        if (result[i].visibility) {
+        if (result[i].visibility.contact) {
             //ajout du HTML de l'alerte
             createAlertHTML(result[i]);
             //gestion de la visibilité et du style de l'alerte
