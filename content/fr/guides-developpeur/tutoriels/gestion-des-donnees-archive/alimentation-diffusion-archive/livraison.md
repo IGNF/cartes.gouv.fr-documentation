@@ -11,6 +11,26 @@ tertiaryTitle: Livraison
 
 {% from "components/component.njk" import component with context %}
 
+**Étape 1 sur 3 — Livraison des données archive**
+
+**Objectif :** déposer les fichiers archive dans une livraison, puis fermer la livraison
+
+**Prérequis :**
+- un `datastore` existant
+- des fichiers à téléverser (exemple : SHP/DBF/PRJ/SHX/CPG)
+
+<br>
+
+**Identifiants à conserver pour la suite :**
+- `{upload}` (retourné à la création de la livraison)
+
+<br>
+
+**Fermeture de la livraison :**
+- fermer la livraison afin de lancer les vérifications
+
+<br>
+
 ### Livraison des données
 
 La livraison est une entité qui permet de déposer un ensemble de fichiers de données au sein de l’entrepôt. Une livraison et son contenu seront toujours utilisés comme un tout.
