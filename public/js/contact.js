@@ -148,6 +148,7 @@ let sendForm = async function () {
         first_name: document.getElementsByName("first_name")[0].value.trim(),
         last_name: document.getElementsByName("last_name")[0].value.trim(),
         category: cat,
+        request_type: document.getElementsByName("request_type")[0].value,
         organization: document.getElementsByName("organization")[0].value.trim(),
         message: document.getElementsByName("message")[0].value,
         importance: document.getElementsByName("importance")[0].value,
@@ -276,7 +277,8 @@ let checkCategory = function (category) {
     document.getElementById("fr-fieldset-radio-messages-group").innerHTML = "";
     if (!category) {
         document.getElementById("fr-fieldset-radio-messages-group").classList.toggle("fr-input-group--error");
-        document.getElementById("fr-fieldset-radio-messages-group").innerHTML = "<p class='fr-error-text'> Veuillez choisir une catégorie </p>";
+        document.getElementById("fr-fieldset-radio-messages-group").innerHTML =
+            "<p class='fr-error-text'> Veuillez indiquer si vous êtes un particulier ou un professionnel </p>";
         isFormValid = false;
     }
 };
@@ -306,6 +308,14 @@ let checkMessage = function (message) {
             "<p class='fr-error-text'> Veuillez saisir une demande d’au moins 10 caractères </p>";
         isFormValid = false;
     }
+};
+
+//Affichage de l'information complémentaire pour le signalement d'un contenu illicite
+let onRequestTypeChange = function () {
+    const isIllegal = document.getElementById("select-hint").value === "illegal_content";
+    document.getElementById("select-hint-messages").innerHTML = isIllegal
+        ? "<p class='fr-message fr-message--info'>Veuillez préciser les éléments suivants : nom de la personne physique ou morale signalant le contenu, lien de la page où figure le contenu litigieux, les raisons pour lesquelles le contenu litigieux est illicite</p>"
+        : "";
 };
 
 //Gestion de l'affichage du champ "organisation" en fonction de la catégorie
