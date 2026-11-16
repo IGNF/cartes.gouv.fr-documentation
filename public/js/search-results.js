@@ -39,6 +39,12 @@ class PageFinder {
         this.searchResults = search.results;
         this.resultCounter.innerText = search.results.length;
 
+        if (this.resultCounter.innerText == "0") {
+            document.getElementById("no-correct-result").classList.toggle("hidden");
+        } else {
+            document.getElementById("no-result").classList.toggle("hidden");
+        }
+
         const filters = this.getFiltersFromResults(await Promise.all(this.searchResults.map((r) => r.data())));
 
         // nouveaux résultats donc on les nettoie et on les affiche
