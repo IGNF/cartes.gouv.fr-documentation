@@ -19,12 +19,12 @@ function getGeoCaptchaToken() {
         }
 
         const script = document.createElement("script");
-        const geocaptchaUrl = geoCaptchaConfig.geocaptchaUrl?.replace(/\/+$/, "");
-        if (!geocaptchaUrl) {
+        const geocaptchaApiBaseUrl = geoCaptchaConfig.geocaptchaApiBaseUrl?.replace(/\/+$/, "");
+        if (!geocaptchaApiBaseUrl) {
             reject(new Error("L'URL du GéoCaptcha n'est pas configurée."));
             return;
         }
-        script.src = `${geocaptchaUrl}/api/v1/lib.js?dsfr=true`;
+        script.src = `${geocaptchaApiBaseUrl}/lib.js?dsfr=true`;
         script.async = true;
         let captchaScript;
         const fail = (error) => {
@@ -35,7 +35,7 @@ function getGeoCaptchaToken() {
             reject(error);
         };
         script.onload = () => {
-            captchaScript = Array.from(document.scripts).find((candidate) => candidate.src.startsWith(`${geocaptchaUrl}/api/v1/captcha`));
+            captchaScript = Array.from(document.scripts).find((candidate) => candidate.src.startsWith(`${geocaptchaApiBaseUrl}/captcha`));
             if (!captchaScript) {
                 fail(new Error("Impossible d'initialiser le GeoCaptcha."));
                 return;
