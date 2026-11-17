@@ -157,7 +157,7 @@ let sendForm = async function () {
     //vérification de la validité du formulaire (met à jour le booléen isFormValid et affiche les messages d'erreurs si nécessaire)
     checkForm(formContent);
 
-    //si le formulaire est valide, on envoie la requête POST vers la route "contact_us"
+    //si le formulaire est valide, on envoie la requête POST vers la route "/api/contact/contact-us"
     if (isFormValid) {
         isSendingForm = true;
         const submitButton = document.getElementById("fr-button-:r22:");
@@ -184,7 +184,7 @@ let sendForm = async function () {
         }
         document.getElementById("waiting-screen").classList.remove("hidden");
 
-        await fetch(window.location.origin + "/contact_us", {
+        await fetch(window.location.origin + "/api/contact/contact-us", {
             method: "POST",
             headers: {
                 "X-Requested-With": "XMLHttpRequest",
@@ -198,7 +198,7 @@ let sendForm = async function () {
                         throw new Error("Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer dans quelques instants.");
                     } else {
                         let result = await res.json();
-                        throw new Error(result.error);
+                        throw new Error(result.detail);
                     }
                 } else {
                     //si le requête s'est bien passée
