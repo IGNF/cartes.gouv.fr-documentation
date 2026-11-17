@@ -36,7 +36,7 @@ Les données de référence utilisées au sein du service de calcul d’isochron
 
 L’API est interrogeable en méthodes GET et POST.
 
-Son Swagger est accessible ici : [Swagger du calcul d’isochrone/isodistance](https://data.geopf.fr/navigation/openapi/).
+Son Swagger est accessible ici : [Swagger du calcul d’isochrone/isodistance]({{ urls.navigation }}/openapi/).
 
 ---
 
@@ -47,7 +47,7 @@ La requête `GetCapabilities` permet de découvrir les capacités de l’API : 
 Elle est accessible via l’URL suivante : 
 
 ```plain
-https://data.geopf.fr/navigation/getcapabilities
+{{ urls.navigation }}/getcapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
@@ -59,10 +59,10 @@ Cette requête ne requiert aucun paramètre.
 Le calcul d’isochrone/isodistance est accessible via l’URL suivante :
 
 ```plain
-https://data.geopf.fr/navigation/isochrone
+{{ urls.navigation }}/isochrone
 ```
 
-Les paramètres également précisés dans le [Swagger du calcul d’isochrone/isodistance](https://data.geopf.fr/navigation/openapi/) sont les suivants :
+Les paramètres également précisés dans le [Swagger du calcul d’isochrone/isodistance]({{ urls.navigation }}/openapi/) sont les suivants :
 
 ### Calculer une isochrone ou une isodistance via la méthode GET
 
@@ -103,7 +103,7 @@ Les paramètres également précisés dans le [Swagger du calcul d’isochrone/i
 Exemple de requête :
 
 ```plain
-https://data.geopf.fr/navigation/isochrone?gp-access-lib=3.4.2&resource=bdtopo-valhalla&point=2.416679,48.86116&direction=departure&costType=distance&costValue=2000&profile=pedestrian&timeUnit=second&distanceUnit=meter&crs=EPSG:4326&constraints=%7B%22constraintType%22:%22banned%22,%22key%22:%22wayType%22,%22operator%22:%22=%22,%22value%22:%22tunnel%22%7D
+{{ urls.navigation }}/isochrone?gp-access-lib=3.4.2&resource=bdtopo-valhalla&point=2.416679,48.86116&direction=departure&costType=distance&costValue=2000&profile=pedestrian&timeUnit=second&distanceUnit=meter&crs=EPSG:4326&constraints=%7B%22constraintType%22:%22banned%22,%22key%22:%22wayType%22,%22operator%22:%22=%22,%22value%22:%22tunnel%22%7D
 ```
 
 ### Calculer une isochrone ou une isodistance via la méthode POST
@@ -114,7 +114,7 @@ Exemple d’appel :
 
 ```sh
 curl -X 'POST' \
-  'https://data.geopf.fr/navigation/isochrone' \
+  '{{ urls.navigation }}/isochrone' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{

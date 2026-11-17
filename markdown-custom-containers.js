@@ -113,13 +113,20 @@ module.exports = {
                     if (params?.[1] === "accordionsgroup") {
                         return `<div class="fr-accordions-group">`;
                     } else {
+                        const previousHeading = tokens
+                            .slice(0, idx)
+                            .reverse()
+                            .find((token) => token.type === "heading_open");
+                        const previousHeadingLevel = Number(previousHeading?.tag.slice(1) || 1);
+                        const titleTag = `h${Math.min(previousHeadingLevel + 1, 6)}`;
+
                         return `
 <section class="fr-accordion">
-    <h3 class="fr-accordion__title">
+    <${titleTag} class="fr-accordion__title">
         <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-${idx}">
             ${md.utils.escapeHtml(params?.[1]) || ""}
         </button>
-    </h3>
+    </${titleTag}>
     <div class="fr-collapse" id="accordion-${idx}">
 `;
                     }

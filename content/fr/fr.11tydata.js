@@ -8,6 +8,7 @@ module.exports = {
         extraction_swagger: "https://data.geopf.fr/extraction/swagger-ui/index.html",
         annexes: "https://data.geopf.fr/annexes",
         documents: "https://data.geopf.fr/documents",
+        navigation: "https://data.geopf.fr/navigation",
         rechercher_une_donnee: "https://cartes.gouv.fr/rechercher-une-donnee",
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
@@ -22,6 +23,7 @@ module.exports = {
         },
         public: {
             wfs: "https://data.geopf.fr/wfs",
+            wms: "https://data.geopf.fr/wms",
             wmsv: "https://data.geopf.fr/wms-v",
             tmsv: "https://data.geopf.fr/vector-tms",
             tms: "https://data.geopf.fr/tms",

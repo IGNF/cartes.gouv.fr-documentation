@@ -48,6 +48,7 @@ Les parties suivantes se déroulent en cliquant sur le bouton **« + »**.
 :::
 
 - **Licences et conditions d’utilisation :** Les règles qui encadrent l’utilisation des données référencées.
+- **Contacts liés à la donnée :** Il peut s’agir du fournisseur, du producteur, du diffuseur ou du financeur de la donnée.
 - **À propos de la donnée :** Informations essentielles comme la provenance de la donnée, son producteur, sa fréquence de mise à jour et sa date de publication.
 - **Autres informations :** Section complémentaire indiquant la dernière date de modification de la métadonnée et offrant un accès direct à sa fiche de métadonnée.
 
