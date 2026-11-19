@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------
 # cartesgouvfr-documentation : Génération d'un build statique
 #----------------------------------------------------------------------
-FROM node:24-alpine@sha256:7fddd9ddeae8196abf4a3ef2de34e11f7b1a722119f91f28ddf1e99dcafdf114 AS builder
+FROM node:24-alpine@sha256:116b800c3754b440ee0aa3ed2f20f5bf3d99a554bfd9adeea09ea8017f6e85f5 AS builder
 
 RUN apk add git
 
@@ -16,7 +16,7 @@ RUN npm ci \
 #----------------------------------------------------------------------
 # cartesgouvfr-documentation : Config d'un serveur statique avec nginx
 #----------------------------------------------------------------------
-FROM nginxinc/nginx-unprivileged:alpine-slim
+FROM nginx/nginx-unprivileged:alpine-slim@sha256:75e85a09b0f25bd46d49a9fd85589ffa70b0459c8ed5ee0dc6596fd642e1f829
 COPY --from=builder /app/_site /usr/share/nginx/html/
 COPY .docker/nginx.conf /etc/nginx/nginx.conf
 COPY .docker/entrypoint.sh /entrypoint.sh
