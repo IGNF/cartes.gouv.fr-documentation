@@ -12,7 +12,7 @@ eleventyNavigation:
         <p>Vous n’avez pas trouvé la réponse à votre question dans <a href="/fr/">l’aide en ligne</a> ? Vous souhaitez la configuration d’un espace de travail pour vos besoins ? Utilisez ce formulaire pour nous contacter.</p>
         <p>Sauf mention contraire “(optionnel)” dans le label, tous les champs sont obligatoires.</p>
         <div id="mail-input-group" class="fr-input-group" data-fr-js-input-actionee="true">
-            <label class="fr-label" for="input-mail">Votre adresse électronique<span class="fr-hint-text">Format attendu : nom@domaine.fr</span></label>
+            <label class="fr-label" for="input-mail">Votre adresse électronique<span class="fr-hint-text">Format attendu : nom@domaine.fr</span></label>
             <input name="email_contact" autocomplete="email" class="fr-input" type="text" id="input-mail" aria-describedby="input-mail-messages-group">
             <div id="input-mail-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
@@ -45,6 +45,17 @@ eleventyNavigation:
             <input name="organization" autocomplete="organization" class="fr-input" type="text" id="input-organization" aria-describedby="input-organization-messages-group">
             <div id="input-organization-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
+        <div class="fr-select-group">
+            <label class="fr-label" for="select-hint">
+                Catégorie
+            </label>
+            <select class="fr-select" aria-describedby="select-hint-messages" id="select-hint" name="request_type" onchange="onRequestTypeChange()">
+                <option value="support" selected>Question sur le fonctionnement du site et de nos outils</option>
+                <option value="illegal_content">Signaler un contenu illicite</option>
+                <option value="content_removal_claim">Réclamation suite à suppression d’un contenu</option>
+            </select>
+            <div class="fr-messages-group" id="select-hint-messages" aria-live="polite"></div>
+        </div>
         <div id="message-input-group" class="fr-input-group fr-mb-0" data-fr-js-input-actionee="true">
             <label class="fr-label" for="input-message">Votre demande</label>
             <textarea name="message" maxlength="8000" rows="8" placeholder="Décrivez votre demande en quelques lignes" class="fr-input" id="input-message" aria-describedby="input-message-messages-group"></textarea>
@@ -62,13 +73,14 @@ eleventyNavigation:
             <div id="select-importance-messages-group" class="fr-messages-group" aria-live="polite"></div>
         </div>
         <p>Les informations recueillies à partir de ce formulaire sont nécessaires à la gestion de votre demande par les services de l’IGN concernés. <a href="https://cartes.gouv.fr/donnees-personnelles">En savoir plus sur la gestion des données à caractère personnel</a>.</p>
+        <p class="fr-hint-text">Ce formulaire nécessite la validation d’un captcha, qui sera automatiquement lancé lors de la soumission du formulaire.</p>
         <div class="fr-grid-row fr-grid-row--right">
             <button id="fr-button-:r22:" title="Envoyer la demande de contact" class="fr-btn" data-fr-js-button-actionee="true" onclick="sendForm()">Envoyer</button>
         </div>
     </div>
 </div>
 <div id="contact-error" class="fr-alert fr-alert--error hidden" data-fr-js-alert-actionee="true">
-    <h3 class="fr-alert__title">Votre message n'a pas pu être envoyé</h3>
+    <h3 class="fr-alert__title">Votre message n’a pas pu être envoyé</h3>
     <p id="contact-error-content"></p>
     <button class="fr-link--close fr-link" data-fr-js-link-actionee="true">Masquer le message</button>
 </div>
