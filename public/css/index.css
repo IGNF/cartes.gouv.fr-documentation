@@ -267,6 +267,21 @@ div.fr-callout__text p {
     margin-bottom: 0.25rem;
 }
 
+#no-correct-result .search-again,
+#no-result .search-again {
+    color: var(--text-action-high-blue-france);
+    cursor: pointer;
+    background-image: var(--underline-img), var(--underline-img);
+    background-position:
+        var(--underline-x) 100%,
+        var(--underline-x) calc(100% - var(--underline-thickness));
+    background-repeat: no-repeat, no-repeat;
+    background-size:
+        var(--underline-hover-width) calc(var(--underline-thickness) * 2),
+        var(--underline-idle-width) var(--underline-thickness);
+    transition: background-size 0s;
+}
+
 #no-correct-result {
     padding: 2rem 0;
     border-top: 1px solid var(--border-default-grey);
@@ -274,7 +289,7 @@ div.fr-callout__text p {
 
 #no-correct-result .fr-grid-row {
     margin-left: -1.5rem;
-    margin-right: 1.5rem;
+    margin-right: -1.5rem;
 }
 
 #no-correct-result .fr-grid-row {
