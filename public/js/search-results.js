@@ -299,9 +299,9 @@ class PageFinder {
 <div class="fr-card fr-card--horizontal fr-enlarge-link fr-card--sm">
     <div class="fr-card__body">
         <div class="fr-card__content">
-            <h3 class="fr-card__title">
+            <h2 class="fr-card__title">
                 <a href="${url}">${title}</a>
-            </h3>
+            </h2>
             <p class="fr-card__desc">${this.formatExcerpt(excerpt)}</p>
             <div class="fr-card__start">
                 <ul class="fr-tags-group">
