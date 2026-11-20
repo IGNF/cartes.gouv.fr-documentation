@@ -18,6 +18,15 @@ class PageFinder {
 
         this.searchResults = [];
         this.start = 0;
+
+        document.querySelectorAll(".search-again")[0].addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            document.querySelector("#header-search input").focus();
+        });
+        document.querySelectorAll(".search-again")[1].addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            document.querySelector("#header-search input").focus();
+        });
     }
 
     /**
@@ -38,6 +47,12 @@ class PageFinder {
         });
         this.searchResults = search.results;
         this.resultCounter.innerText = search.results.length;
+
+        if (this.resultCounter.innerText == "0") {
+            document.getElementById("no-correct-result").classList.toggle("hidden");
+        } else {
+            document.getElementById("no-result").classList.toggle("hidden");
+        }
 
         const filters = this.getFiltersFromResults(await Promise.all(this.searchResults.map((r) => r.data())));
 
@@ -284,9 +299,9 @@ class PageFinder {
 <div class="fr-card fr-card--horizontal fr-enlarge-link fr-card--sm">
     <div class="fr-card__body">
         <div class="fr-card__content">
-            <h3 class="fr-card__title">
+            <h2 class="fr-card__title">
                 <a href="${url}">${title}</a>
-            </h3>
+            </h2>
             <p class="fr-card__desc">${this.formatExcerpt(excerpt)}</p>
             <div class="fr-card__start">
                 <ul class="fr-tags-group">

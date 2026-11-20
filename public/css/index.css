@@ -255,6 +255,101 @@ div.fr-callout__text p {
     margin-left: 0;
 }
 
+/* Page résultats de recherche*/
+#no-correct-result.hidden,
+#no-result.hidden {
+    display: none;
+}
+
+#no-correct-result .bold,
+#no-result .bold {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+#no-correct-result .search-again,
+#no-result .search-again {
+    color: var(--text-action-high-blue-france);
+    cursor: pointer;
+    background-image: var(--underline-img), var(--underline-img);
+    background-position:
+        var(--underline-x) 100%,
+        var(--underline-x) calc(100% - var(--underline-thickness));
+    background-repeat: no-repeat, no-repeat;
+    background-size:
+        var(--underline-hover-width) calc(var(--underline-thickness) * 2),
+        var(--underline-idle-width) var(--underline-thickness);
+    transition: background-size 0s;
+}
+
+#no-correct-result {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-default-grey);
+}
+
+#no-correct-result .fr-grid-row {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+#no-correct-result .fr-grid-row {
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+/* #no-correct-result .item {
+    padding: 0 1.5rem;
+    border-right: 1px solid var(--border-default-grey);
+} */
+
+#no-correct-result .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1 0 0;
+    align-self: stretch;
+    padding: 0 1.5rem;
+    border-right: 1px solid var(--border-default-grey);
+}
+
+#no-correct-result .item.last {
+    border-right: unset;
+}
+
+#no-correct-result .item p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 62rem) {
+    #no-correct-result .fr-grid-row {
+        flex-direction: column;
+        margin: 0;
+    }
+    #no-correct-result .item {
+        padding: 1.5rem 0;
+        border-right: unset;
+        border-bottom: 1px solid var(--border-default-grey);
+    }
+    #no-correct-result .item.last {
+        border-bottom: unset;
+    }
+}
+
+#no-result {
+    margin-bottom: 3.5rem;
+}
+
+#no-result .item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-default-grey);
+}
+
+#no-result .item.first {
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--border-default-grey);
+}
+
 /* Force le centrage pour les boutons aussi */
 a.custom-center-btn.fr-btn {
     display: flex !important;

@@ -21,6 +21,62 @@ eleventyExcludeFromCollections: true
         <nav id="pagination-container" role="navigation" class="fr-pagination fr-col-12 fr-col-lg-8" aria-label="Pagination"></nav>
     </div>
 </div>
+<div id="no-correct-result">
+    <div class="fr-container">
+        <h2 class="fr-h4"> Vous n'avez pas trouvé votre réponse ?</h2>
+        <div class="fr-grid-row">
+            <div class="item">
+                <p class="bold"> Vous avez recherché une adresse ? </p>
+                <p> Découvrez nos cartes et nos données depuis l’explorateur et saisissez votre adresse directement sur la carte. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="https://cartes.gouv.fr/explorer-les-cartes/" title="Explorer les cartes"> Explorer les cartes </a>
+            </div>
+            <div class="item">
+                <p class="bold"> Vous avez recherché une donnée ? </p>
+                <p> Découvrez nos données et accédez à toute leur documentation depuis notre catalogue. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="https://cartes.gouv.fr/rechercher-une-donnee" title="Rechercher une donnée"> Rechercher une donnée </a>
+            </div>
+            <div class="item">
+                <p class="bold"> Vous avez recherché un terme spécifique ?</p>
+                <p> Il n'y a peut-être pas encore de documentation existante à ce sujet, vous pouvez en faire la demande via notre formulaire de contact. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="/fr/nous-ecrire"> Contactez-nous </a>
+            </div>
+            <div class="item last">
+                <p class="bold"> Vous avez écrit une question complète ? </p>
+                <p> Notre barre de recherche d'aide fonctionne par mots-clés. Essayez par exemple "parcelle" au lieu de "Comment mesurer une parcelle”. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right search-again"> Recherchez à nouveau </a>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id="no-result">
+    <div class="fr-container">
+        <h2 class="fr-h4"> Vous n'avez pas trouvé votre réponse ?</h2>
+        <div class="fr-grid-row">
+            <div class="item first">
+                <p class="bold"> Vous avez recherché une adresse ? </p>
+                <p> Découvrez nos cartes et nos données depuis l’explorateur et saisissez votre adresse directement sur la carte. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="https://cartes.gouv.fr/explorer-les-cartes/" title="Explorer les cartes"> Explorer les cartes </a>
+            </div>
+            <div class="item">
+                <p class="bold"> Vous avez recherché une donnée ? </p>
+                <p> Découvrez nos données et accédez à toute leur documentation depuis notre catalogue. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="https://cartes.gouv.fr/rechercher-une-donnee" title="Rechercher une donnée"> Rechercher une donnée </a>
+            </div>
+            <div class="item">
+                <p class="bold"> Vous avez recherché un terme spécifique ?</p>
+                <p> Il n'y a peut-être pas encore de documentation existante à ce sujet, vous pouvez en faire la demande via notre formulaire de contact. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="/fr/nous-ecrire"> Contactez-nous </a>
+            </div>
+            <div class="item">
+                <p class="bold"> Vous avez écrit une question complète ? </p>
+                <p> Notre barre de recherche d'aide fonctionne par mots-clés. Essayez par exemple "parcelle" au lieu de "Comment mesurer une parcelle”. </p>
+                <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right search-again"> Recherchez à nouveau </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% js "body" %}
 <script>const PAGEFIND_URL = "{{ "/_pagefind/pagefind.js" | htmlBaseUrl }}";</script>
 <script type="text/javascript" src="/js/search-results.js"></script>
