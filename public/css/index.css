@@ -250,9 +250,8 @@ div.fr-callout__text p {
     padding-left: 1.1rem;
 }
 
-.fr-header .fr-header__menu-links .fr-translate {
-    margin-right: 1rem;
-    margin-left: 0;
+.account-details {
+    overflow-wrap: normal;
 }
 
 /* Force le centrage pour les boutons aussi */
@@ -276,8 +275,21 @@ a.custom-center-btn.fr-btn {
 }
 
 @media (max-width: 61.99rem) {
+    .fr-menu__list {
+        min-width: 0;
+    }
     .fr-menu__list li:last-child {
         padding-bottom: 1rem;
+    }
+    .fr-menu__list a.custom-center-btn.fr-btn {
+        margin-left: 0 !important;
+        white-space: normal !important;
+        overflow-wrap: normal;
+        text-align: center;
+    }
+    .fr-menu__list li:has(.custom-center-btn) {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 /* Barre de recherche de l'accueil */
