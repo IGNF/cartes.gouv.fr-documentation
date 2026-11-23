@@ -37,7 +37,7 @@ import Keycloak from "./keycloak.js";
                             <div class="fr-collapse fr-translate__menu fr-menu" id="${collapseId}">
                                 <ul class="fr-menu__list">
                                     <li style="pointer-events: none;">
-                                        <div style="text-align: left;">
+                                        <div class="account-details" style="text-align: left;">
                                             <p class="fr-text--bold fr-mx-2w fr-text--sm fr-mt-3v fr-mb-2v">${displayName}</p>
                                             <p class="fr-text--xs fr-mb-3v fr-mx-2w fr-text-mention--grey">${claims.email}</p>
                                         </div>
