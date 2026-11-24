@@ -12,7 +12,7 @@ date: 2026-09-09
 
 ## Changements
 
-- [Géocodage] Modification de l’exemple du champ d’autocomplétion sur la page du Swagger `https://data.geopf.fr/geocodage/completion/openapi`.
+- [Géocodage] Modification de l’exemple du champ d’autocomplétion sur la page du Swagger `{{ urls.geocodage }}/completion/openapi`.
 
 <br>
 

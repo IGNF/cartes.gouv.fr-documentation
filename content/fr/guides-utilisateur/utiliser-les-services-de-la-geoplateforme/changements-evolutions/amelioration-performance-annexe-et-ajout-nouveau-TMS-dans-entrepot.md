@@ -22,4 +22,4 @@ Le TMS `2154_50cm_MNx` va être ajouté dans l’entrepôt. Il va permettre de r
 
 ## Corrections de bugs
 
-- [Autocomplétion] Suppression d’un message d’erreur qui apparaissait à l’ouverture du [Swagger](https://data.geopf.fr/geocodage/completion/openapi)
+- [Autocomplétion] Suppression d’un message d’erreur qui apparaissait à l’ouverture du [Swagger]({{ urls.geocodage }}/completion/openapi)
