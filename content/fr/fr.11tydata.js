@@ -9,8 +9,8 @@ module.exports = {
         annexes: "https://data.geopf.fr/annexes",
         documents: "https://data.geopf.fr/documents",
         navigation: "https://data.geopf.fr/navigation",
-        rechercher_une_donnee: "https://cartes.gouv.fr/rechercher-une-donnee",
         geocodage: "https://data.geopf.fr/geocodage",
+        rechercher_une_donnee: "https://cartes.gouv.fr/rechercher-une-donnee",
         private: {
             wfs: "https://data.geopf.fr/private/wfs",
             wmsv: "https://data.geopf.fr/private/wms-v",

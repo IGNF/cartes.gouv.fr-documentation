@@ -24,7 +24,7 @@ Elle s’appuie sur des données BAN, BD TOPO® et Parcellaire Express (PCI).
 
 L’API est interrogeable en méthode GET.
 
-Son Swagger est accessible ici : [Swagger de l’autocomplétion](https://data.geopf.fr/geocodage/completion/openapi).
+Son Swagger est accessible ici : [Swagger de l’autocomplétion]({{ urls.geocodage }}/completion/openapi).
 
 ---
 
@@ -32,10 +32,10 @@ Son Swagger est accessible ici : [Swagger de l’autocomplétion](https://data.
 
 La requête `GetCapabilities` permet de découvrir les capacités de l’API : les opérations possibles, les ressources disponibles et les options proposées.
 
-Elle est accessible via l’URL suivante : 
+Elle est accessible via l’URL suivante :
 
 ```plain
-https://data.geopf.fr/geocodage/completion/getcapabilities
+{{ urls.geocodage }}/completion/getcapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
@@ -49,16 +49,16 @@ La requête **completion** permet d’obtenir des suggestions de complétion d�
 Elle est accessible via l’URL suivante : 
 
 ```plain
-https://data.geopf.fr/geocodage/completion/?text={text}&terr={terr}&poiType={poiType}&lonlat={lonlat}&type={type}&maximumResponses={maximumResponses}&bbox={bbox}
+{{ urls.geocodage }}/completion/?text={text}&terr={terr}&poiType={poiType}&lonlat={lonlat}&type={type}&maximumResponses={maximumResponses}&bbox={bbox}
 ```
 
 Cette requête a pour caractéristiques :
 
 - Méthode : GET
-- Paramètre obligatoire : 
+- Paramètre obligatoire :
     - **`text`**
         - Description : le texte devant être complété
-- Paramètres facultatifs : 
+- Paramètres facultatifs :
     - **`terr`**
         - Description : une limitation de la zone de recherche de localisants (une liste peut être fournie en séparant les valeurs par des virgules)
         - Valeurs possibles : `METROPOLE`, `DOMTOM`, code(s) INSEE de département, code(s) postaux de commune
@@ -84,8 +84,8 @@ Cette requête a pour caractéristiques :
     - **`bbox`**
         - Description : filtre avec une bbox suivant l’ordre Xmin, Ymin, Xmax, Ymax
 
-Exemple de requête : 
+Exemple de requête :
 
 ```plain
-https://data.geopf.fr/geocodage/completion/?text=vincenn&terr=94&poiType=administratif&type=StreetAddress&maximumResponses=2
+{{ urls.geocodage }}/completion/?text=vincenn&terr=94&poiType=administratif&type=StreetAddress&maximumResponses=2
 ```

@@ -26,7 +26,7 @@ Son usage est limité à 50 requêtes par seconde depuis une même adresse IP.
 
 Elle s’appuie sur des données BAN, BD TOPO® et Parcellaire Express (PCI).
 
-Son Swagger est accessible ici : [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi).
+Son Swagger est accessible ici : [Swagger du géocodage]({{ urls.geocodage }}/openapi).
 
 ---
 
@@ -37,7 +37,7 @@ La requête `GetCapabilities` permet de découvrir les capacités de l’API : 
 Elle est accessible via l’URL suivante :
 
 ```plain
-https://data.geopf.fr/geocodage/getcapabilities
+{{ urls.geocodage }}/getcapabilities
 ```
 
 Cette requête ne requiert aucun paramètre.
@@ -61,16 +61,16 @@ Le géocodage s’appuie sur plusieurs sources de données :
 
 Le service de géocodage est disponible au travers des URLs suivantes :
 
-Le géocodage direct est accessible via l’URL suivante : (les paramètres sont précisés dans le [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
+Le géocodage direct est accessible via l’URL suivante : (les paramètres sont précisés dans le [Swagger du géocodage]({{ urls.geocodage }}/openapi))
 
 ```plain
-https://data.geopf.fr/geocodage/search
+{{ urls.geocodage }}/search
 ```
 
-Le géocodage inverse est accessible via l’URL suivante : (les paramètres sont précisés dans le [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi))
+Le géocodage inverse est accessible via l’URL suivante : (les paramètres sont précisés dans le [Swagger du géocodage]({{ urls.geocodage }}/openapi))
 
 ```plain
-https://data.geopf.fr/geocodage/reverse
+{{ urls.geocodage }}/reverse
 ```
 
 Ces deux types de géocodage se déclinent sous la forme d’appels unitaires en méthode GET ou regroupés par fichiers (géocodage en masse de fichiers CSV) en méthode POST.
@@ -85,7 +85,7 @@ Les fichiers doivent être encodés en UTF-8 et faire moins de 50 Mo ou 200 00
 
 Le site national de l’adresse propose une [interface intuitive](https://adresse.data.gouv.fr/outils/csv) pour la gestion des opérations de géocodage **direct** par fichiers.
 
-Enfin, pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (cf. section « Géocodage par lot asynchrone » dans le [Swagger du géocodage](https://data.geopf.fr/geocodage/openapi)).
+Enfin, pour un usage expert récurrent et notamment le besoin de gérer des fichiers volumineux (jusqu’à 1 Go), il est possible de configurer des **projets de géocodage** qui seront traités de façon asynchrone (cf. section « Géocodage par lot asynchrone » dans le [Swagger du géocodage]({{ urls.geocodage }}/openapi)).
 
 ???? Informations complémentaires à l’usage du géocodage de masse asynchrone
 ??? Organisation générale du workflow type
