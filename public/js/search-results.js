@@ -18,15 +18,6 @@ class PageFinder {
 
         this.searchResults = [];
         this.start = 0;
-
-        document.querySelectorAll(".search-again")[0].addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            document.querySelector("#header-search input").focus();
-        });
-        document.querySelectorAll(".search-again")[1].addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            document.querySelector("#header-search input").focus();
-        });
     }
 
     /**
@@ -325,6 +316,12 @@ class PageFinder {
         return window.scrollY + window.innerHeight >= document.documentElement.scrollHeight;
     }
 }
+
+let focusOnSearchbar = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.querySelector("#header-search input").focus();
+    return false;
+};
 
 (async () => {
     const pagefind = await import(PAGEFIND_URL);
