@@ -20,7 +20,9 @@
                    title="{{ urlDescription }}"
                    {% if tile.externalUrl %}target="_blank" rel="noopener"{% endif %}>{{ tile.title }}</a>
             </{{- title_tag -}}>
-            <p class="fr-tile__desc">{{ tile.description }}</p>
+            {% if tile.description %}
+                <p class="fr-tile__desc">{{ tile.description }}</p>
+            {% endif %}
             {% if tile.tileTag %}
                 <div class="fr-tile__start">
                     <p class="fr-tag {{ tile.tileTag.icon }} fr-tag--icon-left">{{ tile.tileTag.label }}</p>
